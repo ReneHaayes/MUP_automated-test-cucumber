@@ -1,0 +1,13 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# IDEs and editors
+/.idea
+*.iml
+
+# output
+/test/target/
+/test/dist/
+
+
+# dependencies
+/test/node_modules/
