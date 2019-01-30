@@ -1,10 +1,11 @@
+// @ts-ignore
 import {Given, When, Then} from 'cucumber';
 import {AutoVerzekeringMethods} from '../../pageobjects/autoVerzekering/autoVerzekeringMethods';
 import {browser} from 'protractor';
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {AutoVerzekeringElements} from "../../pageobjects/autoVerzekering/autoVerzekeringElements";
-import {NawElements} from "../../pageobjects/nawData/nawElements";
+import {AutoVerzekeringNawElements} from "../../pageobjects/nawData/autoVerzekeringNawElements";
 import {CarWithLicensePlate} from "../../pageobjects/car/carWithLicensePlate";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
@@ -18,17 +19,17 @@ let autoVerzekeringMethods: AutoVerzekeringMethods = new AutoVerzekeringMethods(
 let autoVerzekeringMethodsStepThreeAndFour: AutoVerzekeringMethodsStepThreeAndFour = new AutoVerzekeringMethodsStepThreeAndFour();
 let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
 let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: NawElements = new NawElements();
+let nawElements: AutoVerzekeringNawElements = new AutoVerzekeringNawElements();
 
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
 let almostInsuredMethods: AlmostInsuredMethods = new AlmostInsuredMethods();
 
-
-Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
-  await genericMethods.goToPage(page);
-  // await genericMethods.clickOnElement(genericElements.cookieElement);
-});
+//
+// Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
+//   await genericMethods.goToPage(page);
+//   await genericMethods.clickOnElement(genericElements.cookieElement);
+// });
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();

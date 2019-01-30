@@ -30,6 +30,18 @@ export class GenericMethods {
     })
   }
 
+  async clickOnElementWithClassName(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleClassName(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.className(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    })
+  }
+
   async goToPage(page: string) {
     const url: string = await getUrlUnive.getUrlUnive(page);
     await protractor.browser.get(url);
@@ -43,6 +55,11 @@ export class GenericMethods {
 
   async waitForElementIsVisible(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
+    await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+  }
+
+  async waitForElementIsVisibleClassName(selector: string, waitFor: number) {
+    const selectorToWaitFor: ElementFinder = element(by.className(selector));
     await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
   }
 

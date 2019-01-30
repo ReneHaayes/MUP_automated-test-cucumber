@@ -5,6 +5,7 @@ export class GenericElements {
   homePageUrlPat: string = 'http://pat.unive.nl';
   autoVerzUrlPat: string = 'https://pat.unive.nl/autoverzekering/premieberekenen-en-afsluiten';
   autoVerzUrlTstProj: string = 'https://tstproj.unive.nl/autoverzekering/premieberekenen-en-afsluiten';
+  zzpFlexPat: string = 'https://pat.unive.nl/zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
 
   //COOKIE
 

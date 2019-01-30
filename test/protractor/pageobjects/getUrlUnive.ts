@@ -12,6 +12,8 @@ export class GetUrlUnive {
         {return genericElements.autoVerzUrlPat;}
       } else if (url === 'autoverzekeringTstProj') {
         {return genericElements.autoVerzUrlTstProj;}
+      } else if (url === 'zzpFlexPat') {
+        {return genericElements.zzpFlexPat;}
       }
     } catch (err) {
       err.message();

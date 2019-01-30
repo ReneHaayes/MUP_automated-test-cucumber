@@ -1,7 +1,7 @@
 Feature: Happy flow for 'Autoverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the autoverzekeringTstProj page of the Unive website
+    Given I am on the autoverzekeringPat page of the Unive website
     When I enter step one page of autoverzekeringen for <persona> with
       | licensePlate    | <licensePlate>    |
       | alreadyMember   | <alreadyMember>   |

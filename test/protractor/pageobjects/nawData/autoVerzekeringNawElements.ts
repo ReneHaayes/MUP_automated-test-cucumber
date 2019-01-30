@@ -1,4 +1,4 @@
-export class NawElements {
+export class AutoVerzekeringNawElements {
 
   //HOOFDBESTUURDER
 
