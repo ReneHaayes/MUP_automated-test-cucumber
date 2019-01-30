@@ -8,7 +8,7 @@ exports.config = {
 
   specs: [
     // 'async_await.js',
-    './protractor/features/autoVerzekering/happyFlow.feature'
+    './protractor/features/zzpFlex/happyFlow.feature'
   ],
   capabilities: {
     browserName: 'chrome',

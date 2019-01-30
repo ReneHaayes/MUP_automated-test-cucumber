@@ -3,7 +3,7 @@ import {AutoVerzekeringElements} from "./autoVerzekeringElements";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {CarWithLicensePlate} from "../car/carWithLicensePlate";
-import {yesNo} from "../enum/enum";
+import {yesNo} from "../enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();

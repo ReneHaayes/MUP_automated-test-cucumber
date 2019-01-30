@@ -33,3 +33,16 @@ export enum yesNo {
   EMPTY = ''
 }
 
+export enum durationEntrepreneur {
+  _MIN1 = 'Minder dan 1 jaar',
+  _1 = '1 jaar',
+  _2 = '2 jaar',
+  _3 = '3 jaar',
+  _4 = '4 jaar',
+  _5 = '5 jaar',
+  _6 = '6 jaar',
+  _7 = '7 jaar',
+  _8 = '8 jaar',
+  _9 = '9 jaar',
+  _10 = '10 jaar'
+}

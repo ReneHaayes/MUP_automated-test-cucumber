@@ -5,7 +5,7 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
-import {gender} from "../enum/enum";
+import {gender} from "../enum/genericEnum";
 
 chai.use(chaistring);
 const expect = chai.expect;

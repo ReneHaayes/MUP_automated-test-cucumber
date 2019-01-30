@@ -3,7 +3,7 @@ import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {AutoVerzekeringElementsStepThree} from "./autoVerzekeringElementsStepThree";
 import {AutoVerzekeringNawElements} from "../nawData/autoVerzekeringNawElements";
-import {gender, specificIdentification} from "../enum/enum";
+import {gender, specificIdentification} from "../enum/genericEnum";
 import {PersonaData} from "../persona/persona";
 
 let genericMethods: GenericMethods = new GenericMethods();

@@ -1,5 +1,5 @@
 import {browser} from "protractor";
-import {yesNo} from "../enum/enum";
+import {yesNo} from "../enum/genericEnum";
 import {GenericMethods} from "../generic/genericMethods";
 import {AlmostInsuredElements} from "./almostInsuredElements";
 

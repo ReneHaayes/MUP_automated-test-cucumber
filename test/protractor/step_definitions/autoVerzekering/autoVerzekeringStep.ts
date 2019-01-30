@@ -11,7 +11,7 @@ import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
 import {AlmostInsuredMethods} from "../../pageobjects/generic/almostInsuredMethods";
-import {yesNo} from "../../pageobjects/enum/enum";
+import {yesNo} from "../../pageobjects/enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -19,7 +19,7 @@ let autoVerzekeringMethods: AutoVerzekeringMethods = new AutoVerzekeringMethods(
 let autoVerzekeringMethodsStepThreeAndFour: AutoVerzekeringMethodsStepThreeAndFour = new AutoVerzekeringMethodsStepThreeAndFour();
 let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
 let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: AutoVerzekeringNawElements = new AutoVerzekeringNawElements();
+let autoVerzekeringNawElements: AutoVerzekeringNawElements = new AutoVerzekeringNawElements();
 
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
@@ -35,9 +35,9 @@ When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (person
   const dataTable = data.rowsHash();
   await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
-  await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateElement, personaData.getPersonaBirthday(persona));
-  await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeElement, personaData.getPersonaZipcode(persona));
-  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeElement);
+  await genericMethods.typeText(autoVerzekeringNawElements.hoofdbestuurderBirthdateElement, personaData.getPersonaBirthday(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.hoofdbestuurderZipCodeElement, personaData.getPersonaZipcode(persona));
+  await genericMethods.clickOnTAB(autoVerzekeringNawElements.hoofdbestuurderZipCodeElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive(dataTable.alreadyMember);
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
@@ -80,16 +80,16 @@ When(/^I enter step three page of autoverzekering with$/, async (data) => {
 });
 
 When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: string) => {
-  await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
-  await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
-  await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await autoVerzekeringMethodsStepThreeAndFour.clickYourDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
-  await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
-  await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
-  await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await autoVerzekeringMethodsStepThreeAndFour.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
-  await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.typeText(autoVerzekeringNawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
