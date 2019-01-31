@@ -2,14 +2,14 @@ import {browser} from 'protractor';
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {AutoVerzekeringElementsStepThree} from "./autoVerzekeringElementsStepThree";
-import {AutoVerzekeringNawElements} from "./autoVerzekeringNawElements";
 import {gender, specificIdentification, yesNo} from "../enum/genericEnum";
 import {PersonaData} from "../persona/persona";
+import {NawElements} from "../generic/nawElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
 let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: AutoVerzekeringNawElements = new AutoVerzekeringNawElements();
+let nawElements: NawElements = new NawElements();
 let personaData: PersonaData = new PersonaData();
 
 

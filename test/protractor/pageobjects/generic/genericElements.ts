@@ -2,10 +2,12 @@ export class GenericElements {
 
   //PAGES
 
-  homePageUrlPat: string = 'http://pat.unive.nl';
-  autoVerzUrlPat: string = 'https://pat.unive.nl/autoverzekering/premieberekenen-en-afsluiten';
-  autoVerzUrlTstProj: string = 'https://tstproj.unive.nl/autoverzekering/premieberekenen-en-afsluiten';
-  zzpFlexPat: string = 'https://pat.unive.nl/zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
+  patUnive: string = 'https://pat.unive.nl/';
+  tstProjUnive: string = 'https://tstproj.unive.nl/';
+  autoVerzUrlPat: string = this.patUnive + 'autoverzekering/premieberekenen-en-afsluiten';
+  autoVerzUrlTstProj: string = this.tstProjUnive + 'autoverzekering/premieberekenen-en-afsluiten';
+  zzpFlexPat: string = this.patUnive + 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
+  aansprakelijkheidsVerzekeringPat: string = this.patUnive + 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
 
