@@ -1,4 +1,5 @@
-@autoVerzekering
+  @autoVerzekering
+  @regressie
 Feature: Happy flow for 'Autoverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.

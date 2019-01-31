@@ -1,4 +1,5 @@
-@aansprakelijkheidsVerzekering
+  @aansprakelijkheidsVerzekering
+  @regressie
 Feature: Happy flow for 'Aansprakelijkheids Verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
