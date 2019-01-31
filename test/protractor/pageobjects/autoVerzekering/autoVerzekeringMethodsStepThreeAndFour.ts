@@ -2,8 +2,8 @@ import {browser} from 'protractor';
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {AutoVerzekeringElementsStepThree} from "./autoVerzekeringElementsStepThree";
-import {AutoVerzekeringNawElements} from "../nawData/autoVerzekeringNawElements";
-import {gender, specificIdentification} from "../enum/genericEnum";
+import {AutoVerzekeringNawElements} from "./autoVerzekeringNawElements";
+import {gender, specificIdentification, yesNo} from "../enum/genericEnum";
 import {PersonaData} from "../persona/persona";
 
 let genericMethods: GenericMethods = new GenericMethods();
@@ -115,4 +115,42 @@ export class AutoVerzekeringMethodsStepThreeAndFour {
       throw new Error('The input you have entered clickMainDriverGender: "" ' + genderType + ' "" is not recognized as a command');
     }
   }
+
+  async selectInsuranceHistory(insuranceHistory: string, explanation: string) {
+    await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.insuranceHistoryNoElement, browser.getPageTimeout);
+    if (insuranceHistory === yesNo.YES) {
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.insuranceHistoryYesElement);
+      await genericMethods.typeText(autoVerzekeringElementsStepThree.insuranceHistoryYesExplanationElement, explanation);
+    } else if (insuranceHistory === yesNo.NO) {
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.insuranceHistoryNoElement);
+    } else {
+      throw new Error('The input you have entered selectInsuranceHistory: "" ' + insuranceHistory + ' "" is not recognized as a command');
+    }
+  }
+
+  async selectCriminalHistory(criminalHistory: string) {
+    await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.criminalHistoryNoElement, browser.getPageTimeout);
+    if (criminalHistory === yesNo.YES) {
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.criminalHistoryYesElement);
+      await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.criminalHistoryInformationElement, browser.getPageTimeout);
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.criminalHistoryInformationElement);
+    } else if (criminalHistory === yesNo.NO) {
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.criminalHistoryNoElement);
+    } else {
+      throw new Error('The input you have entered selectCriminalHistory: "" ' + criminalHistory + ' "" is not recognized as a command');
+    }
+  }
+
+  async selectDamageHistory(damageHistory: string) {
+    await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.criminalHistoryNoElement, browser.getPageTimeout);
+    if (damageHistory === yesNo.YES) {
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.damageHistoryYesElement);
+    } else if (damageHistory === yesNo.NO) {
+      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.damageHistoryNoElement);
+    } else {
+      throw new Error('The input you have entered selectDamageHistory: "" ' + damageHistory + ' "" is not recognized as a command');
+    }
+  }
+
+
 }

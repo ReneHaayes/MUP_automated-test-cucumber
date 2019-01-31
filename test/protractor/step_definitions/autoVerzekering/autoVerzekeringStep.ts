@@ -5,12 +5,11 @@ import {browser} from 'protractor';
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {AutoVerzekeringElements} from "../../pageobjects/autoVerzekering/autoVerzekeringElements";
-import {AutoVerzekeringNawElements} from "../../pageobjects/nawData/autoVerzekeringNawElements";
+import {AutoVerzekeringNawElements} from "../../pageobjects/autoVerzekering/autoVerzekeringNawElements";
 import {CarWithLicensePlate} from "../../pageobjects/car/carWithLicensePlate";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
-import {AlmostInsuredMethods} from "../../pageobjects/generic/almostInsuredMethods";
 import {yesNo} from "../../pageobjects/enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
@@ -23,13 +22,6 @@ let autoVerzekeringNawElements: AutoVerzekeringNawElements = new AutoVerzekering
 
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
-let almostInsuredMethods: AlmostInsuredMethods = new AlmostInsuredMethods();
-
-//
-// Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
-//   await genericMethods.goToPage(page);
-//   await genericMethods.clickOnElement(genericElements.cookieElement);
-// });
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -98,9 +90,9 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
 
 When(/^I enter step five page of autoverzekering with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await almostInsuredMethods.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
-  await almostInsuredMethods.selectCriminalHistory(dataTable.criminalHistory);
-  await almostInsuredMethods.selectDamageHistory(dataTable.damageHistory);
+  await autoVerzekeringMethodsStepThreeAndFour.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
+  await autoVerzekeringMethodsStepThreeAndFour.selectCriminalHistory(dataTable.criminalHistory);
+  await autoVerzekeringMethodsStepThreeAndFour.selectDamageHistory(dataTable.damageHistory);
   await genericMethods.clickOnFinishButton();
 });
 

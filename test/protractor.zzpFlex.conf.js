@@ -1,14 +1,14 @@
 exports.config = {
   ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 60000,
+  getPageTimeout: 15000,
   directConnect: true,
   restartBrowserBetweenTests: true,
   // SELENIUM_PROMISE_MANAGER: false,
 
   specs: [
     // 'async_await.js',
-    './protractor/features/autoVerzekering/happyFlow.feature'
+    './protractor/features/zzpFlex/happyFlow.feature'
   ],
   capabilities: {
     browserName: 'chrome',

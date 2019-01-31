@@ -1,4 +1,5 @@
-Feature: Happy flow for 'Autoverzekering'
+@zzpFlex
+Feature: Happy flow for 'zzpFlex'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the zzpFlexPat page of the Unive website
