@@ -6,6 +6,8 @@ export class AansprakelijkheidsVerzekerElements {
   familyCompositionLivingTogetherElement: string = '[data-label-id="LA_IF5405_13219"] label:nth-child(3)';
   familyCompositionFamilyWithChildrenElement: string = '[data-label-id="LA_IF5405_13219"] label:nth-child(4)';
 
+  //PREMIE
+  premieAansprakelijkheidsVerzekeringTextElement: string = '[data-label-id*="IF5406_7909"] label';
 
 
 

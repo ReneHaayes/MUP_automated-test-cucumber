@@ -74,12 +74,12 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
-  await autoVerzekeringMethodsStepThreeAndFour.clickYourDataGender(personaData.getPersonaGender(persona));
+  await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
-  await autoVerzekeringMethodsStepThreeAndFour.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
+  await genericMethods.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
@@ -89,12 +89,9 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
 
 When(/^I enter step five page of autoverzekering with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await autoVerzekeringMethodsStepThreeAndFour.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
-  await autoVerzekeringMethodsStepThreeAndFour.selectCriminalHistory(dataTable.criminalHistory);
-  await autoVerzekeringMethodsStepThreeAndFour.selectDamageHistory(dataTable.damageHistory);
+  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
+  await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
+  await genericMethods.selectDamageHistory(dataTable.damageHistory);
   await genericMethods.clickOnFinishButton();
 });
 
-Then(/^The thank you page for (.*) is shown$/, async (persona: string) => {
-  await genericMethods.verifyThankYouPageTitle(persona);
-});

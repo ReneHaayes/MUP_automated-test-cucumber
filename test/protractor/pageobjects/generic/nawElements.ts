@@ -28,7 +28,7 @@ export class NawElements {
   yourDataSpecificIdentificationIdCardSelect: string = 'string:IdentiteitskaartLw';
   yourDataSpecificIdentificationIdCardNumberElement: string = '#_Form_IF2530_7308';
   yourDataSpecificIdentificationSomethingElseSelect: string = 'string:AndersLw';
-
+  yourDataZipCodeElement: string = '#_Form_IF2530_3693';
   yourDataEmailAddressElement: string = '#_Form_IF2530_3701';
   yourDataPhoneNumberElement: string = '#_Form_IF2530_3699';
 

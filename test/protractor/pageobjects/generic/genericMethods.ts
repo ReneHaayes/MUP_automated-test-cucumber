@@ -5,7 +5,8 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
-import {gender} from "../enum/genericEnum";
+import {gender, specificIdentification, yesNo} from "../enum/genericEnum";
+import {NawElements} from "./nawElements";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -15,6 +16,7 @@ const ec = protractor.ExpectedConditions;
 let getUrlUnive: GetUrlUnive = new GetUrlUnive();
 let genericElements: GenericElements = new GenericElements();
 let personaData: PersonaData = new PersonaData();
+let nawElements: NawElements = new NawElements();
 
 export class GenericMethods {
 
@@ -183,4 +185,69 @@ export class GenericMethods {
       throw new Error('The input you have entered for verifyThankYouPageTitle: "" ' + persona + ' "" is not recognized as a command');
     }
   }
+  async clickYourDataGender(genderType: string) {
+    if (genderType === gender.MALE) {
+      await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+      await this.clickOnElement(nawElements.yourDataGenderMaleElement);
+    } else if (genderType === gender.FEMALE) {
+      await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+      await this.clickOnElement(nawElements.yourDataGenderFemaleElement);
+    } else {
+      throw new Error('The input you have entered clickYourDataGender: "" ' + genderType + ' "" is not recognized as a command');
+    }
+  }
+
+  async selectYourDataSpecificIdentification(specificIdentificationType: string, persona: string) {
+    if (specificIdentificationType === specificIdentification.DRIVER_LICENSE) {
+      await this.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationDriverLicenseSelect);
+      await this.typeText(nawElements.yourDataSpecificIdentificationDriverLicenseNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
+    } else if (specificIdentificationType === specificIdentification.PASSPORT) {
+      await this.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationPassportSelect);
+      await this.typeText(nawElements.yourDataSpecificIdentificationPassportNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
+    } else if (specificIdentificationType === specificIdentification.ID_CARD) {
+      await this.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationIdCardSelect);
+      await this.typeText(nawElements.yourDataSpecificIdentificationIdCardNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
+    } else if (specificIdentificationType === specificIdentification.SOMETHING_ELSE) {
+      await this.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationSomethingElseSelect);
+    } else {
+      throw new Error('The input you have entered selectYourDataSpecificIdentification: "" ' + specificIdentificationType + ' "" is not recognized as a command');
+    }
+  }
+
+  async selectInsuranceHistory(insuranceHistory: string, explanation: string) {
+    await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
+    if (insuranceHistory === yesNo.YES) {
+      await this.clickOnElement(genericElements.insuranceHistoryYesElement);
+      await this.typeText(genericElements.insuranceHistoryYesExplanationElement, explanation);
+    } else if (insuranceHistory === yesNo.NO) {
+      await this.clickOnElement(genericElements.insuranceHistoryNoElement);
+    } else {
+      throw new Error('The input you have entered selectInsuranceHistory: "" ' + insuranceHistory + ' "" is not recognized as a command');
+    }
+  }
+
+  async selectCriminalHistory(criminalHistory: string) {
+    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    if (criminalHistory === yesNo.YES) {
+      await this.clickOnElement(genericElements.criminalHistoryYesElement);
+      await this.waitForElementIsVisible(genericElements.criminalHistoryInformationElement, browser.getPageTimeout);
+      await this.clickOnElement(genericElements.criminalHistoryInformationElement);
+    } else if (criminalHistory === yesNo.NO) {
+      await this.clickOnElement(genericElements.criminalHistoryNoElement);
+    } else {
+      throw new Error('The input you have entered selectCriminalHistory: "" ' + criminalHistory + ' "" is not recognized as a command');
+    }
+  }
+
+  async selectDamageHistory(damageHistory: string) {
+    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    if (damageHistory === yesNo.YES) {
+      await this.clickOnElement(genericElements.damageHistoryYesElement);
+    } else if (damageHistory === yesNo.NO) {
+      await this.clickOnElement(genericElements.damageHistoryNoElement);
+    } else {
+      throw new Error('The input you have entered selectDamageHistory: "" ' + damageHistory + ' "" is not recognized as a command');
+    }
+  }
+
 }

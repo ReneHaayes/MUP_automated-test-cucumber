@@ -2,15 +2,13 @@ import {browser} from 'protractor';
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {AutoVerzekeringElementsStepThree} from "./autoVerzekeringElementsStepThree";
-import {gender, specificIdentification, yesNo} from "../enum/genericEnum";
-import {PersonaData} from "../persona/persona";
+import {gender} from "../enum/genericEnum";
 import {NawElements} from "../generic/nawElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
 let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
 let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
 
 
 export class AutoVerzekeringMethodsStepThreeAndFour {
@@ -63,35 +61,6 @@ export class AutoVerzekeringMethodsStepThreeAndFour {
     }
   }
 
-  async clickYourDataGender(genderType: string) {
-    if (genderType === gender.MALE) {
-      await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-      await genericMethods.clickOnElement(nawElements.yourDataGenderMaleElement);
-    } else if (genderType === gender.FEMALE) {
-      await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-      await genericMethods.clickOnElement(nawElements.yourDataGenderFemaleElement);
-    } else {
-      throw new Error('The input you have entered clickYourDataGender: "" ' + genderType + ' "" is not recognized as a command');
-    }
-  }
-
-  async selectYourDataSpecificIdentification(specificIdentificationType: string, persona: string) {
-    if (specificIdentificationType === specificIdentification.DRIVER_LICENSE) {
-      await genericMethods.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationDriverLicenseSelect);
-      await genericMethods.typeText(nawElements.yourDataSpecificIdentificationDriverLicenseNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
-    } else if (specificIdentificationType === specificIdentification.PASSPORT) {
-      await genericMethods.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationPassportSelect);
-      await genericMethods.typeText(nawElements.yourDataSpecificIdentificationPassportNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
-    } else if (specificIdentificationType === specificIdentification.ID_CARD) {
-      await genericMethods.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationIdCardSelect);
-      await genericMethods.typeText(nawElements.yourDataSpecificIdentificationIdCardNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
-    } else if (specificIdentificationType === specificIdentification.SOMETHING_ELSE) {
-      await genericMethods.selectInDropdown(nawElements.yourDataSpecificIdentificationElement, nawElements.yourDataSpecificIdentificationSomethingElseSelect);
-    } else {
-      throw new Error('The input you have entered selectYourDataSpecificIdentification: "" ' + specificIdentificationType + ' "" is not recognized as a command');
-    }
-  }
-
   async clickOwnerDataGender(genderType: string) {
     if (genderType === gender.MALE) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
@@ -115,42 +84,4 @@ export class AutoVerzekeringMethodsStepThreeAndFour {
       throw new Error('The input you have entered clickMainDriverGender: "" ' + genderType + ' "" is not recognized as a command');
     }
   }
-
-  async selectInsuranceHistory(insuranceHistory: string, explanation: string) {
-    await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.insuranceHistoryNoElement, browser.getPageTimeout);
-    if (insuranceHistory === yesNo.YES) {
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.insuranceHistoryYesElement);
-      await genericMethods.typeText(autoVerzekeringElementsStepThree.insuranceHistoryYesExplanationElement, explanation);
-    } else if (insuranceHistory === yesNo.NO) {
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.insuranceHistoryNoElement);
-    } else {
-      throw new Error('The input you have entered selectInsuranceHistory: "" ' + insuranceHistory + ' "" is not recognized as a command');
-    }
-  }
-
-  async selectCriminalHistory(criminalHistory: string) {
-    await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.criminalHistoryNoElement, browser.getPageTimeout);
-    if (criminalHistory === yesNo.YES) {
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.criminalHistoryYesElement);
-      await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.criminalHistoryInformationElement, browser.getPageTimeout);
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.criminalHistoryInformationElement);
-    } else if (criminalHistory === yesNo.NO) {
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.criminalHistoryNoElement);
-    } else {
-      throw new Error('The input you have entered selectCriminalHistory: "" ' + criminalHistory + ' "" is not recognized as a command');
-    }
-  }
-
-  async selectDamageHistory(damageHistory: string) {
-    await genericMethods.waitForElementIsVisible(autoVerzekeringElementsStepThree.criminalHistoryNoElement, browser.getPageTimeout);
-    if (damageHistory === yesNo.YES) {
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.damageHistoryYesElement);
-    } else if (damageHistory === yesNo.NO) {
-      await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.damageHistoryNoElement);
-    } else {
-      throw new Error('The input you have entered selectDamageHistory: "" ' + damageHistory + ' "" is not recognized as a command');
-    }
-  }
-
-
 }
