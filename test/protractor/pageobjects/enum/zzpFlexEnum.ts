@@ -6,3 +6,12 @@ export enum zzpFlexUwpremie {
   _125 = '125',
   _150 = '150'
 }
+
+export enum incapacitation {
+  FIRST_ZW = 'first ZW',
+  FIRST_WW = 'first WW',
+  CAN_GET_ASSITANCE = 'can get assitance',
+  FULL_INCOME = 'full income',
+  _40_PERCENT_INCOME = '40 percent income',
+  NO_INCOME = 'no income'
+}

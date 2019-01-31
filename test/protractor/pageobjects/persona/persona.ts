@@ -29,12 +29,14 @@ export class Persona {
   profession: string;
   kvkNumber: string;
   durationEntrepreneur: string;
+  height: string;
+  weight: string;
   
 
 
   constructor(firstName: string, initials: string, prefix: string, lastName: string, birthday: string, birthplace: string, zipcode: string, houseNumber: string, houseNumberAddition: string,
               gender: string, phoneNumber: string, specificIdentification: string, specificIdentificationNumber: string, eMailAddress: string, accountNumber: string, bsn: string,
-              profession: string, kvkNumber:string, durationEntrepreneur: string) {
+              profession: string, kvkNumber:string, durationEntrepreneur: string, height: string, weight: string) {
 
     this.firstName = firstName;
     this.initials = initials;
@@ -55,6 +57,8 @@ export class Persona {
     this.profession = profession;
     this.kvkNumber = kvkNumber;
     this.durationEntrepreneur = durationEntrepreneur;
+    this.height = height;
+    this.weight = weight;
   }
 }
 
@@ -62,19 +66,19 @@ export class PersonaData {
 
   ronaldo: Persona = new Persona('Cristiano', 'C', prefix.NO_PREFIX, 'Ronaldo', '10-05-1987', 'Deventer', '7412XW', '91',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'ronaldo@unive.nl',
-    'NL05INGB0661095088', '218333754', 'model', '1234567890', durationEntrepreneur._5);
+    'NL05INGB0661095088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85');
   messi: Persona = new Persona('Lionel', 'L', prefix.NO_PREFIX, 'Messi', '05-09-1965', 'Apeldoorn', '7412TV', '44',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.DRIVER_LICENSE, '12345567890',
-    'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9);
+    'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76');
   salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15-06-1992', 'Enschede', '7412XW', '31',
     'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'salah@unive.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._3);
+    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50');
   neymar: Persona = new Persona('Neymar', 'N', 'da', 'Silva', '05-02-1992', 'Arnhem', '7412XW', '12',
     'ABC', gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
-    'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7);
+    'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98');
   pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15-03-1993', 'Zwolle', '7412TV', '69',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '1234567890', specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1);
+    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110');
 
 
   getPersonaZipcode(persona: string): string {
@@ -378,6 +382,38 @@ export class PersonaData {
       return this.pogba.durationEntrepreneur;
     } else {
       throw new Error('The input you have entered for getPersonadurationEntrepreneur: "" ' + persona + ' "" is not recognized as a command');
+    }
+  }
+
+  getPersonaHeight(persona: string): string {
+    if (persona === personaName.RONALDO) {
+      return this.ronaldo.height;
+    } else if (persona === personaName.MESSI) {
+      return this.messi.height;
+    } else if (persona === personaName.SALAH) {
+      return this.salah.height;
+    } else if (persona === personaName.NEYMAR) {
+      return this.neymar.height;
+    } else if (persona === personaName.POGBA) {
+      return this.pogba.height;
+    } else {
+      throw new Error('The input you have entered for getPersonalength: "" ' + persona + ' "" is not recognized as a command');
+    }
+  }
+
+  getPersonaWeight(persona: string): string {
+    if (persona === personaName.RONALDO) {
+      return this.ronaldo.weight;
+    } else if (persona === personaName.MESSI) {
+      return this.messi.weight;
+    } else if (persona === personaName.SALAH) {
+      return this.salah.weight;
+    } else if (persona === personaName.NEYMAR) {
+      return this.neymar.weight;
+    } else if (persona === personaName.POGBA) {
+      return this.pogba.weight;
+    } else {
+      throw new Error('The input you have entered for getPersonaweight: "" ' + persona + ' "" is not recognized as a command');
     }
   }
 

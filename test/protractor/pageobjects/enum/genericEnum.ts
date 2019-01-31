@@ -30,7 +30,8 @@ export enum personaName{
 export enum yesNo {
   YES = 'yes',
   NO = 'no',
-  EMPTY = ''
+  EMPTY = '',
+  DONT_KNOW = 'dont know'
 }
 
 export enum durationEntrepreneur {

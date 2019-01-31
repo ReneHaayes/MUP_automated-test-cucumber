@@ -1,10 +1,10 @@
 // @ts-ignore
-import {Given, When} from 'cucumber';
-import {browser} from "protractor";
+import {Given, Then, When} from 'cucumber';
 import {ZzpFlexMethods} from "../../pageobjects/zzpFlex/zzpFlexMethods";
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {ZzpFlexElements} from "../../pageobjects/zzpFlex/zzpFlexElements";
+import {yesNo} from "../../pageobjects/enum/genericEnum";
 
 let zzpFlexElements: ZzpFlexElements = new ZzpFlexElements();
 let zzpFlexMethods: ZzpFlexMethods = new ZzpFlexMethods();
@@ -38,5 +38,43 @@ When(/^I enter step two page of zzpFlex for persona (.*)$/, async (persona: stri
   await genericMethods.clickOnTAB(zzpFlexElements.zzpFlexAccountNumberDataElement);
   await genericMethods.clickOnElement(zzpFlexElements.zzpFlexPaymentAuthorizationElement);
   await zzpFlexMethods.clickOnNextButton();
-  await browser.sleep(10000);
+});
+
+When(/^I enter step three page of zzpFlex for (.*) with$/, async (persona: string, data) => {
+  const dataTable = data.rowsHash();
+  await genericMethods.typeText(zzpFlexElements.zzpFlexHeightElement, personaData.getPersonaHeight(persona));
+  await genericMethods.typeText(zzpFlexElements.zzpFlexWeightElement, personaData.getPersonaWeight(persona));
+  await zzpFlexMethods.clickHealthCertificate14DaysNotAbleToWork(dataTable.notWorkForFourteenDays);
+  await zzpFlexMethods.clickHealthCertificateHeartComplaints(dataTable.heartComplaints);
+  await zzpFlexMethods.clickHealthCertificateCancer(dataTable.cancer);
+  await zzpFlexMethods.clickHealthCertificatePsychologist(dataTable.psychologist);
+  await zzpFlexMethods.clickHealthCertificatePosturalComplaints(dataTable.posturalComplaints);
+  await zzpFlexMethods.clickHealthCertificateOtherCondition(dataTable.otherCondition);
+  await zzpFlexMethods.clickHealthCertificateMedicines(dataTable.medicines);
+  await zzpFlexMethods.clickHealthCertificateDisabilityBenefit(dataTable.disabilityBenefit);
+  await zzpFlexMethods.clickOnNextButton();
+});
+
+When(/^I enter step four page of zzpFlex with$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await zzpFlexMethods.clickKnowledgeLifeInsurance(dataTable.lifeInsurance);
+  await zzpFlexMethods.clickKnowledgeIncomeIncapacitated(dataTable.incomeIncapacitated);
+  await zzpFlexMethods.clickKnowledgeAmountIncapacitated(dataTable.amountIncapacitated);
+  await zzpFlexMethods.clickKnowledgeMonthlyIncapacitated(dataTable.monthlyIncapacitated);
+  await zzpFlexMethods.clickKnowledgeConsciousOfAccidentInsurance(dataTable.consciousOfAccidentInsurance);
+  await zzpFlexMethods.clickKnowledgeConsciousOfMaxTwoYears(dataTable.consciousOfMaxTwoYears);
+  await zzpFlexMethods.clickOnNextButton();
+});
+
+When(/^I enter step five page of zzpFlex with$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await zzpFlexMethods.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
+  await zzpFlexMethods.selectCriminalHistory(dataTable.criminalHistory);
+  await zzpFlexMethods.selectDamageHistory(dataTable.damageHistory);
+  await zzpFlexMethods.clickOnFinishButton()
+});
+
+
+Then(/^Thank you page for zppFlex (.*) is shown$/, async (persona: string) => {
+  await zzpFlexMethods.verifyThankYouPageText(persona);
 });
