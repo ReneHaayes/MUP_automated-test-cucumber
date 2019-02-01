@@ -31,7 +31,9 @@ export enum yesNo {
   YES = 'yes',
   NO = 'no',
   EMPTY = '',
-  DONT_KNOW = 'dont know'
+  DONT_KNOW = 'dont know',
+  DO = 'do',
+  DONT = 'dont'
 }
 
 export enum durationEntrepreneur {
@@ -47,3 +49,5 @@ export enum durationEntrepreneur {
   _9 = '9 jaar',
   _10 = '10 jaar'
 }
+
+

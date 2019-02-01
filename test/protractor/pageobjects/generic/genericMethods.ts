@@ -98,6 +98,13 @@ export class GenericMethods {
     return text.getText();
   }
 
+  async getNoText(selector: string, elementToWaitFor: string): Promise<string> {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(elementToWaitFor, browser.getPageTimeout);
+    const text: ElementFinder = element(by.css(selector));
+    return text.getText();
+  }
+
   async getTextWithXpath(selector: string): Promise<string> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     const text: ElementFinder = element(by.xpath(selector));
@@ -138,9 +145,11 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
-  async verifyUrl(url: string) {
+  async verifyTextNotInElement(selector: string, assertionText: string, elementToWaitFor: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await browser.wait(ec.urlContains(url), browser.getPageTimeout);
+    await this.waitForElementIsVisible(elementToWaitFor, browser.getPageTimeout);
+    const selectorToString: string = await this.getNoText(selector, elementToWaitFor);
+    await expect(selectorToString).to.not.equal(assertionText);
   }
 
   async verifyNumberInElement(selector: string, assertionNumber: number) {
@@ -190,6 +199,7 @@ export class GenericMethods {
       throw new Error('The input you have entered for verifyThankYouPageTitle: "" ' + persona + ' "" is not recognized as a command');
     }
   }
+
   async clickYourDataGender(genderType: string) {
     if (genderType === gender.MALE) {
       await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);

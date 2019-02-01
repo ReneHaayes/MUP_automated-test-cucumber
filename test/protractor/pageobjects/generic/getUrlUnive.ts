@@ -4,8 +4,7 @@ let genericElements: GenericElements = new GenericElements();
 
 export class GetUrlUnive {
 
-  getUrlUnive(url: string): string {
-    try {
+  async getUrlUnive(url: string): Promise<string> {
       if (url === 'homePat') {
         return genericElements.patUnive;
       } else if (url === 'autoverzekeringPat') {
@@ -17,8 +16,5 @@ export class GetUrlUnive {
       } else if (url === 'aansprakelijkheidsVerzekeringPat') {
         return genericElements.aansprakelijkheidsVerzekeringPat;
       }
-    } catch (err) {
-      err.message();
     }
-  }
 }
