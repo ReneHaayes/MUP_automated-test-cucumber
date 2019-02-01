@@ -8,4 +8,11 @@ export class HmPageElements {
   homePageReisverzekeringElement: string = '[href*="/zorgservice/alternatievezorg"][class*="insurances_tabLinkAction"]';
   homePageAlleverzekeringElement: string = '[href*="/verzekeringen"][class*="insurances_tabButtonAction"]';
 
+  //LICENSE PLATE
+  licensePlateWidgetInputElement: string = '#kenteken';
+  licensePlateWidgetButtonElement: string = '[class*="premiumCalculator_boxSubmit"]';
+  licensePlateWidgetDontKnowElement: string = '[class*="premiumCalculatorRationalisatie_boxKentekenLink"]';
+
+
+
 }

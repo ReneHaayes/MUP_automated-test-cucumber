@@ -3,9 +3,9 @@
 Feature: Check the widget on the car insurance page.
 
   Scenario Outline: Enter a license plate number and check if the correct data appears.
-    Given I am on the autoVerzekeringPat page of the Unive website
-    When I enter the following license plate <licensePlate>
-    Then The <licensePlate> data correctly appears
+    Given I am on the homePat page of the Unive website
+    When I enter the following license plate <licensePlate> on the home page for autoverzekering
+    Then The <licensePlate> data correctly appears with url autoverzekeringPat
 
     Examples:
       | licensePlate |

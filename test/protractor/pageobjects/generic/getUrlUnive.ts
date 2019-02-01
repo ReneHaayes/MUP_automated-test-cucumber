@@ -1,10 +1,10 @@
-import {GenericElements} from './generic/genericElements';
+import {GenericElements} from './genericElements';
 
 let genericElements: GenericElements = new GenericElements();
 
 export class GetUrlUnive {
 
-  async getUrlUnive(url: string): Promise<string> {
+  getUrlUnive(url: string): string {
     try {
       if (url === 'homePat') {
         return genericElements.patUnive;

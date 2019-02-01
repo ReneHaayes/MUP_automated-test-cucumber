@@ -1,7 +1,7 @@
 exports.config = {
   ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 60000,
+  getPageTimeout: 15000,
   directConnect: true,
   restartBrowserBetweenTests: true,
   // SELENIUM_PROMISE_MANAGER: false,

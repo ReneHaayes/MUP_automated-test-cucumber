@@ -11,6 +11,8 @@ import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
 import {yesNo} from "../../pageobjects/enum/genericEnum";
+import {HmPageElements} from "../../pageobjects/generic/hmPageElements";
+import {GetUrlUnive} from "../../pageobjects/generic/getUrlUnive";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -21,6 +23,8 @@ let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new Aut
 let nawElements: NawElements = new NawElements()
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
+let hmPageElements: HmPageElements = new HmPageElements();
+let getUrlUnive: GetUrlUnive = new GetUrlUnive();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -35,11 +39,14 @@ When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (person
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter the following license plate (.*)$/, async (licensePlate: string) => {
-  await autoVerzekeringMethods.enterLicensePlate(licensePlate);
+When(/^I enter the following license plate (.*) on the home page for autoverzekering$/, async (licensePlate: string) => {
+  await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+  await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+  await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement)
 });
 
-Then(/^The (.*) data correctly appears$/, async (licensePlate: string) => {
+Then(/^The (.*) data correctly appears with url (.*)$/, async (licensePlate: string, getUrl: string) => {
+  await genericMethods.verifyUrl(getUrlUnive.getUrlUnive(getUrl));
   await genericMethods.verifyTextInElement(autoVerzekeringElements.brandElement, carWithLicensePlate.getCarBrandName(licensePlate));
   await genericMethods.verifyTextInElement(autoVerzekeringElements.typeElement, carWithLicensePlate.getCarBrandType(licensePlate));
   await genericMethods.verifyTextInElement(autoVerzekeringElements.constructionYearElement, carWithLicensePlate.getCarConstructionYear(licensePlate));

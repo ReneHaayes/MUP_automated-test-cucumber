@@ -1,5 +1,5 @@
 import {browser, by, element, ElementFinder, protractor} from 'protractor';
-import {GetUrlUnive} from "../getUrlUnive";
+import {GetUrlUnive} from "./getUrlUnive";
 
 import * as chai from 'chai';
 import * as chaistring from 'chai-string';
@@ -136,6 +136,11 @@ export class GenericMethods {
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const selectorToString: string = await this.getText(selector);
     await expect(selectorToString).to.equal(assertionText);
+  }
+
+  async verifyUrl(url: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await browser.wait(ec.urlContains(url), browser.getPageTimeout);
   }
 
   async verifyNumberInElement(selector: string, assertionNumber: number) {
