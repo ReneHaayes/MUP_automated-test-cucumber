@@ -1,6 +1,6 @@
 import {Given, Then} from 'cucumber';
-import {GenericMethods} from "../pageobjects/generic/genericMethods";
-import {GenericElements} from "../pageobjects/generic/genericElements";
+import {GenericMethods} from "../../pageobjects/generic/genericMethods";
+import {GenericElements} from "../../pageobjects/generic/genericElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();

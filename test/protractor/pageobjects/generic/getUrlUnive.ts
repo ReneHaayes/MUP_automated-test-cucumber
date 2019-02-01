@@ -17,6 +17,8 @@ export class GetUrlUnive {
         return genericElements.aansprakelijkheidsVerzekeringPat;
       } else if (url === 'autoverzekeringProductPagePat') {
         return genericElements.autoVerzProductPagePat;
+      } else if (url === 'woonVerzekeringPat') {
+        return genericElements.woonVerzPat;
       }
     }
 }

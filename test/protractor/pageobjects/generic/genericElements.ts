@@ -9,6 +9,7 @@ export class GenericElements {
   zzpFlexPat: string = this.patUnive + 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
   aansprakelijkheidsVerzekeringPat: string = this.patUnive + 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
   autoVerzProductPagePat: string = this.patUnive + 'autoverzekering';
+  woonVerzPat: string = this.patUnive + 'woonverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
 
