@@ -12,16 +12,26 @@ let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 
 export class LicensePlateMethod {
 
-  async clickOnAutoverzekeringHmPage(input: string, licensePlate: string) {
+  async clickOnAutoVerzekeringButton(input: string, licensePlate: string) {
     if (input === licensePlateHmPageEnum.LICENSE_PLATE) {
+      await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
       await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement)
-    } else if (input === licensePlateHmPageEnum.NO_LICENSE_PLATE) {
       await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+    } else if (input === licensePlateHmPageEnum.LICENSE_PLATE_PP) {
+      await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
+    } else if (input === licensePlateHmPageEnum.NO_LICENSE_PLATE) {
+      await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+    } else if (input === licensePlateHmPageEnum.NO_LICENSE_PLATE_PP) {
+      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
     } else if (input === yesNo.DONT_KNOW) {
+      await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
       await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
+    } else if (input === licensePlateHmPageEnum.DONT_KNOW_PP) {
+      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowProductPageElement);
     } else {
-      throw new Error('The input you have entered clickOnAutoverzekeringHmPage: "" ' + input + ' "" is not recognized as a command');
+      throw new Error('The input you have entered clickOnAutoVerzekeringButton: "" ' + input + ' "" is not recognized as a command');
     }
   }
 

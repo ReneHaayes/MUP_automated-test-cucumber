@@ -11,7 +11,9 @@ export class HmPageElements {
   //LICENSE PLATE
   licensePlateWidgetInputElement: string = '#kenteken';
   licensePlateWidgetButtonElement: string = '[class*="premiumCalculator_boxSubmit"]';
+  licensePlateWidgetButtonProductPageElement: string = '[class*="premiumCalculatorShort_submit"]';
   licensePlateWidgetDontKnowElement: string = '[class*="premiumCalculatorRationalisatie_boxKentekenLink"]';
+  licensePlateWidgetDontKnowProductPageElement: string = '[class*="premiumCalculatorShort_directLink"]';
 
 
 
