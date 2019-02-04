@@ -21,6 +21,8 @@ export class GetUrlUnive {
         return genericElements.woonVerzPat;
       } else if (url === 'woonVerzekeringPatPp') {
         return genericElements.woonVerzPatProductPage;
+      } else if (url === 'bromfietsVerzekeringPat') {
+        return genericElements.bromfietsVerzekeringPat;
       }
     }
 }

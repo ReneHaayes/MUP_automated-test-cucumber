@@ -2,7 +2,7 @@ import {browser} from 'protractor';
 import {AutoVerzekeringElements} from "./autoVerzekeringElements";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
-import {CarWithLicensePlate} from "../car/carWithLicensePlate";
+import {CarWithLicensePlate} from "../verhicles/carWithLicensePlate";
 import {genericEnum} from "../enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();

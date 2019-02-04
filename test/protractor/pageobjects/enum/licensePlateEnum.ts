@@ -5,3 +5,9 @@ export enum licensePlateHmPageEnum {
   NO_LICENSE_PLATE_PP = 'no license plate product page',
   DONT_KNOW_PP = 'dont know product page'
 }
+
+export enum licensePlates {
+  _06HNDL = '06-HN-DL',
+  _80SRB4 = '80-SRB-4',
+  _12FRP3 = '12-FRP-3'
+}

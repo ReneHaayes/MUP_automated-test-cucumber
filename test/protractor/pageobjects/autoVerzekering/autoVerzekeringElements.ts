@@ -7,7 +7,7 @@ export class AutoVerzekeringElements {
   //OVERVIEW OF LICENSEPLATE INFORMATION
 
   validationElement: string = '.fieldValidationAfterInputField';
-  brandElementXpath: string = '//*[@id="_Form_FormSection"]/ul/li[1]/div[2]/fieldset[1]/div/div[5]/div[2]/div[1]/span'
+  brandElementXpath: string = '//*[@id="_Form_FormSection"]/ul/li[1]/div[2]/fieldset[1]/div/div[5]/div[2]/div[1]/span';
   brandElement: string = '[data-label-id="LA_IF2509_3613"]';
   typeElement: string = '[data-label-id="LA_IF2509_3614"]';
   constructionYearElement: string = '[data-label-id="LA_IF2509_3615"] [class*="textValue"]';

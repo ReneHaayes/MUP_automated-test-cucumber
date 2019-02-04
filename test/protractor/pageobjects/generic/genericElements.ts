@@ -11,6 +11,7 @@ export class GenericElements {
   autoVerzProductPagePat: string = this.patUnive + 'autoverzekering';
   woonVerzPat: string = this.patUnive + 'woonverzekering/premieberekenen-en-afsluiten';
   woonVerzPatProductPage: string = this.patUnive + 'woonverzekering';
+  bromfietsVerzekeringPat: string = this.patUnive + 'bromfietsverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
 

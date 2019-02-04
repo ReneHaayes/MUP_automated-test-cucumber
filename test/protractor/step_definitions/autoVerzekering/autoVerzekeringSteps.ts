@@ -6,7 +6,7 @@ import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {AutoVerzekeringElements} from "../../pageobjects/autoVerzekering/autoVerzekeringElements";
 import {NawElements} from "../../pageobjects/generic/nawElements";
-import {CarWithLicensePlate} from "../../pageobjects/car/carWithLicensePlate";
+import {CarWithLicensePlate} from "../../pageobjects/verhicles/carWithLicensePlate";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
