@@ -39,3 +39,9 @@ export enum additionalOption {
 export enum inhabited {
   WITHIN_3_MONTHS = 'within 3 monts'
 }
+
+export enum superficiesAndContents {
+  SUPERFICIES = 'superficies',
+  CONTENTS = 'contents',
+  SUPERFICIES_AND_CONTENTS = 'superficies and contents'
+}

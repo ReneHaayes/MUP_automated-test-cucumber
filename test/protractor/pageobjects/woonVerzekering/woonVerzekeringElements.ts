@@ -57,4 +57,25 @@ export class WoonVerzekeringElements {
 
   warrantyBirthdayElement: string = '#_Form_IF22110_18608';
 
+  //STEP THREE
+
+  premieSuperficiesAndContentsElement: string = '[data-label-id*="LA_IF28906_36816"] label';
+  premieSuperficiesElement: string = '[data-label-id*="LA_IF28908_36822"] label';
+  premieContentsElement: string = '[data-label-id*="LA_IF28907_36819"] label';
+
+  mainCoverageSuperficiesAndContentBasicElement: string = '[data-label-id*="LA_IF28909_36825"] label';
+  mainCoverageSuperficiesAndContentAllRiskElement: string = '[data-label-id*="LA_IF28910_36832"] label';
+  mainCoverageSuperficiesAndContentAllRiskWithOutsideElement: string = '[data-label-id*="LA_IF28914_36846"] label';
+  mainCoverageSuperficiesBasicElement: string = '[data-label-id*="LA_IF28915_36850"] label';
+  mainCoverageSuperficiesAllRiskElement: string = '[data-label-id*="LA_IF28916_36854"] label';
+  mainCoverageContentsBasicElement: string = '[data-label-id*="LA_IF28911_36830"] label';
+  mainCoverageContentsAllRiskElement: string = '[data-label-id*="LA_IF28912_36840"] label';
+  mainCoverageContentsAllRiskWithOutsideElement: string = '[data-label-id*="LA_IF28913_36841"] label';
+
+  additionalOptionsGlassBreakageElement: string = '[data-label-id*="LA_IF14013_14404"] label';
+  additionalOptionsVoluntaryRiskElement: string = '[data-label-id*="LA_IF14016_14413"] label';
+
+
+
+
 }

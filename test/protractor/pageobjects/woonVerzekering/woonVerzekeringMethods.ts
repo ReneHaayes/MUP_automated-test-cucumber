@@ -1,5 +1,5 @@
 import {browser} from "protractor";
-import {additionalOption, inhabited, kindStraw, totalSurface, wallHouse} from "../enum/woonVerzekeringEnum";
+import {additionalOption, inhabited, kindStraw, superficiesAndContents, totalSurface, wallHouse} from "../enum/woonVerzekeringEnum";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {WoonVerzekeringElements} from "./woonVerzekeringElements";
@@ -176,6 +176,21 @@ export class WoonVerzekeringMethods {
       await genericMethods.clickOnElement(woonVerzekeringElements.inhabitedWithinThreeMontsElement);
     } else {
       throw new Error('The input you have entered clickIfInhabited: "" ' + input + ' "" is not recognized as a command');
+    }
+  }
+
+  async clickSuperficiesAndContents(input: string) {
+    if (input === superficiesAndContents.SUPERFICIES_AND_CONTENTS) {
+      await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+      await genericMethods.clickOnElement(woonVerzekeringElements.premieSuperficiesAndContentsElement);
+    } else if (input === superficiesAndContents.CONTENTS) {
+      await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+      await genericMethods.clickOnElement(woonVerzekeringElements.premieContentsElement);
+    } else if (input === superficiesAndContents.SUPERFICIES) {
+      await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+      await genericMethods.clickOnElement(woonVerzekeringElements.premieSuperficiesElement);
+    } else {
+      throw new Error('The input you have entered clickSuperficiesAndContents: "" ' + input + ' "" is not recognized as a command');
     }
   }
 
