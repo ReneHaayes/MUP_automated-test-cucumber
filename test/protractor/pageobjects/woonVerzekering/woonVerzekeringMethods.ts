@@ -1,13 +1,25 @@
 import {browser} from "protractor";
-import {additionalOption, inhabited, kindStraw, superficiesAndContents, totalSurface, wallHouse} from "../enum/woonVerzekeringEnum";
+import {
+  additionalOption,
+  hmPageWoonVerzekeringEnum,
+  inhabited,
+  kindStraw,
+  superficiesAndContents,
+  totalSurface,
+  wallHouse
+} from "../enum/woonVerzekeringEnum";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {WoonVerzekeringElements} from "./woonVerzekeringElements";
 import {genericEnum} from "../enum/genericEnum";
+import {HmPageElements} from "../generic/hmPageElements";
+import {PersonaData} from "../persona/persona";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
 let woonVerzekeringElements: WoonVerzekeringElements = new WoonVerzekeringElements();
+let hmPageElements: HmPageElements = new HmPageElements();
+let personaData: PersonaData = new PersonaData();
 
 
 export class WoonVerzekeringMethods {
@@ -194,4 +206,30 @@ export class WoonVerzekeringMethods {
     }
   }
 
+  async clickOnWoonverzekering(input: string, persona: string) {
+    if (input === hmPageWoonVerzekeringEnum.HMPAGE_WOONVERZEKERING_FILLED) {
+      await genericMethods.clickOnElement(hmPageElements.homePageWoonverzekeringElement);
+      await genericMethods.typeText(hmPageElements.woonVerzekeringZipCodeElement, personaData.getPersonaZipcode(persona));
+      await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
+      await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
+      await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+    } else if (input === hmPageWoonVerzekeringEnum.HMPAGE_WOONVERZEKERING) {
+      await genericMethods.clickOnElement(hmPageElements.homePageWoonverzekeringElement);
+      await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+    } else {
+      throw new Error('The input you have entered clickOnWoonverzekering: "" ' + input + ' "" is not recognized as a command');
+    }
+  }
+
+  async checkWoonVerzekeringPage(input: string) {
+    if (input === genericEnum.DO) {
+      let assertionTekstDo: string = 'Uw woning betreft een Tussenwoning aan Zandweerdsweg 91 in DEVENTER';
+      await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepTwoElement, assertionTekstDo);
+    } else if (input === genericEnum.DONT) {
+      let assertionTekstDont: string = 'Te verzekeren woning';
+      await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepOneElement,assertionTekstDont);
+    } else {
+      throw new Error('The input you have entered checkWoonVerzekeringPage: "" ' + input + ' "" is not recognized as a command');
+    }
+  }
 }

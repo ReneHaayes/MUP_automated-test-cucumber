@@ -1,6 +1,6 @@
 @licensePlateWidget
 @regressie
-Feature: Check the widget on the homepage.
+Feature: Check the license plate widget on the homepage.
 
   Scenario Outline: Enter a license plate number and check if the correct data appears.
     Given I am on the <pageName> page of the Unive website

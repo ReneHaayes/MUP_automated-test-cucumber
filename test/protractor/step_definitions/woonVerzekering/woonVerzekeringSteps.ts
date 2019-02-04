@@ -1,5 +1,4 @@
-import {When} from "cucumber";
-import {browser} from "protractor";
+import {Then, When} from "cucumber";
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {WoonVerzekeringElements} from "../../pageobjects/woonVerzekering/woonVerzekeringElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
@@ -63,6 +62,13 @@ When(/^I fill in step five of woonverzekering page with:$/, async (data) => {
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   await genericMethods.clickOnFinishButton();
-  await browser.sleep(10000);
 });
 
+
+When(/^I press the button (.*) for the following persona (.*) on the page for woonverzekering/, async (button: string, persona: string) => {
+  await woonVerzekeringMethods.clickOnWoonverzekering(button, persona);
+});
+
+Then(/^House data for woonverzekering (.*) appears$/, async (dodont: string) => {
+  await woonVerzekeringMethods.checkWoonVerzekeringPage(dodont);
+});

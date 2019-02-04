@@ -45,3 +45,8 @@ export enum superficiesAndContents {
   CONTENTS = 'contents',
   SUPERFICIES_AND_CONTENTS = 'superficies and contents'
 }
+
+export enum hmPageWoonVerzekeringEnum {
+  HMPAGE_WOONVERZEKERING_FILLED = 'postcode en huisnummer filled',
+  HMPAGE_WOONVERZEKERING = 'not filled'
+}

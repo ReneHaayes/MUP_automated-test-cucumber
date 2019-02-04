@@ -15,6 +15,11 @@ export class HmPageElements {
   licensePlateWidgetDontKnowElement: string = '[class*="premiumCalculatorRationalisatie_boxKentekenLink"]';
   licensePlateWidgetDontKnowProductPageElement: string = '[class*="premiumCalculatorShort_directLink"]';
 
-
-
+  //WOONVERZEKERING
+  woonVerzekeringButtonElement: string = '[class*="simpleWidget_submit"]';
+  woonVerzekeringZipCodeElement: string = '#woonPostcode';
+  woonVerzekeringHouseNumberElement: string = '#woonHuisnummerNr';
+  woonVerzekeringHouseNumberAddingElement: string = '#woonHuisnummerToevoegingAn';
+  woonVerzekeringCheckTekstStepTwoElement: string = '[ng-class*="R22109_0"] span';
+  woonVerzekeringCheckTekstStepOneElement: string = '[class*="headerText"]';
 }
