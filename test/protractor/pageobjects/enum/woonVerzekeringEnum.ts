@@ -47,6 +47,8 @@ export enum superficiesAndContents {
 }
 
 export enum hmPageWoonVerzekeringEnum {
-  HMPAGE_WOONVERZEKERING_FILLED = 'postcode en huisnummer filled',
-  HMPAGE_WOONVERZEKERING = 'not filled'
+  HMPAGE_WOONVERZEKERING_FILLED = 'postcode en huisnummer homepage filled',
+  HMPAGE_NOT_FILLED = 'homepage not filled',
+  PPAGE_WOONVERZ_FILLED = 'postcode en huisnummer product page filled',
+  PPAGE_NOT_FILLED = 'product page not filled'
 }

@@ -213,8 +213,15 @@ export class WoonVerzekeringMethods {
       await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
       await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
       await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
-    } else if (input === hmPageWoonVerzekeringEnum.HMPAGE_WOONVERZEKERING) {
+    } else if (input === hmPageWoonVerzekeringEnum.HMPAGE_NOT_FILLED) {
       await genericMethods.clickOnElement(hmPageElements.homePageWoonverzekeringElement);
+      await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+    } else if (input === hmPageWoonVerzekeringEnum.PPAGE_NOT_FILLED) {
+      await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+    } else if (input === hmPageWoonVerzekeringEnum.PPAGE_WOONVERZ_FILLED) {
+      await genericMethods.typeText(hmPageElements.woonVerzekeringZipCodeElement, personaData.getPersonaZipcode(persona));
+      await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
+      await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
       await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
     } else {
       throw new Error('The input you have entered clickOnWoonverzekering: "" ' + input + ' "" is not recognized as a command');
@@ -227,7 +234,7 @@ export class WoonVerzekeringMethods {
       await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepTwoElement, assertionTekstDo);
     } else if (input === genericEnum.DONT) {
       let assertionTekstDont: string = 'Te verzekeren woning';
-      await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepOneElement,assertionTekstDont);
+      await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepOneElement, assertionTekstDont);
     } else {
       throw new Error('The input you have entered checkWoonVerzekeringPage: "" ' + input + ' "" is not recognized as a command');
     }

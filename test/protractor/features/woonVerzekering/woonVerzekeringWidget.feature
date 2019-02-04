@@ -8,7 +8,9 @@ Feature: Check the woonverzekering widget on the homepage.
     Then House data for woonverzekering <dodont> appears
 
     Examples:
-      | pageName | button                        | dodont | persona |
-      | homePat  | postcode en huisnummer filled | do     | ronaldo |
-      | homePat  | not filled                    | dont     | ronaldo |
-#      | autoverzekeringProductPagePat | dont know product page        | dont   | ronaldo |
+      | pageName             | button                                     | dodont | persona |
+      | homePat              | postcode en huisnummer homepage filled     | do     | ronaldo |
+      | homePat              | homepage not filled                        | dont   | ronaldo |
+      | woonVerzekeringPatPp | postcode en huisnummer product page filled | do     | ronaldo |
+      | woonVerzekeringPatPp | product page not filled                    | dont   | ronaldo |
+

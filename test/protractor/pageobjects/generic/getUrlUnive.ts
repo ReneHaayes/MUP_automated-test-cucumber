@@ -19,6 +19,8 @@ export class GetUrlUnive {
         return genericElements.autoVerzProductPagePat;
       } else if (url === 'woonVerzekeringPat') {
         return genericElements.woonVerzPat;
+      } else if (url === 'woonVerzekeringPatPp') {
+        return genericElements.woonVerzPatProductPage;
       }
     }
 }
