@@ -27,13 +27,16 @@ export enum personaName{
   POGBA = 'pogba'
 }
 
-export enum yesNo {
+export enum genericEnum {
   YES = 'yes',
   NO = 'no',
   EMPTY = '',
   DONT_KNOW = 'dont know',
   DO = 'do',
-  DONT = 'dont'
+  DONT = 'dont',
+  UNKNOWN = 'unknown',
+  TEMP = 'temp',
+  TOTAL = 'total'
 }
 
 export enum durationEntrepreneur {

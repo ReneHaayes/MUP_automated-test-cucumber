@@ -3,7 +3,7 @@ import {AutoVerzekeringElements} from "./autoVerzekeringElements";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
 import {CarWithLicensePlate} from "../car/carWithLicensePlate";
-import {yesNo} from "../enum/genericEnum";
+import {genericEnum} from "../enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -39,9 +39,9 @@ export class AutoVerzekeringMethods {
 
   async selectIfYouAlreadyHaveACarAtUnive(alreadyMember: string) {
     await genericMethods.waitForElementIsVisible(autoVerzekeringElements.alreadyInsuredCarTrue, browser.getPageTimeout);
-    if (alreadyMember === yesNo.YES) {
+    if (alreadyMember === genericEnum.YES) {
       await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarTrue)
-    } else if (alreadyMember === yesNo.NO) {
+    } else if (alreadyMember === genericEnum.NO) {
       await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarFalse)
     } else {
       throw new Error('The input you have entered: "" ' + alreadyMember + ' "" is not recognized as a command');

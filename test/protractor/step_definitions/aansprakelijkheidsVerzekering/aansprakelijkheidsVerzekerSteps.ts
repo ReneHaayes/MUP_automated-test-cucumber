@@ -6,7 +6,7 @@ import {AansprakelijkheidsVerzekerElements} from "../../pageobjects/aansprakelij
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
-import {yesNo} from "../../pageobjects/enum/genericEnum";
+import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let aansprakelijkheidsVerzekeringMethods: AansprakelijkheidsVerzekeringMethods = new AansprakelijkheidsVerzekeringMethods();
 let aansprakelijkheidsVerzekeringElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
@@ -47,7 +47,7 @@ When(/^I enter details of (.*) in step two page of aansprakelijkheids verzekerin
 
 When(/^I fill in step four of aansprakelijkheids verzekering page with:$/, async (data) => {
   const dataTable = data.rowsHash();
-  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
+  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   await genericMethods.clickOnFinishButton();

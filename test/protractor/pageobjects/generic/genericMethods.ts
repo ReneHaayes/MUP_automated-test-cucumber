@@ -5,7 +5,7 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
-import {gender, specificIdentification, yesNo} from "../enum/genericEnum";
+import {gender, specificIdentification, genericEnum} from "../enum/genericEnum";
 import {NawElements} from "./nawElements";
 
 chai.use(chaistring);
@@ -231,10 +231,10 @@ export class GenericMethods {
 
   async selectInsuranceHistory(insuranceHistory: string, explanation: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
-    if (insuranceHistory === yesNo.YES) {
+    if (insuranceHistory === genericEnum.YES) {
       await this.clickOnElement(genericElements.insuranceHistoryYesElement);
       await this.typeText(genericElements.insuranceHistoryYesExplanationElement, explanation);
-    } else if (insuranceHistory === yesNo.NO) {
+    } else if (insuranceHistory === genericEnum.NO) {
       await this.clickOnElement(genericElements.insuranceHistoryNoElement);
     } else {
       throw new Error('The input you have entered selectInsuranceHistory: "" ' + insuranceHistory + ' "" is not recognized as a command');
@@ -243,11 +243,11 @@ export class GenericMethods {
 
   async selectCriminalHistory(criminalHistory: string) {
     await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
-    if (criminalHistory === yesNo.YES) {
+    if (criminalHistory === genericEnum.YES) {
       await this.clickOnElement(genericElements.criminalHistoryYesElement);
       await this.waitForElementIsVisible(genericElements.criminalHistoryInformationElement, browser.getPageTimeout);
       await this.clickOnElement(genericElements.criminalHistoryInformationElement);
-    } else if (criminalHistory === yesNo.NO) {
+    } else if (criminalHistory === genericEnum.NO) {
       await this.clickOnElement(genericElements.criminalHistoryNoElement);
     } else {
       throw new Error('The input you have entered selectCriminalHistory: "" ' + criminalHistory + ' "" is not recognized as a command');
@@ -256,9 +256,9 @@ export class GenericMethods {
 
   async selectDamageHistory(damageHistory: string) {
     await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
-    if (damageHistory === yesNo.YES) {
+    if (damageHistory === genericEnum.YES) {
       await this.clickOnElement(genericElements.damageHistoryYesElement);
-    } else if (damageHistory === yesNo.NO) {
+    } else if (damageHistory === genericEnum.NO) {
       await this.clickOnElement(genericElements.damageHistoryNoElement);
     } else {
       throw new Error('The input you have entered selectDamageHistory: "" ' + damageHistory + ' "" is not recognized as a command');

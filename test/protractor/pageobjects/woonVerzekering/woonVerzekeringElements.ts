@@ -5,4 +5,56 @@ export class WoonVerzekeringElements {
   houseNumberInputElement: string = '#_Form_IF14008_3694';
   houseNumberAddingInputElement: string = '#_Form_IF14008_3695';
 
+  //STEP TWO
+  wallHouseStoneElement: string = '[data-label-id*="LA_IF10065_14357"] .radioList > label:nth-child(1)';
+  wallHouseWoodElement: string = '[data-label-id*="LA_IF10065_14357"] .radioList > label:nth-child(2)';
+  wallHouseDifferentElement: string = '[data-label-id*="LA_IF10065_14357"] .radioList > label:nth-child(3)';
+
+  strawRoofingYesElement: string = '[data-label-id*="LA_IF10065_14355"] .radioList > label:nth-child(1)';
+  strawRoofingNoElement: string = '[data-label-id*="LA_IF10065_14355"] .radioList > label:nth-child(2)';
+
+  strawRoofingSelectKindStrawElement: string = '#_Form_IF10065_14358';
+  strawRoofingSelectKunstRietElement: string = 'string:kunstriet';
+  strawRoofingSelectRietenSchroefdakElement: string = 'string:schroefdak';
+  strawRoofingSelectTraditioneelOnderschotenElement: string = 'string:traditioneelOnderschoten';
+  strawRoofingSelectTraditioneelNietOnderschotenElement: string = 'string:traditioneelNietOnderschoten';
+  strawRoofingSelectUnknownElement: string = 'string:onbekend';
+
+  outHouseYesElement: string = '[data-label-id*="LA_IF10065_34208"] .radioList > label:nth-child(1)';
+  outHouseNoElement: string = '[data-label-id*="LA_IF10065_34208"] .radioList > label:nth-child(2)';
+  outHouseTotalSurfaceSelectElement: string = '#_Form_IF10065_14360';
+  outHouseTotalSurfaceSmallerThen80SelectElement: string = 'string:kleinerDan80m2';
+  outHouseTotalSurfaceSmallerThen100SelectElement: string = 'string:kleinerDan100m2';
+  outHouseTotalSurfaceSmallerThen120SelectElement: string = 'string:kleinerDan120m2';
+  outHouseTotalSurfaceSmallerThen140SelectElement: string = 'string:kleinerDan140m2';
+  outHouseTotalSurfaceSmallerThen160SelectElement: string = 'string:kleinerDan160m2';
+  outHouseTotalSurfaceSmallerThen180SelectElement: string = 'string:kleinerDan180m2';
+  outHouseTotalSurfaceSmallerThen200SelectElement: string = 'string:kleinerDan200m2';
+  outHouseTotalSurfaceSmallerThen250SelectElement: string = 'string:kleinerDan250m2';
+  outHouseTotalSurfaceSmallerThen300SelectElement: string = 'string:kleinerDan300m2';
+  outHouseTotalSurfaceSmallerThen350SelectElement: string = 'string:kleinerDan350m2';
+  outHouseTotalSurfaceSmallerThen400SelectElement: string = 'string:kleinerDan400m2';
+  outHouseTotalSurfaceSmallerThen450SelectElement: string = 'string:kleinerDan450m2';
+  outHouseTotalSurfaceSmallerThen500SelectElement: string = 'string:kleinerDan500m2';
+  outHouseTotalSurfaceBiggerThen500SelectElement: string = 'string:groterDan500m2';
+
+  ownerHouseYesElement: string = '[data-label-id*="LA_IF10065_14354"] .radioList > label:nth-child(1)';
+  ownerHouseNoElement: string = '[data-label-id*="LA_IF10065_14354"] .radioList > label:nth-child(2)';
+  ownerHouseSelectElement: string = '#_Form_IF10065_14359';
+  ownerHouseSelectNoElement: string = 'string:nee';
+  ownerHouseSelectTempElement: string = 'string:gedeeltelijk';
+  ownerHouseSelectTotalElement: string = 'string:volledig';
+
+  additionalOptionsBusinessUse: string = '[data-label-id*="LA_IF10047_14427"] label';
+  additionalOptionsRecreationUse: string = '[data-label-id*="LA_IF10047_14430"] label';
+  additionalOptionsMonument: string = '[data-label-id*="LA_IF10047_14431"] label';
+  additionalOptionsCanal: string = '[data-label-id*="LA_IF10047_14433"] label';
+  additionalOptionsRoomUse: string = '[data-label-id*="LA_IF10047_14434"] label';
+
+  inhabitedYesElement: string = '[data-label-id*="LA_IF10047_15218"] .radioList > label:nth-child(1)';
+  inhabitedNoElement: string = '[data-label-id*="LA_IF10047_15218"] .radioList > label:nth-child(3)';
+  inhabitedWithinThreeMontsElement: string = '[data-label-id*="LA_IF10047_15218"] .radioList > label:nth-child(2)';
+
+  warrantyBirthdayElement: string = '#_Form_IF22110_18608';
+
 }

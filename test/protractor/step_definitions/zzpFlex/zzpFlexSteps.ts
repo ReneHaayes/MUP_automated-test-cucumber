@@ -4,7 +4,7 @@ import {ZzpFlexMethods} from "../../pageobjects/zzpFlex/zzpFlexMethods";
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {ZzpFlexElements} from "../../pageobjects/zzpFlex/zzpFlexElements";
-import {yesNo} from "../../pageobjects/enum/genericEnum";
+import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let zzpFlexElements: ZzpFlexElements = new ZzpFlexElements();
 let zzpFlexMethods: ZzpFlexMethods = new ZzpFlexMethods();
@@ -68,7 +68,7 @@ When(/^I enter step four page of zzpFlex with$/, async (data) => {
 
 When(/^I enter step five page of zzpFlex with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await zzpFlexMethods.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
+  await zzpFlexMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
   await zzpFlexMethods.selectCriminalHistory(dataTable.criminalHistory);
   await zzpFlexMethods.selectDamageHistory(dataTable.damageHistory);
   await zzpFlexMethods.clickOnFinishButton()

@@ -10,7 +10,7 @@ import {CarWithLicensePlate} from "../../pageobjects/car/carWithLicensePlate";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
-import {yesNo} from "../../pageobjects/enum/genericEnum";
+import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -76,7 +76,7 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
 
 When(/^I enter step five page of autoverzekering with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, yesNo.EMPTY);
+  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   await genericMethods.clickOnFinishButton();

@@ -3,7 +3,7 @@ import {GenericMethods} from "../generic/genericMethods";
 import {ZzpFlexElements} from "./zzpFlexElements";
 import {incapacitation, zzpFlexUwpremie} from "../enum/zzpFlexEnum";
 import {GenericElements} from "../generic/genericElements";
-import {durationEntrepreneur, gender, specificIdentification, yesNo} from "../enum/genericEnum";
+import {durationEntrepreneur, gender, specificIdentification, genericEnum} from "../enum/genericEnum";
 import {PersonaData} from "../persona/persona";
 
 // @ts-ignore
@@ -105,10 +105,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificate14DaysNotAbleToWork(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificate14DaysNoteAbleToWorkNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificate14DaysNoteAbleToWorkYesElement);
     } else {
@@ -117,10 +117,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificateHeartComplaints(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateHeartComplaintsNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateHeartComplaintsYesElement);
     } else {
@@ -129,10 +129,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificateCancer(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateCancerNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateCancerYesElement);
     } else {
@@ -141,10 +141,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificatePsychologist(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePsychologistNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePsychologistYesElement);
     } else {
@@ -153,10 +153,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificatePosturalComplaints(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePosturalComplaintsNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePosturalComplaintsYesElement);
     } else {
@@ -165,10 +165,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificateOtherCondition(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateOtherConditionNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateOtherConditionYesElement);
     } else {
@@ -177,10 +177,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificateMedicines(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateMedicinesNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateMedicinesYesElement);
     } else {
@@ -189,10 +189,10 @@ export class ZzpFlexMethods {
   }
 
   async clickHealthCertificateDisabilityBenefit(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateDisabilityBenefitNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateDisabilityBenefitYesElement);
     } else {
@@ -201,13 +201,13 @@ export class ZzpFlexMethods {
   }
 
   async clickKnowledgeLifeInsurance(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexKnowledgeLifeInsuranceNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexKnowledgeLifeInsuranceYesElement);
-    } else if (input === yesNo.DONT_KNOW) {
+    } else if (input === genericEnum.DONT_KNOW) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexKnowledgeLifeInsuranceDontKnowElement);
     } else {
@@ -234,10 +234,10 @@ export class ZzpFlexMethods {
   }
 
   async clickKnowledgeAmountIncapacitated(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeAmountIncapacitatedNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeAmountIncapacitatedYesElement);
     } else {
@@ -255,7 +255,7 @@ export class ZzpFlexMethods {
     } else if (input === incapacitation.FULL_INCOME) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeMonthlyIncapacitatedFullIncomeElement);
-    } else if (input === yesNo.DONT_KNOW) {
+    } else if (input === genericEnum.DONT_KNOW) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeMonthlyIncapacitatedDontKnowElement);
     } else {
@@ -264,10 +264,10 @@ export class ZzpFlexMethods {
   }
 
   async clickKnowledgeConsciousOfAccidentInsurance(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfAccidentInsuranceNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfAccidentInsuranceYesElement);
     } else {
@@ -276,10 +276,10 @@ export class ZzpFlexMethods {
   }
 
   async clickKnowledgeConsciousOfMaxTwoYears(input: string) {
-    if (input === yesNo.NO) {
+    if (input === genericEnum.NO) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfMaxTwoYearsNoElement);
-    } else if (input === yesNo.YES) {
+    } else if (input === genericEnum.YES) {
       await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfMaxTwoYearsYesElement);
     } else {
@@ -289,10 +289,10 @@ export class ZzpFlexMethods {
 
   async selectInsuranceHistory(insuranceHistory: string, explanation: string) {
     await genericMethods.waitForElementIsVisible(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryNoElement, browser.getPageTimeout);
-    if (insuranceHistory === yesNo.YES) {
+    if (insuranceHistory === genericEnum.YES) {
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryYesElement);
       await genericMethods.typeText(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryYesExplanationElement, explanation);
-    } else if (insuranceHistory === yesNo.NO) {
+    } else if (insuranceHistory === genericEnum.NO) {
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryNoElement);
     } else {
       throw new Error('The input you have entered selectInsuranceHistory: "" ' + insuranceHistory + ' "" is not recognized as a command');
@@ -301,9 +301,9 @@ export class ZzpFlexMethods {
 
   async selectCriminalHistory(criminalHistory: string) {
     await genericMethods.waitForElementIsVisible(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryNoElement, browser.getPageTimeout);
-    if (criminalHistory === yesNo.YES) {
+    if (criminalHistory === genericEnum.YES) {
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryYesElement);
-    } else if (criminalHistory === yesNo.NO) {
+    } else if (criminalHistory === genericEnum.NO) {
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryNoElement);
     } else {
       throw new Error('The input you have entered selectCriminalHistory: "" ' + criminalHistory + ' "" is not recognized as a command');
@@ -312,9 +312,9 @@ export class ZzpFlexMethods {
 
   async selectDamageHistory(damageHistory: string) {
     await genericMethods.waitForElementIsVisible(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryNoElement, browser.getPageTimeout);
-    if (damageHistory === yesNo.YES) {
+    if (damageHistory === genericEnum.YES) {
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredDamageHistoryYesElement);
-    } else if (damageHistory === yesNo.NO) {
+    } else if (damageHistory === genericEnum.NO) {
       await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredDamageHistoryNoElement);
     } else {
       throw new Error('The input you have entered selectDamageHistory: "" ' + damageHistory + ' "" is not recognized as a command');
