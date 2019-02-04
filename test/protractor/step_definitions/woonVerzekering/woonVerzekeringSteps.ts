@@ -6,6 +6,7 @@ import {PersonaData} from "../../pageobjects/persona/persona";
 import {WoonVerzekeringMethods} from "../../pageobjects/woonVerzekering/woonVerzekeringMethods";
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
+import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let woonVerzekeringMethods: WoonVerzekeringMethods = new WoonVerzekeringMethods();
@@ -54,6 +55,14 @@ When(/^I enter details of (.*) in step four page of woonverzekering$/, async (pe
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
+});
+
+When(/^I fill in step five of woonverzekering page with:$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
+  await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
+  await genericMethods.selectDamageHistory(dataTable.damageHistory);
+  await genericMethods.clickOnFinishButton();
   await browser.sleep(10000);
 });
 

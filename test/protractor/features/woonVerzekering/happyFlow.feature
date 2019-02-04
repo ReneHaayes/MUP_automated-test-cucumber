@@ -15,6 +15,12 @@ Feature: Happy flow for 'woonVerzekering'
     And I choose the correct premie with:
       | superficiesAndContents | contents |
     And I enter details of <persona> in step four page of woonverzekering
+    And I fill in step five of woonverzekering page with:
+      | insuranceHistory | no |
+      | criminalHistory  | no |
+      | damageHistory    | no |
+    Then The thank you page for <persona> is shown
+
     Examples:
       | persona |
       | ronaldo |
