@@ -34,83 +34,115 @@ export class CarWithLicensePlate {
   _80SRB4: Car = new Car(licensePlates._80SRB4, 'Renault', 'CLIO', '2011', '1.5 DCI AUTHENTIQUE',
     'Hatchback', 'Diesel', '01-01-2011', '0000');
 
-  getCarFuelType(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.fuelType;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.fuelType;
-    } else {
-      throw new Error('The input you have entered getCarFuelType: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarFuelType(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.fuelType;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.fuelType;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarBodyType(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.bodyType;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.bodyType;
-    } else {
-      throw new Error('The input you have entered getCarBodyType: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarBodyType(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.bodyType;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.bodyType;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarModel(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.model;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.model;
-    } else {
-      throw new Error('The input you have entered getCarModel: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarModel(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.model;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.model;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarConstructionYear(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.constructionYear;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.constructionYear;
-    } else {
-      throw new Error('The input you have entered getCarConstructionYear: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarConstructionYear(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.constructionYear;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.constructionYear;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarBrandType(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.brandType;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.brandType;
-    } else {
-      throw new Error('The input you have entered getCarBrandType: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarBrandType(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.brandType;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.brandType;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarBrandName(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.brandName;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.brandName;
-    } else {
-      throw new Error('The input you have entered getCarBrandName: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarBrandName(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.brandName;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.brandName;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarFirstAdmission(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.firstAdmission;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.firstAdmission;
-    } else {
-      throw new Error('The input you have entered getCarFirstAdmission: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarFirstAdmission(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.firstAdmission;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.firstAdmission;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getCarReportingCode(licensePlate: string): string {
-    if (licensePlate === licensePlates._06HNDL) {
-      return this._06HNDL.reportingCode;
-    } else if (licensePlate === licensePlates._80SRB4) {
-      return this._80SRB4.reportingCode;
-    } else {
-      throw new Error('The input you have entered getCarReportingCode: "" ' + licensePlate + ' "" is not recognized as a command');
+  getCarReportingCode(input: string): string {
+    switch (input) {
+      case licensePlates._06HNDL: {
+        return this._06HNDL.reportingCode;
+      }
+      case licensePlates._80SRB4: {
+        return this._80SRB4.reportingCode;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 

@@ -8,7 +8,6 @@ export class Moped {
   version: string;
   constructionYear: string;
 
-
   constructor(licensePlate: string, brandName: string, model: string, constructionYear: string, version: string) {
     this.licensePlate = licensePlate;
     this.brandName = brandName;
@@ -16,49 +15,54 @@ export class Moped {
     this.version = version;
     this.constructionYear = constructionYear;
   }
+
 }
 
 export class MopedWithLicensePlate {
 
   _12FRP3: Moped = new Moped(`12-FRP-3`, 'RIEJU', 'BROMFIETS', '2005', 'RR');
 
-  getMopedBrandName(licensePlate: string): string {
-    if (licensePlate === licensePlates._12FRP3) {
-      return this._12FRP3.brandName;
-    // } else if (licensePlate === '80-SRB-4') {
-    //   return this._80SRB4.fuelType;
-    } else {
-      throw new Error('The input you have entered getMopedBrandName: "" ' + licensePlate + ' "" is not recognized as a command');
+  getMopedBrandName(input: string): string {
+    switch (input) {
+      case licensePlates._12FRP3: {
+        return this._12FRP3.brandName;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getMopedModel(licensePlate: string): string {
-    if (licensePlate === licensePlates._12FRP3) {
-      return this._12FRP3.model;
-      // } else if (licensePlate === '80-SRB-4') {
-      //   return this._80SRB4.fuelType;
-    } else {
-      throw new Error('The input you have entered getMopedModel: "" ' + licensePlate + ' "" is not recognized as a command');
+  getMopedModel(input: string): string {
+    switch (input) {
+      case licensePlates._12FRP3: {
+        return this._12FRP3.model;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getMopedConstructionYear(licensePlate: string): string {
-    if (licensePlate === licensePlates._12FRP3) {
-      return this._12FRP3.constructionYear;
-      // } else if (licensePlate === '80-SRB-4') {
-      //   return this._80SRB4.fuelType;
-    } else {
-      throw new Error('The input you have entered getMopedConstructionYear: "" ' + licensePlate + ' "" is not recognized as a command');
+  getMopedConstructionYear(input: string): string {
+    switch (input) {
+      case licensePlates._12FRP3: {
+        return this._12FRP3.constructionYear;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getMopedVersion(licensePlate: string): string {
-    if (licensePlate === licensePlates._12FRP3) {
-      return this._12FRP3.version;
-      // } else if (licensePlate === '80-SRB-4') {
-      //   return this._80SRB4.fuelType;
-    } else {
-      throw new Error('The input you have entered getMopedVersion: "" ' + licensePlate + ' "" is not recognized as a command');
+  getMopedVersion(input: string): string {
+    switch (input) {
+      case licensePlates._12FRP3: {
+        return this._12FRP3.version;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 

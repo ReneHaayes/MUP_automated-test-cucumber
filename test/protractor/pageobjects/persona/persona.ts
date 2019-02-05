@@ -102,7 +102,7 @@ export class PersonaData {
     }
   }
 
-  getPersonabirthDay(input: string): string {
+  getPersonaBirthday(input: string): string {
     switch (input) {
       case personaName.RONALDO: {
         return this.ronaldo.birthDay;
@@ -381,7 +381,7 @@ export class PersonaData {
     }
   }
 
-  getPersonaeMailAddress(input: string): string {
+  getPersonaEmailAddress(input: string): string {
     switch (input) {
       case personaName.RONALDO: {
         return this.ronaldo.eMailAddress;
@@ -496,7 +496,7 @@ export class PersonaData {
     }
   }
 
-  getPersonaDurationdurationEntrepreneur(input: string): string {
+  getPersonaDurationEntrepreneur(input: string): string {
     switch (input) {
       case personaName.RONALDO: {
         return this.ronaldo.durationEntrepreneur;
