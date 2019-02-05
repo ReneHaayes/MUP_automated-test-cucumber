@@ -13,40 +13,60 @@ let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 export class LicensePlateMethod {
 
   async clickOnAutoVerzekeringButton(input: string, licensePlate: string) {
-    if (input === licensePlateHmPageEnum.LICENSE_PLATE) {
-      await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
-      await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
-    } else if (input === licensePlateHmPageEnum.LICENSE_PLATE_PP) {
-      await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
-    } else if (input === licensePlateHmPageEnum.NO_LICENSE_PLATE) {
-      await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
-    } else if (input === licensePlateHmPageEnum.NO_LICENSE_PLATE_PP) {
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
-    } else if (input === genericEnum.DONT_KNOW) {
-      await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
-    } else if (input === licensePlateHmPageEnum.DONT_KNOW_PP) {
-      await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowProductPageElement);
-    } else {
-      throw new Error('The input you have entered clickOnAutoVerzekeringButton: "" ' + input + ' "" is not recognized as a command');
+    switch (input) {
+      case licensePlateHmPageEnum.LICENSE_PLATE: {
+        await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+        await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+        break;
+      }
+      case licensePlateHmPageEnum.LICENSE_PLATE_PP: {
+        await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE: {
+        await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE_PP: {
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
+        break;
+      }
+      case genericEnum.DONT_KNOW: {
+        await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
+        break;
+      }
+      case licensePlateHmPageEnum.DONT_KNOW_PP: {
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowProductPageElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
   async checkAutoverzekeringPage(input: string, licensePlate: string) {
-    if (input === genericEnum.DO) {
-      await genericMethods.verifyTextInElement(autoVerzekeringElements.brandElement, carWithLicensePlate.getCarBrandName(licensePlate));
-      await genericMethods.verifyTextInElement(autoVerzekeringElements.typeElement, carWithLicensePlate.getCarBrandType(licensePlate));
-      await genericMethods.verifyTextInElement(autoVerzekeringElements.constructionYearElement, carWithLicensePlate.getCarConstructionYear(licensePlate));
-      await genericMethods.verifyTextInElement(autoVerzekeringElements.modelElement, carWithLicensePlate.getCarModel(licensePlate));
-      await genericMethods.verifyTextInElement(autoVerzekeringElements.bodyTypeElement, carWithLicensePlate.getCarBodyType(licensePlate));
-      await genericMethods.verifyTextInElement(autoVerzekeringElements.fuelTypeElement, carWithLicensePlate.getCarFuelType(licensePlate));
-    } else if (input === genericEnum.DONT) {
-      await genericMethods.verifyTextNotInElement(autoVerzekeringElements.brandElement, carWithLicensePlate.getCarBrandName(licensePlate), autoVerzekeringElements.licensePlateElement);
-    } else {
-      throw new Error('The input you have entered checkAutoverzekeringPage: "" ' + input + ' "" is not recognized as a command');
+    switch (input) {
+      case genericEnum.DO: {
+        await genericMethods.verifyTextInElement(autoVerzekeringElements.brandElement, carWithLicensePlate.getCarBrandName(licensePlate));
+        await genericMethods.verifyTextInElement(autoVerzekeringElements.typeElement, carWithLicensePlate.getCarBrandType(licensePlate));
+        await genericMethods.verifyTextInElement(autoVerzekeringElements.constructionYearElement, carWithLicensePlate.getCarConstructionYear(licensePlate));
+        await genericMethods.verifyTextInElement(autoVerzekeringElements.modelElement, carWithLicensePlate.getCarModel(licensePlate));
+        await genericMethods.verifyTextInElement(autoVerzekeringElements.bodyTypeElement, carWithLicensePlate.getCarBodyType(licensePlate));
+        await genericMethods.verifyTextInElement(autoVerzekeringElements.fuelTypeElement, carWithLicensePlate.getCarFuelType(licensePlate));
+        break;
+      }
+      case genericEnum.DONT: {
+        await genericMethods.verifyTextNotInElement(autoVerzekeringElements.brandElement, carWithLicensePlate.getCarBrandName(licensePlate), autoVerzekeringElements.licensePlateElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 }

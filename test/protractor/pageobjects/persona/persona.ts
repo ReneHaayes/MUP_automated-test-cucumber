@@ -31,8 +31,6 @@ export class Persona {
   durationEntrepreneur: string;
   height: string;
   weight: string;
-  
-
 
   constructor(firstName: string, initials: string, prefix: string, lastName: string, birthday: string, birthplace: string, zipcode: string, houseNumber: string, houseNumberAddition: string,
               gender: string, phoneNumber: string, specificIdentification: string, specificIdentificationNumber: string, eMailAddress: string, accountNumber: string, bsn: string,
@@ -81,339 +79,489 @@ export class PersonaData {
     'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110');
 
 
-  getPersonaZipcode(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.zipCode;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.zipCode;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.zipCode;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.zipCode;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.zipCode;
-    } else {
-      throw new Error('The input you have entered for getPersonaZipCode: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaZipcode(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.zipCode;
+      }
+      case personaName.MESSI: {
+        return this.messi.zipCode;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.zipCode;
+      }
+      case personaName.SALAH: {
+        return this.salah.zipCode;
+      }
+      case personaName.POGBA: {
+        return this.pogba.zipCode;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaBirthday(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.birthDay;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.birthDay;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.birthDay;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.birthDay;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.birthDay;
-    } else {
-      throw new Error('The input you have entered for getPersonaBirthday: "" ' + persona + ' "" is not recognized as a command');
+  getPersonabirthDay(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.birthDay;
+      }
+      case personaName.MESSI: {
+        return this.messi.birthDay;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.birthDay;
+      }
+      case personaName.SALAH: {
+        return this.salah.birthDay;
+      }
+      case personaName.POGBA: {
+        return this.pogba.birthDay;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+
+  }
+
+  getPersonaLastName(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.lastName;
+      }
+      case personaName.MESSI: {
+        return this.messi.lastName;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.lastName;
+      }
+      case personaName.SALAH: {
+        return this.salah.lastName;
+      }
+      case personaName.POGBA: {
+        return this.pogba.lastName;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaLastName(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.lastName;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.lastName;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.lastName;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.lastName;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.lastName;
-    } else {
-      throw new Error('The input you have entered for getPersonaLastName: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaFirstName(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.firstName;
+      }
+      case personaName.MESSI: {
+        return this.messi.firstName;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.firstName;
+      }
+      case personaName.SALAH: {
+        return this.salah.firstName;
+      }
+      case personaName.POGBA: {
+        return this.pogba.firstName;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+
+  }
+
+  getPersonaGender(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.gender;
+      }
+      case personaName.MESSI: {
+        return this.messi.gender;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.gender;
+      }
+      case personaName.SALAH: {
+        return this.salah.gender;
+      }
+      case personaName.POGBA: {
+        return this.pogba.gender;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+
+  }
+
+  getPersonaInitials(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.initials;
+      }
+      case personaName.MESSI: {
+        return this.messi.initials;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.initials;
+      }
+      case personaName.SALAH: {
+        return this.salah.initials;
+      }
+      case personaName.POGBA: {
+        return this.pogba.initials;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaFirstName(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.firstName;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.firstName;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.firstName;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.firstName;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.firstName;
-    } else {
-      throw new Error('The input you have entered for getPersonaFirstname: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaPrefix(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.prefix;
+      }
+      case personaName.MESSI: {
+        return this.messi.prefix;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.prefix;
+      }
+      case personaName.SALAH: {
+        return this.salah.prefix;
+      }
+      case personaName.POGBA: {
+        return this.pogba.prefix;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaGender(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.gender;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.gender;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.gender;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.gender;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.gender;
-    } else {
-      throw new Error('The input you have entered for getPersonaGender: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaBirthPlace(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.birthPlace;
+      }
+      case personaName.MESSI: {
+        return this.messi.birthPlace;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.birthPlace;
+      }
+      case personaName.SALAH: {
+        return this.salah.birthPlace;
+      }
+      case personaName.POGBA: {
+        return this.pogba.birthPlace;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaInitials(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.initials;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.initials;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.initials;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.initials;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.initials;
-    } else {
-      throw new Error('The input you have entered for getPersonaInitials: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaHouseNumber(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.houseNumber;
+      }
+      case personaName.MESSI: {
+        return this.messi.houseNumber;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.houseNumber;
+      }
+      case personaName.SALAH: {
+        return this.salah.houseNumber;
+      }
+      case personaName.POGBA: {
+        return this.pogba.houseNumber;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaPrefix(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.prefix;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.prefix;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.prefix;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.prefix;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.prefix;
-    } else {
-      throw new Error('The input you have entered for getPersonaPrefix: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaHouseNumberAddition(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.houseNumberAddition;
+      }
+      case personaName.MESSI: {
+        return this.messi.houseNumberAddition;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.houseNumberAddition;
+      }
+      case personaName.SALAH: {
+        return this.salah.houseNumberAddition;
+      }
+      case personaName.POGBA: {
+        return this.pogba.houseNumberAddition;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaBirthPlace(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.birthPlace;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.birthPlace;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.birthPlace;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.birthPlace;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.birthPlace;
-    } else {
-      throw new Error('The input you have entered for getPersonaBirthPlace: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaPhoneNumber(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.phoneNumber;
+      }
+      case personaName.MESSI: {
+        return this.messi.phoneNumber;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.phoneNumber;
+      }
+      case personaName.SALAH: {
+        return this.salah.phoneNumber;
+      }
+      case personaName.POGBA: {
+        return this.pogba.phoneNumber;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaHouseNumber(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.houseNumber;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.houseNumber;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.houseNumber;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.houseNumber;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.houseNumber;
-    } else {
-      throw new Error('The input you have entered for getPersonaHouseNumber: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaSpecificIdentification(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.specificIdentification;
+      }
+      case personaName.MESSI: {
+        return this.messi.specificIdentification;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.specificIdentification;
+      }
+      case personaName.SALAH: {
+        return this.salah.specificIdentification;
+      }
+      case personaName.POGBA: {
+        return this.pogba.specificIdentification;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaHouseNumberAddition(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.houseNumberAddition
-    } else if (persona === personaName.MESSI) {
-      return this.messi.houseNumberAddition;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.houseNumberAddition;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.houseNumberAddition;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.houseNumberAddition;
-    } else {
-      throw new Error('The input you have entered for getPersonaHouseNumberAddition: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaSpecificIdentificationNumber(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.specificIdentificationNumber;
+      }
+      case personaName.MESSI: {
+        return this.messi.specificIdentificationNumber;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.specificIdentificationNumber;
+      }
+      case personaName.SALAH: {
+        return this.salah.specificIdentificationNumber;
+      }
+      case personaName.POGBA: {
+        return this.pogba.specificIdentificationNumber;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaPhoneNumber(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.phoneNumber;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.phoneNumber;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.phoneNumber;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.phoneNumber;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.phoneNumber;
-    } else {
-      throw new Error('The input you have entered for getPersonaPhoneNumber: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaeMailAddress(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.eMailAddress;
+      }
+      case personaName.MESSI: {
+        return this.messi.eMailAddress;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.eMailAddress;
+      }
+      case personaName.SALAH: {
+        return this.salah.eMailAddress;
+      }
+      case personaName.POGBA: {
+        return this.pogba.eMailAddress;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaSpecificIdentification(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.specificIdentification;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.specificIdentification;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.specificIdentification;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.specificIdentification;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.specificIdentification;
-    } else {
-      throw new Error('The input you have entered for getPersonaSpecificIdentification: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaAccountNumber(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.accountNumber;
+      }
+      case personaName.MESSI: {
+        return this.messi.accountNumber;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.accountNumber;
+      }
+      case personaName.SALAH: {
+        return this.salah.accountNumber;
+      }
+      case personaName.POGBA: {
+        return this.pogba.accountNumber;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaSpecificIdentificationNumber(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.specificIdentificationNumber;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.specificIdentificationNumber;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.specificIdentificationNumber;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.specificIdentificationNumber;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.specificIdentificationNumber;
-    } else {
-      throw new Error('The input you have entered for getPersonaSpecificIdentificationNumber: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaBsn(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.bsn;
+      }
+      case personaName.MESSI: {
+        return this.messi.bsn;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.bsn;
+      }
+      case personaName.SALAH: {
+        return this.salah.bsn;
+      }
+      case personaName.POGBA: {
+        return this.pogba.bsn;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaEmailAddress(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.eMailAddress;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.eMailAddress;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.eMailAddress;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.eMailAddress;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.eMailAddress;
-    } else {
-      throw new Error('The input you have entered for getPersonaEmailAddress: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaProfession(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.profession;
+      }
+      case personaName.MESSI: {
+        return this.messi.profession;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.profession;
+      }
+      case personaName.SALAH: {
+        return this.salah.profession;
+      }
+      case personaName.POGBA: {
+        return this.pogba.profession;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaAccountNumber(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.accountNumber;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.accountNumber;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.accountNumber;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.accountNumber;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.accountNumber;
-    } else {
-      throw new Error('The input you have entered for getPersonaAccountNumber: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaKvkNumber(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.kvkNumber;
+      }
+      case personaName.MESSI: {
+        return this.messi.kvkNumber;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.kvkNumber;
+      }
+      case personaName.SALAH: {
+        return this.salah.kvkNumber;
+      }
+      case personaName.POGBA: {
+        return this.pogba.kvkNumber;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaBsn(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.bsn;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.bsn;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.bsn;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.bsn;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.bsn;
-    } else {
-      throw new Error('The input you have entered for getPersonabsn: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaDurationdurationEntrepreneur(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.durationEntrepreneur;
+      }
+      case personaName.MESSI: {
+        return this.messi.durationEntrepreneur;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.durationEntrepreneur;
+      }
+      case personaName.SALAH: {
+        return this.salah.durationEntrepreneur;
+      }
+      case personaName.POGBA: {
+        return this.pogba.durationEntrepreneur;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaProfession(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.profession;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.profession;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.profession;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.profession;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.profession;
-    } else {
-      throw new Error('The input you have entered for getPersonaprofession: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaHeight(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.height;
+      }
+      case personaName.MESSI: {
+        return this.messi.height;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.height;
+      }
+      case personaName.SALAH: {
+        return this.salah.height;
+      }
+      case personaName.POGBA: {
+        return this.pogba.height;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 
-  getPersonaKvkNumber(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.kvkNumber;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.kvkNumber;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.kvkNumber;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.kvkNumber;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.kvkNumber;
-    } else {
-      throw new Error('The input you have entered for getPersonakvkNumber: "" ' + persona + ' "" is not recognized as a command');
-    }
-  }
-
-  getPersonaDurationEntrepreneur(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.durationEntrepreneur;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.durationEntrepreneur;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.durationEntrepreneur;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.durationEntrepreneur;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.durationEntrepreneur;
-    } else {
-      throw new Error('The input you have entered for getPersonadurationEntrepreneur: "" ' + persona + ' "" is not recognized as a command');
-    }
-  }
-
-  getPersonaHeight(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.height;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.height;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.height;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.height;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.height;
-    } else {
-      throw new Error('The input you have entered for getPersonalength: "" ' + persona + ' "" is not recognized as a command');
-    }
-  }
-
-  getPersonaWeight(persona: string): string {
-    if (persona === personaName.RONALDO) {
-      return this.ronaldo.weight;
-    } else if (persona === personaName.MESSI) {
-      return this.messi.weight;
-    } else if (persona === personaName.SALAH) {
-      return this.salah.weight;
-    } else if (persona === personaName.NEYMAR) {
-      return this.neymar.weight;
-    } else if (persona === personaName.POGBA) {
-      return this.pogba.weight;
-    } else {
-      throw new Error('The input you have entered for getPersonaweight: "" ' + persona + ' "" is not recognized as a command');
+  getPersonaWeight(input: string): string {
+    switch (input) {
+      case personaName.RONALDO: {
+        return this.ronaldo.weight;
+      }
+      case personaName.MESSI: {
+        return this.messi.weight;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.weight;
+      }
+      case personaName.SALAH: {
+        return this.salah.weight;
+      }
+      case personaName.POGBA: {
+        return this.pogba.weight;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 

@@ -1,28 +1,42 @@
 import {GenericElements} from './genericElements';
+import {environmentUrl} from "../enum/genericEnum";
 
 let genericElements: GenericElements = new GenericElements();
 
 export class GetUrlUnive {
 
-  async getUrlUnive(url: string): Promise<string> {
-      if (url === 'homePat') {
+  async getUrlUnive(input: string): Promise<string> {
+    switch (input) {
+      case environmentUrl.HOME_PAT: {
         return genericElements.patUnive;
-      } else if (url === 'autoverzekeringPat') {
+      }
+      case environmentUrl.AUTOVERZEKERING_PAT: {
         return genericElements.autoVerzUrlPat;
-      } else if (url === 'autoverzekeringTstProj') {
+      }
+      case environmentUrl.AUTOVERZEKERING_TSTPROJ: {
         return genericElements.autoVerzUrlTstProj;
-      } else if (url === 'zzpFlexPat') {
+     }
+      case environmentUrl.ZZPFLEX_PAT: {
         return genericElements.zzpFlexPat;
-      } else if (url === 'aansprakelijkheidsVerzekeringPat') {
+      }
+      case environmentUrl.AANSPRAKELIJKHEIDSVERZEKERING_PAT: {
         return genericElements.aansprakelijkheidsVerzekeringPat;
-      } else if (url === 'autoverzekeringProductPagePat') {
+      }
+      case environmentUrl.AUTOVERZEKERING_PRODUCT_PAGE_PAT: {
         return genericElements.autoVerzProductPagePat;
-      } else if (url === 'woonVerzekeringPat') {
+      }
+      case environmentUrl.WOONVERZEKERING_PAT: {
         return genericElements.woonVerzPat;
-      } else if (url === 'woonVerzekeringPatPp') {
+      }
+      case environmentUrl.WOONVERZEKERING_PRODUCT_PAGE_PAT: {
         return genericElements.woonVerzPatProductPage;
-      } else if (url === 'bromfietsVerzekeringPat') {
+      }
+      case environmentUrl.BROMFIETSVERZEKERING_PAT: {
         return genericElements.bromfietsVerzekeringPat;
       }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
+  }
 }

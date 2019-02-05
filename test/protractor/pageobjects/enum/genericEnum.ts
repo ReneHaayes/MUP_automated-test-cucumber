@@ -39,6 +39,19 @@ export enum genericEnum {
   TOTAL = 'total'
 }
 
+export enum environmentUrl {
+  HOME_PAT = 'homePat',
+  AUTOVERZEKERING_PAT = 'autoverzekeringPat',
+  AUTOVERZEKERING_TSTPROJ = 'autoverzekeringTstProj',
+  ZZPFLEX_PAT = 'zzpFlexPat',
+  AANSPRAKELIJKHEIDSVERZEKERING_PAT = 'aansprakelijkheidsVerzekeringPat',
+  AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPagePat',
+  WOONVERZEKERING_PAT = 'woonVerzekeringPat',
+  WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPatPp',
+  BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekeringPat'
+
+}
+
 export enum durationEntrepreneur {
   _MIN1 = 'Minder dan 1 jaar',
   _1 = '1 jaar',
