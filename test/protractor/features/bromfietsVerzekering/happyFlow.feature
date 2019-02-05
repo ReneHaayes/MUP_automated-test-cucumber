@@ -4,7 +4,7 @@ Feature: Happy flow for 'Bromfiets Verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the bromfietsVerzekeringPat page of the Unive website
-    When I enter step one page of bromfiets verzekering for persona <persona> with license plate <licensePlate>
+    When I enter step one page of bromfiets verzekering for persona <persona> with license plate <licensePlate> and 3 damage free years
 
 
 
