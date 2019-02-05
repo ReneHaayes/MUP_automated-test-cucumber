@@ -8,8 +8,6 @@ Feature: Happy flow for 'Bromfiets Verzekering'
 
 
 
-
-
 #    And I check step two page with premie for aansprakelijkheids verzekering is shown
 #    And I enter details of <persona> in step two page of aansprakelijkheids verzekering
 #    And I fill in step four of aansprakelijkheids verzekering page with:
