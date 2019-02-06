@@ -1,7 +1,6 @@
 export class AutoVerzekeringElementsStepThree {
   //DATE ELEMENTS
 
-  startDateElement: string = '#_Form_IF2512_3623';
   firstAdmissionElement: string = '#_Form_IF2526_3680';
   startDateOnYourNameElement: string = '#_Form_IF2526_3681';
 
