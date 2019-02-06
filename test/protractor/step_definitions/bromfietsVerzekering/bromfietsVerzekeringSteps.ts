@@ -33,5 +33,18 @@ When(/^I enter step two page of bromfiets verzekering with$/, async (data) => {
   await bromfietsVerzekeringMethods.selectAcc(dataTable.accessoires);
   await bromfietsVerzekeringMethods.selectOwnRisk(dataTable.ownRisk);
   await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step three page of bromfiets verzekering with$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await bromfietsVerzekeringMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
+  await genericMethods.typeText(bromfietsVerzekeringElements.dateOfNameMopedElement, dataTable.dateOfName);
+  await genericMethods.clickOnTAB(bromfietsVerzekeringElements.dateOfNameMopedElement);
+  await genericMethods.typeText(bromfietsVerzekeringElements.meldCodeElement, dataTable.meldCode);
+  await genericMethods.typeText(bromfietsVerzekeringElements.purchasePriceElement, dataTable.purchasePrice);
+  await bromfietsVerzekeringMethods.clickOnDamageFreeYearsOfDifferentCompany(dataTable.damageFreeYearsDifferentCompany);
+  await bromfietsVerzekeringMethods.clickMainDriver(dataTable.mainDriver);
+  await bromfietsVerzekeringMethods.clickOwner(dataTable.owner);
+  await genericMethods.clickOnNextButton();
   await browser.sleep(10000);
 });

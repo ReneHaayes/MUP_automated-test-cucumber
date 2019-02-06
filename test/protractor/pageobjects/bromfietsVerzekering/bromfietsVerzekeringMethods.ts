@@ -6,6 +6,7 @@ import {vehicleKindEnum} from "../enum/bromfietsVerzekeringEnum";
 import {aanvullendeOptiesEnum, basisDekkingEnum, ownRiskEnum, vehicleAccEnum} from "../enum/autoVerzekeringEnum";
 import {GenericElements} from "../generic/genericElements";
 import {AutoVerzekeringElements} from "../autoVerzekering/autoVerzekeringElements";
+import {genericEnum} from "../enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let bromfietsVerzekeringElements: BromfietsVerzekeringElements = new BromfietsVerzekeringElements();
@@ -172,7 +173,83 @@ export class BromfietsVerzekeringMethods {
         await genericMethods.selectInDropdown(bromfietsVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk500);
         await genericMethods.waitForElementIsPresentWithXpath(
           genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
-        await console.log("ebeng");
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async clickKindOfInsurance(input: string) {
+    switch (input) {
+      case genericEnum.NEW: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.newMopedElement);
+        break;
+      }
+      case genericEnum.REPLACEMENT: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.replacementMopedElement);
+        break;
+      }
+      case genericEnum.EXTRA: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.extraMopedElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async clickOnDamageFreeYearsOfDifferentCompany(input: string) {
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.damageFreeYearsDifferentCompanyYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.damageFreeYearsDifferentCompanyNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async clickMainDriver(input: string) {
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.mainDriverYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.mainDriverNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async clickOwner(input: string) {
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.ownerYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(bromfietsVerzekeringElements.ownerNoElement);
         break;
       }
       default: {

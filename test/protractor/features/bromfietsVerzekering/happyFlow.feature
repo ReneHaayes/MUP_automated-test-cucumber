@@ -10,6 +10,16 @@ Feature: Happy flow for 'Bromfiets Verzekering'
       | aanvullendeOpties | ongevallen verzekering |
       | accessoires       | acc tm 500             |
       | ownRisk           | ownRisk500             |
+    And I enter step three page of bromfiets verzekering with
+      | kindOfInsurance                 | new        |
+      | dateOfName                      | 01-01-2019 |
+      | meldCode                        | 0000       |
+      | purchasePrice                   | 1999       |
+      | damageFreeYearsDifferentCompany | no         |
+      | mainDriver                      | yes        |
+      | owner                           | yes        |
+
+
 
 
 #    And I check step two page with premie for aansprakelijkheids verzekering is shown

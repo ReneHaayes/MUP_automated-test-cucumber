@@ -55,4 +55,31 @@ export class BromfietsVerzekeringElements {
   //OWN RISK
   ownRiskElement: string = '#_Form_IF29509_37521';
 
+  //KIND OF INSURANCE
+  newMopedElement: string = '[data-label-id*="LA_IF10373_14814"]';
+  replacementMopedElement: string = '[data-label-id*="LA_IF10373_14815"]';
+  extraMopedElement: string = '[data-label-id*="LA_IF10373_14816"]';
+
+  //DATE ELEMENTS
+  dateOfNameMopedElement: string = '#_Form_IF10374_13991';
+
+  //MELDCODE
+  meldCodeElement: string = '#_Form_IF10374_3682';
+
+  //PURCHASE PRICE
+  purchasePriceElement: string = '#_Form_IF10374_13999';
+
+  //DAMAGE FREE YEARS DIFFERENT COMPANY
+  damageFreeYearsDifferentCompanyYesElement: string = '[data-label-id*="LA_IF10374_14111"] label:nth-child(1)';
+  damageFreeYearsDifferentCompanyNoElement: string = '[data-label-id*="LA_IF10374_14111"] label:nth-child(2)';
+
+  //MAIN DRIVER
+  mainDriverYesElement: string = '[data-label-id*="LA_IF9710_13927"] label:nth-child(1)';
+  mainDriverNoElement: string = '[data-label-id*="LA_IF9710_13927"] label:nth-child(2)';
+
+  //OWNER
+  ownerYesElement: string = '[data-label-id*="LA_IF9739_14724"] label:nth-child(1)';
+  ownerNoElement: string = '[data-label-id*="LA_IF9739_14724"] label:nth-child(2)';
+
+
 }
