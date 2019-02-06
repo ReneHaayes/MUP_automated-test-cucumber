@@ -24,5 +24,14 @@ When(/^I enter step one page of bromfiets verzekering for persona (.*) with lice
   await genericMethods.typeText(bromfietsVerzekeringElements.zipCodeElement, personaData.getPersonaZipcode(persona))
   await genericMethods.typeText(bromfietsVerzekeringElements.damageFreeYearsElement, damageFreeYears);
   await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step two page of bromfiets verzekering with$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await bromfietsVerzekeringMethods.clickOnBasisDekking(dataTable.basisDekking);
+  await bromfietsVerzekeringMethods.clickOnAanvullendeOpties(dataTable.aanvullendeOpties);
+  await bromfietsVerzekeringMethods.selectAcc(dataTable.accessoires);
+  await bromfietsVerzekeringMethods.selectOwnRisk(dataTable.ownRisk);
+  await genericMethods.clickOnNextButton();
   await browser.sleep(10000);
 });

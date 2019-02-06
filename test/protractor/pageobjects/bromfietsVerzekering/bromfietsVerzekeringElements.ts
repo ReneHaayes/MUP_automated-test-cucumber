@@ -24,5 +24,35 @@ export class BromfietsVerzekeringElements {
   birthDateElement: string = '#_Form_IF29510_37527';
   damageFreeYearsElement: string = '#_Form_IF29511_37526';
 
+  //BASISDEKKING
+  waElement: string = '[data-label-id="LA_IF29405_37408"]';
+  waPlusElement: string = '[data-label-id="LA_IF29406_37418"]';
+  allRiskElement: string = '[data-label-id="LA_IF29407_37421"]';
+
+  //AANVULLENDE OPTIES
+  pechHulpNlElement: string = '[ng-class*="IF9720_13937"]';
+  rechtsHulpVerkeerElement: string = '[ng-class*="IF9718_13935"]';
+  ongevallenVerzekeringElement: string = '[ng-class*="IF9719_13936"]';
+  aanschafWaardeRegelingElement: string = '[ng-class*="IF29705_37610"]';
+
+  //ACCESSOIRES
+  accElement: string = '#_Form_IF29706_13949';
+  accTm150: string = 'string:tm150';
+  accTm250: string = 'string:tm250';
+  accTm500: string = 'string:tm500';
+
+  //SIDEBAR
+  sideBarPechHulp: string = 'Pechhulp Binnenland';
+  sideBarOngevallenVerzkering: string = 'Ongevallenverzekering';
+  sideBarAanschafWaardeRegeling: string = 'Aanschafwaarderegeling';
+  sideBarAcc150: string = 'Accessoires verzekerd t/m € 150,-';
+  sideBarAcc250: string = 'Uitbreiding accessoires t/m € 250,-';
+  sideBarAcc500: string = 'Uitbreiding accessoires t/m € 500,-';
+  sideBarOwnRisk100: string = 'Met € 100,-  eigen risico';
+  sideBarOwnRisk250: string = 'Met € 250,-  eigen risico';
+  sideBarOwnRisk500: string = 'Met € 500,-  eigen risico';
+
+  //OWN RISK
+  ownRiskElement: string = '#_Form_IF29509_37521';
 
 }
