@@ -18,17 +18,12 @@ Feature: Happy flow for 'Bromfiets Verzekering'
       | damageFreeYearsDifferentCompany | no         |
       | mainDriver                      | yes        |
       | owner                           | yes        |
-
-
-
-
-#    And I check step two page with premie for aansprakelijkheids verzekering is shown
-#    And I enter details of <persona> in step two page of aansprakelijkheids verzekering
-#    And I fill in step four of aansprakelijkheids verzekering page with:
-#      | insuranceHistory | no |
-#      | criminalHistory  | no |
-#      | damageHistory    | no |
-#    Then The thank you page for <persona> is shown
+    And I enter details of <persona> in step four page of bromfiets verzekering
+    And I fill in step four of bromfiets verzekering page with:
+      | insuranceHistory | no |
+      | criminalHistory  | no |
+      | damageHistory    | no |
+    Then The thank you page for <persona> is shown
 
     Examples:
       | persona | licensePlate |

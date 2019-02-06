@@ -1,16 +1,20 @@
 import {When} from "cucumber";
-import {browser} from "protractor";
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {BromfietsVerzekeringElements} from "../../pageobjects/bromfietsVerzekering/bromfietsVerzekeringElements";
 import {MopedWithLicensePlate} from "../../pageobjects/verhicles/mopedWithLicensePlate";
 import {BromfietsVerzekeringMethods} from "../../pageobjects/bromfietsVerzekering/bromfietsVerzekeringMethods";
 import {PersonaData} from "../../pageobjects/persona/persona";
+import {NawElements} from "../../pageobjects/generic/nawElements";
+import {GenericElements} from "../../pageobjects/generic/genericElements";
+import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let bromfietsVerzekeringElements: BromfietsVerzekeringElements = new BromfietsVerzekeringElements();
 let bromfietsVerzekeringMethods: BromfietsVerzekeringMethods = new BromfietsVerzekeringMethods();
 let mopedWithLicensePlate: MopedWithLicensePlate = new MopedWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
+let nawElements: NawElements = new NawElements();
+let genericElements: GenericElements = new GenericElements();
 
 When(/^I enter step one page of bromfiets verzekering for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string,
                                                                                                                                     licensePlate: string, damageFreeYears: string) => {
@@ -46,5 +50,29 @@ When(/^I enter step three page of bromfiets verzekering with$/, async (data) => 
   await bromfietsVerzekeringMethods.clickMainDriver(dataTable.mainDriver);
   await bromfietsVerzekeringMethods.clickOwner(dataTable.owner);
   await genericMethods.clickOnNextButton();
-  await browser.sleep(10000);
+});
+
+When(/^I enter details of (.*) in step four page of bromfiets verzekering$/, async (persona: string) => {
+  await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
+  await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
+  await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
+  await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
+  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
+  await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
+  await genericMethods.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
+  await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
+  await genericMethods.clickOnTAB(genericElements.accountNumberElement);
+  await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I fill in step four of bromfiets verzekering page with:$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
+  await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
+  await genericMethods.selectDamageHistory(dataTable.damageHistory);
+  await genericMethods.clickOnFinishButton();
 });
