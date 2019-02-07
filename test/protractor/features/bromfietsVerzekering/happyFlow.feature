@@ -3,7 +3,7 @@
 Feature: Happy flow for 'Bromfiets Verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the bromfietsVerzekeringPat page of the Unive website
+    Given I am on the <page> page of the Unive website
     When I enter step one page of bromfiets verzekering for persona <persona> with license plate <licensePlate> and 3 damage free years
     And I enter step two page of bromfiets verzekering with
       | basisDekking      | waPlus                 |
@@ -26,5 +26,6 @@ Feature: Happy flow for 'Bromfiets Verzekering'
     Then The thank you page for <persona> is shown
 
     Examples:
-      | persona | licensePlate |
-      | ronaldo | 12-FRP-3     |
+      | page                    | persona | licensePlate |
+      | bromfietsVerzekeringPat | ronaldo | 12-FRP-3     |
+      | scooterVerzekeringPat   | ronaldo | F-169-NS     |

@@ -51,8 +51,8 @@ export enum environmentUrl {
   AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPagePat',
   WOONVERZEKERING_PAT = 'woonVerzekeringPat',
   WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPatPp',
-  BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekeringPat'
-
+  BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekeringPat',
+  SCOOTERVERZEKERING_PAT = 'scooterVerzekeringPat'
 }
 
 export enum durationEntrepreneur {

@@ -1,7 +1,7 @@
 import {browser} from "protractor";
 import {GenericMethods} from "../generic/genericMethods";
-import {BromfietsVerzekeringElements} from "./bromfietsVerzekeringElements";
-import {MopedWithLicensePlate} from "../verhicles/mopedWithLicensePlate";
+import {VehicleElements} from "../generic/vehicleElements";
+import {MopedWithLicensePlate} from "../vehicles/mopedWithLicensePlate";
 import {vehicleKindEnum} from "../enum/bromfietsVerzekeringEnum";
 import {aanvullendeOptiesEnum, basisDekkingEnum, ownRiskEnum, vehicleAccEnum} from "../enum/autoVerzekeringEnum";
 import {GenericElements} from "../generic/genericElements";
@@ -9,7 +9,7 @@ import {AutoVerzekeringElements} from "../autoVerzekering/autoVerzekeringElement
 import {genericEnum} from "../enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
-let bromfietsVerzekeringElements: BromfietsVerzekeringElements = new BromfietsVerzekeringElements();
+let bromfietsVerzekeringElements: VehicleElements = new VehicleElements();
 let mopedWithLicensePlate: MopedWithLicensePlate = new MopedWithLicensePlate();
 let genericElements: GenericElements = new GenericElements();
 let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
@@ -56,6 +56,18 @@ export class BromfietsVerzekeringMethods {
       }
       case vehicleKindEnum.TRIKE: {
         await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindTrikeSelectElement);
+        break;
+      }
+      case vehicleKindEnum.SNORFIETS: {
+        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindSnorfietsElement);
+        break;
+      }
+      case vehicleKindEnum.SNORSCOOTER: {
+        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindSnorscooterElement);
+        break;
+      }
+      case vehicleKindEnum.FIETS_MET_HULPMOTOR: {
+        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindFietsMetHulpmotorElement);
         break;
       }
       default: {

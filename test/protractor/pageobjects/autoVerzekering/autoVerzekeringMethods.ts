@@ -2,7 +2,7 @@ import {browser} from 'protractor';
 import {AutoVerzekeringElements} from "./autoVerzekeringElements";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
-import {CarWithLicensePlate} from "../verhicles/carWithLicensePlate";
+import {CarWithLicensePlate} from "../vehicles/carWithLicensePlate";
 import {genericEnum} from "../enum/genericEnum";
 import {
   aanvullendeOptiesEnum,

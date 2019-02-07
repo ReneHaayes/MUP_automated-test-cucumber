@@ -93,88 +93,88 @@ export class WoonVerzekeringMethods {
 
   async clickOutHouse(input: string) {
     switch (input) {
-      case totalSurface.SMALLER_THEN_80: {
+      case totalSurface.SMALLER_THAN_80: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen80SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan80SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_100: {
+      case totalSurface.SMALLER_THAN_100: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen100SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan100SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_120: {
+      case totalSurface.SMALLER_THAN_120: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen120SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan120SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_140: {
+      case totalSurface.SMALLER_THAN_140: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen140SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan140SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_160: {
+      case totalSurface.SMALLER_THAN_160: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen160SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan160SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_180: {
+      case totalSurface.SMALLER_THAN_180: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen180SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan180SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_200: {
+      case totalSurface.SMALLER_THAN_200: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen200SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan200SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_250: {
+      case totalSurface.SMALLER_THAN_250: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen250SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan250SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_300: {
+      case totalSurface.SMALLER_THAN_300: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen300SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan300SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_350: {
+      case totalSurface.SMALLER_THAN_350: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen350SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan350SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_400: {
+      case totalSurface.SMALLER_THAN_400: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen400SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan400SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_450: {
+      case totalSurface.SMALLER_THAN_450: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen450SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan450SelectElement);
         break;
       }
-      case totalSurface.SMALLER_THEN_500: {
+      case totalSurface.SMALLER_THAN_500: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerThen500SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceSmallerthan500SelectElement);
         break;
       }
-      case totalSurface.BIGGER_THEN_500: {
+      case totalSurface.BIGGER_THAN_500: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.outHouseYesElement);
-        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceBiggerThen500SelectElement);
+        await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceBiggerthan500SelectElement);
         break;
       }
       default: {

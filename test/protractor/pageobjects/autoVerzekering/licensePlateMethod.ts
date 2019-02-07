@@ -3,7 +3,7 @@ import {GenericMethods} from "../generic/genericMethods";
 import {HmPageElements} from "../generic/hmPageElements";
 import {genericEnum} from "../enum/genericEnum";
 import {AutoVerzekeringElements} from "./autoVerzekeringElements";
-import {CarWithLicensePlate} from "../verhicles/carWithLicensePlate";
+import {CarWithLicensePlate} from "../vehicles/carWithLicensePlate";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let hmPageElements: HmPageElements = new HmPageElements();
