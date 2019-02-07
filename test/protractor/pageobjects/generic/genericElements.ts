@@ -12,6 +12,7 @@ export class GenericElements {
   woonVerzPatProductPage: string = this.patUnive + 'woonverzekering';
   bromfietsVerzekeringPat: string = this.patUnive + 'bromfietsverzekering/premieberekenen-en-afsluiten';
   scooterVerzekeringPat: string = this.patUnive + 'scooterverzekering/premieberekenen-en-afsluiten';
+  zorgeloosOnlineVerzekeringPat: string = this.patUnive + 'zorgeloosonline/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
