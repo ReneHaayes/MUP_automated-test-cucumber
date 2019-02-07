@@ -1,4 +1,4 @@
-@bromfietsVerzekering
+@moped
 @regressie
 Feature: Happy flow for 'Bromfiets Verzekering' and 'Scooter Verzekering'
 
