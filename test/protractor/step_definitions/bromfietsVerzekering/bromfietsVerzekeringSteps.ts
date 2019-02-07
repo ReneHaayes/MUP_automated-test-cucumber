@@ -7,7 +7,6 @@ import {PersonaData} from "../../pageobjects/persona/persona";
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {genericEnum} from "../../pageobjects/enum/genericEnum";
-import {browser} from "protractor";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let bromfietsVerzekeringElements: VehicleElements = new VehicleElements();
