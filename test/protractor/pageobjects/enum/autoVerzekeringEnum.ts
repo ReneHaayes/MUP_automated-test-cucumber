@@ -10,6 +10,8 @@ export enum vehicleAccEnum {
   ACC_TM_150 = 'acc tm 150',
   ACC_TM_250 = 'acc tm 250',
   ACC_TM_500 = 'acc tm 500',
+  ACC_TM_1500 = 'acc tm 1500',
+  ACC_TM_2500 = 'acc tm 2500',
   CARACC_TM_1000 = 'autoAccTm1000',
   CARACC_TM_5000 = 'autoAccTm5000',
   CARACC_TM_10000 = 'autoAccTm10000',

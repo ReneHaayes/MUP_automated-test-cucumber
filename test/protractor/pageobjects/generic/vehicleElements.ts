@@ -49,7 +49,7 @@ export class VehicleElements {
 
   //SIDEBAR
   sideBarPechHulp: string = 'Pechhulp Binnenland';
-  sideBarOngevallenVerzkering: string = 'Ongevallenverzekering';
+  sideBarOngevallenVerzekering: string = 'Ongevallenverzekering';
   sideBarAanschafWaardeRegeling: string = 'Aanschafwaarderegeling';
   sideBarAcc150: string = 'Accessoires verzekerd t/m € 150,-';
   sideBarAcc250: string = 'Uitbreiding accessoires t/m € 250,-';

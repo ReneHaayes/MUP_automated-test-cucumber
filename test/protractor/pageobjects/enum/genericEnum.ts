@@ -38,6 +38,7 @@ export enum genericEnum {
   TEMP = 'temp',
   TOTAL = 'total',
   NEW = 'new',
+  SECONDHAND = 'secondhand',
   REPLACEMENT = 'replacement',
   EXTRA = 'EXTRA'
 }
@@ -52,7 +53,10 @@ export enum environmentUrl {
   WOONVERZEKERING_PAT = 'woonVerzekeringPat',
   WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPatPp',
   BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekeringPat',
-  SCOOTERVERZEKERING_PAT = 'scooterVerzekeringPat'
+  SCOOTERVERZEKERING_PAT = 'scooterVerzekeringPat',
+  MOTORVERZEKERING_PAT = 'motorVerzekeringPat',
+  QUADVERZEKERING_PAT = 'quadVerzekeringPat',
+  TRIKEVERZEKERING_PAT = 'trikeVerzekeringPat'
 }
 
 export enum durationEntrepreneur {

@@ -125,7 +125,7 @@ export class MopedMethods {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.ongevallenVerzekeringElement);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzkering + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.AANSCHAFWAARDE_REGELING: {

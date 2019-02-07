@@ -12,6 +12,9 @@ export class GenericElements {
   woonVerzPatProductPage: string = this.patUnive + 'woonverzekering';
   bromfietsVerzekeringPat: string = this.patUnive + 'bromfietsverzekering/premieberekenen-en-afsluiten';
   scooterVerzekeringPat: string = this.patUnive + 'scooterverzekering/premieberekenen-en-afsluiten';
+  motorVerzekeringPat: string = this.patUnive + 'motorverzekering/premieberekenen-en-afsluiten';
+  quadVerzekeringPat: string = this.patUnive + 'motorverzekering/premieberekenen-en-afsluiten-quad';
+  trikeVerzekeringPat: string = this.patUnive + 'motorverzekering/premieberekenen-en-afsluiten-trike';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

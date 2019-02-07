@@ -37,6 +37,15 @@ export class GetUrlUnive {
       case environmentUrl.SCOOTERVERZEKERING_PAT: {
         return genericElements.scooterVerzekeringPat;
       }
+      case environmentUrl.MOTORVERZEKERING_PAT: {
+        return genericElements.motorVerzekeringPat;
+      }
+      case environmentUrl.QUADVERZEKERING_PAT: {
+        return genericElements.quadVerzekeringPat;
+      }
+      case environmentUrl.TRIKEVERZEKERING_PAT: {
+        return genericElements.trikeVerzekeringPat;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
