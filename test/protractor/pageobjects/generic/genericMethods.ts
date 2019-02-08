@@ -334,6 +334,40 @@ export class GenericMethods {
     }
   }
 
+  async selectDamageHistoryZorgeloosOnline (input: string) {
+    await this.waitForElementIsVisible(genericElements.damageHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await this.clickOnElement(genericElements.damageHistoryYesElementZorgeloosOnline);
+        break;
+      }
+      case genericEnum.NO: {
+        await this.clickOnElement(genericElements.damageHistoryNoElementZorgeloosOnline);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectInsuranceHistoryZorgeloosOnline (input: string) {
+    await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await this.clickOnElement(genericElements.insuranceHistoryYesElementZorgeloosOnline);
+        break;
+      }
+      case genericEnum.NO: {
+        await this.clickOnElement(genericElements.insuranceHistoryNoElementZorgeloosOnline);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
 
 
 

@@ -1,6 +1,3 @@
-import {browser} from "protractor";
-import {genericEnum} from "../enum/genericEnum";
-
 export class ZorgeloosOnlineVerzekeringElements {
 
   //PREMIE
@@ -12,22 +9,4 @@ export class ZorgeloosOnlineVerzekeringElements {
 
   cyberIncidentRecentYesElement: string = '[data-label-id*="LA_IF30005_37910"] .radioList > label:nth-child(2)';
   cyberIncidentRecentNoElement: string = '[data-label-id*="LA_IF30005_37910"] .radioList > label:nth-child(1)';
-
-  async selectDamageHistory(input: string) {
-    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.YES: {
-        await this.clickOnElement(genericElements.damageHistoryYesElement);
-        break;
-      }
-      case genericEnum.NO: {
-        await this.clickOnElement(genericElements.damageHistoryNoElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
 }

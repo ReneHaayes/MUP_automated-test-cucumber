@@ -8,11 +8,11 @@ Feature: Happy flow for 'Zorgeloos Onlineverzekering'
     And I check step two page with premie for zorgeloos onlineverzekering is shown
     And I enter details of <persona> on step three page of zorgeloos onlineverzekering
     And I fill in step four of zorgeloos onlineverzekering page with:
-      | insuranceHistory     | no  |
-      | cyberIncidentPresent | no  |
-      | cyberIncidentRecent  | yes |
-      | criminalHistory      | no  |
-      | damageHistory        | no  |
+      | insuranceHistoryZorgeloosOnline     | no  |
+      | cyberIncidentPresent                | no  |
+      | cyberIncidentRecent                 | yes |
+      | criminalHistoryZorgeloosOnline      | no  |
+      | damageHistoryZorgeloosOnline        | no  |
     Then The thank you page for <persona> is shown
     Examples:
       | persona |

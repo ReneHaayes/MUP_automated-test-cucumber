@@ -6,7 +6,6 @@ import {ZorgeloosOnlineVerzekeringElements} from "../../pageobjects/zorgeloosOnl
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
-import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let aansprakelijkheidsVerzekeringMethods: AansprakelijkheidsVerzekeringMethods = new AansprakelijkheidsVerzekeringMethods();
 let zorgeloosOnlineVerzekeringElements: ZorgeloosOnlineVerzekeringElements = new ZorgeloosOnlineVerzekeringElements();
@@ -49,8 +48,8 @@ When(/^I fill in step four of zorgeloos onlineverzekering page with:$/, async (d
   const dataTable = data.rowsHash();
   await genericMethods.selectCyberIncidentPresent(dataTable.cyberIncidentPresent);
   await genericMethods.selectCyberIncidentRecent(dataTable.cyberIncidentRecent);
-  await genericMethods.selectDamageHistory(dataTable.damageHistory);
-  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
+  await genericMethods.selectDamageHistoryZorgeloosOnline(dataTable.damageHistoryZorgeloosOnline);
+  await genericMethods.selectInsuranceHistoryZorgeloosOnline(dataTable.insuranceHistoryZorgeloosOnline);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.clickOnFinishButton();
 });
