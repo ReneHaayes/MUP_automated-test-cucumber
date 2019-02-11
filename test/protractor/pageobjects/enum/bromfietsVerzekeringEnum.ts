@@ -6,5 +6,8 @@ export enum vehicleKindEnum {
   TRIKE = 'trike',
   QUAD = 'quad',
   BROMMOBIEL = 'brommobiel',
-  OVERIG = 'overig'
+  OVERIG = 'overig',
+  SNORFIETS = 'snorfiets',
+  SNORSCOOTER = 'SNORSCOOTER',
+  FIETS_MET_HULPMOTOR = 'fiets met hulpmotor',
 }

@@ -34,6 +34,9 @@ export class GetUrlUnive {
       case environmentUrl.BROMFIETSVERZEKERING_PAT: {
         return genericElements.bromfietsVerzekeringPat;
       }
+      case environmentUrl.SCOOTERVERZEKERING_PAT: {
+        return genericElements.scooterVerzekeringPat;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

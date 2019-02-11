@@ -6,7 +6,7 @@ import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {AutoVerzekeringElements} from "../../pageobjects/autoVerzekering/autoVerzekeringElements";
 import {NawElements} from "../../pageobjects/generic/nawElements";
-import {CarWithLicensePlate} from "../../pageobjects/verhicles/carWithLicensePlate";
+import {CarWithLicensePlate} from "../../pageobjects/vehicles/carWithLicensePlate";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
@@ -22,7 +22,7 @@ let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new Aut
 let nawElements: NawElements = new NawElements()
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
-let vehicleElements: VehicleElements = new VehicleElements();
+let bromfietsVerzekeringElements: VehicleElements = new VehicleElements();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -50,7 +50,7 @@ When(/^I enter step two page of autoverzekering with$/, async (data) => {
 When(/^I enter step three page of autoverzekering with$/, async (data) => {
   const dataTable = data.rowsHash();
   //INSERT DATE INFORMATION
-  await genericMethods.typeText(vehicleElements.startDateElement, dataTable.startDate);
+  await genericMethods.typeText(bromfietsVerzekeringElements.startDateElement, dataTable.startDate);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, dataTable.startDateOnYourName);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION

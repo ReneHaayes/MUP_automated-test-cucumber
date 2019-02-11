@@ -9,5 +9,6 @@ export enum licensePlateHmPageEnum {
 export enum licensePlates {
   _06HNDL = '06-HN-DL',
   _80SRB4 = '80-SRB-4',
-  _12FRP3 = '12-FRP-3'
+  _12FRP3 = '12-FRP-3',
+  _F169NS = 'F-169-NS'
 }

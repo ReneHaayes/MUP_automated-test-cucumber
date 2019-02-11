@@ -12,20 +12,20 @@ export enum kindStraw {
 }
 
 export enum totalSurface {
-  SMALLER_THEN_80 = 'smaller then 80',
-  SMALLER_THEN_100 = 'smaller then 100',
-  SMALLER_THEN_120 = 'smaller then 120',
-  SMALLER_THEN_140 = 'smaller then 140',
-  SMALLER_THEN_160 = 'smaller then 160',
-  SMALLER_THEN_180 = 'smaller then 180',
-  SMALLER_THEN_200 = 'smaller then 200',
-  SMALLER_THEN_250 = 'smaller then 250',
-  SMALLER_THEN_300 = 'smaller then 300',
-  SMALLER_THEN_350 = 'smaller then 350',
-  SMALLER_THEN_400 = 'smaller then 400',
-  SMALLER_THEN_450 = 'smaller then 450',
-  SMALLER_THEN_500 = 'smaller then 500',
-  BIGGER_THEN_500 = 'bigger then 500'
+  SMALLER_THAN_80 = 'smaller than 80',
+  SMALLER_THAN_100 = 'smaller than 100',
+  SMALLER_THAN_120 = 'smaller than 120',
+  SMALLER_THAN_140 = 'smaller than 140',
+  SMALLER_THAN_160 = 'smaller than 160',
+  SMALLER_THAN_180 = 'smaller than 180',
+  SMALLER_THAN_200 = 'smaller than 200',
+  SMALLER_THAN_250 = 'smaller than 250',
+  SMALLER_THAN_300 = 'smaller than 300',
+  SMALLER_THAN_350 = 'smaller than 350',
+  SMALLER_THAN_400 = 'smaller than 400',
+  SMALLER_THAN_450 = 'smaller than 450',
+  SMALLER_THAN_500 = 'smaller than 500',
+  BIGGER_THAN_500 = 'bigger than 500'
 }
 
 export enum additionalOption {

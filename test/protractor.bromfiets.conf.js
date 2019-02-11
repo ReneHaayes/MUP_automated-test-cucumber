@@ -8,7 +8,7 @@ exports.config = {
 
   specs: [
     // 'async_await.js',
-    './protractor/features/bromfietsVerzekering/happyFlow.feature'
+    './protractor/features/moped/happyFlow.feature'
   ],
   capabilities: {
     browserName: 'chrome',
