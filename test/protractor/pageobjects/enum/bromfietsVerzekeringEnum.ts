@@ -10,4 +10,5 @@ export enum vehicleKindEnum {
   SNORFIETS = 'snorfiets',
   SNORSCOOTER = 'SNORSCOOTER',
   FIETS_MET_HULPMOTOR = 'fiets met hulpmotor',
+  MOTOR = 'motor'
 }

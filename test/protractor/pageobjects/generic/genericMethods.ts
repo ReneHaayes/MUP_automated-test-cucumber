@@ -45,7 +45,7 @@ export class GenericMethods {
   }
 
   async goToPage(page: string) {
-    const url: string = await getUrlUnive.getUrlUnive(page);
+    const url: string = getUrlUnive.getUrlUnive(page);
     await protractor.browser.get(url);
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
   }

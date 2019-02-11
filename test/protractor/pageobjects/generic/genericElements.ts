@@ -1,17 +1,16 @@
 export class GenericElements {
 
-  //PAGES
-  patUnive: string = 'https://pat.unive.nl/';
-  tstProjUnive: string = 'https://tstproj.unive.nl/';
-  autoVerzUrlPat: string = this.patUnive + 'autoverzekering/premieberekenen-en-afsluiten';
-  autoVerzUrlTstProj: string = this.tstProjUnive + 'autoverzekering/premieberekenen-en-afsluiten';
-  zzpFlexPat: string = this.patUnive + 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
-  aansprakelijkheidsVerzekeringPat: string = this.patUnive + 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
-  autoVerzProductPagePat: string = this.patUnive + 'autoverzekering';
-  woonVerzPat: string = this.patUnive + 'woonverzekering/premieberekenen-en-afsluiten';
-  woonVerzPatProductPage: string = this.patUnive + 'woonverzekering';
-  bromfietsVerzekeringPat: string = this.patUnive + 'bromfietsverzekering/premieberekenen-en-afsluiten';
-  scooterVerzekeringPat: string = this.patUnive + 'scooterverzekering/premieberekenen-en-afsluiten';
+  autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
+  zzpFlexPat: string = 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
+  aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten/';
+  autoVerzProductPagePat: string = 'autoverzekering';
+  woonVerzPat: string = 'woonverzekering/premieberekenen-en-afsluiten';
+  woonVerzPatProductPage: string = 'woonverzekering';
+  bromfietsVerzekeringPat: string = 'bromfietsverzekering/premieberekenen-en-afsluiten';
+  scooterVerzekeringPat: string = 'scooterverzekering/premieberekenen-en-afsluiten';
+  motorVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten';
+  quadVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-quad';
+  trikeVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-trike';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

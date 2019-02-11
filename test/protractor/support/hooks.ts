@@ -1,7 +1,6 @@
 import { After, Before, setDefaultTimeout } from 'cucumber';
 import { protractor } from 'protractor';
 import { inspect } from "util";
-// import { afterEach } from 'selenium-webdriver/testing';
 
 setDefaultTimeout(90000);
 
