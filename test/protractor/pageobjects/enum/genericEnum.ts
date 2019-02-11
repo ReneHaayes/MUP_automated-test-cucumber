@@ -58,6 +58,7 @@ export enum environmentUrl {
   MOTORVERZEKERING_PAT = 'motorVerzekering',
   QUADVERZEKERING_PAT = 'quadVerzekering',
   TRIKEVERZEKERING_PAT = 'trikeVerzekering'
+    ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekeringPat'
 }
 
 export enum durationEntrepreneur {

@@ -11,6 +11,8 @@ export class GenericElements {
   motorVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten';
   quadVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-trike';
+  zorgeloosOnlineVerzekeringPat: string = 'zorgeloosonline/premieberekenen-en-afsluiten';
+
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
