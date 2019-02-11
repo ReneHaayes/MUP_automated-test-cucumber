@@ -31,7 +31,7 @@ Feature: Happy flow for motorverzekering, quadverzekering and trikeverzekering.
     Then The thank you page for <persona> is shown
 
     Examples:
-      | page                | persona | licensePlate |
-      | motorVerzekeringPat | ronaldo | MP-TT-99     |
-      | quadVerzekeringPat  | ronaldo | 97-XF-TK     |
-      | trikeVerzekeringPat | ronaldo | 21-PLN-1     |
+      | page             | persona | licensePlate |
+      | motorVerzekering | ronaldo | MP-TT-99     |
+      | quadVerzekering  | ronaldo | 97-XF-TK     |
+      | trikeVerzekering | ronaldo | 21-PLN-1     |

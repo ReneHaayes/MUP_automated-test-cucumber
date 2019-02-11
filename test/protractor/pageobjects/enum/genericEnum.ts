@@ -44,19 +44,20 @@ export enum genericEnum {
 }
 
 export enum environmentUrl {
-  HOME_PAT = 'homePat',
-  AUTOVERZEKERING_PAT = 'autoverzekeringPat',
-  AUTOVERZEKERING_TSTPROJ = 'autoverzekeringTstProj',
-  ZZPFLEX_PAT = 'zzpFlexPat',
-  AANSPRAKELIJKHEIDSVERZEKERING_PAT = 'aansprakelijkheidsVerzekeringPat',
-  AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPagePat',
-  WOONVERZEKERING_PAT = 'woonVerzekeringPat',
-  WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPatPp',
-  BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekeringPat',
-  SCOOTERVERZEKERING_PAT = 'scooterVerzekeringPat',
-  MOTORVERZEKERING_PAT = 'motorVerzekeringPat',
-  QUADVERZEKERING_PAT = 'quadVerzekeringPat',
-  TRIKEVERZEKERING_PAT = 'trikeVerzekeringPat'
+  HOME = 'home',
+  HOME_PAT = 'pat',
+  HOME_TSTPROJ = 'tstProj',
+  AUTOVERZEKERING_PAT = 'autoverzekering',
+  ZZPFLEX_PAT = 'zzpFlex',
+  AANSPRAKELIJKHEIDSVERZEKERING_PAT = 'aansprakelijkheidsVerzekering',
+  AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPage',
+  WOONVERZEKERING_PAT = 'woonVerzekering',
+  WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPp',
+  BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekering',
+  SCOOTERVERZEKERING_PAT = 'scooterVerzekering',
+  MOTORVERZEKERING_PAT = 'motorVerzekering',
+  QUADVERZEKERING_PAT = 'quadVerzekering',
+  TRIKEVERZEKERING_PAT = 'trikeVerzekering'
 }
 
 export enum durationEntrepreneur {

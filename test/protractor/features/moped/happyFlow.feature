@@ -26,6 +26,6 @@ Feature: Happy flow for 'Bromfiets Verzekering' and 'Scooter Verzekering'
     Then The thank you page for <persona> is shown
 
     Examples:
-      | page                    | persona | licensePlate |
-      | bromfietsVerzekeringPat | ronaldo | 12-FRP-3     |
-      | scooterVerzekeringPat   | ronaldo | F-169-NS     |
+      | page                 | persona | licensePlate |
+      | bromfietsVerzekering | ronaldo | 12-FRP-3     |
+      | scooterVerzekering   | ronaldo | F-169-NS     |
