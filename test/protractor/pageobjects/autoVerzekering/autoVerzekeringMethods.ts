@@ -7,7 +7,7 @@ import {genericEnum} from "../enum/genericEnum";
 import {
   aanvullendeOptiesEnum,
   basisDekkingEnum,
-  carAccEnum,
+  vehicleAccEnum,
   ownRiskEnum, totalPremieEnum,
   yearlyMileageEnum
 } from "../enum/autoVerzekeringEnum";
@@ -74,22 +74,22 @@ export class AutoVerzekeringMethods {
 
   async selectCarAcc(input: string) {
     switch (input) {
-      case carAccEnum.CARACC_TM_1000: {
+      case vehicleAccEnum.CARACC_TM_1000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.autoAccElement, autoVerzekeringElements.autoAccTm1000);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarCarAcc1000 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarCarAcc1000 + '")]', browser.getPageTimeout);
         break;
       }
-      case carAccEnum.CARACC_TM_5000: {
+      case vehicleAccEnum.CARACC_TM_5000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.autoAccElement, autoVerzekeringElements.autoAccTm5000);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarCarAcc5000 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarCarAcc5000 + '")]', browser.getPageTimeout);
         break;
       }
-      case carAccEnum.CARACC_TM_10000: {
+      case vehicleAccEnum.CARACC_TM_10000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.autoAccElement, autoVerzekeringElements.autoAccTm10000);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarCarAcc10000 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarCarAcc10000 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -103,25 +103,25 @@ export class AutoVerzekeringMethods {
       case ownRiskEnum.NO_OWN_RISK: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRiskGeenEigenRisico);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarGeenEigenRisico + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarGeenEigenRisico + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_100: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk100);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarOwnRisk100 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarOwnRisk100 + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_250: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk250);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarOwnRisk250 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarOwnRisk250 + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_500: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk500);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -136,21 +136,21 @@ export class AutoVerzekeringMethods {
         await genericMethods.clickOnElement(autoVerzekeringElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
         await genericMethods.clickOnElement(autoVerzekeringElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
         await genericMethods.clickOnElement(autoVerzekeringElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -165,14 +165,14 @@ export class AutoVerzekeringMethods {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(autoVerzekeringElements.inzittendenVerzekering);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarInzittendenVerzekering + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarInzittendenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.PECH_HULP_NL: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(autoVerzekeringElements.pechHulpNl);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.PECH_HULP_ABROAD: {
@@ -180,7 +180,7 @@ export class AutoVerzekeringMethods {
         await genericMethods.clickOnElement(autoVerzekeringElements.pechHulpNl);
         await genericMethods.clickOnElement(autoVerzekeringElements.pechHulpAbroad);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.PECH_HULP_ABROAD_AND_NL: {
@@ -188,21 +188,21 @@ export class AutoVerzekeringMethods {
         await genericMethods.clickOnElement(autoVerzekeringElements.pechHulpNl);
         await genericMethods.clickOnElement(autoVerzekeringElements.pechHulpAbroadAndNl);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.RECHTSHULP_VERKEER: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(autoVerzekeringElements.rechtsHulpVerkeer);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.OWN_CHOICE_DAMAGE_COMPANY: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(autoVerzekeringElements.eigenKeuzeSchadeHerstelBedrijf);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarHerstelBedrijf + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarHerstelBedrijf + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -216,13 +216,13 @@ export class AutoVerzekeringMethods {
       case totalPremieEnum.MONTHLY: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.totalPremieSelectionElement, autoVerzekeringElements.totalPremieSelectionMonth);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarTotalPremieMonthly + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarTotalPremieMonthly + '")]', browser.getPageTimeout);
         break;
       }
       case totalPremieEnum.ANNUAL: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.totalPremieSelectionElement, autoVerzekeringElements.totalPremieSelectionAnnual);
         await genericMethods.waitForElementIsPresentWithXpath(
-          autoVerzekeringElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarTotalPremieAnnual + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarTotalPremieAnnual + '")]', browser.getPageTimeout);
         break;
       }
       default: {

@@ -36,7 +36,10 @@ export enum genericEnum {
   DONT = 'dont',
   UNKNOWN = 'unknown',
   TEMP = 'temp',
-  TOTAL = 'total'
+  TOTAL = 'total',
+  NEW = 'new',
+  REPLACEMENT = 'replacement',
+  EXTRA = 'EXTRA'
 }
 
 export enum environmentUrl {
@@ -65,5 +68,3 @@ export enum durationEntrepreneur {
   _9 = '9 jaar',
   _10 = '10 jaar'
 }
-
-

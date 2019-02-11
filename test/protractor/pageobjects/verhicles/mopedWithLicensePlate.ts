@@ -1,4 +1,5 @@
 import {licensePlates} from "../enum/licensePlateEnum";
+import {vehicleKindEnum} from "../enum/bromfietsVerzekeringEnum";
 
 export class Moped {
 
@@ -20,7 +21,7 @@ export class Moped {
 
 export class MopedWithLicensePlate {
 
-  _12FRP3: Moped = new Moped(`12-FRP-3`, 'RIEJU', 'BROMFIETS', '2005', 'RR');
+  _12FRP3: Moped = new Moped(`12-FRP-3`, 'RIEJU', vehicleKindEnum.BROMFIETS, '2005', 'RR', );
 
   getMopedBrandName(input: string): string {
     switch (input) {

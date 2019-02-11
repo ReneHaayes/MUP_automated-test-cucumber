@@ -6,7 +6,10 @@ export enum yearlyMileageEnum {
   MORE_THEN_25000 = 'meerDan25000'
 }
 
-export enum carAccEnum {
+export enum vehicleAccEnum {
+  ACC_TM_150 = 'acc tm 150',
+  ACC_TM_250 = 'acc tm 250',
+  ACC_TM_500 = 'acc tm 500',
   CARACC_TM_1000 = 'autoAccTm1000',
   CARACC_TM_5000 = 'autoAccTm5000',
   CARACC_TM_10000 = 'autoAccTm10000',
@@ -32,6 +35,8 @@ export enum aanvullendeOptiesEnum {
   PECH_HULP_ABROAD = 'pechHulpAbroad',
   RECHTSHULP_VERKEER = 'rechtsHulpVerkeer',
   OWN_CHOICE_DAMAGE_COMPANY = 'eigenKeuzeSchadeHerstelBedrijf',
+  ONGEVALLEN_VERZEKERING = 'ongevallen verzekering',
+  AANSCHAFWAARDE_REGELING = 'aanschafwaarde regeling'
 }
 
 export enum totalPremieEnum {
