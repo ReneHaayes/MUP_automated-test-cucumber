@@ -321,7 +321,7 @@ export class GenericMethods {
     await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.cyberIncidentRecentNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.NO: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.cyberIncidentPresentNoElement);
+        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.cyberIncidentRecentNoElement);
         break;
       }
       case genericEnum.YES: {
@@ -335,14 +335,14 @@ export class GenericMethods {
   }
 
   async selectDamageHistoryZorgeloosOnline (input: string) {
-    await this.waitForElementIsVisible(genericElements.damageHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
+    await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.damageHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
-        await this.clickOnElement(genericElements.damageHistoryYesElementZorgeloosOnline);
+        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.damageHistoryYesElementZorgeloosOnline);
         break;
       }
       case genericEnum.NO: {
-        await this.clickOnElement(genericElements.damageHistoryNoElementZorgeloosOnline);
+        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.damageHistoryNoElementZorgeloosOnline);
         break;
       }
       default: {
@@ -352,14 +352,14 @@ export class GenericMethods {
   }
 
   async selectInsuranceHistoryZorgeloosOnline (input: string) {
-    await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
+    await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.insuranceHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
-        await this.clickOnElement(genericElements.insuranceHistoryYesElementZorgeloosOnline);
+        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.insuranceHistoryYesElementZorgeloosOnline);
         break;
       }
       case genericEnum.NO: {
-        await this.clickOnElement(genericElements.insuranceHistoryNoElementZorgeloosOnline);
+        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.insuranceHistoryNoElementZorgeloosOnline);
         break;
       }
       default: {

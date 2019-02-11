@@ -45,13 +45,6 @@ export class GenericElements {
   damageHistoryYesElement: string = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(2)';
   damageHistoryNoElement: string = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(1)';
 
-  //DIFFERENT ELEMENTS ON STEP HISTORY FOR ZORGELOOS ONLINE
-  damageHistoryYesElementZorgeloosOnline: string = '[data-label-id*="LA_IF30005_37912"] .radioList > label:nth-child(2)';
-  damageHistoryNoElementZorgeloosOnline: string = '[data-label-id*="LA_IF30005_37912"] .radioList > label:nth-child(1)';
-
-  insuranceHistoryNoElementZorgeloosOnline: string = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(1)';
-  insuranceHistoryYesElementZorgeloosOnline: string = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(2)';
-
   //SIDEBAR
   sideBarElement: string = '//*[@class="rbcontainer"]//*';
 
