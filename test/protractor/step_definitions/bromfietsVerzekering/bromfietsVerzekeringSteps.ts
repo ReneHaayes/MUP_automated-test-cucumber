@@ -2,57 +2,57 @@ import {When} from "cucumber";
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
 import {MopedWithLicensePlate} from "../../pageobjects/vehicles/mopedWithLicensePlate";
-import {BromfietsVerzekeringMethods} from "../../pageobjects/bromfietsVerzekering/bromfietsVerzekeringMethods";
+import {MopedMethods} from "../../pageobjects/moped/mopedMethods";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {genericEnum} from "../../pageobjects/enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
-let bromfietsVerzekeringElements: VehicleElements = new VehicleElements();
-let bromfietsVerzekeringMethods: BromfietsVerzekeringMethods = new BromfietsVerzekeringMethods();
+let vehicleElements: VehicleElements = new VehicleElements();
+let mopedMethods: MopedMethods = new MopedMethods();
 let mopedWithLicensePlate: MopedWithLicensePlate = new MopedWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
 let nawElements: NawElements = new NawElements();
 let genericElements: GenericElements = new GenericElements();
 
-When(/^I enter step one page of bromfiets verzekering for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string,
+When(/^I enter step one page of moped for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string,
                                                                                                                                     licensePlate: string, damageFreeYears: string) => {
-  await bromfietsVerzekeringMethods.enterLicensePlate(licensePlate);
-  await genericMethods.verifyTextInElement(bromfietsVerzekeringElements.licensePlateInfoBrandNameElement, mopedWithLicensePlate.getMopedBrandName(licensePlate));
-  await genericMethods.verifyTextInElement(bromfietsVerzekeringElements.licensePlateInfoModelElement, mopedWithLicensePlate.getMopedModel(licensePlate));
-  await genericMethods.verifyTextInElement(bromfietsVerzekeringElements.licensePlateInfoConstructionYearElement, mopedWithLicensePlate.getMopedConstructionYear(licensePlate));
-  await genericMethods.verifyTextInElement(bromfietsVerzekeringElements.licensePlateInfoVersionElement, mopedWithLicensePlate.getMopedVersion(licensePlate));
-  await bromfietsVerzekeringMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedModel(licensePlate));
-  await genericMethods.typeText(bromfietsVerzekeringElements.birthDateElement, personaData.getPersonaBirthday(persona))
-  await genericMethods.typeText(bromfietsVerzekeringElements.zipCodeElement, personaData.getPersonaZipcode(persona))
-  await genericMethods.typeText(bromfietsVerzekeringElements.damageFreeYearsElement, damageFreeYears);
+  await mopedMethods.enterLicensePlate(licensePlate);
+  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoBrandNameElement, mopedWithLicensePlate.getMopedBrandName(licensePlate));
+  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoModelElement, mopedWithLicensePlate.getMopedModel(licensePlate));
+  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoConstructionYearElement, mopedWithLicensePlate.getMopedConstructionYear(licensePlate));
+  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoVersionElement, mopedWithLicensePlate.getMopedVersion(licensePlate));
+  await mopedMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedModel(licensePlate));
+  await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthday(persona))
+  await genericMethods.typeText(vehicleElements.zipCodeElement, personaData.getPersonaZipcode(persona))
+  await genericMethods.typeText(vehicleElements.damageFreeYearsElement, damageFreeYears);
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter step two page of bromfiets verzekering with$/, async (data) => {
+When(/^I enter step two page of moped with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await bromfietsVerzekeringMethods.clickOnBasisDekking(dataTable.basisDekking);
-  await bromfietsVerzekeringMethods.clickOnAanvullendeOpties(dataTable.aanvullendeOpties);
-  await bromfietsVerzekeringMethods.selectAcc(dataTable.accessoires);
-  await bromfietsVerzekeringMethods.selectOwnRisk(dataTable.ownRisk);
+  await mopedMethods.clickOnBasisDekking(dataTable.basisDekking);
+  await mopedMethods.clickOnAanvullendeOpties(dataTable.aanvullendeOpties);
+  await mopedMethods.selectAcc(dataTable.accessoires);
+  await mopedMethods.selectOwnRisk(dataTable.ownRisk);
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter step three page of bromfiets verzekering with$/, async (data) => {
+When(/^I enter step three page of moped with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await bromfietsVerzekeringMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
-  await genericMethods.typeText(bromfietsVerzekeringElements.dateOfNameMopedElement, dataTable.dateOfName);
-  await genericMethods.clickOnTAB(bromfietsVerzekeringElements.dateOfNameMopedElement);
-  await genericMethods.typeText(bromfietsVerzekeringElements.meldCodeElement, dataTable.meldCode);
-  await genericMethods.typeText(bromfietsVerzekeringElements.purchasePriceElement, dataTable.purchasePrice);
-  await bromfietsVerzekeringMethods.clickOnDamageFreeYearsOfDifferentCompany(dataTable.damageFreeYearsDifferentCompany);
-  await bromfietsVerzekeringMethods.clickMainDriver(dataTable.mainDriver);
-  await bromfietsVerzekeringMethods.clickOwner(dataTable.owner);
+  await mopedMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
+  await genericMethods.typeText(vehicleElements.dateOfNameMopedElement, dataTable.dateOfName);
+  await genericMethods.clickOnTAB(vehicleElements.dateOfNameMopedElement);
+  await genericMethods.typeText(vehicleElements.meldCodeElement, dataTable.meldCode);
+  await genericMethods.typeText(vehicleElements.purchasePriceElement, dataTable.purchasePrice);
+  await mopedMethods.clickOnDamageFreeYearsOfDifferentCompany(dataTable.damageFreeYearsDifferentCompany);
+  await mopedMethods.clickMainDriver(dataTable.mainDriver);
+  await mopedMethods.clickOwner(dataTable.owner);
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter details of (.*) in step four page of bromfiets verzekering$/, async (persona: string) => {
+When(/^I enter details of (.*) in step four page of moped$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
@@ -69,7 +69,7 @@ When(/^I enter details of (.*) in step four page of bromfiets verzekering$/, asy
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I fill in step four of bromfiets verzekering page with:$/, async (data) => {
+When(/^I fill in step four of moped page with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);

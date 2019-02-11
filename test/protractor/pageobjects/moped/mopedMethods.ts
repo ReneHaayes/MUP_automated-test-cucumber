@@ -9,65 +9,65 @@ import {AutoVerzekeringElements} from "../autoVerzekering/autoVerzekeringElement
 import {genericEnum} from "../enum/genericEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
-let bromfietsVerzekeringElements: VehicleElements = new VehicleElements();
+let vehicleElements: VehicleElements = new VehicleElements();
 let mopedWithLicensePlate: MopedWithLicensePlate = new MopedWithLicensePlate();
 let genericElements: GenericElements = new GenericElements();
 let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
 
-export class BromfietsVerzekeringMethods {
+export class MopedMethods {
 
   async enterLicensePlate(licensePlate: string) {
-    await genericMethods.waitForElementIsVisible(bromfietsVerzekeringElements.licensePlateInputElement, browser.getPageTimeout);
-    await genericMethods.typeText(bromfietsVerzekeringElements.licensePlateInputElement, licensePlate);
+    await genericMethods.waitForElementIsVisible(vehicleElements.licensePlateInputElement, browser.getPageTimeout);
+    await genericMethods.typeText(vehicleElements.licensePlateInputElement, licensePlate);
     await browser.sleep(500);
-    await genericMethods.clickOnTAB(bromfietsVerzekeringElements.licensePlateInputElement);
-    await genericMethods.waitForElementIsVisibleWithXpath(bromfietsVerzekeringElements.licensePlateBrandNameElementWithXpath + '[contains(text(),"' + mopedWithLicensePlate.getMopedBrandName(licensePlate) + '")]', browser.getPageTimeout);
+    await genericMethods.clickOnTAB(vehicleElements.licensePlateInputElement);
+    await genericMethods.waitForElementIsVisibleWithXpath(vehicleElements.licensePlateBrandNameElementWithXpath + '[contains(text(),"' + mopedWithLicensePlate.getMopedBrandName(licensePlate) + '")]', browser.getPageTimeout);
   }
 
   async selectKindOfVehicle(input: string) {
     switch (input) {
       case vehicleKindEnum.BROMFIETS: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindBromfietsSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindBromfietsSelectElement);
         break;
       }
       case vehicleKindEnum.BAKFIETS: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindBakfietsSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindBakfietsSelectElement);
         break;
       }
       case vehicleKindEnum.BROMMOBIEL: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindBromMobielSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindBromMobielSelectElement);
         break;
       }
       case vehicleKindEnum.BROMSCOOTER: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindBromscooterSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindBromscooterSelectElement);
         break;
       }
       case vehicleKindEnum.HIGH_SPEED_BIKE: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindHighSpeedEbikeSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindHighSpeedEbikeSelectElement);
         break;
       }
       case vehicleKindEnum.OVERIG: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindOverigSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindOverigSelectElement);
         break;
       }
       case vehicleKindEnum.QUAD: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindQuadSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindQuadSelectElement);
         break;
       }
       case vehicleKindEnum.TRIKE: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindTrikeSelectElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindTrikeSelectElement);
         break;
       }
       case vehicleKindEnum.SNORFIETS: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindSnorfietsElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindSnorfietsElement);
         break;
       }
       case vehicleKindEnum.SNORSCOOTER: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindSnorscooterElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindSnorscooterElement);
         break;
       }
       case vehicleKindEnum.FIETS_MET_HULPMOTOR: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.vehicleKindSelectElement, bromfietsVerzekeringElements.vehicleKindFietsMetHulpmotorElement);
+        await genericMethods.selectInDropdown(vehicleElements.vehicleKindSelectElement, vehicleElements.vehicleKindFietsMetHulpmotorElement);
         break;
       }
       default: {
@@ -79,21 +79,21 @@ export class BromfietsVerzekeringMethods {
   async clickOnBasisDekking(input: string) {
     switch (input) {
       case basisDekkingEnum.WA: {
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.waElement);
+        await genericMethods.clickOnElement(vehicleElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(
           genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.waPlusElement);
+        await genericMethods.clickOnElement(vehicleElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(
           genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.allRiskElement);
+        await genericMethods.clickOnElement(vehicleElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(
           genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
@@ -109,30 +109,30 @@ export class BromfietsVerzekeringMethods {
     switch (input) {
       case aanvullendeOptiesEnum.PECH_HULP_NL: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.pechHulpNlElement);
+        await genericMethods.clickOnElement(vehicleElements.pechHulpNlElement);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarPechHulp + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.RECHTSHULP_VERKEER: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.rechtsHulpVerkeerElement);
+        await genericMethods.clickOnElement(vehicleElements.rechtsHulpVerkeerElement);
         await genericMethods.waitForElementIsPresentWithXpath(
           genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.ONGEVALLEN_VERZEKERING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.ongevallenVerzekeringElement);
+        await genericMethods.clickOnElement(vehicleElements.ongevallenVerzekeringElement);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarOngevallenVerzkering + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.AANSCHAFWAARDE_REGELING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.aanschafWaardeRegelingElement);
+        await genericMethods.clickOnElement(vehicleElements.aanschafWaardeRegelingElement);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarAanschafWaardeRegeling + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAanschafWaardeRegeling + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -144,21 +144,21 @@ export class BromfietsVerzekeringMethods {
   async selectAcc(input: string) {
     switch (input) {
       case vehicleAccEnum.ACC_TM_150: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.accElement, bromfietsVerzekeringElements.accTm150);
+        await genericMethods.selectInDropdown(vehicleElements.accElement, vehicleElements.accTm150);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarAcc150 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc150 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_250: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.accElement, bromfietsVerzekeringElements.accTm250);
+        await genericMethods.selectInDropdown(vehicleElements.accElement, vehicleElements.accTm250);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarAcc250 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc250 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_500: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.accElement, bromfietsVerzekeringElements.accTm500);
+        await genericMethods.selectInDropdown(vehicleElements.accElement, vehicleElements.accTm500);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarAcc500 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -170,21 +170,21 @@ export class BromfietsVerzekeringMethods {
   async selectOwnRisk(input: string) {
     switch (input) {
       case ownRiskEnum.OWN_RISK_100: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk100);
+        await genericMethods.selectInDropdown(vehicleElements.ownRiskElement, autoVerzekeringElements.ownRisk100);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarOwnRisk100 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk100 + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_250: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk250);
+        await genericMethods.selectInDropdown(vehicleElements.ownRiskElement, autoVerzekeringElements.ownRisk250);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarOwnRisk250 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk250 + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_500: {
-        await genericMethods.selectInDropdown(bromfietsVerzekeringElements.ownRiskElement, autoVerzekeringElements.ownRisk500);
+        await genericMethods.selectInDropdown(vehicleElements.ownRiskElement, autoVerzekeringElements.ownRisk500);
         await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + bromfietsVerzekeringElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
+          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -197,17 +197,17 @@ export class BromfietsVerzekeringMethods {
     switch (input) {
       case genericEnum.NEW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.newMopedElement);
+        await genericMethods.clickOnElement(vehicleElements.newMopedElement);
         break;
       }
       case genericEnum.REPLACEMENT: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.replacementMopedElement);
+        await genericMethods.clickOnElement(vehicleElements.replacementMopedElement);
         break;
       }
       case genericEnum.EXTRA: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.extraMopedElement);
+        await genericMethods.clickOnElement(vehicleElements.extraMopedElement);
         break;
       }
       default: {
@@ -220,12 +220,12 @@ export class BromfietsVerzekeringMethods {
     switch (input) {
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.damageFreeYearsDifferentCompanyYesElement);
+        await genericMethods.clickOnElement(vehicleElements.damageFreeYearsDifferentCompanyYesElement);
         break;
       }
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.damageFreeYearsDifferentCompanyNoElement);
+        await genericMethods.clickOnElement(vehicleElements.damageFreeYearsDifferentCompanyNoElement);
         break;
       }
       default: {
@@ -238,12 +238,12 @@ export class BromfietsVerzekeringMethods {
     switch (input) {
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.mainDriverYesElement);
+        await genericMethods.clickOnElement(vehicleElements.mainDriverYesElement);
         break;
       }
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.mainDriverNoElement);
+        await genericMethods.clickOnElement(vehicleElements.mainDriverNoElement);
         break;
       }
       default: {
@@ -256,12 +256,12 @@ export class BromfietsVerzekeringMethods {
     switch (input) {
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.ownerYesElement);
+        await genericMethods.clickOnElement(vehicleElements.ownerYesElement);
         break;
       }
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(bromfietsVerzekeringElements.ownerNoElement);
+        await genericMethods.clickOnElement(vehicleElements.ownerNoElement);
         break;
       }
       default: {

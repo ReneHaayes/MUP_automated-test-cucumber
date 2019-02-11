@@ -1,16 +1,28 @@
 exports.config = {
-  ignoreUncaughtExceptions: true,
+  // seleniumAddress: 'http://localhost:4444/wd/hub',
+  // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 60000,
+  getPageTimeout: 15000,
   directConnect: true,
+  restartBrowserBetweenTests: true,
+
+  suites: {
+    aansprakelijkheidsVerzekering: './protractor/features/aansprakelijkheidsVerzekering/*.feature',
+    autoVerzekering: './protractor/features/autoVerzekering/*.feature',
+    moped: './protractor/features/moped/*.feature',
+    motor: './protractor/features/motor/*.feature',
+    woonVerzekering: './protractor/features/woonVerzekering/**.feature',
+    zzpFlex: './protractor/features/zzpFlex/happyFlow.feature'
+  },
 
   specs: [
-    './protractor/features/autoVerzekering/*.feature'
+    // 'async_await.js',
+    './protractor/features/**/*.feature'
   ],
   capabilities: {
     browserName: 'chrome',
-    shardTestFiles: true,
-    maxInstances: 1,
+    // shardTestFiles: true,
+    // maxInstances: 1,
 
     loggingPrefs: {
       'driver': 'INFO',
@@ -18,8 +30,15 @@ exports.config = {
     },
     'chromeOptions': {
       'args': [
-        // "headless", "disable-gpu",
+        // "headless",
+        // "disable-gpu",
         "disable-extensions"]
+    }
+  },
+  params: {
+    env: {
+      //DEFAULT environment is pat
+      environment: 'pat'
     }
   },
   baseUrl: 'https://techblog.polteq.com/testshop/index.php',
@@ -27,41 +46,45 @@ exports.config = {
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
   onPrepare: () => {
-    protractor.browser.manage().window().setSize(2000, 1200);
-  },
+  protractor.browser.manage().window().maximize();
+},
 
-  afterLaunch: () => {
-    const multiCucumberHTLMReporter = require('multiple-cucumber-html-reporter');
-    const multiCucumberHTLMReporterConfig = {
-      displayDuration: true,
-      jsonDir: './target/reports/',
-      reportPath: './target/reports/'
-    };
-    multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);
-  },
+afterLaunch: () => {
+  const multiCucumberHTLMReporter = require('multiple-cucumber-html-reporter');
+  const multiCucumberHTLMReporterConfig = {
+    displayDuration: true,
+    jsonDir: './target/reports/',
+    reportPath: './target/reports/'
+  };
+  multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);
+},
 
-  plugins: [{
-    package: 'protractor-multiple-cucumber-html-reporter-plugin',
-    options: {
-      // read the options part for more options
-      automaticallyGenerateReport: false,
-      removeExistingJsonReportFile: true,
-      removeOriginalJsonReportFile: true,
-      displayDuration: true,
-      disableLog: true,
-      jsonOutputPath: './target/reports/',
-      reportPath: './target/reports/'
-    }
-  }],
+plugins: [{
+  package: require.resolve('protractor-multiple-cucumber-html-reporter-plugin'),
+  // package: 'protractor-multiple-cucumber-html-reporter-plugin',
+  options: {
+    // read the options part for more options
+    automaticallyGenerateReport: false,
+    removeExistingJsonReportFile: true,
+    removeOriginalJsonReportFile: true,
+    displayDuration: true,
+    disableLog: true,
+    jsonOutputPath: './target/reports/',
+    reportPath: './target/reports/'
+  }
+}],
 
-  cucumberOpts: {
-    require: ['./protractor/step_definitions/*.ts', './protractor/support/**/*.ts'],
+cucumberOpts: {
+  require: [
+    './protractor/step_definitions/*.ts',
+    './protractor/step_definitions/**/*.ts',
+    './protractor/support/*.ts'],
     'require-module': "ts-node/register",
     compilerOptions: {
-      project: '../tsconfig.json'
-    },
-    strict: true,
+    project: '../tsconfig.json'
+  },
+  strict: true,
     format: 'json:./target/reports/report.json',
-    tags: ['~@WIP']
-  }
+    tags: ['~@WIP'],
+}
 };

@@ -11,7 +11,7 @@ export class VehicleElements {
   licensePlateInfoVersionElement: string = '[data-label-id*="LA_IF9733_13979"] span';
 
   //XPATH is necessarry to get the text out of this element.
-  licensePlateBrandNameElementWithXpath: string = '//*[@id="_Form_FormSection"]/ul/li[1]/div[2]/fieldset[1]/div/div[4]/div[2]/div[1]/span';
+  licensePlateBrandNameElementWithXpath: string = '//*[@class="entry bromfiets_db"]/descendant::*';
 
   vehicleKindSelectElement: string = '#_Form_IF9706_13915';
   vehicleKindBromfietsSelectElement: string = 'string:bromfiets';
@@ -49,7 +49,7 @@ export class VehicleElements {
 
   //SIDEBAR
   sideBarPechHulp: string = 'Pechhulp Binnenland';
-  sideBarOngevallenVerzkering: string = 'Ongevallenverzekering';
+  sideBarOngevallenVerzekering: string = 'Ongevallenverzekering';
   sideBarAanschafWaardeRegeling: string = 'Aanschafwaarderegeling';
   sideBarAcc150: string = 'Accessoires verzekerd t/m € 150,-';
   sideBarAcc250: string = 'Uitbreiding accessoires t/m € 250,-';
