@@ -11,8 +11,10 @@ exports.config = {
     autoVerzekering: './protractor/features/autoVerzekering/*.feature',
     moped: './protractor/features/moped/*.feature',
     motor: './protractor/features/motor/*.feature',
-    woonVerzekering: './protractor/features/woonVerzekering/**.feature',
-    zzpFlex: './protractor/features/zzpFlex/happyFlow.feature'
+    woonVerzekering: './protractor/features/woonVerzekering/*.feature',
+    zzpFlex: './protractor/features/zzpFlex/*.feature',
+    zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature'
+
   },
 
   specs: [
@@ -41,7 +43,7 @@ exports.config = {
       environment: 'pat'
     }
   },
-  baseUrl: 'https://techblog.polteq.com/testshop/index.php',
+  // baseUrl: 'https://techblog.polteq.com/testshop/index.php',
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 

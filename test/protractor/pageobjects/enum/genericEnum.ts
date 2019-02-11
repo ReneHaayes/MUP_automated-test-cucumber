@@ -1,25 +1,29 @@
-export enum gender{
+export enum gender {
   MALE = 'male',
   FEMALE = 'female'
 }
-export enum prefix{
+
+export enum prefix {
   NO_PREFIX = ''
 }
-export enum houseNumberAddition{
+
+export enum houseNumberAddition {
   NO_HOUSENUMBER_ADDITION = ''
 }
-export enum phoneNumber{
+
+export enum phoneNumber {
   NO_PHONENUMBER = ''
 }
-export enum specificIdentification{
+
+export enum specificIdentification {
   PASSPORT = 'passport',
   ID_CARD = 'Id card',
   DRIVER_LICENSE = 'Driver license',
-  SOMETHING_ELSE =  'Something else',
+  SOMETHING_ELSE = 'Something else',
   NO_NUMBER = ''
 }
 
-export enum personaName{
+export enum personaName {
   RONALDO = 'ronaldo',
   MESSI = 'messi',
   SALAH = 'salah',
@@ -57,8 +61,8 @@ export enum environmentUrl {
   SCOOTERVERZEKERING_PAT = 'scooterVerzekering',
   MOTORVERZEKERING_PAT = 'motorVerzekering',
   QUADVERZEKERING_PAT = 'quadVerzekering',
-  TRIKEVERZEKERING_PAT = 'trikeVerzekering'
-    ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekeringPat'
+  TRIKEVERZEKERING_PAT = 'trikeVerzekering',
+  ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering'
 }
 
 export enum durationEntrepreneur {

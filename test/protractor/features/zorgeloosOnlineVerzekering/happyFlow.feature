@@ -3,7 +3,7 @@
 Feature: Happy flow for 'Zorgeloos Onlineverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the zorgeloosOnlineVerzekeringPat page of the Unive website
+    Given I am on the zorgeloosOnlineVerzekering page of the Unive website
     When I enter step one page of zorgeloos onlineverzekering for family composition of: one person
     And I check step two page with premie for zorgeloos onlineverzekering is shown
     And I enter details of <persona> on step three page of zorgeloos onlineverzekering
