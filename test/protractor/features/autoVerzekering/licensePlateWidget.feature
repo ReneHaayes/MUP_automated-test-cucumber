@@ -8,10 +8,10 @@ Feature: Check the license plate widget on the homepage.
     Then The <licensePlate> data <dodont> appears
 
     Examples:
-      | pageName                      | licensePlate | button                        | dodont |
-      | HomePat                       | 06-HN-DL     | license plate                 | do     |
-      | HomePat                       | 06-HN-DL     | no license plate              | dont   |
-      | HomePat                       | 06-HN-DL     | dont know                     | dont   |
-      | autoverzekeringProductPagePat | 06-HN-DL     | license plate product page    | do     |
-      | autoverzekeringProductPagePat | 06-HN-DL     | no license plate product page | dont   |
-      | autoverzekeringProductPagePat | 06-HN-DL     | dont know product page        | dont   |
+      | pageName                   | licensePlate | button                        | dodont |
+      | home                       | 06-HN-DL     | license plate                 | do     |
+      | home                       | 06-HN-DL     | no license plate              | dont   |
+      | home                       | 06-HN-DL     | dont know                     | dont   |
+      | autoverzekeringProductPage | 06-HN-DL     | license plate product page    | do     |
+      | autoverzekeringProductPage | 06-HN-DL     | no license plate product page | dont   |
+      | autoverzekeringProductPage | 06-HN-DL     | dont know product page        | dont   |

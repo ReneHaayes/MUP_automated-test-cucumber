@@ -6,12 +6,12 @@ import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {AutoVerzekeringElements} from "../../pageobjects/autoVerzekering/autoVerzekeringElements";
 import {NawElements} from "../../pageobjects/generic/nawElements";
-import {CarWithLicensePlate} from "../../pageobjects/vehicles/carWithLicensePlate";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
 import {genericEnum} from "../../pageobjects/enum/genericEnum";
 import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
+import {CarWithLicensePlate} from "../../pageobjects/vehicles/carWithLicensePlate";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
