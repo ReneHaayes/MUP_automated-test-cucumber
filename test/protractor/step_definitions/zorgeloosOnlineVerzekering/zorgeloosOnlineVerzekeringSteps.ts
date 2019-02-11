@@ -6,6 +6,7 @@ import {ZorgeloosOnlineVerzekeringElements} from "../../pageobjects/zorgeloosOnl
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
+import {ZorgeloosOnlineVerzekeringMethods} from "../../pageobjects/zorgeloosOnlineVerzekering/zorgeloosOnlineVerzekeringMethod";
 
 let aansprakelijkheidsVerzekeringMethods: AansprakelijkheidsVerzekeringMethods = new AansprakelijkheidsVerzekeringMethods();
 let zorgeloosOnlineVerzekeringElements: ZorgeloosOnlineVerzekeringElements = new ZorgeloosOnlineVerzekeringElements();
@@ -13,6 +14,7 @@ let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
 let nawElements: NawElements = new NawElements();
 let personaData: PersonaData = new PersonaData();
+let zorgeloosOnlineVerzekeringMethod: ZorgeloosOnlineVerzekeringMethods = new ZorgeloosOnlineVerzekeringMethods();
 
 When(/^I enter step one page of zorgeloos onlineverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await aansprakelijkheidsVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
@@ -46,10 +48,10 @@ When(/^I enter details of (.*) on step three page of zorgeloos onlineverzekering
 
 When(/^I fill in step four of zorgeloos onlineverzekering page with:$/, async (data) => {
   const dataTable = data.rowsHash();
-  await genericMethods.selectCyberIncidentPresent(dataTable.cyberIncidentPresent);
-  await genericMethods.selectCyberIncidentRecent(dataTable.cyberIncidentRecent);
-  await genericMethods.selectDamageHistoryZorgeloosOnline(dataTable.damageHistoryZorgeloosOnline);
-  await genericMethods.selectInsuranceHistoryZorgeloosOnline(dataTable.insuranceHistoryZorgeloosOnline);
+  await zorgeloosOnlineVerzekeringMethod.selectCyberIncidentPresent(dataTable.cyberIncidentPresent);
+  await zorgeloosOnlineVerzekeringMethod.selectCyberIncidentRecent(dataTable.cyberIncidentRecent);
+  await zorgeloosOnlineVerzekeringMethod.selectDamageHistoryZorgeloosOnline(dataTable.damageHistoryZorgeloosOnline);
+  await zorgeloosOnlineVerzekeringMethod.selectInsuranceHistoryZorgeloosOnline(dataTable.insuranceHistoryZorgeloosOnline);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.clickOnFinishButton();
 });

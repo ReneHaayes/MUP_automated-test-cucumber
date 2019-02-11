@@ -7,7 +7,6 @@ import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
 import {gender, specificIdentification, genericEnum} from "../enum/genericEnum";
 import {NawElements} from "./nawElements";
-import {ZorgeloosOnlineVerzekeringElements} from "../zorgeloosOnlineVerzekering/zorgeloosOnlineVerzekeringElements";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -18,7 +17,6 @@ let getUrlUnive: GetUrlUnive = new GetUrlUnive();
 let genericElements: GenericElements = new GenericElements();
 let personaData: PersonaData = new PersonaData();
 let nawElements: NawElements = new NawElements();
-let zorgeloosOnlineVerzekeringElements: ZorgeloosOnlineVerzekeringElements = new ZorgeloosOnlineVerzekeringElements();
 
 export class GenericMethods {
 
@@ -299,76 +297,4 @@ export class GenericMethods {
       }
     }
   }
-
-  async selectCyberIncidentPresent(input: string) {
-    await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.cyberIncidentPresentNoElement, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.NO: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.cyberIncidentPresentNoElement);
-        break;
-      }
-      case genericEnum.YES: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.cyberIncidentPresentYesElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async selectCyberIncidentRecent(input: string) {
-    await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.cyberIncidentRecentNoElement, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.NO: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.cyberIncidentRecentNoElement);
-        break;
-      }
-      case genericEnum.YES: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.cyberIncidentRecentYesElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async selectDamageHistoryZorgeloosOnline (input: string) {
-    await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.damageHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.YES: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.damageHistoryYesElementZorgeloosOnline);
-        break;
-      }
-      case genericEnum.NO: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.damageHistoryNoElementZorgeloosOnline);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async selectInsuranceHistoryZorgeloosOnline (input: string) {
-    await this.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.insuranceHistoryNoElementZorgeloosOnline, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.YES: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.insuranceHistoryYesElementZorgeloosOnline);
-        break;
-      }
-      case genericEnum.NO: {
-        await this.clickOnElement(zorgeloosOnlineVerzekeringElements.insuranceHistoryNoElementZorgeloosOnline);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-
-
-
 }
