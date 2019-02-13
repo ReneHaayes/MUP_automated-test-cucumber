@@ -1,4 +1,3 @@
-@reisVerzekering
 @doorlopendeReisVerzekering
 @regressie
 Feature: Happy flow for 'doorlopendeReisVerzekering'

@@ -16,6 +16,7 @@ export class GenericElements {
   businessHomePage: string = 'zakelijk';
   doorlopendeReisVerzekering: string = 'doorlopende-reisverzekering/premieberekenen-en-afsluiten';
   kortlopendeReisVerzekering: string = 'kortlopende-reisverzekering/premieberekenen-en-afsluiten';
+  personenAutoVerzekeringZakelijk: string = 'zakelijk/personenautoverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
@@ -35,6 +36,8 @@ export class GenericElements {
 
   //THANK YOU
   thankYouH2Element: string = '.thanks_content > h2';
+  thankYouH1Element: string = '.banner--thanks h1';
+
 
   //HISTORY
   insuranceHistoryNoElement: string = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(1)';

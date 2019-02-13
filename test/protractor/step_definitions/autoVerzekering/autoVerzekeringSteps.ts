@@ -11,6 +11,8 @@ import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekerin
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
 import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
 import {CarWithLicensePlate} from "../../pageobjects/vehicles/carWithLicensePlate";
+import {CompanyData} from "../../pageobjects/persona/company";
+import {BedrijfsAutoVerzekeringMethods} from "../../pageobjects/autoVerzekering/bedrijfsAutoVerzekeringMethods";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -22,6 +24,8 @@ let nawElements: NawElements = new NawElements()
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
 let vehicleElements: VehicleElements = new VehicleElements();
+let companyData: CompanyData = new CompanyData();
+let bedrijfsAutoVerzekeringMethods: BedrijfsAutoVerzekeringMethods = new BedrijfsAutoVerzekeringMethods();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -75,3 +79,48 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
   await genericMethods.clickOnNextButton();
 });
 
+When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) with:$/, async (company: string, data) => {
+  const dataTable = data.rowsHash();
+  await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
+  await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath
+    + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
+  await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
+  await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverNoClickElement);
+  await genericMethods.typeText(autoVerzekeringElements.sameDriverZipCodeCompanyElement, companyData.getCompanyZipcode(company));
+  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step two page of personen autoverzekering zakelijk with$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await autoVerzekeringMethods.clickOnBasisDekking(dataTable.basisDekking);
+  await autoVerzekeringMethods.selectCarAcc(dataTable.carAccessoires);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step three page of personen autoverzekering zakelijk with$/, async (data) => {
+  const dataTable = data.rowsHash();
+  //INSERT DATE INFORMATION
+  await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourCompanyElement, genericMethods.getDate(dataTable.startDateOnYourName));
+  await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
+  //INSERT USE OF THE CAR INFORMATION
+  await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.ownerCarCompanyYesClickElement);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with (.*)$/, async (company: string, persona: string) => {
+  await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
+  await bedrijfsAutoVerzekeringMethods.selectLegal(companyData.getCompanyLegal(company));
+  await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
+  await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
+  await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
+  await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
+  await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
+  await genericMethods.clickContactDataGender(personaData.getPersonaGender(persona));
+  await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
+  await genericMethods.clickOnTAB(genericElements.accountNumberElement);
+  await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+  await genericMethods.clickOnNextButton();
+});
