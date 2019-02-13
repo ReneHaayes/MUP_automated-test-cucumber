@@ -30,7 +30,7 @@ export class BusinessCar {
 
 export class BusinessCarWithLicensePlate {
 
-  _48VDS3: BusinessCar = new BusinessCar(licensePlates._48VDS3, 'Fiat', 'Ducato', '2007', '35L 3.0 MJ MH2 GV',
+  _48VDS3: BusinessCar = new BusinessCar(licensePlates._48VDS3, 'Fiat', 'DUCATO', '2007', '35L 3.0 MJ MH2 GV',
     "Bestelauto", 'Diesel', '12-09-2001', '0000', '1496');
 
   getCarFuelType(input: string): string {

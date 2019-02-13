@@ -7,6 +7,10 @@ When(/^I press the button (.*) for the following license plate (.*) on the page 
   await licensePlateMethod.clickOnAutoVerzekeringButton(button, licensePlate)
 });
 
-Then(/^The (.*) data (.*) appears$/, async (licensePlate: string, dodont: string) => {
+Then(/^The (.*) data (.*) appears for autoverzekering$/, async (licensePlate: string, dodont: string) => {
   await licensePlateMethod.checkAutoverzekeringPage(dodont, licensePlate);
+});
+
+Then(/^The (.*) data (.*) appears for bedrijfs autoverzekering$/, async (licensePlate: string, dodont: string) => {
+  await licensePlateMethod.checkBedrijfsAutoverzekeringPage(dodont, licensePlate);
 });

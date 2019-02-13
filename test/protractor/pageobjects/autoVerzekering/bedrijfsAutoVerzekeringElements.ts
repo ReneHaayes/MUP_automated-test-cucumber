@@ -3,6 +3,8 @@ export class BedrijfsAutoVerzekeringElements {
   //LICENSEPLATE ELEMENT
   licensePlateElement: string = '#_Form_IF20009_3611';
   brandElementXpath: string = '//*[@data-label-id="LA_IF20011_31572"]/descendant::*';
+  brandNameElement: string = '[data-label-id="LA_IF20011_31572"]';
+  brandModelElement: string = '[data-label-id="LA_IF20011_3614"]';
 
   //BUSINESS OR PRIVATE
   businessClickElement: string = '[data-label-id*="LA_IF25913_33327"] .radioList > label:nth-child(1)';
