@@ -1,6 +1,6 @@
 @bedrijfsAutoVerzekering
 @regressie
-Feature: Happy flow for 'Autoverzekering'
+Feature: Happy flow for 'Bedrijfs autoverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the bedrijfs autoverzekering page of the Unive website
@@ -15,7 +15,7 @@ Feature: Happy flow for 'Autoverzekering'
       | startDate           | 01-06-2019     |
       | startDateOnYourName | 01-01-2019     |
     And I enter step four page of bedrijfs autoverzekering for <company> with <persona>
-    And I enter step five page of autoverzekering with
+    And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |

@@ -1,30 +1,25 @@
 import {When} from "cucumber";
-import {browser} from "protractor";
-import {AansprakelijkheidsVerzekeringMethods} from "../../pageobjects/aansprakelijkheidsVerzekering/aansprakelijkheidsVerzekeringMethods";
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
-import {AansprakelijkheidsVerzekerElements} from "../../pageobjects/aansprakelijkheidsVerzekering/aansprakelijkheidsVerzekerElements";
+import {ReisVerzekeringElements} from "../../pageobjects/reisVerzekering/reisVerzekeringElements";
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
+import {ReisVerzekeringMethods} from "../../pageobjects/reisVerzekering/reisVerzekeringMethods";
 
-let aansprakelijkheidsVerzekeringMethods: AansprakelijkheidsVerzekeringMethods = new AansprakelijkheidsVerzekeringMethods();
-let aansprakelijkheidsVerzekeringElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
 let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
+let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
+let reisVerzekeringMethods: ReisVerzekeringMethods = new ReisVerzekeringMethods();
 let nawElements: NawElements = new NawElements();
 let personaData: PersonaData = new PersonaData();
+let genericElements: GenericElements = new GenericElements();
 
-When(/^I enter step one page of aansprakelijkheids verzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
-  await aansprakelijkheidsVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
+When(/^I enter step one and step two page of doorlopende reisverzekering for myself$/, async () => {
+  await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);
+  await genericMethods.clickOnNextButton();
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I check step two page with premie for aansprakelijkheids verzekering is shown$/, async () => {
-  await genericMethods.waitForElementIsVisible(aansprakelijkheidsVerzekeringElements.premieAansprakelijkheidsVerzekeringTextElement, browser.getPageTimeout)
-  await genericMethods.clickOnNextButton();
-});
-
-When(/^I enter details of (.*) in step two page of aansprakelijkheids verzekering$/, async (persona: string) => {
+When(/^I enter details of (.*) in your data page of reisverzekering$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
@@ -44,4 +39,12 @@ When(/^I enter details of (.*) in step two page of aansprakelijkheids verzekerin
   await genericMethods.clickOnNextButton();
 });
 
-
+When(/^I enter step one and step two page of kortlopende reisverzekering for myself with:$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await reisVerzekeringMethods.selectLegal(dataTable.childrenTillFourYears);
+  await genericMethods.typeText(reisVerzekeringElements.leavingDateInputElement, genericMethods.getDate('today'));
+  await genericMethods.typeText(reisVerzekeringElements.returnDateInputElement, genericMethods.getDate('seven days'));
+  await genericMethods.clickOnElement(reisVerzekeringElements.cancelationCoverageNoClickElement);
+  await genericMethods.clickOnNextButton();
+  await genericMethods.clickOnNextButton();
+});

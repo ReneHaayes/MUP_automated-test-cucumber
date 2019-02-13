@@ -22,7 +22,7 @@ Feature: Happy flow for 'Autoverzekering'
       | mainDriver          | mainDriverYes  |
       | ownerCar            | ownerCarYes    |
     And I enter step four page of autoverzekering for <persona>
-    And I enter step five page of autoverzekering with
+    And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |

@@ -7,7 +7,7 @@ Feature: Happy flow for 'Aansprakelijkheids Verzekering'
     When I enter step one page of aansprakelijkheids verzekering for family composition of: one person
     And I check step two page with premie for aansprakelijkheids verzekering is shown
     And I enter details of <persona> in step two page of aansprakelijkheids verzekering
-    And I fill in step four of aansprakelijkheids verzekering page with:
+    And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |

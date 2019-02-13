@@ -24,7 +24,7 @@ Feature: Happy flow for motorverzekering, quadverzekering and trikeverzekering.
       | mainDriver                      | yes            |
       | owner                           | yes            |
     And I enter details of <persona> in step four page of motor
-    And I fill in step four of motor page with:
+    And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
