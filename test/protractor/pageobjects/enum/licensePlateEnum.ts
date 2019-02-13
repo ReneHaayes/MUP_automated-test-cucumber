@@ -13,5 +13,6 @@ export enum licensePlates {
   _F169NS = 'F-169-NS',
   _MPTT99 = 'MP-TT-99',
   _97XFTK = '97-XF-TK',
-  _21PLN1 = '21-PLN-1'
+  _21PLN1 = '21-PLN-1',
+  _48VDS3 = '48-VDS-3'
 }

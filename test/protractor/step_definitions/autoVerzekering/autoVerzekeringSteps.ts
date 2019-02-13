@@ -22,7 +22,7 @@ let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new Aut
 let nawElements: NawElements = new NawElements()
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
-let bromfietsVerzekeringElements: VehicleElements = new VehicleElements();
+let vehicleElements: VehicleElements = new VehicleElements();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -50,7 +50,7 @@ When(/^I enter step two page of autoverzekering with$/, async (data) => {
 When(/^I enter step three page of autoverzekering with$/, async (data) => {
   const dataTable = data.rowsHash();
   //INSERT DATE INFORMATION
-  await genericMethods.typeText(bromfietsVerzekeringElements.startDateElement, dataTable.startDate);
+  await genericMethods.typeText(vehicleElements.startDateElement, dataTable.startDate);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, dataTable.startDateOnYourName);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
