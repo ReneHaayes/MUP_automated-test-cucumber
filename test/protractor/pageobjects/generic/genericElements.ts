@@ -14,6 +14,7 @@ export class GenericElements {
   zorgeloosOnlineVerzekeringPat: string = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
   businessHomePage: string = 'zakelijk';
+  doorlopendeReisVerzekering: string = 'doorlopende-reisverzekering/premieberekenen-en-afsluiten';
 
 
   //COOKIE

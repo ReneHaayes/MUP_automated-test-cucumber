@@ -68,7 +68,8 @@ export enum environmentUrl {
   QUADVERZEKERING_PAT = 'quadVerzekering',
   TRIKEVERZEKERING_PAT = 'trikeVerzekering',
   ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
-  BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering'
+  BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering',
+  DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering'
 }
 
 export enum durationEntrepreneur {

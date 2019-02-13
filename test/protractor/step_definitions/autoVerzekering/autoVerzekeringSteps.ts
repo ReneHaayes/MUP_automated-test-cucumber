@@ -9,7 +9,6 @@ import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {AutoVerzekeringElementsStepThree} from "../../pageobjects/autoVerzekering/autoVerzekeringElementsStepThree";
 import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerzekering/autoVerzekeringMethodsStepThreeAndFour";
-import {genericEnum} from "../../pageobjects/enum/genericEnum";
 import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
 import {CarWithLicensePlate} from "../../pageobjects/vehicles/carWithLicensePlate";
 
@@ -74,13 +73,5 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
-});
-
-When(/^I enter step five page of autoverzekering with$/, async (data) => {
-  const dataTable = data.rowsHash();
-  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
-  await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
-  await genericMethods.selectDamageHistory(dataTable.damageHistory);
-  await genericMethods.clickOnFinishButton();
 });
 

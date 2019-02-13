@@ -4,7 +4,6 @@ import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
-import {genericEnum} from "../../pageobjects/enum/genericEnum";
 import {MopedMethods} from "../../pageobjects/moped/mopedMethods";
 import {MopedWithLicensePlate} from "../../pageobjects/vehicles/mopedWithLicensePlate";
 
@@ -67,12 +66,4 @@ When(/^I enter details of (.*) in step four page of moped$/, async (persona: str
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
-});
-
-When(/^I fill in step four of moped page with:$/, async (data) => {
-  const dataTable = data.rowsHash();
-  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
-  await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
-  await genericMethods.selectDamageHistory(dataTable.damageHistory);
-  await genericMethods.clickOnFinishButton();
 });

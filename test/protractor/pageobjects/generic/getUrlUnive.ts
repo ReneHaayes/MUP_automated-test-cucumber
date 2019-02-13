@@ -48,10 +48,13 @@ export class GetUrlUnive {
         return this.getEnv() + genericElements.trikeVerzekeringPat;
       }
       case environmentUrl.ZORGELOOSONLINEVERZEKERING_PAT: {
-        return this.getEnv()+ genericElements.zorgeloosOnlineVerzekeringPat;
+        return this.getEnv() + genericElements.zorgeloosOnlineVerzekeringPat;
       }
       case environmentUrl.BEDRIJFSAUTOVERZEKERING: {
-        return this.getEnv()+ genericElements.bedrijfsAutoVerzekering;
+        return this.getEnv() + genericElements.bedrijfsAutoVerzekering;
+      }
+      case environmentUrl.DOORLOPENDEREISVERZEKERING: {
+        return this.getEnv() + genericElements.doorlopendeReisVerzekering;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

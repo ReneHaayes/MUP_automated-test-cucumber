@@ -19,7 +19,7 @@ Feature: Happy flow for 'Bromfiets Verzekering' and 'Scooter Verzekering'
       | mainDriver                      | yes        |
       | owner                           | yes        |
     And I enter details of <persona> in step four page of moped
-    And I fill in step four of moped page with:
+    And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
