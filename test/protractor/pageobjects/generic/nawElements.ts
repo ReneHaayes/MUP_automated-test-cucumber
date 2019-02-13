@@ -64,7 +64,7 @@ export class NawElements {
   companyDataHouseNumberAddingInputElement: string = '#_Form_IF25914_3695';
   companyDataPhoneNumberInputElement: string = '#_Form_IF25914_3699';
   companyDataEmailAddressInputElement: string = '#_Form_IF25914_3701';
-
+  companyDataZipCodeInputElement: string = '#_Form_IF25914_3693';
 
   companyDataLegalSelectElement: string = '#_Form_IF25914_33330';
   companyDataLegalEenmanszaakSelectElement: string = 'string:eenmanszaak';

@@ -3,6 +3,7 @@ export class AutoVerzekeringElementsStepThree {
 
   firstAdmissionElement: string = '#_Form_IF2526_3680';
   startDateOnYourNameElement: string = '#_Form_IF2526_3681';
+  startDateOnYourCompanyElement: string = '#_Form_IF2526_31614';
 
   //MELDCODE
 
@@ -31,5 +32,8 @@ export class AutoVerzekeringElementsStepThree {
   ownerCarNoMyChildElement: string = '[data-label-id*="LA_IF2528_3686"] .radioList > label:nth-child(2)';
   ownerCarNoSomeoneElse: string = 'ownerCarNoSomeoneElse';
   ownerCarNoSomeoneElseElement: string = '[data-label-id*="LA_IF2528_3686"] .radioList > label:nth-child(3)';
+
+  ownerCarCompanyYesClickElement: string = '[data-label-id*="LA_IF2528_31613"] .radioList > label:nth-child(1)';
+  ownerCarCompanyNoClickElement: string = '[data-label-id*="LA_IF2528_31613"] .radioList > label:nth-child(2)';
 
 }

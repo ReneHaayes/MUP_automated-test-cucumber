@@ -18,6 +18,10 @@ Then(/^The thank you page for (.*) is shown$/, async (persona: string) => {
   await genericMethods.verifyThankYouPageTitle(persona);
 });
 
+Then(/^Thank you page for zakelijk is shown$/, async () => {
+  await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
+});
+
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);

@@ -37,7 +37,8 @@ export enum personaName {
 }
 
 export enum companyNameEnum {
-  FACEBOOK = 'facebook'
+  FACEBOOK = 'facebook',
+  RG_TIMMERWERKEN = 'rg timmerwerken'
 }
 
 export enum genericEnum {
@@ -75,7 +76,8 @@ export enum environmentUrl {
   ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
   BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering',
   DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
-  KORTLOPENDEREISVERZEKERING = 'kortlopende reisverzekering'
+  KORTLOPENDEREISVERZEKERING = 'kortlopende reisverzekering',
+  PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk'
 }
 
 export enum durationEntrepreneur {

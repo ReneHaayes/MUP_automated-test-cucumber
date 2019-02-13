@@ -2,7 +2,7 @@ exports.config = {
   // seleniumAddress: 'http://localhost:4444/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 15000,
+  getPageTimeout: 60000,
   directConnect: true,
   restartBrowserBetweenTests: true,
 
@@ -13,8 +13,8 @@ exports.config = {
     motor: './protractor/features/motor/*.feature',
     woonVerzekering: './protractor/features/woonVerzekering/*.feature',
     zzpFlex: './protractor/features/zzpFlex/*.feature',
-    zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature'
-
+    zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature',
+    reisVerzekering: './protractor/features/reisVerzekering/*.feature'
   },
 
   specs: [
