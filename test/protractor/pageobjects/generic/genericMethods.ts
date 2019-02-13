@@ -5,7 +5,7 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
-import {gender, specificIdentification, genericEnum} from "../enum/genericEnum";
+import {gender, specificIdentification, genericEnum, dateEnum} from "../enum/genericEnum";
 import {NawElements} from "./nawElements";
 
 chai.use(chaistring);
@@ -235,7 +235,6 @@ export class GenericMethods {
     }
   }
 
-
   async selectYourDataSpecificIdentification(input: string, persona: string) {
     switch (input) {
       case specificIdentification.DRIVER_LICENSE: {
@@ -296,6 +295,21 @@ export class GenericMethods {
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  getDate(input: string): string {
+    switch (input) {
+      case dateEnum.TODAY: {
+        const date = new Date();
+        return String(date.getDate()) + '-' + String(date.getMonth() + 1) + '-' + String(date.getFullYear());
+      }
+      case dateEnum.SEVEN_DAY_TRIP: {
+        const today = new Date();
+        const priorDate = new Date().setDate(today.getDate() + 7);
+        const sevenDaysDate = new Date(priorDate);
+        return String(sevenDaysDate.getDate()) + '-' + String(sevenDaysDate.getMonth() + 1) + '-' + String(sevenDaysDate.getFullYear());
       }
     }
   }

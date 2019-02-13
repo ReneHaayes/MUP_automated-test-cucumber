@@ -3,6 +3,11 @@ export enum gender {
   FEMALE = 'female'
 }
 
+export enum dateEnum {
+  TODAY = 'today',
+  SEVEN_DAY_TRIP = 'seven days'
+}
+
 export enum prefix {
   NO_PREFIX = ''
 }
@@ -69,7 +74,8 @@ export enum environmentUrl {
   TRIKEVERZEKERING_PAT = 'trikeVerzekering',
   ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
   BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering',
-  DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering'
+  DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
+  KORTLOPENDEREISVERZEKERING = 'kortlopende reisverzekering'
 }
 
 export enum durationEntrepreneur {
@@ -85,3 +91,18 @@ export enum durationEntrepreneur {
   _9 = '9 jaar',
   _10 = '10 jaar'
 }
+export enum numbersEnum {
+  _MIN1 = 'Minder dan 1 jaar',
+  _0 = '0',
+  _1 = '1',
+  _2 = '2',
+  _3 = '3',
+  _4 = '4',
+  _5 = '5',
+  _6 = '6',
+  _7 = '7',
+  _8 = '8',
+  _9 = '9',
+  _10 = '10'
+}
+

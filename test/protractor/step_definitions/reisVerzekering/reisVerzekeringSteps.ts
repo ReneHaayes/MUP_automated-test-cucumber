@@ -4,9 +4,11 @@ import {ReisVerzekeringElements} from "../../pageobjects/reisVerzekering/reisVer
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
+import {ReisVerzekeringMethods} from "../../pageobjects/reisVerzekering/reisVerzekeringMethods";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
+let reisVerzekeringMethods: ReisVerzekeringMethods = new ReisVerzekeringMethods();
 let nawElements: NawElements = new NawElements();
 let personaData: PersonaData = new PersonaData();
 let genericElements: GenericElements = new GenericElements();
@@ -17,7 +19,7 @@ When(/^I enter step one and step two page of doorlopende reisverzekering for mys
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter details of (.*) in step four page of doorlopende reisverzekering$/, async (persona: string) => {
+When(/^I enter details of (.*) in your data page of reisverzekering$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
@@ -34,5 +36,15 @@ When(/^I enter details of (.*) in step four page of doorlopende reisverzekering$
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step one and step two page of kortlopende reisverzekering for myself with:$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await reisVerzekeringMethods.selectLegal(dataTable.childrenTillFourYears);
+  await genericMethods.typeText(reisVerzekeringElements.leavingDateInputElement, genericMethods.getDate('today'));
+  await genericMethods.typeText(reisVerzekeringElements.returnDateInputElement, genericMethods.getDate('seven days'));
+  await genericMethods.clickOnElement(reisVerzekeringElements.cancelationCoverageNoClickElement);
+  await genericMethods.clickOnNextButton();
   await genericMethods.clickOnNextButton();
 });
