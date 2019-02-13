@@ -1,9 +1,9 @@
 export enum yearlyMileageEnum {
-  TOT_1200 = 'tot12000',
+  TOT_12000 = 'tot12000',
   _12000_TOT_20000 = '12000tot20000',
   _20000_TOT_25000 = '20000tot25000',
   _25000_TOT_35000 = '25000tot35000',
-  MORE_THEN_25000 = 'meerDan25000'
+  MORE_THEN_35000 = 'meerDan35000'
 }
 
 export enum vehicleAccEnum {
@@ -44,4 +44,18 @@ export enum aanvullendeOptiesEnum {
 export enum totalPremieEnum {
   MONTHLY = 'monthly',
   ANNUAL = 'annual'
+}
+
+export enum legalEnum {
+  EENMANSZAAK = 'eenmanszaak',
+  VOF = 'vof',
+  CV = 'cv',
+  MAATSCHAP = 'maatschap',
+  BV = 'bv',
+  NV = 'nv',
+  VMVR = 'vmvr',
+  VZVR = 'vzvr',
+  COW = 'cow',
+  STICHTING = 'stichting',
+  BUITENLANDS_RECHTSVORM = 'buitenlands rechtsvorm'
 }

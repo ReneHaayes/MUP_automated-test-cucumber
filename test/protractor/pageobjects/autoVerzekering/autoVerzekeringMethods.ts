@@ -30,7 +30,7 @@ export class AutoVerzekeringMethods {
 
   async selectYearlyMileage(input: string) {
     switch (input) {
-      case yearlyMileageEnum.TOT_1200: {
+      case yearlyMileageEnum.TOT_12000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYearTot12000km);
         break;
       }
@@ -46,7 +46,7 @@ export class AutoVerzekeringMethods {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYear25000tot35000);
         break;
       }
-      case yearlyMileageEnum.MORE_THEN_25000: {
+      case yearlyMileageEnum.MORE_THEN_35000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYearMeerDan25000);
         break;
       }

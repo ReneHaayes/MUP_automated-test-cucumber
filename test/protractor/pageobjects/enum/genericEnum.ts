@@ -31,6 +31,10 @@ export enum personaName {
   POGBA = 'pogba'
 }
 
+export enum companyNameEnum {
+  FACEBOOK = 'facebook'
+}
+
 export enum genericEnum {
   YES = 'yes',
   NO = 'no',
@@ -62,7 +66,8 @@ export enum environmentUrl {
   MOTORVERZEKERING_PAT = 'motorVerzekering',
   QUADVERZEKERING_PAT = 'quadVerzekering',
   TRIKEVERZEKERING_PAT = 'trikeVerzekering',
-  ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering'
+  ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
+  BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering'
 }
 
 export enum durationEntrepreneur {

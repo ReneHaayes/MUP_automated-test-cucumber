@@ -12,6 +12,7 @@ export class GenericElements {
   quadVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-trike';
   zorgeloosOnlineVerzekeringPat: string = 'zorgeloosonline/premieberekenen-en-afsluiten';
+  bedrijfsAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
 
 
   //COOKIE

@@ -217,6 +217,25 @@ export class GenericMethods {
     }
   }
 
+  async clickContactDataGender(input: string) {
+    switch (input) {
+      case gender.MALE: {
+        await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await this.clickOnElement(nawElements.contactDataGenderMaleClickElement);
+        break;
+      }
+      case gender.FEMALE: {
+        await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await this.clickOnElement(nawElements.contactDataGenderFemaleClickElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+
   async selectYourDataSpecificIdentification(input: string, persona: string) {
     switch (input) {
       case specificIdentification.DRIVER_LICENSE: {
