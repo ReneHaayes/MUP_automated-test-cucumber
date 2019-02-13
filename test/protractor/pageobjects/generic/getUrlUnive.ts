@@ -11,6 +11,9 @@ export class GetUrlUnive {
       case environmentUrl.HOME: {
         return this.getEnv();
       }
+      case environmentUrl.HOME_BUS: {
+        return this.getEnv() + genericElements.businessHomePage;
+      }
       case environmentUrl.AUTOVERZEKERING_PAT: {
         return this.getEnv() + genericElements.autoVerzUrlPat;
       }

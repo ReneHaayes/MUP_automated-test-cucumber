@@ -53,6 +53,7 @@ export enum genericEnum {
 
 export enum environmentUrl {
   HOME = 'home',
+  HOME_BUS = 'business',
   HOME_PAT = 'pat',
   HOME_TSTPROJ = 'tstProj',
   AUTOVERZEKERING_PAT = 'autoverzekering',

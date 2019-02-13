@@ -4,11 +4,15 @@ import {HmPageElements} from "../generic/hmPageElements";
 import {genericEnum} from "../enum/genericEnum";
 import {AutoVerzekeringElements} from "./autoVerzekeringElements";
 import {CarWithLicensePlate} from "../vehicles/carWithLicensePlate";
+import {BusinessCarWithLicensePlate} from "../vehicles/businessCarWithLicensePlate";
+import {BedrijfsAutoVerzekeringElements} from "./bedrijfsAutoVerzekeringElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let hmPageElements: HmPageElements = new HmPageElements();
 let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
+let businessCarWithLicensePlate: BusinessCarWithLicensePlate = new BusinessCarWithLicensePlate();
+let bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = new BedrijfsAutoVerzekeringElements();
 
 export class LicensePlateMethod {
 
@@ -43,6 +47,22 @@ export class LicensePlateMethod {
         await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowProductPageElement);
         break;
       }
+      case licensePlateHmPageEnum.LICENSE_PLATE_BUS: {
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsAutoverzekeringClickElement);
+        await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE_BUS: {
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsAutoverzekeringClickElement);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+        break;
+      }
+      case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsAutoverzekeringClickElement);
+        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
+        break;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -69,4 +89,22 @@ export class LicensePlateMethod {
       }
     }
   }
+
+  async checkBedrijfsAutoverzekeringPage(input: string, licensePlate: string) {
+    switch (input) {
+      case genericEnum.DO: {
+        await genericMethods.verifyTextInElement(bedrijfsAutoVerzekeringElements.brandNameElement, businessCarWithLicensePlate.getCarBrandName(licensePlate));
+        await genericMethods.verifyTextInElement(bedrijfsAutoVerzekeringElements.brandModelElement, businessCarWithLicensePlate.getCarBrandType(licensePlate));
+        break;
+      }
+      case genericEnum.DONT: {
+        await genericMethods.verifyTextNotInElement(bedrijfsAutoVerzekeringElements.brandNameElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), bedrijfsAutoVerzekeringElements.licensePlateElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
 }
