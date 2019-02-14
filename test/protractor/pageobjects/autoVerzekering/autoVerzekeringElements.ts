@@ -85,5 +85,10 @@ export class AutoVerzekeringElements {
   sameDriverNoClickElement: string = '[data-label-id*="LA_IF31207_39218"] .radioList > label:nth-child(2)';
   sameDriverZipCodeCompanyElement: string = '#_Form_IF31207_39214';
 
+  //COLLECTIVE
+  collectiveInputElement: string = '.collectiveSearch_query';
+  collectiveAutoCompleteClickElement: string = '.autocomplete-suggestion';
+  collectiveResultTextElement: string = '#_Form_IF4105_6208';
+
 
 }

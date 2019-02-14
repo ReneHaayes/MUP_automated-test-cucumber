@@ -1,4 +1,4 @@
-@autoVerzekering
+@personenAutoVerzekering
 @regressie
 Feature: Happy flow for 'Autoverzekering'
 
@@ -15,6 +15,7 @@ Feature: Happy flow for 'Autoverzekering'
       | ownRisk           | <ownRisk>           |
       | carAccessoires    | <carAccessoires>    |
       | totalPremie       | annual              |
+      | collective        | SC Heerenveen       |
     And I enter step three page of autoverzekering with
       | licensePlate        | <licensePlate> |
       | startDate           | 01-06-2019     |
