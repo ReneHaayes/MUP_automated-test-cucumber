@@ -37,6 +37,7 @@ export class GenericElements {
   //THANK YOU
   thankYouH2Element: string = '.thanks_content > h2';
   thankYouH1Element: string = '.banner--thanks h1';
+  errorMessageElement: string = '.mainMessage';
 
 
   //HISTORY
