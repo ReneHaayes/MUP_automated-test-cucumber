@@ -175,6 +175,7 @@ export class GenericMethods {
 
   async selectInDropdown(selector: string, value: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const dropdownElement: ElementFinder = element(by.css(selector));
     await browser.controlFlow().execute(() => {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', dropdownElement);
