@@ -86,6 +86,10 @@ export class NawElements {
   contactDataGenderMaleClickElement: string = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(1)';
   contactDataGenderFemaleClickElement: string = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(2)';
 
+  //RISC ADDRESS
+  riscAddressZipcodeInputElement: string = '#_Form_IF17707_3693';
+  riscAddressHouseNumberInputElement: string = '#_Form_IF17707_3694';
+  riscAddressHouseNumberAddingInputElement: string = '#_Form_IF17707_3695';
 
 
 }

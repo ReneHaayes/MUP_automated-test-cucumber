@@ -7,7 +7,7 @@ let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElemen
 
 export class ReisVerzekeringMethods {
 
-  async selectLegal(input: string) {
+  async selectChildrenTillFourYears(input: string) {
     switch (input) {
       case numbersEnum._0: {
         await genericMethods.selectInDropdown(reisVerzekeringElements.childrenTillFourYearsSelectElement, reisVerzekeringElements.childrenTillFourYearsZeroChildrenSelectElement);

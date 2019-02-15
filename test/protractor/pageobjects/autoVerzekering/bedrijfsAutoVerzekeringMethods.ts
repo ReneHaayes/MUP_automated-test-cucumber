@@ -2,16 +2,14 @@ import {browser} from "protractor";
 import {GenericMethods} from "../generic/genericMethods";
 import {BedrijfsAutoVerzekeringElements} from "./bedrijfsAutoVerzekeringElements";
 import {BusinessCarWithLicensePlate} from "../vehicles/businessCarWithLicensePlate";
-import {basisDekkingEnum, legalEnum, yearlyMileageEnum} from "../enum/autoVerzekeringEnum";
+import {basisDekkingEnum, yearlyMileageEnum} from "../enum/autoVerzekeringEnum";
 import {GenericElements} from "../generic/genericElements";
-import {NawElements} from "../generic/nawElements";
 // import {AutoVerzekeringElements} from "./autoVerzekeringElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = new BedrijfsAutoVerzekeringElements();
 let businessCarWithLicensePlate: BusinessCarWithLicensePlate = new BusinessCarWithLicensePlate();
 let genericElements: GenericElements = new GenericElements();
-let nawElements: NawElements = new NawElements();
 
 // let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
 
@@ -76,58 +74,6 @@ export class BedrijfsAutoVerzekeringMethods {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         // await genericMethods.waitForElementIsPresentWithXpath(
         //   bedrijfsAutoVerzekeringElements.sideBarElement + '[contains(text(),"' + bedrijfsAutoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async selectLegal(input: string) {
-    switch (input) {
-      case legalEnum.BUITENLANDS_RECHTSVORM: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalBuitenalandseRechtsvormSelectElement);
-        break;
-      }
-      case legalEnum.BV: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalBVSelectElement);
-        break;
-      }
-      case legalEnum.COW: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalCOWSelectElement);
-        break;
-      }
-      case legalEnum.CV: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalCVSelectElement);
-        break;
-      }
-      case legalEnum.EENMANSZAAK: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalEenmanszaakSelectElement);
-        break;
-      }
-      case legalEnum.MAATSCHAP: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalMaatschapSelectElement);
-        break;
-      }
-      case legalEnum.NV: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalNVSelectElement);
-        break;
-      }
-      case legalEnum.STICHTING: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalStichtingSelectElement);
-        break;
-      }
-      case legalEnum.VMVR: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalVMVRSelectElement);
-        break;
-      }
-      case legalEnum.VOF: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalVOFSelectElement);
-        break;
-      }
-      case legalEnum.VZVR: {
-        await genericMethods.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalVZVRSelectElement);
         break;
       }
       default: {

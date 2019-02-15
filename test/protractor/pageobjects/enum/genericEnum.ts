@@ -77,7 +77,8 @@ export enum environmentUrl {
   BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering',
   DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
   KORTLOPENDEREISVERZEKERING = 'kortlopende reisverzekering',
-  PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk'
+  PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk',
+  ROERENDEZAKENVERZEKERING_ZAKELIJK = 'roerende zakenverzekering'
 }
 
 export enum durationEntrepreneur {
@@ -94,7 +95,6 @@ export enum durationEntrepreneur {
   _10 = '10 jaar'
 }
 export enum numbersEnum {
-  _MIN1 = 'Minder dan 1 jaar',
   _0 = '0',
   _1 = '1',
   _2 = '2',
@@ -108,3 +108,27 @@ export enum numbersEnum {
   _10 = '10'
 }
 
+export enum activityEnum {
+  ADVIESBUREAU = 'adviesbureau',
+  ADVIESBUREAU_ICT = 'adviesbureau ict',
+  BEDRIJFSOPLEIDING = 'bedrijfsopleiding en training',
+  BEMIDDELING = 'bemiddeling',
+  FOTOGRAAF = 'fotograaf',
+  GLAZENWASSER = 'glazenwasser',
+  HOVENIER = 'hovenier',
+  KAPPER = 'kapper',
+  KLUSSENBEDRIJF = 'klussenbedrijf',
+  ORGANISATIE_ADVIESBUREAU = 'organisatie adviesbureau',
+  PEDICURE = 'pedicure',
+  RECLAMEBUREAU = 'reclame bureau',
+  SCHILDER = 'schilder',
+  SCHOONHEIDSSPECIALIST = 'schoonheidsspecialist',
+  SCHOONMAKER = 'schoonmaker',
+  SOFTWAREBEDRIJF = 'softwarebedrijf',
+  STRATENMAKER = 'stratenmaker',
+  STUKADOOR = 'stukadoor',
+  TIMMERMAN = 'timmerman',
+  TEGELZETTER = 'tegelzetter',
+  WEBDESIGN = 'webdesign',
+  OVERIG= 'overig'
+}

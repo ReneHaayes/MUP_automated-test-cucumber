@@ -7,6 +7,7 @@ import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
 import {gender, specificIdentification, genericEnum, dateEnum} from "../enum/genericEnum";
 import {NawElements} from "./nawElements";
+import {legalEnum} from "../enum/autoVerzekeringEnum";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -337,4 +338,57 @@ export class GenericMethods {
       }
     }
   }
+
+  async selectLegal(input: string) {
+    switch (input) {
+      case legalEnum.BUITENLANDS_RECHTSVORM: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalBuitenalandseRechtsvormSelectElement);
+        break;
+      }
+      case legalEnum.BV: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalBVSelectElement);
+        break;
+      }
+      case legalEnum.COW: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalCOWSelectElement);
+        break;
+      }
+      case legalEnum.CV: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalCVSelectElement);
+        break;
+      }
+      case legalEnum.EENMANSZAAK: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalEenmanszaakSelectElement);
+        break;
+      }
+      case legalEnum.MAATSCHAP: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalMaatschapSelectElement);
+        break;
+      }
+      case legalEnum.NV: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalNVSelectElement);
+        break;
+      }
+      case legalEnum.STICHTING: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalStichtingSelectElement);
+        break;
+      }
+      case legalEnum.VMVR: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalVMVRSelectElement);
+        break;
+      }
+      case legalEnum.VOF: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalVOFSelectElement);
+        break;
+      }
+      case legalEnum.VZVR: {
+        await this.selectInDropdown(nawElements.companyDataLegalSelectElement, nawElements.companyDataLegalVZVRSelectElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
 }
