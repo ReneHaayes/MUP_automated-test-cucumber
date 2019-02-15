@@ -17,6 +17,7 @@ export class GenericElements {
   doorlopendeReisVerzekering: string = 'doorlopende-reisverzekering/premieberekenen-en-afsluiten';
   kortlopendeReisVerzekering: string = 'kortlopende-reisverzekering/premieberekenen-en-afsluiten';
   personenAutoVerzekeringZakelijk: string = 'zakelijk/personenautoverzekering/premieberekenen-en-afsluiten';
+  roerendeZakenVerzekeringZakelijk: string = 'zakelijk/roerendezakenverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

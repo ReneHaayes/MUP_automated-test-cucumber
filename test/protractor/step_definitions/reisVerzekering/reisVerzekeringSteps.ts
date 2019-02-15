@@ -41,7 +41,7 @@ When(/^I enter details of (.*) in your data page of reisverzekering$/, async (pe
 
 When(/^I enter step one and step two page of kortlopende reisverzekering for myself with:$/, async (data) => {
   const dataTable = data.rowsHash();
-  await reisVerzekeringMethods.selectLegal(dataTable.childrenTillFourYears);
+  await reisVerzekeringMethods.selectChildrenTillFourYears(dataTable.childrenTillFourYears);
   await genericMethods.typeText(reisVerzekeringElements.leavingDateInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(reisVerzekeringElements.returnDateInputElement, genericMethods.getDate('seven days'));
   await genericMethods.clickOnElement(reisVerzekeringElements.cancelationCoverageNoClickElement);
