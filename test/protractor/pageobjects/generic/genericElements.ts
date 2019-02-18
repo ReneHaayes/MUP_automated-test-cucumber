@@ -18,6 +18,8 @@ export class GenericElements {
   kortlopendeReisVerzekering: string = 'kortlopende-reisverzekering/premieberekenen-en-afsluiten';
   personenAutoVerzekeringZakelijk: string = 'zakelijk/personenautoverzekering/premieberekenen-en-afsluiten';
   roerendeZakenVerzekeringZakelijk: string = 'zakelijk/roerendezakenverzekering/premieberekenen-en-afsluiten';
+  kortlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten-kav';
+
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

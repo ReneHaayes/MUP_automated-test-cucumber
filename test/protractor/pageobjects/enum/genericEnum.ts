@@ -78,7 +78,8 @@ export enum environmentUrl {
   DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
   KORTLOPENDEREISVERZEKERING = 'kortlopende reisverzekering',
   PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk',
-  ROERENDEZAKENVERZEKERING_ZAKELIJK = 'roerende zakenverzekering'
+  ROERENDEZAKENVERZEKERING_ZAKELIJK = 'roerende zakenverzekering',
+  KORTLOPENDEANNULERINGSVERZEKERING = 'kortlopende annuleringsverzekering'
 }
 
 export enum durationEntrepreneur {

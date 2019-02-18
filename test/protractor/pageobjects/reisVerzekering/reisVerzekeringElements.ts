@@ -25,5 +25,8 @@ export class ReisVerzekeringElements {
   childrenTillFourYearsNineChildrenSelectElement: string = 'string:9kind';
   childrenTillFourYearsTenChildrenSelectElement: string = 'string:10kind';
 
+  //KORTLOPENDE ANNULERINGSVERZEKERING
+  bookdateTripInputElement: string = '#_Form_IF11808_16115';
+  totalValueOfTripInputElement: string = '#_Form_IF11808_16116';
 
 }
