@@ -85,6 +85,12 @@ export class NawElements {
   contactDataLastNameInputElement: string = '#_Form_IF25915_3690';
   contactDataGenderMaleClickElement: string = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(1)';
   contactDataGenderFemaleClickElement: string = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(2)';
+  contactDataZorgeloosOnlineInitialsInputElement: string = '#_Form_IF30707_3688';
+  contactDataZorgeloosOnlinePrefixInputElement: string = '#_Form_IF30707_3689';
+  contactDataZorgeloosOnlineLastNameInputElement: string = '#_Form_IF30707_3690';
+  contactDataZorgeloosOnlineGenderMaleClickElement: string = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(1)';
+  contactDataZorgeloosOnlineGenderFemaleClickElement: string = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(2)';
+  contactDataZorgeloosOnlineBirthdateInputElement: string = '#_Form_IF30707_3692';
 
   //RISC ADDRESS
   riscAddressZipcodeInputElement: string = '#_Form_IF17707_3693';

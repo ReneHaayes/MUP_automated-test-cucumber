@@ -5,7 +5,6 @@ import {NawElements} from "../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
 import {ReisVerzekeringMethods} from "../../pageobjects/reisVerzekering/reisVerzekeringMethods";
-import {browser} from "protractor";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
@@ -60,5 +59,4 @@ When(/^I enter step one and step two page of kortlopende annuleringsverzekering 
   await genericMethods.typeText(reisVerzekeringElements.totalValueOfTripInputElement, dataTable.totalValue);
   await genericMethods.clickOnNextButton();
   await genericMethods.clickOnNextButton();
-  await browser.sleep(10000);
 });
