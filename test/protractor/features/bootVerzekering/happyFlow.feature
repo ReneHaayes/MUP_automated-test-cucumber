@@ -1,0 +1,19 @@
+@bootVerzekering
+@regressie
+Feature: Happy flow for 'bootverzekering'
+
+  Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
+    Given I am on the bootverzekering page of the Unive website
+    When I enter step one and click next on step two of bootverzekering with:
+      | boatName | <boatName> |
+    And I enter step three page of bootverzekering for boat <boatName>
+    And I enter details of <persona> in step four page of boot verzekering
+    And I fill in almost insured page with:
+      | insuranceHistory | no |
+      | criminalHistory  | no |
+      | damageHistory    | no |
+    Then The thank you page for <persona> is shown
+
+    Examples:
+      | boatName | persona |
+      | azzam    | ronaldo |

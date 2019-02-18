@@ -12,7 +12,6 @@ import {AutoVerzekeringMethodsStepThreeAndFour} from "../../pageobjects/autoVerz
 import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
 import {CarWithLicensePlate} from "../../pageobjects/vehicles/carWithLicensePlate";
 import {CompanyData} from "../../pageobjects/persona/company";
-import {BedrijfsAutoVerzekeringMethods} from "../../pageobjects/autoVerzekering/bedrijfsAutoVerzekeringMethods";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -25,7 +24,6 @@ let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
 let vehicleElements: VehicleElements = new VehicleElements();
 let companyData: CompanyData = new CompanyData();
-let bedrijfsAutoVerzekeringMethods: BedrijfsAutoVerzekeringMethods = new BedrijfsAutoVerzekeringMethods();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -113,7 +111,7 @@ When(/^I enter step three page of personen autoverzekering zakelijk with$/, asyn
 
 When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
-  await bedrijfsAutoVerzekeringMethods.selectLegal(companyData.getCompanyLegal(company));
+  await genericMethods.selectLegal(companyData.getCompanyLegal(company));
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
   await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));

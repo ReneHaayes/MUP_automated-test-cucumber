@@ -80,7 +80,8 @@ export enum environmentUrl {
   PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk',
   ROERENDEZAKENVERZEKERING_ZAKELIJK = 'roerende zakenverzekering',
   KORTLOPENDEANNULERINGSVERZEKERING = 'kortlopende annuleringsverzekering',
-  ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk'
+  ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk',
+  BOOTVERZEKERING = 'bootverzekering'
 }
 
 export enum durationEntrepreneur {
@@ -133,4 +134,11 @@ export enum activityEnum {
   TEGELZETTER = 'tegelzetter',
   WEBDESIGN = 'webdesign',
   OVERIG= 'overig'
+}
+
+export enum fuelTypEnum {
+  BENZINE = 'benzine',
+  DIESEL = 'diesel',
+  ELEKTRISCH = 'elektrish',
+  LPG = 'lpg'
 }
