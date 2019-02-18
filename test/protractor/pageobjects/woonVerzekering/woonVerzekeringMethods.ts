@@ -6,7 +6,7 @@ import {
   kindStraw,
   superficiesAndContents,
   totalSurface,
-  wallHouse
+  materialEnum
 } from "../enum/woonVerzekeringEnum";
 import {GenericMethods} from "../generic/genericMethods";
 import {GenericElements} from "../generic/genericElements";
@@ -27,17 +27,17 @@ export class WoonVerzekeringMethods {
 
   async clickWallHouse(input: string) {
     switch (input) {
-      case wallHouse.STONE: {
+      case materialEnum.STONE: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.wallHouseStoneElement);
         break;
       }
-      case wallHouse.WOOD: {
+      case materialEnum.WOOD: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.wallHouseWoodElement);
         break;
       }
-      case wallHouse.DIFFERENT: {
+      case materialEnum.DIFFERENT: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(woonVerzekeringElements.wallHouseDifferentElement);
         break;

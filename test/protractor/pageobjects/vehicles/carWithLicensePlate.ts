@@ -1,4 +1,5 @@
 import {licensePlates} from "../enum/licensePlateEnum";
+import {fuelTypEnum} from "../enum/genericEnum";
 
 export class Car {
 
@@ -29,10 +30,10 @@ export class Car {
 export class CarWithLicensePlate {
 
   _06HNDL: Car = new Car(licensePlates._06HNDL, 'BMW', '3-SERIE', '2001', '318CI EXECUTIVE',
-    "Softtop", 'Benzine', '12-09-2001', '0000');
+    "Softtop", fuelTypEnum.BENZINE, '12-09-2001', '0000');
 
   _80SRB4: Car = new Car(licensePlates._80SRB4, 'Renault', 'CLIO', '2011', '1.5 DCI AUTHENTIQUE',
-    'Hatchback', 'Diesel', '01-01-2011', '0000');
+    'Hatchback', fuelTypEnum.DIESEL, '01-01-2011', '0000');
 
   getCarFuelType(input: string): string {
     switch (input) {

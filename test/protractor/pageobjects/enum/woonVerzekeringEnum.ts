@@ -1,7 +1,15 @@
-export enum wallHouse {
+export enum materialEnum {
   STONE = 'stone',
   WOOD = 'wood',
-  DIFFERENT = 'different'
+  DIFFERENT = 'different',
+  KUNSTSTOF_POLYESTER = 'kunststof polyester',
+  POLYESTER_WOOD = 'polyester wood',
+  STEEL = 'steel',
+  STEEL_WOOD = 'steel wood',
+  ALUMINIUM = 'aluminium',
+  RUBBER = 'rubber',
+  FERROCEMENT = 'ferrocement'
+
 }
 
 export enum kindStraw {

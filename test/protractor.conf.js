@@ -15,7 +15,8 @@ exports.config = {
     zzpFlex: './protractor/features/zzpFlex/*.feature',
     zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature',
     reisVerzekering: './protractor/features/reisVerzekering/*.feature',
-    roerendeZakenVerzekering: './protractor/features/roerendeZakenVerzekering/*.feature'
+    roerendeZakenVerzekering: './protractor/features/roerendeZakenVerzekering/*.feature',
+    bootVerzekering: './protractor/features/bootVerzekering/*.feature'
   },
 
   specs: [

@@ -20,6 +20,7 @@ export class GenericElements {
   roerendeZakenVerzekeringZakelijk: string = 'zakelijk/roerendezakenverzekering/premieberekenen-en-afsluiten';
   kortlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten-kav';
   zorgeloosOnlineVerzekeringZakelijk: string = 'zakelijk/zorgeloosonline/premieberekenen-en-afsluiten';
+  bootVerzekering: string = 'bootverzekering/premieberekenen-en-afsluiten';
 
 
   //COOKIE
