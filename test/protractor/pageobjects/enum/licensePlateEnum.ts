@@ -10,12 +10,13 @@ export enum licensePlateHmPageEnum {
 }
 
 export enum licensePlates {
-  _06HNDL = '06-HN-DL',
-  _80SRB4 = '80-SRB-4',
-  _12FRP3 = '12-FRP-3',
-  _F169NS = 'F-169-NS',
-  _MPTT99 = 'MP-TT-99',
-  _97XFTK = '97-XF-TK',
-  _21PLN1 = '21-PLN-1',
-  _48VDS3 = '48-VDS-3'
+  PERSONCAR_06HNDL = '06-HN-DL',
+  PERSONCAR_80SRB4 = '80-SRB-4',
+  MOPED_12FRP3 = '12-FRP-3',
+  MOPED_F169NS = 'F-169-NS',
+  MOTOR_MPTT99 = 'MP-TT-99',
+  QUAD_97XFTK = '97-XF-TK',
+  TRIKE_21PLN1 = '21-PLN-1',
+  BUSINESS_CAR_48VDS3 = '48-VDS-3',
+  CAMPER_BLJL41 = 'BL-JL-41'
 }
