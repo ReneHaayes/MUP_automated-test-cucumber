@@ -80,6 +80,9 @@ export class GetUrlUnive {
       case environmentUrl.CARAVANVERZEKERING: {
         return this.getEnv() + genericElements.caravanVerzekering;
       }
+      case environmentUrl.DOORLOPENDE_ANNULERINGSVERZEKERING: {
+        return this.getEnv() + genericElements.doorlopendeAnnuleringsVerzekering;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

@@ -13,13 +13,13 @@ let nawElements: NawElements = new NawElements();
 let personaData: PersonaData = new PersonaData();
 let genericElements: GenericElements = new GenericElements();
 
-When(/^I enter step one and step two page of doorlopende reisverzekering for myself$/, async () => {
+When(/^I enter step one and step two page of doorlopende verzekeringen for myself$/, async () => {
   await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);
   await genericMethods.clickOnNextButton();
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter details of (.*) in your data page of reisverzekering$/, async (persona: string) => {
+When(/^I enter details of (.*) in your data page of doorlopende verzekeringen$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));

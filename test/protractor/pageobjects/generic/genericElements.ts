@@ -23,6 +23,7 @@ export class GenericElements {
   bootVerzekering: string = 'bootverzekering/premieberekenen-en-afsluiten';
   camperVerzekering: string = 'camperverzekering/premieberekenen-en-afsluiten';
   caravanVerzekering: string = 'caravanverzekering/premieberekenen-en-afsluiten';
+  doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
 
 
   //COOKIE
