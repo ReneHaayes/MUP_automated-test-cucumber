@@ -82,7 +82,8 @@ export enum environmentUrl {
   KORTLOPENDEANNULERINGSVERZEKERING = 'kortlopende annuleringsverzekering',
   ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk',
   BOOTVERZEKERING = 'bootverzekering',
-  CAMPERVERZEKERING = 'camperverzekering'
+  CAMPERVERZEKERING = 'camperverzekering',
+  CARAVANVERZEKERING = 'caravanverzekering'
 }
 
 export enum durationEntrepreneur {

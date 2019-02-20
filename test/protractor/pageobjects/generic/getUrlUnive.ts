@@ -77,6 +77,9 @@ export class GetUrlUnive {
       case environmentUrl.CAMPERVERZEKERING: {
         return this.getEnv() + genericElements.camperVerzekering;
       }
+      case environmentUrl.CARAVANVERZEKERING: {
+        return this.getEnv() + genericElements.caravanVerzekering;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

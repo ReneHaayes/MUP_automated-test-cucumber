@@ -22,6 +22,7 @@ export class GenericElements {
   zorgeloosOnlineVerzekeringZakelijk: string = 'zakelijk/zorgeloosonline/premieberekenen-en-afsluiten';
   bootVerzekering: string = 'bootverzekering/premieberekenen-en-afsluiten';
   camperVerzekering: string = 'camperverzekering/premieberekenen-en-afsluiten';
+  caravanVerzekering: string = 'caravanverzekering/premieberekenen-en-afsluiten';
 
 
   //COOKIE
