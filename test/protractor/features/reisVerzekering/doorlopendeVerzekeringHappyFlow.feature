@@ -5,7 +5,7 @@ Feature: Happy flow for 'doorlopendeReisVerzekering and doorlopendeAnnuleringsVe
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the <page> page of the Unive website
     When I enter step one and step two page of doorlopende verzekeringen for myself
-    And I enter details of <persona> in your data page of doorlopende verzekeringen
+    And I enter details of <persona> in your data page of reis verzekeringen
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |

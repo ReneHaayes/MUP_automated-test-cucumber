@@ -6,7 +6,7 @@ Feature: Happy flow for 'kortlopendeReisVerzekering'
     Given I am on the kortlopende reisverzekering page of the Unive website
     When I enter step one and step two page of kortlopende reisverzekering for myself with:
       | childrenTillFourYears | 0 |
-    And I enter details of <persona> in your data page of reisverzekering
+    And I enter details of <persona> in your data page of reis verzekeringen
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |

@@ -19,7 +19,7 @@ When(/^I enter step one and step two page of doorlopende verzekeringen for mysel
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter details of (.*) in your data page of doorlopende verzekeringen$/, async (persona: string) => {
+When(/^I enter details of (.*) in your data page of reis verzekeringen$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));

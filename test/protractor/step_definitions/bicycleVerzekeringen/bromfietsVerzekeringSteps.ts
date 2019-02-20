@@ -4,7 +4,7 @@ import {VehicleElements} from "../../pageobjects/generic/vehicleElements";
 import {PersonaData} from "../../pageobjects/persona/persona";
 import {NawElements} from "../../pageobjects/generic/nawElements";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
-import {MopedMethods} from "../../pageobjects/moped/mopedMethods";
+import {MopedMethods} from "../../pageobjects/bicycleVerzekeringen/mopedMethods";
 import {MopedWithLicensePlate} from "../../pageobjects/vehicles/mopedWithLicensePlate";
 
 let genericMethods: GenericMethods = new GenericMethods();

@@ -24,6 +24,7 @@ export class GenericElements {
   camperVerzekering: string = 'camperverzekering/premieberekenen-en-afsluiten';
   caravanVerzekering: string = 'caravanverzekering/premieberekenen-en-afsluiten';
   doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
+  fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
 
 
   //COOKIE

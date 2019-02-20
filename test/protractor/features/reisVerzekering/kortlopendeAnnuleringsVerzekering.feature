@@ -7,7 +7,7 @@ Feature: Happy flow for 'kortlopende annulerings verzekering'
     When I enter step one and step two page of kortlopende annuleringsverzekering for myself with:
       | childrenTillFourYears | 0    |
       | totalValue            | 1500 |
-    And I enter details of <persona> in your data page of reisverzekering
+    And I enter details of <persona> in your data page of reis verzekeringen
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
