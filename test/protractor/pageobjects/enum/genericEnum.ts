@@ -85,7 +85,8 @@ export enum environmentUrl {
   CAMPERVERZEKERING = 'camperverzekering',
   CARAVANVERZEKERING = 'caravanverzekering',
   DOORLOPENDE_ANNULERINGSVERZEKERING = 'doorlopende annuleringsverzekering',
-  FIETSVERZEKERING = 'fietsverzekering'
+  FIETSVERZEKERING = 'fietsverzekering',
+  KOSTBAARHEDEN_VERZEKERING = 'kostbaarheden verzekering'
 }
 
 export enum durationEntrepreneur {
