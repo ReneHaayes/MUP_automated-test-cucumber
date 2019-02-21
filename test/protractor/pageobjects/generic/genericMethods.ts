@@ -98,6 +98,13 @@ export class GenericMethods {
     return text.getText();
   }
 
+  async getValue(selector: string): Promise<string> {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const text: ElementFinder = element(by.css(selector));
+    return text.getWebElement().getAttribute('value')
+  }
+
   async getNoText(selector: string, elementToWaitFor: string): Promise<string> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(elementToWaitFor, browser.getPageTimeout);
@@ -142,6 +149,13 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const selectorToString: string = await this.getText(selector);
+    await expect(selectorToString).to.equal(assertionText);
+  }
+
+  async verifyValueTextInElement(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getValue(selector);
     await expect(selectorToString).to.equal(assertionText);
   }
 

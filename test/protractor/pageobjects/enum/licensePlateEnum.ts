@@ -12,6 +12,7 @@ export enum licensePlateHmPageEnum {
 export enum licensePlates {
   PERSONCAR_06HNDL = '06-HN-DL',
   PERSONCAR_80SRB4 = '80-SRB-4',
+  OLDTIMER_RG81HX = 'RG-81-HX',
   MOPED_12FRP3 = '12-FRP-3',
   MOPED_F169NS = 'F-169-NS',
   MOTOR_MPTT99 = 'MP-TT-99',

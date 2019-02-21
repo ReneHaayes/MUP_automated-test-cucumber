@@ -26,7 +26,7 @@ export class GenericElements {
   doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
   fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
   kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
-
+  oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
