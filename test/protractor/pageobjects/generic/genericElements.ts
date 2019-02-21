@@ -28,6 +28,7 @@ export class GenericElements {
   kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
   oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
   ongevallenVerzekering: string = 'ongevallenverzekering/premieberekenen-en-afsluiten';
+  rechtsBijstandVerzekering: string = 'rechtsbijstandverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
