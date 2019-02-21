@@ -27,6 +27,7 @@ export class GenericElements {
   fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
   kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
   oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
+  ongevallenVerzekering: string = 'ongevallenverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

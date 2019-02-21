@@ -92,6 +92,9 @@ export class GetUrlUnive {
       case environmentUrl.OLDTIMERVERZEKERING: {
         return this.getEnv() + genericElements.oldtimerVerzekering;
       }
+      case environmentUrl.ONGEVALLENVERZEKERING: {
+        return this.getEnv() + genericElements.ongevallenVerzekering;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
