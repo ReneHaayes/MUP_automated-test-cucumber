@@ -1,6 +1,6 @@
 import {materialEnum} from "../enum/woonVerzekeringEnum";
 import {fuelTypEnum} from "../enum/genericEnum";
-import {boatNamesEnum, typeBoatEnum} from "../enum/boatEnum";
+import {boatNamesEnum, typeBoatEnum} from "../enum/bootEnum";
 
 export class Boat {
 

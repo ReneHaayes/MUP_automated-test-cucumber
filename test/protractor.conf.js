@@ -6,18 +6,18 @@ exports.config = {
   directConnect: true,
   restartBrowserBetweenTests: true,
 
-  suites: {
-    aansprakelijkheidsVerzekering: './protractor/features/aansprakelijkheidsVerzekering/*.feature',
-    autoVerzekering: './protractor/features/autoVerzekering/*.feature',
-    moped: './protractor/features/moped/*.feature',
-    motor: './protractor/features/motor/*.feature',
-    woonVerzekering: './protractor/features/woonVerzekering/*.feature',
-    zzpFlex: './protractor/features/zzpFlex/*.feature',
-    zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature',
-    reisVerzekering: './protractor/features/reisVerzekering/*.feature',
-    roerendeZakenVerzekering: './protractor/features/roerendeZakenVerzekering/*.feature',
-    bootVerzekering: './protractor/features/bootVerzekering/*.feature'
-  },
+  // suites: {
+  //   aansprakelijkheidsVerzekering: './protractor/features/aansprakelijkheidsVerzekering/*.feature',
+  //   autoVerzekering: './protractor/features/autoVerzekering/*.feature',
+  //   moped: './protractor/features/moped/*.feature',
+  //   motor: './protractor/features/motor/*.feature',
+  //   woonVerzekering: './protractor/features/woonVerzekering/*.feature',
+  //   zzpFlex: './protractor/features/zzpFlex/*.feature',
+  //   zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature',
+  //   reisVerzekering: './protractor/features/reisVerzekering/*.feature',
+  //   roerendeZakenVerzekering: './protractor/features/roerendeZakenVerzekering/*.feature',
+  //   bootVerzekering: './protractor/features/bootVerzekering/*.feature'
+  // },
 
   specs: [
     // 'async_await.js',
