@@ -90,7 +90,8 @@ export enum environmentUrl {
   OLDTIMERVERZEKERING = 'oldtimerverzekering',
   ONGEVALLENVERZEKERING = 'ongevallen verzekering',
   RECHTSBIJSTANDVERZEKERING = 'rechtsbijstand verzekering',
-  SCOOTMOBIELVERZEKERING = 'scootmobiel verzekering'
+  SCOOTMOBIELVERZEKERING = 'scootmobiel verzekering',
+  EIGENVERVOERVERZEKERING = 'eigen vervoer verzekering'
 }
 
 export enum durationEntrepreneur {
@@ -147,7 +148,7 @@ export enum activityEnum {
 }
 
 export enum fuelTypEnum {
-  BENZINE = 'benzine',
+  BENZINE = 'Benzine',
   DIESEL = 'diesel',
   ELEKTRISCH = 'elektrish',
   LPG = 'lpg'

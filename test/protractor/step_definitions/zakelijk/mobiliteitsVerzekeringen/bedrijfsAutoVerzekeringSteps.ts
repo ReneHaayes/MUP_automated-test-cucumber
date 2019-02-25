@@ -44,8 +44,8 @@ When(/^I enter step two page of bedrijfs autoverzekering with$/, async (data) =>
 When(/^I enter step three page of bedrijfs autoverzekering with$/, async (data) => {
   const dataTable = data.rowsHash();
   //INSERT DATE INFORMATION
-  await genericMethods.typeText(vehicleElements.startDateElement, dataTable.startDate);
-  await genericMethods.typeText(bedrijfsAutoVerzekeringElements.startDateOnYourNameElement, dataTable.startDateOnYourName);
+  await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
+  await genericMethods.typeText(bedrijfsAutoVerzekeringElements.startDateOnYourNameElement, genericMethods.getDate('today'));
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentUserYesElement);

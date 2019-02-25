@@ -177,6 +177,11 @@ export class WoonVerzekeringMethods {
         await genericMethods.selectInDropdown(woonVerzekeringElements.outHouseTotalSurfaceSelectElement, woonVerzekeringElements.outHouseTotalSurfaceBiggerthan500SelectElement);
         break;
       }
+      case genericEnum.NO: {
+        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await genericMethods.clickOnElement(woonVerzekeringElements.outHouseNoElement);
+        break;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for clickWallHouse is not recognized as a command');
       }

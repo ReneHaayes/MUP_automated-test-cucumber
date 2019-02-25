@@ -59,3 +59,10 @@ export enum legalEnum {
   STICHTING = 'stichting',
   BUITENLANDS_RECHTSVORM = 'buitenlands rechtsvorm'
 }
+
+export enum vehicleInfoEnum {
+  PASSENGER_CAR = 'passenger car',
+  VANS = 'vans',
+  TRUCKS = 'trucks',
+  TRAILER = 'trailer'
+}

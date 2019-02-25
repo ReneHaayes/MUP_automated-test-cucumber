@@ -101,6 +101,9 @@ export class GetUrlUnive {
       case environmentUrl.SCOOTMOBIELVERZEKERING: {
         return this.getEnv() + genericElements.scootMobielVerzekering;
       }
+      case environmentUrl.EIGENVERVOERVERZEKERING: {
+        return this.getEnv() + genericElements.eigenVervoerVerzekering;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

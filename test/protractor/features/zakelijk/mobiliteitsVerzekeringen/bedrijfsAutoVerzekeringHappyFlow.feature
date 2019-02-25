@@ -12,8 +12,6 @@ Feature: Happy flow for 'Bedrijfs autoverzekering'
       | basisDekking | allRisk |
     And I enter step three page of bedrijfs autoverzekering with
       | licensePlate        | <licensePlate> |
-      | startDate           | 01-06-2019     |
-      | startDateOnYourName | 01-01-2019     |
     And I enter step four page of bedrijfs autoverzekering for <company> with <persona>
     And I fill in almost insured page with:
       | insuranceHistory | no |
@@ -22,7 +20,7 @@ Feature: Happy flow for 'Bedrijfs autoverzekering'
     Then The thank you page for <persona> is shown
 
     Examples:
-      | licensePlate | company  | persona |
-      | 48-VDS-3     | facebook | ronaldo |
+      | licensePlate | company         | persona |
+      | 48-VDS-3     | rg timmerwerken | ronaldo |
 
 
