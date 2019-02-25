@@ -89,7 +89,8 @@ export enum environmentUrl {
   KOSTBAARHEDEN_VERZEKERING = 'kostbaarheden verzekering',
   OLDTIMERVERZEKERING = 'oldtimerverzekering',
   ONGEVALLENVERZEKERING = 'ongevallen verzekering',
-  RECHTSBIJSTANDVERZEKERING = 'rechtsbijstand verzekering'
+  RECHTSBIJSTANDVERZEKERING = 'rechtsbijstand verzekering',
+  SCOOTMOBIELVERZEKERING = 'scootmobiel verzekering'
 }
 
 export enum durationEntrepreneur {
@@ -105,6 +106,7 @@ export enum durationEntrepreneur {
   _9 = '9 jaar',
   _10 = '10 jaar'
 }
+
 export enum numbersEnum {
   _0 = '0',
   _1 = '1',
@@ -141,7 +143,7 @@ export enum activityEnum {
   TIMMERMAN = 'timmerman',
   TEGELZETTER = 'tegelzetter',
   WEBDESIGN = 'webdesign',
-  OVERIG= 'overig'
+  OVERIG = 'overig'
 }
 
 export enum fuelTypEnum {

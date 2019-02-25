@@ -29,6 +29,7 @@ export class GenericElements {
   oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
   ongevallenVerzekering: string = 'ongevallenverzekering/premieberekenen-en-afsluiten';
   rechtsBijstandVerzekering: string = 'rechtsbijstandverzekering/premieberekenen-en-afsluiten';
+  scootMobielVerzekering: string = 'scootmobielverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

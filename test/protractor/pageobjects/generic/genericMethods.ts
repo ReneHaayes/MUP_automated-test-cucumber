@@ -57,13 +57,26 @@ export class GenericMethods {
   }
 
   async waitForElementIsVisible(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css(selector));
+      await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error(selector + ', is not visible');
+    }
+  }
+
+  async waitForElementIsVisibleTyPage(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
     await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
   }
 
   async waitForElementIsVisibleClassName(selector: string, waitFor: number) {
-    const selectorToWaitFor: ElementFinder = element(by.className(selector));
-    await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.className(selector));
+      await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error(selector + ', is not visible');
+    }
   }
 
   async waitForElementClickable(selector: string, waitFor: number) {
@@ -72,19 +85,37 @@ export class GenericMethods {
   }
 
   async waitForElementNotVisible(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css(selector));
+      await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
+      await browser.sleep(500);
+    } catch (e) {
+      throw new Error(selector + ', is not visible');
+    }
+  }
+
+  async waitForElementNotVisibleTyPage(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
     await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
     await browser.sleep(500);
   }
 
   async waitForElementIsVisibleWithXpath(selector: string, waitFor: number) {
-    const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
-    await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
+      await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error(selector + ', is not visible');
+    }
   }
 
   async waitForElementIsPresentWithXpath(selector: string, waitFor: number) {
-    const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
-    await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
+      await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error(selector + ', is not visible');
+    }
   }
 
   async scrollTilTop() {
@@ -152,6 +183,13 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
+  async verifyTextInElementTyPage(selector: string, assertionText: string) {
+    await this.waitForElementNotVisibleTyPage(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleTyPage(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getText(selector);
+    await expect(selectorToString).to.equal(assertionText);
+  }
+
   async verifyValueTextInElement(selector: string, assertionText: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
@@ -214,9 +252,9 @@ export class GenericMethods {
 
   async verifyThankYouPageTitle(persona: string) {
     if (personaData.getPersonaGender(persona) === gender.MALE) {
-      await this.verifyTextInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona))
+      await this.verifyTextInElementTyPage(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona))
     } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
-      await this.verifyTextInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona))
+      await this.verifyTextInElementTyPage(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona))
     } else {
       throw new Error('The input: "" ' + persona + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
     }

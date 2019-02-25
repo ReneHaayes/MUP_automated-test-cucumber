@@ -20,16 +20,16 @@ Then(/^The thank you page for (.*) is shown$/, async function (persona: string) 
     await genericMethods.verifyThankYouPageTitle(persona);
   } catch (e) {
     await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'Er is een onbekende fout opgetreden');
-    logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+    logToHtmlReport(this, 'The known bug with the text: "Er is een onbekende fout opgetreden" shows on the screen');
   }
 });
 
 Then(/^Thank you page for zakelijk is shown$/, async function () {
   try {
-    await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
+    await genericMethods.verifyTextInElementTyPage(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
   } catch (e) {
     await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'Er is een onbekende fout opgetreden');
-    logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+    logToHtmlReport(this, 'The known bug with the text: "Er is een onbekende fout opgetreden" shows on the screen');
   }
 });
 
