@@ -1,16 +1,35 @@
 export class GenericElements {
 
-  //PAGES
-  patUnive: string = 'https://pat.unive.nl/';
-  tstProjUnive: string = 'https://tstproj.unive.nl/';
-  autoVerzUrlPat: string = this.patUnive + 'autoverzekering/premieberekenen-en-afsluiten';
-  autoVerzUrlTstProj: string = this.tstProjUnive + 'autoverzekering/premieberekenen-en-afsluiten';
-  zzpFlexPat: string = this.patUnive + 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
-  aansprakelijkheidsVerzekeringPat: string = this.patUnive + 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
-  autoVerzProductPagePat: string = this.patUnive + 'autoverzekering';
-  woonVerzPat: string = this.patUnive + 'woonverzekering/premieberekenen-en-afsluiten';
-  woonVerzPatProductPage: string = this.patUnive + 'woonverzekering';
-  bromfietsVerzekeringPat: string = this.patUnive + 'bromfietsverzekering/premieberekenen-en-afsluiten';
+  autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
+  zzpFlexPat: string = 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
+  aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten/';
+  autoVerzProductPagePat: string = 'autoverzekering';
+  woonVerzPat: string = 'woonverzekering/premieberekenen-en-afsluiten';
+  woonVerzPatProductPage: string = 'woonverzekering';
+  bromfietsVerzekeringPat: string = 'bromfietsverzekering/premieberekenen-en-afsluiten';
+  scooterVerzekeringPat: string = 'scooterverzekering/premieberekenen-en-afsluiten';
+  motorVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten';
+  quadVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-quad';
+  trikeVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-trike';
+  zorgeloosOnlineVerzekeringPat: string = 'zorgeloosonline/premieberekenen-en-afsluiten';
+  bedrijfsAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
+  businessHomePage: string = 'zakelijk';
+  doorlopendeReisVerzekering: string = 'doorlopende-reisverzekering/premieberekenen-en-afsluiten';
+  kortlopendeReisVerzekering: string = 'kortlopende-reisverzekering/premieberekenen-en-afsluiten';
+  personenAutoVerzekeringZakelijk: string = 'zakelijk/personenautoverzekering/premieberekenen-en-afsluiten';
+  roerendeZakenVerzekeringZakelijk: string = 'zakelijk/roerendezakenverzekering/premieberekenen-en-afsluiten';
+  kortlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten-kav';
+  zorgeloosOnlineVerzekeringZakelijk: string = 'zakelijk/zorgeloosonline/premieberekenen-en-afsluiten';
+  bootVerzekering: string = 'bootverzekering/premieberekenen-en-afsluiten';
+  camperVerzekering: string = 'camperverzekering/premieberekenen-en-afsluiten';
+  caravanVerzekering: string = 'caravanverzekering/premieberekenen-en-afsluiten';
+  doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
+  fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
+  kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
+  oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
+  ongevallenVerzekering: string = 'ongevallenverzekering/premieberekenen-en-afsluiten';
+  rechtsBijstandVerzekering: string = 'rechtsbijstandverzekering/premieberekenen-en-afsluiten';
+  scootMobielVerzekering: string = 'scootmobielverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
@@ -30,6 +49,9 @@ export class GenericElements {
 
   //THANK YOU
   thankYouH2Element: string = '.thanks_content > h2';
+  thankYouH1Element: string = '.banner--thanks h1';
+  errorMessageElement: string = '.mainMessage';
+
 
   //HISTORY
   insuranceHistoryNoElement: string = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(1)';
