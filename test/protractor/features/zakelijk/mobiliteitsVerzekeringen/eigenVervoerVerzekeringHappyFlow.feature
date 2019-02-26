@@ -13,7 +13,7 @@ Feature: Happy flow for 'zakelijk eigen vervoer verzekering'
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    Then The thank you page for <persona> is shown
+    Then Thank you page for zakelijk is shown
 
     Examples:
       | persona | company  |

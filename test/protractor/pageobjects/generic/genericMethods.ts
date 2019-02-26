@@ -346,8 +346,8 @@ export class GenericMethods {
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.criminalHistoryYesElement);
-        await this.waitForElementIsVisible(genericElements.criminalHistoryInformationElement, browser.getPageTimeout);
-        await this.clickOnElement(genericElements.criminalHistoryInformationElement);
+        await this.waitForElementIsVisible(genericElements.lightBoxClickElement, browser.getPageTimeout);
+        await this.clickOnElement(genericElements.lightBoxClickElement);
         break;
       }
       case genericEnum.NO: {

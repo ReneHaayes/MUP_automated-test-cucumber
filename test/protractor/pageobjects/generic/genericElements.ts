@@ -32,6 +32,7 @@ export class GenericElements {
   scootMobielVerzekering: string = 'scootmobielverzekering/premieberekenen-en-afsluiten';
   eigenVervoerVerzekering: string = 'zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten';
   zakelijkRechtsBijstandVerzekering: string = 'zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten';
+  zakelijkAansprakelijkheidsVerzekering: string = 'zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
@@ -54,6 +55,10 @@ export class GenericElements {
   thankYouH1Element: string = '.banner--thanks h1';
   errorMessageElement: string = '.mainMessage';
 
+  //LIGHTBOX
+  lightBoxClickElement: string = '#_Form_verificationLightbox';
+  closeLightBoxClickElement: string = '.closeLightbox > a';
+
 
   //HISTORY
   insuranceHistoryNoElement: string = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(1)';
@@ -62,7 +67,6 @@ export class GenericElements {
 
   criminalHistoryYesElement: string = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(2)';
   criminalHistoryNoElement: string = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(1)';
-  criminalHistoryInformationElement: string = '#_Form_verificationLightbox';
 
   damageHistoryYesElement: string = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(2)';
   damageHistoryNoElement: string = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(1)';

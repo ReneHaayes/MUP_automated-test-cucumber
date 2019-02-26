@@ -92,7 +92,9 @@ export enum environmentUrl {
   RECHTSBIJSTANDVERZEKERING = 'rechtsbijstand verzekering',
   SCOOTMOBIELVERZEKERING = 'scootmobiel verzekering',
   EIGENVERVOERVERZEKERING = 'eigen vervoer verzekering',
-  ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'zakelijk rechtsbijstandverzekering'
+  ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'zakelijk rechtsbijstandverzekering',
+  ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering'
+
 }
 
 export enum durationEntrepreneur {
