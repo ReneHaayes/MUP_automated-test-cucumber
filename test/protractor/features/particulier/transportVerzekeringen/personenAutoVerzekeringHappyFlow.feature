@@ -1,6 +1,6 @@
 @personenAutoVerzekering
 @regressie
-Feature: Happy flow for 'Autoverzekering'
+Feature: Happy flow for 'personen auto verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the autoverzekering page of the Unive website

@@ -31,6 +31,7 @@ export class GenericElements {
   rechtsBijstandVerzekering: string = 'rechtsbijstandverzekering/premieberekenen-en-afsluiten';
   scootMobielVerzekering: string = 'scootmobielverzekering/premieberekenen-en-afsluiten';
   eigenVervoerVerzekering: string = 'zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten';
+  zakelijkRechtsBijstandVerzekering: string = 'zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

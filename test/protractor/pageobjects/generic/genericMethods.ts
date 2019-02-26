@@ -61,7 +61,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
       await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -75,7 +75,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.className(selector));
       await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -90,7 +90,7 @@ export class GenericMethods {
       await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
       await browser.sleep(500);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -105,7 +105,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
       await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -114,7 +114,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
       await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
