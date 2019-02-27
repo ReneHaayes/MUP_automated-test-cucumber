@@ -66,3 +66,12 @@ export enum vehicleInfoEnum {
   TRUCKS = 'trucks',
   TRAILER = 'trailer'
 }
+
+export enum maxSpeedEnum {
+  TOT_30 = 'tot 30',
+  BETWEEN_31_AND_40 = '31-40',
+  BETWEEN_41_AND_50 = '41-50',
+  BETWEEN_51_AND_60 = '51-60',
+  OVER_60 = 'over 60'
+
+}

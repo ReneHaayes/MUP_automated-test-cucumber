@@ -33,6 +33,7 @@ export class GenericElements {
   eigenVervoerVerzekering: string = 'zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten';
   zakelijkRechtsBijstandVerzekering: string = 'zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten';
   zakelijkAansprakelijkheidsVerzekering: string = 'zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten';
+  zakelijkTractorVerzekering: string = 'zakelijk/tractorverzekering/premieberekenen-en-afsluiten';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

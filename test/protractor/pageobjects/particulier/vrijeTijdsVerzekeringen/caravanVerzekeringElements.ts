@@ -6,16 +6,6 @@ export class CaravanVerzekeringElements {
   mobileHomeClickElement: string = '[data-label-id*="LA_IF7914_12028"] .radioList > label:nth-child(3)';
   searchCaravanDataClickElement: string = '#_Form_IF7914_12033';
 
-  //CARAVANDATA
-  constructionYearSelectElement: string = '#_VehicleBrandModelType__2';
-  constructionYearSelect2018Element: string = 'string:2018';
-  brandNameSelectElement: string = '#_VehicleBrandModelType__4';
-  brandNameSelectAceElement: string = 'string:350';
-  brandModelSelectElement: string = '#_VehicleBrandModelType__5';
-  brandModelSelectChampsElement: string = 'string:1403';
-  brandTypeSelectElement: string = '#_VehicleBrandModelType__6';
-  brandTypeSelectChamps330DDBasicElement: string = 'string:12778';
-  confirmationButtonClickElement: string = '#_VehicleBrandModelType_confirm';
 
   //HAIL
   hailDamageYesClickElement: string = '[data-label-id*="LA_IF8012_12120"] .radioList > label:nth-child(1)';

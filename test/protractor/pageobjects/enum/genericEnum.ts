@@ -93,7 +93,8 @@ export enum environmentUrl {
   SCOOTMOBIELVERZEKERING = 'scootmobiel verzekering',
   EIGENVERVOERVERZEKERING = 'eigen vervoer verzekering',
   ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'zakelijk rechtsbijstandverzekering',
-  ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering'
+  ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering',
+  ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering'
 
 }
 

@@ -4,22 +4,24 @@ import {CaravanVerzekeringElements} from "../../../pageobjects/particulier/vrije
 import {NawElements} from "../../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../../pageobjects/persona/persona";
 import {GenericElements} from "../../../pageobjects/generic/genericElements";
+import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
 let caravanVerzekeringElements: CaravanVerzekeringElements = new CaravanVerzekeringElements();
 let nawElements: NawElements = new NawElements();
+let vehicleElements: VehicleElements = new VehicleElements();
 let personaData: PersonaData = new PersonaData();
 
 When(/^I enter step one and click next on step two of caravan verzekering$/, async () => {
   await genericMethods.clickOnElement(caravanVerzekeringElements.tourCaravanClickElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.searchCaravanDataClickElement);
   //Different page
-  await genericMethods.selectInDropdown(caravanVerzekeringElements.constructionYearSelectElement, caravanVerzekeringElements.constructionYearSelect2018Element);
-  await genericMethods.selectInDropdown(caravanVerzekeringElements.brandNameSelectElement, caravanVerzekeringElements.brandNameSelectAceElement);
-  await genericMethods.selectInDropdown(caravanVerzekeringElements.brandModelSelectElement, caravanVerzekeringElements.brandModelSelectChampsElement);
-  await genericMethods.selectInDropdown(caravanVerzekeringElements.brandTypeSelectElement, caravanVerzekeringElements.brandTypeSelectChamps330DDBasicElement);
-  await genericMethods.clickOnElement(caravanVerzekeringElements.confirmationButtonClickElement);
+  await genericMethods.selectInDropdown(vehicleElements.constructionYearSelectElement, vehicleElements.constructionYearSelect2018Element);
+  await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectAceElement);
+  await genericMethods.selectInDropdown(vehicleElements.brandModelSelectElement, vehicleElements.brandModelSelectChampsElement);
+  await genericMethods.selectInDropdown(vehicleElements.brandTypeSelectElement, vehicleElements.brandTypeSelectChamps330DDBasicElement);
+  await genericMethods.clickOnElement(vehicleElements.confirmationButtonClickElement);
   //Back to step one page
   await genericMethods.clickOnElement(caravanVerzekeringElements.hailDamageNoClickElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.purchaseInfoClickNewElement);
