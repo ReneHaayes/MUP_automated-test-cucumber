@@ -2,7 +2,7 @@ export class GenericElements {
 
   autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
   zzpFlexPat: string = 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
-  aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten/';
+  aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
   autoVerzProductPagePat: string = 'autoverzekering';
   woonVerzPat: string = 'woonverzekering/premieberekenen-en-afsluiten';
   woonVerzPatProductPage: string = 'woonverzekering';
@@ -23,6 +23,7 @@ export class GenericElements {
   bootVerzekering: string = 'bootverzekering/premieberekenen-en-afsluiten';
   camperVerzekering: string = 'camperverzekering/premieberekenen-en-afsluiten';
   caravanVerzekering: string = 'caravanverzekering/premieberekenen-en-afsluiten';
+  caravanVerzekeringPp: string = 'caravanverzekering';
   doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
   fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
   kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
@@ -34,6 +35,12 @@ export class GenericElements {
   zakelijkRechtsBijstandVerzekering: string = 'zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten';
   zakelijkAansprakelijkheidsVerzekering: string = 'zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten';
   zakelijkTractorVerzekering: string = 'zakelijk/tractorverzekering/premieberekenen-en-afsluiten';
+  zorgVerzekering: string = 'zorgverzekering/premieberekenen-en-afsluiten';
+  zorgNotaDeclareren: string = 'zorgverzekering/declareren';
+  univeAlarmCentrale: string = 'klantenservice/alarmcentrale';
+  mijnUnive: string = 'https://login.pat.unive.nl/login';
+  overUnive: string = 'overunive';
+  zipcodePlaceZoeken: string = 'contact/zoek-winkel';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

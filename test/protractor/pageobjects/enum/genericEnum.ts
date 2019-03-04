@@ -84,6 +84,7 @@ export enum environmentUrl {
   BOOTVERZEKERING = 'bootverzekering',
   CAMPERVERZEKERING = 'camperverzekering',
   CARAVANVERZEKERING = 'caravanverzekering',
+  CARAVANVERZEKERING_PP = 'caravanverzekering product page',
   DOORLOPENDE_ANNULERINGSVERZEKERING = 'doorlopende annuleringsverzekering',
   FIETSVERZEKERING = 'fietsverzekering',
   KOSTBAARHEDEN_VERZEKERING = 'kostbaarheden verzekering',
@@ -94,7 +95,8 @@ export enum environmentUrl {
   EIGENVERVOERVERZEKERING = 'eigen vervoer verzekering',
   ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'zakelijk rechtsbijstandverzekering',
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering',
-  ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering'
+  ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering',
+  ZORGVERZEKERING = 'zorgverzekering',
 
 }
 

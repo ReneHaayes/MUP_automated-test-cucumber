@@ -65,6 +65,16 @@ export class GenericMethods {
     }
   }
 
+  async verifyUrlContains(url: string) {
+    const currentUrl: string = await browser.getCurrentUrl();
+    await expect(currentUrl).to.have.string(url);
+  }
+
+  async verifyUrlIs(url: string) {
+    const currentUrl: string = await browser.getCurrentUrl();
+    await expect(currentUrl).to.equal(url);
+  }
+
   async waitForElementIsVisibleTyPage(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
     await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);

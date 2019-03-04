@@ -1,6 +1,7 @@
 import {GenericElements} from './genericElements';
 import {environmentUrl} from "../enum/genericEnum";
 import {browser} from "protractor";
+import {homePageEnum} from "../enum/woonVerzekeringEnum";
 
 let genericElements: GenericElements = new GenericElements();
 
@@ -80,6 +81,9 @@ export class GetUrlUnive {
       case environmentUrl.CARAVANVERZEKERING: {
         return this.getEnv() + genericElements.caravanVerzekering;
       }
+      case environmentUrl.CARAVANVERZEKERING_PP: {
+        return this.getEnv() + genericElements.caravanVerzekeringPp;
+      }
       case environmentUrl.DOORLOPENDE_ANNULERINGSVERZEKERING: {
         return this.getEnv() + genericElements.doorlopendeAnnuleringsVerzekering;
       }
@@ -112,6 +116,33 @@ export class GetUrlUnive {
       }
       case environmentUrl.ZAKELIJK_TRACTORVERZEKERING: {
         return this.getEnv() + genericElements.zakelijkTractorVerzekering;
+      }
+      case environmentUrl.ZORGVERZEKERING: {
+        return this.getEnv() + genericElements.zorgVerzekering;
+      }
+      case homePageEnum.ZORGNOTA_DECLAREREN: {
+        return genericElements.zorgNotaDeclareren;
+      }
+      case homePageEnum.UNIVE_ALARMCENTRALE: {
+        return this.getEnv() + genericElements.univeAlarmCentrale;
+      }
+      case homePageEnum.VERZEKERING_WIJZIGEN: {
+        return genericElements.mijnUnive;
+      }
+      case homePageEnum.MIJN_UNIVE: {
+        return genericElements.mijnUnive;
+      }
+      case homePageEnum.ZOEKEN: {
+        return this.getEnv() + homePageEnum.ZOEKEN;
+      }
+      case homePageEnum.OVER_ONS: {
+        return genericElements.overUnive;
+      }
+      case homePageEnum.KLANTENSERVICE: {
+        return this.getEnv() + homePageEnum.KLANTENSERVICE;
+      }
+      case homePageEnum.ZIPCODE_PLACE: {
+        return this.getEnv() + genericElements.zipcodePlaceZoeken;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
