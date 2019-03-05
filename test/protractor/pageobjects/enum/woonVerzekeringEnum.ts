@@ -73,7 +73,20 @@ export enum homePageEnum {
   UNIVE_ALARMCENTRALE = 'unive alarmcentrale',
   ZOEKEN = 'zoeken',
   MIJN_UNIVE = 'mijn unive',
+  MIJN_UNIVE_ZAKELIJK = 'mijn unive zakelijk',
+  MIJN_UNIVE_ZAKELIJK_HOMEPAGE = 'mijn unive zakelijk homepage',
   OVER_ONS = 'over ons',
   ZIPCODE_PLACE = 'postcode en plaats',
-  KLANTENSERVICE = 'klantenservice'
+  KLANTENSERVICE = 'klantenservice',
+  KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
+  ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
+  RECHTSBIJSTAND = 'rechtsbijstand',
+  EIGEN_VERVOER = 'eigen vervoer',
+  ZZP_ER = 'zzp er',
+  AGRARIER = 'agrarier',
+  GEBOUWEN = 'gebouwen',
+  AFSPRAAK_MAKEN = 'afspraak maken',
+  KLACHT_INDIENEN = 'klacht indienen',
+  INLOGGEN = 'inloggen',
+  ONDERNEMERSCAN = 'Ondernemersscan'
 }

@@ -41,6 +41,14 @@ export class GenericElements {
   mijnUnive: string = 'https://login.pat.unive.nl/login';
   overUnive: string = 'overunive';
   zipcodePlaceZoeken: string = 'contact/zoek-winkel';
+  zakelijkZzp: string = 'zakelijk/zzp';
+  zakelijkAgrarier: string = 'zakelijk/agrariers';
+  zakelijkGebouwen: string = 'zakelijk/gebouwenverzekering';
+  afspraakMaken: string = 'zakelijk/klantenservice/afspraak';
+  klachtIndienen: string = 'zakelijk/klachtindienen';
+  mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/my-customer';
+  mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
+  ondernemersScan: string = 'zakelijk/ondernemersscan';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

@@ -12,9 +12,13 @@ export class HmPageElements {
 
   homePageBusinessBedrijfsAutoverzekeringClickElement: string = '[href*="/zakelijk/bedrijfsautoverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessArbeidsongeschiktheidClickElement: string = '[href*="/zakelijk/arbeidsongeschiktheidsverzekering"][class*="insurances_tabLinkAction"]';
+  homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten"]';
   homePageBusinessRechtsbijstandClickElement: string = '[href*="/zakelijk/rechtsbijstandverzekering"][class*="insurances_tabLinkAction"]';
+  homePageBusinessRechtsbijstandPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
   homePageBusinessEigenVervoerClickElement: string = '[href*="/zakelijk/eigenvervoerverzekering"][class*="insurances_tabLinkAction"]';
+  homePageBusinessEigenVervoerPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten"]';
   homePageBusinessAansprakelijkheidClickElement: string = '[href*="/zakelijk/aansprakelijkheidsverzekering"][class*="insurances_tabLinkAction"]';
+  homePageBusinessAansprakelijkheidPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten"]';
 
 
   //LICENSE PLATE
@@ -35,6 +39,8 @@ export class HmPageElements {
   //AANSPRAKELIJKHEIDSVERZEKERING
   homePageAansprakelijkheidsverzekeringElement: string = '[href*="/aansprakelijkheidsverzekering"][class*="insurances_tabLinkAction"]';
   berekenUwPremieAansprakelijkheidsVerzekeringClickButton: string = '[class*="inlineAnchor_button"][href*="/aansprakelijkheidsverzekering/premieberekenen-en-afsluiten"]';
+  zakelijkAansprakelijkheidsVerzekeringTextElement: string = '[class*="banner_title"]';
+  zakelijkAansprakelijkheidsVerzekeringText: string = "Aansprakelijkheidsverzekering voor zzp'ers";
 
   //ZORGVERZEKERING
   homePageZorgverzekeringElement: string = '[href*="/zorgverzekering"][class*="insurances_tabLinkAction"]';
@@ -52,10 +58,21 @@ export class HmPageElements {
   menuPageVerzekeringWijzigenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/mijnunive/polisoverzicht"]';
   menuPageUniveAlarmcentraleClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/klantenservice/alarmcentrale"]';
 
+  //ZAKELIJK MENU PAGE
+  zakelijkMenuPageUniveZzpClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zakelijk/zzp"]';
+  zakelijkMenuPageUniveAgrarierClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zakelijk/agrariers"]';
+  zakelijkMenuPageUniveGebouwenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zakelijk/gebouwenverzekering"]';
+  zakelijkMenuPageKlantenserviceAfspraakMakenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zakelijk/afspraak"]';
+  zakelijkMenuPageKlantenserviceKlachtIndienenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zakelijk/klachtindienen"]';
+  zakelijkMenuPageKlantenserviceInloggenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryMenu"] li:nth-child(1) [href*="https://zakelijk.unive.nl/QIS_Customer/my-customer"]';
+
   //KLANTENSERVICE
   gaNaarKlantenserviceButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Ga naar klantenservice"]';
+  gaNaarZakelijkKlantenserviceButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Naar Klantenservice"]';
   gaNaarMijnUniveButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Ga naar Mijn Univé"]';
+  gaNaarMijnUniveZakelijkButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Naar Mijn Univé Zakelijk"]';
   bekijkAlleContactMogelijkhedenButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Bekijk alle contactmogelijkheden"]';
+
 
   zorgNotaDeclarerenTitleTextElement: string = '[class*="detailContent_title"]';
   zorgNotaDeclarerenTitleText: string = "Uw zorgnota's declareren bij Univé";
@@ -73,9 +90,9 @@ export class HmPageElements {
   zoekenPageButtonInputElement: string = '[class="banner_searchBarSubmit"]';
   zoekenPageButtonClickElement: string = '[class="searchBar_submit"]';
   headerMijnUniveClickElement: string = '[data-toggle-menu="mijnunive"]';
-  headerMijnUniveZorgClickElement: string = '[title="Mijn Univé Zorg"]';
-  headerMijnUniveParticulierClickElement: string = '[title="Mijn Univé Particulier"]';
-  headerMijnUniveZakelijkClickElement: string = '[title="Mijn Univé Zakelijk"]';
+  headerMijnUniveZorgClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zorg"]';
+  headerMijnUniveParticulierClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Particulier"]';
+  headerMijnUniveZakelijkClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zakelijk"]';
 
   //FOOTER
   footerZorgNotaDeclarenClickElement: string = '[class="mainFooterContent_menuLink"][href*="zorgverzekering/declareren"]';
@@ -91,5 +108,29 @@ export class HmPageElements {
   klantenServiceTitleText: string = 'Klantenservice';
   zipcodePlaceTitleTextElement: string = '[class="locationFinder_title"]';
   zipcodePlaceTitleText: string = 'Zoek een Univé-winkel bij u in de buurt';
+  footerOndernemersScanClickElement: string = '[class="mainFooterContent_menuLink"][href*="ondernemersscan"]';
+  footerOndernemersScanH1TextElement: string = '[class="action_title"]';
+  footerKlantenServiceZakelijkTitleTextElement: string = '[itemprop="telephone"]';
 
+  //ZAKELIJK
+  gebouwH2TextElement: string = '[class="productsMain_title"]';
+  gebouwH2Text: string = 'Kies de dekking van uw gebouwenverzekering';
+  gebouwenBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Gebouwenverzekering"]';
+  agrarierH1TextElement: string = '[class="action_title"]';
+  agrarierH1Text: string = 'Bedrijfsverzekeringen voor agrariërs';
+  agrariersBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Agrariers"]';
+  zzpH2TextElement: string = '[class="detailContent_section"] h2';
+  zzpH2Text: string = "Verzeker uzelf tegen zakelijke risico's";
+  zzpBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="ZZP"]';
+  afspraakMakenH1TitleTextElement: string = '[class="boxed_title"]';
+  afspraakMakenTitleText: string = 'Afspraak zakelijk';
+  afspraakMakenBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Afspraak"]';
+  klachtIndienenBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Klachtindienen"]';
+  klachtIndienenH1TitleTextElement: string = '[class="detailContent_title"]';
+  klachtIndienenH1TitleText: string = 'Een klacht indienen als ondernemer';
+  mijnUniveZakelijkUsernameInputElement: string = '#_MyQISLogonEnterCredentials__1';
+  mijnUniveZakelijkPasswordInputElement: string = '#_MyQISLogonEnterCredentials__2';
+  mijnUniveZakelijkSubmitButtonClickElement: string = '#_MyQISLogonEnterCredentials_logonButton';
+  mijnUniveZakelijkHomePageH3TextElement: string = '[class="logIn_content"] [id="inloggen-mijnqis"]';
+  mijnUniveZakelijkHomePageH3Text: string = 'Mijn Unive Zakelijk';
 }

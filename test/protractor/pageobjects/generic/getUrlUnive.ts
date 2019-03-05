@@ -144,6 +144,30 @@ export class GetUrlUnive {
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv() + genericElements.zipcodePlaceZoeken;
       }
+      case homePageEnum.ZZP_ER: {
+        return this.getEnv() + genericElements.zakelijkZzp;
+      }
+      case homePageEnum.AGRARIER: {
+        return this.getEnv() + genericElements.zakelijkAgrarier;
+      }
+      case homePageEnum.GEBOUWEN: {
+        return this.getEnv() + genericElements.zakelijkGebouwen;
+      }
+      case homePageEnum.AFSPRAAK_MAKEN: {
+        return this.getEnv() + genericElements.afspraakMaken;
+      }
+      case homePageEnum.KLACHT_INDIENEN: {
+        return this.getEnv() + genericElements.klachtIndienen;
+      }
+      case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
+        return genericElements.mijnUniveZakelijk;
+      }
+      case homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE: {
+        return this.getEnv() + genericElements.mijnUniveZakelijkHomePage;
+      }
+      case homePageEnum.ONDERNEMERSCAN: {
+        return this.getEnv() + genericElements.ondernemersScan;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

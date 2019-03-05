@@ -98,6 +98,7 @@ export enum environmentUrl {
   ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering',
   ZORGVERZEKERING = 'zorgverzekering',
 
+
 }
 
 export enum durationEntrepreneur {
