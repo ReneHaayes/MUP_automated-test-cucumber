@@ -111,6 +111,7 @@ export class HmPageElements {
   footerOndernemersScanClickElement: string = '[class="mainFooterContent_menuLink"][href*="ondernemersscan"]';
   footerOndernemersScanH1TextElement: string = '[class="action_title"]';
   footerKlantenServiceZakelijkTitleTextElement: string = '[itemprop="telephone"]';
+  footerKlantenServiceZakelijkTitleText: string = 'Klantenservice Zakelijk';
 
   //ZAKELIJK
   gebouwH2TextElement: string = '[class="productsMain_title"]';

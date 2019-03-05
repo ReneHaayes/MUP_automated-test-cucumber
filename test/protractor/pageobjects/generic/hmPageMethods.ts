@@ -154,8 +154,8 @@ export class HmPageMethods {
         await genericMethods.clickOnElement(hmPageElements.footerOndernemersScanClickElement);
         break;
       }
-      case homePageEnum.KLANTENSERVICE: {
-        await genericMethods.clickOnElement(hmPageElements.footerKlantenServiceClickElement);
+      case homePageEnum.KLANTENSERVICE_ZAKELIJK: {
+        await genericMethods.verifyTextInElement(hmPageElements.footerKlantenServiceZakelijkTitleTextElement, hmPageElements.footerKlantenServiceZakelijkTitleText);
         break;
       }
       default: {
@@ -369,6 +369,10 @@ export class HmPageMethods {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ONDERNEMERSCAN);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.footerOndernemersScanH1TextElement, homePageEnum.ONDERNEMERSCAN);
+        break;
+      }
+      case homePageEnum.KLANTENSERVICE_ZAKELIJK: {
+        await genericMethods.verifyTextInElement(hmPageElements.footerKlantenServiceZakelijkTitleTextElement, hmPageElements.footerKlantenServiceZakelijkTitleText);
         break;
       }
       default: {
