@@ -1,10 +1,9 @@
 exports.config = {
-  seleniumAddress: 'https://selenium.do.unive.nl',
-
+  // seleniumAddress: 'https://selenium.do.unive.nl',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
   getPageTimeout: 60000,
-  // directConnect: true,
+  directConnect: true,
   restartBrowserBetweenTests: true,
 
   // suites: {
