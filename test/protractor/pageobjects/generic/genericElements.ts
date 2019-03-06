@@ -49,6 +49,7 @@ export class GenericElements {
   mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/my-customer';
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
   ondernemersScan: string = 'zakelijk/ondernemersscan';
+  ampAutoverzekering: string = 'amp/autoverzekering';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

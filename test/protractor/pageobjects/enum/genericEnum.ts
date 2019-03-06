@@ -97,6 +97,7 @@ export enum environmentUrl {
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering',
   ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering',
   ZORGVERZEKERING = 'zorgverzekering',
+  AMP = 'amp'
 
 
 }

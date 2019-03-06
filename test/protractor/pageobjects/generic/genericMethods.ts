@@ -21,6 +21,18 @@ let nawElements: NawElements = new NawElements();
 
 export class GenericMethods {
 
+  async clickOnCookie(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    // await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    })
+  }
+
   async clickOnElement(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);

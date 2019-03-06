@@ -1,7 +1,7 @@
 import {Given, Then, When} from 'cucumber';
 import {GenericMethods} from "../../pageobjects/generic/genericMethods";
 import {GenericElements} from "../../pageobjects/generic/genericElements";
-import {browser} from "protractor";
+// import {browser} from "protractor";
 import {genericEnum} from "../../pageobjects/enum/genericEnum";
 import {logToHtmlReport} from "../../support/hooks";
 
@@ -10,8 +10,10 @@ let genericElements: GenericElements = new GenericElements();
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);
-  if (browser.params.env.environment === 'pat') {
-    await genericMethods.clickOnElement(genericElements.cookieElement);
+  try {
+    await genericMethods.clickOnCookie(genericElements.cookieElement);
+  } catch (e) {
+
   }
 });
 

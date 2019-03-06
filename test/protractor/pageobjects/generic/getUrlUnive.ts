@@ -168,6 +168,9 @@ export class GetUrlUnive {
       case homePageEnum.ONDERNEMERSCAN: {
         return this.getEnv() + genericElements.ondernemersScan;
       }
+      case environmentUrl.AMP: {
+        return this.getEnv() + genericElements.ampAutoverzekering;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
