@@ -10,9 +10,9 @@ Feature: Check the license plate widget on the homepage.
 
     Examples:
       | pageName                   | licensePlate | button                        | dodont |
-      | home                       | 06-HN-DL     | license plate                 | do     |
-      | home                       | 06-HN-DL     | no license plate              | dont   |
-      | home                       | 06-HN-DL     | dont know                     | dont   |
+      | Home                       | 06-HN-DL     | license plate                 | do     |
+      | Home                       | 06-HN-DL     | no license plate              | dont   |
+      | Home                       | 06-HN-DL     | dont know                     | dont   |
       | autoverzekeringProductPage | 06-HN-DL     | license plate product page    | do     |
       | autoverzekeringProductPage | 06-HN-DL     | no license plate product page | dont   |
       | autoverzekeringProductPage | 06-HN-DL     | dont know product page        | dont   |

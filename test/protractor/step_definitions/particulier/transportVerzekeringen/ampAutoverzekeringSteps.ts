@@ -2,7 +2,7 @@ import {Then, When} from "cucumber";
 import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
 import {AutoVerzekeringElements} from "../../../pageobjects/particulier/transportVerzekeringen/autoVerzekeringElements";
 import {browser} from "protractor";
-import {environmentUrl} from "../../../pageobjects/enum/genericEnum";
+import {verzekeringPaginasEnum} from "../../../pageobjects/enum/genericEnum";
 import {GetUrlUnive} from "../../../pageobjects/generic/getUrlUnive";
 import {GenericElements} from "../../../pageobjects/generic/genericElements";
 
@@ -22,7 +22,7 @@ Then(/^Verify elements on premie berekenen amp page is shown$/, async () => {
   } catch (e) {
 
   }
-  const url: string = await getUrlUnive.getUrlUnive(environmentUrl.AUTOVERZEKERING_PAT);
+  const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.AUTOVERZEKERING_PAT);
   await genericMethods.verifyUrlContains(url);
   await genericMethods.waitForElementIsVisible(autoVerzekeringElements.licensePlateElement, browser.getPageTimeout);
 });

@@ -37,7 +37,7 @@ export enum aanvullendeOptiesEnum {
   PECH_HULP_ABROAD = 'pechHulpAbroad',
   RECHTSHULP_VERKEER = 'rechtsHulpVerkeer',
   OWN_CHOICE_DAMAGE_COMPANY = 'eigenKeuzeSchadeHerstelBedrijf',
-  ONGEVALLEN_VERZEKERING = 'ongevallen verzekering',
+  ONGEVALLEN_VERZEKERING = 'Ongevallenverzekering',
   AANSCHAFWAARDE_REGELING = 'aanschafwaarde regeling'
 }
 

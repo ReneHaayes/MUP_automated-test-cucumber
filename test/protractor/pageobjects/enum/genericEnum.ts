@@ -57,26 +57,31 @@ export enum genericEnum {
   EXTRA = 'EXTRA'
 }
 
-export enum environmentUrl {
-  HOME = 'home',
+export enum verzekeringPaginasEnum {
+  HOME = 'Home',
+  ALLE_VERZEKERINGEN = 'alle verzekeringen',
   HOME_BUS = 'business',
   HOME_PAT = 'pat',
   HOME_TSTPROJ = 'tstProj',
   AUTOVERZEKERING_PAT = 'autoverzekering',
   ZZPFLEX_PAT = 'zzpFlex',
+  ANNULERINGSVERZEKERING = 'annuleringsverzekering',
   AANSPRAKELIJKHEIDSVERZEKERING_PAT = 'aansprakelijkheidsVerzekering',
   AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPage',
   WOONVERZEKERING_PAT = 'woonVerzekering',
   WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPp',
-  BROMFIETSVERZEKERING_PAT = 'bromfietsVerzekering',
-  SCOOTERVERZEKERING_PAT = 'scooterVerzekering',
+  BROMFIETSVERZEKERING_PAT = 'bromfietsverzekering',
+  SCOOTERVERZEKERING_PAT = 'scooterverzekering',
   MOTORVERZEKERING_PAT = 'motorVerzekering',
   QUADVERZEKERING_PAT = 'quadVerzekering',
   TRIKEVERZEKERING_PAT = 'trikeVerzekering',
   ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
   BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering',
+  REISVERZEKERING = 'reisverzekering',
+  DOORLOPENDEREISVERZEKERING_PP = 'doorlopende-reisverzekering',
   DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
   KORTLOPENDEREISVERZEKERING = 'kortlopende reisverzekering',
+  KORTLOPENDEREISVERZEKERING_PP = 'kortlopende-reisverzekering',
   PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk',
   ROERENDEZAKENVERZEKERING_ZAKELIJK = 'roerende zakenverzekering',
   KORTLOPENDEANNULERINGSVERZEKERING = 'kortlopende annuleringsverzekering',
@@ -89,14 +94,16 @@ export enum environmentUrl {
   FIETSVERZEKERING = 'fietsverzekering',
   KOSTBAARHEDEN_VERZEKERING = 'kostbaarheden verzekering',
   OLDTIMERVERZEKERING = 'oldtimerverzekering',
-  ONGEVALLENVERZEKERING = 'ongevallen verzekering',
+  ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
+  ONGEVALLENVERZEKERING_PP = 'ongevallenverzekering',
   RECHTSBIJSTANDVERZEKERING = 'rechtsbijstand verzekering',
   SCOOTMOBIELVERZEKERING = 'scootmobiel verzekering',
   EIGENVERVOERVERZEKERING = 'eigen vervoer verzekering',
   ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'zakelijk rechtsbijstandverzekering',
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering',
   ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering',
-  ZORGVERZEKERING = 'zorgverzekering',
+  ZORGVERZEKERING = 'Zorgverzekering',
+  COLLECTIEVE_ZORGVERZEKERING = 'Collectieve Zorgverzekering',
   AMP = 'amp'
 
 
@@ -160,4 +167,8 @@ export enum fuelTypEnum {
   DIESEL = 'diesel',
   ELEKTRISCH = 'elektrish',
   LPG = 'lpg'
+}
+
+export enum breadCrumbEnum {
+  COLLECTIEF = 'Collectief'
 }

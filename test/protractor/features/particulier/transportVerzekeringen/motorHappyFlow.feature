@@ -11,7 +11,7 @@ Feature: Happy flow for motorverzekering, quadverzekering and trikeverzekering.
       | damageFreeYears | 2                |
     And I enter step two page of motor with
       | basisDekking      | waPlus                 |
-      | aanvullendeOpties | ongevallen verzekering |
+      | aanvullendeOpties | Ongevallenverzekering |
       | accessoires       | acc tm 2500            |
       | ownRisk           | ownRisk500             |
     And I enter step three page of motor with

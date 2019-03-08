@@ -9,8 +9,8 @@ Feature: Check the woonverzekering widget on the homepage.
 
     Examples:
       | pageName          | button                                     | dodont | persona |
-      | home              | postcode en huisnummer homepage filled     | do     | ronaldo |
-      | home              | homepage not filled                        | dont   | ronaldo |
+      | Home              | postcode en huisnummer homepage filled     | do     | ronaldo |
+      | Home              | homepage not filled                        | dont   | ronaldo |
       | woonVerzekeringPp | postcode en huisnummer product page filled | do     | ronaldo |
       | woonVerzekeringPp | product page not filled                    | dont   | ronaldo |
 

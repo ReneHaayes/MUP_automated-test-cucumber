@@ -6,7 +6,7 @@ import {browser} from "protractor";
 import {ReisVerzekeringElements} from "../particulier/vrijeTijdsVerzekeringen/reisVerzekeringElements";
 import {ProductPageElements} from "./productPageElements";
 import {GetUrlUnive} from "./getUrlUnive";
-import {environmentUrl} from "../enum/genericEnum";
+import {verzekeringPaginasEnum} from "../enum/genericEnum";
 import {ZzpFlexElements} from "../zakelijk/bedrijfsActiviteitenVerzekeringen/zzpFlexElements";
 import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijk/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
 import {EigenVervoerVerzekeringElements} from "../zakelijk/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
@@ -307,25 +307,25 @@ export class HmPageMethods {
   async verifyElementIsShownOnPremieBerekenenBusinessPage(input: string) {
     switch (input) {
       case homePageEnum.ARBEIDSONGESCHIKTHEID: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.ZZPFLEX_PAT);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZZPFLEX_PAT);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(zzpFlexElements.sliderElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.RECHTSBIJSTAND: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.ZAKELIJK_RECHTSBIJSTANDVERZEKERING);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_RECHTSBIJSTANDVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.activityZZPClickElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.EIGEN_VERVOER: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.EIGENVERVOERVERZEKERING);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.EIGENVERVOERVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.activityEigenVervoerSelectElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.zakelijkAansprakelijkheidsVerzekeringTextElement, hmPageElements.zakelijkAansprakelijkheidsVerzekeringText);
         break;
@@ -412,19 +412,19 @@ export class HmPageMethods {
   async verifyElementIsShownOnPremieBerekenenPage(input: string) {
     switch (input) {
       case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
-        const url: string = getUrlUnive.getUrlUnive(environmentUrl.AANSPRAKELIJKHEIDSVERZEKERING_PAT);
+        const url: string = getUrlUnive.getUrlUnive(verzekeringPaginasEnum.AANSPRAKELIJKHEIDSVERZEKERING_PAT);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(aansprakelijkheidsVerzekerElements.familyCompositionOnePersonElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.ZORGVERZEKERING: {
-        const url: string = getUrlUnive.getUrlUnive(environmentUrl.ZORGVERZEKERING);
+        const url: string = getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZORGVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(hmPageElements.zorgPremieBerekenPageCheckElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.REISVERZEKERING: {
-        const url: string = getUrlUnive.getUrlUnive(environmentUrl.DOORLOPENDEREISVERZEKERING);
+        const url: string = getUrlUnive.getUrlUnive(verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.whoToInsureMySelfClickElement, browser.getPageTimeout);
         break;
@@ -438,7 +438,7 @@ export class HmPageMethods {
   async verifyElementIsShownOnProductPage(input: string) {
     switch (input) {
       case homePageEnum.AUTOVERZEKERING: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.AUTOVERZEKERING_PRODUCT_PAGE_PAT);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.AUTOVERZEKERING_PRODUCT_PAGE_PAT);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(productPageElements.autoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(productPageElements.autoVerzekeringBreadcrumTextElement, homePageEnum.AUTOVERZEKERING);
@@ -446,14 +446,14 @@ export class HmPageMethods {
         break;
       }
       case homePageEnum.WOONVERZEKERING: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.WOONVERZEKERING_PRODUCT_PAGE_PAT);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.WOONVERZEKERING_PRODUCT_PAGE_PAT);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(productPageElements.woonverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(productPageElements.woonVerzekeringBreadcrumTextElement, homePageEnum.WOONVERZEKERING);
         break;
       }
       case homePageEnum.CARAVANVERZEKERING: {
-        const url: string = await getUrlUnive.getUrlUnive(environmentUrl.CARAVANVERZEKERING_PP);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.CARAVANVERZEKERING_PP);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(productPageElements.caravanVerzekeringBreadcrumTextElement, productPageElements.caravanVerzekeringTextToVerify);
         await genericMethods.verifyTextInElement(productPageElements.caravanVerzekeringH2Title, homePageEnum.CARAVANVERZEKERING);

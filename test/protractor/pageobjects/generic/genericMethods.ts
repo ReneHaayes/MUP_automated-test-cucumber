@@ -82,9 +82,23 @@ export class GenericMethods {
     await expect(currentUrl).to.have.string(url);
   }
 
+  async verifyUrlContainsIgnoreCase(url: string) {
+    const currentUrl: string = await browser.getCurrentUrl();
+    await expect(currentUrl).to.containIgnoreCase(url);
+  }
+
+
   async verifyUrlIs(url: string) {
     const currentUrl: string = await browser.getCurrentUrl();
     await expect(currentUrl).to.equal(url);
+  }
+
+  async verifyBreadcrumbOnPosition(breadCrumb: string, position: number) {
+    try {
+    await this.waitForElementIsVisible('[class="breadcrumb_list"] li:nth-child('+position+') [title="'+breadCrumb+'"]', browser.getPageTimeout);
+    } catch (e) {
+      throw new Error('Breadcrumb "'+breadCrumb+'" is not shown on position: ' +position);
+    }
   }
 
   async waitForElementIsVisibleTyPage(selector: string, waitFor: number) {
@@ -203,6 +217,13 @@ export class GenericMethods {
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const selectorToString: string = await this.getText(selector);
     await expect(selectorToString).to.equal(assertionText);
+  }
+
+  async verifyTextInElementIgnoreCase(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getText(selector);
+    await expect(selectorToString).to.equalIgnoreCase(assertionText);
   }
 
   async verifyTextInElementTyPage(selector: string, assertionText: string) {

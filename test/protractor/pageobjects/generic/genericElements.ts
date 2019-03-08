@@ -1,5 +1,5 @@
 export class GenericElements {
-
+  alleVerzekeringen: string = 'verzekeringen';
   autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
   zzpFlexPat: string = 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
   aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
@@ -50,6 +50,7 @@ export class GenericElements {
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
   ondernemersScan: string = 'zakelijk/ondernemersscan';
   ampAutoverzekering: string = 'amp/autoverzekering';
+  collectieveZorgVerzekering: string = 'zorgverzekering/collectief';
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';
