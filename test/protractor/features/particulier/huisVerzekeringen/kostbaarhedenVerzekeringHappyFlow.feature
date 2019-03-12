@@ -3,7 +3,7 @@
 Feature: Happy flow for 'kostbaarheden verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the kostbaarheden verzekering page of the Unive website
+    Given I am on the Kostbaarhedenverzekering page of the Unive website
     When I enter step one and step two page of kostbaarheden verzekeringen with:
       | persona       | <persona> |
       | estimateValue | 15000     |

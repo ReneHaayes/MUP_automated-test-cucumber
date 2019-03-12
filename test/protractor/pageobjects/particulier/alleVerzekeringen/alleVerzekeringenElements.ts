@@ -25,6 +25,16 @@ export class AlleVerzekeringenElements {
   camperVerzekeringH1TitleText: string = 'Camper verzekering';
   caravanVerzekeringH1TitleText: string = 'Caravan verzekering';
   bromfietsVerzekeringH1TitleText: string = 'Bromfiets\n' + 'verzekering';
+  elektrischeFietsVerzekeringH1TitleText: string = 'Elektrische\n' + 'fietsverzekering';
+  scootmobielVerzekeringH1TitleText: string = 'Scootmobiel\n' + 'verzekering';
+  inboedelVerzekeringH1TitleText: string = 'Inboedel verzekering';
+  kostbaarhedenVerzekeringH1TitleText: string = 'Kostbaarheden\n' + 'verzekering';
+  rechtsbijstandVerzekeringH1TitleText: string = 'Rechtsbijstand\n' + 'verzekering';
+  aansprakelijkheidsVerzekeringH1TitleText: string = 'Aansprakelijk-\n' + 'heids verzekering';
+  lijfrenteVerzekeringH1TitleTextElement: string = '[class="action_title"]';
+  lijfrenteVerzekeringH1TitleText: string = 'Direct ingaande lijfrente';
+  mijnGemakH1TitleText: string = 'Meer zorg en minder zorgen';
+
 
   //BEREKEN UW PREMIE
   zorgVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw zorgpremie"]';
@@ -36,21 +46,19 @@ export class AlleVerzekeringenElements {
   bootVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bootverzekering/premieberekenen-en-afsluiten"]';
   autoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/autoverzekering/premieberekenen-en-afsluiten"]';
   bromfietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bromfietsverzekering/premieberekenen-en-afsluiten"]';
+  scooterVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/scooterverzekering/premieberekenen-en-afsluiten"]';
+  motorVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/motorverzekering/premieberekenen-en-afsluiten"]';
+  fietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/fietsverzekering/premieberekenen-en-afsluiten"]';
+  elektrischeFietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="https://www.unive.nl/fietsverzekering/premieberekenen-en-afsluiten?FIETSTYPE=elektrischeFiets"]';
+  scootmobielVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/scootmobielverzekering/premieberekenen-en-afsluiten"]';
+  oldtimerVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/oldtimerverzekering/premieberekenen-en-afsluiten"]';
+  woonVerzekeringBerekenUwPremieButtonClickElement: string = '[class="simpleWidget_submit"]';
+  inboedelVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken nu uw premie"][href="/woonverzekering/premieberekenen-en-afsluiten"]';
+  kostbaarhedenVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/kostbaarhedenverzekering/premieberekenen-en-afsluiten"]';
+  rechtsbijstandVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken nu uw premie"][href="/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
+  aansprakelijkheidsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/aansprakelijkheidsverzekering/premieberekenen-en-afsluiten"]';
+  uitvaartVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/uitvaartverzekering/afspraak"]';
+  mijngemakVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href="http://unive.mijngemak.nl/"]';
 
-
-  //BUTTONPAGES
-  uwGezondheidZorgVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Zorgverzekering"]';
-  uwGezondheidCollectieveZorgVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Collectieve Zorgverzekering"]';
-  uwGezondheidOngevallenVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Ongevallenverzekering"]';
-  uwVrijeTijdReisVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Reisverzekering"]';
-  uwVrijeTijdDoorlopendeReisVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Doorlopende reisverzekering"]';
-  uwVrijeTijdKortlopendeReisVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Kortlopende reisverzekering"]';
-  uwVrijeTijdAnnuleringsVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Annuleringsverzekering"]';
-  uwVrijeTijdCamperVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Camperverzekering"]';
-  uwVrijeTijdCaravanVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Caravanverzekering"]';
-  uwVrijeTijdBootVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Bootverzekering"]';
-  uwVervoerAutoVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Autoverzekering"]';
-  uwVervoerBromfietsVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Bromfietsverzekering"]';
-  uwVervoerScooterVerzekeringClickElement: string = '[class="allInsurances_listItemLink"][title="Scooterverzekering"]';
 
 }

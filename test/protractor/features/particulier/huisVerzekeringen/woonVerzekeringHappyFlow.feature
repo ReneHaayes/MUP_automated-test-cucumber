@@ -3,7 +3,7 @@
 Feature: Happy flow for 'woonVerzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the woonVerzekering page of the Unive website
+    Given I am on the Woonverzekering page of the Unive website
     When I enter step one page of woonverzekering for persona <persona>
     And I fill in woningkenmerken with:
       | persona      | <persona> |

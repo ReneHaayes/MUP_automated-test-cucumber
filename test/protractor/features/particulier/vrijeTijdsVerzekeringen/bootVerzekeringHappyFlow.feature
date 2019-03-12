@@ -3,7 +3,7 @@
 Feature: Happy flow for 'bootverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the bootverzekering page of the Unive website
+    Given I am on the Bootverzekering page of the Unive website
     When I enter step one and click next on step two of bootverzekering with:
       | boatName | <boatName> |
     And I enter step three page of bootverzekering for boat <boatName>

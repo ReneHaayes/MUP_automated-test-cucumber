@@ -3,7 +3,7 @@
 Feature: Happy flow for 'fiets verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the fietsverzekering page of the Unive website
+    Given I am on the Fietsverzekering page of the Unive website
     When I enter step one and step two page of fiets verzekeringen for persona <persona> with:
       | purchasePrice | 1200 |
     And I enter step three page of fiets verzekeringen with:

@@ -3,7 +3,7 @@
 Feature: Happy flow for 'caravan verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the caravanverzekering page of the Unive website
+    Given I am on the Caravanverzekering page of the Unive website
     When I enter step one and click next on step two of caravan verzekering
     And I enter step three page of caravanverzekering for <persona> with:
       | weight        | 400  |

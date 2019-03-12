@@ -3,7 +3,7 @@
 Feature: Happy flow for 'scootMobielVerzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the scootmobiel verzekering page of the Unive website
+    Given I am on the Scootmobielverzekering page of the Unive website
     When I enter step one page and click next on step two of scootmobiel verzekering with:
       | purchasePrice | 1500 |
     And I enter step three page of scootmobiel verzekering with:

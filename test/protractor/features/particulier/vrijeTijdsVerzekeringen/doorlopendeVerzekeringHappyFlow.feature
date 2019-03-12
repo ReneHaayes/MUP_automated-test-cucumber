@@ -14,5 +14,5 @@
 
     Examples:
       | persona | page                               |
-      | ronaldo | doorlopende reisverzekering        |
+      | ronaldo | Doorlopende reisverzekering        |
       | ronaldo | doorlopende annuleringsverzekering |

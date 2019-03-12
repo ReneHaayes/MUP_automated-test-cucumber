@@ -27,5 +27,5 @@ Feature: Happy flow for 'Bromfiets Verzekering' and 'Scooter Verzekering'
 
     Examples:
       | page                 | persona | licensePlate |
-      | bromfietsverzekering | ronaldo | 12-FRP-3     |
-      | scooterverzekering   | ronaldo | F-169-NS     |
+      | Bromfietsverzekering | ronaldo | 12-FRP-3     |
+      | Scooterverzekering   | ronaldo | F-169-NS     |

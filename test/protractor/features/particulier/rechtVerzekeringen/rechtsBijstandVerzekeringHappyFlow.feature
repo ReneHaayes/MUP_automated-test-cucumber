@@ -3,7 +3,7 @@
 Feature: Happy flow for 'rechtsBijstandVerzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the rechtsbijstand verzekering page of the Unive website
+    Given I am on the Rechtsbijstandverzekering page of the Unive website
     When I enter step one page of rechtsbijstandverzekering for family composition of: one person
     And I enter details of <persona> in your data page of rechtsbijstand verzekeringen
     And I fill in almost insured page with:

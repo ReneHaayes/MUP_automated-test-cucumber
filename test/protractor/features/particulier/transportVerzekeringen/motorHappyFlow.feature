@@ -32,6 +32,6 @@ Feature: Happy flow for motorverzekering, quadverzekering and trikeverzekering.
 
     Examples:
       | page             | persona | licensePlate |
-      | motorVerzekering | ronaldo | MP-TT-99     |
-      | quadVerzekering  | ronaldo | 97-XF-TK     |
-      | trikeVerzekering | ronaldo | 21-PLN-1     |
+      | Motorverzekering | ronaldo | MP-TT-99     |
+      | Quadverzekering  | ronaldo | 97-XF-TK     |
+      | Trikeverzekering | ronaldo | 21-PLN-1     |
