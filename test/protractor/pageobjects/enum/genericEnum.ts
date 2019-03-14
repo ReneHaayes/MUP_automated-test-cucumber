@@ -60,6 +60,7 @@ export enum genericEnum {
 export enum verzekeringPaginasEnum {
   HOME = 'Home',
   ALLE_VERZEKERINGEN = 'alle verzekeringen',
+  ALLE_VERZEKERINGEN_ZAKELIJK = 'alle verzekeringen zakelijk',
   HOME_BUS = 'business',
   HOME_PAT = 'pat',
   HOME_TSTPROJ = 'tstProj',
@@ -74,10 +75,14 @@ export enum verzekeringPaginasEnum {
   BROMFIETSVERZEKERING_PAT = 'Bromfietsverzekering',
   SCOOTERVERZEKERING_PAT = 'Scooterverzekering',
   MOTORVERZEKERING_PAT = 'Motorverzekering',
+  ZAKELIJK_MOTOVERZEKERING = 'Zakelijke motorverzekering',
   QUADVERZEKERING_PAT = 'Quadverzekering',
   TRIKEVERZEKERING_PAT = 'Trikeverzekering',
   ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
-  BEDRIJFSAUTOVERZEKERING = 'bedrijfs autoverzekering',
+  BEDRIJFSAUTOVERZEKERING = 'Bedrijfsautoverzekering',
+  BEDRIJFSSCHADEVERZEKERING = 'Bedrijfsschadeverzekering',
+  BEROEPSAANSPRAKELIJKHEID = 'Beroepsaansprakelijkheid',
+  BESTUURDERSAANSPRAKELIJKHEID = 'Bestuurdersaansprakelijkheid',
   REISVERZEKERING = 'Reisverzekering',
   DOORLOPENDEREISVERZEKERING_PP = 'doorlopende-reisverzekering',
   DOORLOPENDEREISVERZEKERING = 'Doorlopende reisverzekering',
@@ -102,10 +107,10 @@ export enum verzekeringPaginasEnum {
   RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
   RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',
   SCOOTMOBIELVERZEKERING = 'Scootmobielverzekering',
-  EIGENVERVOERVERZEKERING = 'eigen vervoer verzekering',
-  ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'zakelijk rechtsbijstandverzekering',
-  ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'zakelijk aansprakelijkheidsverzekering',
-  ZAKELIJK_TRACTORVERZEKERING = 'zakelijk tractorverzekering',
+  EIGENVERVOERVERZEKERING = 'Eigen vervoerverzekering',
+  ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'Zakelijke rechtsbijstandverzekering',
+  ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'Bedrijfsaansprakelijkheidsverzekering',
+  ZAKELIJK_TRACTORVERZEKERING = 'Tractorverzekering',
   ZORGVERZEKERING = 'Zorgverzekering',
   COLLECTIEVE_ZORGVERZEKERING = 'Collectieve Zorgverzekering',
   AMP = 'amp',
@@ -117,7 +122,13 @@ export enum verzekeringPaginasEnum {
   LIJFRENTEVERZEKERING = 'lijfrenteverzekering',
   UITVAARTVERZEKERING = 'uitvaartverzekering',
   OVERLIJDENSRISICOVERZEKERING = 'overlijdensrisicoverzekering',
-  MIJNGEMAK = 'MijnGemak'
+  MIJNGEMAK = 'MijnGemak',
+  CONSTRUCTIE_ALLRISK_VERZEKERING = 'Constructie All Riskverzekering',
+  GEBOUWENVERZEKERING = 'Gebouwenverzekering',
+  HANDELAARSKENTEKENVERZEKERING = 'Handelaarskentekenverzekering',
+  MILIEUSCHADEVERZEKERING = 'Milieuschadeverzekering',
+  VRACHTAUTOVERZEKERING = 'Vrachtautoverzekering',
+  WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering'
 
 
 }
@@ -189,6 +200,13 @@ export enum breadCrumbEnum {
   LIJFRENTEVERZEKERING = 'Lijfrenteverzekering',
   UITVAARTVERZEKERING = 'Uitvaartverzekering',
   OVERLIJDENSRISICOVERZEKERING = 'Overlijdensrisicoverzekering',
-  MIJN_GEMAK = 'Mijn gemak'
+  MIJN_GEMAK = 'Mijn gemak',
+  ZAKELIJK = 'Zakelijk',
+  AANSPRAKELIJKHEIDSVERZEKERINGBEDRIJVEN = 'Aansprakelijkheidsverzekering bedrijven',
+  BEROEPSAANSPRAKELIJKHEIDSVERZEKERING = 'Beroepsaansprakelijkheidsverzekering',
+  BESTUURDERSAANSPRAKELIJKHEIDSVERZEKERING = 'Bestuurdersaansprakelijkheidsverzekering',
+  CONSTRUCTIE_ALLRISK_VERZEKERING = 'Constructie all-riskverzekering',
+  PERSONENAUTOVERZEKERING = 'Personenautoverzekering'
+
 
 }

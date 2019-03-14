@@ -1,5 +1,6 @@
 export class GenericElements {
   alleVerzekeringen: string = 'verzekeringen';
+  alleVerzekeringenZakelijk: string = 'zakelijk/verzekeringen';
   autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
   zzpFlexPat: string = 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
   aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
@@ -13,10 +14,16 @@ export class GenericElements {
   trikeVerzekeringPat: string = 'motorverzekering/premieberekenen-en-afsluiten-trike';
   zorgeloosOnlineVerzekeringPat: string = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
+  bedrijfsAutoVerzekeringPp: string = 'zakelijk/bedrijfsautoverzekering';
+  bedrijfsSchadeVerzekeringPp: string = 'zakelijk/bedrijfsschadeverzekering';
+  constructieAllRiskVerzekeringPp: string = 'zakelijk/constructieallriskverzekering';
+  beroepsAansprakelijkheidVerzekeringPp: string = 'zakelijk/beroepsaansprakelijkheidsverzekering';
+  bestuurdersAansprakelijkheidVerzekeringPp: string = 'zakelijk/bestuurdersaansprakelijkheidsverzekering';
   businessHomePage: string = 'zakelijk';
   doorlopendeReisVerzekering: string = 'doorlopende-reisverzekering/premieberekenen-en-afsluiten';
   kortlopendeReisVerzekering: string = 'kortlopende-reisverzekering/premieberekenen-en-afsluiten';
   personenAutoVerzekeringZakelijk: string = 'zakelijk/personenautoverzekering/premieberekenen-en-afsluiten';
+  personenAutoVerzekeringZakelijkPp: string = 'zakelijk/personenautoverzekering';
   roerendeZakenVerzekeringZakelijk: string = 'zakelijk/roerendezakenverzekering/premieberekenen-en-afsluiten';
   kortlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten-kav';
   zorgeloosOnlineVerzekeringZakelijk: string = 'zakelijk/zorgeloosonline/premieberekenen-en-afsluiten';
@@ -32,9 +39,13 @@ export class GenericElements {
   rechtsBijstandVerzekering: string = 'rechtsbijstandverzekering/premieberekenen-en-afsluiten';
   scootMobielVerzekering: string = 'scootmobielverzekering/premieberekenen-en-afsluiten';
   eigenVervoerVerzekering: string = 'zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten';
+  eigenVervoerVerzekeringPp: string = 'zakelijk/eigenvervoerverzekering';
   zakelijkRechtsBijstandVerzekering: string = 'zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten';
+  zakelijkRechtsBijstandVerzekeringPp: string = 'zakelijk/rechtsbijstandverzekering';
   zakelijkAansprakelijkheidsVerzekering: string = 'zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten';
+  zakelijkAansprakelijkheidsVerzekeringPp: string = 'zakelijk/aansprakelijkheidsverzekeringbedrijven';
   zakelijkTractorVerzekering: string = 'zakelijk/tractorverzekering/premieberekenen-en-afsluiten';
+  zakelijkTractorVerzekeringPp: string = 'zakelijk/tractorverzekering';
   zorgVerzekering: string = 'zorgverzekering/premieberekenen-en-afsluiten';
   zorgNotaDeclareren: string = 'zorgverzekering/declareren';
   univeAlarmCentrale: string = 'klantenservice/alarmcentrale';
@@ -51,6 +62,12 @@ export class GenericElements {
   ondernemersScan: string = 'zakelijk/ondernemersscan';
   ampAutoverzekering: string = 'amp/autoverzekering';
   collectieveZorgVerzekering: string = 'zorgverzekering/collectief';
+  handelaarsKentekenVerzekering: string = 'zakelijk/handelaarskentekenverzekering';
+  milieSchadeVerzekering: string = 'zakelijk/milieuschadeverzekering';
+  zakelijkMotorVerzekering: string = 'zakelijk/motorverzekering';
+  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtautoverzekering';
+  werkmateriaalVerzekering: string = 'zakelijk/werkmaterieelverzekering';
+
 
   //COOKIE
   cookieElement: string = '#consent-popup-close-modal';

@@ -1,23 +1,10 @@
 exports.config = {
-  // seleniumAddress: 'https://selenium.do.unive.nl',
+  // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 60000,
+  getPageTimeout: 15000,
   directConnect: true,
   restartBrowserBetweenTests: true,
-
-  // suites: {
-  //   aansprakelijkheidsVerzekering: './protractor/features/aansprakelijkheidsVerzekering/*.feature',
-  //   autoVerzekering: './protractor/features/autoVerzekering/*.feature',
-  //   moped: './protractor/features/moped/*.feature',
-  //   motor: './protractor/features/motor/*.feature',
-  //   woonVerzekering: './protractor/features/woonVerzekering/*.feature',
-  //   zzpFlex: './protractor/features/zzpFlex/*.feature',
-  //   zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature',
-  //   reisVerzekering: './protractor/features/reisVerzekering/*.feature',
-  //   roerendeZakenVerzekering: './protractor/features/roerendeZakenVerzekering/*.feature',
-  //   bootVerzekering: './protractor/features/bootVerzekering/*.feature'
-  // },
 
   specs: [
     // 'async_await.js',
@@ -49,6 +36,7 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
+
   onPrepare: () => {
   protractor.browser.manage().window().maximize();
 },
@@ -63,9 +51,10 @@ afterLaunch: () => {
   multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);
 },
 
+
+
 plugins: [{
   package: require.resolve('protractor-multiple-cucumber-html-reporter-plugin'),
-  // package: 'protractor-multiple-cucumber-html-reporter-plugin',
   options: {
     // read the options part for more options
     automaticallyGenerateReport: false,

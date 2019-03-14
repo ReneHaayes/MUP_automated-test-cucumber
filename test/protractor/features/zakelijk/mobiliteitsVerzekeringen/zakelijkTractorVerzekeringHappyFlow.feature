@@ -3,7 +3,7 @@
 Feature: Happy flow for 'zakelijk tractor verzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the zakelijk tractorverzekering page of the Unive website
+    Given I am on the Tractorverzekering page of the Unive website
     When I enter step one page and click next on step two of zakelijk tractorverzekeringen with:
       | value    | 15000 |
       | maxSpeed | 31-40 |

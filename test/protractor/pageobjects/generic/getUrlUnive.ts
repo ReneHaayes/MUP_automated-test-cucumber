@@ -15,6 +15,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ALLE_VERZEKERINGEN: {
         return this.getEnv() + genericElements.alleVerzekeringen;
       }
+      case verzekeringPaginasEnum.ALLE_VERZEKERINGEN_ZAKELIJK: {
+        return this.getEnv() + genericElements.alleVerzekeringenZakelijk;
+      }
       case verzekeringPaginasEnum.HOME_BUS: {
         return this.getEnv() + genericElements.businessHomePage;
       }

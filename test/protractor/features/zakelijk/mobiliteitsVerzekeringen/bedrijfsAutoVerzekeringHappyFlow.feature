@@ -3,7 +3,7 @@
 Feature: Happy flow for 'Bedrijfs autoverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
-    Given I am on the bedrijfs autoverzekering page of the Unive website
+    Given I am on the Bedrijfsautoverzekering page of the Unive website
     When I enter step one page of bedrijfs autoverzekeringen for <company> with
       | licensePlate    | <licensePlate> |
       | yearlyMileage   | 12000tot20000  |

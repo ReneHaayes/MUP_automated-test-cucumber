@@ -14,6 +14,7 @@ export class AlleVerzekeringenElements {
   uwOnlineVeiliigheidSelectElement: string = '9';
 
   //TITLE
+  hmPageTitleElement: string = '[class="detailContent_title"]';
   productPageH1TitleTextElement: string = '[class="heroHeader_textContainer"] h1';
   zorgVerzekeringPageH1TitleText: string = 'Zorgverzekering';
   collectieveZorgVerzekeringH1TitleTextElement: string = '[class="actionSidebar_title"]';
