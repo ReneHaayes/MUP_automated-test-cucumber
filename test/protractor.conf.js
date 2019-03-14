@@ -2,7 +2,7 @@ exports.config = {
   // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 15000,
+  getPageTimeout: 60000,
   directConnect: true,
   restartBrowserBetweenTests: true,
 
