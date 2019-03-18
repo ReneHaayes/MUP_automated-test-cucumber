@@ -21,8 +21,9 @@ exports.config = {
     },
     'chromeOptions': {
       'args': [
-        // "headless",
-        // "disable-gpu",
+        // "--headless",
+        // "--disable-gpu",
+        // "--start-maximized",
         "disable-extensions"]
     }
   },
