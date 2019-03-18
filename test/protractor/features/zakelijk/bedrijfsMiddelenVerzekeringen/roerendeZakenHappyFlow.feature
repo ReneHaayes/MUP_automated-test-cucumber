@@ -11,7 +11,7 @@ Feature: Happy flow for 'roerende zaken verzekering'
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    Then Thank you page for zakelijk is shown
+    Then The thank you page for <persona> is shown
 
     Examples:
       | persona | company  |
