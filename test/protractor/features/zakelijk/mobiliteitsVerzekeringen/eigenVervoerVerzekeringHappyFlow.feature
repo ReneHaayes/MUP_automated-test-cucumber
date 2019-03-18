@@ -14,7 +14,7 @@ Feature: Happy flow for 'zakelijk eigen vervoer verzekering'
       | criminalHistory  | no |
       | damageHistory    | no |
     Then Thank you page for zakelijk is shown
-
+    
     Examples:
       | persona | company  |
       | ronaldo | facebook |

@@ -17,7 +17,7 @@ Feature: Happy flow for 'Bedrijfs autoverzekering'
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    Then Thank you page for zakelijk is shown
+    Then The thank you page for <persona> is shown
 
     Examples:
       | licensePlate | company         | persona |
