@@ -21,7 +21,7 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | Milieuschadeverzekering               |
       | Personenautoverzekering               |
       | Zakelijke motorverzekering            |
-      | Zakelijke wrechtsbijstandverzekering  |
+      | Zakelijke rechtsbijstandverzekering  |
       | Tractorverzekering                    |
       | Vrachtautoverzekering                 |
       | Werkmaterieelverzekering              |

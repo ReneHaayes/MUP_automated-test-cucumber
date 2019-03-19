@@ -3,7 +3,7 @@
 Feature: Check if the home and alle verzekeringen page shows the buttons correctly.
 
   Scenario Outline: Click on the page elements and verify if the outcome is correct.
-    Given I am on the <page> page of the Unive website
+    Given I am on the Home page of the Unive website
     When I press the button <button> on the homepage
     Then Verify element on premie berekenen page for <button> is shown
 

@@ -1,6 +1,6 @@
 @homePageZakelijk
 @regressie
-Feature: Check if the homepage shows the buttons correctly.
+Feature: Check if the business homepage shows the buttons correctly.
 
   Scenario Outline: Click on the page elements and verify if the outcome is correct.
     Given I am on the business page of the Unive website
