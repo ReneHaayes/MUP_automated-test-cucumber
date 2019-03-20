@@ -12,8 +12,8 @@ exports.config = {
   ],
   capabilities: {
     browserName: 'chrome',
-    // shardTestFiles: true,
-    // maxInstances: 1,
+    shardTestFiles: true,
+    maxInstances: 6,
 
     loggingPrefs: {
       'driver': 'INFO',
@@ -21,9 +21,9 @@ exports.config = {
     },
     'chromeOptions': {
       'args': [
-        // "--headless",
-        // "--disable-gpu",
-        // "--start-maximized",
+        "--headless",
+        "--disable-gpu",
+        "--window-size=1920,1080",
         "disable-extensions"]
     }
   },
@@ -75,7 +75,7 @@ plugins: [{
   }
 }],
 
-cucumberOpts: {
+  cucumberOpts: {
   require: [
     './protractor/step_definitions/*.ts',
     './protractor/step_definitions/**/*.ts',

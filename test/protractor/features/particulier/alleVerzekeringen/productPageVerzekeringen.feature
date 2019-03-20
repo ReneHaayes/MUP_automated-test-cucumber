@@ -38,7 +38,7 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw gezondheid      | MijnGemak                    |
 
 
-  Scenario Outline: Check the elements and dropdowns on the alle verzekeringen page.
+  Scenario Outline: Check the elements and dropdowns on the alle verzekeringen page 2.
     Given I am on the alle verzekeringen page of the Unive website
     When I select <select> and click on <buttonPage> at the alle verzekeringen bottom page
     Then Verify elements on <buttonPage> product page is shown

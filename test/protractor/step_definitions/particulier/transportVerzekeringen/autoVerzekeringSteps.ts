@@ -46,7 +46,7 @@ When(/^I enter step two page of autoverzekering with$/, async (data) => {
   await autoVerzekeringMethods.selectCarAcc(dataTable.carAccessoires);
   await genericMethods.typeText(autoVerzekeringElements.collectiveInputElement, dataTable.collective);
   await genericMethods.clickOnElement(autoVerzekeringElements.collectiveAutoCompleteClickElement);
-  await genericMethods.verifyTextContainsInElement(autoVerzekeringElements.collectiveResultTextElement, dataTable.collective);
+  await genericMethods.verifyTextContainsInElement(autoVerzekeringElements.collectiveResultTextElement, dataTable.collective, browser.getPageTimeout);
   await autoVerzekeringMethods.selectTotalPremie(dataTable.totalPremie);
   await genericMethods.clickOnNextButton();
 });

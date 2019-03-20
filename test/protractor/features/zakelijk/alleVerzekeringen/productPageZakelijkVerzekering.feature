@@ -1,6 +1,6 @@
 @productPageZakelijkAlleVerzekeringen
 @regressie
-Feature: Check if the product and alle verzekeringen pages are correctly shown.
+Feature: Check if the product and alle verzekeringen pages are correctly shown business.
 
   Scenario Outline: Check the elements and dropdowns on the alle verzekeringen page.
     Given I am on the alle verzekeringen zakelijk page of the Unive website

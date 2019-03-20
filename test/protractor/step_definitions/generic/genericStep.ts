@@ -19,19 +19,19 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
   try {
-    await genericMethods.verifyThankYouPageTitle(persona);
-  } catch (e) {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden');
+    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', 10000);
     logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+  } catch (e) {
+    await genericMethods.verifyThankYouPageTitle(persona);
   }
 });
 
 Then(/^Thank you page for zakelijk is shown$/, async function () {
   try {
-    await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
-  } catch (e) {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden');
+    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', 10000);
     logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+  } catch (e) {
+    await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
   }
 });
 
