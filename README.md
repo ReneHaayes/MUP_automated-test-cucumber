@@ -29,3 +29,18 @@ by the following command:
 ```
 protractor protractor.conf.js --cucumberOpts.tags="@zzpFlex" --params.env.environment=tstProj
 ```
+
+Running the regression set:
+```
+protractor protractor.regression.conf.js 
+```
+
+Running the regression set with three different browsers:
+```
+protractor protractor.browsers.conf.js 
+```
+
+Running with different browser: change browserName to "MicrosftEdge" to run the test on MicrosoftEdge
+```
+protractor protractor.browsers.conf.js --cucumberOpts.tags="@zzpFlex" --capabilities.browserName=firefox --multiCapabilities
+```

@@ -23,7 +23,7 @@ exports.config = {
       'args': [
         // "--headless",
         // "--disable-gpu",
-        // "--start-maximized",
+        // "--window-size=1920,1080",
         "disable-extensions"]
     }
   },

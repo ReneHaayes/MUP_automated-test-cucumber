@@ -1,125 +1,39 @@
 exports.config = {
-  // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
-  getPageTimeout: 15000,
-  directConnect: true,
+  getPageTimeout: 10000,
+  // directConnect: true,
   restartBrowserBetweenTests: true,
-  maxSessions: 5,
+
+  specs: [
+    // 'async_await.js',
+    './protractor/features/**/*.feature'
+  ],
+
+  capabilities: {
+    browserName: 'chrome',
+    acceptInsecureCerts : true
+  },
+
   multiCapabilities: [
-    {
-      browserName: 'chrome',
-      shardTestFiles: true,
-      maxInstances: 1,
-      maxSessions: 1,
-      count: 1,
-      specs: [
-        // './protractor/features//*.feature'
-        './protractor/features/particulier/alleVerzekeringen/*.feature',
-        // './protractor/features/particulier/gezondheidVerzekeringen/*.feature',
-        // './protractor/features/particulier/homePage/*.feature'
-      ],
-      'chromeOptions': {
-        'args': [
-          // "--headless",
-          // "--disable-gpu",
-          // "--start-maximized",
-          "disable-extensions"]
-      }
-    },
-    {
-      shardTestFiles: true,
-      browserName: 'chrome',
-      maxInstances: 1,
-      maxSessions: 1,
-      count: 1,
-      specs: [
-        // './protractor/features/**/*.feature'
-        './protractor/features/zakelijk/alleVerzekeringen/*.feature',
-        // './protractor/features/particulier/onlineVeiligheidVerzekeringen/*.feature',
-        // './protractor/features/particulier/rechtVerzekeringen/*.feature'
-      ],
-      'chromeOptions': {
-        'args': [
-          // "--headless",
-          // "--disable-gpu",
-          // "--start-maximized",
-          "disable-extensions"]
-      }
-    }
-    // {
-    //   shardTestFiles: true,
-    //   browserName: 'chrome',
-    //   maxInstances: 1,
-    //   maxSessions: 1,
-    //   count: 1,
-    //   specs: [
-    //     './protractor/features/particulier/gezondheidVerzekeringen/*.feature'
-    //     // './protractor/features/particulier/transportVerzekeringen/*.feature'
-    //     // './protractor/features/particulier/vrijeTijdsVerzekeringen/*.feature'
-    //   ],
-    //   loggingPrefs: {
-    //     'driver': 'INFO',
-    //     'browser': 'INFO'
-    //   },
-    //   'chromeOptions': {
-    //     'args': [
-    //       // "--headless",
-    //       // "--disable-gpu",
-    //       // "--start-maximized",
-    //       "disable-extensions"]
-    //   }
-    // }
-    // {
-    //   shardTestFiles: true,
-    //   browserName: 'chrome',
-    //   maxInstances: 1,
-    //   maxSessions: 1,
-    //   count: 1,
-    //   specs: [
-    //     './protractor/features/zakelijk/alleVerzekeringen/*.feature',
-    //     './protractor/features/zakelijk/bedrijfActiviteitenVerzekeringen/*.feature'
-    //   ],
-    //   loggingPrefs: {
-    //     'driver': 'INFO',
-    //     'browser': 'INFO'
-    //   },
-    //   'chromeOptions': {
-    //     'args': [
-    //       // "--headless",
-    //       // "--disable-gpu",
-    //       // "--start-maximized",
-    //       "disable-extensions"]
-    //   },
-    // },
-    // {
-    //   shardTestFiles: true,
-    //   browserName: 'chrome',
-    //   maxInstances: 1,
-    //   maxSessions: 1,
-    //   count: 1,
-    //   specs: ['./protractor/features/zakelijk/**/*.feature'],
-    //   loggingPrefs: {
-    //     'driver': 'INFO',
-    //     'browser': 'INFO'
-    //   },
-    //   'chromeOptions': {
-    //     'args': [
-    //       // "--headless",
-    //       // "--disable-gpu",
-    //       // "--start-maximized",
-    //       "disable-extensions"]
-    //   },
-    //   cucumberOpts: {
-    //     tags: '@Smoke or @Intgr'
-    //   }
-    // }
-    ],
+    {'browserName': 'chrome'},
+    {'browserName': 'firefox',
+      acceptInsecureCerts : true},
+    {'browserName': 'MicrosoftEdge'}
+  ],
+
+
+  suites: {
+    zakelijk: './protractor/features/zakelijk/**/*.feature',
+    particulier: './protractor/features/particulier/**/*.feature'
+  },
 
   params: {
     env: {
       //DEFAULT environment is pat
-      environment: 'pat'
+      environment: 'pat',
+      browserName: 'chrome'
     }
   },
   // baseUrl: 'https://techblog.polteq.com/testshop/index.php',
@@ -150,7 +64,6 @@ plugins: [{
     automaticallyGenerateReport: false,
     removeExistingJsonReportFile: true,
     removeOriginalJsonReportFile: true,
-    saveCollectedJSON: true,
     displayDuration: true,
     disableLog: true,
     jsonOutputPath: './target/reports/',
@@ -163,12 +76,11 @@ plugins: [{
     './protractor/step_definitions/*.ts',
     './protractor/step_definitions/**/*.ts',
     './protractor/support/*.ts'],
-
     'require-module': "ts-node/register",
     compilerOptions: {
     project: '../tsconfig.json'
-    },
-    strict: true,
+  },
+  strict: true,
     format: 'json:./target/reports/report.json',
     tags: ['~@WIP'],
 }

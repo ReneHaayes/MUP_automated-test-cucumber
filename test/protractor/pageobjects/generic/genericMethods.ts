@@ -126,7 +126,7 @@ export class GenericMethods {
       await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
       await browser.sleep(500);
     } catch (e) {
-      throw new Error('Element with selector: ' + selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is still visible');
     }
   }
 
