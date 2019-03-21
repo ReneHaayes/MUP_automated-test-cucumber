@@ -1,5 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
+  // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
   getPageTimeout: 10000,

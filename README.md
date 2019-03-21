@@ -35,12 +35,19 @@ Running the regression set:
 protractor protractor.regression.conf.js 
 ```
 
+To be able to run on different browser you need to start webdriver locally for microsoft edge with the following command in the folder test (in the future this will be 
+redirected to a selenium server)
+```
+node node_modules/protractor/bin/webdriver-manager start --edge "MicrosoftWebDriver.exe"
+```
+
 Running the regression set with three different browsers:
 ```
 protractor protractor.browsers.conf.js 
 ```
 
-Running with different browser: change browserName to "MicrosftEdge" to run the test on MicrosoftEdge
+Running with different browser: change browserName to "MicrosfotEdge" to run the test on MicrosoftEdge
 ```
 protractor protractor.browsers.conf.js --cucumberOpts.tags="@zzpFlex" --capabilities.browserName=firefox --multiCapabilities
 ```
+
