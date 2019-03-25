@@ -57,7 +57,7 @@ export class GenericElements {
   zakelijkGebouwen: string = 'zakelijk/gebouwenverzekering';
   afspraakMaken: string = 'zakelijk/klantenservice/afspraak';
   klachtIndienen: string = 'zakelijk/klachtindienen';
-  mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/my-customer';
+  mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/';
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
   ondernemersScan: string = 'zakelijk/ondernemersscan';
   ampAutoverzekering: string = 'amp/autoverzekering';
