@@ -45,9 +45,9 @@ exports.config = {
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
 
-  onPrepare: () => {
-  protractor.browser.manage().window().maximize();
-},
+//   onPrepare: () => {
+//   protractor.browser.manage().window().maximize();
+// },
 
 afterLaunch: () => {
   const multiCucumberHTLMReporter = require('multiple-cucumber-html-reporter');
