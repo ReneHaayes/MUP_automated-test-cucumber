@@ -12,3 +12,6 @@
 
 # dependencies
 /test/node_modules/
+
+# debug
+/test/debug.log
