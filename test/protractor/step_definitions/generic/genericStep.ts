@@ -36,9 +36,6 @@ Then(/^Thank you page for zakelijk is shown$/, async function () {
   }
 });
 
-Then(/^Verify elements on testpage is shown$/, async function () {
-  await genericMethods.verifyTextInElement(genericElements.zorgTest123, '')
-});
 
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
