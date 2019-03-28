@@ -2,7 +2,7 @@
 
 # IDEs and editors
 /.idea
-/.vscode
+# /.vscode
 *.iml
 
 # output
