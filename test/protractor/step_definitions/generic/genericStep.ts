@@ -4,6 +4,7 @@ import {GenericElements} from "../../pageobjects/generic/genericElements";
 // import {browser} from "protractor";
 import {genericEnum} from "../../pageobjects/enum/genericEnum";
 import {logToHtmlReport} from "../../support/hooks";
+import {browser} from "protractor";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -19,7 +20,7 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
   try {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', 10000);
+    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout);
     logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
   } catch (e) {
     await genericMethods.verifyThankYouPageTitle(persona);
@@ -28,11 +29,15 @@ Then(/^The thank you page for (.*) is shown$/, async function (persona: string) 
 
 Then(/^Thank you page for zakelijk is shown$/, async function () {
   try {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', 10000);
+    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout);
     logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
   } catch (e) {
     await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
   }
+});
+
+Then(/^Verify elements on testpage is shown$/, async function () {
+  await genericMethods.verifyTextInElement(genericElements.zorgTest123, '')
 });
 
 When(/^I fill in almost insured page with:$/, async (data) => {
