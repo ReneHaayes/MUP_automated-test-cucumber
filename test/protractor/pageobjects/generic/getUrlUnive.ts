@@ -120,6 +120,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING: {
         return this.getEnv() + genericElements.zakelijkAansprakelijkheidsVerzekering;
       }
+      case verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP: {
+        return this.getEnv() + genericElements.zakelijkAansprakelijkheidsVerzekeringPp;
+      }
       case verzekeringPaginasEnum.ZAKELIJK_TRACTORVERZEKERING: {
         return this.getEnv() + genericElements.zakelijkTractorVerzekering;
       }

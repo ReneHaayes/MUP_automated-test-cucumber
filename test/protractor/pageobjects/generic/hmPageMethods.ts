@@ -325,7 +325,7 @@ export class HmPageMethods {
         break;
       }
       case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
-        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.zakelijkAansprakelijkheidsVerzekeringTextElement, hmPageElements.zakelijkAansprakelijkheidsVerzekeringText);
         break;
