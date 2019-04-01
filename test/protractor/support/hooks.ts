@@ -1,6 +1,6 @@
 import { After, Before, setDefaultTimeout } from 'cucumber';
 import { protractor } from 'protractor';
-import { inspect } from "util";
+import { inspect } from 'util';
 
 setDefaultTimeout(90000);
 

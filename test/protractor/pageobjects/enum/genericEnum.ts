@@ -85,6 +85,7 @@ export enum verzekeringPaginasEnum {
   BESTUURDERSAANSPRAKELIJKHEID = 'Bestuurdersaansprakelijkheid',
   REISVERZEKERING = 'Reisverzekering',
   DOORLOPENDEREISVERZEKERING_PP = 'doorlopende-reisverzekering',
+  DOORLOPENDEREISVERZEKERINGPRODUCTPAGE = 'doorlopendereisverzekeringpp',
   DOORLOPENDEREISVERZEKERING = 'Doorlopende reisverzekering',
   KORTLOPENDEREISVERZEKERING = 'Kortlopende reisverzekering',
   KORTLOPENDEREISVERZEKERING_PP = 'kortlopende-reisverzekering',

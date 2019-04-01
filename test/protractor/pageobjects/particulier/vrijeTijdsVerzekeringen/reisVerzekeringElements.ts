@@ -29,4 +29,18 @@ export class ReisVerzekeringElements {
   bookdateTripInputElement: string = '#_Form_IF11808_16115';
   totalValueOfTripInputElement: string = '#_Form_IF11808_16116';
 
+  //DOORLOPENDE REISVERZEKERING WIDGET PRODUCTPAGE
+  myselfWidgetClickElement: string = '[for="verzekerenMijzelf"]';
+  myPartnerWidgetClickElement: string = '[for="verzekerenMijnPartner"]';
+  myChildrenWidgetClickElement: string = '[for="verzekerenMijnKinderen"]';
+  myselfCheckboxChecked: string = '[data-input-field-id="IF9207_19310"][class*="ng-not-empty"]';
+  myPartnerCheckboxChecked: string = '[data-input-field-id="IF9207_19311"][class*="ng-not-empty"]';
+  myChildrenCheckboxChecked: string = '[data-input-field-id="IF9207_19312"][class*="ng-not-empty"]';
+  myselfCheckboxNotChecked: string = '[data-input-field-id="IF9207_19310"][class*="ng-empty"]';
+  myPartnerCheckboxNotChecked: string = '[data-input-field-id="IF9207_19311"][class*="ng-empty"]';
+  myChildrenCheckboxNotChecked: string = '[data-input-field-id="IF9207_19312"][class*="ng-empty"]';
+  summarySpaceMyself: string = 'Uzelf';
+  summarySpaceMyPartner: string = 'Uw partner';
+  summarySpaceMychildren: string = 'Uw kinderen';
+
 }

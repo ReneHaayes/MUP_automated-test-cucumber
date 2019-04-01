@@ -66,6 +66,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING: {
         return this.getEnv() + genericElements.doorlopendeReisVerzekering;
       }
+      case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERINGPRODUCTPAGE: {
+        return this.getEnv() + genericElements.doorlopendeReisVerzekeringPp;
+      }
       case verzekeringPaginasEnum.ROERENDEZAKENVERZEKERING_ZAKELIJK: {
         return this.getEnv() + genericElements.roerendeZakenVerzekeringZakelijk;
       }

@@ -21,6 +21,7 @@ export class GenericElements {
   bestuurdersAansprakelijkheidVerzekeringPp: string = 'zakelijk/bestuurdersaansprakelijkheidsverzekering';
   businessHomePage: string = 'zakelijk';
   doorlopendeReisVerzekering: string = 'doorlopende-reisverzekering/premieberekenen-en-afsluiten';
+  doorlopendeReisVerzekeringPp: string = 'doorlopende-reisverzekering';
   kortlopendeReisVerzekering: string = 'kortlopende-reisverzekering/premieberekenen-en-afsluiten';
   personenAutoVerzekeringZakelijk: string = 'zakelijk/personenautoverzekering/premieberekenen-en-afsluiten';
   personenAutoVerzekeringZakelijkPp: string = 'zakelijk/personenautoverzekering';

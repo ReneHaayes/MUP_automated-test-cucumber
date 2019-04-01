@@ -1,4 +1,4 @@
-import {When} from "cucumber";
+import {When, Then} from "cucumber";
 import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
 import {ReisVerzekeringElements} from "../../../pageobjects/particulier/vrijeTijdsVerzekeringen/reisVerzekeringElements";
 import {NawElements} from "../../../pageobjects/generic/nawElements";
@@ -60,3 +60,14 @@ When(/^I enter step one and step two page of kortlopende annuleringsverzekering 
   await genericMethods.clickOnNextButton();
   await genericMethods.clickOnNextButton();
 });
+
+When(/^I click on the (.*) to insure$/, async (familyMembers: string) => {
+  await reisVerzekeringMethods.selectFamilyMembers(familyMembers);
+
+});
+
+Then(/^the (.*) I have checked are present on the page$/, async (familyMembers: string) => {
+  await reisVerzekeringMethods.checkFamilyMemberCheckedOnStepOne(familyMembers);
+
+});
+
