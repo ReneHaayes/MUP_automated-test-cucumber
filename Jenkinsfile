@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm --version'
-                sh 'cd ./test/*'
+                sh 'cd ./test/'
                 sh 'npm install'
             }
         }
