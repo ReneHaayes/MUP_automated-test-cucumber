@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm --version'
-                dir('git@code.do.unive.nl:test/automated-test-cucumber.git/test') {
+                dir('./test') {
                     sh 'npm --version'
                 }
             }
