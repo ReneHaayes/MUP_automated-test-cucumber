@@ -7,8 +7,9 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm --version'
-                sh 'cd test'
-                sh 'npm install'
+                dir("${JENKINS_HOME}/workspace/test/") {
+                    sh 'npm install'
+                }
             }
         }
     }
