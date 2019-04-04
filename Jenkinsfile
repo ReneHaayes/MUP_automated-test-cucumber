@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'npm --version'
                 dir('./test') {
-                    sh 'npm install'
+                    sh 'npm --version'
                 }
             }
         }
