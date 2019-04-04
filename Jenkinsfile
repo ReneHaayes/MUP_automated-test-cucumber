@@ -8,9 +8,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm --version'
-                dir('./test') {
-                    sh 'npm --version'
-                }
+                sh 'cd ./test/*'
+                sh 'npm install'
             }
         }
     }
