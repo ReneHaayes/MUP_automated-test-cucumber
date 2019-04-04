@@ -2,6 +2,7 @@ pipeline {
     agent {
             docker  {image 'registry-internal.do.unive.nl/devops/build-agent-ng:1.10.0'
             args '-u "root"  --label io.rancher.container.network=true'
+            reuseNode true
                     }
           }
     stages {
