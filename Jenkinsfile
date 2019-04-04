@@ -8,8 +8,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm --version'
-                sh dir ('./test/') {
-                    sh 'pwd'
+                sh dir ('/var/jenkins_home/workspace/test') {
+                    sh 'npm --version'
                 }
             }
         }
