@@ -14,7 +14,7 @@ pipeline {
                   sh 'npm -version'
                   sh 'npm config set registry=http://nexus.devops-tools.rancher.internal:8081/repository/npm-unive-group/'
                   sh 'npm config set proxy http://10.30.4.157:3128'
-                  sh ‘cd test && npm install’
+                  sh ‘cd ./test && npm install’
                 }
             }
         }
