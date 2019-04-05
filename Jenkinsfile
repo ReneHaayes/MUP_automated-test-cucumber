@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                  sh 'cd test'
+                  sh 'cd test && npm install'
 
             }
         }
