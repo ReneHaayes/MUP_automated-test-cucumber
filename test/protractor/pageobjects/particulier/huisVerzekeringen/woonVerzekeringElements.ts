@@ -75,7 +75,8 @@ export class WoonVerzekeringElements {
   additionalOptionsGlassBreakageElement: string = '[data-label-id*="LA_IF14013_14404"] label';
   additionalOptionsVoluntaryRiskElement: string = '[data-label-id*="LA_IF14016_14413"] label';
 
-
-
+  // AMP
+  ampImageElement: string = '[alt="Afbeelding"][src*="woonverzekering_illustratie_2x.png"]';
+  ampBerekenUwPremieButtonClickElement: string = '[href="/woonverzekering/premieberekenen-en-afsluiten"]';
 
 }

@@ -20,6 +20,9 @@ let personaData: PersonaData = new PersonaData();
 let nawElements: NawElements = new NawElements();
 
 export class GenericMethods {
+    static waitForElementIsVisible(): any {
+        throw new Error("Method not implemented.");
+    }
 
   async clickOnCookie(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
