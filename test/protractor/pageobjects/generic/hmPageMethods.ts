@@ -10,8 +10,10 @@ import {verzekeringPaginasEnum} from "../enum/genericEnum";
 import {ZzpFlexElements} from "../zakelijk/bedrijfsActiviteitenVerzekeringen/zzpFlexElements";
 import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijk/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
 import {EigenVervoerVerzekeringElements} from "../zakelijk/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
+import {GenericElements} from "./genericElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
+let genericElements: GenericElements = new GenericElements();
 let hmPageElements: HmPageElements = new HmPageElements();
 let aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
 let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
@@ -313,14 +315,12 @@ export class HmPageMethods {
         break;
       }
       case homePageEnum.RECHTSBIJSTAND: {
-        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_RECHTSBIJSTANDVERZEKERING);
-        await genericMethods.verifyUrlContains(url);
+        await genericMethods.verifyUrlContains(genericElements.zakelijkRechtsBijstandVerzekeringPp);
         await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.activityZZPClickElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.EIGEN_VERVOER: {
-        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.EIGENVERVOERVERZEKERING);
-        await genericMethods.verifyUrlContains(url);
+        await genericMethods.verifyUrlContains(genericElements.eigenVervoerVerzekeringPp);
         await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.activityEigenVervoerSelectElement, browser.getPageTimeout);
         break;
       }
