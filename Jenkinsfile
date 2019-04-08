@@ -18,4 +18,11 @@ pipeline {
             }
         }
     }
+
+      post {
+            always {
+                archiveArtifacts artifacts: 'test/target/**', fingerprint: true
+
+            }
+        }
 }
