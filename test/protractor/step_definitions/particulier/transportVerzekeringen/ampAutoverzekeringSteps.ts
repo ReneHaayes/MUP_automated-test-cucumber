@@ -16,7 +16,7 @@ When(/^I press the button premie berekenen on the amp autoverzekering page$/, as
   await genericMethods.clickOnElement(autoVerzekeringElements.ampBerekenUwPremieButtonClickElement);
 });
 
-Then(/^Verify elements on premie berekenen amp auto page is shown$/, async () => {
+Then(/^Verify if elements on premie berekenen amp auto page are shown$/, async () => {
   try {
     await genericMethods.clickOnCookie(genericElements.cookieElement);
   } catch (e) {

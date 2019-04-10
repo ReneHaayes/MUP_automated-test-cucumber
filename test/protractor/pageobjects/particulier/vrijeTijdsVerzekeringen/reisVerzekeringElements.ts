@@ -43,4 +43,9 @@ export class ReisVerzekeringElements {
   summarySpaceMyPartner: string = 'Uw partner';
   summarySpaceMychildren: string = 'Uw kinderen';
 
+  //AMP
+  ampImageElement: string = '[alt="Afbeelding"][src*="reisverzekering_zomer_illustratie_2x.png"]';
+  ampBerekenUwPremieButtonClickElement: string = '[href="/doorlopende-reisverzekering/premieberekenen-en-afsluiten"]';
+
+
 }

@@ -117,6 +117,8 @@ export enum verzekeringPaginasEnum {
   COLLECTIEVE_ZORGVERZEKERING = 'Collectieve Zorgverzekering',
   AMP_AUTOVERZEKERING = 'amp autoverzekering',
   AMP_WOONVERZEKERING = 'amp woonverzekering',
+  AMP_BROMFIETSVERZEKERING = 'amp bromfietsverzekering',
+  AMP_DOORLOPENDEREISVERZEKERING = 'amp doorlopende reisverzekering',
   HIGH_SPEED_E_BIKE_VERZEKERING = 'High speed e-bikeverzekering',
   INBOEDELVERZEKERING = 'Inboedelverzekering',
   OPSTALVERZEKERING = 'Opstalverzekering',

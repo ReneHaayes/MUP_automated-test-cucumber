@@ -23,8 +23,8 @@ When(/^I enter step one page of moped for persona (.*) with license plate (.*) a
   await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoConstructionYearElement, mopedWithLicensePlate.getMopedConstructionYear(licensePlate));
   await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoVersionElement, mopedWithLicensePlate.getMopedVersion(licensePlate));
   await mopedMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedModel(licensePlate));
-  await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthday(persona))
-  await genericMethods.typeText(vehicleElements.zipCodeElement, personaData.getPersonaZipcode(persona))
+  await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthday(persona));
+  await genericMethods.typeText(vehicleElements.zipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(vehicleElements.damageFreeYearsElement, damageFreeYears);
   await genericMethods.clickOnNextButton();
 });
