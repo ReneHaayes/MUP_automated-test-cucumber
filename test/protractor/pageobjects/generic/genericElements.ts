@@ -62,6 +62,9 @@ export class GenericElements {
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
   ondernemersScan: string = 'zakelijk/ondernemersscan';
   ampAutoverzekering: string = 'amp/autoverzekering';
+  ampWoonverzekering: string = 'amp/woonverzekering';
+  ampBromfietsverzekering: string = 'amp/bromfietsverzekering';
+  ampDoorlopendeReisverzekering: string = 'amp/doorlopende-reisverzekering';
   collectieveZorgVerzekering: string = 'zorgverzekering/collectief';
   handelaarsKentekenVerzekering: string = 'zakelijk/handelaarskentekenverzekering';
   milieSchadeVerzekering: string = 'zakelijk/milieuschadeverzekering';

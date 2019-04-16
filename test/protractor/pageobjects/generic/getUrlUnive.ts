@@ -180,8 +180,17 @@ export class GetUrlUnive {
       case homePageEnum.ONDERNEMERSCAN: {
         return this.getEnv() + genericElements.ondernemersScan;
       }
-      case verzekeringPaginasEnum.AMP: {
+      case verzekeringPaginasEnum.AMP_AUTOVERZEKERING: {
         return this.getEnv() + genericElements.ampAutoverzekering;
+      }
+      case verzekeringPaginasEnum.AMP_WOONVERZEKERING: {
+        return this.getEnv() + genericElements.ampWoonverzekering;
+      }
+      case verzekeringPaginasEnum.AMP_BROMFIETSVERZEKERING:   {
+        return this.getEnv() + genericElements.ampBromfietsverzekering;
+      }
+      case verzekeringPaginasEnum.AMP_DOORLOPENDEREISVERZEKERING:   {
+        return this.getEnv() + genericElements.ampDoorlopendeReisverzekering;
       }
       case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {
         return this.getEnv() + genericElements.collectieveZorgVerzekering;
