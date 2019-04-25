@@ -10,7 +10,7 @@ Feature: Happy flow for 'Bedrijfs autoverzekering'
       | damageFreeYears | 3              |
     And I enter step two page of bedrijfs autoverzekering with
       | basisDekking | allRisk |
-    And I enter step three page of bedrijfs autoverzekering with
+    And I enter step three page of bedrijfs autoverzekering with <company>
       | licensePlate        | <licensePlate> |
     And I enter step four page of bedrijfs autoverzekering for <company> with <persona>
     And I fill in almost insured page with:

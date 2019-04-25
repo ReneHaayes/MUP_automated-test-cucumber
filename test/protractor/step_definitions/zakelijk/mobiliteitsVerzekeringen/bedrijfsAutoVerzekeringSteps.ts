@@ -10,6 +10,7 @@ import {BusinessCarWithLicensePlate} from "../../../pageobjects/vehicles/busines
 import {NawElements} from "../../../pageobjects/generic/nawElements";
 import {PersonaData} from "../../../pageobjects/persona/persona";
 import {GenericElements} from "../../../pageobjects/generic/genericElements";
+import {ZakelijkAansprakelijkheidsVerzekeringElements} from "../../../pageobjects/zakelijk/bedrijfsActiviteitenVerzekeringen/zakelijkAansprakelijkheidsVerzekeringElements";
 
 let bedrijfsAutoVerzekeringMethods: BedrijfsAutoVerzekeringMethods = new BedrijfsAutoVerzekeringMethods();
 let bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = new BedrijfsAutoVerzekeringElements();
@@ -21,6 +22,7 @@ let businessCarWithLicensePlate: BusinessCarWithLicensePlate = new BusinessCarWi
 let nawElements: NawElements = new NawElements();
 let personaData: PersonaData = new PersonaData();
 let genericElements: GenericElements = new GenericElements();
+let zakelijkAansprakelijkheidsVerzekeringElements: ZakelijkAansprakelijkheidsVerzekeringElements = new ZakelijkAansprakelijkheidsVerzekeringElements();
 
 When(/^I enter step one page of bedrijfs autoverzekeringen for (.*) with$/, async (company: string, data) => {
   const dataTable = data.rowsHash();
@@ -41,8 +43,13 @@ When(/^I enter step two page of bedrijfs autoverzekering with$/, async (data) =>
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter step three page of bedrijfs autoverzekering with$/, async (data) => {
+When(/^I enter step three page of bedrijfs autoverzekering with (.*)$/, async (company: string, data) => {
   const dataTable = data.rowsHash();
+  // Copied this from zakelijkAansprakelijkheidsVerzekeringSteps.ts . The Kvk-koppeling was added to this dialogue
+  await genericMethods.typeText(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
+  await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.getCompanyDataButtonClickElement);
+  await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
+
   //INSERT DATE INFORMATION
   await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.startDateOnYourNameElement, genericMethods.getDate('today'));
@@ -53,12 +60,12 @@ When(/^I enter step three page of bedrijfs autoverzekering with$/, async (data) 
 });
 
 When(/^I enter step four page of bedrijfs autoverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
-  await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
-  await genericMethods.typeText(nawElements.companyDataNameInputElement, companyData.getCompanyName(company));
-  await genericMethods.selectLegal(companyData.getCompanyLegal(company));
-  await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
-  await genericMethods.typeText(nawElements.companyDataHouseNumberInputElement, companyData.getCompanyHouseNumber(company));
-  await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
+  // await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
+  // await genericMethods.typeText(nawElements.companyDataNameInputElement, companyData.getCompanyName(company));
+  // await genericMethods.selectLegal(companyData.getCompanyLegal(company));
+  // await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  // await genericMethods.typeText(nawElements.companyDataHouseNumberInputElement, companyData.getCompanyHouseNumber(company));
+  // await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));

@@ -14,6 +14,8 @@ export class ZakelijkAansprakelijkheidsVerzekeringElements {
   usualConditionsNoClickElement: string = '[data-label-id*="LA_IF19426_24997"] .radioList > label:nth-child(2)';
   outsideNetherlandsYesClickElement: string = '[data-label-id*="LA_IF19426_24998"] .radioList > label:nth-child(1)';
   outsideNetherlandsNoClickElement: string = '[data-label-id*="LA_IF19426_24998"] .radioList > label:nth-child(2)';
+  clientsInFollowingSectorsYesElement: string = '[data-label-id*="IF19426_40845"] .radioList > label:nth-child(1)';
+  clientsInFollowingSectorsNoElement: string = '[data-label-id*="IF19426_40845"] .radioList > label:nth-child(2)';
   productsToFactorysYesClickElement: string = '[data-label-id*="LA_IF19426_25042"] .radioList > label:nth-child(1)';
   productsToFactorysNoClickElement: string = '[data-label-id*="LA_IF19426_25042"] .radioList > label:nth-child(2)';
   demolishBuildingsYesClickElement: string = '[data-label-id*="LA_IF19427_24999"] .radioList > label:nth-child(1)';
@@ -24,6 +26,8 @@ export class ZakelijkAansprakelijkheidsVerzekeringElements {
   workingWithAsbestNoClickElement: string = '[data-label-id*="LA_IF19427_25000"] .radioList > label:nth-child(2)';
   scaffoldingYesClickElement: string = '[data-label-id*="LA_IF19427_38410"] .radioList > label:nth-child(1)';
   scaffoldingNoClickElement: string = '[data-label-id*="LA_IF19427_38410"] .radioList > label:nth-child(2)';
+  useFollowingEquipmentDuringWorkYesClickElement: string = '[data-label-id*="LA_IF19427_40911"] .radioList > label:nth-child(1)';
+  useFollowingEquipmentDuringWorkNoClickElement: string = '[data-label-id*="LA_IF19427_40911"] .radioList > label:nth-child(2)';
 
   //SELECT TOOLS
   toolsSelectElement: string = '#_Form_IF19427_25045';
