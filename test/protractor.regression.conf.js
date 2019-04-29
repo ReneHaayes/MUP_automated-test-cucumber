@@ -1,5 +1,5 @@
 exports.config = {
-  // seleniumAddress: 'http://selenium-hub.selenium:4444/wd/hub',
+  seleniumAddress: 'http://selenium-hub.selenium:4444/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
   getPageTimeout: 60000,
