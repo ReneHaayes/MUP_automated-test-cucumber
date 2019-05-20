@@ -23,13 +23,13 @@ export class HmPageElements {
 
   //LICENSE PLATE
   licensePlateWidgetInputElement: string = '#kenteken';
-  licensePlateWidgetButtonElement: string = '[class*="premiumCalculator_boxSubmit"]';
-  licensePlateWidgetButtonProductPageElement: string = '[class*="premiumCalculatorShort_submit"]';
-  licensePlateWidgetDontKnowElement: string = '[class*="premiumCalculatorRationalisatie_boxKentekenLink"]';
-  licensePlateWidgetDontKnowProductPageElement: string = '[class*="premiumCalculatorShort_directLink"]';
+  licensePlateWidgetButtonElement: string = '[data-funnel-personenauto="/autoverzekering/premieberekenen-en-afsluiten"] [class*="simpleWidget_submit"]';
+  licensePlateWidgetButtonProductPageElement: string = '[class*="simpleWidget_submit"]';
+  licensePlateWidgetDontKnowElement: string = '[class="simpleWidget_link"]';
+  licensePlateWidgetDontKnowProductPageElement: string = '[class="simpleWidget_link"]';
 
   //WOONVERZEKERING
-  woonVerzekeringButtonElement: string = '[class*="simpleWidget_submit"]';
+  woonVerzekeringButtonElement: string = '[data-funnel="/woonverzekering/premieberekenen-en-afsluiten"]';
   woonVerzekeringZipCodeElement: string = '#woonPostcode';
   woonVerzekeringHouseNumberElement: string = '#woonHuisnummerNr';
   woonVerzekeringHouseNumberAddingElement: string = '#woonHuisnummerToevoegingAn';

@@ -26,5 +26,14 @@ Feature: Check the license plate widget on the homepage.
     Examples:
       | pageName | licensePlate | button                    | dodont |
       | business | 48-VDS-3     | license plate business    | do     |
-      | business | 48-VDS-3     | no license plate business | dont   |
       | business | 48-VDS-3     | dont know business        | dont   |
+
+  @licensePlateBusinessPageWidgetButtonDontKnowLicensePlate
+  Scenario Outline: Enter a license plate number for the business personenautoverzekering page and check if the correct data appears.
+    Given I am on the <pageName> page of the Unive website
+    When I press the button <button> for the following license plate <licensePlate> on the page for autoverzekering
+    Then The <licensePlate> data dont appears for business personenautoverzekering
+
+    Examples:
+      | pageName | licensePlate | button                   |
+      | business | 48-VDS-3     | no license plate business|
