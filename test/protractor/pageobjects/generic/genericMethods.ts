@@ -45,6 +45,18 @@ export class GenericMethods {
     })
   }
 
+  async waitForElementAndClick(selector: string, waitFor: number) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, waitFor);
+    const elementToClick: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    })
+  }
+
   async clickOnElementWithClassName(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisibleClassName(selector, browser.getPageTimeout);
@@ -486,5 +498,15 @@ export class GenericMethods {
       }
     }
   }
+
+  async verifyNumber(input: number, assertionNumber: number) {
+    await expect(input).to.equal(assertionNumber);
+  }
+
+  async verifyTextContains(input: string, assertionText: string) {
+    await expect(input).to.have.string(assertionText);
+  }
+
+
 
 }

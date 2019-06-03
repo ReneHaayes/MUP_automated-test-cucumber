@@ -1,5 +1,5 @@
 exports.config = {
-  // seleniumAddress: 'http://selenium-hub.selenium:4444/wd/hub',
+  // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
   getPageTimeout: 60000,
@@ -79,6 +79,7 @@ cucumberOpts: {
   require: [
     './protractor/step_definitions/*.ts',
     './protractor/step_definitions/**/*.ts',
+    './protractor/step_definitions/**/**/*.ts',
     './protractor/support/*.ts'],
     'require-module': "ts-node/register",
     compilerOptions: {

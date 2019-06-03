@@ -1,15 +1,15 @@
 import {GenericMethods} from "./genericMethods";
 import {HmPageElements} from "./hmPageElements";
 import {homePageEnum} from "../enum/woonVerzekeringEnum";
-import {AansprakelijkheidsVerzekerElements} from "../particulier/rechtVerzekeringen/aansprakelijkheidsVerzekerElements";
+import {AansprakelijkheidsVerzekerElements} from "../particuliereVerzekeringen/rechtVerzekeringen/aansprakelijkheidsVerzekerElements";
 import {browser} from "protractor";
-import {ReisVerzekeringElements} from "../particulier/vrijeTijdsVerzekeringen/reisVerzekeringElements";
+import {ReisVerzekeringElements} from "../particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
 import {ProductPageElements} from "./productPageElements";
 import {GetUrlUnive} from "./getUrlUnive";
 import {verzekeringPaginasEnum} from "../enum/genericEnum";
-import {ZzpFlexElements} from "../zakelijk/bedrijfsActiviteitenVerzekeringen/zzpFlexElements";
-import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijk/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
-import {EigenVervoerVerzekeringElements} from "../zakelijk/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
+import {ZzpFlexElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpFlexElements";
+import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
+import {EigenVervoerVerzekeringElements} from "../zakelijkeVerzekeringen/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
 import {GenericElements} from "./genericElements";
 
 let genericMethods: GenericMethods = new GenericMethods();

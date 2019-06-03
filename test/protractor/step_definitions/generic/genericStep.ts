@@ -12,7 +12,7 @@ let genericElements: GenericElements = new GenericElements();
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);
   try {
-    await genericMethods.clickOnCookie(genericElements.cookieElement);
+    await genericMethods.clickOnCookie(genericElements.cookieClickElement);
   } catch (e) {
 
   }
@@ -43,4 +43,9 @@ When(/^I fill in almost insured page with:$/, async (data) => {
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   await genericMethods.clickOnFinishButton();
+});
+
+
+Given(/^Customer is on the (.*) page of the Unive website$/, async (page: string) => {
+  await genericMethods.goToPage(page);
 });
