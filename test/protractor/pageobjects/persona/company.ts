@@ -31,7 +31,7 @@ export class CompanyData {
 
   facebook: Company = new Company('Facebook', '7412XW', '37131558', legalEnum.BV, '91', genericEnum.EMPTY, '0612345678',
     'facebook@unive.nl');
-  rg_timmerwerken: Company = new Company('Facebook', '1906WS', '37131558', legalEnum.EENMANSZAAK, '91', genericEnum.EMPTY, '0612345678',
+  rg_timmerwerken: Company = new Company('R.G. TIMMERWERKEN', '7412XW', '37131558', legalEnum.EENMANSZAAK, '91', genericEnum.EMPTY, '0612345678',
     'facebook@unive.nl');
 
   getCompanyName(input: string): string {

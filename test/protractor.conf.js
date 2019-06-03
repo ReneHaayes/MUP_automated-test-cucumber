@@ -1,23 +1,10 @@
 exports.config = {
-  // seleniumAddress: 'http://localhost:4444/wd/hub',
+  // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
   getPageTimeout: 60000,
   directConnect: true,
   restartBrowserBetweenTests: true,
-
-  // suites: {
-  //   aansprakelijkheidsVerzekering: './protractor/features/aansprakelijkheidsVerzekering/*.feature',
-  //   autoVerzekering: './protractor/features/autoVerzekering/*.feature',
-  //   moped: './protractor/features/moped/*.feature',
-  //   motor: './protractor/features/motor/*.feature',
-  //   woonVerzekering: './protractor/features/woonVerzekering/*.feature',
-  //   zzpFlex: './protractor/features/zzpFlex/*.feature',
-  //   zorgeloosOnlineVerzekering: './protractor/features/zorgeloosOnlineVerzekering/*.feature',
-  //   reisVerzekering: './protractor/features/reisVerzekering/*.feature',
-  //   roerendeZakenVerzekering: './protractor/features/roerendeZakenVerzekering/*.feature',
-  //   bootVerzekering: './protractor/features/bootVerzekering/*.feature'
-  // },
 
   specs: [
     // 'async_await.js',
@@ -34,11 +21,19 @@ exports.config = {
     },
     'chromeOptions': {
       'args': [
-        // "headless",
-        // "disable-gpu",
+        // "--headless",
+        // "--disable-gpu",
+        // "--window-size=1920,1080",
         "disable-extensions"]
     }
   },
+
+
+  suites: {
+    zakelijk: './protractor/features/zakelijk/**/*.feature',
+    particulier: './protractor/features/particulier/**/*.feature'
+  },
+
   params: {
     env: {
       //DEFAULT environment is pat
@@ -48,6 +43,7 @@ exports.config = {
   // baseUrl: 'https://techblog.polteq.com/testshop/index.php',
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
+
 
   onPrepare: () => {
   protractor.browser.manage().window().maximize();
@@ -63,9 +59,10 @@ afterLaunch: () => {
   multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);
 },
 
+
+
 plugins: [{
   package: require.resolve('protractor-multiple-cucumber-html-reporter-plugin'),
-  // package: 'protractor-multiple-cucumber-html-reporter-plugin',
   options: {
     // read the options part for more options
     automaticallyGenerateReport: false,
@@ -82,6 +79,7 @@ cucumberOpts: {
   require: [
     './protractor/step_definitions/*.ts',
     './protractor/step_definitions/**/*.ts',
+    './protractor/step_definitions/**/**/*.ts',
     './protractor/support/*.ts'],
     'require-module': "ts-node/register",
     compilerOptions: {

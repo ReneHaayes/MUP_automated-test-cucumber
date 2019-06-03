@@ -1,0 +1,8 @@
+{
+    "cucumberautocomplete.steps": [
+        "test/protractor/step_definitions/**/*.ts",
+        "node_modules/qa-lib/src/step_definitions/*.js"
+    ],
+    "cucumberautocomplete.syncfeatures": "test/protractor/features/**/*feature",
+    "cucumberautocomplete.strictGherkinCompletion": true
+}

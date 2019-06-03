@@ -2,6 +2,7 @@
 
 # IDEs and editors
 /.idea
+# /.vscode
 *.iml
 
 # output
@@ -11,3 +12,6 @@
 
 # dependencies
 /test/node_modules/
+
+# debug
+/test/debug.log

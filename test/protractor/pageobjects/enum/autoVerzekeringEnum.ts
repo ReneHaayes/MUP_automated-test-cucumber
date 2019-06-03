@@ -37,7 +37,7 @@ export enum aanvullendeOptiesEnum {
   PECH_HULP_ABROAD = 'pechHulpAbroad',
   RECHTSHULP_VERKEER = 'rechtsHulpVerkeer',
   OWN_CHOICE_DAMAGE_COMPANY = 'eigenKeuzeSchadeHerstelBedrijf',
-  ONGEVALLEN_VERZEKERING = 'ongevallen verzekering',
+  ONGEVALLEN_VERZEKERING = 'Ongevallenverzekering',
   AANSCHAFWAARDE_REGELING = 'aanschafwaarde regeling'
 }
 
@@ -58,4 +58,20 @@ export enum legalEnum {
   COW = 'cow',
   STICHTING = 'stichting',
   BUITENLANDS_RECHTSVORM = 'buitenlands rechtsvorm'
+}
+
+export enum vehicleInfoEnum {
+  PASSENGER_CAR = 'passenger car',
+  VANS = 'vans',
+  TRUCKS = 'trucks',
+  TRAILER = 'trailer'
+}
+
+export enum maxSpeedEnum {
+  TOT_30 = 'tot 30',
+  BETWEEN_31_AND_40 = '31-40',
+  BETWEEN_41_AND_50 = '41-50',
+  BETWEEN_51_AND_60 = '51-60',
+  OVER_60 = 'over 60'
+
 }

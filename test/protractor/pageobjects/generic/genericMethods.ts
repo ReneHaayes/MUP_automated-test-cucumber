@@ -21,9 +21,33 @@ let nawElements: NawElements = new NawElements();
 
 export class GenericMethods {
 
+  async clickOnCookie(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    // await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    })
+  }
+
   async clickOnElement(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    })
+  }
+
+  async waitForElementAndClick(selector: string, waitFor: number) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, waitFor);
     const elementToClick: ElementFinder = element(by.css(selector));
     await browser.controlFlow().execute(() => {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
@@ -61,7 +85,31 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
       await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
+    }
+  }
+
+  async verifyUrlContains(url: string) {
+    const currentUrl: string = await browser.getCurrentUrl();
+    await expect(currentUrl).to.have.string(url);
+  }
+
+  async verifyUrlContainsIgnoreCase(url: string) {
+    const currentUrl: string = await browser.getCurrentUrl();
+    await expect(currentUrl).to.containIgnoreCase(url);
+  }
+
+
+  async verifyUrlIs(url: string) {
+    const currentUrl: string = await browser.getCurrentUrl();
+    await expect(currentUrl).to.equal(url);
+  }
+
+  async verifyBreadcrumbOnPosition(breadCrumb: string, position: number) {
+    try {
+    await this.waitForElementIsVisible('[class="breadcrumb_list"] li:nth-child('+position+') [title="'+breadCrumb+'"]', browser.getPageTimeout);
+    } catch (e) {
+      throw new Error('Breadcrumb "'+breadCrumb+'" is not shown on position: ' +position);
     }
   }
 
@@ -75,7 +123,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.className(selector));
       await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -90,7 +138,7 @@ export class GenericMethods {
       await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
       await browser.sleep(500);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is still visible');
     }
   }
 
@@ -105,7 +153,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
       await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -114,7 +162,7 @@ export class GenericMethods {
       const selectorToWaitFor: ElementFinder = element(by.xpath(selector));
       await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
     } catch (e) {
-      throw new Error(selector + ', is not visible');
+      throw new Error('Element with selector: ' + selector + ', is not visible');
     }
   }
 
@@ -183,6 +231,13 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
+  async verifyTextInElementIgnoreCase(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getText(selector);
+    await expect(selectorToString).to.equalIgnoreCase(assertionText);
+  }
+
   async verifyTextInElementTyPage(selector: string, assertionText: string) {
     await this.waitForElementNotVisibleTyPage(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisibleTyPage(selector, browser.getPageTimeout);
@@ -197,9 +252,9 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
-  async verifyTextContainsInElement(selector: string, assertionText: string) {
+  async verifyTextContainsInElement(selector: string, assertionText: string, waitFor: number) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, waitFor);
     const selectorToString: string = await this.getText(selector);
     await expect(selectorToString).to.have.string(assertionText);
   }
@@ -252,9 +307,9 @@ export class GenericMethods {
 
   async verifyThankYouPageTitle(persona: string) {
     if (personaData.getPersonaGender(persona) === gender.MALE) {
-      await this.verifyTextInElementTyPage(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona))
+      await this.verifyTextInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona))
     } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
-      await this.verifyTextInElementTyPage(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona))
+      await this.verifyTextInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona))
     } else {
       throw new Error('The input: "" ' + persona + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
     }
@@ -346,8 +401,8 @@ export class GenericMethods {
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.criminalHistoryYesElement);
-        await this.waitForElementIsVisible(genericElements.criminalHistoryInformationElement, browser.getPageTimeout);
-        await this.clickOnElement(genericElements.criminalHistoryInformationElement);
+        await this.waitForElementIsVisible(genericElements.lightBoxClickElement, browser.getPageTimeout);
+        await this.clickOnElement(genericElements.lightBoxClickElement);
         break;
       }
       case genericEnum.NO: {
@@ -443,5 +498,15 @@ export class GenericMethods {
       }
     }
   }
+
+  async verifyNumber(input: number, assertionNumber: number) {
+    await expect(input).to.equal(assertionNumber);
+  }
+
+  async verifyTextContains(input: string, assertionText: string) {
+    await expect(input).to.have.string(assertionText);
+  }
+
+
 
 }

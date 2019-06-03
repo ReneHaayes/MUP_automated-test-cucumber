@@ -14,6 +14,8 @@ export class Persona {
   initials: string;
   lastName: string;
   birthDay: string;
+  birthMonth: string;
+  birthYear: string;
   zipCode: string;
   gender: string;
   prefix: string;
@@ -31,15 +33,18 @@ export class Persona {
   durationEntrepreneur: string;
   height: string;
   weight: string;
+  password: string;
 
-  constructor(firstName: string, initials: string, prefix: string, lastName: string, birthday: string, birthplace: string, zipcode: string, houseNumber: string, houseNumberAddition: string,
+  constructor(firstName: string, initials: string, prefix: string, lastName: string, birthday: string, birthMonth: string, birthYear: string, birthplace: string, zipcode: string, houseNumber: string, houseNumberAddition: string,
               gender: string, phoneNumber: string, specificIdentification: string, specificIdentificationNumber: string, eMailAddress: string, accountNumber: string, bsn: string,
-              profession: string, kvkNumber:string, durationEntrepreneur: string, height: string, weight: string) {
+              profession: string, kvkNumber: string, durationEntrepreneur: string, height: string, weight: string, password: string) {
 
     this.firstName = firstName;
     this.initials = initials;
     this.lastName = lastName;
     this.birthDay = birthday;
+    this.birthMonth = birthMonth;
+    this.birthYear = birthYear;
     this.zipCode = zipcode;
     this.gender = gender;
     this.prefix = prefix;
@@ -57,30 +62,44 @@ export class Persona {
     this.durationEntrepreneur = durationEntrepreneur;
     this.height = height;
     this.weight = weight;
+    this.password = password;
   }
 }
 
+
 export class PersonaData {
 
-  ronaldo: Persona = new Persona('Cristiano', 'C', prefix.NO_PREFIX, 'Ronaldo', '10-05-1987', 'Deventer', '7412XW', '91',
+  ronaldo: Persona = new Persona('Cristiano', 'C', prefix.NO_PREFIX, 'Ronaldo', '10', '05', '1987', 'Deventer', '7412XW', '91',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'ronaldo@unive.nl',
-    'NL05INGB0661095088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85');
-  messi: Persona = new Persona('Lionel', 'L', prefix.NO_PREFIX, 'Messi', '05-09-1965', 'Apeldoorn', '7412TV', '44',
+    'NL05INGB0661095088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  messi: Persona = new Persona('Lionel', 'L', prefix.NO_PREFIX, 'Messi', '05', '09', '1965', 'Apeldoorn', '7412TV', '44',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.DRIVER_LICENSE, '12345567890',
-    'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76');
-  salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15-06-1992', 'Enschede', '7412XW', '31',
-    'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'salah@unive.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50');
-  neymar: Persona = new Persona('Neymar', 'N', 'da', 'Silva', '05-02-1992', 'Arnhem', '7412XW', '12',
+    'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+  salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15', '06', '1992', 'Enschede', '7412XW', '31',
+    'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'onjuisteemailadres@test.nl',
+    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
+  neymar: Persona = new Persona('Neymar', 'N', 'da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
     'ABC', gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
-    'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98');
-  pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15-03-1993', 'Zwolle', '7412TV', '69',
+    'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98', 'Welkom01!');
+  pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15', '03', '1993', 'Zwolle', '7412TV', '69',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '1234567890', specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110');
+    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110', 'Welkom01!');
+  illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing-van Bruggen', '28', '10', '1962', 'Deventer', '7412XW', '91',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
+    '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  annie: Persona = new Persona('Annie', 'A', prefix.NO_PREFIX, 'Jans', '25', '05', '1960', 'Rolde', '9451GK', '99451',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
+    'anniejans@ziggo.nl', '5088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
 
 
   getPersonaZipcode(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.zipCode;
+      }
+      case personaName.ANNIE: {
+        return this.annie.zipCode;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.zipCode;
       }
@@ -104,6 +123,12 @@ export class PersonaData {
 
   getPersonaBirthday(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.birthDay;
+      }
+      case personaName.ANNIE: {
+        return this.annie.birthDay;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.birthDay;
       }
@@ -125,9 +150,105 @@ export class PersonaData {
     }
 
   }
+  
+  getPersonaBirthMonth(input: string): string {
+    switch (input) {
+      case personaName.ILLING: {
+        return this.illing.birthMonth;
+      }
+      case personaName.ANNIE: {
+        return this.annie.birthMonth;
+      }
+      case personaName.RONALDO: {
+        return this.ronaldo.birthMonth;
+      }
+      case personaName.MESSI: {
+        return this.messi.birthMonth;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.birthMonth;
+      }
+      case personaName.SALAH: {
+        return this.salah.birthMonth;
+      }
+      case personaName.POGBA: {
+        return this.pogba.birthMonth;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
 
+  }
+
+  getPersonaBirthYear(input: string): string {
+    switch (input) {
+      case personaName.ILLING: {
+        return this.illing.birthYear;
+      }
+      case personaName.ANNIE: {
+        return this.annie.birthYear;
+      }
+      case personaName.RONALDO: {
+        return this.ronaldo.birthYear;
+      }
+      case personaName.MESSI: {
+        return this.messi.birthYear;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.birthYear;
+      }
+      case personaName.SALAH: {
+        return this.salah.birthYear;
+      }
+      case personaName.POGBA: {
+        return this.pogba.birthYear;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+
+  }
+
+  getPersonaBirthDate(input: string): string {
+    switch (input) {
+      case personaName.ILLING: {
+        return this.illing.birthDay + '-' + this.illing.birthMonth + '-' + this.illing.birthYear;
+      }
+      case personaName.ANNIE: {
+        return this.annie.birthDay + '-' + this.annie.birthMonth + '-' + this.annie.birthYear;
+      }
+      case personaName.RONALDO: {
+        return this.ronaldo.birthDay + '-' + this.ronaldo.birthMonth + '-' + this.ronaldo.birthYear;
+      }
+      case personaName.MESSI: {
+        return this.messi.birthDay + '-' + this.messi.birthMonth + '-' + this.messi.birthYear;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.birthDay + '-' + this.neymar.birthMonth + '-' + this.neymar.birthYear;
+      }
+      case personaName.SALAH: {
+        return this.salah.birthDay + '-' + this.salah.birthMonth + '-' + this.salah.birthYear;
+      }
+      case personaName.POGBA: {
+        return this.pogba.birthDay + '-' + this.pogba.birthMonth + '-' + this.pogba.birthYear;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+
+  }
+  
   getPersonaLastName(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.lastName;
+      }
+      case personaName.ANNIE: {
+        return this.annie.lastName;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.lastName;
       }
@@ -151,6 +272,12 @@ export class PersonaData {
 
   getPersonaFirstName(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.firstName;
+      }
+      case personaName.ANNIE: {
+        return this.annie.firstName;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.firstName;
       }
@@ -175,6 +302,12 @@ export class PersonaData {
 
   getPersonaGender(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.gender;
+      }
+      case personaName.ANNIE: {
+        return this.annie.gender;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.gender;
       }
@@ -199,6 +332,12 @@ export class PersonaData {
 
   getPersonaInitials(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.initials;
+      }
+      case personaName.ANNIE: {
+        return this.annie.initials;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.initials;
       }
@@ -222,6 +361,12 @@ export class PersonaData {
 
   getPersonaPrefix(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.prefix;
+      }
+      case personaName.ANNIE: {
+        return this.annie.prefix;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.prefix;
       }
@@ -245,6 +390,12 @@ export class PersonaData {
 
   getPersonaBirthPlace(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.birthPlace;
+      }
+      case personaName.ANNIE: {
+        return this.annie.birthPlace;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.birthPlace;
       }
@@ -268,6 +419,12 @@ export class PersonaData {
 
   getPersonaHouseNumber(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.houseNumber;
+      }
+      case personaName.ANNIE: {
+        return this.annie.houseNumber;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.houseNumber;
       }
@@ -291,6 +448,12 @@ export class PersonaData {
 
   getPersonaHouseNumberAddition(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.houseNumberAddition;
+      }
+      case personaName.ANNIE: {
+        return this.annie.houseNumberAddition;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.houseNumberAddition;
       }
@@ -314,6 +477,12 @@ export class PersonaData {
 
   getPersonaPhoneNumber(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.phoneNumber;
+      }
+      case personaName.ANNIE: {
+        return this.annie.phoneNumber;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.phoneNumber;
       }
@@ -337,6 +506,12 @@ export class PersonaData {
 
   getPersonaSpecificIdentification(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.specificIdentification;
+      }
+      case personaName.ANNIE: {
+        return this.annie.specificIdentification;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.specificIdentification;
       }
@@ -360,6 +535,12 @@ export class PersonaData {
 
   getPersonaSpecificIdentificationNumber(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.specificIdentificationNumber;
+      }
+      case personaName.ANNIE: {
+        return this.annie.specificIdentificationNumber;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.specificIdentificationNumber;
       }
@@ -383,6 +564,12 @@ export class PersonaData {
 
   getPersonaEmailAddress(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.eMailAddress;
+      }
+      case personaName.ANNIE: {
+        return this.annie.eMailAddress;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.eMailAddress;
       }
@@ -406,6 +593,12 @@ export class PersonaData {
 
   getPersonaAccountNumber(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.accountNumber;
+      }
+      case personaName.ANNIE: {
+        return this.annie.accountNumber;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.accountNumber;
       }
@@ -429,6 +622,12 @@ export class PersonaData {
 
   getPersonaBsn(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.bsn;
+      }
+      case personaName.ANNIE: {
+        return this.annie.bsn;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.bsn;
       }
@@ -452,6 +651,12 @@ export class PersonaData {
 
   getPersonaProfession(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.profession;
+      }
+      case personaName.ANNIE: {
+        return this.annie.profession;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.profession;
       }
@@ -475,6 +680,12 @@ export class PersonaData {
 
   getPersonaKvkNumber(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.kvkNumber;
+      }
+      case personaName.ANNIE: {
+        return this.annie.kvkNumber;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.kvkNumber;
       }
@@ -498,6 +709,12 @@ export class PersonaData {
 
   getPersonaDurationEntrepreneur(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.durationEntrepreneur;
+      }
+      case personaName.ANNIE: {
+        return this.annie.durationEntrepreneur;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.durationEntrepreneur;
       }
@@ -521,6 +738,12 @@ export class PersonaData {
 
   getPersonaHeight(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.height;
+      }
+      case personaName.ANNIE: {
+        return this.annie.height;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.height;
       }
@@ -544,6 +767,12 @@ export class PersonaData {
 
   getPersonaWeight(input: string): string {
     switch (input) {
+      case personaName.ILLING: {
+        return this.illing.weight;
+      }
+      case personaName.ANNIE: {
+        return this.annie.weight;
+      }
       case personaName.RONALDO: {
         return this.ronaldo.weight;
       }
@@ -565,5 +794,33 @@ export class PersonaData {
     }
   }
 
+  getPersonaPassword(input: string): string {
+    switch (input) {
+      case personaName.ILLING: {
+        return this.illing.password;
+      }
+      case personaName.ANNIE: {
+        return this.annie.password;
+      }
+      case personaName.RONALDO: {
+        return this.ronaldo.password;
+      }
+      case personaName.MESSI: {
+        return this.messi.password;
+      }
+      case personaName.NEYMAR: {
+        return this.neymar.password;
+      }
+      case personaName.SALAH: {
+        return this.salah.password;
+      }
+      case personaName.POGBA: {
+        return this.pogba.password;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
 
 }

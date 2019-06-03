@@ -1,105 +1,210 @@
 import {GenericElements} from './genericElements';
-import {environmentUrl} from "../enum/genericEnum";
+import {verzekeringPaginasEnum} from "../enum/genericEnum";
 import {browser} from "protractor";
+import {homePageEnum} from "../enum/woonVerzekeringEnum";
+import {ApiElements} from "../api/apiElements";
 
 let genericElements: GenericElements = new GenericElements();
+let apiElements: ApiElements = new ApiElements();
 
 export class GetUrlUnive {
 
   getUrlUnive(input: string): string {
     switch (input) {
-      case environmentUrl.HOME: {
-        return this.getEnv();
+      case verzekeringPaginasEnum.HOME: {
+        return this.getEnv(browser.params.env.environment);
       }
-      case environmentUrl.HOME_BUS: {
-        return this.getEnv() + genericElements.businessHomePage;
+      case verzekeringPaginasEnum.ALLE_VERZEKERINGEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.alleVerzekeringen;
       }
-      case environmentUrl.AUTOVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.autoVerzUrlPat;
+      case verzekeringPaginasEnum.ALLE_VERZEKERINGEN_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.alleVerzekeringenZakelijk;
       }
-      case environmentUrl.ZZPFLEX_PAT: {
-        return this.getEnv() + genericElements.zzpFlexPat;
+      case verzekeringPaginasEnum.HOME_BUS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.businessHomePage;
       }
-      case environmentUrl.AANSPRAKELIJKHEIDSVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.aansprakelijkheidsVerzekeringPat;
+      case verzekeringPaginasEnum.AUTOVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.autoVerzUrlPat;
       }
-      case environmentUrl.AUTOVERZEKERING_PRODUCT_PAGE_PAT: {
-        return this.getEnv() + genericElements.autoVerzProductPagePat;
+      case verzekeringPaginasEnum.ZZPFLEX_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zzpFlexPat;
       }
-      case environmentUrl.WOONVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.woonVerzPat;
+      case verzekeringPaginasEnum.AANSPRAKELIJKHEIDSVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.aansprakelijkheidsVerzekeringPat;
       }
-      case environmentUrl.WOONVERZEKERING_PRODUCT_PAGE_PAT: {
-        return this.getEnv() + genericElements.woonVerzPatProductPage;
+      case verzekeringPaginasEnum.AUTOVERZEKERING_PRODUCT_PAGE_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.autoVerzProductPagePat;
       }
-      case environmentUrl.BROMFIETSVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.bromfietsVerzekeringPat;
+      case verzekeringPaginasEnum.WOONVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.woonVerzPat;
       }
-      case environmentUrl.SCOOTERVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.scooterVerzekeringPat;
+      case verzekeringPaginasEnum.WOONVERZEKERING_PRODUCT_PAGE_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.woonVerzPatProductPage;
       }
-      case environmentUrl.MOTORVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.motorVerzekeringPat;
+      case verzekeringPaginasEnum.BROMFIETSVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.bromfietsVerzekeringPat;
       }
-      case environmentUrl.QUADVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.quadVerzekeringPat;
+      case verzekeringPaginasEnum.SCOOTERVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.scooterVerzekeringPat;
       }
-      case environmentUrl.TRIKEVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.trikeVerzekeringPat;
+      case verzekeringPaginasEnum.MOTORVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.motorVerzekeringPat;
       }
-      case environmentUrl.ZORGELOOSONLINEVERZEKERING_PAT: {
-        return this.getEnv() + genericElements.zorgeloosOnlineVerzekeringPat;
+      case verzekeringPaginasEnum.QUADVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.quadVerzekeringPat;
       }
-      case environmentUrl.BEDRIJFSAUTOVERZEKERING: {
-        return this.getEnv() + genericElements.bedrijfsAutoVerzekering;
+      case verzekeringPaginasEnum.TRIKEVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.trikeVerzekeringPat;
       }
-      case environmentUrl.KORTLOPENDEREISVERZEKERING: {
-        return this.getEnv() + genericElements.kortlopendeReisVerzekering;
+      case verzekeringPaginasEnum.ZORGELOOSONLINEVERZEKERING_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgeloosOnlineVerzekeringPat;
       }
-      case environmentUrl.DOORLOPENDEREISVERZEKERING: {
-        return this.getEnv() + genericElements.doorlopendeReisVerzekering;
+      case verzekeringPaginasEnum.BEDRIJFSAUTOVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.bedrijfsAutoVerzekering;
       }
-      case environmentUrl.ROERENDEZAKENVERZEKERING_ZAKELIJK: {
-        return this.getEnv() + genericElements.roerendeZakenVerzekeringZakelijk;
+      case verzekeringPaginasEnum.KORTLOPENDEREISVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.kortlopendeReisVerzekering;
       }
-      case environmentUrl.PERSONENAUTOVERZEKERING_ZAKELIJK: {
-        return this.getEnv() + genericElements.personenAutoVerzekeringZakelijk;
+      case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.doorlopendeReisVerzekering;
       }
-      case environmentUrl.KORTLOPENDEANNULERINGSVERZEKERING: {
-        return this.getEnv() + genericElements.kortlopendeAnnuleringsVerzekering;
+      case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERINGPRODUCTPAGE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.doorlopendeReisVerzekeringPp;
       }
-      case environmentUrl.ZORGELOOSONLINE_ZAKELIJK: {
-        return this.getEnv() + genericElements.zorgeloosOnlineVerzekeringZakelijk;
+      case verzekeringPaginasEnum.ROERENDEZAKENVERZEKERING_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.roerendeZakenVerzekeringZakelijk;
       }
-      case environmentUrl.BOOTVERZEKERING: {
-        return this.getEnv() + genericElements.bootVerzekering;
+      case verzekeringPaginasEnum.PERSONENAUTOVERZEKERING_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.personenAutoVerzekeringZakelijk;
       }
-      case environmentUrl.CAMPERVERZEKERING: {
-        return this.getEnv() + genericElements.camperVerzekering;
+      case verzekeringPaginasEnum.KORTLOPENDEANNULERINGSVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.kortlopendeAnnuleringsVerzekering;
       }
-      case environmentUrl.CARAVANVERZEKERING: {
-        return this.getEnv() + genericElements.caravanVerzekering;
+      case verzekeringPaginasEnum.ZORGELOOSONLINE_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgeloosOnlineVerzekeringZakelijk;
       }
-      case environmentUrl.DOORLOPENDE_ANNULERINGSVERZEKERING: {
-        return this.getEnv() + genericElements.doorlopendeAnnuleringsVerzekering;
+      case verzekeringPaginasEnum.BOOTVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.bootVerzekering;
       }
-      case environmentUrl.FIETSVERZEKERING: {
-        return this.getEnv() + genericElements.fietsVerzekering;
+      case verzekeringPaginasEnum.CAMPERVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.camperVerzekering;
       }
-      case environmentUrl.KOSTBAARHEDEN_VERZEKERING: {
-        return this.getEnv() + genericElements.kostbaarhedenVerzekering;
+      case verzekeringPaginasEnum.CARAVANVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.caravanVerzekering;
       }
-      case environmentUrl.OLDTIMERVERZEKERING: {
-        return this.getEnv() + genericElements.oldtimerVerzekering;
+      case verzekeringPaginasEnum.CARAVANVERZEKERING_PP: {
+        return this.getEnv(browser.params.env.environment) + genericElements.caravanVerzekeringPp;
       }
-      case environmentUrl.ONGEVALLENVERZEKERING: {
-        return this.getEnv() + genericElements.ongevallenVerzekering;
+      case verzekeringPaginasEnum.DOORLOPENDE_ANNULERINGSVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.doorlopendeAnnuleringsVerzekering;
       }
-      case environmentUrl.RECHTSBIJSTANDVERZEKERING: {
-        return this.getEnv() + genericElements.rechtsBijstandVerzekering;
+      case verzekeringPaginasEnum.FIETSVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.fietsVerzekering;
       }
-      case environmentUrl.SCOOTMOBIELVERZEKERING: {
-        return this.getEnv() + genericElements.scootMobielVerzekering;
+      case verzekeringPaginasEnum.KOSTBAARHEDEN_VERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.kostbaarhedenVerzekering;
+      }
+      case verzekeringPaginasEnum.OLDTIMERVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.oldtimerVerzekering;
+      }
+      case verzekeringPaginasEnum.ONGEVALLENVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.ongevallenVerzekering;
+      }
+      case verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.rechtsBijstandVerzekering;
+      }
+      case verzekeringPaginasEnum.SCOOTMOBIELVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.scootMobielVerzekering;
+      }
+      case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekering;
+      }
+      case verzekeringPaginasEnum.ZAKELIJK_RECHTSBIJSTANDVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkRechtsBijstandVerzekering;
+      }
+      case verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkAansprakelijkheidsVerzekering;
+      }
+      case verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkAansprakelijkheidsVerzekeringPp;
+      }
+      case verzekeringPaginasEnum.ZAKELIJK_TRACTORVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkTractorVerzekering;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekering;
+      }
+      case homePageEnum.ZORGNOTA_DECLAREREN: {
+        return genericElements.zorgNotaDeclareren;
+      }
+      case homePageEnum.UNIVE_ALARMCENTRALE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.univeAlarmCentrale;
+      }
+      case homePageEnum.VERZEKERING_WIJZIGEN: {
+        return genericElements.mijnUnive;
+      }
+      case homePageEnum.MIJN_UNIVE: {
+        return genericElements.mijnUnive;
+      }
+      case homePageEnum.ZOEKEN: {
+        return this.getEnv(browser.params.env.environment) + homePageEnum.ZOEKEN;
+      }
+      case homePageEnum.OVER_ONS: {
+        return genericElements.overUnive;
+      }
+      case homePageEnum.KLANTENSERVICE: {
+        return this.getEnv(browser.params.env.environment) + homePageEnum.KLANTENSERVICE;
+      }
+      case homePageEnum.ZIPCODE_PLACE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
+      }
+      case homePageEnum.ZZP_ER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkZzp;
+      }
+      case homePageEnum.AGRARIER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkAgrarier;
+      }
+      case homePageEnum.GEBOUWEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zakelijkGebouwen;
+      }
+      case homePageEnum.AFSPRAAK_MAKEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.afspraakMaken;
+      }
+      case homePageEnum.KLACHT_INDIENEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.klachtIndienen;
+      }
+      case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
+        return genericElements.mijnUniveZakelijk;
+      }
+      case homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveZakelijkHomePage;
+      }
+      case homePageEnum.ONDERNEMERSCAN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.ondernemersScan;
+      }
+      case verzekeringPaginasEnum.AMP_AUTOVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.ampAutoverzekering;
+      }
+      case verzekeringPaginasEnum.AMP_WOONVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.ampWoonverzekering;
+      }
+      case verzekeringPaginasEnum.AMP_BROMFIETSVERZEKERING:   {
+        return this.getEnv(browser.params.env.environment) + genericElements.ampBromfietsverzekering;
+      }
+      case verzekeringPaginasEnum.AMP_DOORLOPENDEREISVERZEKERING:   {
+        return this.getEnv(browser.params.env.environment) + genericElements.ampDoorlopendeReisverzekering;
+      }
+      case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.collectieveZorgVerzekering;
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
+        return this.getEnv(verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER) + genericElements.loginMijnUniveParticulierURL;
+      }
+      case verzekeringPaginasEnum.MAILHOG: {
+        return genericElements.mailhogPatURL;
+      }
+      case verzekeringPaginasEnum.OAUTH: {
+        return apiElements.oauthtestUrl;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -107,13 +212,16 @@ export class GetUrlUnive {
     }
   }
 
-  getEnv(): string {
-    switch (browser.params.env.environment) {
-      case environmentUrl.HOME_PAT: {
+  getEnv(input: string): string {
+    switch (input) {
+      case verzekeringPaginasEnum.HOME_PAT: {
         return 'https://pat.unive.nl/'
       }
-      case environmentUrl.HOME_TSTPROJ: {
+      case verzekeringPaginasEnum.HOME_TSTPROJ: {
         return 'https://tstproj.unive.nl/'
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
+        return 'https://login.pat.unive.nl/'
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
