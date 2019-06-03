@@ -71,10 +71,12 @@ export class GenericElements {
   zakelijkMotorVerzekering: string = 'zakelijk/motorverzekering';
   vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtautoverzekering';
   werkmateriaalVerzekering: string = 'zakelijk/werkmaterieelverzekering';
+  loginMijnUniveParticulierURL: string = 'login';
+  mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
 
 
   //COOKIE
-  cookieElement: string = '#consent-popup-close-modal';
+  cookieClickElement: string = '#consent-popup-close-modal';
 
   //BUTTONS
   nextButton: string = '#_Form_next';

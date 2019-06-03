@@ -29,6 +29,8 @@ export enum specificIdentification {
 }
 
 export enum personaName {
+  ILLING = 'illing',
+  ANNIE = 'annie',
   RONALDO = 'ronaldo',
   MESSI = 'messi',
   SALAH = 'salah',
@@ -133,9 +135,10 @@ export enum verzekeringPaginasEnum {
   HANDELAARSKENTEKENVERZEKERING = 'Handelaarskentekenverzekering',
   MILIEUSCHADEVERZEKERING = 'Milieuschadeverzekering',
   VRACHTAUTOVERZEKERING = 'Vrachtautoverzekering',
-  WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering'
-
-
+  WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering',
+  MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
+  MAILHOG = 'mailhog',
+  OAUTH = 'oauth'
 }
 
 export enum durationEntrepreneur {
