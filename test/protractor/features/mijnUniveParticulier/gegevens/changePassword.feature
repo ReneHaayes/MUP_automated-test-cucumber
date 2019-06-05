@@ -1,5 +1,5 @@
-@changeLoginData
-@regression
+@changePasswordMijnUniveParticulier
+
 Feature: Changing data for persona when logged in.
 
   Scenario Outline: Change password after logged in.
