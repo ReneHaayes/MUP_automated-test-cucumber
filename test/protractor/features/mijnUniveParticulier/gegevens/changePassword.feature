@@ -1,4 +1,4 @@
-@changeLoginData
+@changePasswordMijnUniveParticulier
 
 Feature: Changing data for persona when logged in.
 
