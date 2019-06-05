@@ -1,5 +1,5 @@
 @loginPageMijnUniveParticulier
-@regression
+
 Feature: Login page for Mijn Unive Particulier
 
   Scenario: Filling in the login data for mijn unive particulier

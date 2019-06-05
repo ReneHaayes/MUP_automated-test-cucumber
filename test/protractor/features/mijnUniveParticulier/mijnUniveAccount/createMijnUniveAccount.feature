@@ -1,5 +1,5 @@
 @createMijnUniveAccount
-@regression
+
 Feature: Deleting an Account and afterwards creating an account.
 
   Scenario Outline: Create new mijn Unive account

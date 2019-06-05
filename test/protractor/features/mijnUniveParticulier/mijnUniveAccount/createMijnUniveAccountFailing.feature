@@ -1,5 +1,5 @@
 @createMijnUniveAccountFailing
-@regression
+
 Feature: Fault situations for creating account.
 
   Scenario Outline: Check if the correct notification appears when the account already exists
