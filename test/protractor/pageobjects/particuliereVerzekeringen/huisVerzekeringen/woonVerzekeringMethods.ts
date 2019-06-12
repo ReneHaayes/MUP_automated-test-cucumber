@@ -304,7 +304,7 @@ export class WoonVerzekeringMethods {
         await genericMethods.clickOnElement(hmPageElements.homePageWoonverzekeringElement);
         await genericMethods.typeText(hmPageElements.woonVerzekeringZipCodeElement, personaData.getPersonaZipcode(persona));
         await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
-        await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
+        // await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
         await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
         break;
       }
@@ -314,14 +314,14 @@ export class WoonVerzekeringMethods {
         break;
       }
       case hmPageWoonVerzekeringEnum.PPAGE_NOT_FILLED: {
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.woonWidgetButtonProductPageElement);
         break;
       }
       case hmPageWoonVerzekeringEnum.PPAGE_WOONVERZ_FILLED: {
         await genericMethods.typeText(hmPageElements.woonVerzekeringZipCodeElement, personaData.getPersonaZipcode(persona));
         await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
-        await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        // await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
+        await genericMethods.clickOnElement(hmPageElements.woonWidgetButtonProductPageElement);
         break;
       }
       default: {

@@ -20,7 +20,7 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
   try {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout);
+    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'opslaan van het verzoek', browser.getPageTimeout);
     logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
   } catch (e) {
     await genericMethods.verifyThankYouPageTitle(persona);
