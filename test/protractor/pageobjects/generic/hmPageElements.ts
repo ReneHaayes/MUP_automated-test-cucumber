@@ -29,7 +29,8 @@ export class HmPageElements {
   licensePlateWidgetDontKnowProductPageElement: string = '[class="simpleWidget_link"]';
 
   //WOONVERZEKERING
-  woonVerzekeringButtonElement: string = '[data-funnel="/woonverzekering/premieberekenen-en-afsluiten"]';
+  woonVerzekeringButtonElement: string = '[data-funnel="/woonverzekering/premieberekenen-en-afsluiten"] [class="simpleWidget_submit"]';
+  woonWidgetButtonProductPageElement: string = '[class*="simpleWidget_submit"]';
   woonVerzekeringZipCodeElement: string = '#woonPostcode';
   woonVerzekeringHouseNumberElement: string = '#woonHuisnummerNr';
   woonVerzekeringHouseNumberAddingElement: string = '#woonHuisnummerToevoegingAn';
@@ -50,6 +51,7 @@ export class HmPageElements {
   //REISVERZEKERING
   homePageReisverzekeringElement: string = '[href*="/zorgservice/alternatievezorg"][class*="insurances_tabLinkAction"]';
   berekenUwPremieReisVerzekeringClickButton: string = '[class*="inlineAnchor_button"][href*="/doorlopende-reisverzekering/premieberekenen-en-afsluiten"]';
+  doorlopendeReisverzekeringProductPageBerekenUwPremieButton: string = '[class*="simpleWidget_submit"]';
 
   menuPageAutoverzekeringClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/autoverzekering"]';
   menuPageWoonverzekeringClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/woonverzekering"]';
