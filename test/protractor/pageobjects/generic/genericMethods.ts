@@ -259,7 +259,7 @@ export class GenericMethods {
     await expect(selectorToString).to.have.string(assertionText);
   }
 
-  async verifyTextContainsInElementWithReturn(selector: string, assertionText: string, waitFor: number): Promise<boolean> {
+  async verifyTextContainsInElementBoolean(selector: string, assertionText: string, waitFor: number): Promise<boolean> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, waitFor);
     const selectorToString: string = await this.getText(selector);
