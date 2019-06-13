@@ -18,8 +18,8 @@ Feature: Happy flow for 'personen auto verzekering'
       | collective        | SC Heerenveen       |
     And I enter step three page of autoverzekering with
       | licensePlate        | <licensePlate> |
-      | startDate           | 01-06-2019     |
-      | startDateOnYourName | 01-01-2019     |
+      | startDate           | 12-12-2019     |
+      | startDateOnYourName | 11-06-2019     |
       | mainDriver          | mainDriverYes  |
       | ownerCar            | ownerCarYes    |
     And I enter step four page of autoverzekering for <persona>

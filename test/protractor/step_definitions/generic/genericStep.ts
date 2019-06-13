@@ -20,8 +20,11 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
   try {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout);
-    logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+    if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'opslaan van het verzoek', browser.getPageTimeout) == true) {
+      logToHtmlReport(this, 'The known bug with the text: "Opslaan van het verzoek" shows on the screen');
+    } else if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout) == true) {
+      logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+    }
   } catch (e) {
     await genericMethods.verifyThankYouPageTitle(persona);
   }
@@ -29,8 +32,11 @@ Then(/^The thank you page for (.*) is shown$/, async function (persona: string) 
 
 Then(/^Thank you page for zakelijk is shown$/, async function () {
   try {
-    await genericMethods.verifyTextContainsInElement(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout);
-    logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+    if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'opslaan van het verzoek', browser.getPageTimeout) == true) {
+      logToHtmlReport(this, 'The known bug with the text: "Opslaan van het verzoek" shows on the screen');
+    } else if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout) == true) {
+      logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
+    }
   } catch (e) {
     await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
   }

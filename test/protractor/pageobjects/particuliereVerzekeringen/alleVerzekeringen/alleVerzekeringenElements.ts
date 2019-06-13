@@ -47,7 +47,7 @@ export class AlleVerzekeringenElements {
   bootVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bootverzekering/premieberekenen-en-afsluiten"]';
   autoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/autoverzekering/premieberekenen-en-afsluiten"]';
   bromfietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bromfietsverzekering/premieberekenen-en-afsluiten"]';
-  scooterVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/scooterverzekering/premieberekenen-en-afsluiten"]';
+  scooterVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bromfietsverzekering/premieberekenen-en-afsluiten"]';
   motorVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/motorverzekering/premieberekenen-en-afsluiten"]';
   fietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/fietsverzekering/premieberekenen-en-afsluiten"]';
   elektrischeFietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="https://www.unive.nl/fietsverzekering/premieberekenen-en-afsluiten?FIETSTYPE=elektrischeFiets"]';
