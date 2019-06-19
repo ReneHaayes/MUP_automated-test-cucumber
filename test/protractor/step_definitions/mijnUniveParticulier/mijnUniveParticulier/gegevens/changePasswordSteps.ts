@@ -1,10 +1,10 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {ApiMethods} from "../../../pageobjects/api/apiMethods";
-import {ApiElements} from "../../../pageobjects/api/apiElements";
-import {MijnUniveAccountElements} from "../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {LoginPageElements} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
+import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
+import {ApiMethods} from "../../../../pageobjects/api/apiMethods";
+import {ApiElements} from "../../../../pageobjects/api/apiElements";
+import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
+import {PersonaData} from "../../../../pageobjects/persona/persona";
+import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
 import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
 
 

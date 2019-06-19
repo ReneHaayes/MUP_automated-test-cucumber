@@ -47,8 +47,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.BEROEPSAANSPRAKELIJKHEIDSVERZEKERING, 3);
-        //TODO: button 'Maak een afspraak' is not working.
-        // await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakInlineButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakInlineButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.BESTUURDERSAANSPRAKELIJKHEID: {
@@ -57,8 +56,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.BESTUURDERSAANSPRAKELIJKHEIDSVERZEKERING, 3);
-        //TODO: button 'Maak een afspraak' is not working.
-        // await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakInlineButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakInlineButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.CONSTRUCTIE_ALLRISK_VERZEKERING: {
@@ -67,8 +65,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.CONSTRUCTIE_ALLRISK_VERZEKERING, 3);
-        //TODO: button 'Maak een afspraak' is not working.
-        // await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakInlineButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakInlineButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING: {
@@ -77,8 +74,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.EIGENVERVOERVERZEKERING, 3);
-        //TODO: button 'Bereken uw premie' is not working.
-        // await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.eigenVervoerVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.eigenVervoerVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.GEBOUWENVERZEKERING: {
