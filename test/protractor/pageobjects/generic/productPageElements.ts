@@ -1,7 +1,7 @@
 export class ProductPageElements {
 
   //AUTOVERZEKERING
-  autoverzekeringBerekenUwPremieButtonClickElement: string = '#premiumCalculatorShort button';
+  autoverzekeringBerekenUwPremieButtonClickElement: string = '[class*="simpleWidget_submit"]';
   autoVerzekeringBreadcrumTextElement: string = '[class*= "breadcrumb_link"][title*="Autoverzekering"]';
 
 

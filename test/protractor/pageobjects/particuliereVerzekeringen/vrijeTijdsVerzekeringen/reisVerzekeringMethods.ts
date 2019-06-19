@@ -70,45 +70,45 @@ export class ReisVerzekeringMethods {
         // await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
         await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
         await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijzelf en Mijn Partner checked': {
         await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijzelf en Mijn kinderen checked': {
         await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijzelf checked': {
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijn Partner en Mijn kinderen checked': {
         await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
         await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
         await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijn Partner checked': {
         await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
         await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijn kinderen checked': {
         await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
         await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Nothing is checked': {
         await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
+        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       default: {

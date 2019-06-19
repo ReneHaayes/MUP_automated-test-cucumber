@@ -17,6 +17,7 @@ When(/^I enter step one page of rechtsbijstandverzekering for family composition
   await rechtsBijstandVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
   await genericMethods.clickOnNextButton();
   //Click on Next at step two page
+  await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.verkeerEnvoertuigen);
   await genericMethods.clickOnNextButton();
 });
 

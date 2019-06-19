@@ -1,11 +1,11 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {ApiMethods} from "../../../pageobjects/api/apiMethods";
-import {MijnUniveAccountElements} from "../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
-import {LoginPageMethods} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
-import {LoginPageElements} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
+import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
+import {GenericElements} from "../../../../pageobjects/generic/genericElements";
+import {ApiMethods} from "../../../../pageobjects/api/apiMethods";
+import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
+import {LoginPageMethods} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
+import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
+import {PersonaData} from "../../../../pageobjects/persona/persona";
 import {browser} from "protractor";
 
 
