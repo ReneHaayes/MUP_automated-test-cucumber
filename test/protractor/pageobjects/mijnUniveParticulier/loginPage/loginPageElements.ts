@@ -35,5 +35,16 @@ export class LoginPageElements {
   successMessageTextElement: string = '[data-message="success"]';
   successMessageText: string = 'U heeft uw e-mailadres succesvol geverifieerd. Dank u.';
 
+  //FORGOT PASSWORD
+  forgotPasswordClickElement: string = '#reset-password';
+  forgotPasswordEmailAddressInputElement: string = '#email';
+  forgotPasswordSubmitButtonClickElement: string = '#confirm';
+  forgotPasswordMessageWhenEnteredEmailAddressTextElement: string = '#messageBox > span';
+  plainClickElement: string = '[href="#preview-plain"]';
+  resetPasswordInEmailClickElement: string = '[href*="reset-password"]';
 
+  //RESET PASSWORD
+  resetPasswordNewPasswordInputElement: string = '#password';
+  resetPasswordConfirmNewPasswordInputElement: string = '#confirmPassword';
+  resetPasswordSubmitButtonClickElement: string = '#confirm';
 }

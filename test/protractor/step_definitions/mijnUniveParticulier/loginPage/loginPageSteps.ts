@@ -4,6 +4,8 @@ import {GenericElements} from "../../../pageobjects/generic/genericElements";
 import {LoginPageElements} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
 import {LoginPageMethods} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
 import {PersonaData} from "../../../pageobjects/persona/persona";
+import {verzekeringPaginasEnum} from "../../../pageobjects/enum/genericEnum";
+import {browser} from "protractor";
 
 
 let genericMethods: GenericMethods = new GenericMethods();
@@ -46,6 +48,37 @@ When(/^Customer clicks on veelgestelde vragen button$/, async () => {
 When(/^verify the answer to (.*)$/, async (veelgesteldeVraag: string) => {
   await loginPageMethods.verifyVeelGesteldeVragen(veelgesteldeVraag);
 });
+
+When(/^persona (.*) forgot his password and resets it with new password (.*)$/, async (persona: string, newPassword: string) => {
+  console.log(newPassword);
+  //Forgot password flow till send email:
+  await genericMethods.clickOnElement(loginPageElements.forgotPasswordClickElement);
+  await genericMethods.typeText(loginPageElements.forgotPasswordEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnElement(loginPageElements.forgotPasswordSubmitButtonClickElement);
+  await genericMethods.verifyTextContainsInElement(loginPageElements.forgotPasswordMessageWhenEnteredEmailAddressTextElement,
+    'verstuurd waarmee u uw wachtwoord kunt herstellen', browser.getPageTimeout);
+  //Handling the email with new password:
+  await genericMethods.goToPage(verzekeringPaginasEnum.MAILHOG);
+  await genericMethods.verifyTextInElement(loginPageElements.mailtoHeaderTextElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnElement(loginPageElements.firstMessageClickElement);
+  await genericMethods.clickOnElement(loginPageElements.plainClickElement);
+  await genericMethods.clickOnElement(loginPageElements.resetPasswordInEmailClickElement);
+  browser.getAllWindowHandles().then(function (handles) {
+    browser.switchTo().window(handles[1]);
+  });
+  await genericMethods.typeText(loginPageElements.resetPasswordNewPasswordInputElement, newPassword);
+  await genericMethods.typeText(loginPageElements.resetPasswordConfirmNewPasswordInputElement, newPassword);
+  await genericMethods.clickOnElement(loginPageElements.resetPasswordSubmitButtonClickElement);
+});
+
+Then(/^(.*) can log in with (.*)$/, async (persona: string, newPassword: string) => {
+  await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.typeText(loginPageElements.loginPasswordInputElement, newPassword);
+  await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+
+});
+
 
 Then(/^the title for veelgestelde vragen appears on screen$/, async () => {
   await genericMethods.verifyTextInElement(loginPageElements.veelgesteldeVragenHeaderTextElement, loginPageElements.veelgesteldeVragenHeaderText);
