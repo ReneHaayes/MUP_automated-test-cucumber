@@ -52,7 +52,8 @@ export class BedrijfsAutoVerzekeringMethods {
     }
   }
 
-  //TODO: The sidebar in the premie page is not working correctly, when the sidebar is working again the commented rules can be uncommented.
+  //TODO: The sidebar in the premie page is not working correctly, when the sidebar is working again the commented rules can be uncommented. This is checked again with Jaap-Jan on 19-06-2017 still not working
+
   async clickOnBasisDekking(input: string) {
     switch (input) {
       case basisDekkingEnum.WA: {
