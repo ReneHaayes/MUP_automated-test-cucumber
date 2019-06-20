@@ -12,7 +12,7 @@ When(/^Customer changes move details with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
   await genericMethods.clickOnElement(verhuizingDoorgevenElements.verhuizingDoorgevenClickElement);
-  await genericMethods.typeText(verhuizingDoorgevenElements.movingDateInputElement, dataTable.movingDate);
+  await genericMethods.typeText(verhuizingDoorgevenElements.movingDateInputElement, genericMethods.getDate(dataTable.movingDate));
   await genericMethods.typeText(verhuizingDoorgevenElements.zipcodeInputElement, dataTable.zipCode);
   await genericMethods.typeText(verhuizingDoorgevenElements.houseNumberInputElement, dataTable.houseNumber);
   await genericMethods.typeText(verhuizingDoorgevenElements.streetInputElement, dataTable.street);
