@@ -6,9 +6,11 @@ import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticu
 import {PersonaData} from "../../../../pageobjects/persona/persona";
 import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
 import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
+import {GenericElements} from "../../../../pageobjects/generic/genericElements";
 
 
 let genericMethods: GenericMethods = new GenericMethods();
+let genericElements: GenericElements = new GenericElements();
 let apiMethods: ApiMethods = new ApiMethods();
 let apiElements: ApiElements = new ApiElements();
 let mijnUniveAccountElements: MijnUniveAccountElements = new MijnUniveAccountElements();
@@ -28,6 +30,10 @@ Then(/^Verify (.*) is logged in with (.*)$/, async (persona: string, newPassword
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(loginPageElements.loginPasswordInputElement, newPassword);
   await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
+  try {
+    await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
+  } catch {
+  }
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
   let createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody(newPassword, persona));
   await genericMethods.verifyNumber(await createAccount.statusCode, 200);
