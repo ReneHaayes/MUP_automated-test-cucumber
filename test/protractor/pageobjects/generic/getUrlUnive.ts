@@ -223,6 +223,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_TSTPROJ: {
         return 'https://tstproj.unive.nl/'
       }
+      case verzekeringPaginasEnum.HOME_PI: {
+        return 'https://pi.unive.nl/'
+      }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
         return 'https://login.pat.unive.nl/'
       }
