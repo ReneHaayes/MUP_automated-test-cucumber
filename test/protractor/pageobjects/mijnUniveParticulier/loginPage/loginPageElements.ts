@@ -47,4 +47,7 @@ export class LoginPageElements {
   resetPasswordNewPasswordInputElement: string = '#password';
   resetPasswordConfirmNewPasswordInputElement: string = '#confirmPassword';
   resetPasswordSubmitButtonClickElement: string = '#confirm';
+
+  //UITLOGGEN
+  logOffClickElement: string = '[class="logout-link__body media__body"]';
 }
