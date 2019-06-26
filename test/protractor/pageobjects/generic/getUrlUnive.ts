@@ -206,6 +206,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.OAUTH: {
         return apiElements.oauthtestUrl;
       }
+      case verzekeringPaginasEnum.BEKIJK_DE_VEEL_GESTELDE_VRAGEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.veelgesteldevragenURL;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -222,6 +225,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.HOME_PI: {
         return 'https://pi.unive.nl/'
+      }
+      case verzekeringPaginasEnum.HOME_TST: {
+        return 'https://tst.unive.nl/'
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
         return 'https://login.pat.unive.nl/'

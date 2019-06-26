@@ -4,8 +4,10 @@ import {veelgesteldeVragenEnum} from "../../enum/veelgesteldeVragenEnum";
 import {verzekeringPaginasEnum} from "../../enum/genericEnum";
 import {PersonaData} from "../../persona/persona";
 import {GenericMethods} from "../../generic/genericMethods";
+import {GenericElements} from "../../generic/genericElements";
 
 let genericMethods: GenericMethods = new GenericMethods();
+let genericElements: GenericElements = new GenericElements();
 let loginPageElements: LoginPageElements = new LoginPageElements();
 let personaData: PersonaData = new PersonaData();
 
@@ -36,6 +38,16 @@ export class LoginPageMethods {
     await genericMethods.verifyTextInElement(loginPageElements.successMessageTextElement, loginPageElements.successMessageText);
   }
 
+  async login(emailAddress: string, password: string) {
+    await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
+    await genericMethods.typeText(loginPageElements.loginPasswordInputElement, password);
+    await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
+    try {
+      await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
+    } catch {
+    }
+    await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  }
 
 
 }

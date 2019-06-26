@@ -72,6 +72,7 @@ export class GenericElements {
   vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtautoverzekering';
   werkmateriaalVerzekering: string = 'zakelijk/werkmaterieelverzekering';
   loginMijnUniveParticulierURL: string = 'login';
+  veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
   mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
 
 

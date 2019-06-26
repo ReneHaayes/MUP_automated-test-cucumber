@@ -67,6 +67,7 @@ export enum verzekeringPaginasEnum {
   HOME_PAT = 'pat',
   HOME_TSTPROJ = 'tstProj',
   HOME_PI = 'pi',
+  HOME_TST = 'tst',
   AUTOVERZEKERING_PAT = 'Autoverzekering',
   ZZPFLEX_PAT = 'zzpFlex',
   ANNULERINGSVERZEKERING = 'Annuleringsverzekering',
@@ -139,7 +140,10 @@ export enum verzekeringPaginasEnum {
   WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering',
   MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
   MAILHOG = 'mailhog',
-  OAUTH = 'oauth'
+  OAUTH = 'oauth',
+  VERZEKERINGEN = 'verzekeringen',
+  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen'
+
 }
 
 export enum durationEntrepreneur {
