@@ -43,5 +43,14 @@ export class MijnUniveAccountElements {
   newPasswordControlInputElement: string = '#new-password-control';
   sendButtonClickElement: string = '[class="button form-buttons__button"]';
 
+  //CHANGE EMAILADDRESS
+  editEmailAddressClickElement: string = '[href="/mijnunive/emailadres-wijzigen"]';
+  newEmailAddressInputElement: string = '#email';
+  confirmNewEmailAddressInputElement: string = '#email-control';
+  confirmNewEmailAddressPlainURLClickElement: string = '[id="preview-plain"] [href*="verify-email"]';
+  successMessageTextElement: string = '[data-message="success"]';
+  successMessageText: string = 'U heeft uw e-mailadres succesvol geverifieerd. Dank u.';
+
+
 
 }

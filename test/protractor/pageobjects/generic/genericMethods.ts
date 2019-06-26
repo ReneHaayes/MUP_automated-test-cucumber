@@ -519,6 +519,4 @@ export class GenericMethods {
     await expect(input).to.have.string(assertionText);
   }
 
-
-
 }
