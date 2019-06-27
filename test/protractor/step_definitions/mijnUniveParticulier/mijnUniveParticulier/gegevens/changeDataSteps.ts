@@ -94,12 +94,22 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
 });
 
 When(/^Customer changes payment data with form for (.*)$/, async (paymentData: string) => {
-  await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
-  await genericMethods.clickOnElement(mijnUniveAccountElements.changePaymentDataClickElement);
   await persoonlijkeGegevensMethods.changePaymentData(paymentData);
+});
+
+When(/^Customer changes contact preferences$/, async () => {
+  await genericMethods.clickOnElement(mijnUniveAccountElements.damageInsurancesClickElement);
+  await genericMethods.clickOnElement(mijnUniveAccountElements.buttonGoThroughContactPreferencesClickElement);
+  await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesH1TitleTextElement, mijnUniveAccountElements.contactPreferencesH1TitleText);
+  await genericMethods.clickOnElement(mijnUniveAccountElements.buttonSaveContactPreferencesClickElement);
 });
 
 Then(/^Verify thank you page for payment data changed$/, async () => {
   await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.formThankYouText,
     browser.getPageTimeout);
+});
+
+Then(/^Verify thank you message is shown for changing contact preferences$/, async () => {
+  await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesSuccesMessageTextElement,
+    mijnUniveAccountElements.contactPreferencesSuccesMessageText);
 });

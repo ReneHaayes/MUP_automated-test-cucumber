@@ -188,10 +188,10 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.AMP_WOONVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.ampWoonverzekering;
       }
-      case verzekeringPaginasEnum.AMP_BROMFIETSVERZEKERING:   {
+      case verzekeringPaginasEnum.AMP_BROMFIETSVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.ampBromfietsverzekering;
       }
-      case verzekeringPaginasEnum.AMP_DOORLOPENDEREISVERZEKERING:   {
+      case verzekeringPaginasEnum.AMP_DOORLOPENDEREISVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.ampDoorlopendeReisverzekering;
       }
       case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {
@@ -199,6 +199,12 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
         return this.getEnv(verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER) + genericElements.loginMijnUniveParticulierURL;
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_BETAALGEGEVENS_WIJZIGEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveBetaalgegevensWijzigen;
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveContactVoorkeurenDoorgeven;
       }
       case verzekeringPaginasEnum.MAILHOG: {
         return genericElements.mailhogPatURL;

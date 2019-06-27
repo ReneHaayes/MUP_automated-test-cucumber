@@ -75,6 +75,9 @@ export class GenericElements {
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
   mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
 
+  //MIJN UNIVE URL
+  mijnUniveBetaalgegevensWijzigen: string = 'mijnunive/mijn-gegevens/betaalgegevens-wijzigen';
+  mijnUniveContactVoorkeurenDoorgeven: string = 'mijnunive/mijn-gegevens/contactvoorkeuren';
 
   //COOKIE
   cookieClickElement: string = '#consent-popup-close-modal';
