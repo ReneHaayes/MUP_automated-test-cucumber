@@ -73,4 +73,14 @@ export class MijnUniveAccountElements {
   //THANK YOU PAGE
   formThankYouTextElement: string = '[class*=form-container] > p';
   formThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijziging(en).';
+
+  //CONTACT PREFERENCES
+  damageInsurancesClickElement: string = '[class="h-block-title"]';
+  buttonGoThroughContactPreferencesClickElement: string = '[class="button button--default"]';
+  buttonSaveContactPreferencesClickElement: string = '#_communicationPreferences_changeMyCustomer';
+  contactPreferencesH1TitleTextElement: string = '#viewPartcommunicationPreferences > h1';
+  contactPreferencesH1TitleText: string = 'Mijn contactvoorkeuren';
+  contactPreferencesSuccesMessageTextElement: string = '[class="mainMessage"] > p';
+  contactPreferencesSuccesMessageText: string = 'Het bijwerken van de contactvoorkeuren is gelukt.';
+
 }

@@ -46,7 +46,6 @@ export class LoginPageMethods {
       await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
     } catch {
     }
-    await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
   }
 
 
