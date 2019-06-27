@@ -14,6 +14,9 @@ export class MijnUniveAccountElements {
   //MIJN UNIVE MENU
   mijnGegevensMenuClickElement: string = '[class="page-nav-item__link media"][href="/mijnunive/mijn-gegevens"]';
 
+  //BUTTONS
+  sendButtonClickElement: string = '[class="button form-buttons__button"]';
+
   //DELETE ACCOUNT
   accountVerwijderenClickElement: string = '[class="button-link link link--warning"][href="/mijnunive/account-verwijderen"]';
   submitVerwijderMijnAccountClickElement: string = '[class="deleteAccount_submit"]';
@@ -41,7 +44,7 @@ export class MijnUniveAccountElements {
   currentPasswordInputElement: string = '#current-password';
   newPasswordInputElement: string = '#new-password';
   newPasswordControlInputElement: string = '#new-password-control';
-  sendButtonClickElement: string = '[class="button form-buttons__button"]';
+
 
   //CHANGE EMAILADDRESS
   editEmailAddressClickElement: string = '[href="/mijnunive/emailadres-wijzigen"]';
@@ -51,6 +54,23 @@ export class MijnUniveAccountElements {
   successMessageTextElement: string = '[data-message="success"]';
   successMessageText: string = 'U heeft uw e-mailadres succesvol geverifieerd. Dank u.';
 
+  //CHANGE PAYMENT
+  changePaymentDataClickElement: string = '[class*="page-links-item"][href*="betaalgegevens-wijzigen"]';
+  changePaymentPeriodRadioClickElement: string = '[for="change_0"]';
+  changePaymentWayRadioClickElement: string = '[for="change_1"]';
+  changeIbanRadioClickElement: string = '[for="change_2"]';
+  ibanAccountNumberInputElement: string = '#iban';
+  currentIbanAccountNumberInputElement: string = '#iban_current';
+  newIbanAccountnumberInputElement: string = '#iban_new';
+  startDateChangeInputElement: string = '#start_date';
+  authorisationCheckBoxAutomaticCollectionClickElement: string = '[for="payment_method__authorized_0"]';
+
+  //SELECT PAYMENT PERIOD
+  paymentPeriodSelectElement: string = '#payment_term__frequency';
+  paymentPeriodeSelectMaandElement: string = 'maand';
 
 
+  //THANK YOU PAGE
+  formThankYouTextElement: string = '[class*=form-container] > p';
+  formThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijziging(en).';
 }
