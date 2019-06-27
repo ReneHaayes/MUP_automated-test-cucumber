@@ -12,7 +12,7 @@ import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/lo
 import {GenericElements} from "../../../../pageobjects/generic/genericElements";
 import {LoginPageMethods} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
 import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/gegevens/persoonlijkeGegevensElements";
-
+import {PersoonlijkeGegevensMethods} from "../../../../pageobjects/mijnUniveParticulier/gegevens/PersoonlijkeGegevensMethods";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
@@ -25,6 +25,7 @@ let hmPageElements: HmPageElements = new HmPageElements();
 let loginPageElements: LoginPageElements = new LoginPageElements();
 let loginPageMethods: LoginPageMethods = new LoginPageMethods();
 let persoonlijkeGegevensElements: PersoonlijkeGegevensElements = new PersoonlijkeGegevensElements();
+let persoonlijkeGegevensMethods: PersoonlijkeGegevensMethods = new PersoonlijkeGegevensMethods();
 
 When(/^Customer changes password for (.*) with (.*)$/, async (persona: string, newPassword: string) => {
   await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
@@ -90,4 +91,15 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
   await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
   await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
   await genericMethods.verifyTextInElement(persoonlijkeGegevensElements.emailAddressTextElement, personaData.getPersonaEmailAddress(persona));
+});
+
+When(/^Customer changes payment data with form for (.*)$/, async (paymentData: string) => {
+  await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
+  await genericMethods.clickOnElement(mijnUniveAccountElements.changePaymentDataClickElement);
+  await persoonlijkeGegevensMethods.changePaymentData(paymentData);
+});
+
+Then(/^Verify thank you page for payment data changed$/, async () => {
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.formThankYouText,
+    browser.getPageTimeout);
 });

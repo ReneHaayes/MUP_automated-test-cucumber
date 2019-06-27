@@ -1,4 +1,4 @@
-@changeEmailAndPasswordMijnUniveParticulier
+@changeDataForPersona
 
 Feature: Changing data for persona when logged in.
 
@@ -20,3 +20,14 @@ Feature: Changing data for persona when logged in.
     Examples:
       | persona | newEmailAddress    |
       | annie   | test123@test123.nl |
+
+  Scenario Outline: Change payment data for persona when logged in
+    Given Customer annie is logged in on the mijn unive particulier page of the Unive website
+    When Customer changes payment data with form for <payment data>
+    Then Verify thank you page for payment data changed
+
+    Examples:
+      | payment data       |
+      | payment period     |
+      | payment way        |
+      | iban accountnumber |

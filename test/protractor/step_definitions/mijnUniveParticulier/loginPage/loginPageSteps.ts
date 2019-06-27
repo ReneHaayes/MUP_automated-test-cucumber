@@ -16,11 +16,7 @@ let personaData: PersonaData = new PersonaData();
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);
-  await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
-  await genericMethods.typeText(loginPageElements.loginPasswordInputElement, personaData.getPersonaPassword(persona));
-  await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
-  await genericMethods.clickOnElement(genericElements.cookieClickElement);
-  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
 });
 
 When(/^Persona (.*) logs in$/, async (persona: string) => {
