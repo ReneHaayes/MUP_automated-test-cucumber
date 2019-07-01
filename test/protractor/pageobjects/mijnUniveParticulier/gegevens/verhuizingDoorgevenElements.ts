@@ -12,4 +12,8 @@ export class VerhuizingDoorgevenElements {
   coInsuredAppliesYesClickElement: string = '[for="coInsured__applies_0"]';
   coInsuredAppliesNoClickElement: string = '[for="coInsured__applies_1"]';
 
+  //SUCCES TEXT
+  succesTextMessageElement: string = '[class="form-container"] > p';
+  succesTextMessage: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
+
 }
