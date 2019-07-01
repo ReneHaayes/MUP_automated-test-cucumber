@@ -36,3 +36,10 @@ Feature: Changing data for persona when logged in.
     Given Customer annie is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
     When Customer changes contact preferences
     Then Verify thank you message is shown for changing contact preferences
+
+    @hsn
+  Scenario: Change identification data for persona when logged in
+    Given Customer annie is logged in on the mijn unive identiteitsgegevens doorgeven page of the Unive website
+    When Customer changes identity preferences
+    Then Verify thank you message is shown for changing identity preferences
+

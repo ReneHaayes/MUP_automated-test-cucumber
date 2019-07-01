@@ -104,6 +104,13 @@ When(/^Customer changes contact preferences$/, async () => {
   await genericMethods.clickOnElement(mijnUniveAccountElements.buttonSaveContactPreferencesClickElement);
 });
 
+When(/^Customer changes identity preferences$/, async () => {
+  await genericMethods.selectInDropdown(mijnUniveAccountElements.typeIdentitySelectElement, mijnUniveAccountElements.typeIdentityDriversLicenseSelectElement);
+  await genericMethods.typeText(mijnUniveAccountElements.idNumberInputElement, '12345678');
+  await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
+});
+
+
 Then(/^Verify thank you page for payment data changed$/, async () => {
   await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.formThankYouText,
     browser.getPageTimeout);
@@ -112,4 +119,9 @@ Then(/^Verify thank you page for payment data changed$/, async () => {
 Then(/^Verify thank you message is shown for changing contact preferences$/, async () => {
   await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesSuccesMessageTextElement,
     mijnUniveAccountElements.contactPreferencesSuccesMessageText);
+});
+
+Then(/^Verify thank you message is shown for changing identity preferences$/, async () => {
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.identityPreferencesChangingSuccesTextElement,
+    mijnUniveAccountElements.identityPreferencesChangingSuccesText, browser.getPageTimeout);
 });

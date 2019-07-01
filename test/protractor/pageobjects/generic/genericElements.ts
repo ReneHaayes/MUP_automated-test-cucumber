@@ -78,6 +78,7 @@ export class GenericElements {
   //MIJN UNIVE URL
   mijnUniveBetaalgegevensWijzigen: string = 'mijnunive/mijn-gegevens/betaalgegevens-wijzigen';
   mijnUniveContactVoorkeurenDoorgeven: string = 'mijnunive/mijn-gegevens/contactvoorkeuren';
+  mijnUniveIdentiteitsGegevensDoorgeven: string = 'mijnunive/mijn-gegevens/identiteitsgegevens';
 
   //COOKIE
   cookieClickElement: string = '#consent-popup-close-modal';
