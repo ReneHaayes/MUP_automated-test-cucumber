@@ -83,4 +83,10 @@ export class MijnUniveAccountElements {
   contactPreferencesSuccesMessageTextElement: string = '[class="mainMessage"] > p';
   contactPreferencesSuccesMessageText: string = 'Het bijwerken van de contactvoorkeuren is gelukt.';
 
+  //IDENTITY PREFERENCES
+  typeIdentitySelectElement: string = '#idtype';
+  typeIdentityDriversLicenseSelectElement: string = 'Rijbewijs';
+  idNumberInputElement: string = '#idnummer';
+  identityPreferencesChangingSuccesTextElement: string = '[class="page-content__block"] > p';
+  identityPreferencesChangingSuccesText: string = 'U heeft uw identiteitsgegevens succesvol aan ons doorgegeven.';
 }

@@ -141,6 +141,7 @@ export enum verzekeringPaginasEnum {
   MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
   MIJN_UNIVE_BETAALGEGEVENS_WIJZIGEN = 'mijn unive betaalgegevens wijzigen',
   MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN = 'mijn unive contactvoorkeuren doorgeven',
+  MIJN_UNIVE_IDENTITEITSGEGEVENS_DOORGEVEN = 'mijn unive identiteitsgegevens doorgeven',
   MAILHOG = 'mailhog',
   OAUTH = 'oauth',
   VERZEKERINGEN = 'verzekeringen',
