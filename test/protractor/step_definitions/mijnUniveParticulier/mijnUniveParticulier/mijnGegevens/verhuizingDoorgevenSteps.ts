@@ -1,6 +1,6 @@
 import {Then, When} from "cucumber";
 import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-import {VerhuizingDoorgevenElements} from "../../../../pageobjects/mijnUniveParticulier/gegevens/verhuizingDoorgevenElements";
+import {VerhuizingDoorgevenElements} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/verhuizingDoorgevenElements";
 import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
 import {browser} from "protractor";
 

@@ -145,6 +145,7 @@ export enum verzekeringPaginasEnum {
   MIJN_UNIVE_VERHUISGEGEVENS_DOORGEVEN = 'mijn unive verhuisgegevens doorgeven',
   MIJN_UNIVE_MIJN_GEGEVENS = 'mijn unive mijn gegevens',
   MIJN_UNIVE_GEZINSSITUATIE_WIJZIGEN = 'mijn unive gezinssituatie wijzigen',
+  MIJN_UNIVE_MIJN_VERZEKERINGEN = 'mijn unive mijn verzekeringen',
   MAILHOG = 'mailhog',
   OAUTH = 'oauth',
   VERZEKERINGEN = 'verzekeringen',

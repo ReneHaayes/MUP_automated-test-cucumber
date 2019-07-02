@@ -218,6 +218,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.MIJN_UNIVE_GEZINSSITUATIE_WIJZIGEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveGezinssituatieWijzigen;
       }
+      case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_VERZEKERINGEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnVerzekeringen;
+      }
       case verzekeringPaginasEnum.MAILHOG: {
         return genericElements.mailhogPatURL;
       }

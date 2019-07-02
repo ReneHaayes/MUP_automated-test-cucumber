@@ -1,7 +1,7 @@
 import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
 import {browser} from "protractor";
 import {When} from "cucumber";
-import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/gegevens/persoonlijkeGegevensElements";
+import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/persoonlijkeGegevensElements";
 import {PersonaData} from "../../../../pageobjects/persona/persona";
 
 let genericMethods: GenericMethods = new GenericMethods();
