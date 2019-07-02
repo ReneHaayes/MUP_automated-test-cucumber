@@ -110,6 +110,9 @@ When(/^Customer changes identity preferences$/, async () => {
   await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
 });
 
+When(/^Customer changes family composition preferences with (.*)$/, async (familyCompositionInput: string) => {
+  await persoonlijkeGegevensMethods.changeFamilyComposition(familyCompositionInput);
+});
 
 Then(/^Verify thank you page for payment data changed$/, async () => {
   await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.formThankYouText,
@@ -124,4 +127,9 @@ Then(/^Verify thank you message is shown for changing contact preferences$/, asy
 Then(/^Verify thank you message is shown for changing identity preferences$/, async () => {
   await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.identityPreferencesChangingSuccesTextElement,
     mijnUniveAccountElements.identityPreferencesChangingSuccesText, browser.getPageTimeout);
+});
+
+Then(/^Verify thank you message is shown for family composition preferences$/, async () => {
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement,
+    mijnUniveAccountElements.familyCompositionSuccesThankYouText, browser.getPageTimeout);
 });
