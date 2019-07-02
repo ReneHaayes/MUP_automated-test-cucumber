@@ -89,4 +89,22 @@ export class MijnUniveAccountElements {
   idNumberInputElement: string = '#idnummer';
   identityPreferencesChangingSuccesTextElement: string = '[class="page-content__block"] > p';
   identityPreferencesChangingSuccesText: string = 'U heeft uw identiteitsgegevens succesvol aan ons doorgegeven.';
+
+  //FAMILY COMPOSITION
+  familyCompositionOnePersonNoChildrenClickElement: string = '[For="wat-is-uw-gezinssituatie_0"]';
+  familyCompositionLiveTogetherNoChildrenClickElement: string = '[For="wat-is-uw-gezinssituatie_1"]';
+  familyCompositionOneParentWithChildrenClickElement: string = '[For="wat-is-uw-gezinssituatie_2"]';
+  familyCompositionFamilyWithChildrenClickElement: string = '[For="wat-is-uw-gezinssituatie_3"]';
+  familyCompositionIunderstandClickElement: string = '[for="akkoord-RBV-OVP_0"]';
+  familyCompositionSuccesThankYouText: string = 'Bedankt voor het invullen van uw gegevens. U ontvangt ter bevestiging een e-mail met uw gegevens.';
+  familyCompositionPartnerLivingTogetherInitialsInputElement: string = '[name="partner-samenwonend__voorletters"]';
+  familyCompositionPartnerLivingTogetehrLastnameInputElement: string = '[name="partner-samenwonend__achternaam"]';
+  familyCompositionSelectGenderLivingTogetherMaleClickElement: string = '[for="partner-samenwonend__geslacht_0"]';
+  familyCompositionSelectGenderLivingTogetherFemaleClickElement: string = '[for="partner-samenwonend__geslacht_1"]';
+  familyCompositionBirthdateLivingTogetherInputElement: string = '[name="partner-samenwonend__geboortedatum"]';
+  familyCompositionPartnerFamilyInitialsInputElement: string = '[name="partner-gezin__voorletters"]';
+  familyCompositionPartnerFamilyLastnameInputElement: string = '[name="partner-gezin__achternaam"]';
+  familyCompositionSelectGenderFamilyMaleClickElement: string = '[for="partner-gezin__geslacht_0"]';
+  familyCompositionSelectGenderFamilyFemaleClickElement: string = '[for="partner-gezin__geslacht_1"]';
+  familyCompositionBirthdateFamilyInputElement: string = '[name="partner-gezin__geboortedatum"]';
 }

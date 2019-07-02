@@ -81,6 +81,7 @@ export class GenericElements {
   mijnUniveIdentiteitsGegevensDoorgeven: string = 'mijnunive/mijn-gegevens/identiteitsgegevens';
   mijnUniveVerhuisGegevensDoorgeven: string = 'mijnunive/mijn-gegevens/verhuizingdoorgeven';
   mijnUniveMijnGegevens: string = 'mijnunive/mijn-gegevens';
+  mijnUniveGezinssituatieWijzigen: string = 'mijnunive/mijn-gegevens/gezinssituatiewijzigen';
 
   //COOKIE
   cookieClickElement: string = '#consent-popup-close-modal';
