@@ -11,8 +11,8 @@ import {HmPageElements} from "../../../../pageobjects/generic/hmPageElements";
 import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
 import {GenericElements} from "../../../../pageobjects/generic/genericElements";
 import {LoginPageMethods} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
-import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/gegevens/persoonlijkeGegevensElements";
-import {PersoonlijkeGegevensMethods} from "../../../../pageobjects/mijnUniveParticulier/gegevens/PersoonlijkeGegevensMethods";
+import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/persoonlijkeGegevensElements";
+import {PersoonlijkeGegevensMethods} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/PersoonlijkeGegevensMethods";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
