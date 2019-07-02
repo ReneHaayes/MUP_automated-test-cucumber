@@ -8,7 +8,7 @@ Feature: Changing data for moving to a new address
       | movingDate  | today  |
       | zipCode     | 8017JC |
       | houseNumber | 1      |
-    Then Verify succes message for changing address is show
+    Then Verify succes message for changing address is shown
 
     Examples:
       | persona |
