@@ -17,7 +17,7 @@ When(/^Customer changes move details with:$/, async (data) => {
   await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
 });
 
-Then(/^Verify succes message for changing address is show$/, async () => {
+Then(/^Verify succes message for changing address is shown$/, async () => {
   await genericMethods.verifyTextContainsInElement(verhuizingDoorgevenElements.succesTextMessageElement,
     verhuizingDoorgevenElements.succesTextMessage, browser.getPageTimeout);
 });
