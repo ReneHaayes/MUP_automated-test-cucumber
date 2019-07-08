@@ -14,7 +14,7 @@ const getUrlUnive: GetUrlUnive = new GetUrlUnive();
 const vehicleElements: VehicleElements = new VehicleElements();
 
     When(/^I press the button premie berekenen on the amp bromfietsverzekering page$/, async () => {
-        await genericMethods.waitForElementIsVisible(mopedElements.ampImageElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(mopedElements.ampBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mopedElements.ampBerekenUwPremieButtonClickElement);
     });
 
