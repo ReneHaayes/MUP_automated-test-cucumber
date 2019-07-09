@@ -1,3 +1,8 @@
+export enum statusEnum {
+  ACTIVE = 'active',
+  ENDED = 'ended'
+}
+
 export enum gender {
   MALE = 'male',
   FEMALE = 'female'

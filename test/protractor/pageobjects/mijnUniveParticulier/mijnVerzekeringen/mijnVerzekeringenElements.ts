@@ -10,7 +10,9 @@ export class MijnVerzekeringenElements {
     return "[class='tile__link media'][href*='" + polisNumber + "']"
   }
 
-
   //POLIS DETAILS
   polisNumberTextElement: string = '//*[contains(text(),"Polisnummer")]/following-sibling::div';
+  statusPolisTextElement: string = '//*[contains(text(),"Status polis")]/following-sibling::div';
+  statusEndedText: string = 'Beëindigd';
+  showEndedAndActiveInsurancesClickElement: string = '[class="is-visible-desktop-only"]';
 }
