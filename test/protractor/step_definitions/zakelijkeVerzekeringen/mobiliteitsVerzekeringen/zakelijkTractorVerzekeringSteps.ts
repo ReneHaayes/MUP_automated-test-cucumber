@@ -46,13 +46,8 @@ When(/^I enter step three page of zakelijk tractorverzekeringen with:$/, async (
 
 When(/^I enter step four page of zakelijk tractorverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
-  await genericMethods.typeText(nawElements.companyDataNameInputElement, companyData.getCompanyName(company));
-  await genericMethods.selectLegal(companyData.getCompanyLegal(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
-  await genericMethods.typeText(nawElements.companyDataZipCodeInputElement, companyData.getCompanyZipcode(company));
-  await genericMethods.clickOnTAB(nawElements.companyDataZipCodeInputElement);
-  await genericMethods.typeText(nawElements.companyDataHouseNumberInputElement, companyData.getCompanyHouseNumber(company));
-  await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
