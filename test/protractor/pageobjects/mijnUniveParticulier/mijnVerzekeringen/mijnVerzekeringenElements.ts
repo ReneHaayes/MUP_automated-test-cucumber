@@ -13,6 +13,7 @@ export class MijnVerzekeringenElements {
   //POLIS DETAILS
   polisNumberTextElement: string = '//*[contains(text(),"Polisnummer")]/following-sibling::div';
   statusPolisTextElement: string = '//*[contains(text(),"Status polis")]/following-sibling::div';
+  insuranceCompanyExternTextElement: string = '//*[contains(text(),"Verzekeraar")]/following-sibling::div';
   statusEndedText: string = 'Beëindigd';
   showEndedAndActiveInsurancesClickElement: string = '[class="is-visible-desktop-only"]';
 }

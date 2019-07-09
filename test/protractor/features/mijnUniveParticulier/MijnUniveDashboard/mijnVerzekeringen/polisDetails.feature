@@ -11,3 +11,12 @@ Feature: Going to polis details through mijn verzekeringen
       | polis number | polis status | persona |
       | 77955712     | ended        | illing  |
       | 71256974     | active       | annie   |
+
+  Scenario Outline: Verify polises from external companies
+    Given Customer <persona> is logged in on the mijn unive mijn verzekeringen page of the Unive website
+    When Customer selects active polis with polis number: <polis number>
+    Then Verify insurance company <insurance company> and polis number <polis number> is shown correctly
+
+    Examples:
+      | polis number | insurance company | persona |
+      | 1600478601   | Reaal             | illing  |
