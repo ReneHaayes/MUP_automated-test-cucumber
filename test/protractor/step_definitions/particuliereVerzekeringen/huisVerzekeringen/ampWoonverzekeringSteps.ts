@@ -13,7 +13,7 @@ const woonVerzekeringElements: WoonVerzekeringElements = new WoonVerzekeringElem
 const getUrlUnive: GetUrlUnive = new GetUrlUnive();
 
 When(/^I press the button premie berekenen on the amp woonverzekering page$/, async () => {
-  await genericMethods.waitForElementIsVisible(woonVerzekeringElements.ampImageElement, browser.getPageTimeout);
+  await genericMethods.waitForElementIsVisible(woonVerzekeringElements.ampBerekenUwPremieButtonClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(woonVerzekeringElements.ampBerekenUwPremieButtonClickElement);
 });
 

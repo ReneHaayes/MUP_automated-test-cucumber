@@ -13,7 +13,7 @@ const getUrlUnive: GetUrlUnive = new GetUrlUnive();
 
 
 When (/^I press the button premie berekenen on the amp doorlopende reisverzekering page$/, async () => {
-    await genericMethods.waitForElementIsVisible(reisVerzekeringElements.ampImageElement, browser.getPageTimeout);
+    await genericMethods.waitForElementIsVisible(reisVerzekeringElements.ampBerekenUwPremieButtonClickElement, browser.getPageTimeout);
     await genericMethods.clickOnElement(reisVerzekeringElements.ampBerekenUwPremieButtonClickElement);
 });
 

@@ -1,18 +1,18 @@
-import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {AutoVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements";
-import {browser} from "protractor";
-import {verzekeringPaginasEnum} from "../../../pageobjects/enum/genericEnum";
-import {GetUrlUnive} from "../../../pageobjects/generic/getUrlUnive";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
+import {Then, When} from 'cucumber';
+import {GenericMethods} from '../../../pageobjects/generic/genericMethods';
+import {AutoVerzekeringElements} from '../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements';
+import {browser} from 'protractor';
+import {verzekeringPaginasEnum} from '../../../pageobjects/enum/genericEnum';
+import {GetUrlUnive} from '../../../pageobjects/generic/getUrlUnive';
+import {GenericElements} from '../../../pageobjects/generic/genericElements';
 
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let getUrlUnive: GetUrlUnive = new GetUrlUnive();
+const genericMethods: GenericMethods = new GenericMethods();
+const genericElements: GenericElements = new GenericElements();
+const autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
+const getUrlUnive: GetUrlUnive = new GetUrlUnive();
 
 When(/^I press the button premie berekenen on the amp autoverzekering page$/, async () => {
-  await genericMethods.waitForElementIsVisible(autoVerzekeringElements.ampImageElement, browser.getPageTimeout);
+  await genericMethods.waitForElementIsVisible(autoVerzekeringElements.ampBerekenUwPremieButtonClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(autoVerzekeringElements.ampBerekenUwPremieButtonClickElement);
 });
 

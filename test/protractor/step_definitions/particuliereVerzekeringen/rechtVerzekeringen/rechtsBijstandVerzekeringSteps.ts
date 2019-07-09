@@ -39,6 +39,6 @@ When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
-  //Click no ona are their special facts and circumstances, at next page.
+  //Click no on are there special facts and circumstances, at next page.
   await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.specialFactsNoClickElement);
 });

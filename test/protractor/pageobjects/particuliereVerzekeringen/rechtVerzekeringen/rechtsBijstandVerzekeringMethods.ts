@@ -1,13 +1,12 @@
-import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-import {browser} from "protractor";
+import {familyCompositionEnum} from '../../enum/aansprakelijkheidsVerzekeringEnum';
+import {browser} from 'protractor';
+import {GenericMethods} from '../../generic/genericMethods';
+import {GenericElements} from '../../generic/genericElements';
+import {RechtsBijstandVerzekeringElements} from './rechtsBijstandVerzekeringElements';
 
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-import {RechtsBijstandVerzekeringElements} from "./rechtsBijstandVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let rechtsBijstandVerzekeringElements: RechtsBijstandVerzekeringElements = new RechtsBijstandVerzekeringElements();
+const genericMethods: GenericMethods = new GenericMethods();
+const genericElements: GenericElements = new GenericElements();
+const rechtsBijstandVerzekeringElements: RechtsBijstandVerzekeringElements = new RechtsBijstandVerzekeringElements();
 
 export class RechtsBijstandVerzekeringMethods {
 
