@@ -21,7 +21,7 @@ Feature: Going to polis details through mijn verzekeringen
       | polis number | insurance company | persona |
       | 1600478601   | Reaal             | illing  |
 
-  Scenario Outline: Verify polises from external companies
+  Scenario Outline: Change polis data from external companies
     Given Customer <persona> is logged in on the <polisdetails url> page of the Unive website
     When Customer changes the polis
     Then Verify thank you message for creating a change is correctly shown
