@@ -158,6 +158,10 @@ export enum verzekeringPaginasEnum {
 
 }
 
+export enum polisDetailsUrlEnum {
+  POLISDETAILS_DERDEN_1600478601 = 'polisdetails 1600478601'
+}
+
 export enum durationEntrepreneur {
   _MIN1 = 'Minder dan 1 jaar',
   _1 = '1 jaar',

@@ -15,6 +15,12 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
   await genericMethods.clickOnElement(mijnVerzekeringElements.aansprakelijkheidsVerzekeringParticulierClickElement(polisNumber));
 });
 
+When(/^Customer changes the polis$/, async () => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.changeInsuranceClickElement);
+  await genericMethods.typeText(mijnVerzekeringElements.changeInsuranceDescriptionAreaInputElement, 'test123');
+  await genericMethods.clickOnElement(mijnVerzekeringElements.changeInsuranceSubmitButtonClickElement);
+});
+
 When(/^Customer selects (.*) polis with polis number: (.*)$/, async (polisStatus: string, polisNumber: string) => {
   switch (polisStatus) {
     case statusEnum.ENDED: {
@@ -29,6 +35,10 @@ When(/^Customer selects (.*) polis with polis number: (.*)$/, async (polisStatus
   }
 });
 
+Then(/^Verify thank you message for creating a change is correctly shown$/, async () => {
+  await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.changeInsuranceThankYouTextElement, mijnVerzekeringElements.changeInsuranceThankYouText,
+    browser.getPageTimeout);
+});
 
 Then(/^Verify algemene voorwaarden is available on screen as a pdf$/, async () => {
   await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.algemeneVoorwaardenPdfElement, browser.getPageTimeout);

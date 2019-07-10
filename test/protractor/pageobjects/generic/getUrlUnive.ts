@@ -1,5 +1,5 @@
 import {GenericElements} from './genericElements';
-import {verzekeringPaginasEnum} from "../enum/genericEnum";
+import {polisDetailsUrlEnum, verzekeringPaginasEnum} from "../enum/genericEnum";
 import {browser} from "protractor";
 import {homePageEnum} from "../enum/woonVerzekeringEnum";
 import {ApiElements} from "../api/apiElements";
@@ -220,6 +220,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_VERZEKERINGEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnVerzekeringen;
+      }
+      case polisDetailsUrlEnum.POLISDETAILS_DERDEN_1600478601: {
+        return this.getEnv(browser.params.env.environment) + genericElements.polisDetailsNumber1600478601Url;
       }
       case verzekeringPaginasEnum.MAILHOG: {
         return genericElements.mailhogPatURL;

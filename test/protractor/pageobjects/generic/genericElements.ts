@@ -84,6 +84,9 @@ export class GenericElements {
   mijnUniveGezinssituatieWijzigen: string = 'mijnunive/mijn-gegevens/gezinssituatiewijzigen';
   mijnUniveMijnVerzekeringen: string = 'mijnunive/polisoverzicht';
 
+  //POLISDETAILS
+  polisDetailsNumber1600478601Url: string = 'mijnunive/polisoverzicht/polisdetails?pnr=1600478601';
+
   //COOKIE
   cookieClickElement: string = '#consent-popup-close-modal';
 

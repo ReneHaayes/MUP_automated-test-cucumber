@@ -16,4 +16,11 @@ export class MijnVerzekeringenElements {
   insuranceCompanyExternTextElement: string = '//*[contains(text(),"Verzekeraar")]/following-sibling::div';
   statusEndedText: string = 'Beëindigd';
   showEndedAndActiveInsurancesClickElement: string = '[class="is-visible-desktop-only"]';
+
+  changeInsuranceClickElement: string = '[href*="poliswijzigen"]';
+  changeInsuranceDescriptionAreaInputElement: string = '[title="Beschrijving van de wijziging"]';
+  changeInsuranceSubmitButtonClickElement: string = '[name="btnSubmit"]';
+  changeInsuranceThankYouTextElement: string = '[class="eforms-container"] > p';
+  changeInsuranceThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
+
 }
