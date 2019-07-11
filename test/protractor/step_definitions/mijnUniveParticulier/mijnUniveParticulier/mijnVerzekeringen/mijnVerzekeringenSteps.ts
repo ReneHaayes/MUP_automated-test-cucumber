@@ -15,7 +15,7 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
   await genericMethods.clickOnElement(mijnVerzekeringElements.aansprakelijkheidsVerzekeringParticulierClickElement(polisNumber));
 });
 
-When(/^Customer changes the polis$/, async () => {
+When(/^Customer changes the external polis$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.changeInsuranceClickElement);
   await genericMethods.typeText(mijnVerzekeringElements.changeInsuranceDescriptionAreaInputElement, 'test123');
   await genericMethods.clickOnElement(mijnVerzekeringElements.changeInsuranceSubmitButtonClickElement);

@@ -23,9 +23,10 @@ Feature: Going to polis details through mijn verzekeringen
 
   Scenario Outline: Change polis data from external companies
     Given Customer <persona> is logged in on the <polisdetails url> page of the Unive website
-    When Customer changes the polis
+    When Customer changes the external polis
     Then Verify thank you message for creating a change is correctly shown
 
     Examples:
       | persona | polisdetails url        |
       | illing  | polisdetails 1600478601 |
+
