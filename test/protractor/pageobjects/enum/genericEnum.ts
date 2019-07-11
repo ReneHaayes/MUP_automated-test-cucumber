@@ -1,3 +1,8 @@
+export enum statusEnum {
+  ACTIVE = 'active',
+  ENDED = 'ended'
+}
+
 export enum gender {
   MALE = 'male',
   FEMALE = 'female'
@@ -151,6 +156,10 @@ export enum verzekeringPaginasEnum {
   VERZEKERINGEN = 'verzekeringen',
   BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen'
 
+}
+
+export enum polisDetailsUrlEnum {
+  POLISDETAILS_DERDEN_1600478601 = 'polisdetails 1600478601'
 }
 
 export enum durationEntrepreneur {
