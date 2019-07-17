@@ -83,6 +83,8 @@ export class GenericElements {
   mijnUniveMijnGegevens: string = 'mijnunive/mijn-gegevens';
   mijnUniveGezinssituatieWijzigen: string = 'mijnunive/mijn-gegevens/gezinssituatiewijzigen';
   mijnUniveMijnVerzekeringen: string = 'mijnunive/polisoverzicht';
+  mijnUniveMijnSchadeEnClaim: string = 'mijnunive/schade';
+
 
   //POLISDETAILS
   polisDetailsNumber1600478601Url: string = 'mijnunive/polisoverzicht/polisdetails?pnr=1600478601';
