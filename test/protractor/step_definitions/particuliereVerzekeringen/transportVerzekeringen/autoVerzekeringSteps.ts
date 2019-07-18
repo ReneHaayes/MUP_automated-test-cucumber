@@ -19,7 +19,7 @@ let autoVerzekeringMethods: AutoVerzekeringMethods = new AutoVerzekeringMethods(
 let autoVerzekeringMethodsStepThreeAndFour: AutoVerzekeringMethodsStepThreeAndFour = new AutoVerzekeringMethodsStepThreeAndFour();
 let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
 let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: NawElements = new NawElements()
+let nawElements: NawElements = new NawElements();
 let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
 let personaData: PersonaData = new PersonaData();
 let vehicleElements: VehicleElements = new VehicleElements();
@@ -92,6 +92,20 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
   await genericMethods.clickOnNextButton();
 });
 
+When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) with different (.*) driver:$/, async (company: string, persona: string, data) => {
+  const dataTable = data.rowsHash();
+  await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
+  await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath
+    + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
+  await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
+  await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverYesClickElement);
+  await genericMethods.typeText(nawElements.specificDriverZipCodeElement, companyData.getCompanyZipcode(company));
+
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderBirthdateStepOneElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
+  await genericMethods.clickOnNextButton();
+});
+
 When(/^I enter step two page of personen autoverzekering zakelijk with$/, async (data) => {
   const dataTable = data.rowsHash();
   await autoVerzekeringMethods.clickOnBasisDekking(dataTable.basisDekking);
@@ -122,5 +136,14 @@ When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with 
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderInitialsElement, personaData.getPersonaInitials(persona));
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderPrefixElement, personaData.getPersonaPrefix(persona));
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderLastNameElement, personaData.getPersonaLastName(persona));
+  await genericMethods.clickAfwijkendeBestuurderDataGender(personaData.getPersonaGender(persona));
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderBirthdateStepTwoElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderZipCodeElement, personaData.getPersonaZipcode(persona));
+  await genericMethods.typeText(nawElements.afwijkendeBestuurderHouseNumberElement, personaData.getPersonaHouseNumber(persona));
+
   await genericMethods.clickOnNextButton();
 });

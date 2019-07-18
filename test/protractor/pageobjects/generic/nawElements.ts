@@ -4,6 +4,21 @@ export class NawElements {
   hoofdbestuurderBirthdateElement: string = '#_Form_IF2511_3621';
   hoofdbestuurderZipCodeElement: string = '#_Form_IF2511_3622';
 
+  // AFWIJKENDEBESTUURDER
+  afwijkendeBestuurderInitialsElement: string ='#_Form_IF25916_3688';
+  afwijkendeBestuurderPrefixElement: string = '#_Form_IF25916_3689';
+  afwijkendeBestuurderLastNameElement: string = '#_Form_IF25916_3690';
+  afwijkendeBestuurderBirthdateStepOneElement: string = '#_Form_IF31207_39216';
+  afwijkendeBestuurderBirthdateStepTwoElement: string = '#_Form_IF25916_3692';
+  afwijkendeBestuurderZipCodeElement: string = '#_Form_IF25916_3693';
+  afwijkendeBestuurderHouseNumberElement: string = '#_Form_IF25916_3694';
+  afwijkendeBestuurderDataGenderMaleClickElement: string = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(1)';
+  afwijkendeBestuurderDataGenderFemaleClickElement: string = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(2)';
+
+  // VASTEBESTUURDER
+  specificDriverZipCodeElement: string = '#_Form_IF31207_39215';
+
+
   //YOUR DATA
   yourDataInitialsElement: string = '#_Form_IF2530_3688';
   yourDataPrefixElement: string = '#_Form_IF2530_3689';

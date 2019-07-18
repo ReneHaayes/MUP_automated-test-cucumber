@@ -344,6 +344,23 @@ export class GenericMethods {
       }
     }
   }
+  async clickAfwijkendeBestuurderDataGender(input: string) {
+    switch (input) {
+      case gender.MALE: {
+        await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await this.clickOnElement(nawElements.afwijkendeBestuurderDataGenderMaleClickElement );
+        break;
+      }
+      case gender.FEMALE: {
+        await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+        await this.clickOnElement(nawElements.afwijkendeBestuurderDataGenderFemaleClickElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
 
   async clickContactDataGender(input: string) {
     switch (input) {
