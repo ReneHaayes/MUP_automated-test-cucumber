@@ -45,6 +45,18 @@ export class GenericMethods {
     })
   }
 
+  async clickOnElementWithXpath(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.xpath(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    })
+  }
+
   async waitForElementAndClick(selector: string, waitFor: number) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, waitFor);

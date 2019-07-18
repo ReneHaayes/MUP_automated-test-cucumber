@@ -24,4 +24,20 @@ export class MijnVerzekeringenElements {
   changeInsuranceThankYouTextElement: string = '[class="eforms-container"] > p';
   changeInsuranceThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
 
+  //DAMAGE CLAIM
+  damageClaimClickElement: string = '[href*="add-my-claim-by-policies"]';
+  damageClaimDateInputElement: string = '#_AddClaimStepGeneralClaimData_dateDamageField';
+  damageClaimStepOneNextButtonClickElement: string = '#_AddClaimStepGeneralClaimData_Next';
+  damageClaimStepTwoNextButtonClickElement: string = '#_AddClaimStepSelectPoliciesView_Next';
+  damageClaimCityInputElement: string = '#_Form_IF28905_36811';
+  damageClaimLicensePlateInputElement: string = '#_Form_IF7263_35019';
+
+  damageClaimSelectPolisClickElement(polisNumber: string): string {
+    return "//*[contains(text(),'" + polisNumber + "')]/preceding::td[1]/descendant::input"
+  }
+
+  damageClaimSelectCauseClickElement(cause: string): string {
+    return "//*[contains(text(),'Wat is er gebeurd?')]/following::*[contains(text(),'" + cause + "')]/preceding::span[1]/descendant::input"
+  }
+
 }

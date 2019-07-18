@@ -71,3 +71,17 @@ Then(/^Verify insurance company (.*) and polis number (.*) is shown correctly$/,
   await genericMethods.verifyTextInElementWithXpath(mijnVerzekeringElements.polisNumberTextElement, polisNumber);
   await genericMethods.verifyTextInElementWithXpath(mijnVerzekeringElements.insuranceCompanyExternTextElement, insuranceCompany);
 });
+
+When(/^Customer claims a damage by filling in the form for polis (.*)$/, async (polisNumber: string) => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.damageClaimClickElement);
+  //STEP ONE
+  await genericMethods.typeText(mijnVerzekeringElements.damageClaimDateInputElement, genericMethods.getDate('today'));
+  await genericMethods.clickOnElement(mijnVerzekeringElements.damageClaimStepOneNextButtonClickElement);
+  //STEP TWO
+  await genericMethods.clickOnElementWithXpath(mijnVerzekeringElements.damageClaimSelectPolisClickElement(polisNumber));
+  await genericMethods.clickOnElement(mijnVerzekeringElements.damageClaimStepTwoNextButtonClickElement);
+  //STEP THREE
+  await genericMethods.typeText(mijnVerzekeringElements.damageClaimCityInputElement, 'Zwolle');
+  await genericMethods.clickOnElementWithXpath(mijnVerzekeringElements.damageClaimSelectCauseClickElement('Parkeerschade'));
+  await browser.sleep(10000);
+});
