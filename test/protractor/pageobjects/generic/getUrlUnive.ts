@@ -221,6 +221,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_VERZEKERINGEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnVerzekeringen;
       }
+      case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_SCHADE_EN_CLAIM: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnSchadeEnClaim;
+      }
       case polisDetailsUrlEnum.POLISDETAILS_DERDEN_1600478601: {
         return this.getEnv(browser.params.env.environment) + genericElements.polisDetailsNumber1600478601Url;
       }
