@@ -6,12 +6,13 @@ export class MijnVerzekeringenElements {
   algemeneVoorwaardenUrlCheckText: string = 'algemene_voorwaarden.pdf';
 
   //VERZEKERINGSOVERZICHT
-  aansprakelijkheidsVerzekeringParticulierClickElement(polisNumber: string): string {
+  polisDetailsClickElement(polisNumber: string): string {
     return "[class='tile__link media'][href*='" + polisNumber + "']"
   }
 
   //POLIS DETAILS
   polisNumberTextElement: string = '//*[contains(text(),"Polisnummer")]/following-sibling::div';
+  damageNumberTextElement: string = '//*[contains(text(),"Schadenummer")]/following::span[1]';
   statusPolisTextElement: string = '//*[contains(text(),"Status polis")]/following-sibling::div';
   insuranceCompanyExternTextElement: string = '//*[contains(text(),"Verzekeraar")]/following-sibling::div';
   statusEndedText: string = 'Beëindigd';

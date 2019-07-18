@@ -12,7 +12,7 @@ When(/^Customer selects algemene voorwaarden$/, async () => {
 });
 
 When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: string) => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.aansprakelijkheidsVerzekeringParticulierClickElement(polisNumber));
+  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
 });
 
 When(/^Customer changes the external polis$/, async () => {
@@ -25,14 +25,18 @@ When(/^Customer selects (.*) polis with polis number: (.*)$/, async (polisStatus
   switch (polisStatus) {
     case statusEnum.ENDED: {
       await genericMethods.clickOnElement(mijnVerzekeringElements.showEndedAndActiveInsurancesClickElement);
-      await genericMethods.clickOnElement(mijnVerzekeringElements.aansprakelijkheidsVerzekeringParticulierClickElement(polisNumber));
+      await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
       break;
     }
     case statusEnum.ACTIVE: {
-      await genericMethods.clickOnElement(mijnVerzekeringElements.aansprakelijkheidsVerzekeringParticulierClickElement(polisNumber));
+      await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
       break;
     }
   }
+});
+
+When(/^Customer selects damage claim with damage number: (.*)$/, async (damageNumber: string) => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(damageNumber));
 });
 
 Then(/^Verify thank you message for creating a change is correctly shown$/, async () => {
@@ -57,6 +61,10 @@ Then(/^Verify polis status (.*) and polis number (.*) is shown correctly$/, asyn
       break;
     }
   }
+});
+
+Then(/^Verify damage claim with damage number (.*) is shown correctly$/, async (damageNumber: string) => {
+  await genericMethods.verifyTextInElementWithXpath(mijnVerzekeringElements.damageNumberTextElement, damageNumber);
 });
 
 Then(/^Verify insurance company (.*) and polis number (.*) is shown correctly$/, async (insuranceCompany: string, polisNumber: string) => {
