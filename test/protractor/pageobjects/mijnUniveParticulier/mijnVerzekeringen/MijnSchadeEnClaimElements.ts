@@ -28,5 +28,21 @@ export class MijnSchadeEnClaimElements {
   //DAMAGE CLAIM STEP FOUR
   damageClaimLicensePlateInputElement: string = '#_Form_IF7263_35019';
   damageClaimResponsibilityOtherPartyClickElement: string = '#_Form_IF27613_35018_tegenpartij';
-  damageClaimDamageToOwnVehicleTrueClickElement: string = '#_Form_IF7264_5240_true'
+  damageClaimDamageToOwnVehicleTrueClickElement: string = '#_Form_IF7264_5240_true';
+
+  //DAMAGE CLAIM STEP FIVE
+  damageClaimContactThroughPhoneClickElement: string = '#_Form_IF31405_39308_telefoon';
+  damageClaimContactThroughPhoneInputElement: string = '#_Form_IF31405_39309';
+  damageClaimContactThroughEmailClickElement: string = '#_Form_IF31405_39308_email';
+
+  //DAMAGE CLAIM STEP SIX
+  damageClaimStepSixNextButtonClickElement: string = '#_AddClaimStepAssessmentCar_Next';
+
+  //DAMAGE CLAIM STEP SEVEN
+  damageClaimAgreementClickElement: string = '#_AddClaimStepConfirmation__25';
+  damageClaimSaveAndCommitButtonClickElement: string = '#_AddClaimStepConfirmation_Save';
+
+  //DAMAGE CLAIM SUMMARY
+  damageClaimSuccesMessageTextElement: string = '[class="success message"] >p';
+  damageClaimSuccesMessageText: string = 'Melden schade is voltooid';
 }

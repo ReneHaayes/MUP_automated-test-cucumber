@@ -119,9 +119,9 @@ export class GenericMethods {
 
   async verifyBreadcrumbOnPosition(breadCrumb: string, position: number) {
     try {
-    await this.waitForElementIsVisible('[class="breadcrumb_list"] li:nth-child('+position+') [title="'+breadCrumb+'"]', browser.getPageTimeout);
+      await this.waitForElementIsVisible('[class="breadcrumb_list"] li:nth-child(' + position + ') [title="' + breadCrumb + '"]', browser.getPageTimeout);
     } catch (e) {
-      throw new Error('Breadcrumb "'+breadCrumb+'" is not shown on position: ' +position);
+      throw new Error('Breadcrumb "' + breadCrumb + '" is not shown on position: ' + position);
     }
   }
 
@@ -276,7 +276,7 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, waitFor);
     const selectorToString: string = await this.getText(selector);
-    if (await expect(selectorToString).to.have.string(assertionText)){
+    if (await expect(selectorToString).to.have.string(assertionText)) {
       return true;
     } else {
       return false
@@ -532,4 +532,10 @@ export class GenericMethods {
     await expect(input).to.have.string(assertionText);
   }
 
+  async acceptAlertWhenAvailable() {
+    try {
+      await browser.driver.switchTo().alert().accept();
+    } catch (e) {
+    }
+  }
 }

@@ -79,6 +79,7 @@ When(/^Customer claims a damage by filling in the form for polis (.*)$/, async (
   //STEP ONE
   await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
+  await genericMethods.acceptAlertWhenAvailable();
   //STEP TWO
   await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimElements.damageClaimSelectPolisClickElement(polisNumber));
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepTwoNextButtonClickElement);
@@ -93,7 +94,19 @@ When(/^Customer claims a damage by filling in the form for polis (.*)$/, async (
   await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimLicensePlateInputElement, '06-HN-DL');
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimResponsibilityOtherPartyClickElement);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimDamageToOwnVehicleTrueClickElement);
-  await browser.sleep(5000);
   await genericMethods.clickOnNextButton();
-  await browser.sleep(5000);
+  //STEP FIVE
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
+  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneInputElement, '0612345678');
+  await genericMethods.clickOnFinishButton();
+  //STEP SIX
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
+  //STEP SEVEN
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
+});
+
+
+Then(/^Verify damage claim succes message is shown$/, async () => {
+  await genericMethods.verifyTextInElement(mijnSchadeEnClaimElements.damageClaimSuccesMessageTextElement, mijnSchadeEnClaimElements.damageClaimSuccesMessageText);
 });
