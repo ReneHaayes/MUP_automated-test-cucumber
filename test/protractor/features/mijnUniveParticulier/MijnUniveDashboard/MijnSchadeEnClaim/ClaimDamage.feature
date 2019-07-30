@@ -1,4 +1,4 @@
-@MijnSchadeEnClaimSchadeDetails
+@MijnSchadeEnClaimSchadeMelden
 
 Feature: Claiming damages
 
