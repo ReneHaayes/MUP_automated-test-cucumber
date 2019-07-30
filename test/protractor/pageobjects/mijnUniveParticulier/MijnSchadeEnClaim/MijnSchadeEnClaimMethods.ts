@@ -15,8 +15,6 @@ export class MijnSchadeEnClaimMethods {
     //STEP TWO
     await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimElements.damageClaimSelectPolisClickElement(polisNumber));
     await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepTwoNextButtonClickElement);
-    //STEP THREE
-    await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimCityInputElement, 'Zwolle');
   }
 
 }

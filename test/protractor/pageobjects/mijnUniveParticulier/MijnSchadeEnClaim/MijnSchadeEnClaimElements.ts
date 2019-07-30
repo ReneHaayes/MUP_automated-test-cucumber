@@ -19,7 +19,13 @@ export class MijnSchadeEnClaimElements {
   damageClaimInboedelStolenFalseClickElement: string = '#_Form_IF27715_19620_false';
   damageClaimDamageToHouseTrueClickElement: string = '#_Form_IF27715_26133_true';
   damageClaimPermanentLivingTrueClickElement: string = '#_Form_IF27716_19473_true';
-
+  damageClaimSelectCountrySelectElement: string = '#_Form_IF12539_33148';
+  damageClaimSelectEspanaSelectElement: string = 'string:ES';
+  damageClaimGoingDateInputElement: string = '#_Form_IF12539_16811';
+  damageClaimReturnDateInputElement: string = '#_Form_IF12539_16812';
+  damageClaimPrivateTripClickElement: string = '#_Form_IF12539_16809_prive';
+  damageClaimInsuredIllingWasOnTheTripClickElement: string = '#_Form_IF12539_16816';
+  damageClaimHappenedBeforeTripClickElement: string = '#_Form_IF12539_16823_vooraf';
 
   damageClaimSelectCauseClickElement(question: string, cause: string): string {
     return "//*[contains(text(),'" + question + "')]/following::*[contains(text(),'" + cause + "')]/preceding::span[1]/descendant::input"
@@ -37,12 +43,18 @@ export class MijnSchadeEnClaimElements {
   damageClaimLicensePlateInputElement: string = '#_Form_IF7263_35019';
   damageClaimResponsibilityOtherPartyClickElement: string = '#_Form_IF27613_35018_tegenpartij';
   damageClaimDamageToOwnVehicleTrueClickElement: string = '#_Form_IF7264_5240_true';
+  damageClaimTravelDocumentsStolenClickElement: string = '#_Form_IF12550_16854_reispapieren';
 
   //DAMAGE CLAIM STEP FIVE
   damageClaimContactThroughPhoneClickElement: string = '#_Form_IF31405_39308_telefoon';
   damageClaimContactThroughPhoneInputElement: string = '#_Form_IF31405_39309';
   damageClaimContactThroughEmailClickElement: string = '#_Form_IF31405_39308_email';
   damageClaimTotalDamageAmountInputElement: string = '#_Form_IF27719_35141';
+  damageClaimCancelDateInputElement: string = '#_Form_IF12805_16943';
+  damageClaimBookingDateInputElement: string = '#_Form_IF12805_16944';
+  damageClaimOneNotaClickElement: string = '#_Form_IF12806_16945_reisorganisatie';
+  damageClaimOmboekingFalseClickElement: string = '#_Form_IF12806_22610_false';
+  damageClaimTotalPriceInputElement: string = '#_Form_IF12806_16946';
 
   //DAMAGE CLAIM STEP SIX
   damageClaimDescriptionOfDamageInputElement: string = '#_Form_IF27824_35250';
