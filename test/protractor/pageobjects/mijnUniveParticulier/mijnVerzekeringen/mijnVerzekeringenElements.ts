@@ -24,4 +24,9 @@ export class MijnVerzekeringenElements {
   changeInsuranceThankYouTextElement: string = '[class="eforms-container"] > p';
   changeInsuranceThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
 
+
+
+
+
+
 }
