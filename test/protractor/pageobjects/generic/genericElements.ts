@@ -84,6 +84,7 @@ export class GenericElements {
   mijnUniveGezinssituatieWijzigen: string = 'mijnunive/mijn-gegevens/gezinssituatiewijzigen';
   mijnUniveMijnVerzekeringen: string = 'mijnunive/polisoverzicht';
   mijnUniveMijnSchadeEnClaim: string = 'mijnunive/schade';
+  mijnUniveMijnPostvak: string = 'mijnunive/mijn-postvak';
 
 
   //POLISDETAILS
