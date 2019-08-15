@@ -155,6 +155,9 @@ export class GetUrlUnive {
       case homePageEnum.KLANTENSERVICE: {
         return this.getEnv(browser.params.env.environment) + homePageEnum.KLANTENSERVICE;
       }
+      case homePageEnum.KLACHTENFORMULIER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.klachtenFormulier;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }

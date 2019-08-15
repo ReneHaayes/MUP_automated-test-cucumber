@@ -78,6 +78,7 @@ export enum homePageEnum {
   OVER_ONS = 'over ons',
   ZIPCODE_PLACE = 'postcode en plaats',
   KLANTENSERVICE = 'klantenservice',
+  KLACHTENFORMULIER = 'klachtenformulier',
   KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
   ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
   RECHTSBIJSTAND = 'rechtsbijstand',

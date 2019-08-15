@@ -74,6 +74,7 @@ export class GenericElements {
   loginMijnUniveParticulierURL: string = 'login';
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
   mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
+  klachtenFormulier: string = 'klantenservice/klacht';
 
   //MIJN UNIVE URL
   mijnUniveBetaalgegevensWijzigen: string = 'mijnunive/mijn-gegevens/betaalgegevens-wijzigen';
