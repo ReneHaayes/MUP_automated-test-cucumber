@@ -170,6 +170,9 @@ export class GetUrlUnive {
       case homePageEnum.GEBOUWEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkGebouwen;
       }
+      case homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.afspraakMakenZakelijk;
+      }
       case homePageEnum.AFSPRAAK_MAKEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.afspraakMaken;
       }

@@ -31,10 +31,10 @@ Feature: Check if the business homepage shows the buttons correctly.
     Then Verify element on klantenservice business page for <button> is shown
 
     Examples:
-      | button          |
-      | afspraak maken  |
-      | klacht indienen |
-      | inloggen        |
+      | button                  |
+      | afspraak maken zakelijk |
+      | klacht indienen         |
+      | inloggen                |
 
   Scenario Outline: Click on the header and check the elements and verify if the outcome is correct.
     Given I am on the business page of the Unive website

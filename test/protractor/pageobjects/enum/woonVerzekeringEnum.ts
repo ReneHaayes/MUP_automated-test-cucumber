@@ -86,6 +86,7 @@ export enum homePageEnum {
   ZZP_ER = 'zzp er',
   AGRARIER = 'agrarier',
   GEBOUWEN = 'gebouwen',
+  AFSPRAAK_MAKEN_ZAKELIJK = 'afspraak maken zakelijk',
   AFSPRAAK_MAKEN = 'afspraak maken',
   KLACHT_INDIENEN = 'klacht indienen',
   INLOGGEN = 'inloggen',
