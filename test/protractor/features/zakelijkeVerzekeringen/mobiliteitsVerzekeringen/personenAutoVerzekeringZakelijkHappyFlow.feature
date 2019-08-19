@@ -42,7 +42,7 @@ Feature: Happy flow for 'personen auto verzekering zakelijk'
       | startDateOnYourName | today          |
       | mainDriver          | mainDriverYes  |
       | ownerCar            | ownerCarYes    |
-    And I enter step four page of personenautoverzekering zakelijk for <company> with <persona>
+    And I enter step four page of personenautoverzekering zakelijk for <company> with different <persona> driver
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |

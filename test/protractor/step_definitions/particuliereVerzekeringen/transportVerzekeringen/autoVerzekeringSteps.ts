@@ -123,7 +123,24 @@ When(/^I enter step three page of personen autoverzekering zakelijk with$/, asyn
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with (.*)$/, async (company: string, persona: string) => {
+When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with driver (.*)$/, async (company: string, persona: string) => {
+  await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
+  await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
+  await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
+  await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
+  await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
+  await genericMethods.clickContactDataGender(personaData.getPersonaGender(persona));
+  await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
+  await genericMethods.clickOnTAB(genericElements.accountNumberElement);
+  await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with different (.*) driver$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
