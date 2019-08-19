@@ -56,7 +56,8 @@ export class GenericElements {
   zakelijkZzp: string = 'zakelijk/zzp';
   zakelijkAgrarier: string = 'zakelijk/agrariers';
   zakelijkGebouwen: string = 'zakelijk/gebouwenverzekering';
-  afspraakMaken: string = 'zakelijk/klantenservice/afspraak';
+  afspraakMakenZakelijk: string = 'zakelijk/klantenservice/afspraak';
+  afspraakMaken: string = 'klantenservice/afspraak';
   klachtIndienen: string = 'zakelijk/klachtindienen';
   mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/';
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
@@ -74,6 +75,7 @@ export class GenericElements {
   loginMijnUniveParticulierURL: string = 'login';
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
   mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
+  klachtenFormulier: string = 'klantenservice/klacht';
 
   //MIJN UNIVE URL
   mijnUniveBetaalgegevensWijzigen: string = 'mijnunive/mijn-gegevens/betaalgegevens-wijzigen';
@@ -84,6 +86,7 @@ export class GenericElements {
   mijnUniveGezinssituatieWijzigen: string = 'mijnunive/mijn-gegevens/gezinssituatiewijzigen';
   mijnUniveMijnVerzekeringen: string = 'mijnunive/polisoverzicht';
   mijnUniveMijnSchadeEnClaim: string = 'mijnunive/schade';
+  mijnUniveMijnPostvak: string = 'mijnunive/mijn-postvak';
 
 
   //POLISDETAILS

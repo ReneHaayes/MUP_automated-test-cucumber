@@ -219,7 +219,7 @@ export class HmPageMethods {
 
   async clickMenuButtonAndGoToBusinessKlantservicePage(input: string) {
     switch (input) {
-      case homePageEnum.AFSPRAAK_MAKEN: {
+      case homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK: {
         await genericMethods.clickOnElement(hmPageElements.menuPageKlantenserviceButtonClickElement);
         await genericMethods.waitForElementIsVisible(hmPageElements.gaNaarMijnUniveZakelijkButtonClickElement, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(hmPageElements.gaNaarZakelijkKlantenserviceButtonClickElement, browser.getPageTimeout);
@@ -248,8 +248,8 @@ export class HmPageMethods {
 
   async verifyElementIsShownOnBusinessKlantenservicePage(input: string) {
     switch (input) {
-      case homePageEnum.AFSPRAAK_MAKEN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.AFSPRAAK_MAKEN);
+      case homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK: {
+        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(hmPageElements.afspraakMakenBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.afspraakMakenH1TitleTextElement, hmPageElements.afspraakMakenTitleText);

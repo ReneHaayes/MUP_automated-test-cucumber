@@ -43,6 +43,15 @@ When(/^Customer selects damage claim with damage number: (.*)$/, async (damageNu
   await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(damageNumber));
 });
 
+When(/^Customer uploads (.*) for claim with damage number: (.*)$/, async (filename: string, damageNumber: string) => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(damageNumber));
+  await browser.sleep(2000);
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.uploadingDocumentsLinkClickElement);
+  await genericMethods.uploadFile(mijnSchadeEnClaimElements.uploadingDocumentsFileUploadInputElement, mijnSchadeEnClaimElements.uploadingDocumentFileName(filename));
+  await genericMethods.typeText(mijnSchadeEnClaimElements.uploadingDocumentsDescriptionInputElement, 'test123');
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.uploadingDocumentUploadButtonClickElement);
+});
+
 When(/^Customer claims a autoverzekering damage by filling in the form for polis (.*)$/, async (polisNumber: string) => {
   await mijnSchadeEnClaimMethods.damageClaimFillInSchadeGegevens(polisNumber);
   //STEP THREE
@@ -128,6 +137,10 @@ When(/^Customer claims a doorlopende reisverzekering damage by filling in the fo
   //STEP SEVEN
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
+});
+
+Then(/^Verify uploaded (.*) is show in the list beneath$/, async (filename: string) => {
+  await genericMethods.verifyTextInElement(mijnSchadeEnClaimElements.uploadingDocumentFileNameTextElement, filename);
 });
 
 Then(/^Verify thank you message for creating a change is correctly shown$/, async () => {
