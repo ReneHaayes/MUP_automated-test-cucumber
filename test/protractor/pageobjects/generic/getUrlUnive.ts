@@ -155,6 +155,9 @@ export class GetUrlUnive {
       case homePageEnum.KLANTENSERVICE: {
         return this.getEnv(browser.params.env.environment) + homePageEnum.KLANTENSERVICE;
       }
+      case homePageEnum.KLACHTENFORMULIER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.klachtenFormulier;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
@@ -166,6 +169,9 @@ export class GetUrlUnive {
       }
       case homePageEnum.GEBOUWEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkGebouwen;
+      }
+      case homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.afspraakMakenZakelijk;
       }
       case homePageEnum.AFSPRAAK_MAKEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.afspraakMaken;
@@ -223,6 +229,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_SCHADE_EN_CLAIM: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnSchadeEnClaim;
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_POSTVAK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnPostvak;
       }
       case polisDetailsUrlEnum.POLISDETAILS_DERDEN_1600478601: {
         return this.getEnv(browser.params.env.environment) + genericElements.polisDetailsNumber1600478601Url;

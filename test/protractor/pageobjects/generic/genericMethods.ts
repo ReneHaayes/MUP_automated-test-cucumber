@@ -5,9 +5,10 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import {GenericElements} from "./genericElements";
 import {PersonaData} from "../persona/persona";
-import {gender, specificIdentification, genericEnum, dateEnum} from "../enum/genericEnum";
+import {dateEnum, gender, genericEnum, specificIdentification} from "../enum/genericEnum";
 import {NawElements} from "./nawElements";
 import {legalEnum} from "../enum/autoVerzekeringEnum";
+import * as path from "path";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -207,6 +208,14 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     const text: ElementFinder = element(by.xpath(selector));
     return text.getText();
+  }
+
+  async uploadFile(selector: string, file: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    var absolutePath = path.resolve(__dirname, file);
+    var fileElem = element(by.css(selector));
+    await fileElem.sendKeys(absolutePath);
   }
 
   async typeText(selector: string, text: string) {
