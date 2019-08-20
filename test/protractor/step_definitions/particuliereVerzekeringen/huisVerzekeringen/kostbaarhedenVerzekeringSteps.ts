@@ -15,9 +15,10 @@ When(/^I enter step one and step two page of kostbaarheden verzekeringen with:$/
   const dataTable = data.rowsHash();
   await genericMethods.typeText(kostbaarhedenVerzekeringElements.yourZipcodeInputElement, personaData.getPersonaZipcode(dataTable.persona));
   await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.jewelryValuableClickElement);
+  await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.noteOrTaxationReportNeither);
   await genericMethods.typeText(kostbaarhedenVerzekeringElements.estimateValueInputElement, dataTable.estimateValue);
   await genericMethods.clickOnNextButton();
-  //click next on step two page.
+  // click next on step two page.
   await genericMethods.clickOnNextButton();
 });
 
