@@ -1,5 +1,16 @@
 export class MijnSchadeEnClaimElements {
 
+  //UPLOADING DOCUMENTS
+  uploadingDocumentsLinkClickElement: string = '[ng-click*="handleActionGoToUploadDocuments"]';
+  uploadingDocumentsFileUploadInputElement: string = '#_AddMyClaimCommunicationWithAttachments__4';
+  uploadingDocumentsDescriptionInputElement: string = '#_AddMyClaimCommunicationWithAttachments__6';
+  uploadingDocumentUploadButtonClickElement: string= '#_AddMyClaimCommunicationWithAttachments_null';
+  uploadingDocumentFileNameTextElement: string = '[data-label-id="LA__12"] > span';
+  uploadingDocumentFileName(filename: string): string {
+    return '../../../' + filename
+  }
+
+
   //DAMAGE CLAIM STEP ONE
   damageClaimClickElement: string = '[href*="add-my-claim-by-policies"]';
   damageClaimDateInputElement: string = '#_AddClaimStepGeneralClaimData_dateDamageField';

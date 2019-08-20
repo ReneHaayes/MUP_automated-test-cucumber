@@ -59,7 +59,6 @@ When(/^I enter details of (.*) in step four page of motor$/, async (persona: str
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
-  await genericMethods.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
