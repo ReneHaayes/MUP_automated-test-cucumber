@@ -91,10 +91,10 @@ export class VehicleElements {
   constructionYearSelectElement: string = '#_VehicleBrandModelType__2';
   constructionYearSelect2018Element: string = 'string:2018';
   brandNameSelectElement: string = '#_VehicleBrandModelType__4';
-  brandNameSelectFerrariElement: string = 'string:34'; //string:35
+  brandNameSelectFerrariElement: string = 'string:46';
   brandNameSelectAceElement: string = 'string:350';
   brandModelSelectElement: string = '#_VehicleBrandModelType__5';
-  brandModelSelect304WElement: string = 'string:8180'; //string:746
+  brandModelSelect304WElement: string = 'string:528';
   brandModelSelectChampsElement: string = 'string:1403';
   brandTypeSelectElement: string = '#_VehicleBrandModelType__6';
   brandTypeSelectChamps330DDBasicElement: string = 'string:12778';
