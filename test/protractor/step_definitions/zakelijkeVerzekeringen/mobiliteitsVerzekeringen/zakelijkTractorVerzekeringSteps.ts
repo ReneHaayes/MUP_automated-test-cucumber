@@ -24,7 +24,7 @@ When(/^I enter step one page and click next on step two of zakelijk tractorverze
   await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectFerrariElement);
   await genericMethods.selectInDropdown(vehicleElements.brandModelSelectElement, vehicleElements.brandModelSelect304WElement);
   await genericMethods.clickOnElement(vehicleElements.confirmationButtonClickElement);
-  // await genericMethods.typeText(zakelijkTractorVerzekeringElements.valueInputElement, dataTable.value);
+  await genericMethods.typeText(zakelijkTractorVerzekeringElements.valueInputElement, dataTable.value);
   await genericMethods.selectInDropdown(zakelijkTractorVerzekeringElements.accessoiresSelectElement, zakelijkTractorVerzekeringElements.accessoiresTm1000SelectElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.trackAndTraceSystemNoClickElement);
   await zakelijkTractorVerzekerinigMethods.selectMaximumSpeed(dataTable.maxSpeed);
