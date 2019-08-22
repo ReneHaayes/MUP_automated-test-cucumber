@@ -9,7 +9,8 @@ import {
   basisDekkingEnum,
   vehicleAccEnum,
   ownRiskEnum, totalPremieEnum,
-  yearlyMileageEnum
+  yearlyMileageEnum,
+  whoDrivesCarMost
 } from "../../enum/autoVerzekeringEnum";
 
 let genericMethods: GenericMethods = new GenericMethods();
@@ -26,6 +27,30 @@ export class AutoVerzekeringMethods {
     await browser.sleep(500);
     await genericMethods.clickOnTAB(autoVerzekeringElements.licensePlateElement);
     await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
+  }
+
+  async selectWhoDrivesTheCarTheMost(input: string) {
+    switch (input) {
+      case whoDrivesCarMost.MYSELF: {
+        await genericMethods.clickOnElement(autoVerzekeringElements.mySelf);
+        break;
+      }
+      case whoDrivesCarMost.MYPARTNER: {
+        await genericMethods.clickOnElement(autoVerzekeringElements.myPartner);
+        break;
+      }
+      case whoDrivesCarMost.MYCHILD: {
+        await genericMethods.clickOnElement(autoVerzekeringElements.myChild);
+        break;
+      }
+      case whoDrivesCarMost.SOMEONEELSE: {
+        await genericMethods.clickOnElement(autoVerzekeringElements.someOneElse);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
   }
 
   async selectYearlyMileage(input: string) {

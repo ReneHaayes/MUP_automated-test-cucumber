@@ -29,9 +29,10 @@ When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (person
   const dataTable = data.rowsHash();
   await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
-  await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeElement, personaData.getPersonaZipcode(persona));
-  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeElement);
+  await autoVerzekeringMethods.selectWhoDrivesTheCarTheMost(dataTable.whoDrivesCarMost);
+  await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateAfterFixElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeAfterFixElement, personaData.getPersonaZipcode(persona));
+  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive(dataTable.alreadyMember);
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
@@ -58,7 +59,7 @@ When(/^I enter step three page of autoverzekering with$/, async (data) => {
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, dataTable.startDateOnYourName);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
-  await autoVerzekeringMethodsStepThreeAndFour.clickOnMainDriver(dataTable.mainDriver);
+  // await autoVerzekeringMethodsStepThreeAndFour.clickOnMainDriver(dataTable.mainDriver); has been commented out because of a change, this rule can be deleted
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar(dataTable.ownerCar);
   await genericMethods.clickOnNextButton();
 });

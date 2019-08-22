@@ -13,6 +13,12 @@ export class AutoVerzekeringElements {
   bodyTypeElement: string = '[data-label-id="LA_IF2509_3617"]';
   fuelTypeElement: string = '[data-label-id="LA_IF2509_3618"]';
 
+  // Who drives the car the most
+  mySelf: string = '[ng-repeat="option in applicationFormQuestions.IF28608_36322._list"]';
+  myPartner: string = ''; // can be added later
+  myChild: string = ''; // can be added later
+  someOneElse: string = ''; // can be added later
+
   //ALREADYINSURED CAR
   alreadyInsuredCarTrue: string = '[data-label-id*="IF28205_35610"] .radioList > label:nth-child(1)';
   alreadyInsuredCarFalse: string = '[data-label-id*="IF28205_35610"] .radioList > label:nth-child(2)';

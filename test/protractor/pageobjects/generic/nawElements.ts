@@ -4,6 +4,10 @@ export class NawElements {
   hoofdbestuurderBirthdateElement: string = '#_Form_IF2511_3621';
   hoofdbestuurderZipCodeElement: string = '#_Form_IF2511_3622';
 
+  // HOOFDBESTUURDER NA FIX AUTOVERZEKERING (22-08-2019)
+  hoofdbestuurderBirthdateAfterFixElement: string = '#_Form_IF28608_3621';
+  hoofdbestuurderZipCodeAfterFixElement: string = '#_Form_IF28608_3622';
+
   // AFWIJKENDEBESTUURDER
   afwijkendeBestuurderInitialsElement: string ='#_Form_IF25916_3688';
   afwijkendeBestuurderPrefixElement: string = '#_Form_IF25916_3689';
