@@ -78,15 +78,18 @@ export class GenericElements {
   klachtenFormulier: string = 'klantenservice/klacht';
 
   //MIJN UNIVE URL
-  mijnUniveBetaalgegevensWijzigen: string = 'mijnunive/mijn-gegevens/betaalgegevens-wijzigen';
-  mijnUniveContactVoorkeurenDoorgeven: string = 'mijnunive/mijn-gegevens/contactvoorkeuren';
-  mijnUniveIdentiteitsGegevensDoorgeven: string = 'mijnunive/mijn-gegevens/identiteitsgegevens';
-  mijnUniveVerhuisGegevensDoorgeven: string = 'mijnunive/mijn-gegevens/verhuizingdoorgeven';
-  mijnUniveMijnGegevens: string = 'mijnunive/mijn-gegevens';
-  mijnUniveGezinssituatieWijzigen: string = 'mijnunive/mijn-gegevens/gezinssituatiewijzigen';
-  mijnUniveMijnVerzekeringen: string = 'mijnunive/polisoverzicht';
-  mijnUniveMijnSchadeEnClaim: string = 'mijnunive/schade';
-  mijnUniveMijnPostvak: string = 'mijnunive/mijn-postvak';
+  mijnUnivePage: string = 'mijnunive';
+  mijnGegevens: string = 'mijn-gegevens';
+  mijnUniveBetaalgegevensWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'betaalgegevens-wijzigen';
+  mijnUniveContactVoorkeurenDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'contactvoorkeuren';
+  mijnUniveIdentiteitsGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'identiteitsgegevens';
+  mijnUniveVerhuisGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'verhuizingdoorgeven';
+  mijnUniveMijnGegevens: string = this.mijnUnivePage +'/'+  this.mijnGegevens;
+  mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'gezinssituatiewijzigen';
+  mijnUniveMijnVerzekeringen: string = this.mijnUnivePage +'/'+ 'polisoverzicht';
+  mijnUniveMijnSchadeEnClaim: string = this.mijnUnivePage +'/'+ 'schade';
+  mijnUnivePremiegevolgenBerekenen: string = this.mijnUniveMijnSchadeEnClaim + '/premiegevolgen-berekenen';
+  mijnUniveMijnPostvak: string = this.mijnUnivePage +'/'+ 'mijn-postvak';
 
 
   //POLISDETAILS
