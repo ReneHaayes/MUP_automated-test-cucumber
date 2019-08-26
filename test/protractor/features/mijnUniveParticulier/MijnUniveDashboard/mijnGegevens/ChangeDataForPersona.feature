@@ -32,7 +32,7 @@ Feature: Changing data for persona when logged in.
       | payment way        |
       | iban accountnumber |
 
-  Scenario: Change payment data for persona when logged in
+  Scenario: Change contact preferences for persona when logged in
     Given Customer annie is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
     When Customer changes contact preferences
     Then Verify thank you message is shown for changing contact preferences

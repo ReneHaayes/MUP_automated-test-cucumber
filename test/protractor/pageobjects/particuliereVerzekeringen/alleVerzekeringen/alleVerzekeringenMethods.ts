@@ -268,8 +268,9 @@ export class AlleVerzekeringenMethods {
       case verzekeringPaginasEnum.HYPOTHEEK: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.HYPOTHEEK);
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.HYPOTHEEK);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HYPOTHEEK, 2);
+        // await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        // await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HYPOTHEEK, 2);
+        // These methods can be put on when the breadcrumn is realised (it has been put on the backlog)
         break;
       }
       case verzekeringPaginasEnum.KOSTBAARHEDEN_VERZEKERING: {

@@ -15,9 +15,10 @@ When(/^I enter step one and step two page of kostbaarheden verzekeringen with:$/
   const dataTable = data.rowsHash();
   await genericMethods.typeText(kostbaarhedenVerzekeringElements.yourZipcodeInputElement, personaData.getPersonaZipcode(dataTable.persona));
   await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.jewelryValuableClickElement);
+  await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.noteOrTaxationReportNeither);
   await genericMethods.typeText(kostbaarhedenVerzekeringElements.estimateValueInputElement, dataTable.estimateValue);
   await genericMethods.clickOnNextButton();
-  //click next on step two page.
+  // click next on step two page.
   await genericMethods.clickOnNextButton();
 });
 
@@ -40,7 +41,6 @@ When(/^I enter details of (.*) in your data page of kostbaarheden verzekeringen$
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
-  await genericMethods.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);

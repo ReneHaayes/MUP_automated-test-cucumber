@@ -79,4 +79,12 @@ export class MijnSchadeEnClaimElements {
   //DAMAGE CLAIM SUMMARY
   damageClaimSuccesMessageTextElement: string = '[class="success message"] >p';
   damageClaimSuccesMessageText: string = 'Melden schade is voltooid';
+
+  //PREMIEGEVOLGEN BEREKENEN PAGE
+  polisForPremiegevolgenPageWithPolisNumber(polisNumber: string): string {
+    return '[href="/mumq/QIS_Customer/my-ncbm-prognosis/'+polisNumber+'"]'
+  }
+  ncbmPrognoseH1TextElement: string = '[id="viewPartMyNcbmPrognosis"] > h1';
+  ncbmPrognoseH1Text: string = 'Ncbm prognose';
+  ncbmTableClassElement: string = '[class="ncbmTable"]';
 }
