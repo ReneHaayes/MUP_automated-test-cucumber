@@ -34,10 +34,7 @@ When(/^Customer fills in form for schadeverzekering klacht$/, async () => {
   await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
 });
 
-Then(/^Verify complaint is accepted with a confirmation text for zorgverzekering$/, async () => {
-  await genericMethods.verifyTextInElement(klachtenFormulierElements.confirmationZorgVerzekeringTextElement, klachtenFormulierElements.confirmationText);
+Then(/^Verify complaint is accepted with a confirmation text for klachtenformulier$/, async () => {
+  await genericMethods.verifyTextInElement(klachtenFormulierElements.klachtFormConfirmationTextElement, klachtenFormulierElements.klachtFormConfirmationText);
 });
 
-Then(/^Verify complaint is accepted with a confirmation text for klachtverzekering$/, async () => {
-  await genericMethods.verifyTextInElement(klachtenFormulierElements.confirmationKlachtVerzekeringTextElement, klachtenFormulierElements.confirmationText);
-});
