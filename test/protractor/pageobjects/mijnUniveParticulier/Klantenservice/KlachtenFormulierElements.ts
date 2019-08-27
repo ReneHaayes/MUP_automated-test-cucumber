@@ -19,7 +19,6 @@ export class KlachtenFormulierElements {
   emailAddressInputElement: string = '[title="E-mailadres"]';
 
   //CONFIRMATION
-  confirmationZorgVerzekeringTextElement: string = '#dt_0 > article > div';
-  confirmationKlachtVerzekeringTextElement: string = '#dt_1 > article > div';
-  confirmationText: string = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een kopie van uw klacht in uw mailbox.';
+  klachtFormConfirmationTextElement: string = '[class="eforms eforms-generiekEmail"] > div > p';
+  klachtFormConfirmationText: string = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een kopie van uw klacht in uw mailbox.';
 }
