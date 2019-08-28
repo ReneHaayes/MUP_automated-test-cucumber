@@ -28,7 +28,8 @@ exports.config = {
   suites: {
     zakelijkeVerzekeringen: './protractor/features/zakelijkeVerzekeringen/**/*.feature',
     particuliereVerzekeringen: './protractor/features/particuliereVerzekeringen/**/*.feature',
-    mijnUniveParticulier: './protractor/features/mijnUniveParticulier/**/*.feature'
+    mijnUniveParticulier: './protractor/features/mijnUniveParticulier/**/*.feature',
+    service: './protractor/features/service/**/*.feature'
   },
 
   params: {

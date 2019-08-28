@@ -1,9 +1,9 @@
-import {GenericMethods} from "../../generic/genericMethods";
-import {SituatieGewijzigdElements} from "./SituatieGewijzigdElements";
-import {browser} from "protractor";
+import {GenericMethods} from '../generic/genericMethods';
+import {SituatieGewijzigdElements} from './SituatieGewijzigdElements';
+import {browser} from 'protractor';
 
-let genericMethods: GenericMethods = new GenericMethods();
-let situatieGewijzigdElements: SituatieGewijzigdElements = new SituatieGewijzigdElements();
+const genericMethods: GenericMethods = new GenericMethods();
+const situatieGewijzigdElements: SituatieGewijzigdElements = new SituatieGewijzigdElements();
 
 export class SituatieGewijzigdMethods {
 

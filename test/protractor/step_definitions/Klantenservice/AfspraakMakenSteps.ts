@@ -1,12 +1,12 @@
-import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {KlachtenFormulierElements} from "../../../pageobjects/mijnUniveParticulier/Klantenservice/KlachtenFormulierElements";
-import {AfspraakMakenElements} from "../../../pageobjects/mijnUniveParticulier/Klantenservice/AfspraakMakenElements";
-import {browser} from "protractor";
+import {Then, When} from 'cucumber';
+import {browser} from 'protractor';
+import { GenericMethods } from '../../pageobjects/generic/genericMethods';
+import { KlachtenFormulierElements } from '../../pageobjects/Klantenservice/KlachtenFormulierElements';
+import { AfspraakMakenElements } from '../../pageobjects/Klantenservice/AfspraakMakenElements';
 
-let genericMethods: GenericMethods = new GenericMethods();
-let klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
-let afspraakMakenElements: AfspraakMakenElements = new AfspraakMakenElements();
+const genericMethods: GenericMethods = new GenericMethods();
+const klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
+const afspraakMakenElements: AfspraakMakenElements = new AfspraakMakenElements();
 
 
 When(/^Customer fills in afspraak maken form correctly$/, async () => {
