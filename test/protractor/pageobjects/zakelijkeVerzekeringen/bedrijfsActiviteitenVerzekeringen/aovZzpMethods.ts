@@ -1,45 +1,45 @@
 import {browser, by, element, ElementFinder} from "protractor";
 import {GenericMethods} from "../../generic/genericMethods";
-import {ZzpFlexElements} from "./zzpFlexElements";
-import {incapacitation, zzpFlexUwpremie} from "../../enum/zzpFlexEnum";
+import {AovZzpElements} from "./aovZzpElements";
+import {incapacitation, AovZzpUwpremie} from "../../enum/aovZzpEnum";
 import {GenericElements} from "../../generic/genericElements";
 import {durationEntrepreneur, gender, specificIdentification, genericEnum} from "../../enum/genericEnum";
 import {PersonaData} from "../../persona/persona";
 
 // @ts-ignore
 let genericMethods: GenericMethods = new GenericMethods();
-let zzpFlexElements: ZzpFlexElements = new ZzpFlexElements();
+let aovZzpElements: AovZzpElements = new AovZzpElements();
 let genericElements: GenericElements = new GenericElements();
 let personaData: PersonaData = new PersonaData();
 
 
-export class ZzpFlexMethods {
+export class AovZzpMethods {
 
   async dragAndDropUwPremie(input: string) {
-    const slider: ElementFinder = element(by.css(zzpFlexElements.sliderElement));
-    await genericMethods.waitForElementIsVisible(zzpFlexElements.sliderElement, browser.getPageTimeout);
+    const slider: ElementFinder = element(by.css(aovZzpElements.sliderElement));
+    await genericMethods.waitForElementIsVisible(aovZzpElements.sliderElement, browser.getPageTimeout);
     switch (input) {
-      case zzpFlexUwpremie._25: {
+      case AovZzpUwpremie._25: {
         await browser.actions().dragAndDrop(slider, {x: 0, y: 0}).perform();
         break;
       }
-      case zzpFlexUwpremie._50: {
+      case AovZzpUwpremie._50: {
         await browser.actions().dragAndDrop(slider, {x: 58, y: 0}).perform();
         break;
       }
-      case zzpFlexUwpremie._75: {
+      case AovZzpUwpremie._75: {
         await browser.actions().dragAndDrop(slider, {x: 116, y: 0}).perform();
         break;
       }
-      case zzpFlexUwpremie._100: {
+      case AovZzpUwpremie._100: {
         await browser.actions().dragAndDrop(slider, {x: 174, y: 0}).perform();
         break;
       }
-      case zzpFlexUwpremie._125: {
+      case AovZzpUwpremie._125: {
         await browser.actions().dragAndDrop(slider, {x: 233, y: 0}).perform();
         break;
       }
-      case zzpFlexUwpremie._150: {
+      case AovZzpUwpremie._150: {
         await browser.actions().dragAndDrop(slider, {x: 291, y: 0}).perform();
         break;
       }
@@ -51,26 +51,26 @@ export class ZzpFlexMethods {
 
   async clickOnNextButton() {
     await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await genericMethods.waitForElementIsVisible(zzpFlexElements.nextButton, browser.getPageTimeout);
-    await genericMethods.clickOnElementWithClassName(zzpFlexElements.nextButton);
+    await genericMethods.waitForElementIsVisible(aovZzpElements.nextButton, browser.getPageTimeout);
+    await genericMethods.clickOnElementWithClassName(aovZzpElements.nextButton);
   }
 
   async clickOnFinishButton() {
     await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await genericMethods.waitForElementIsVisible(zzpFlexElements.finishButton, browser.getPageTimeout);
-    await genericMethods.clickOnElement(zzpFlexElements.finishButton);
+    await genericMethods.waitForElementIsVisible(aovZzpElements.finishButton, browser.getPageTimeout);
+    await genericMethods.clickOnElement(aovZzpElements.finishButton);
   }
 
   async clickYourDataGender(input: string) {
     switch (input) {
       case gender.MALE: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexSelectGenderElementMale);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpSelectGenderElementMale);
         break;
       }
       case gender.FEMALE: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexSelectGenderElementFemale);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpSelectGenderElementFemale);
         break;
       }
       default: {
@@ -82,22 +82,22 @@ export class ZzpFlexMethods {
   async selectYourDataSpecificIdentification(input: string, persona: string) {
     switch (input) {
       case specificIdentification.DRIVER_LICENSE: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexYourDataSpecificIdentificationElement, zzpFlexElements.zzpFlexYourDataSpecificIdentificationDriverLicenseSelect);
-        await genericMethods.typeText(zzpFlexElements.zzpFlexYourDataSpecificIdentificationNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpYourDataSpecificIdentificationElement, aovZzpElements.aovZzpYourDataSpecificIdentificationDriverLicenseSelect);
+        await genericMethods.typeText(aovZzpElements.aovZzpYourDataSpecificIdentificationNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
         break;
       }
       case specificIdentification.PASSPORT: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexYourDataSpecificIdentificationElement, zzpFlexElements.zzpFlexYourDataSpecificIdentificationPassportSelect);
-        await genericMethods.typeText(zzpFlexElements.zzpFlexYourDataSpecificIdentificationNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpYourDataSpecificIdentificationElement, aovZzpElements.aovZzpYourDataSpecificIdentificationPassportSelect);
+        await genericMethods.typeText(aovZzpElements.aovZzpYourDataSpecificIdentificationNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
         break;
       }
       case specificIdentification.ID_CARD: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexYourDataSpecificIdentificationElement, zzpFlexElements.zzpFlexYourDataSpecificIdentificationIdCardSelect);
-        await genericMethods.typeText(zzpFlexElements.zzpFlexYourDataSpecificIdentificationNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpYourDataSpecificIdentificationElement, aovZzpElements.aovZzpYourDataSpecificIdentificationIdCardSelect);
+        await genericMethods.typeText(aovZzpElements.aovZzpYourDataSpecificIdentificationNumberElement, personaData.getPersonaSpecificIdentificationNumber(persona));
         break;
       }
       case specificIdentification.SOMETHING_ELSE: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexYourDataSpecificIdentificationElement, zzpFlexElements.zzpFlexYourDataSpecificIdentificationSomethingElseSelect);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpYourDataSpecificIdentificationElement, aovZzpElements.aovZzpYourDataSpecificIdentificationSomethingElseSelect);
         break;
       }
       default: {
@@ -109,47 +109,47 @@ export class ZzpFlexMethods {
   async selectYourDataDurationEntrepreneur(input: string) {
     switch (input) {
       case durationEntrepreneur._MIN1: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurMinOneElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurMinOneElement);
         break;
       }
       case durationEntrepreneur._1: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurOneElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurOneElement);
         break;
       }
       case durationEntrepreneur._2: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurTwoElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurTwoElement);
         break;
       }
       case durationEntrepreneur._3: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurThreeElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurThreeElement);
         break;
       }
       case durationEntrepreneur._4: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurFourElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurFourElement);
         break;
       }
       case durationEntrepreneur._5: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurFiveElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurFiveElement);
         break;
       }
       case durationEntrepreneur._6: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurSixElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurSixElement);
         break;
       }
       case durationEntrepreneur._7: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurSevenElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurSevenElement);
         break;
       }
       case durationEntrepreneur._8: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurEightElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurEightElement);
         break;
       }
       case durationEntrepreneur._9: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurNineElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurNineElement);
         break;
       }
       case durationEntrepreneur._10: {
-        await genericMethods.selectInDropdown(zzpFlexElements.zzpFlexDurationEntrepreneurSelectElement, zzpFlexElements.zzpFlexDurationEntrepreneurTenElement);
+        await genericMethods.selectInDropdown(aovZzpElements.aovZzpDurationEntrepreneurSelectElement, aovZzpElements.aovZzpDurationEntrepreneurTenElement);
         break;
       }
       default: {
@@ -162,12 +162,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificate14DaysNoteAbleToWorkNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificate14DaysNoteAbleToWorkNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificate14DaysNoteAbleToWorkYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificate14DaysNoteAbleToWorkYesElement);
         break;
       }
       default: {
@@ -180,12 +180,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateHeartComplaintsNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateHeartComplaintsNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateHeartComplaintsYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateHeartComplaintsYesElement);
         break;
       }
       default: {
@@ -198,12 +198,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateCancerNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateCancerNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateCancerYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateCancerYesElement);
         break;
       }
       default: {
@@ -216,12 +216,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePsychologistNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePsychologistNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePsychologistYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePsychologistYesElement);
         break;
       }
       default: {
@@ -234,12 +234,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePosturalComplaintsNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePosturalComplaintsNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificatePosturalComplaintsYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePosturalComplaintsYesElement);
         break;
       }
       default: {
@@ -252,12 +252,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateOtherConditionNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateOtherConditionNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateOtherConditionYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateOtherConditionYesElement);
         break;
       }
       default: {
@@ -270,12 +270,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateMedicinesNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateMedicinesNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateMedicinesYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateMedicinesYesElement);
         break;
       }
       default: {
@@ -288,12 +288,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateDisabilityBenefitNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateDisabilityBenefitNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexHealthCertificateDisabilityBenefitYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateDisabilityBenefitYesElement);
         break;
       }
       default: {
@@ -306,17 +306,17 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexKnowledgeLifeInsuranceNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpKnowledgeLifeInsuranceNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexKnowledgeLifeInsuranceYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpKnowledgeLifeInsuranceYesElement);
         break;
       }
       case genericEnum.DONT_KNOW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexKnowledgeLifeInsuranceDontKnowElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpKnowledgeLifeInsuranceDontKnowElement);
         break;
       }
       default: {
@@ -329,22 +329,22 @@ export class ZzpFlexMethods {
     switch (input) {
       case incapacitation.FIRST_ZW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeIncapacitatedFirstZwElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeIncapacitatedFirstZwElement);
         break;
       }
       case incapacitation.FIRST_WW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeIncapacitatedFirstWwElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeIncapacitatedFirstWwElement);
         break;
       }
       case incapacitation.CAN_GET_ASSITANCE: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeIncapacitatedCanGetAssistanceElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeIncapacitatedCanGetAssistanceElement);
         break;
       }
       case incapacitation.NO_INCOME: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeIncapacitatedNoIncomeElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeIncapacitatedNoIncomeElement);
         break;
       }
       default: {
@@ -357,12 +357,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeAmountIncapacitatedNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeAmountIncapacitatedNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeAmountIncapacitatedYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeAmountIncapacitatedYesElement);
         break;
       }
       default: {
@@ -375,22 +375,22 @@ export class ZzpFlexMethods {
     switch (input) {
       case incapacitation.NO_INCOME: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeMonthlyIncapacitatedNoIncomeElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeMonthlyIncapacitatedNoIncomeElement);
         break;
       }
       case incapacitation._40_PERCENT_INCOME: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeMonthlyIncapacitated40PercentIncomeElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeMonthlyIncapacitated40PercentIncomeElement);
         break;
       }
       case incapacitation.FULL_INCOME: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeMonthlyIncapacitatedFullIncomeElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeMonthlyIncapacitatedFullIncomeElement);
         break;
       }
       case genericEnum.DONT_KNOW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeMonthlyIncapacitatedDontKnowElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeMonthlyIncapacitatedDontKnowElement);
         break;
       }
       default: {
@@ -403,12 +403,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfAccidentInsuranceNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeConsciousOfAccidentInsuranceNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfAccidentInsuranceYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeConsciousOfAccidentInsuranceYesElement);
         break;
       }
       default: {
@@ -421,12 +421,12 @@ export class ZzpFlexMethods {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfMaxTwoYearsNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeConsciousOfMaxTwoYearsNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexIncomeConsciousOfMaxTwoYearsYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpIncomeConsciousOfMaxTwoYearsYesElement);
         break;
       }
       default: {
@@ -436,15 +436,15 @@ export class ZzpFlexMethods {
   }
 
   async selectInsuranceHistory(input: string, explanation: string) {
-    await genericMethods.waitForElementIsVisible(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryNoElement, browser.getPageTimeout);
+    await genericMethods.waitForElementIsVisible(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryNoElement);
         break;
       }
       case genericEnum.YES: {
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryYesElement);
-        await genericMethods.typeText(zzpFlexElements.zzpFlexAlmostInsuredInsuranceHistoryYesExplanationElement, explanation);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryYesElement);
+        await genericMethods.typeText(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryYesExplanationElement, explanation);
         break;
       }
       default: {
@@ -454,14 +454,14 @@ export class ZzpFlexMethods {
   }
 
   async selectCriminalHistory(input: string) {
-    await genericMethods.waitForElementIsVisible(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryNoElement, browser.getPageTimeout);
+    await genericMethods.waitForElementIsVisible(aovZzpElements.aovZzpAlmostInsuredCriminalHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredCriminalHistoryNoElement);
         break;
       }
       case genericEnum.YES: {
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredCriminalHistoryYesElement);
         break;
       }
       default: {
@@ -471,14 +471,14 @@ export class ZzpFlexMethods {
   }
 
   async selectDamageHistory(input: string) {
-    await genericMethods.waitForElementIsVisible(zzpFlexElements.zzpFlexAlmostInsuredCriminalHistoryNoElement, browser.getPageTimeout);
+    await genericMethods.waitForElementIsVisible(aovZzpElements.aovZzpAlmostInsuredCriminalHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredDamageHistoryNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredDamageHistoryNoElement);
         break;
       }
       case genericEnum.YES: {
-        await genericMethods.clickOnElement(zzpFlexElements.zzpFlexAlmostInsuredDamageHistoryYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredDamageHistoryYesElement);
         break;
       }
       default: {
@@ -490,11 +490,11 @@ export class ZzpFlexMethods {
   async verifyThankYouPageText(input: string) {
     switch (personaData.getPersonaGender(input)) {
       case gender.MALE: {
-        await genericMethods.verifyTextInElement(zzpFlexElements.thankYouElement, 'Beste meneer ' + personaData.getPersonaLastName(input) + ', bedankt voor het afsluiten van deze verzekering. U ontvangt binnen enkele minuten een bevestigingsmail op het volgende e-mail adres: ' + personaData.getPersonaEmailAddress(input) + '.');
+        await genericMethods.verifyTextInElement(aovZzpElements.thankYouElement, 'Beste meneer ' + personaData.getPersonaLastName(input) + ', bedankt voor het afsluiten van deze verzekering. U ontvangt binnen enkele minuten een bevestigingsmail op het volgende e-mail adres: ' + personaData.getPersonaEmailAddress(input) + '.');
         break;
       }
       case gender.FEMALE: {
-        await genericMethods.verifyTextInElement(zzpFlexElements.thankYouElement, 'Beste mevrouw ' + personaData.getPersonaLastName(input) + ', bedankt voor het afsluiten van deze verzekering. U ontvangt binnen enkele minuten een bevestigingsmail op het volgende e-mail adres:' + personaData.getPersonaEmailAddress(input) + '.');
+        await genericMethods.verifyTextInElement(aovZzpElements.thankYouElement, 'Beste mevrouw ' + personaData.getPersonaLastName(input) + ', bedankt voor het afsluiten van deze verzekering. U ontvangt binnen enkele minuten een bevestigingsmail op het volgende e-mail adres:' + personaData.getPersonaEmailAddress(input) + '.');
         break;
       }
       default: {

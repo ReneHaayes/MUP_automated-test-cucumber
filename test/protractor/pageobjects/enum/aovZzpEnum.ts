@@ -1,4 +1,4 @@
-export enum zzpFlexUwpremie {
+export enum AovZzpUwpremie {
   _25 = '25',
   _50 = '50',
   _75 = '75',
