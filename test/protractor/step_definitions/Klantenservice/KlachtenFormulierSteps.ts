@@ -1,9 +1,9 @@
-import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {KlachtenFormulierElements} from "../../../pageobjects/mijnUniveParticulier/Klantenservice/KlachtenFormulierElements";
+import {Then, When} from 'cucumber';
+import {GenericMethods} from '../../pageobjects/generic/genericMethods';
+import { KlachtenFormulierElements } from '../../pageobjects/Klantenservice/KlachtenFormulierElements';
 
-let genericMethods: GenericMethods = new GenericMethods();
-let klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
+const genericMethods: GenericMethods = new GenericMethods();
+const klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
 
 
 When(/^Customer fills in form for zorgverzekering klacht$/, async () => {
