@@ -26,8 +26,8 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.AUTOVERZEKERING_PAT: {
         return this.getEnv(browser.params.env.environment) + genericElements.autoVerzUrlPat;
       }
-      case verzekeringPaginasEnum.ZZPFLEX_PAT: {
-        return this.getEnv(browser.params.env.environment) + genericElements.zzpFlexPat;
+      case verzekeringPaginasEnum.AOVZZP_PAT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.aovZzpPat;
       }
       case verzekeringPaginasEnum.AANSPRAKELIJKHEIDSVERZEKERING_PAT: {
         return this.getEnv(browser.params.env.environment) + genericElements.aansprakelijkheidsVerzekeringPat;

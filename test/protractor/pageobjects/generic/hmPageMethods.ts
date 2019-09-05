@@ -7,7 +7,7 @@ import {ReisVerzekeringElements} from "../particuliereVerzekeringen/vrijeTijdsVe
 import {ProductPageElements} from "./productPageElements";
 import {GetUrlUnive} from "./getUrlUnive";
 import {verzekeringPaginasEnum} from "../enum/genericEnum";
-import {ZzpFlexElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpFlexElements";
+import {AovZzpElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpElements";
 import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
 import {EigenVervoerVerzekeringElements} from "../zakelijkeVerzekeringen/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
 import {GenericElements} from "./genericElements";
@@ -19,7 +19,7 @@ let aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerElements = new
 let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
 let productPageElements: ProductPageElements = new ProductPageElements();
 let getUrlUnive: GetUrlUnive = new GetUrlUnive();
-let zzpFlexElements: ZzpFlexElements = new ZzpFlexElements();
+let aovZzpElements: AovZzpElements = new AovZzpElements();
 let zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVerzekeringElements = new ZakelijkRechtsBijstandVerzekeringElements;
 let eigenVervoerVerzekeringElements: EigenVervoerVerzekeringElements = new EigenVervoerVerzekeringElements;
 
@@ -309,9 +309,9 @@ export class HmPageMethods {
   async verifyElementIsShownOnPremieBerekenenBusinessPage(input: string) {
     switch (input) {
       case homePageEnum.ARBEIDSONGESCHIKTHEID: {
-        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZZPFLEX_PAT);
+        const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.AOVZZP_PAT);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(zzpFlexElements.sliderElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(aovZzpElements.sliderElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.RECHTSBIJSTAND: {

@@ -2,7 +2,7 @@ export class GenericElements {
   alleVerzekeringen: string = 'verzekeringen';
   alleVerzekeringenZakelijk: string = 'zakelijk/verzekeringen';
   autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
-  zzpFlexPat: string = 'zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten#/uw-premie';
+  aovZzpPat: string = 'zakelijk/arbeidsongeschiktheidsverzekering-zzp/premieberekenen-en-afsluiten#/uw-premie';
   aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
   autoVerzProductPagePat: string = 'autoverzekering';
   woonVerzPat: string = 'woonverzekering/premieberekenen-en-afsluiten';

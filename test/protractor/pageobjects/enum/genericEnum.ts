@@ -74,7 +74,7 @@ export enum verzekeringPaginasEnum {
   HOME_PI = 'pi',
   HOME_TST = 'tst',
   AUTOVERZEKERING_PAT = 'Autoverzekering',
-  ZZPFLEX_PAT = 'zzpFlex',
+  AOVZZP_PAT = 'aovZzp',
   ANNULERINGSVERZEKERING = 'Annuleringsverzekering',
   AANSPRAKELIJKHEIDSVERZEKERING_PAT = 'aansprakelijkheidsverzekering',
   AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPage',
