@@ -1,11 +1,11 @@
 import {GenericElements} from './genericElements';
-import {polisDetailsUrlEnum, verzekeringPaginasEnum} from "../enum/genericEnum";
-import {browser} from "protractor";
-import {homePageEnum} from "../enum/woonVerzekeringEnum";
-import {ApiElements} from "../api/apiElements";
+import {polisDetailsUrlEnum, verzekeringPaginasEnum} from '../enum/genericEnum';
+import {browser} from 'protractor';
+import {homePageEnum} from '../enum/woonVerzekeringEnum';
+import {ApiElements} from '../api/apiElements';
 
-let genericElements: GenericElements = new GenericElements();
-let apiElements: ApiElements = new ApiElements();
+const genericElements: GenericElements = new GenericElements();
+const apiElements: ApiElements = new ApiElements();
 
 export class GetUrlUnive {
 
@@ -158,6 +158,12 @@ export class GetUrlUnive {
       case homePageEnum.KLACHTENFORMULIER: {
         return this.getEnv(browser.params.env.environment) + genericElements.klachtenFormulier;
       }
+      case homePageEnum.VRAAGSTELLEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.vraagStellen;
+      }
+      case homePageEnum.SCHADE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.schade;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
@@ -178,6 +184,9 @@ export class GetUrlUnive {
       }
       case homePageEnum.KLACHT_INDIENEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.klachtIndienen;
+      }
+      case homePageEnum.SCHADE_BESLISBOOM: {
+        return this.getEnv(browser.params.env.environment) + genericElements.schadeBeslisboom;
       }
       case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
         return genericElements.mijnUniveZakelijk;
@@ -257,19 +266,19 @@ export class GetUrlUnive {
   getEnv(input: string): string {
     switch (input) {
       case verzekeringPaginasEnum.HOME_PAT: {
-        return 'https://pat.unive.nl/'
+        return 'https://pat.unive.nl/';
       }
       case verzekeringPaginasEnum.HOME_TSTPROJ: {
-        return 'https://tstproj.unive.nl/'
+        return 'https://tstproj.unive.nl/';
       }
       case verzekeringPaginasEnum.HOME_PI: {
-        return 'https://pi.unive.nl/'
+        return 'https://pi.unive.nl/';
       }
       case verzekeringPaginasEnum.HOME_TST: {
-        return 'https://tst.unive.nl/'
+        return 'https://tst.unive.nl/';
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
-        return 'https://login.pat.unive.nl/'
+        return 'https://login.pat.unive.nl/';
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

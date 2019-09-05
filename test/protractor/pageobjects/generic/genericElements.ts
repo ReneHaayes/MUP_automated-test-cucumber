@@ -59,6 +59,7 @@ export class GenericElements {
   afspraakMakenZakelijk: string = 'zakelijk/klantenservice/afspraak';
   afspraakMaken: string = 'klantenservice/afspraak';
   klachtIndienen: string = 'zakelijk/klachtindienen';
+  schadeBeslisboom: string = 'schade';
   mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/';
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
   ondernemersScan: string = 'zakelijk/ondernemersscan';
@@ -76,6 +77,9 @@ export class GenericElements {
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
   mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
   klachtenFormulier: string = 'klantenservice/klacht';
+  vraagStellen: string = 'klantenservice/vraagstellen';
+  schade: string = 'schade';
+
 
   //MIJN UNIVE URL
   mijnUnivePage: string = 'mijnunive';
