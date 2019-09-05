@@ -24,9 +24,26 @@ export class MijnVerzekeringenElements {
   changeInsuranceThankYouTextElement: string = '[class="eforms-container"] > p';
   changeInsuranceThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
 
+  //LOADER
+  blockingLoaderSpinningElement: string = '[class*="blockUI"]';
 
+  //VOERTUIG WIJZIGEN
+  voertuigWijzigenClickElement: string = '[href*="changeVehicle"]';
+  verzekeringWijzigenClickElement: string = '[href*="changeCoverageDetails"]';
+  perEersteMogelijkheidClickElement: string = '#_AddMyPolicyChangeStepDetails_dateStart_minDate';
+  nextButtonClickElement: string = '[id="_AddMyPolicyChangeStepDetails_null"]';
 
+  //VOERTUIG WIJZIGEN UW AUTO
+  licensePlateInputElement: string = '#_Form_IF2506_3611';
 
+  //AANVULLENDE GEGEVENS
+  meldCodeInputElement: string = '#_Form_IF2526_3682';
+  correctEmailAdresTrueClickElement: string = '#_Form_IF28234_35678_true';
+  finishAndSaveButtonClickElement: string = '#_Form_finishSaveAndSend';
+
+  //SUCCESS
+  succesMessageTextElement: string = '[class="success message"] > p > span';
+  succesMessageText: string = 'Wij hebben de wijziging doorgevoerd op de polis.';
 
 
 }

@@ -154,6 +154,15 @@ export class GenericMethods {
       throw new Error('Element with selector: ' + selector + ', is still visible');
     }
   }
+  async waitForElementNotVisibleWithSleep(selector: string, waitFor: number, sleepForMilliSeconds: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css(selector));
+      await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
+      await browser.sleep(sleepForMilliSeconds);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is still visible');
+    }
+  }
 
   async waitForElementNotVisibleTyPage(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
