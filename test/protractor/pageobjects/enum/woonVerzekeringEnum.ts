@@ -79,6 +79,8 @@ export enum homePageEnum {
   ZIPCODE_PLACE = 'postcode en plaats',
   KLANTENSERVICE = 'klantenservice',
   KLACHTENFORMULIER = 'klachtenformulier',
+  VRAAGSTELLEN = 'vraagStellen',
+  SCHADE = 'schade',
   KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
   ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
   RECHTSBIJSTAND = 'rechtsbijstand',
@@ -89,6 +91,7 @@ export enum homePageEnum {
   AFSPRAAK_MAKEN_ZAKELIJK = 'afspraak maken zakelijk',
   AFSPRAAK_MAKEN = 'afspraak maken',
   KLACHT_INDIENEN = 'klacht indienen',
+  SCHADE_BESLISBOOM = 'schade beslisboom',
   INLOGGEN = 'inloggen',
   ONDERNEMERSCAN = 'Ondernemersscan'
 }

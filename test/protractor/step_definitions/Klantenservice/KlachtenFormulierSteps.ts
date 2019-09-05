@@ -34,7 +34,7 @@ When(/^Customer fills in form for schadeverzekering klacht$/, async () => {
   await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
 });
 
-Then(/^Verify complaint is accepted with a confirmation text for klachtenformulier$/, async () => {
+Then(/^Verify question is accepted with a confirmation text for klachtenformulier$/, async () => {
   await genericMethods.verifyTextInElement(klachtenFormulierElements.klachtFormConfirmationTextElement, klachtenFormulierElements.klachtFormConfirmationText);
 });
 

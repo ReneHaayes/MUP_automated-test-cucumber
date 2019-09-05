@@ -1,4 +1,4 @@
-@KlantenserviceAfspraakMaken
+@KlantenserviceAfspraakMaken @Hippo @HippoForms
 
 Feature: Check for Afspraak maken page is correctly handled
 
