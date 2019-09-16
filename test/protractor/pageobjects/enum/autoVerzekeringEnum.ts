@@ -75,3 +75,11 @@ export enum maxSpeedEnum {
   OVER_60 = 'over 60'
 
 }
+
+export enum whoDrivesCarMost {
+  MYSELF = 'mySelf',
+  MYPARTNER = 'myPartner',
+  MYCHILD = 'myChild',
+  SOMEONEELSE = 'someOneElse'
+
+}

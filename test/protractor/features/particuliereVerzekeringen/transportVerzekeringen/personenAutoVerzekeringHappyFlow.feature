@@ -6,6 +6,7 @@ Feature: Happy flow for 'personen auto verzekering'
     Given I am on the Autoverzekering page of the Unive website
     When I enter step one page of autoverzekeringen for <persona> with
       | licensePlate    | <licensePlate>    |
+      | whoDrivesCarMost| <whoDrivesCarMost>|
       | alreadyMember   | <alreadyMember>   |
       | yearlyMileage   | <yearlyMileage>   |
       | damageFreeYears | <damageFreeYears> |
@@ -30,5 +31,5 @@ Feature: Happy flow for 'personen auto verzekering'
     Then The thank you page for <persona> is shown
 
     Examples:
-      | licensePlate | persona | yearlyMileage | damageFreeYears | alreadyMember | basisDekking | aanvullendeOpties      | ownRisk    | carAccessoires |
-      | 06-HN-DL     | ronaldo | 20000tot25000 | 2               | no            | waPlus       | Inzittendenverzekering | ownRisk500 | autoAccTm5000  |
+      | licensePlate | persona | yearlyMileage | damageFreeYears | alreadyMember | basisDekking | aanvullendeOpties      | ownRisk    | carAccessoires | whoDrivesCarMost |
+      | 06-HN-DL     | ronaldo | 20000tot25000 | 2               | no            | waPlus       | Inzittendenverzekering | ownRisk500 | autoAccTm5000  | mySelf |
