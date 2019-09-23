@@ -1,6 +1,6 @@
-@kostbaarhedenVerzekering
+@kostbaarhedenverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'kostbaarheden verzekering'
+Feature: Happy flow for 'kostbaarhedenverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Kostbaarhedenverzekering page of the Unive website

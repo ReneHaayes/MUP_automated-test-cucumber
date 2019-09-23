@@ -1,4 +1,4 @@
-@doorlopendeReisVerzekeringWidget
+@doorlopendeReisverzekeringWidget @hippo @particulierHippo @widget
 
 Feature: Check the doorlopende resiverzekering widget on the productpage.
 

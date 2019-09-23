@@ -1,4 +1,4 @@
-@KlantenserviceSituatieGewijzigd @Hippo @HippoForms
+@KlantenserviceSituatieGewijzigd @Hippo @HippoForms @particulierHippo
 
 Feature: Testing klantenservice page for situatie gewijzigd
 

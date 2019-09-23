@@ -1,4 +1,4 @@
-@KlantenserviceVraagStellen @Hippo @HippoForms @Beslisboom
+@KlantenserviceVraagStellen @Hippo @HippoForms @Beslisboom @particulierHippo
 
 Feature: Making sure the 'vraag stellen beslisboom' is functioning by filling in all forms
 

@@ -1,6 +1,6 @@
-@zorgeloosOnlineVerzekering
+@zorgeloosOnlineverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'Zorgeloos Onlineverzekering'
+Feature: Happy flow for 'zorgeloos onlineverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the zorgeloosOnlineVerzekering page of the Unive website

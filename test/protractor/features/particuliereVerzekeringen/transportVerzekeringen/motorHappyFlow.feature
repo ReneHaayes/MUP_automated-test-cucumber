@@ -1,4 +1,4 @@
-@motor
+@motor @motorverzekering @quadverzekering @trikeverzekering @qis @qisParticulier @qRelease
 
 Feature: Happy flow for motorverzekering, quadverzekering and trikeverzekering.
 

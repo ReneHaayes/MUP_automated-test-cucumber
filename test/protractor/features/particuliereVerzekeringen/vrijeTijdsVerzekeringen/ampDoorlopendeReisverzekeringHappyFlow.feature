@@ -1,5 +1,4 @@
-@ampDoorlopendeReisverzekering
-@amp
+@ampDoorlopendeReisverzekering @amp
 
 Feature: Check if the doorlopende reisverzekering AMP page shows correctly
 

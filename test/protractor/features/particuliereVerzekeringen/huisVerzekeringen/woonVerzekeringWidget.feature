@@ -1,4 +1,4 @@
-@woonVerzekeringWidget
+@woonverzekeringWidget @hippo @particulierHippo @widget
 
 Feature: Check the woonverzekering widget on the homepage.
 

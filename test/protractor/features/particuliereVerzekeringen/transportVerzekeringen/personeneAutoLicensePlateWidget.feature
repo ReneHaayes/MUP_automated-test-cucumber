@@ -1,4 +1,4 @@
-@licensePlateWidget
+@licensePlateWidget  @hippo @particulierHippo @widget
 
 Feature: Check the license plate widget on the homepage.
 

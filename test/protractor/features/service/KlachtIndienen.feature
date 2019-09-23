@@ -1,4 +1,4 @@
-@KlantenserviceKlachtIndienen @Hippo @HippoForms @Beslisboom
+@KlantenserviceKlachtIndienen @Hippo @HippoForms @Beslisboom @particulierHippo
 
 Feature: Testing klachtenformulier filled in correctly
 

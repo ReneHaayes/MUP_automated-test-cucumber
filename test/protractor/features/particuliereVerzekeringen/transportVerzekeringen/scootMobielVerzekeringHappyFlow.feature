@@ -1,6 +1,6 @@
-@scootMobielVerzekering
+@scootmobielverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'scootMobielVerzekering'
+Feature: Happy flow for 'scootmobielverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Scootmobielverzekering page of the Unive website

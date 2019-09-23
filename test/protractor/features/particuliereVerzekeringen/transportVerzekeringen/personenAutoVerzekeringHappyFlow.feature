@@ -1,6 +1,6 @@
-@personenAutoVerzekering
+@autoverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'personen auto verzekering'
+Feature: Happy flow for 'personenautoverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Autoverzekering page of the Unive website

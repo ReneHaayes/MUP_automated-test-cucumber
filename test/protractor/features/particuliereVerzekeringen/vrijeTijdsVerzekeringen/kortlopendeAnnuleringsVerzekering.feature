@@ -1,6 +1,6 @@
-@kortlopendeAnnuleringsVerzekering
+@kortlopendeAnnuleringsverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'kortlopende annulerings verzekering'
+Feature: Happy flow for 'kortlopende annuleringsverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the kortlopende annuleringsverzekering page of the Unive website

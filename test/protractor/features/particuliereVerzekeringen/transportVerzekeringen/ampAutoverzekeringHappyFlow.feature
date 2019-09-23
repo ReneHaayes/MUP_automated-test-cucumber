@@ -1,7 +1,6 @@
-@ampAutoverzekering
-@amp
+@ampAutoverzekering @amp
 
-Feature: Check if the auto AMP page shows correctly
+Feature: Check if the autoverzekering AMP page shows correctly
 
   Scenario: Check the elements on the page and click premie berekenen
     Given I am on the amp autoverzekering page of the Unive website

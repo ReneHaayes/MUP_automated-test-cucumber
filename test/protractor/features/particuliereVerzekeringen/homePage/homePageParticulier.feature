@@ -1,4 +1,4 @@
-@homePageParticulier
+@homePageParticulier @hippo @particulierHippo
 
 Feature: Check if the home and alle verzekeringen page shows the buttons correctly.
 
