@@ -1,4 +1,4 @@
-@SchadeBeslisboom @Hippo @HippoForms @Beslisboom
+@SchadeBeslisboom @Hippo @HippoForms @Beslisboom @particulierHippo
 
 Feature: Check if schade beslisboom is functioning correctly
 

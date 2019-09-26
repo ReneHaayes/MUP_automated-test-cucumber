@@ -1,4 +1,4 @@
-@bootVerzekering
+@bootverzekering @qis @qisParticulier @qRelease
 
 Feature: Happy flow for 'bootverzekering'
 

@@ -1,7 +1,6 @@
-@ampBromfietsverzekering
-@amp
+@ampBromfietsverzekering @amp
 
-Feature: Check if the bromfiets AMP page shows correctly
+Feature: Check if the bromfietsverzekering AMP page shows correctly
 
   Scenario: Check the elements on the page and click premie berekenen
     Given I am on the amp bromfietsverzekering page of the Unive website

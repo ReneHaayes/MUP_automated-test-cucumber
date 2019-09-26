@@ -1,6 +1,6 @@
-@doorlopendeVerzekeringen
+@doorlopendeReisverzekering @doorlopendeAnnuleringsverzekering @qis @qisParticulier @qRelease
 
-  Feature: Happy flow for 'doorlopendeReisVerzekering and doorlopendeAnnuleringsVerzekering'
+  Feature: Happy flow for 'doorlopendeReisverzekering and doorlopendeAnnuleringsverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the <page> page of the Unive website

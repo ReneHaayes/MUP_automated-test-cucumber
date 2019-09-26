@@ -1,4 +1,4 @@
-@productPageAlleVerzekeringen
+@productPageAlleVerzekeringen @hippo @particulierHippo
 
 Feature: Check if the product and alle verzekeringen pages are correctly shown.
 

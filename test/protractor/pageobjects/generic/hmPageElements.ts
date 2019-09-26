@@ -24,6 +24,7 @@ export class HmPageElements {
   //LICENSE PLATE
   licensePlateWidgetInputElement: string = '#kenteken';
   licensePlateWidgetButtonElement: string = '[data-funnel-personenauto="/autoverzekering/premieberekenen-en-afsluiten"] [class*="simpleWidget_submit"]';
+  licensePlateWidgetBusinessButtonElement = '[class*="simpleWidget_submit"]';
   licensePlateWidgetButtonProductPageElement: string = '[class*="simpleWidget_submit"]';
   licensePlateWidgetDontKnowElement: string = '[class="simpleWidget_link"]';
   licensePlateWidgetDontKnowProductPageElement: string = '[class="simpleWidget_link"]';

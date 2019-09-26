@@ -1,4 +1,4 @@
-@camperVerzekering
+@camperverzekering @qis @qisParticulier @qRelease
 
 Feature: Happy flow for 'Camperverzekering'
 

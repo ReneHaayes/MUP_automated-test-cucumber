@@ -1,6 +1,6 @@
-@rechtsBijstandVerzekering
+@rechtsbijstandverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'rechtsBijstandVerzekering'
+Feature: Happy flow for 'rechtsbijstandverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Rechtsbijstandverzekering page of the Unive website

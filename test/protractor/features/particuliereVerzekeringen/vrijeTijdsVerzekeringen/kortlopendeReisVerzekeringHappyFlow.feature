@@ -1,6 +1,6 @@
-@kortlopendeReisVerzekering
+@kortlopendeReisverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'kortlopendeReisVerzekering'
+Feature: Happy flow for 'kortlopende reisVerzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Kortlopende reisverzekering page of the Unive website
