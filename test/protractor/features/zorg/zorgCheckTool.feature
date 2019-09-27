@@ -37,3 +37,9 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |A        |A        |B        |A        |C        |D        |B        |B        |Zorg Select|Geen            |Tand Best |Zorg Select|Geen            |Tand Beter|
     |A        |A        |B        |A        |B        |C        |B        |A        |Zorg Vrij  |Geen            |Tand Beter|Zorg Vrij  |Geen            |Tand Goed |
   
+
+    Scenario Outline: Check i-text at question 2
+    Given I am on the zorgCheckTool page of the Unive website
+    When I answer 1 question with:
+    |question1|A|
+    Then Verify that the correct i-texts are shown
