@@ -61,7 +61,8 @@ export enum genericEnum {
   NEW = 'new',
   SECONDHAND = 'secondhand',
   REPLACEMENT = 'replacement',
-  EXTRA = 'EXTRA'
+  EXTRA = 'EXTRA',
+  GEEN = 'Geen'
 }
 
 export enum verzekeringPaginasEnum {
@@ -157,7 +158,9 @@ export enum verzekeringPaginasEnum {
   MAILHOG = 'mailhog',
   OAUTH = 'oauth',
   VERZEKERINGEN = 'verzekeringen',
-  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen'
+  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
+  ZORGCHECKTOOL = 'zorgCheckTool',
+  GEZONDHEID = 'gezondheid'
 
 }
 
@@ -191,6 +194,13 @@ export enum numbersEnum {
   _8 = '8',
   _9 = '9',
   _10 = '10'
+}
+
+export enum multipleChoiceEnum {
+  A = 'A',
+  B = 'B',
+  C = 'C',
+  D = 'D',
 }
 
 export enum activityEnum {

@@ -7,10 +7,10 @@ let genericMethods: GenericMethods = new GenericMethods();
 let genericElements: GenericElements = new GenericElements();
 let alleVerzekeringenZakelijkMethods: AlleVerzekeringenZakelijkMethods = new AlleVerzekeringenZakelijkMethods();
 
+
 When(/^I click on (.*) at the alle verzekeringen zakelijk page$/, async (buttonPage: string) => {
   await alleVerzekeringenZakelijkMethods.clickAlleVerzekeringInput(buttonPage);
 });
-
 
 Then(/^Verify elements on (.*) product page zakelijk is shown$/, async (buttonPage: string) => {
   try {

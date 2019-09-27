@@ -257,6 +257,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.BEKIJK_DE_VEEL_GESTELDE_VRAGEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.veelgesteldevragenURL;
       }
+      case verzekeringPaginasEnum.ZORGCHECKTOOL: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktool;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -279,6 +282,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
         return 'https://login.pat.unive.nl/';
+      }
+      case verzekeringPaginasEnum.GEZONDHEID: {
+        return 'https://gezondheid.unive.nl/';
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

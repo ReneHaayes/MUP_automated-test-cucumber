@@ -79,6 +79,7 @@ export class GenericElements {
   klachtenFormulier: string = 'klantenservice/klacht';
   vraagStellen: string = 'klantenservice/vraagstellen';
   schade: string = 'schade';
+  zorgchecktool: string = 'zorgverzekering/zorgcheck';
 
 
   //MIJN UNIVE URL
