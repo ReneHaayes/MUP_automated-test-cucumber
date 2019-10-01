@@ -97,7 +97,15 @@ export class ZorgCheckToolMethods {
         //answer question 1 and click next button and open i-element
         await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionOne));
         await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
-        await genericMethods.clickOnElement(zorgCheckToolElements.questionInformationClickElement);
+    }
+
+    async fillInTwoQuestionsAndClickI(questionOne: string, questionTwo: string) {
+        await genericMethods.clickOnElement(zorgCheckToolElements.startZorgCheckToolButtonClickElement);
+        //answer question 1 and click next button and open i-element
+        await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionOne));
+        await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+        await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionTwo));
+        await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
     }
 
     async checkITexts() {

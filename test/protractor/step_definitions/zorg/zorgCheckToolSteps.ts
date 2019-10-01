@@ -1,7 +1,11 @@
-import {When, Then} from 'cucumber';
+import {When, Then, Given} from 'cucumber';
 import { ZorgCheckToolMethods } from '../../pageobjects/zorg/zorgCheckToolMethods';
+import { GenericMethods } from '../../pageobjects/generic/genericMethods';
+import { ZorgCheckToolElements } from '../../pageobjects/zorg/zorgCheckToolElements';
 
 let zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
+let genericMethods: GenericMethods = new GenericMethods();
+let zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
 
 When(/^I answer 8 questions with:$/, async (data) => {
     const dataTable = data.rowsHash();
@@ -17,10 +21,18 @@ When(/^I answer 8 questions with:$/, async (data) => {
         );    
 });
 
-When(/^I answer 1 question with:$/, async (data) => {
+Given(/^I answer 1 question with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgCheckToolMethods.fillInOneQuestionAndClickI(
         dataTable.question1
+    );
+});
+
+Given(/^I answer 2 questions with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgCheckToolMethods.fillInTwoQuestionsAndClickI(
+        dataTable.question1,
+        dataTable.question2
     );
 });
 
@@ -38,4 +50,8 @@ Then(/^Verify that the advices are correctly shown with:$/, async (data) => {
 
 Then(/^Verify that the correct i-texts are shown$/, async () => {
     await zorgCheckToolMethods.checkITexts();
+});
+
+When(/^I click on the i-button$/, async() => {
+    await genericMethods.clickOnElement(zorgCheckToolElements.questionInformationClickElement);
 });

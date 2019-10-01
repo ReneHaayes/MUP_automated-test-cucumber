@@ -31,8 +31,10 @@ secondAdviceTandZorgCheckToolTextElement: string = 'health-check-result-item:nth
 questionInformationClickElement: string = '[class="ui-info ui-info--after ui-info--desktoplarge"]';
 questionInformationHeaderElement: string = '[class = "ui-modal__header"]';
 questionInformationElement: string = '[class = "ui-modal__text ng-star-inserted"]';
-question2InformationText: string = 'Bekende alternatieve geneeswijzen zijn: Acupunctuur, chiropractie, osteopathie of homeopathie';
+question2InformationText: string = 'Bekende alternatieve geneeswijzen zijn: Acupunctuur, chiropractie, osteopathie of homeopathie.';
 question2InformationHeaderText: string = 'Maakt u wel eens gebruik van alternatieve zorg?';
+question3InformationText: string = 'Bekende anticonceptiemiddelen zijn een spiraaltje, pessarium of de pil.';
+question3InformationHeaderText: string = 'Gebruikt u anticonceptie en bent u ouder dan 21 jaar?';
 CloseInformationOverlayClickElement: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
 
 //I-TEXTS BELOW SELECTED ANSWERS
