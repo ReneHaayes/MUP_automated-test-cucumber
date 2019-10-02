@@ -36,14 +36,13 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
         |A        |A        |B        |A        |B        |A        |B        |A        |Zorg Vrij  |Geen            |Geen      |Zorg Vrij  |Aanvullend Goed |Geen      |
         |A        |A        |B        |A        |C        |D        |B        |B        |Zorg Select|Geen            |Tand Best |Zorg Select|Geen            |Tand Beter|
         |A        |A        |B        |A        |B        |C        |B        |A        |Zorg Vrij  |Geen            |Tand Beter|Zorg Vrij  |Geen            |Tand Goed |
-  
 
   Scenario: Check i-text at question 2
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 1 question with:
     |question1|A|
     When I click on the i-button
-    Then Verify that the correct i-texts are shown
+    Then Verify that the correct i-texts for question two are shown
   
   Scenario: Check i-text at question 3
     Given I am on the zorgCheckTool page of the Unive website
@@ -51,4 +50,106 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question1|A|
     |question2|A|
     When I click on the i-button
-    Then Verify that the correct i-texts are shown
+    Then Verify that the correct i-texts for question three are shown
+  
+  Scenario: Check i-text at question 8
+    Given I am on the zorgCheckTool page of the Unive website
+    And I answer 7 questions with:
+    |question1|A|
+    |question2|A|
+    |question3|A|
+    |question4|A|
+    |question5|A|
+    |question6|A|
+    |question7|A|
+    When I click on the i-button
+    Then Verify that the correct i-texts for question eight are shown
+
+  Scenario: Check i-text below answer D at question 5
+    Given I am on the zorgCheckTool page of the Unive website
+    And I answer 4 questions with:
+    |question1|A|
+    |question2|A|
+    |question3|A|
+    |question4|A|
+    When I select answer for question 5 with:
+    |question5|D|
+    Then Verify that the correct i-text is shown below selected answer for question five
+  
+  Scenario: Check i-text below answer D at question 6
+    Given I am on the zorgCheckTool page of the Unive website
+    And I answer 5 questions with:
+    |question1|A|
+    |question2|A|
+    |question3|A|
+    |question4|A|
+    |question5|A|
+    When I select answer for question 6 with:
+    |question6|D|
+    Then Verify that the correct i-text is shown below selected answer for question six
+
+  Scenario Outline: Check foutief emailadres melding bij email dit advies
+    Given I am on the zorgCheckTool page of the Unive website
+    And I answer 8 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    And I click on the email dit advies button
+    When I enter an emailaddress with:
+    |emailaddress|geenapenstaartje.nl|
+    Then the correct errormessage is shown
+    And send email button is not available
+      
+      Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|
+        |B        |A        |B        |D        |C        |A        |A        |A        |
+
+  Scenario Outline: Check juist emailadres en verzending advies
+    Given I am on the zorgCheckTool page of the Unive website
+    And I answer 8 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    And I click on the email dit advies button
+    When I enter an emailaddress with:
+    |emailaddress|info@apenstaartje.nl|
+    Then the send email button is available
+    And the success message is shown
+
+      Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|
+        |B        |A        |B        |D        |C        |A        |A        |A        |
+
+  Scenario Outline: Check de prefill in de zorgwizard na doorklikken op advies
+    Given I am on the zorgCheckTool page of the Unive website
+    And I answer 8 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    When I click on the Kies deze verzekering button
+    Then I get redirected to zorgwizard on a new tab
+    And The adviceresult is prefilled in the wizard with:
+    |advice1BV  |<advice1BV>  |
+    |advice1AVTV|<advice1AVTV>|
+    |advice1TV  |<advice1TV>  |
+
+      Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|advice1BV  |advice1AVTV     |advice1TV |
+        |B        |A        |B        |D        |C        |A        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Beter|
+        |C        |D        |A        |C        |D        |C        |B        |B        |Zorg Select|Aanvullend Best |Tand Best |
+        |A        |A        |B        |A        |B        |A        |B        |A        |Zorg Vrij  |Geen            |Geen      |

@@ -26,6 +26,8 @@ firstAdviceTandZorgCheckToolTextElement: string = 'health-check-result-item:nth-
 secondAdviceBasisVerzekeringZorgCheckToolTextElement: string = 'health-check-result-item:nth-child(2) div:nth-child(1) > div.health-check-result-top__label > div';
 secondAdviceAVTVZorgCheckToolTextElement: string = 'health-check-result-item:nth-child(2) div:nth-child(2) > div.health-check-result-top__label > div';
 secondAdviceTandZorgCheckToolTextElement: string = 'health-check-result-item:nth-child(2) div:nth-child(3) > div.health-check-result-top__label > div';
+firstAdviceKiesDezeVerzekeringClickElement: string = 'health-check-result-item:nth-child(1) div.health-check-result-top__row.health-check-result-top__row--button > ui-button > button';
+secondAdviceKiesDezeVerzekeringClickElement: string = 'health-check-result-item:nth-child(2) div.health-check-result-top__row.health-check-result-top__row--button > ui-button > button';
 
 //I-BUTTONS
 questionInformationClickElement: string = '[class="ui-info ui-info--after ui-info--desktoplarge"]';
@@ -35,10 +37,40 @@ question2InformationText: string = 'Bekende alternatieve geneeswijzen zijn: Acup
 question2InformationHeaderText: string = 'Maakt u wel eens gebruik van alternatieve zorg?';
 question3InformationText: string = 'Bekende anticonceptiemiddelen zijn een spiraaltje, pessarium of de pil.';
 question3InformationHeaderText: string = 'Gebruikt u anticonceptie en bent u ouder dan 21 jaar?';
-CloseInformationOverlayClickElement: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
+question8InformationText: string = 'Het scheelt ongeveer € 20 premie per maand als u alleen gebruik maakt van gecontracteerde zorgverleners. Bij niet-gecontracteerde zorgverleners krijgt u dan 70% van de behandelingskosten vergoed.\n' + 
+'Wilt u een vergoeding bij alle zorgverleners? Dan kunt u beter ja invullen bij deze vraag.\n' + 'Zorgverleners zijn bijvoorbeeld ziekenhuizen, oogartsen of verloskundigen.';
+question8InformationHeaderText: string = 'Bent u bereid om meer te betalen zodat u zelf uw zorgverlener kunt kiezen?';
+closeInformationOverlayClickElement: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
+question5answerDInformationText: string = 'Let op: Voor deze vergoeding geldt een jaar wachttijd. Als u in 2019 de verzekering afsluit, kunt u in 2021 gebruik maken van deze vergoeding.';
+question5InformationHeaderText: string = 'Verwacht u dat uw kind een beugel nodig heeft?';
+question6AnswerDInformationText: string = 'Let op: Voor de vergoeding van kronen, bruggen, gedeeltelijke protheses en implantaten geldt een jaar wachttijd. Als u in 2019 de verzekering afsluit, kunt u in 2021 gebruik maken van deze vergoeding.';
+question6InformationHeaderText: string = 'Gaat u naar de tandarts?';
 
 //I-TEXTS BELOW SELECTED ANSWERS
-informationBelowSelectedAnswersTextElement: string = '[class="health-check-question__infotext ng-tns-c4-3 ng-star-inserted"]';
-//hier nog verschillende teksten toevoegen
+informationBelowSelectedAnswersTextElement: string = '[class="health-check-question__infotext ng-tns-c3-1 ng-star-inserted"]';
+
+//E-MAIL DIT ADVIES
+emailDitAdviesButtonAdvicePageClickElement: string = 'div.health-check-result__top > ui-button > button';
+emailDitAdviesOverlayHeaderElement: string = '[class="ui-modal__title ng-star-inserted"]';
+emailDitAdviesOverlayHeaderText: string = 'Mail uw zorgadvies';
+emailDitAdviesOverlayDataEmailAddressElement: string = '[id="resultEmail"]';
+emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = ' form > ui-button > button';
+emailDitAdviesOverlayVerstuurMijnAdviesInvalidEmailClickElement: string = '[class="button button--secondary button--icon button--disabled"]';
+emailDitAdviesOverlayCloseClickElement: string = ' div.ui-modal__footer.ng-star-inserted > ui-button > button';
+emailDitAdviesOverlayIncorrectEmailMessageText: string = 'Vul een geldig e-mailadres in (j.jansen@unive.nl).';
+emailDitAdviesOverlayIncorrectEmailMessageElement: string = '[class="health-check-result-email__error ng-star-inserted"]';
+emailDitAdviesOverlaySuccessElement: string = '[class="health-check-result-email__intro ng-star-inserted"]';
+emailDitAdviesOverlaySuccessText: string = 'Het ZorgCheck advies is verzonden naar';
+
+//PREFILLS WIZARD
+zorgSelectActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
+zorgGeregeldActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
+ZorgVrijActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
+aanvullendGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BAVU"]';
+aanvullendBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UAVU"]';
+aanvullendBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="PZU"]';
+tandGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="GTU"]';
+tandBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BTU"]';
+tandBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UTU"]';
 
 }
