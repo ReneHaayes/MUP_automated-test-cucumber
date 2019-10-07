@@ -1,17 +1,7 @@
 import {browser, by, element, ElementFinder} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {AovZzpElements} from "./aovZzpElements";
 import {incapacitation, AovZzpUwpremie} from "../../enum/aovZzpEnum";
-import {GenericElements} from "../../generic/genericElements";
 import {durationEntrepreneur, gender, specificIdentification, genericEnum} from "../../enum/genericEnum";
-import {PersonaData} from "../../persona/persona";
-
-// @ts-ignore
-let genericMethods: GenericMethods = new GenericMethods();
-let aovZzpElements: AovZzpElements = new AovZzpElements();
-let genericElements: GenericElements = new GenericElements();
-let personaData: PersonaData = new PersonaData();
-
+import {aovZzpElements, genericElements, genericMethods, personaData} from "../../../support";
 
 export class AovZzpMethods {
 

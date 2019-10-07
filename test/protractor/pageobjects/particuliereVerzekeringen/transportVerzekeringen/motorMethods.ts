@@ -1,22 +1,16 @@
 import {browser} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {MotorElements} from "./motorElements";
 import {licensePlates} from "../../enum/licensePlateEnum";
-import {MotorWithLicensePlate} from "../../vehicles/motorWithLicensePlate";
 import {genericEnum} from "../../enum/genericEnum";
 import {alarmSystemEnum} from "../../enum/motorEnum";
 import {aanvullendeOptiesEnum, basisDekkingEnum, vehicleAccEnum} from "../../enum/autoVerzekeringEnum";
-import {GenericElements} from "../../generic/genericElements";
-import {AutoVerzekeringElements} from "./autoVerzekeringElements";
-import {VehicleElements} from "../../generic/vehicleElements";
 import {vehicleKindEnum} from "../../enum/bromfietsVerzekeringEnum";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let motorElements: MotorElements = new MotorElements();
-let motorWithLicensePlate: MotorWithLicensePlate = new MotorWithLicensePlate();
-let genericElements: GenericElements = new GenericElements();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let vehicleElements: VehicleElements = new VehicleElements();
+import {
+  autoVerzekeringElements, genericElements,
+  genericMethods,
+  motorElements,
+  motorWithLicensePlate,
+  vehicleElements
+} from "../../../support";
 
 export class MotorMethods {
 

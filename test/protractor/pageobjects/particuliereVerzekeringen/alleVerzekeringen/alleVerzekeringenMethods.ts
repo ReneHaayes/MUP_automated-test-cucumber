@@ -1,15 +1,7 @@
-import {GenericMethods} from "../../generic/genericMethods";
 import {selectAlleVerzekeringEnum} from "../../enum/alleVerzekeringEnum";
-import {AlleVerzekeringenElements} from "./alleVerzekeringenElements";
 import {breadCrumbEnum, verzekeringPaginasEnum} from "../../enum/genericEnum";
 import {browser} from "protractor";
-import {GetUrlUnive} from "../../generic/getUrlUnive";
-import {HmPageElements} from "../../generic/hmPageElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let getUrlUnive: GetUrlUnive = new GetUrlUnive();
-let hmPageElements: HmPageElements = new HmPageElements();
-let alleVerzekeringenElements: AlleVerzekeringenElements = new AlleVerzekeringenElements();
+import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements} from "../../../support";
 
 export class AlleVerzekeringenMethods {
 

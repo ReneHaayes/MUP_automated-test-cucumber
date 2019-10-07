@@ -1,11 +1,5 @@
 import {Given, Then} from 'cucumber';
-import {GenericMethods} from '../../pageobjects/generic/genericMethods';
-import { SituatieGewijzigdElements } from '../../pageobjects/Klantenservice/SituatieGewijzigdElements';
-import { SituatieGewijzigdMethods } from '../../pageobjects/Klantenservice/SituatieGewijzigdMethods';
-
-const genericMethods: GenericMethods = new GenericMethods();
-const situatieGewijzigdElements: SituatieGewijzigdElements = new SituatieGewijzigdElements();
-const situatieGewijzigdMethods: SituatieGewijzigdMethods = new SituatieGewijzigdMethods();
+import {genericMethods, situatieGewijzigdElements, situatieGewijzigdMethods} from "../../support";
 
 Given(/^Customer clicks on situation (.*) to be changed$/, async (situatie: string) => {
   await genericMethods.clickOnElement(situatieGewijzigdElements.situatieGewijzigdClickElement(situatie));

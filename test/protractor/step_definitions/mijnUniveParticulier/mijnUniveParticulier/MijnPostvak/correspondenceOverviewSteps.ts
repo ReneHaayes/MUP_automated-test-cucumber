@@ -1,11 +1,5 @@
 import {Then, When} from "cucumber";
-import {
-  CorrespondentieElements,
-} from "../../../../pageobjects/mijnUniveParticulier/MijnPostvak/CorrespondentieElements";
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-
-let correspondentieOverzichtElements: CorrespondentieElements = new CorrespondentieElements();
-let genericMethods: GenericMethods = new GenericMethods();
+import {correspondentieOverzichtElements, genericMethods} from "../../../../support";
 
 When(/^Customer selects first correspondence for package$/, async () => {
   await genericMethods.clickOnElement(correspondentieOverzichtElements.correspondentieButtonClickElement);

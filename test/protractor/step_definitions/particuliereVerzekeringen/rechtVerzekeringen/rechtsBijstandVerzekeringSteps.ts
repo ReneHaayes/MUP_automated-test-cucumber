@@ -1,17 +1,10 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {RechtsBijstandVerzekeringMethods} from "../../../pageobjects/particuliereVerzekeringen/rechtVerzekeringen/rechtsBijstandVerzekeringMethods";
-import {RechtsBijstandVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/rechtVerzekeringen/rechtsBijstandVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
-let rechtsBijstandVerzekeringMethods: RechtsBijstandVerzekeringMethods = new RechtsBijstandVerzekeringMethods();
-let rechtsBijstandVerzekeringElements: RechtsBijstandVerzekeringElements = new RechtsBijstandVerzekeringElements();
+import {
+  genericElements, genericMethods,
+  nawElements, personaData,
+  rechtsBijstandVerzekeringElements,
+  rechtsBijstandVerzekeringMethods
+} from "../../../support";
 
 When(/^I enter step one page of rechtsbijstandverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await rechtsBijstandVerzekeringMethods.clickFamilyComposition(familyCompositionInput);

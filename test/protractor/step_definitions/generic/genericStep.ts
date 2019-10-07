@@ -1,12 +1,8 @@
 import {Given, Then, When} from 'cucumber';
-import {GenericMethods} from '../../pageobjects/generic/genericMethods';
-import {GenericElements} from '../../pageobjects/generic/genericElements';
 import {genericEnum} from '../../pageobjects/enum/genericEnum';
 import {logToHtmlReport} from '../../support/hooks';
 import {browser} from 'protractor';
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
+import {genericElements, genericMethods} from "../../support";
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);

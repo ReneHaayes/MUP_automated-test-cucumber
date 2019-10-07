@@ -1,16 +1,6 @@
-// @ts-ignore
-import {Given, Then, When} from 'cucumber';
-import {AovZzpMethods} from "../../../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {AovZzpElements} from "../../../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpElements";
+import {Then, When} from 'cucumber';
 import {genericEnum} from "../../../pageobjects/enum/genericEnum";
-
-let aovZzpElements: AovZzpElements = new AovZzpElements();
-let aovZzpMethods: AovZzpMethods = new AovZzpMethods();
-let genericMethods: GenericMethods = new GenericMethods();
-let personaData: PersonaData = new PersonaData();
-
+import {aovZzpElements, aovZzpMethods, genericMethods, personaData} from "../../../support";
 
 When(/^I enter step one page of aovZzp with premie of (.*)$/, async (premie: string) => {
   await aovZzpMethods.dragAndDropUwPremie(premie);

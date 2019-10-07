@@ -1,18 +1,10 @@
 import {When} from "cucumber";
 import {browser} from "protractor";
-import {AansprakelijkheidsVerzekeringMethods} from "../../../pageobjects/particuliereVerzekeringen/rechtVerzekeringen/aansprakelijkheidsVerzekeringMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {AansprakelijkheidsVerzekerElements} from "../../../pageobjects/particuliereVerzekeringen/rechtVerzekeringen/aansprakelijkheidsVerzekerElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-
-let aansprakelijkheidsVerzekeringMethods: AansprakelijkheidsVerzekeringMethods = new AansprakelijkheidsVerzekeringMethods();
-let aansprakelijkheidsVerzekeringElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
+import {
+  aansprakelijkheidsVerzekeringElements,
+  aansprakelijkheidsVerzekeringMethods, genericElements, genericMethods,
+  nawElements, personaData
+} from "../../../support";
 
 When(/^I enter step one page of aansprakelijkheids verzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await aansprakelijkheidsVerzekeringMethods.clickFamilyComposition(familyCompositionInput);

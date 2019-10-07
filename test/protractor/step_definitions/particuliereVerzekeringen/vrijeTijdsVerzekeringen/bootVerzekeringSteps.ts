@@ -1,19 +1,11 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {BootVerzekeringMethods} from "../../../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/bootVerzekeringMethods";
-import {BoatWithName} from "../../../pageobjects/vehicles/boatWithName";
-import {BootVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/bootVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let bootVerzekeringMethods: BootVerzekeringMethods = new BootVerzekeringMethods();
-let bootVerzekeringElements: BootVerzekeringElements = new BootVerzekeringElements();
-let boatWithName: BoatWithName = new BoatWithName();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
-let genericElements: GenericElements = new GenericElements();
+import {
+  boatWithName,
+  bootVerzekeringElements,
+  bootVerzekeringMethods,
+  genericElements, genericMethods,
+  nawElements, personaData
+} from "../../../support";
 
 When(/^I enter step one and click next on step two of bootverzekering with:$/, async (data) => {
   const dataTable = data.rowsHash();

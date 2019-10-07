@@ -1,14 +1,6 @@
 import {browser} from 'protractor';
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-import {AutoVerzekeringElementsStepThree} from "./autoVerzekeringElementsStepThree";
 import {gender} from "../../enum/genericEnum";
-import {NawElements} from "../../generic/nawElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: NawElements = new NawElements();
+import {autoVerzekeringElementsStepThree, genericElements, genericMethods, nawElements} from "../../../support";
 
 
 export class AutoVerzekeringMethodsStepThreeAndFour {

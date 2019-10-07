@@ -1,10 +1,7 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-import {MijnVerzekeringenElements} from "../../../../pageobjects/mijnUniveParticulier/mijnVerzekeringen/mijnVerzekeringenElements";
-import {browser} from "protractor";
 
-let genericMethods: GenericMethods = new GenericMethods();
-let mijnVerzekeringenElements: MijnVerzekeringenElements = new MijnVerzekeringenElements();
+import {browser} from "protractor";
+import {genericMethods, mijnVerzekeringenElements} from "../../../../support";
 
 When(/^Customer changes a vehicle with licenseplate: (.*)$/, async (licensePlate: string) => {
   await genericMethods.clickOnElement(mijnVerzekeringenElements.voertuigWijzigenClickElement);

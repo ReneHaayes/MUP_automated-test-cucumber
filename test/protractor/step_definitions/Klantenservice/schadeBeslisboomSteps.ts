@@ -1,9 +1,5 @@
 import { When, Then } from 'cucumber';
-import { GenericMethods } from '../../pageobjects/generic/genericMethods';
-import { SchadeBeslisboomElements } from '../../pageobjects/Klantenservice/SchadeBeslisboomElements';
-
-const genericMethods: GenericMethods = new GenericMethods();
-const schadeBeslisboomElements: SchadeBeslisboomElements = new SchadeBeslisboomElements();
+import {genericMethods, schadeBeslisboomElements} from "../../support";
 
 // Auto Oldtimer Steps:
 

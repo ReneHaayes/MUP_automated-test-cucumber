@@ -1,12 +1,6 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-import {VerhuizingDoorgevenElements} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/verhuizingDoorgevenElements";
-import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
 import {browser} from "protractor";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let verhuizingDoorgevenElements: VerhuizingDoorgevenElements = new VerhuizingDoorgevenElements();
-let mijnUniveAccountElements: MijnUniveAccountElements = new MijnUniveAccountElements();
+import {genericMethods, mijnUniveAccountElements, verhuizingDoorgevenElements} from "../../../../support";
 
 When(/^Customer changes move details with:$/, async (data) => {
   const dataTable = data.rowsHash();

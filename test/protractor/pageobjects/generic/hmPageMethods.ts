@@ -1,27 +1,14 @@
-import {GenericMethods} from "./genericMethods";
-import {HmPageElements} from "./hmPageElements";
 import {homePageEnum} from "../enum/woonVerzekeringEnum";
-import {AansprakelijkheidsVerzekerElements} from "../particuliereVerzekeringen/rechtVerzekeringen/aansprakelijkheidsVerzekerElements";
 import {browser} from "protractor";
-import {ReisVerzekeringElements} from "../particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
-import {ProductPageElements} from "./productPageElements";
-import {GetUrlUnive} from "./getUrlUnive";
 import {verzekeringPaginasEnum} from "../enum/genericEnum";
-import {AovZzpElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpElements";
-import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
-import {EigenVervoerVerzekeringElements} from "../zakelijkeVerzekeringen/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
-import {GenericElements} from "./genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let hmPageElements: HmPageElements = new HmPageElements();
-let aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
-let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
-let productPageElements: ProductPageElements = new ProductPageElements();
-let getUrlUnive: GetUrlUnive = new GetUrlUnive();
-let aovZzpElements: AovZzpElements = new AovZzpElements();
-let zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVerzekeringElements = new ZakelijkRechtsBijstandVerzekeringElements;
-let eigenVervoerVerzekeringElements: EigenVervoerVerzekeringElements = new EigenVervoerVerzekeringElements;
+import {
+  aansprakelijkheidsVerzekerElements,
+  aovZzpElements,
+  eigenVervoerVerzekeringElements,
+  genericElements, genericMethods,
+  getUrlUnive, hmPageElements,
+  productPageElements, reisVerzekeringElements, zakelijkRechtsBijstandVerzekeringElements
+} from "../../support";
 
 export class HmPageMethods {
 

@@ -1,21 +1,13 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../../pageobjects/generic/genericElements";
-import {ApiMethods} from "../../../../pageobjects/api/apiMethods";
-import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
-import {LoginPageMethods} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
-import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
-import {PersonaData} from "../../../../pageobjects/persona/persona";
 import {browser} from "protractor";
-
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let apiMethods: ApiMethods = new ApiMethods();
-let mijnUniveAccountElements: MijnUniveAccountElements = new MijnUniveAccountElements();
-let loginPageMethods: LoginPageMethods = new LoginPageMethods();
-let loginPageElements: LoginPageElements = new LoginPageElements();
-let personaData: PersonaData = new PersonaData();
+import {
+  apiMethods,
+  genericElements,
+  genericMethods,
+  loginPageElements,
+  loginPageMethods, mijnUniveAccountElements,
+  personaData
+} from "../../../../support";
 
 When(/^Check if (.*) already exists$/, async (persona: string) => {
   await apiMethods.checkIfAccountExistsWhenDoesntExistCreateAccount(persona);

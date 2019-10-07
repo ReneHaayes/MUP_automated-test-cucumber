@@ -1,14 +1,11 @@
 import {breadCrumbEnum, verzekeringPaginasEnum} from "../../enum/genericEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-import {AlleVerzekeringenElements} from "../../particuliereVerzekeringen/alleVerzekeringen/alleVerzekeringenElements";
 import {browser} from "protractor";
-import {AlleVerzekeringenZakelijkElements} from "./alleVerzekeringenZakelijkElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let alleVerzekeringenElements: AlleVerzekeringenElements = new AlleVerzekeringenElements();
-let alleVerzekeringenZakelijkElements: AlleVerzekeringenZakelijkElements = new AlleVerzekeringenZakelijkElements();
+import {
+  alleVerzekeringenElements,
+  alleVerzekeringenZakelijkElements,
+  genericElements,
+  genericMethods
+} from "../../../support";
 
 export class AlleVerzekeringenZakelijkMethods {
 
