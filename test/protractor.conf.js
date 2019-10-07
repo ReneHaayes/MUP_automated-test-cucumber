@@ -42,7 +42,6 @@ exports.config = {
       environment: 'pat'
     }
   },
-  // baseUrl: 'https://techblog.polteq.com/testshop/index.php',
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
