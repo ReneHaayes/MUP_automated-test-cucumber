@@ -19,19 +19,6 @@ export class AovZzpElements {
   aovZzpYourDataSpecificIdentificationIdCardSelect: string = 'id';
   aovZzpYourDataSpecificIdentificationSomethingElseSelect: string = 'a';
 
-  //UW GEGEVENS
-  zzpYourDataInitialsElement: string = '#initials';
-  zzpYourDataPrefixElement: string = '#namePrefix';
-  zzpYyourDataLastNameElement: string = '#lastName';
-  zzpYourDataBirthdate: string = '#birthdate';
-  zzpYourDataBirthPlace: string = '#birthplace';
-  zzpYourDataZipCodeElement: string = '#zipCode';
-  zzpYourDataHouseNumberElement: string = '#houseNumber';
-  zzpYourDataHouseNumberAddingElement: string = '#houseNumberAdding';
-  zzpYourDataPhoneNumberElement: string = '#phoneNumber';
-  zzpYourDataBSNnumberElement: string = '#bsn';
-  zzpYourDataEmailAddress: string = '#email';
-
   //OVERIGE GEGEVENS
   zzpOtherDataProfessionElement: string = '#profession';
   zzpOtherDataKvkNumberElement: string = '#kvk';
@@ -54,27 +41,22 @@ export class AovZzpElements {
   aovZzpDurationEntrepreneurNineElement: string = '10: 9';
   aovZzpDurationEntrepreneurTenElement: string = '11: 10';
 
+  // BIRTHDATE
+  zzpYourDataBirthdate: string = '#birthdate';
+
   //HEIGHT AND WEIGHT
   aovZzpHeightElement: string = '#height';
   aovZzpWeightElement: string = '#weight';
 
   //HEALTH CERTIFICATE
-  aovZzpHealthCertificate14DaysNoteAbleToWorkNoElement: string = '[formcontrolname*="notWorkForFourteenDays"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificate14DaysNoteAbleToWorkYesElement: string = '[formcontrolname*="notWorkForFourteenDays"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificateHeartComplaintsNoElement: string = '[formcontrolname*="heartComplaints"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificateHeartComplaintsYesElement: string = '[formcontrolname*="heartComplaints"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificateCancerNoElement: string = '[formcontrolname*="cancer"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificateCancerYesElement: string = '[formcontrolname*="cancer"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificatePsychologistNoElement: string = '[formcontrolname*="psychologist"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificatePsychologistYesElement: string = '[formcontrolname*="psychologist"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificatePosturalComplaintsNoElement: string = '[formcontrolname*="posturalComplaints"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificatePosturalComplaintsYesElement: string = '[formcontrolname*="posturalComplaints"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificateOtherConditionNoElement: string = '[formcontrolname*="otherCondition"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificateOtherConditionYesElement: string = '[formcontrolname*="otherCondition"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificateMedicinesNoElement: string = '[formcontrolname*="medicines"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificateMedicinesYesElement: string = '[formcontrolname*="medicines"] unive-input-radio-button:nth-child(2)';
-  aovZzpHealthCertificateDisabilityBenefitNoElement: string = '[formcontrolname*="disabilityBenefit"] unive-input-radio-button:nth-child(1)';
-  aovZzpHealthCertificateDisabilityBenefitYesElement: string = '[formcontrolname*="disabilityBenefit"] unive-input-radio-button:nth-child(2)';
+  aovZzpHealthCertificate14DaysNoteAbleToWorkYesElement: string = '[formcontrolname*="notWorkForFourteenDays"] unive-input-radio-button:nth-child(1)';
+  aovZzpHealthCertificate14DaysNoteAbleToWorkNoElement: string = '[formcontrolname*="notWorkForFourteenDays"] unive-input-radio-button:nth-child(2)';
+  aovZzpHealthCertificateConsultedDoctorYesElement: string = '[formcontrolname*="consultedDoctor"] unive-input-radio-button:nth-child(1)';
+  aovZzpHealthCertificateConsultedDoctorNoElement: string = '[formcontrolname*="consultedDoctor"] unive-input-radio-button:nth-child(2)';
+  aovZzpHealthCertificateMedicinesYesElement: string = '[formcontrolname*="medicines"] unive-input-radio-button:nth-child(1)';
+  aovZzpHealthCertificateMedicinesNoElement: string = '[formcontrolname*="medicines"] unive-input-radio-button:nth-child(2)';
+  aovZzpHealthCertificateDisabilityBenefitYesElement: string = '[formcontrolname*="disabilityBenefit"] unive-input-radio-button:nth-child(1)';
+  aovZzpHealthCertificateDisabilityBenefitNoElement: string = '[formcontrolname*="disabilityBenefit"] unive-input-radio-button:nth-child(2)';
 
   //KNOWLEDGE AND EXPERIENCE
   aovZzpKnowledgeLifeInsuranceYesElement: string = 'unive-form-group:nth-child(2) unive-input-radio-button:nth-child(1)';
@@ -95,16 +77,24 @@ export class AovZzpElements {
   aovZzpIncomeConsciousOfMaxTwoYearsYesElement: string = 'unive-form-group:nth-child(7) unive-input-radio-button:nth-child(1)';
   aovZzpIncomeConsciousOfMaxTwoYearsNoElement: string = 'unive-form-group:nth-child(7) unive-input-radio-button:nth-child(2)';
 
+  //UW GEGEVENS
+  zzpYourDataInitialsElement: string = '#initials';
+  zzpYourDataPrefixElement: string = '#namePrefix';
+  zzpYyourDataLastNameElement: string = '#lastName';
+  zzpYourDataZipCodeElement: string = '#zipCode';
+  zzpYourDataHouseNumberElement: string = '#houseNumber';
+  zzpYourDataHouseNumberAddingElement: string = '#houseNumberAdding';
+  zzpYourDataPhoneNumberElement: string = '#phoneNumber';
+  zzpYourDataBSNnumberElement: string = '#bsn';
+  zzpYourDataEmailAddress: string = '#email';
+
   //ALMOST INSURED
-  aovZzpAlmostInsuredInsuranceHistoryNoElement: string = 'unive-form-group:nth-child(2) unive-input-radio-button:nth-child(1)';
-  aovZzpAlmostInsuredInsuranceHistoryYesElement: string = 'unive-form-group:nth-child(2) unive-input-radio-button:nth-child(2)';
-  aovZzpAlmostInsuredInsuranceHistoryYesExplanationElement: string = '#acceptanceQuestion1Explanation';
-
-  aovZzpAlmostInsuredCriminalHistoryNoElement: string = 'unive-form-group:nth-child(3) unive-input-radio-button:nth-child(1)';
-  aovZzpAlmostInsuredCriminalHistoryYesElement: string = 'unive-form-group:nth-child(3) unive-input-radio-button:nth-child(2)';
-
-  aovZzpAlmostInsuredDamageHistoryNoElement: string = 'unive-form-group:nth-child(4) unive-input-radio-button:nth-child(1)';
-  aovZzpAlmostInsuredDamageHistoryYesElement: string = 'unive-form-group:nth-child(4) unive-input-radio-button:nth-child(2)';
+  aovZzpAlmostInsuredInsuranceHistoryYesElement: string = '[formcontrolname*="acceptanceQuestion1"] unive-input-radio-button:nth-child(1)';
+  aovZzpAlmostInsuredInsuranceHistoryNoElement: string = '[formcontrolname*="acceptanceQuestion1"] unive-input-radio-button:nth-child(2)';
+  aovZzpAlmostInsuredCriminalHistoryYesElement: string = '[formcontrolname*="acceptanceQuestion2"] unive-input-radio-button:nth-child(1)';
+  aovZzpAlmostInsuredCriminalHistoryNoElement: string = '[formcontrolname*="acceptanceQuestion2"] unive-input-radio-button:nth-child(2)';
+  aovZzpAlmostInsuredDamageHistoryYesElement: string = '[formcontrolname*="acceptanceQuestion3"] unive-input-radio-button:nth-child(1)';
+  aovZzpAlmostInsuredDamageHistoryNoElement: string = '[formcontrolname*="acceptanceQuestion3"] unive-input-radio-button:nth-child(2)';
 
   //THANK YOU
   thankYouElement: string = '[class*="unive-form-text-container"] div > p:nth-child(2)';
