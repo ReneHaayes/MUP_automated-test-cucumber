@@ -1,11 +1,5 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {AlleVerzekeringenZakelijkMethods} from "../../../pageobjects/zakelijkeVerzekeringen/alleVerzekeringen/alleVerzekeringenZakelijkMethods";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let alleVerzekeringenZakelijkMethods: AlleVerzekeringenZakelijkMethods = new AlleVerzekeringenZakelijkMethods();
+import {alleVerzekeringenZakelijkMethods, genericElements, genericMethods} from "../../../support";
 
 When(/^I click on (.*) at the alle verzekeringen zakelijk page$/, async (buttonPage: string) => {
   await alleVerzekeringenZakelijkMethods.clickAlleVerzekeringInput(buttonPage);

@@ -1,19 +1,11 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {ZakelijkRechtsBijstandVerzekeringElements} from "../../../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {CompanyData} from "../../../pageobjects/persona/company";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {EigenVervoerVerzekeringMethods} from "../../../pageobjects/zakelijkeVerzekeringen/mobiliteitsVerzekeringen/eigenVervoerVerzekeringMethods";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let personaData: PersonaData = new PersonaData();
-let companyData: CompanyData = new CompanyData();
-let nawElements: NawElements = new NawElements();
-let zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVerzekeringElements = new ZakelijkRechtsBijstandVerzekeringElements();
-let eigenVervoerVerzekeringMethods: EigenVervoerVerzekeringMethods = new EigenVervoerVerzekeringMethods();
+import {
+  companyData,
+  eigenVervoerVerzekeringMethods,
+  genericElements, genericMethods,
+  nawElements, personaData,
+  zakelijkRechtsBijstandVerzekeringElements
+} from "../../../support";
 
 When(/^I enter step one page and click next on step two of zakelijk rechtsbijstand verzekering with:$/, async function (data) {
   const dataTable = data.rowsHash();

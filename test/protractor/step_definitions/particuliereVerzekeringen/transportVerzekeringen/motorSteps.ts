@@ -1,19 +1,13 @@
 import {When} from "cucumber";
-import {MotorMethods} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {MotorElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {AutoVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
+import {
+  autoVerzekeringElements,
+  genericElements,
+  genericMethods,
+  motorElements, motorMethods,
+  nawElements,
+  personaData
+} from "../../../support";
 
-let motorMethods: MotorMethods = new MotorMethods();
-let genericMethods: GenericMethods = new GenericMethods();
-let motorElements: MotorElements = new MotorElements();
-let personaData: PersonaData = new PersonaData();
-let nawElements: NawElements = new NawElements();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let genericElements: GenericElements = new GenericElements();
 
 When(/^I enter step one page for motor with license plate (.*) with:$/, async (licensePlate: string, data) => {
   const dataTable = data.rowsHash();

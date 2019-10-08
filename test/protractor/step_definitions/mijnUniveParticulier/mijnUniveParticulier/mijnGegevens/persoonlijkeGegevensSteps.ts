@@ -1,12 +1,6 @@
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
 import {browser} from "protractor";
 import {When} from "cucumber";
-import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/persoonlijkeGegevensElements";
-import {PersonaData} from "../../../../pageobjects/persona/persona";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let persoonlijkeGegevensElements: PersoonlijkeGegevensElements = new PersoonlijkeGegevensElements();
-let personaData: PersonaData = new PersonaData();
+import {genericMethods, personaData, persoonlijkeGegevensElements} from "../../../../support";
 
 When(/^(.*) changes personal details with:$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();

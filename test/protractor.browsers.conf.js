@@ -39,7 +39,6 @@ exports.config = {
       browserName: 'chrome'
     }
   },
-  // baseUrl: 'https://techblog.polteq.com/testshop/index.php',
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 

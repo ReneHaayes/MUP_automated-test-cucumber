@@ -1,21 +1,11 @@
 import {When} from "cucumber";
-import {OldtimerVerzekeringMethods} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/oldtimerVerzekeringMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {OldtimerVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/oldtimerVerzekeringElements";
-import {CarWithLicensePlate} from "../../../pageobjects/vehicles/carWithLicensePlate";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-
-let oldtimerVerzekeringMethods: OldtimerVerzekeringMethods = new OldtimerVerzekeringMethods();
-let oldtimerVerzekeringElements: OldtimerVerzekeringElements = new OldtimerVerzekeringElements();
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
-
-
+import {
+  carWithLicensePlate,
+  genericElements, genericMethods,
+  nawElements,
+  oldtimerVerzekeringElements,
+  oldtimerVerzekeringMethods, personaData
+} from "../../../support";
 
 When(/^I enter step one and click next on step three of oldtimerverzekering with:$/, async (data) => {
   const dataTable = data.rowsHash();

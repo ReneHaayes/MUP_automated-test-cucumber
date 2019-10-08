@@ -1,10 +1,5 @@
-import {GenericMethods} from "../../generic/genericMethods";
 import {toolsEnum} from "../../enum/zakelijkAansprakelijkheidsVerzekeringEnum";
-import {ZakelijkAansprakelijkheidsVerzekeringElements} from "./zakelijkAansprakelijkheidsVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-
-let zakelijkAansprakelijkheidsVerzekeringElements: ZakelijkAansprakelijkheidsVerzekeringElements = new ZakelijkAansprakelijkheidsVerzekeringElements();
+import {genericMethods, zakelijkAansprakelijkheidsVerzekeringElements} from "../../../support";
 
 export class ZakelijkAansprakelijkheidsVerzekeringMethods {
 

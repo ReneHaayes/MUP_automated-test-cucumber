@@ -1,29 +1,14 @@
-// @ts-ignore
-import {Given, When, Then} from 'cucumber';
-import {AutoVerzekeringMethods} from '../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringMethods';
+import {When} from 'cucumber';
 import {browser} from 'protractor';
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {AutoVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {AutoVerzekeringElementsStepThree} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElementsStepThree";
-import {AutoVerzekeringMethodsStepThreeAndFour} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringMethodsStepThreeAndFour";
-import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
-import {CarWithLicensePlate} from "../../../pageobjects/vehicles/carWithLicensePlate";
-import {CompanyData} from "../../../pageobjects/persona/company";
+import {
+  autoVerzekeringElements,
+  autoVerzekeringElementsStepThree, autoVerzekeringMethods, autoVerzekeringMethodsStepThreeAndFour,
+  carWithLicensePlate, companyData, genericElements,
+  genericMethods,
+  nawElements, personaData,
+  vehicleElements
+} from "../../../support";
 
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let autoVerzekeringMethods: AutoVerzekeringMethods = new AutoVerzekeringMethods();
-let autoVerzekeringMethodsStepThreeAndFour: AutoVerzekeringMethodsStepThreeAndFour = new AutoVerzekeringMethodsStepThreeAndFour();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: NawElements = new NawElements();
-let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
-let personaData: PersonaData = new PersonaData();
-let vehicleElements: VehicleElements = new VehicleElements();
-let companyData: CompanyData = new CompanyData();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();

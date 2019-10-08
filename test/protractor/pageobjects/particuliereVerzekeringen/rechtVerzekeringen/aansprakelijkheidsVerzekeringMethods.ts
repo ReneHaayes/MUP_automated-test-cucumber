@@ -1,13 +1,6 @@
 import {browser} from "protractor";
 import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-import {AansprakelijkheidsVerzekerElements} from "./aansprakelijkheidsVerzekerElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let aansprakelijkheidsVerzekeringElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
-
+import {aansprakelijkheidsVerzekeringElements, genericElements, genericMethods} from "../../../support";
 
 export class AansprakelijkheidsVerzekeringMethods {
 

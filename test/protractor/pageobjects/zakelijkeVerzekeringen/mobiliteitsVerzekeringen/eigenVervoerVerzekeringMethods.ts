@@ -1,11 +1,7 @@
 import {activityEnum} from "../../enum/genericEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {EigenVervoerVerzekeringElements} from "./eigenVervoerVerzekeringElements";
 import {vehicleInfoEnum} from "../../enum/autoVerzekeringEnum";
+import {eigenVervoerVerzekeringElements, genericMethods} from "../../../support";
 
-let genericMethods: GenericMethods = new GenericMethods();
-
-let eigenVervoerVerzekeringElements: EigenVervoerVerzekeringElements = new EigenVervoerVerzekeringElements();
 
 export class EigenVervoerVerzekeringMethods {
 

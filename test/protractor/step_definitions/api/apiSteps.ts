@@ -1,10 +1,6 @@
 import {Given, When} from "cucumber";
 import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
-import {ApiMethods} from "../../pageobjects/api/apiMethods";
-import {ApiElements} from "../../pageobjects/api/apiElements";
-
-let apiMethods: ApiMethods = new ApiMethods();
-let apiElements: ApiElements = new ApiElements();
+import {apiElements, apiMethods} from "../../support";
 
 Given(/^api on location$/, async () => {
   let createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody('Welkom01!', 'annie'));

@@ -1,11 +1,7 @@
-import {GenericMethods} from "../../generic/genericMethods";
 import {typeBoatEnum} from "../../enum/bootEnum";
-import {BootVerzekeringElements} from "./bootVerzekeringElements";
 import {materialEnum} from "../../enum/woonVerzekeringEnum";
 import {fuelTypEnum} from "../../enum/genericEnum";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let bootVerzekeringElements: BootVerzekeringElements = new BootVerzekeringElements();
+import {bootVerzekeringElements, genericMethods} from "../../../support";
 
 export class BootVerzekeringMethods {
 

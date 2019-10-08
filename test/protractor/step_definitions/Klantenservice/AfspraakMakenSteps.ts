@@ -1,13 +1,6 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
-import { GenericMethods } from '../../pageobjects/generic/genericMethods';
-import { KlachtenFormulierElements } from '../../pageobjects/Klantenservice/KlachtenFormulierElements';
-import { AfspraakMakenElements } from '../../pageobjects/Klantenservice/AfspraakMakenElements';
-
-const genericMethods: GenericMethods = new GenericMethods();
-const klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
-const afspraakMakenElements: AfspraakMakenElements = new AfspraakMakenElements();
-
+import {afspraakMakenElements, genericMethods, klachtenFormulierElements} from "../../support";
 
 When(/^Customer fills in afspraak maken form correctly$/, async () => {
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);

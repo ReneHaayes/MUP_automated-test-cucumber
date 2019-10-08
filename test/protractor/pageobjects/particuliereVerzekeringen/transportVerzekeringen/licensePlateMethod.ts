@@ -1,18 +1,11 @@
 import {licensePlateHmPageEnum} from "../../enum/licensePlateEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {HmPageElements} from "../../generic/hmPageElements";
 import {genericEnum} from "../../enum/genericEnum";
-import {AutoVerzekeringElements} from "./autoVerzekeringElements";
-import {CarWithLicensePlate} from "../../vehicles/carWithLicensePlate";
-import {BusinessCarWithLicensePlate} from "../../vehicles/businessCarWithLicensePlate";
-import {BedrijfsAutoVerzekeringElements} from "../../zakelijkeVerzekeringen/mobiliteitsVerzekeringen/bedrijfsAutoVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let hmPageElements: HmPageElements = new HmPageElements();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
-let businessCarWithLicensePlate: BusinessCarWithLicensePlate = new BusinessCarWithLicensePlate();
-let bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = new BedrijfsAutoVerzekeringElements();
+import {
+  autoVerzekeringElements, bedrijfsAutoVerzekeringElements,
+  businessCarWithLicensePlate,
+  carWithLicensePlate, genericMethods,
+  hmPageElements
+} from "../../../support";
 
 export class LicensePlateMethod {
 

@@ -1,21 +1,12 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {ZakelijkTractorVerzekeringElements} from "../../../pageobjects/zakelijkeVerzekeringen/mobiliteitsVerzekeringen/zakelijkTractorVerzekeringElements";
-import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
-import {ZakelijkTractorVerzekeringMethods} from "../../../pageobjects/zakelijkeVerzekeringen/mobiliteitsVerzekeringen/zakelijkTractorVerzekeringMethods";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {CompanyData} from "../../../pageobjects/persona/company";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let vehicleElements: VehicleElements = new VehicleElements();
-let nawElements: NawElements = new NawElements();
-let companyData: CompanyData = new CompanyData();
-let personaData: PersonaData = new PersonaData();
-let zakelijkTractorVerzekeringElements: ZakelijkTractorVerzekeringElements = new ZakelijkTractorVerzekeringElements();
-let zakelijkTractorVerzekerinigMethods: ZakelijkTractorVerzekeringMethods = new ZakelijkTractorVerzekeringMethods();
+import {
+  companyData,
+  genericElements, genericMethods,
+  nawElements, personaData,
+  vehicleElements,
+  zakelijkTractorVerzekeringElements,
+  zakelijkTractorVerzekerinigMethods
+} from "../../../support";
 
 When(/^I enter step one page and click next on step two of zakelijk tractorverzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();

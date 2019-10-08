@@ -1,9 +1,5 @@
 import {activityEnum} from "../../enum/genericEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {RoerendeZakenVerzekeringElements} from "./roerendeZakenVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let roerendeZakenVerzekeringElements: RoerendeZakenVerzekeringElements = new RoerendeZakenVerzekeringElements();
+import {genericMethods, roerendeZakenVerzekeringElements} from "../../../support";
 
 export class RoerendeZakenVerzekeringMethods {
 

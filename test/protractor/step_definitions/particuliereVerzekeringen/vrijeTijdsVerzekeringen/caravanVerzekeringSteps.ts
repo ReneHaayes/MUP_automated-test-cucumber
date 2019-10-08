@@ -1,17 +1,12 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {CaravanVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/caravanVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let caravanVerzekeringElements: CaravanVerzekeringElements = new CaravanVerzekeringElements();
-let nawElements: NawElements = new NawElements();
-let vehicleElements: VehicleElements = new VehicleElements();
-let personaData: PersonaData = new PersonaData();
+import {
+  caravanVerzekeringElements,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  vehicleElements
+} from "../../../support";
 
 When(/^I enter step one and click next on step two of caravan verzekering$/, async () => {
   await genericMethods.clickOnElement(caravanVerzekeringElements.tourCaravanClickElement);

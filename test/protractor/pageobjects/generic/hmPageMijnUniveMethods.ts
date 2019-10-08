@@ -1,13 +1,7 @@
-import {GenericMethods} from "./genericMethods";
-import {HmPageMijnUniveElements} from './hmPageMijnUniveElements';
 import {browser} from "protractor";
-import {GetUrlUnive} from "./getUrlUnive";
 import {homePageEnum} from '../enum/woonVerzekeringEnum';
 import {verzekeringPaginasEnum} from '../enum/genericEnum';
-
-let genericMethods: GenericMethods = new GenericMethods();
-let hmPageMijnUniveElements: HmPageMijnUniveElements = new HmPageMijnUniveElements();
-let getUrlUnive: GetUrlUnive = new GetUrlUnive();
+import {genericMethods, getUrlUnive, hmPageMijnUniveElements} from "../../support";
 
 export class HmPageMijnUniveMethods {
 

@@ -1,8 +1,4 @@
 import {browser} from 'protractor';
-import {AutoVerzekeringElements} from "./autoVerzekeringElements";
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-import {CarWithLicensePlate} from "../../vehicles/carWithLicensePlate";
 import {genericEnum} from "../../enum/genericEnum";
 import {
   aanvullendeOptiesEnum,
@@ -12,12 +8,7 @@ import {
   yearlyMileageEnum,
   whoDrivesCarMost
 } from "../../enum/autoVerzekeringEnum";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-
-let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
+import {autoVerzekeringElements, carWithLicensePlate, genericElements, genericMethods} from "../../../support";
 
 export class AutoVerzekeringMethods {
 

@@ -1,14 +1,6 @@
-import { GenericElements } from './../../generic/genericElements';
-import { HmPageElements } from './../../generic/hmPageElements';
-import {GenericMethods} from "../../generic/genericMethods";
-import {ReisVerzekeringElements} from "./reisVerzekeringElements";
 import {numbersEnum} from "../../enum/genericEnum";
 import { browser } from 'protractor';
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements;
-let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
-let hmPageElements: HmPageElements = new HmPageElements();
+import {genericElements, genericMethods, hmPageElements, reisVerzekeringElements} from "../../../support";
 
 export class ReisVerzekeringMethods {
 

@@ -1,19 +1,11 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {RoerendeZakenVerzekeringMethods} from "../../../pageobjects/zakelijkeVerzekeringen/bedrijfsMiddelenVerzekeringen/roerendeZakenVerzekeringMethods";
-import {RoerendeZakenVerzekeringElements} from "../../../pageobjects/zakelijkeVerzekeringen/bedrijfsMiddelenVerzekeringen/roerendeZakenVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {CompanyData} from "../../../pageobjects/persona/company";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let roerendeZakenVerzekeringMethods: RoerendeZakenVerzekeringMethods = new RoerendeZakenVerzekeringMethods();
-let roerendeZakenVerzekeringElements: RoerendeZakenVerzekeringElements = new RoerendeZakenVerzekeringElements();
-let nawElements: NawElements = new NawElements();
-let companyData: CompanyData = new CompanyData();
-let personaData: PersonaData = new PersonaData();
-let genericElements: GenericElements = new GenericElements();
+import {
+  companyData,
+  genericElements, genericMethods,
+  nawElements, personaData,
+  roerendeZakenVerzekeringElements,
+  roerendeZakenVerzekeringMethods
+} from "../../../support";
 
 When(/^I enter step one and step two page of roerende zakenverzekering for (.*) myself with:$/, async (company: string, data) => {
   const dataTable = data.rowsHash();

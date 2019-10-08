@@ -1,15 +1,7 @@
 import {browser} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {ZorgeloosOnlineVerzekeringElements} from "./zorgeloosOnlineVerzekeringElements";
 import {gender, genericEnum} from "../../enum/genericEnum";
 import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-import {GenericElements} from "../../generic/genericElements";
-import {NawElements} from "../../generic/nawElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let zorgeloosOnlineVerzekeringElements: ZorgeloosOnlineVerzekeringElements = new ZorgeloosOnlineVerzekeringElements();
-let genericElements: GenericElements = new GenericElements();
-let nawElements: NawElements = new NawElements();
+import {genericElements, genericMethods, nawElements, zorgeloosOnlineVerzekeringElements} from "../../../support";
 
 export class ZorgeloosOnlineVerzekeringMethods {
 

@@ -1,9 +1,5 @@
-import {GenericMethods} from '../generic/genericMethods';
-import {SituatieGewijzigdElements} from './SituatieGewijzigdElements';
 import {browser} from 'protractor';
-
-const genericMethods: GenericMethods = new GenericMethods();
-const situatieGewijzigdElements: SituatieGewijzigdElements = new SituatieGewijzigdElements();
+import {genericMethods, situatieGewijzigdElements} from "../../support";
 
 export class SituatieGewijzigdMethods {
 

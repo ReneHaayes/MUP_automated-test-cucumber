@@ -1,11 +1,7 @@
-import {GenericElements} from './genericElements';
 import {polisDetailsUrlEnum, verzekeringPaginasEnum} from '../enum/genericEnum';
 import {browser} from 'protractor';
 import {homePageEnum} from '../enum/woonVerzekeringEnum';
-import {ApiElements} from '../api/apiElements';
-
-const genericElements: GenericElements = new GenericElements();
-const apiElements: ApiElements = new ApiElements();
+import {apiElements, genericElements} from "../../support";
 
 export class GetUrlUnive {
 

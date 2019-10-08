@@ -1,7 +1,6 @@
 import {Then, When} from "cucumber";
-import {HmPageMethods} from "../../../pageobjects/generic/hmPageMethods";
+import {hmPageMethods} from "../../../support";
 
-let hmPageMethods: HmPageMethods = new HmPageMethods();
 
 When(/^I press the button (.*) on the homepage$/, async (button: string) => {
   await hmPageMethods.clickButtonHomePageAndGoToPremieBerekenen(button)

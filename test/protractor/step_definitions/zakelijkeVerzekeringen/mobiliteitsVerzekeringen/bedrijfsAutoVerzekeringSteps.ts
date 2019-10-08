@@ -1,28 +1,11 @@
-// @ts-ignore
-import {Given, When, Then} from 'cucumber';
-import {BedrijfsAutoVerzekeringMethods} from "../../../pageobjects/zakelijkeVerzekeringen/mobiliteitsVerzekeringen/bedrijfsAutoVerzekeringMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {BedrijfsAutoVerzekeringElements} from "../../../pageobjects/zakelijkeVerzekeringen/mobiliteitsVerzekeringen/bedrijfsAutoVerzekeringElements";
-import {CompanyData} from "../../../pageobjects/persona/company";
-import {AutoVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements";
-import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
-import {BusinessCarWithLicensePlate} from "../../../pageobjects/vehicles/businessCarWithLicensePlate";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {ZakelijkAansprakelijkheidsVerzekeringElements} from "../../../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkAansprakelijkheidsVerzekeringElements";
-
-let bedrijfsAutoVerzekeringMethods: BedrijfsAutoVerzekeringMethods = new BedrijfsAutoVerzekeringMethods();
-let bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = new BedrijfsAutoVerzekeringElements();
-let genericMethods: GenericMethods = new GenericMethods();
-let companyData: CompanyData = new CompanyData();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let vehicleElements: VehicleElements = new VehicleElements();
-let businessCarWithLicensePlate: BusinessCarWithLicensePlate = new BusinessCarWithLicensePlate();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
-let genericElements: GenericElements = new GenericElements();
-let zakelijkAansprakelijkheidsVerzekeringElements: ZakelijkAansprakelijkheidsVerzekeringElements = new ZakelijkAansprakelijkheidsVerzekeringElements();
+import {When} from 'cucumber';
+import {
+  autoVerzekeringElements,
+  bedrijfsAutoVerzekeringElements, bedrijfsAutoVerzekeringMethods,
+  businessCarWithLicensePlate, companyData, genericElements, genericMethods,
+  nawElements, personaData,
+  vehicleElements, zakelijkAansprakelijkheidsVerzekeringElements
+} from "../../../support";
 
 When(/^I enter step one page of bedrijfs autoverzekeringen for (.*) with$/, async (company: string, data) => {
   const dataTable = data.rowsHash();

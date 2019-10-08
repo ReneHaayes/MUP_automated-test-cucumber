@@ -1,15 +1,12 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-import {MijnVerzekeringenElements} from "../../../../pageobjects/mijnUniveParticulier/mijnVerzekeringen/mijnVerzekeringenElements";
 import {browser} from "protractor";
 import {statusEnum} from "../../../../pageobjects/enum/genericEnum";
-import {MijnSchadeEnClaimElements} from "../../../../pageobjects/mijnUniveParticulier/MijnSchadeEnClaim/MijnSchadeEnClaimElements";
-import {MijnSchadeEnClaimMethods} from "../../../../pageobjects/mijnUniveParticulier/MijnSchadeEnClaim/MijnSchadeEnClaimMethods";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let mijnVerzekeringElements: MijnVerzekeringenElements = new MijnVerzekeringenElements();
-let mijnSchadeEnClaimElements: MijnSchadeEnClaimElements = new MijnSchadeEnClaimElements();
-let mijnSchadeEnClaimMethods: MijnSchadeEnClaimMethods = new MijnSchadeEnClaimMethods();
+import {
+  genericMethods,
+  mijnSchadeEnClaimElements,
+  mijnSchadeEnClaimMethods,
+  mijnVerzekeringElements
+} from "../../../../support";
 
 When(/^Customer selects algemene voorwaarden$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.algemeneVoorwaardenClickElement);
