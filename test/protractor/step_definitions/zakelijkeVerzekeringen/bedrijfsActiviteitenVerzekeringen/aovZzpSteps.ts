@@ -7,22 +7,17 @@ When(/^I enter step one page of aovZzp with premie of (.*)$/, async (premie: str
   await aovZzpMethods.clickOnNextButton();
 });
 
-When(/^I enter step two page of aovZzp for persona (.*)$/, async (persona: string) => {
+When(/^I enter step four page of aovZzp for persona (.*)$/, async (persona: string) => {
   await genericMethods.typeText(aovZzpElements.zzpYourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(aovZzpElements.zzpYyourDataLastNameElement, personaData.getPersonaLastName(persona));
   await aovZzpMethods.clickYourDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(aovZzpElements.zzpYourDataBirthdate, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(aovZzpElements.zzpYourDataBirthPlace, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
-  await aovZzpMethods.selectYourDataSpecificIdentification(personaData.getPersonaSpecificIdentification(persona), persona);
-  await genericMethods.typeText(aovZzpElements.zzpYourDataBSNnumberElement, personaData.getPersonaBsn(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataEmailAddress, personaData.getPersonaEmailAddress(persona));
-  await genericMethods.typeText(aovZzpElements.zzpOtherDataProfessionElement, personaData.getPersonaProfession(persona));
-  await genericMethods.typeText(aovZzpElements.zzpOtherDataKvkNumberElement, personaData.getPersonaKvkNumber(persona));
+  await genericMethods.typeText(aovZzpElements.zzpYourDataBSNnumberElement, personaData.getPersonaBsn(persona));
   await aovZzpMethods.selectYourDataDurationEntrepreneur(personaData.getPersonaDurationEntrepreneur(persona));
   await genericMethods.typeText(aovZzpElements.aovZzpAccountNumberDataElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(aovZzpElements.aovZzpAccountNumberDataElement);
@@ -30,22 +25,19 @@ When(/^I enter step two page of aovZzp for persona (.*)$/, async (persona: strin
   await aovZzpMethods.clickOnNextButton();
 });
 
-When(/^I enter step three page of aovZzp for (.*) with$/, async (persona: string, data) => {
+When(/^I enter step two page of aovZzp for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
+  await genericMethods.typeText(aovZzpElements.zzpYourDataBirthdate, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(aovZzpElements.aovZzpHeightElement, personaData.getPersonaHeight(persona));
   await genericMethods.typeText(aovZzpElements.aovZzpWeightElement, personaData.getPersonaWeight(persona));
   await aovZzpMethods.clickHealthCertificate14DaysNotAbleToWork(dataTable.notWorkForFourteenDays);
-  await aovZzpMethods.clickHealthCertificateHeartComplaints(dataTable.heartComplaints);
-  await aovZzpMethods.clickHealthCertificateCancer(dataTable.cancer);
-  await aovZzpMethods.clickHealthCertificatePsychologist(dataTable.psychologist);
-  await aovZzpMethods.clickHealthCertificatePosturalComplaints(dataTable.posturalComplaints);
-  await aovZzpMethods.clickHealthCertificateOtherCondition(dataTable.otherCondition);
+  await aovZzpMethods.clickHealthCertificateConsultedDoctor(dataTable.consultedDoctor);
   await aovZzpMethods.clickHealthCertificateMedicines(dataTable.medicines);
   await aovZzpMethods.clickHealthCertificateDisabilityBenefit(dataTable.disabilityBenefit);
   await aovZzpMethods.clickOnNextButton();
 });
 
-When(/^I enter step four page of aovZzp with$/, async (data) => {
+When(/^I enter step three page of aovZzp with$/, async (data) => {
   const dataTable = data.rowsHash();
   await aovZzpMethods.clickKnowledgeLifeInsurance(dataTable.lifeInsurance);
   await aovZzpMethods.clickKnowledgeIncomeIncapacitated(dataTable.incomeIncapacitated);
@@ -58,12 +50,11 @@ When(/^I enter step four page of aovZzp with$/, async (data) => {
 
 When(/^I enter step five page of aovZzp with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await aovZzpMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
+  await aovZzpMethods.selectInsuranceHistory(dataTable.insuranceHistory);
   await aovZzpMethods.selectCriminalHistory(dataTable.criminalHistory);
   await aovZzpMethods.selectDamageHistory(dataTable.damageHistory);
   await aovZzpMethods.clickOnFinishButton()
 });
-
 
 Then(/^Thank you page for aovZzp (.*) is shown$/, async (persona: string) => {
   await aovZzpMethods.verifyThankYouPageText(persona);
