@@ -1,5 +1,4 @@
 import {Then, When} from 'cucumber';
-import {genericEnum} from "../../../pageobjects/enum/genericEnum";
 import {aovZzpElements, aovZzpMethods, genericMethods, personaData} from "../../../support";
 
 When(/^I enter step one page of aovZzp with premie of (.*)$/, async (premie: string) => {
