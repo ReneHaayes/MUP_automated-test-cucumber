@@ -33,3 +33,6 @@ Then(/^Verify question is accepted with a confirmation text for klachtenformulie
   await genericMethods.verifyTextInElement(klachtenFormulierElements.klachtFormConfirmationTextElement, klachtenFormulierElements.klachtFormConfirmationText);
 });
 
+Then(/^Verify question is accepted with a confirmation text for klachtenformulier zorg$/, async () => {
+  await genericMethods.verifyTextInElement(klachtenFormulierElements.klachtFormConfirmationTextElement, klachtenFormulierElements.klachtFormSecondConfirmationText);
+});

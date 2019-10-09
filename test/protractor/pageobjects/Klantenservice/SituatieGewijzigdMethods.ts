@@ -8,7 +8,7 @@ export class SituatieGewijzigdMethods {
       case 'verhuizing': {
         await genericMethods.verifyBreadcrumbOnPosition('Klantenservice', 2);
         await genericMethods.verifyBreadcrumbOnPosition('Verhuizing', 3);
-        await genericMethods.verifyTextInElement(situatieGewijzigdElements.situatieGewijzigdHeaderElement, 'Verhuizing');
+        await genericMethods.verifyTextInElement(situatieGewijzigdElements.situatieGewijzigdHeaderElement, 'Verhuizing doorgeven');
         break;
       }
       case 'trouwen': {

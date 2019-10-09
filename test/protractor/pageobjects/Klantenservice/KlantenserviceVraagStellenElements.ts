@@ -11,7 +11,7 @@ export class KlantenserviceVraagStellenElements {
     buttonSendClickElement = '[name="btnSubmit"]';
 
     // Input Elements Schadeverzekeringen
-    naamStichtingInputElements = '[name="naam-van-de-organisatie"]';
+    uwVraagOfOpmerkingInputElements = '[name="damage__question"]';
     postadresInputElements = '[name="postadres"]';
     plaatsInputElements = '[name="plaats"]';
     websiteInputElements = '[name="website"]';
@@ -20,7 +20,7 @@ export class KlantenserviceVraagStellenElements {
     contactpersoonVoorlettersInputElements = '[name="contactpersoon-voorletters"]';
     contactpersoonAchternaamInputElements = '[name="contactpersoon-achternaam"]';
     telefoonnummerInputElements = '[name="telefoonnummer"]';
-    emailAdresInputElements = '[name="e-mailadres-contactpersoon"]';
+    emailAdresInputElements = '[name="personal_data__email"]';
     omschrijvingSponsorAanvraagInputElements = '[name="beschrijving-van-het-sponsorverzoek"]';
     gewenstSponsorbedragInputElements = '[name="gewenst-sponsorbedrag"]';
     publiciteitsmogelijkhedenInputElements = '[name="publiciteit"]';
@@ -28,8 +28,8 @@ export class KlantenserviceVraagStellenElements {
 
     // Radiobuttons Schadeverzekeringen
     stichtingWinstoogmerkJaClickElement = '[class="eforms-input-group"] > label:nth-child(1)';
-    bentUKlantBijUniveJaPrive = '#page0 > div:nth-child(9) > div > label:nth-child(2)';
-    geslachtContactpersoonMan = '#page0 > div:nth-child(14) > div > label:nth-child(1)';
+    bentUKlantBijUniveJaPrive = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
+    geslachtContactpersoonMan = '#field_3 > div:nth-child(6) > div.eforms-input-group > label:nth-child(1)';
     stichtingEerderGesponsordJa = '#page0 > div:nth-child(21) > div > label:nth-child(1)';
 
     // Input Elements Zorgverzekeringen
@@ -99,7 +99,7 @@ export class KlantenserviceVraagStellenElements {
 
     // Confirmation
     vraagStellenConfirmationTextElement = '[class="eforms eforms-generiekEmail"] > div > p';
-    vraagStellenKlachtConfirmationText = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een kopie van uw klacht in uw mailbox.';
+    vraagStellenKlachtConfirmationText = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een bevestiging van uw klacht in uw mailbox.';
     vraagStellenConfirmationText = 'Hartelijk dank';
 
 }

@@ -3,24 +3,15 @@ import {genericMethods, klantenserviceVraagStellenElements} from "../../support"
 
 When(/^Customer fills in form for schadeverzekeringen vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.naamStichtingInputElements, 'Stichting');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.postadresInputElements, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.plaatsInputElements, 'Zwolle');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.websiteInputElements, 'website.web.nl');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.doelStichtingInputElements, 'Doel');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.hoeveelLedenStichtingInputElements, '94');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.stichtingWinstoogmerkJaClickElement);
+  await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.bentUKlantBijUniveJaPrive);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.contactpersoonVoorlettersInputElements, 'AB');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.contactpersoonAchternaamInputElements, 'Test');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'AB');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.geslachtContactpersoonMan);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.telefoonnummerInputElements, '0109084598');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-2000');
   await genericMethods.typeText(klantenserviceVraagStellenElements.emailAdresInputElements, 'info@univee.nl');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.omschrijvingSponsorAanvraagInputElements, 'Omschrijving');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.gewenstSponsorbedragInputElements, '99999');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.publiciteitsmogelijkhedenInputElements, 'geen');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.stichtingEerderGesponsordJa);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.toelichtingInputElements, 'Toelichting');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 
