@@ -3,16 +3,12 @@ import {genericMethods, schadeBeslisboomElements} from "../../support";
 
 // Auto Oldtimer Steps:
 
-When(/^Customer clicks on button Auto or Oldtimer$/, async () => {
+When(/^Customer clicks on button Vervoer$/, async () => {
     await genericMethods.clickOnElement(schadeBeslisboomElements.vervoerButtonElement);
 });
 
-When(/^Customer clicks on button Aanrijding$/, async () => {
-    await genericMethods.clickOnElement(schadeBeslisboomElements.aanrijdingButtonElement);
-});
-
-When(/^Customer clicks on button Moet ik mijn schade wel of niet melden$/, async () => {
-    await genericMethods.clickOnElement(schadeBeslisboomElements.moetIkSchadeMeldenButtonElement);
+When(/^Customer clicks on button Auto$/, async () => {
+    await genericMethods.clickOnElement(schadeBeslisboomElements.autoButtonElement);
 });
 
 When(/^Customer clicks on button Hoe kan ik schade melden bij Unive$/, async () => {
@@ -40,10 +36,6 @@ When(/^Customer clicks on button Ruitschade$/, async () => {
     await genericMethods.clickOnElement(schadeBeslisboomElements.ruitschadeButtonElement);
 });
 
-Then(/^Information text about Moet ik mijn schade wel of niet melden is shown$/, async () => {
-    await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.gevolgenVanSchadeVoorPremieText, 'De gevolgen van een schade voor uw premie', 9);
-});
-
 Then(/^Information text about Hoe kan ik schade melden bij Unive$/, async () => {
     await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.schadeMeldenBijUniveText, 'Schade melden bij Univé', 9);
 });
@@ -68,20 +60,27 @@ Then(/^information text about Ruitschade is shown$/, async () => {
     await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.ruitschadeText, 'Uw autoruit is beschadigd', 9);
 });
 
-// Motor Trike Quad Steps:
-
-When(/^Customer clicks on button Motor Trike Quad$/, async () => {
-    await genericMethods.clickOnElement(schadeBeslisboomElements.motorTrikeQuadButtonElement);
+Then(/^Information text about Wat te doen bij ruischade aan uw auto is shown$/, async () => {
+    await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.ruitschadeText, 'Wat te doen bij ruitschade aan uw auto?', 9);
 });
 
-When(/^Customer clicks on button Aanrijding for Motor$/, async () => {
-    await genericMethods.clickOnElement(schadeBeslisboomElements.aanrijdingMotorButtonElement);
+// Vrije tijd Steps:
+
+When(/^Customer clicks on button Vrije Tijd$/, async () => {
+    await genericMethods.clickOnElement(schadeBeslisboomElements.vrijeTijdButtonElement);
+});
+
+When(/^Customer clicks on button Reis$/, async () => {
+    await genericMethods.clickOnElement(schadeBeslisboomElements.reisButtonElement);
 });
 
 When(/^Customer clicks on button Moet ik mijn schade wel of niet melden for Motor$/, async () => {
     await genericMethods.clickOnElement(schadeBeslisboomElements.moetIkMijnSchadeWelOfNietMeldenButtonElement);
 });
 
+Then(/^information text about Hulp nodig tijdens uw reis is shown$/, async () => {
+    await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.hulpNodigTijdensUwReisText, 'Hulp nodig tijdens uw reis', 9);
+});
 // Bromfiets Scooter Scootmobiel steps
 
 When(/^Customer clicks on button Moet ik mijn schade wel of niet melden for Bromfiets$/, async () => {
@@ -94,10 +93,6 @@ When(/^Customer clicks on button Bromfiets Scooter Scootmobiel$/, async () => {
 
 When(/^Customer clicks on button Aanrijding of Bromfiets$/, async () => {
     await genericMethods.clickOnElement(schadeBeslisboomElements.aanrijdingBromfietsButtonElement);
-});
-
-Then(/^information text about Moet ik mijn schade wel of niet melden for Motor is shown$/, async () => {
-    await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.moetIkMijnSchadeWelOfNietMeldenText, 'De gevolgen van een schade voor uw premie.', 9);
 });
 
 Then(/^information text about Moet ik mijn schade wel of niet melden for Bromfiets is shown$/, async () => {

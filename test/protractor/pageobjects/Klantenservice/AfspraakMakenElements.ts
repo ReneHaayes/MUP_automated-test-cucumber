@@ -5,6 +5,6 @@ export class AfspraakMakenElements {
   selectAlreadyCustomerClickElement: string = '#field_3 > div:nth-child(14) > div > label:nth-child(1)';
 
   confirmationTextElement: string = '[class="eforms-container"] > p';
-  confirmationText: string = 'Hartelijk dank voor uw aanvraag.';
+  confirmationText: string = 'Hartelijk dank';
 
 }

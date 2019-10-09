@@ -21,4 +21,5 @@ export class KlachtenFormulierElements {
   //CONFIRMATION
   klachtFormConfirmationTextElement: string = '[class="eforms eforms-generiekEmail"] > div > p';
   klachtFormConfirmationText: string = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een kopie van uw klacht in uw mailbox.';
+  klachtFormSecondConfirmationText: string = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een bevestiging van uw klacht in uw mailbox.';
 }

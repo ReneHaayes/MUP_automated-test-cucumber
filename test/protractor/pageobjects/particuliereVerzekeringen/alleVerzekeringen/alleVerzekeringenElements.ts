@@ -3,10 +3,10 @@ export class AlleVerzekeringenElements {
   //SELECT DROPDOWN
   selectVerzekeringenDropdownElement: string = '[class="eforms-dropdownBox"]';
   alleUniveVerzekeringenSelectElement: string = '0';
-  uwGezondheidSelectElement: string = '1';
-  uwVrijeTijdSelectElement: string = '2';
-  uwVervoerSelectElement: string = '3';
-  uwHuisSelectElement: string = '4';
+  uwGezondheidSelectElement: string = '3';
+  uwVrijeTijdSelectElement: string = '4';
+  uwVervoerSelectElement: string = '1';
+  uwHuisSelectElement: string = '2';
   uwRechtSelectElement: string = '5';
   uwFinancieleToekomstSelectElement: string = '6';
   uwNabestaandenSelectElement: string = '7';
@@ -19,7 +19,7 @@ export class AlleVerzekeringenElements {
   zorgVerzekeringPageH1TitleText: string = 'Zorgverzekering';
   collectieveZorgVerzekeringH1TitleTextElement: string = '[class="actionSidebar_title"]';
   collectieveZorgVerzekeringH1TitleText: string = 'Collectieve zorgverzekering van Univé';
-  ongevallenVerzekeringH1TitleText: string = 'Ongevallen\n' + 'verzekering';
+  ongevallenVerzekeringH1TitleText: string = 'Ongevallenverzekering';
   doorlopendeReisVerzekeringH1TitleText: string = 'Doorlopende\n' + 'reisverzekering';
   kortlopendeReisVerzekeringH1TitleText: string = 'Kortlopende reisverzekering';
   annuleringsVerzekeringH1TitleText: string = 'Annulerings verzekering';

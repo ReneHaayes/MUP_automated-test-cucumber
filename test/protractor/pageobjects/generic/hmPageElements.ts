@@ -50,7 +50,7 @@ export class HmPageElements {
   zorgPremieBerekenPageCheckElement: string = '[class="unive-basic-insurances-coverage"]';
 
   //REISVERZEKERING
-  homePageReisverzekeringElement: string = '[href*="/zorgservice/alternatievezorg"][class*="insurances_tabLinkAction"]';
+  homePageReisverzekeringElement: string = '[href*="/doorlopende-reisverzekering"][class*="insurances_tabLinkAction"]';
   berekenUwPremieReisVerzekeringClickButton: string = '[class*="inlineAnchor_button"][href*="/doorlopende-reisverzekering/premieberekenen-en-afsluiten"]';
   doorlopendeReisverzekeringProductPageBerekenUwPremieButton: string = '[class*="simpleWidget_submit"]';
 
