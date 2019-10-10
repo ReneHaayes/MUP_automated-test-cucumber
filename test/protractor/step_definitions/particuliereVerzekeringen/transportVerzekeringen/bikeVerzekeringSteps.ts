@@ -1,15 +1,5 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {BikeElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/bikeElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let bikeElements: BikeElements = new BikeElements();
-let personaData: PersonaData = new PersonaData();
-let nawElements: NawElements = new NawElements();
-let genericElements: GenericElements = new GenericElements();
+import {bikeElements, genericElements, genericMethods, nawElements, personaData} from "../../../support";
 
 When(/^I enter step one and step two page of fiets verzekeringen for persona (.*) with:$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
@@ -40,7 +30,7 @@ When(/^I enter details of (.*) in your data page of fiets verzekeringen$/, async
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthdDayElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));

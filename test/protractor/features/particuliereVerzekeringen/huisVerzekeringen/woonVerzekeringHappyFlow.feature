@@ -1,6 +1,6 @@
-@woonVerzekering
+@woonverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'woonVerzekering'
+Feature: Happy flow for 'woonverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Woonverzekering page of the Unive website

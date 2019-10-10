@@ -1,17 +1,11 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {ScootMobielVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/scootMobielVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let scootMobielVerzekeringElements: ScootMobielVerzekeringElements = new ScootMobielVerzekeringElements();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
-
-
+import {
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  scootMobielVerzekeringElements
+} from "../../../support";
 
 When(/^I enter step one page and click next on step two of scootmobiel verzekering with:$/, async function (data) {
   const dataTable = data.rowsHash();
@@ -39,7 +33,7 @@ When(/^I enter details of (.*) in your data page of scootmobiel verzekeringen$/,
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthdDayElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));

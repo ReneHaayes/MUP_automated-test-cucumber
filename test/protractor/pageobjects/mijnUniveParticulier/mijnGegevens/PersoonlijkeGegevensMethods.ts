@@ -1,10 +1,6 @@
 import {PaymentData} from "../../enum/MijnUniveParticulierEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {MijnUniveAccountElements} from "../mijnUniveAccount/mijnUniveAccountElements";
 import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let mijnUniveAccountElements: MijnUniveAccountElements = new MijnUniveAccountElements();
+import {genericMethods, mijnUniveAccountElements} from "../../../support";
 
 export class PersoonlijkeGegevensMethods {
 

@@ -1,11 +1,5 @@
 import {browser} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {CamperVerzekeringElements} from "./camperVerzekeringElements";
-import {CamperWithLicensePlate} from "../../vehicles/camperWithLicensePlate";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let camperVerzekeringElements: CamperVerzekeringElements = new CamperVerzekeringElements();
-let camperWithLicensePlate: CamperWithLicensePlate = new CamperWithLicensePlate();
+import {camperVerzekeringElements, camperWithLicensePlate, genericMethods} from "../../../support";
 
 export class CamperVerzekeringMethods {
 

@@ -1,17 +1,12 @@
 import {When} from "cucumber";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {CaravanVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/caravanVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let caravanVerzekeringElements: CaravanVerzekeringElements = new CaravanVerzekeringElements();
-let nawElements: NawElements = new NawElements();
-let vehicleElements: VehicleElements = new VehicleElements();
-let personaData: PersonaData = new PersonaData();
+import {
+  caravanVerzekeringElements,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  vehicleElements
+} from "../../../support";
 
 When(/^I enter step one and click next on step two of caravan verzekering$/, async () => {
   await genericMethods.clickOnElement(caravanVerzekeringElements.tourCaravanClickElement);
@@ -43,7 +38,7 @@ When(/^I enter step three page of caravanverzekering for (.*) with:$/, async (pe
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthdDayElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));

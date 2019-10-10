@@ -1,22 +1,11 @@
 import {When} from "cucumber";
 import {browser} from "protractor";
-import {AansprakelijkheidsVerzekeringMethods} from "../../../pageobjects/particuliereVerzekeringen/rechtVerzekeringen/aansprakelijkheidsVerzekeringMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {ZorgeloosOnlineVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/onlineVeiligheidVerzekeringen/zorgeloosOnlineVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {ZorgeloosOnlineVerzekeringMethods} from "../../../pageobjects/particuliereVerzekeringen/onlineVeiligheidVerzekeringen/zorgeloosOnlineVerzekeringMethod";
-import {CompanyData} from "../../../pageobjects/persona/company";
-
-let aansprakelijkheidsVerzekeringMethods: AansprakelijkheidsVerzekeringMethods = new AansprakelijkheidsVerzekeringMethods();
-let zorgeloosOnlineVerzekeringElements: ZorgeloosOnlineVerzekeringElements = new ZorgeloosOnlineVerzekeringElements();
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let nawElements: NawElements = new NawElements();
-let personaData: PersonaData = new PersonaData();
-let zorgeloosOnlineVerzekeringMethod: ZorgeloosOnlineVerzekeringMethods = new ZorgeloosOnlineVerzekeringMethods();
-let companyData: CompanyData = new CompanyData();
+import {
+  aansprakelijkheidsVerzekeringMethods, companyData, genericElements,
+  genericMethods,
+  nawElements, personaData, zorgeloosOnlineVerzekeringElements,
+  zorgeloosOnlineVerzekeringMethod
+} from "../../../support";
 
 When(/^I enter step one page of zorgeloos onlineverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await aansprakelijkheidsVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
@@ -34,7 +23,7 @@ When(/^I enter details of (.*) on step three page of zorgeloos onlineverzekering
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthdDayElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));

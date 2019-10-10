@@ -1,27 +1,14 @@
-import {GenericMethods} from "./genericMethods";
-import {HmPageElements} from "./hmPageElements";
 import {homePageEnum} from "../enum/woonVerzekeringEnum";
-import {AansprakelijkheidsVerzekerElements} from "../particuliereVerzekeringen/rechtVerzekeringen/aansprakelijkheidsVerzekerElements";
 import {browser} from "protractor";
-import {ReisVerzekeringElements} from "../particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
-import {ProductPageElements} from "./productPageElements";
-import {GetUrlUnive} from "./getUrlUnive";
 import {verzekeringPaginasEnum} from "../enum/genericEnum";
-import {AovZzpElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpElements";
-import {ZakelijkRechtsBijstandVerzekeringElements} from "../zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
-import {EigenVervoerVerzekeringElements} from "../zakelijkeVerzekeringen/mobiliteitsVerzekeringen/eigenVervoerVerzekeringElements";
-import {GenericElements} from "./genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let hmPageElements: HmPageElements = new HmPageElements();
-let aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
-let reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
-let productPageElements: ProductPageElements = new ProductPageElements();
-let getUrlUnive: GetUrlUnive = new GetUrlUnive();
-let aovZzpElements: AovZzpElements = new AovZzpElements();
-let zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVerzekeringElements = new ZakelijkRechtsBijstandVerzekeringElements;
-let eigenVervoerVerzekeringElements: EigenVervoerVerzekeringElements = new EigenVervoerVerzekeringElements;
+import {
+  aansprakelijkheidsVerzekerElements,
+  aovZzpElements,
+  eigenVervoerVerzekeringElements,
+  genericElements, genericMethods,
+  getUrlUnive, hmPageElements,
+  productPageElements, reisVerzekeringElements, situatieGewijzigdElements, zakelijkRechtsBijstandVerzekeringElements
+} from "../../support";
 
 export class HmPageMethods {
 
@@ -361,8 +348,9 @@ export class HmPageMethods {
       case homePageEnum.KLANTENSERVICE: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.KLANTENSERVICE);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.klantenServiceBreadcrumbElement, browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, hmPageElements.klantenServiceTitleText);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KLANTENSERVICE, 2);
+        await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, verzekeringPaginasEnum.KLANTENSERVICE);
         break;
       }
       case homePageEnum.ONDERNEMERSCAN: {
@@ -484,9 +472,10 @@ export class HmPageMethods {
       case homePageEnum.VERZEKERING_WIJZIGEN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.VERZEKERING_WIJZIGEN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveEmailInputElement, browser.getPageTimeout);
-        await genericMethods.waitForElementIsVisible(hmPageElements.mijnUnivePasswordInputElement, browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveLoginTitleTextElement, hmPageElements.mijnUniveLoginTitleText);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KLANTENSERVICE, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.WIJZIGINGEN_DOORGEVEN, 3);
+        await genericMethods.verifyTextInElementIgnoreCase(situatieGewijzigdElements.situatieGewijzigdHeaderElement, verzekeringPaginasEnum.WIJZIGINGEN_DOORGEVEN);
         break;
       }
       default: {

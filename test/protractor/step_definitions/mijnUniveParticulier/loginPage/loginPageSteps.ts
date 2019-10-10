@@ -1,18 +1,7 @@
 import {Given, Then, When} from 'cucumber';
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {LoginPageElements} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
-import {LoginPageMethods} from "../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
-import {PersonaData} from "../../../pageobjects/persona/persona";
 import {verzekeringPaginasEnum} from "../../../pageobjects/enum/genericEnum";
 import {browser} from "protractor";
-
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let loginPageElements: LoginPageElements = new LoginPageElements();
-let loginPageMethods: LoginPageMethods = new LoginPageMethods();
-let personaData: PersonaData = new PersonaData();
+import {genericElements, genericMethods, loginPageElements, loginPageMethods, personaData} from "../../../support";
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);

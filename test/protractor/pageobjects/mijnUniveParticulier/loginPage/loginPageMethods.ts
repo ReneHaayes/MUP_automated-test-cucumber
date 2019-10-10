@@ -1,15 +1,7 @@
-import {LoginPageElements} from "./loginPageElements";
 import {browser} from "protractor";
 import {veelgesteldeVragenEnum} from "../../enum/veelgesteldeVragenEnum";
 import {verzekeringPaginasEnum} from "../../enum/genericEnum";
-import {PersonaData} from "../../persona/persona";
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let loginPageElements: LoginPageElements = new LoginPageElements();
-let personaData: PersonaData = new PersonaData();
+import {genericElements, genericMethods, loginPageElements, personaData} from "../../../support";
 
 export class LoginPageMethods {
 

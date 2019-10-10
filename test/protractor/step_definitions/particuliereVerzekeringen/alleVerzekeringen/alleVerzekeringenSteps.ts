@@ -1,11 +1,5 @@
 import {Then, When} from "cucumber";
-import {AlleVerzekeringenMethods} from "../../../pageobjects/particuliereVerzekeringen/alleVerzekeringen/alleVerzekeringenMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let alleVerzekeringenMethods: AlleVerzekeringenMethods = new AlleVerzekeringenMethods();
+import {alleVerzekeringenMethods, genericElements, genericMethods} from "../../../support";
 
 When(/^I select (.*) and click on (.*) at the alle verzekeringen page$/, async (select: string, buttonPage: string) => {
   await alleVerzekeringenMethods.selectAlleVerzekeringDropdown(select);

@@ -1,6 +1,6 @@
-@moped
+@moped @bromfietsverzekering @scooterverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'Bromfiets Verzekering' and 'Scooter Verzekering'
+Feature: Happy flow for 'Bromfietsverzekering' and 'Scooterverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the <page> page of the Unive website

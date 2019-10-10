@@ -1,6 +1,6 @@
-@caravanVerzekering
+@caravanverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'caravan verzekering'
+Feature: Happy flow for 'caravanverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Caravanverzekering page of the Unive website

@@ -2,10 +2,10 @@ export class BedrijfsAutoVerzekeringElements {
 
   //LICENSEPLATE ELEMENT
   licensePlateElement: string = '#_Form_IF20009_3611';
-  licensePlatePersonenAutoElement: string = '#_Form_IF2506_3611';
+  licensePlatePersonenAutoElement: string = '[data-label-id="LA_IF20009_3611"]';
   brandElementXpath: string = '//*[@data-label-id="LA_IF20011_31572"]/descendant::*';
   brandNameElement: string = '[data-label-id="LA_IF20011_31572"]';
-  brandNamePersonenAutoElement: string = '[data-label-id="LA_IF2509_3613"]';
+  brandNamePersonenAutoElement: string = '[data-label-id="LA_IF20011_31572"] > span';
   brandModelElement: string = '[data-label-id="LA_IF20011_3614"]';
 
   //BUSINESS OR PRIVATE

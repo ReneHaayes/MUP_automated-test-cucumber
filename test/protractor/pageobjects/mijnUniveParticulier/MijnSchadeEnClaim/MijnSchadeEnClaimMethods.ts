@@ -1,8 +1,4 @@
-import {GenericMethods} from "../../generic/genericMethods";
-import {MijnSchadeEnClaimElements} from "./MijnSchadeEnClaimElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let mijnSchadeEnClaimElements: MijnSchadeEnClaimElements = new MijnSchadeEnClaimElements();
+import {genericMethods, mijnSchadeEnClaimElements} from "../../../support";
 
 export class MijnSchadeEnClaimMethods {
 

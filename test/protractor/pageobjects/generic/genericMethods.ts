@@ -1,24 +1,14 @@
 import {browser, by, element, ElementFinder, protractor} from 'protractor';
-import {GetUrlUnive} from "./getUrlUnive";
-
 import * as chai from 'chai';
 import * as chaistring from 'chai-string';
-import {GenericElements} from "./genericElements";
-import {PersonaData} from "../persona/persona";
 import {dateEnum, gender, genericEnum, specificIdentification} from "../enum/genericEnum";
-import {NawElements} from "./nawElements";
 import {legalEnum} from "../enum/autoVerzekeringEnum";
 import * as path from "path";
+import {genericElements, getUrlUnive, nawElements, personaData} from "../../support";
 
 chai.use(chaistring);
 const expect = chai.expect;
-
 const ec = protractor.ExpectedConditions;
-
-let getUrlUnive: GetUrlUnive = new GetUrlUnive();
-let genericElements: GenericElements = new GenericElements();
-let personaData: PersonaData = new PersonaData();
-let nawElements: NawElements = new NawElements();
 
 export class GenericMethods {
 

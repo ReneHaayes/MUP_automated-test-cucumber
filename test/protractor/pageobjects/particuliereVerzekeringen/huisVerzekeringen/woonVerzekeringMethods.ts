@@ -8,19 +8,8 @@ import {
   totalSurface,
   materialEnum
 } from "../../enum/woonVerzekeringEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {GenericElements} from "../../generic/genericElements";
-import {WoonVerzekeringElements} from "./woonVerzekeringElements";
 import {genericEnum} from "../../enum/genericEnum";
-import {HmPageElements} from "../../generic/hmPageElements";
-import {PersonaData} from "../../persona/persona";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let woonVerzekeringElements: WoonVerzekeringElements = new WoonVerzekeringElements();
-let hmPageElements: HmPageElements = new HmPageElements();
-let personaData: PersonaData = new PersonaData();
-
+import {genericElements, genericMethods, hmPageElements, personaData, woonVerzekeringElements} from "../../../support";
 
 export class WoonVerzekeringMethods {
 

@@ -1,17 +1,7 @@
 import {browser, by, element, ElementFinder} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {AovZzpElements} from "./aovZzpElements";
 import {incapacitation, AovZzpUwpremie} from "../../enum/aovZzpEnum";
-import {GenericElements} from "../../generic/genericElements";
 import {durationEntrepreneur, gender, specificIdentification, genericEnum} from "../../enum/genericEnum";
-import {PersonaData} from "../../persona/persona";
-
-// @ts-ignore
-let genericMethods: GenericMethods = new GenericMethods();
-let aovZzpElements: AovZzpElements = new AovZzpElements();
-let genericElements: GenericElements = new GenericElements();
-let personaData: PersonaData = new PersonaData();
-
+import {aovZzpElements, genericElements, genericMethods, personaData} from "../../../support";
 
 export class AovZzpMethods {
 
@@ -176,88 +166,16 @@ export class AovZzpMethods {
     }
   }
 
-  async clickHealthCertificateHeartComplaints(input: string) {
+  async clickHealthCertificateConsultedDoctor(input: string) {
     switch (input) {
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateHeartComplaintsNoElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateConsultedDoctorNoElement);
         break;
       }
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateHeartComplaintsYesElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async clickHealthCertificateCancer(input: string) {
-    switch (input) {
-      case genericEnum.NO: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateCancerNoElement);
-        break;
-      }
-      case genericEnum.YES: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateCancerYesElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async clickHealthCertificatePsychologist(input: string) {
-    switch (input) {
-      case genericEnum.NO: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePsychologistNoElement);
-        break;
-      }
-      case genericEnum.YES: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePsychologistYesElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async clickHealthCertificatePosturalComplaints(input: string) {
-    switch (input) {
-      case genericEnum.NO: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePosturalComplaintsNoElement);
-        break;
-      }
-      case genericEnum.YES: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificatePosturalComplaintsYesElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  async clickHealthCertificateOtherCondition(input: string) {
-    switch (input) {
-      case genericEnum.NO: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateOtherConditionNoElement);
-        break;
-      }
-      case genericEnum.YES: {
-        await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateOtherConditionYesElement);
+        await genericMethods.clickOnElement(aovZzpElements.aovZzpHealthCertificateConsultedDoctorYesElement);
         break;
       }
       default: {
@@ -435,7 +353,7 @@ export class AovZzpMethods {
     }
   }
 
-  async selectInsuranceHistory(input: string, explanation: string) {
+  async selectInsuranceHistory(input: string) {
     await genericMethods.waitForElementIsVisible(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.NO: {
@@ -444,7 +362,6 @@ export class AovZzpMethods {
       }
       case genericEnum.YES: {
         await genericMethods.clickOnElement(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryYesElement);
-        await genericMethods.typeText(aovZzpElements.aovZzpAlmostInsuredInsuranceHistoryYesExplanationElement, explanation);
         break;
       }
       default: {

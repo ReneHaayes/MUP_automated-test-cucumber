@@ -1,18 +1,15 @@
-import {GenericMethods} from '../generic/genericMethods';
-import {SituatieGewijzigdElements} from './SituatieGewijzigdElements';
 import {browser} from 'protractor';
-
-const genericMethods: GenericMethods = new GenericMethods();
-const situatieGewijzigdElements: SituatieGewijzigdElements = new SituatieGewijzigdElements();
+import {genericMethods, situatieGewijzigdElements} from "../../support";
 
 export class SituatieGewijzigdMethods {
 
+  //TODO: make enums!
   async checkSituatieGewijzigdPage(input: string) {
     switch (input) {
       case 'verhuizing': {
         await genericMethods.verifyBreadcrumbOnPosition('Klantenservice', 2);
         await genericMethods.verifyBreadcrumbOnPosition('Verhuizing', 3);
-        await genericMethods.verifyTextInElement(situatieGewijzigdElements.situatieGewijzigdHeaderElement, 'Verhuizing');
+        await genericMethods.verifyTextInElement(situatieGewijzigdElements.situatieGewijzigdHeaderElement, 'Verhuizing doorgeven');
         break;
       }
       case 'trouwen': {

@@ -1,37 +1,23 @@
-// @ts-ignore
-import {Given, When, Then} from 'cucumber';
-import {AutoVerzekeringMethods} from '../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringMethods';
+import {When} from 'cucumber';
 import {browser} from 'protractor';
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
-import {AutoVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {AutoVerzekeringElementsStepThree} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElementsStepThree";
-import {AutoVerzekeringMethodsStepThreeAndFour} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringMethodsStepThreeAndFour";
-import {VehicleElements} from "../../../pageobjects/generic/vehicleElements";
-import {CarWithLicensePlate} from "../../../pageobjects/vehicles/carWithLicensePlate";
-import {CompanyData} from "../../../pageobjects/persona/company";
+import {
+  autoVerzekeringElements,
+  autoVerzekeringElementsStepThree, autoVerzekeringMethods, autoVerzekeringMethodsStepThreeAndFour,
+  carWithLicensePlate, companyData, genericElements,
+  genericMethods,
+  nawElements, personaData,
+  vehicleElements
+} from "../../../support";
 
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let autoVerzekeringMethods: AutoVerzekeringMethods = new AutoVerzekeringMethods();
-let autoVerzekeringMethodsStepThreeAndFour: AutoVerzekeringMethodsStepThreeAndFour = new AutoVerzekeringMethodsStepThreeAndFour();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree = new AutoVerzekeringElementsStepThree();
-let nawElements: NawElements = new NawElements();
-let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
-let personaData: PersonaData = new PersonaData();
-let vehicleElements: VehicleElements = new VehicleElements();
-let companyData: CompanyData = new CompanyData();
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
   await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
-  await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeElement, personaData.getPersonaZipcode(persona));
-  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeElement);
+  await autoVerzekeringMethods.selectWhoDrivesTheCarTheMost(dataTable.whoDrivesCarMost);
+  await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateAfterFixElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeAfterFixElement, personaData.getPersonaZipcode(persona));
+  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive(dataTable.alreadyMember);
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
@@ -58,7 +44,7 @@ When(/^I enter step three page of autoverzekering with$/, async (data) => {
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, dataTable.startDateOnYourName);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
-  await autoVerzekeringMethodsStepThreeAndFour.clickOnMainDriver(dataTable.mainDriver);
+  // await autoVerzekeringMethodsStepThreeAndFour.clickOnMainDriver(dataTable.mainDriver); has been commented out because of a change, this rule can be deleted
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar(dataTable.ownerCar);
   await genericMethods.clickOnNextButton();
 });
@@ -68,7 +54,7 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));

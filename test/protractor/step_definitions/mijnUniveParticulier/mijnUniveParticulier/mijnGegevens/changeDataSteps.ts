@@ -1,31 +1,14 @@
 import {Then, When} from "cucumber";
-import {GenericMethods} from "../../../../pageobjects/generic/genericMethods";
-import {ApiMethods} from "../../../../pageobjects/api/apiMethods";
-import {ApiElements} from "../../../../pageobjects/api/apiElements";
-import {MijnUniveAccountElements} from "../../../../pageobjects/mijnUniveParticulier/mijnUniveAccount/mijnUniveAccountElements";
-import {PersonaData} from "../../../../pageobjects/persona/persona";
 import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
 import {browser} from "protractor";
-import {MailhogMethods} from "../../../../pageobjects/mijnUniveParticulier/mail/MailhogMethods";
-import {HmPageElements} from "../../../../pageobjects/generic/hmPageElements";
-import {LoginPageElements} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageElements";
-import {GenericElements} from "../../../../pageobjects/generic/genericElements";
-import {LoginPageMethods} from "../../../../pageobjects/mijnUniveParticulier/loginPage/loginPageMethods";
-import {PersoonlijkeGegevensElements} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/persoonlijkeGegevensElements";
-import {PersoonlijkeGegevensMethods} from "../../../../pageobjects/mijnUniveParticulier/mijnGegevens/PersoonlijkeGegevensMethods";
+import {
+  apiElements,
+  apiMethods, genericElements,
+  genericMethods, hmPageElements, loginPageElements, loginPageMethods, mailhogMethods,
+  mijnUniveAccountElements, personaData,
+  persoonlijkeGegevensElements, persoonlijkeGegevensMethods
+} from "../../../../support";
 
-let genericMethods: GenericMethods = new GenericMethods();
-let genericElements: GenericElements = new GenericElements();
-let apiMethods: ApiMethods = new ApiMethods();
-let apiElements: ApiElements = new ApiElements();
-let mijnUniveAccountElements: MijnUniveAccountElements = new MijnUniveAccountElements();
-let personaData: PersonaData = new PersonaData();
-let mailhogMethods: MailhogMethods = new MailhogMethods();
-let hmPageElements: HmPageElements = new HmPageElements();
-let loginPageElements: LoginPageElements = new LoginPageElements();
-let loginPageMethods: LoginPageMethods = new LoginPageMethods();
-let persoonlijkeGegevensElements: PersoonlijkeGegevensElements = new PersoonlijkeGegevensElements();
-let persoonlijkeGegevensMethods: PersoonlijkeGegevensMethods = new PersoonlijkeGegevensMethods();
 
 When(/^Customer changes password for (.*) with (.*)$/, async (persona: string, newPassword: string) => {
   await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);

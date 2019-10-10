@@ -1,6 +1,6 @@
-@oldtimerVerzekering
+@oldtimerverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'oldtimer verzekering'
+Feature: Happy flow for 'oldtimerverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Oldtimerverzekering page of the Unive website

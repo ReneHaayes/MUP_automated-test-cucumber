@@ -24,6 +24,7 @@ export class HmPageElements {
   //LICENSE PLATE
   licensePlateWidgetInputElement: string = '#kenteken';
   licensePlateWidgetButtonElement: string = '[data-funnel-personenauto="/autoverzekering/premieberekenen-en-afsluiten"] [class*="simpleWidget_submit"]';
+  licensePlateWidgetBusinessButtonElement = '[class*="simpleWidget_submit"]';
   licensePlateWidgetButtonProductPageElement: string = '[class*="simpleWidget_submit"]';
   licensePlateWidgetDontKnowElement: string = '[class="simpleWidget_link"]';
   licensePlateWidgetDontKnowProductPageElement: string = '[class="simpleWidget_link"]';
@@ -49,7 +50,7 @@ export class HmPageElements {
   zorgPremieBerekenPageCheckElement: string = '[class="unive-basic-insurances-coverage"]';
 
   //REISVERZEKERING
-  homePageReisverzekeringElement: string = '[href*="/zorgservice/alternatievezorg"][class*="insurances_tabLinkAction"]';
+  homePageReisverzekeringElement: string = '[href*="/doorlopende-reisverzekering"][class*="insurances_tabLinkAction"]';
   berekenUwPremieReisVerzekeringClickButton: string = '[class*="inlineAnchor_button"][href*="/doorlopende-reisverzekering/premieberekenen-en-afsluiten"]';
   doorlopendeReisverzekeringProductPageBerekenUwPremieButton: string = '[class*="simpleWidget_submit"]';
 
@@ -57,7 +58,7 @@ export class HmPageElements {
   menuPageWoonverzekeringClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/woonverzekering"]';
   menuPageCaravanverzekeringClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/caravanverzekering"]';
   menuPageZorgnotaDeclarerenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zorgverzekering/declareren"]';
-  menuPageVerzekeringWijzigenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/mijnunive/polisoverzicht"]';
+  menuPageVerzekeringWijzigenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="klantenservice/wijzigingen-doorgeven"]';
   menuPageUniveAlarmcentraleClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/klantenservice/alarmcentrale"]';
 
   //ZAKELIJK MENU PAGE
@@ -104,7 +105,7 @@ export class HmPageElements {
   overUniveTitleText: string = 'Over Univé';
   footerZipcodeInputElement: string = '[class="mainFooterContent_contactOptionQuery"]';
   footerZipcodeClickElement: string = '[class="mainFooterContent_contactOptionSubmitForm"]';
-  footerKlantenServiceClickElement: string = '[class="mainFooterContent_contactOptionTitle"] [href*="klantenservice"]';
+  footerKlantenServiceClickElement: string = '[class="inlineAnchor_button--primary"][href*="klantenservice"]';
   klantenServiceBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Klantenservice"]';
   klantenServiceTitleTextElement: string = '[class="clientService_title"]';
   klantenServiceTitleText: string = 'Klantenservice';

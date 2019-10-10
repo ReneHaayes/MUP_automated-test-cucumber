@@ -1,10 +1,5 @@
-import {Then, When} from 'cucumber';
-import {GenericMethods} from '../../pageobjects/generic/genericMethods';
-import { KlachtenFormulierElements } from '../../pageobjects/Klantenservice/KlachtenFormulierElements';
-
-const genericMethods: GenericMethods = new GenericMethods();
-const klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
-
+import {Then, When} from "cucumber";
+import {genericMethods, klachtenFormulierElements} from "../../support";
 
 When(/^Customer fills in form for zorgverzekering klacht$/, async () => {
   await genericMethods.clickOnElement(klachtenFormulierElements.zorgVerzekeringButtonClickElement);
@@ -38,3 +33,6 @@ Then(/^Verify question is accepted with a confirmation text for klachtenformulie
   await genericMethods.verifyTextInElement(klachtenFormulierElements.klachtFormConfirmationTextElement, klachtenFormulierElements.klachtFormConfirmationText);
 });
 
+Then(/^Verify question is accepted with a confirmation text for klachtenformulier zorg$/, async () => {
+  await genericMethods.verifyTextInElement(klachtenFormulierElements.klachtFormConfirmationTextElement, klachtenFormulierElements.klachtFormSecondConfirmationText);
+});

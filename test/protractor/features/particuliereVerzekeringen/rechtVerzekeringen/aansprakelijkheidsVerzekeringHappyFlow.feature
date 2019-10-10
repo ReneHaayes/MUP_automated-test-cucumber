@@ -1,6 +1,6 @@
-@aansprakelijkheidsVerzekering
+@aansprakelijkheidsverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'Aansprakelijkheids Verzekering'
+Feature: Happy flow for 'Aansprakelijkheidsverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the aansprakelijkheidsverzekering page of the Unive website

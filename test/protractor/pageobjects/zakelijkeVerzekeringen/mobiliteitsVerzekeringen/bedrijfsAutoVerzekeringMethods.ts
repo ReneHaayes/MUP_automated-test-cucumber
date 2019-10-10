@@ -1,17 +1,11 @@
 import {browser} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {BedrijfsAutoVerzekeringElements} from "./bedrijfsAutoVerzekeringElements";
-import {BusinessCarWithLicensePlate} from "../../vehicles/businessCarWithLicensePlate";
 import {basisDekkingEnum, yearlyMileageEnum} from "../../enum/autoVerzekeringEnum";
-import {GenericElements} from "../../generic/genericElements";
-// import {AutoVerzekeringElements} from "./autoVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = new BedrijfsAutoVerzekeringElements();
-let businessCarWithLicensePlate: BusinessCarWithLicensePlate = new BusinessCarWithLicensePlate();
-let genericElements: GenericElements = new GenericElements();
-
-// let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
+import {
+  bedrijfsAutoVerzekeringElements,
+  businessCarWithLicensePlate,
+  genericElements,
+  genericMethods
+} from "../../../support";
 
 export class BedrijfsAutoVerzekeringMethods {
 

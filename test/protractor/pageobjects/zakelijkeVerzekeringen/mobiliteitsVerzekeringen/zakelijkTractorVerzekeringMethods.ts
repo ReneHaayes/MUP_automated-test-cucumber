@@ -1,9 +1,5 @@
 import {maxSpeedEnum} from "../../enum/autoVerzekeringEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {ZakelijkTractorVerzekeringElements} from "./zakelijkTractorVerzekeringElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let zakelijkTractorVerzekeringElements: ZakelijkTractorVerzekeringElements = new ZakelijkTractorVerzekeringElements();
+import {genericMethods, zakelijkTractorVerzekeringElements} from "../../../support";
 
 export class ZakelijkTractorVerzekeringMethods {
 

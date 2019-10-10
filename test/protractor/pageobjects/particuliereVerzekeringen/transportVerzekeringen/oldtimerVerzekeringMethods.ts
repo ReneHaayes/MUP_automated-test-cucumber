@@ -1,12 +1,5 @@
 import {browser} from "protractor";
-import {GenericMethods} from "../../generic/genericMethods";
-import {OldtimerVerzekeringElements} from "./oldtimerVerzekeringElements";
-import {CarWithLicensePlate} from "../../vehicles/carWithLicensePlate";
-
-let genericMethods: GenericMethods = new GenericMethods();
-
-let oldtimerVerzekeringElements: OldtimerVerzekeringElements = new OldtimerVerzekeringElements();
-let carWithLicensePlate: CarWithLicensePlate = new CarWithLicensePlate();
+import {carWithLicensePlate, genericMethods, oldtimerVerzekeringElements} from "../../../support";
 
 export class OldtimerVerzekeringMethods {
 

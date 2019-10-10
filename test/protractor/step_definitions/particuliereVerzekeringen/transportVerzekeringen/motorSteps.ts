@@ -1,19 +1,13 @@
 import {When} from "cucumber";
-import {MotorMethods} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorMethods";
-import {GenericMethods} from "../../../pageobjects/generic/genericMethods";
-import {MotorElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorElements";
-import {PersonaData} from "../../../pageobjects/persona/persona";
-import {NawElements} from "../../../pageobjects/generic/nawElements";
-import {AutoVerzekeringElements} from "../../../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElements";
-import {GenericElements} from "../../../pageobjects/generic/genericElements";
+import {
+  autoVerzekeringElements,
+  genericElements,
+  genericMethods,
+  motorElements, motorMethods,
+  nawElements,
+  personaData
+} from "../../../support";
 
-let motorMethods: MotorMethods = new MotorMethods();
-let genericMethods: GenericMethods = new GenericMethods();
-let motorElements: MotorElements = new MotorElements();
-let personaData: PersonaData = new PersonaData();
-let nawElements: NawElements = new NawElements();
-let autoVerzekeringElements: AutoVerzekeringElements = new AutoVerzekeringElements();
-let genericElements: GenericElements = new GenericElements();
 
 When(/^I enter step one page for motor with license plate (.*) with:$/, async (licensePlate: string, data) => {
   const dataTable = data.rowsHash();
@@ -55,7 +49,7 @@ When(/^I enter details of (.*) in step four page of motor$/, async (persona: str
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
+  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));

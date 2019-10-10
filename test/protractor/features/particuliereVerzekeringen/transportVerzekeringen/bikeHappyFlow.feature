@@ -1,6 +1,6 @@
-@fietsVerzekering
+@fietsverzekering @qis @qisParticulier @qRelease
 
-Feature: Happy flow for 'fiets verzekering'
+Feature: Happy flow for 'fietsverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Fietsverzekering page of the Unive website

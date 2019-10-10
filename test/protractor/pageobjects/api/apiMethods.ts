@@ -1,13 +1,8 @@
 import {HttpClient} from "protractor-http-client/dist/http-client";
 import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
-import {PersonaData} from "../persona/persona";
-import {ApiElements} from "./apiElements";
-import {GenericMethods} from "../generic/genericMethods";
 import {verzekeringPaginasEnum} from "../enum/genericEnum";
+import {apiElements, genericMethods, personaData} from "../../support";
 
-let personaData: PersonaData = new PersonaData();
-let apiElements: ApiElements = new ApiElements();
-let genericMethods: GenericMethods = new GenericMethods();
 
 export class ApiMethods {
 

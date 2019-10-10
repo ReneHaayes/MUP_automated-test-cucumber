@@ -1,4 +1,4 @@
-@homePageParticulier
+@homePageParticulier @hippo @particulierHippo
 
 Feature: Check if the home and alle verzekeringen page shows the buttons correctly.
 
@@ -19,13 +19,11 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
     Then Verify element on product page for <button> is shown
 
     Examples:
-      | page               | button             |
-      | Home               | Autoverzekering    |
-      | Home               | Woonverzekering    |
-      | Home               | Caravanverzekering |
-      | alle verzekeringen | Autoverzekering    |
-      | alle verzekeringen | Woonverzekering    |
-      | alle verzekeringen | Caravanverzekering |
+      | page               | button          |
+      | Home               | Autoverzekering |
+      | Home               | Woonverzekering |
+      | alle verzekeringen | Autoverzekering |
+      | alle verzekeringen | Woonverzekering |
 
 
   Scenario Outline: Click on the klantenservice and check the elements and verify if the outcome is correct.

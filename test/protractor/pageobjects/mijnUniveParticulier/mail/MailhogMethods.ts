@@ -1,11 +1,5 @@
 import {verzekeringPaginasEnum} from "../../enum/genericEnum";
-import {GenericMethods} from "../../generic/genericMethods";
-import {LoginPageElements} from "../loginPage/loginPageElements";
-import {MijnUniveAccountElements} from "../mijnUniveAccount/mijnUniveAccountElements";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let loginPageElements: LoginPageElements = new LoginPageElements();
-let mijnUniveAccountElements: MijnUniveAccountElements = new MijnUniveAccountElements();
+import {genericMethods, loginPageElements, mijnUniveAccountElements} from "../../../support";
 
 export class MailhogMethods {
 
