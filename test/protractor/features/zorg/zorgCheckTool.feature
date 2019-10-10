@@ -272,7 +272,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
         Examples:
         |question1|question2|question3|question4|question5|question6|question7|question8|question9|
         |C        |D        |A        |C        |D        |C        |B        |B        |        A|
-
+    
   Scenario Outline: bestaande klant door URL parameter geeft geen 9e vraag en verwijst naar MijnUnive
     Given I am on the zorgCheckToolBekendeKlantParameter page of the Unive website
     When I answer 8 questions with:
@@ -289,5 +289,11 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
         Examples:
         |question1|question2|question3|question4|question5|question6|question7|question8|question9|
         |C        |D        |A        |C        |D        |C        |B        |B        |        A|
-
-  Scenario: Verschillende collectieven via URL parameter
+    
+  Scenario: niet thuiszorgcollectief via parameter op URL meegeven en check dat deze aanwezig is op startpagina tool
+    Given I am on the zorgCheckToolNietThuiszorgCollectiefParameter page of the Unive website
+    Then verify that the collective is correctly applied on startpage of the tool
+    
+  Scenario: thuiszorgcollectief via parameter op URL meegeven en check dat deze niet aanwezig is op startpagina tool
+    Given I am on the zorgCheckToolThuiszorgCollectiefParameter page of the Unive website
+    Then verify that the collective is not present on startpage of the tool

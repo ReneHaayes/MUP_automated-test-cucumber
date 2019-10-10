@@ -163,7 +163,9 @@ export enum verzekeringPaginasEnum {
   BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
   ZORGCHECKTOOL = 'zorgCheckTool',
   GEZONDHEID = 'gezondheid',
-  ZORGCHECKTOOLBKPARAMETER = 'zorgCheckToolBekendeKlantParameter'
+  ZORGCHECKTOOLBKPARAMETER = 'zorgCheckToolBekendeKlantParameter',
+  ZORGCHECKTOOLTHUISZORGCOLLECTIEFPARAMETER = 'zorgCheckToolThuiszorgCollectiefParameter',
+  ZORGCHECKTOOLNIETTHUISZORGCOLLECTIEFPARAMETER = 'zorgCheckToolNietThuiszorgCollectiefParameter'
 }
 
 export enum polisDetailsUrlEnum {

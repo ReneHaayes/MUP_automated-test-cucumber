@@ -245,3 +245,7 @@ Then(/^Verify the button points to wijzigen in MijnUnive$/, async () => {
     await genericMethods.verifyTextInElement(zorgCheckToolElements.firstAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceWijzigVerzekeringBestaandeKlantButtonText);
     await genericMethods.verifyTextInElement(zorgCheckToolElements.secondAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceWijzigVerzekeringBestaandeKlantButtonText);
 });
+
+Then (/^verify that the collective is not present on startpage of the tool$/, async() => {
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.voegCollectiefToeOpenOverlaySpanElement, zorgCheckToolElements.voegUwCollectiefToeH1OverlayText);
+});

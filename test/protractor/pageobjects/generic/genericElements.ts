@@ -81,7 +81,10 @@ export class GenericElements {
   vraagStellen: string = 'klantenservice/vraagstellen';
   schade: string = 'schade';
   zorgchecktool: string = 'zorgverzekering/zorgcheck';
-  zorgchecktoolBekendeKlantParameter: string = 'zorgverzekering/zorgcheck/?bk=1';
+  zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';
+  zorgchecktoolThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=hS95ugVE';
+  zorgchecktoolNietThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=bH49xS38';
+
 
 
   //MIJN UNIVE URL
