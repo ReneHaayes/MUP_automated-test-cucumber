@@ -50,6 +50,7 @@ export class GenericElements {
   zorgVerzekering: string = 'zorgverzekering/premieberekenen-en-afsluiten';
   zorgNotaDeclareren: string = 'zorgverzekering/declareren';
   univeAlarmCentrale: string = 'klantenservice/alarmcentrale';
+  wijzigingenDoorgeven: string = 'klantenservice/wijzigingen-doorgeven';
   mijnUnive: string = 'https://login.pat.unive.nl/login';
   overUnive: string = 'overunive';
   zipcodePlaceZoeken: string = 'contact/zoek-winkel';

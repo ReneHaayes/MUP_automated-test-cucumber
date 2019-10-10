@@ -137,7 +137,7 @@ export class GetUrlUnive {
         return this.getEnv(browser.params.env.environment) + genericElements.univeAlarmCentrale;
       }
       case homePageEnum.VERZEKERING_WIJZIGEN: {
-        return genericElements.mijnUnive;
+        return this.getEnv(browser.params.env.environment) + genericElements.wijzigingenDoorgeven;
       }
       case homePageEnum.MIJN_UNIVE: {
         return genericElements.mijnUnive;

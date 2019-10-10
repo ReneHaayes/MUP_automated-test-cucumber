@@ -7,7 +7,7 @@ import {
   eigenVervoerVerzekeringElements,
   genericElements, genericMethods,
   getUrlUnive, hmPageElements,
-  productPageElements, reisVerzekeringElements, zakelijkRechtsBijstandVerzekeringElements
+  productPageElements, reisVerzekeringElements, situatieGewijzigdElements, zakelijkRechtsBijstandVerzekeringElements
 } from "../../support";
 
 export class HmPageMethods {
@@ -471,9 +471,10 @@ export class HmPageMethods {
       case homePageEnum.VERZEKERING_WIJZIGEN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.VERZEKERING_WIJZIGEN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveEmailInputElement, browser.getPageTimeout);
-        await genericMethods.waitForElementIsVisible(hmPageElements.mijnUnivePasswordInputElement, browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveLoginTitleTextElement, hmPageElements.mijnUniveLoginTitleText);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KLANTENSERVICE, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.WIJZIGINGEN_DOORGEVEN, 3);
+        await genericMethods.verifyTextInElementIgnoreCase(situatieGewijzigdElements.situatieGewijzigdHeaderElement, verzekeringPaginasEnum.WIJZIGINGEN_DOORGEVEN);
         break;
       }
       default: {

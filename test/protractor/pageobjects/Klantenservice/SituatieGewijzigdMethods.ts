@@ -3,6 +3,7 @@ import {genericMethods, situatieGewijzigdElements} from "../../support";
 
 export class SituatieGewijzigdMethods {
 
+  //TODO: make enums!
   async checkSituatieGewijzigdPage(input: string) {
     switch (input) {
       case 'verhuizing': {

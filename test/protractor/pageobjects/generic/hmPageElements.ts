@@ -58,7 +58,7 @@ export class HmPageElements {
   menuPageWoonverzekeringClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/woonverzekering"]';
   menuPageCaravanverzekeringClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/caravanverzekering"]';
   menuPageZorgnotaDeclarerenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/zorgverzekering/declareren"]';
-  menuPageVerzekeringWijzigenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/mijnunive/polisoverzicht"]';
+  menuPageVerzekeringWijzigenClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="klantenservice/wijzigingen-doorgeven"]';
   menuPageUniveAlarmcentraleClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_categoryLink"][href*="/klantenservice/alarmcentrale"]';
 
   //ZAKELIJK MENU PAGE

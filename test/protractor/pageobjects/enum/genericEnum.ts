@@ -66,6 +66,8 @@ export enum genericEnum {
 
 export enum verzekeringPaginasEnum {
   HOME = 'Home',
+  KLANTENSERVICE = 'Klantenservice',
+  WIJZIGINGEN_DOORGEVEN = 'Wijzigingen doorgeven',
   ALLE_VERZEKERINGEN = 'alle verzekeringen',
   ALLE_VERZEKERINGEN_ZAKELIJK = 'alle verzekeringen zakelijk',
   HOME_BUS = 'business',
