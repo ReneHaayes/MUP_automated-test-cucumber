@@ -105,7 +105,7 @@ export class HmPageElements {
   overUniveTitleText: string = 'Over Univé';
   footerZipcodeInputElement: string = '[class="mainFooterContent_contactOptionQuery"]';
   footerZipcodeClickElement: string = '[class="mainFooterContent_contactOptionSubmitForm"]';
-  footerKlantenServiceClickElement: string = '[class="mainFooterContent_contactOptionTitle"] [href*="klantenservice"]';
+  footerKlantenServiceClickElement: string = '[class="inlineAnchor_button--primary"][href*="klantenservice"]';
   klantenServiceBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Klantenservice"]';
   klantenServiceTitleTextElement: string = '[class="clientService_title"]';
   klantenServiceTitleText: string = 'Klantenservice';

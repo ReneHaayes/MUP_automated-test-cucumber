@@ -348,8 +348,9 @@ export class HmPageMethods {
       case homePageEnum.KLANTENSERVICE: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.KLANTENSERVICE);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.klantenServiceBreadcrumbElement, browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, hmPageElements.klantenServiceTitleText);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KLANTENSERVICE, 2);
+        await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, verzekeringPaginasEnum.KLANTENSERVICE);
         break;
       }
       case homePageEnum.ONDERNEMERSCAN: {
