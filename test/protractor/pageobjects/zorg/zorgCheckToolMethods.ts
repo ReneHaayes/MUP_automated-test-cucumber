@@ -1,11 +1,7 @@
-import { GenericMethods } from "../generic/genericMethods";
-import { ZorgCheckToolElements } from "./zorgCheckToolElements";
 import { multipleChoiceEnum, genericEnum } from "../enum/genericEnum";
 import { pakkettenEnum, collectievenEnum } from "../enum/zorgEnum";
 import { browser } from "protractor";
-
-let genericMethods: GenericMethods = new GenericMethods();
-let zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
+import {genericMethods, zorgCheckToolElements} from "../../support";
 
 export class ZorgCheckToolMethods {
 

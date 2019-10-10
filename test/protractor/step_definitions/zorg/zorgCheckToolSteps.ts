@@ -1,13 +1,7 @@
 import {When, Then, Given} from 'cucumber';
-import { ZorgCheckToolMethods } from '../../pageobjects/zorg/zorgCheckToolMethods';
-import { GenericMethods } from '../../pageobjects/generic/genericMethods';
-import { ZorgCheckToolElements } from '../../pageobjects/zorg/zorgCheckToolElements';
 import { browser } from 'protractor';
 import { collectievenEnum } from '../../pageobjects/enum/zorgEnum';
-
-let zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
-let genericMethods: GenericMethods = new GenericMethods();
-let zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
+import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods} from "../../support";
 
 When(/^I answer 9 questions with:$/, async (data) => {
     const dataTable = data.rowsHash();
@@ -21,7 +15,7 @@ When(/^I answer 9 questions with:$/, async (data) => {
         dataTable.question7, 
         dataTable.question8,
         dataTable.question9
-        );    
+        );
 });
 
 When(/^I answer 8 questions with:$/, async (data) => {
