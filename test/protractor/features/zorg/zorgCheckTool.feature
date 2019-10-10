@@ -4,7 +4,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
 
   Scenario Outline: Answer 8 questions and check 2 advices
     Given I am on the zorgCheckTool page of the Unive website
-    When I answer 8 questions with:
+    When I answer 9 questions with:
     |question1|<question1>|
     |question2|<question2>|
     |question3|<question3>|
@@ -13,6 +13,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question6|<question6>|
     |question7|<question7>|
     |question8|<question8>|
+    |question9|<question9>|
     Then Verify that the advices are correctly shown with:
     |advice1BV  |<advice1BV>  |
     |advice1AVTV|<advice1AVTV>|
@@ -22,20 +23,20 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |advice2TV  |<advice2TV>  |
 
         Examples:
-        |question1|question2|question3|question4|question5|question6|question7|question8|advice1BV  |advice1AVTV     |advice1TV |advice2BV  |advice2AVTV     |advice2TV |
-        |B        |A        |B        |D        |C        |A        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Beter|Zorg Vrij  |Aanvullend Beter|Tand Goed |
-        |A        |B        |A        |A        |A        |B        |B        |B        |Zorg Select|Aanvullend Goed |Geen      |Zorg Select|Aanvullend Beter|Geen      |
-        |C        |B        |B        |B        |B        |D        |A        |A        |Zorg Vrij  |Aanvullend Beter|Tand Best |Zorg Vrij  |Aanvullend Goed |Geen      |
-        |C        |D        |A        |C        |D        |C        |B        |B        |Zorg Select|Aanvullend Best |Tand Best |Zorg Select|Aanvullend Beter|Tand Beter|
-        |A        |C        |B        |A        |A        |C        |B        |A        |Zorg Vrij  |Aanvullend Beter|Tand Beter|Zorg Vrij  |Aanvullend Goed |Tand Goed |
-        |D        |A        |A        |D        |B        |B        |A        |B        |Zorg Select|Aanvullend Best |Geen      |Zorg Select|Aanvullend Beter|Geen      |
-        |A        |A        |A        |D        |A        |A        |A        |A        |Zorg Vrij  |Aanvullend Beter|Geen      |Zorg Vrij  |Aanvullend Goed |Geen      |
-        |A        |A        |A        |B        |C        |C        |B        |B        |Zorg Select|Aanvullend Goed |Tand Beter|Zorg Select|Aanvullend Beter|Tand Goed |
-        |A        |A        |B        |C        |D        |D        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Best |Zorg Vrij  |Aanvullend Beter|Tand Beter|
-        |A        |A        |B        |B        |A        |B        |B        |B        |Zorg Select|Geen            |Geen      |Zorg Select|Aanvullend Goed |Geen      |
-        |A        |A        |B        |A        |B        |A        |B        |A        |Zorg Vrij  |Geen            |Geen      |Zorg Vrij  |Aanvullend Goed |Geen      |
-        |A        |A        |B        |A        |C        |D        |B        |B        |Zorg Select|Geen            |Tand Best |Zorg Select|Geen            |Tand Beter|
-        |A        |A        |B        |A        |B        |C        |B        |A        |Zorg Vrij  |Geen            |Tand Beter|Zorg Vrij  |Geen            |Tand Goed |
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|advice1BV  |advice1AVTV     |advice1TV |advice2BV  |advice2AVTV     |advice2TV |
+        |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij  |Aanvullend Goed |Tand Beter|Zorg Vrij  |Aanvullend Beter|Tand Goed |
+        |A        |B        |A        |A        |A        |B        |B        |B        |        B|Zorg Select|Aanvullend Goed |Geen      |Zorg Select|Aanvullend Beter|Geen      |
+        |C        |B        |B        |B        |B        |D        |A        |A        |        B|Zorg Vrij  |Aanvullend Beter|Tand Best |Zorg Vrij  |Aanvullend Goed |Geen      |
+        |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Select|Aanvullend Best |Tand Best |Zorg Select|Aanvullend Beter|Tand Beter|
+        |A        |C        |B        |A        |A        |C        |B        |A        |        B|Zorg Vrij  |Aanvullend Beter|Tand Beter|Zorg Vrij  |Aanvullend Goed |Tand Goed |
+        |D        |A        |A        |D        |B        |B        |A        |B        |        B|Zorg Select|Aanvullend Best |Geen      |Zorg Select|Aanvullend Beter|Geen      |
+        |A        |A        |A        |D        |A        |A        |A        |A        |        B|Zorg Vrij  |Aanvullend Beter|Geen      |Zorg Vrij  |Aanvullend Goed |Geen      |
+        |A        |A        |A        |B        |C        |C        |B        |B        |        B|Zorg Select|Aanvullend Goed |Tand Beter|Zorg Select|Aanvullend Beter|Tand Goed |
+        |A        |A        |B        |C        |D        |D        |A        |A        |        B|Zorg Vrij  |Aanvullend Goed |Tand Best |Zorg Vrij  |Aanvullend Beter|Tand Beter|
+        |A        |A        |B        |B        |A        |B        |B        |B        |        B|Zorg Select|Geen            |Geen      |Zorg Select|Aanvullend Goed |Geen      |
+        |A        |A        |B        |A        |B        |A        |B        |A        |        B|Zorg Vrij  |Geen            |Geen      |Zorg Vrij  |Aanvullend Goed |Geen      |
+        |A        |A        |B        |A        |C        |D        |B        |B        |        B|Zorg Select|Geen            |Tand Best |Zorg Select|Geen            |Tand Beter|
+        |A        |A        |B        |A        |B        |C        |B        |A        |        B|Zorg Vrij  |Geen            |Tand Beter|Zorg Vrij  |Geen            |Tand Goed |
 
   Scenario: Check i-text at question 2
     Given I am on the zorgCheckTool page of the Unive website
@@ -90,7 +91,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
 
   Scenario Outline: Check foutief emailadres melding bij email dit advies
     Given I am on the zorgCheckTool page of the Unive website
-    And I answer 8 questions with:
+    And I answer 9 questions with:
     |question1|<question1>|
     |question2|<question2>|
     |question3|<question3>|
@@ -99,6 +100,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question6|<question6>|
     |question7|<question7>|
     |question8|<question8>|
+    |question9|<question9>|
     And I click on the email dit advies button
     When I enter an emailaddress with:
     |emailaddress|geenapenstaartje.nl|
@@ -106,12 +108,12 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     And send email button is not available
       
       Examples:
-        |question1|question2|question3|question4|question5|question6|question7|question8|
-        |B        |A        |B        |D        |C        |A        |A        |A        |
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|
+        |B        |A        |B        |D        |C        |A        |A        |A        |        B|
     
   Scenario Outline: Check juist emailadres en verzending advies
     Given I am on the zorgCheckTool page of the Unive website
-    And I answer 8 questions with:
+    And I answer 9 questions with:
     |question1|<question1>|
     |question2|<question2>|
     |question3|<question3>|
@@ -120,6 +122,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question6|<question6>|
     |question7|<question7>|
     |question8|<question8>|
+    |question9|<question9>|
     And I click on the email dit advies button
     When I enter an emailaddress with:
     |emailaddress|info@apenstaartje.nl|
@@ -127,12 +130,12 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     And the success message is shown
 
       Examples:
-        |question1|question2|question3|question4|question5|question6|question7|question8|
-        |B        |A        |B        |D        |C        |A        |A        |A        |
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|
+        |B        |A        |B        |D        |C        |A        |A        |A        |        B|
 
   Scenario Outline: Check de prefill in de zorgwizard na doorklikken op advies
     Given I am on the zorgCheckTool page of the Unive website
-    And I answer 8 questions with:
+    And I answer 9 questions with:
     |question1|<question1>|
     |question2|<question2>|
     |question3|<question3>|
@@ -141,6 +144,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question6|<question6>|
     |question7|<question7>|
     |question8|<question8>|
+    |question9|<question9>|
     When I click on the Kies deze verzekering button
     Then I get redirected to zorgwizard on a new tab
     And The adviceresult is prefilled in the wizard with:
@@ -149,11 +153,11 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |advice1TV  |<advice1TV>  |
 
       Examples:
-        |question1|question2|question3|question4|question5|question6|question7|question8|advice1BV  |advice1AVTV     |advice1TV |
-        |B        |A        |B        |D        |C        |A        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Beter|
-        |C        |D        |A        |C        |D        |C        |B        |B        |Zorg Select|Aanvullend Best |Tand Best |
-        |A        |A        |B        |A        |B        |A        |B        |A        |Zorg Vrij  |Geen            |Geen      |
-
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|advice1BV  |advice1AVTV     |advice1TV |
+        |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij  |Aanvullend Goed |Tand Beter|
+        |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Select|Aanvullend Best |Tand Best |
+        |A        |A        |B        |A        |B        |A        |B        |A        |        B|Zorg Vrij  |Geen            |Geen      |
+    
   Scenario Outline: Check melding bij selecteren (fout) collectief
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
@@ -167,7 +171,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
       |Huurdersvereniging Ijsselstein|
       |Omring Medewerkers            |
       |Carinova Servicepakket        |
-  
+      
   Scenario Outline: Check of toevoegen collectief juist werkt
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
@@ -179,7 +183,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
       Examples: 
       |collective                    |
       |Omring Medewerkers            |
-   
+      
   Scenario: Verwijder collectief
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
@@ -187,7 +191,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |collective|Omring Medewerkers|
     And I delete the collective
     Then verify I am able to search for collective again
-
+    
   Scenario: Voeg fout collectief toe en in 2e toevoegveld juist collectief
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
@@ -199,7 +203,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
 
   Scenario Outline: check i-tjes bij adviezen voor aanvullende pakketten en tandpakketten, geen i-tjes voor basis
     Given I am on the zorgCheckTool page of the Unive website
-    When I answer 8 questions with:
+    When I answer 9 questions with:
     |question1|<question1>|
     |question2|<question2>|
     |question3|<question3>|
@@ -208,6 +212,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question6|<question6>|
     |question7|<question7>|
     |question8|<question8>|
+    |question9|<question9>|
     Then Verify that the i-tjes are correctly shown for the advices with:
     |advice1BV  |<advice1BV>  |
     |advice1AVTV|<advice1AVTV>|
@@ -217,10 +222,41 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |advice2TV  |<advice2TV>  |
 
         Examples:
-        |question1|question2|question3|question4|question5|question6|question7|question8|advice1BV  |advice1AVTV     |advice1TV |advice2BV  |advice2AVTV     |advice2TV |
-        |B        |A        |B        |D        |C        |A        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Beter|Zorg Vrij  |Aanvullend Beter|Tand Goed |
-        |C        |D        |A        |C        |D        |C        |B        |B        |Zorg Select|Aanvullend Best |Tand Best |Zorg Select|Aanvullend Beter|Tand Beter|
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|advice1BV  |advice1AVTV     |advice1TV |advice2BV  |advice2AVTV     |advice2TV |
+        |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij  |Aanvullend Goed |Tand Beter|Zorg Vrij  |Aanvullend Beter|Tand Goed |
+        |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Select|Aanvullend Best |Tand Best |Zorg Select|Aanvullend Beter|Tand Beter|
+    @joost
+  Scenario Outline: check collectief toepassing in advies bij verschillende antwoorden voor basisverzekering (vraag 8)
+    Given I am on the zorgCheckTool page of the Unive website
+    When I click on add collective button
+    And I search for collective with:
+    |collective|Omring Medewerkers|
+    And I apply the collective    
+    And I answer 9 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    |question9|<question9>|
+    Then Verify that the advices are correctly shown with:
+    |advice1BV  |<advice1BV>  |
+    |advice1AVTV|<advice1AVTV>|
+    |advice1TV  |<advice1TV>  |
+    |advice2BV  |<advice2BV>  |
+    |advice2AVTV|<advice2AVTV>|
+    |advice2TV  |<advice2TV>  |
 
-  Scenario: check collectief toepassing in advies bij verschillende antwoorden voor basisverzekering (vraag 8)
+        Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|advice1BV    |advice1AVTV     |advice1TV |advice2BV    |advice2AVTV     |advice2TV |
+        |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij    |Aanvullend Goed |Tand Beter|Zorg Vrij    |Aanvullend Beter|Tand Goed |
+        |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Geregeld|Aanvullend Best |Tand Best |Zorg Geregeld|Aanvullend Beter|Tand Beter|       
+  
+  Scenario: bestaande klant door vraag 9 beantwoorden
 
-  Scenario: bestaande klant
+  Scenario: bestaande klant door URL parameter
+
+  Scenario: Verschillende collectieven via URL parameter

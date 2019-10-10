@@ -9,8 +9,8 @@ let zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
 
 export class ZorgCheckToolMethods {
 
-    async fillInEightQuestions(questionOne: string, questionTwo: string, questionThree: string, questionFour: string, 
-        questionFive: string, questionSix: string, questionSeven: string, questionEight: string) {
+    async fillInNineQuestions(questionOne: string, questionTwo: string, questionThree: string, questionFour: string, 
+        questionFive: string, questionSix: string, questionSeven: string, questionEight: string, questionNine: string) {
     await genericMethods.clickOnElement(zorgCheckToolElements.startZorgCheckToolButtonClickElement);
     //answer question 1 and click next button
     await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionOne));
@@ -36,6 +36,9 @@ export class ZorgCheckToolMethods {
     //answer question 8 and click next button
     await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionEight));
     await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 9 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionNine));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
     await browser.sleep(1000);
       }
 
@@ -58,8 +61,9 @@ export class ZorgCheckToolMethods {
 
     async checkAdvice(adviceOneBV: string, adviceOneAVTV: string, adviceOneTV: string, adviceTwoBV: string, 
         adviceTwoAVTV: string, adviceTwoTV: string) {
+        await genericMethods.verifyTextInElement(zorgCheckToolElements.firstAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceKiesDezeVerzekeringButtonText);
+        await genericMethods.verifyTextInElement(zorgCheckToolElements.secondAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceKiesDezeVerzekeringButtonText);
     //advies1    
-      
         if(adviceOneAVTV == genericEnum.GEEN && adviceOneTV == genericEnum.GEEN){
             await genericMethods.verifyTextInElement(zorgCheckToolElements.firstAdviceBasisVerzekeringZorgCheckToolTextElement, adviceOneBV);
         }    
@@ -413,7 +417,7 @@ export class ZorgCheckToolMethods {
             await genericMethods.waitForElementNotVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
         }
         else if(collective == collectievenEnum.HUURDERSVERENIGINGIJSSELSTEIN){      
-            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.CARINOVASERVICEPAKKET);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.HUURDERSVERENIGINGIJSSELSTEIN);
             await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayNoZorgCollectiveText);
             await genericMethods.waitForElementNotVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
         }

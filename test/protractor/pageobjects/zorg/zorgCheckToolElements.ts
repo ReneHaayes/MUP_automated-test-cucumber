@@ -27,6 +27,8 @@ secondAdviceBasisVerzekeringZorgCheckToolTextElement: string = 'health-check-res
 secondAdviceAVTVZorgCheckToolTextElement: string = 'health-check-result-item:nth-child(2) div:nth-child(2) > div.health-check-result-top__label > div';
 secondAdviceTandZorgCheckToolTextElement: string = 'health-check-result-item:nth-child(2) div:nth-child(3) > div.health-check-result-top__label > div';
 firstAdviceKiesDezeVerzekeringClickElement: string = 'health-check-result-item:nth-child(1) div.health-check-result-top__row.health-check-result-top__row--button > ui-button > button';
+adviceKiesDezeVerzekeringButtonText: string = 'Kies deze zorgverzekering';
+adviceWijzigVerzekeringBestaandeKlantButtonText: string = 'Wijzig uw zorgverzekering';
 secondAdviceKiesDezeVerzekeringClickElement: string = 'health-check-result-item:nth-child(2) div.health-check-result-top__row.health-check-result-top__row--button > ui-button > button';
 
 //I-BUTTONS
@@ -86,7 +88,7 @@ additionalInfoTextCollectiveOverlayNoZorgCollectiveText: string = 'De naam of in
 selectFirstCollectiefElement: string = 'div.search-collectief__results.ng-star-inserted > ul';
 voegCollectiefToeButtonClickElement: string = 'div.search-collectief__confirm-button.ng-star-inserted > ui-button > button';
 additionalInfoThuiszorgCollectiefElement: string = 'f-collectief-search-search > div.search-collectief__subtext.ng-star-inserted';
-additionalInfoThuiszorgCollectiefText: string = 'Dit betreft een thuiszorg collectief. Neem contact op met een van onze adviseurs.';
+additionalInfoThuiszorgCollectiefText: string = 'Het door u geselecteerde collectief is een thuiszorgcollectief. Hiervoor gelden andere vergoedingen. Neem contact op met onze adviseurs voor een ZorgCheck op maat.';
 deleteCollectiveClickElement: string = '[class="search-collectief__delete"]';
 closeOverlay: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
 

@@ -9,9 +9,9 @@ let zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
 let genericMethods: GenericMethods = new GenericMethods();
 let zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
 
-When(/^I answer 8 questions with:$/, async (data) => {
+When(/^I answer 9 questions with:$/, async (data) => {
     const dataTable = data.rowsHash();
-    await zorgCheckToolMethods.fillInEightQuestions(
+    await zorgCheckToolMethods.fillInNineQuestions(
         dataTable.question1, 
         dataTable.question2, 
         dataTable.question3, 
@@ -19,7 +19,8 @@ When(/^I answer 8 questions with:$/, async (data) => {
         dataTable.question5, 
         dataTable.question6, 
         dataTable.question7, 
-        dataTable.question8
+        dataTable.question8,
+        dataTable.question9
         );    
 });
 
