@@ -103,6 +103,7 @@ When(/^I enter step three page of personen autoverzekering zakelijk with$/, asyn
   //INSERT DATE INFORMATION
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourCompanyElement, genericMethods.getDate(dataTable.startDateOnYourName));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
+  await genericMethods.clickOnTAB(autoVerzekeringElementsStepThree.reportingCode);
   //INSERT USE OF THE CAR INFORMATION
   await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.ownerCarCompanyYesClickElement);
   await genericMethods.clickOnNextButton();
