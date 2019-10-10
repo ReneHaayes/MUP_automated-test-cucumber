@@ -59,6 +59,36 @@ export class ZorgCheckToolMethods {
         }
     }
 
+    async fillInEightQuestions(questionOne: string, questionTwo: string, questionThree: string, questionFour: string, 
+        questionFive: string, questionSix: string, questionSeven: string, questionEight: string) {
+    await genericMethods.clickOnElement(zorgCheckToolElements.startZorgCheckToolButtonClickElement);
+    //answer question 1 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionOne));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 2 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionTwo));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 3 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionThree));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 4 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionFour));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 5 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionFive));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 6 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionSix));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 7 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionSeven));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    //answer question 8 and click next button
+    await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionEight));
+    await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    await browser.sleep(1000);
+    }
+
     async checkAdvice(adviceOneBV: string, adviceOneAVTV: string, adviceOneTV: string, adviceTwoBV: string, 
         adviceTwoAVTV: string, adviceTwoTV: string) {
         await genericMethods.verifyTextInElement(zorgCheckToolElements.firstAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceKiesDezeVerzekeringButtonText);

@@ -160,8 +160,8 @@ export enum verzekeringPaginasEnum {
   VERZEKERINGEN = 'verzekeringen',
   BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
   ZORGCHECKTOOL = 'zorgCheckTool',
-  GEZONDHEID = 'gezondheid'
-
+  GEZONDHEID = 'gezondheid',
+  ZORGCHECKTOOLBKPARAMETER = 'zorgCheckToolBekendeKlantParameter'
 }
 
 export enum polisDetailsUrlEnum {

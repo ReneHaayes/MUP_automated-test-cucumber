@@ -260,6 +260,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGCHECKTOOL: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktool;
       }
+      case verzekeringPaginasEnum.ZORGCHECKTOOLBKPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktoolBekendeKlantParameter;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

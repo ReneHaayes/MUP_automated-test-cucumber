@@ -24,6 +24,20 @@ When(/^I answer 9 questions with:$/, async (data) => {
         );    
 });
 
+When(/^I answer 8 questions with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgCheckToolMethods.fillInEightQuestions(
+        dataTable.question1, 
+        dataTable.question2, 
+        dataTable.question3, 
+        dataTable.question4, 
+        dataTable.question5, 
+        dataTable.question6, 
+        dataTable.question7, 
+        dataTable.question8
+        );    
+});
+
 Given(/^I answer 1 question with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgCheckToolMethods.fillInOneQuestionAndClickNext(
@@ -231,4 +245,9 @@ Then (/^Verify that the i-tjes are correctly shown for the advices with:$/, asyn
         dataTable.advice2AVTV,
         dataTable.advice2TV
     );
+});
+
+Then(/^Verify the button points to wijzigen in MijnUnive$/, async () => {
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.firstAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceWijzigVerzekeringBestaandeKlantButtonText);
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.secondAdviceKiesDezeVerzekeringClickElement, zorgCheckToolElements.adviceWijzigVerzekeringBestaandeKlantButtonText);
 });

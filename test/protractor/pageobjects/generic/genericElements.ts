@@ -80,6 +80,7 @@ export class GenericElements {
   vraagStellen: string = 'klantenservice/vraagstellen';
   schade: string = 'schade';
   zorgchecktool: string = 'zorgverzekering/zorgcheck';
+  zorgchecktoolBekendeKlantParameter: string = 'zorgverzekering/zorgcheck/?bk=1';
 
 
   //MIJN UNIVE URL

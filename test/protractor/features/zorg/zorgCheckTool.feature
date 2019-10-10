@@ -1,8 +1,8 @@
 @zorgCheckTool
 
-Feature: Check if zorgCheckTool provides the correct advices for different answers and shows correct information texts.
+Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoer en of de juiste informatieteksten worden getoond.
 
-  Scenario Outline: Answer 8 questions and check 2 advices
+  Scenario Outline: Beantwoord 9 vragen en check 2 adviezen (zonder bestaande klanten)
     Given I am on the zorgCheckTool page of the Unive website
     When I answer 9 questions with:
     |question1|<question1>|
@@ -38,14 +38,14 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
         |A        |A        |B        |A        |C        |D        |B        |B        |        B|Zorg Select|Geen            |Tand Best |Zorg Select|Geen            |Tand Beter|
         |A        |A        |B        |A        |B        |C        |B        |A        |        B|Zorg Vrij  |Geen            |Tand Beter|Zorg Vrij  |Geen            |Tand Goed |
 
-  Scenario: Check i-text at question 2
+  Scenario: Check i-text bij vraag 2
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 1 question with:
     |question1|A|
     When I click on the i-button
     Then Verify that the correct i-texts for question two are shown
   
-  Scenario: Check i-text at question 3
+  Scenario: Check i-text bij vraag 3
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 2 questions with:
     |question1|A|
@@ -53,7 +53,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     When I click on the i-button
     Then Verify that the correct i-texts for question three are shown
     
-  Scenario: Check i-text at question 8
+  Scenario: Check i-text bij vraag 8
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 7 questions with:
     |question1|A|
@@ -66,7 +66,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     When I click on the i-button
     Then Verify that the correct i-texts for question eight are shown
 
-  Scenario: Check i-text below answer D at question 5
+  Scenario: Check i-text onder antwoord D bij vraag 5
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 4 questions with:
     |question1|A|
@@ -77,7 +77,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question5|D|
     Then Verify that the correct i-text is shown below selected answer for question five
   
-  Scenario: Check i-text below answer D at question 6
+  Scenario: Check i-text onder antwoord D bij vraag 6
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 5 questions with:
     |question1|A|
@@ -225,7 +225,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
         |question1|question2|question3|question4|question5|question6|question7|question8|question9|advice1BV  |advice1AVTV     |advice1TV |advice2BV  |advice2AVTV     |advice2TV |
         |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij  |Aanvullend Goed |Tand Beter|Zorg Vrij  |Aanvullend Beter|Tand Goed |
         |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Select|Aanvullend Best |Tand Best |Zorg Select|Aanvullend Beter|Tand Beter|
-    @joost
+    
   Scenario Outline: check collectief toepassing in advies bij verschillende antwoorden voor basisverzekering (vraag 8)
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
@@ -254,9 +254,40 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
         |question1|question2|question3|question4|question5|question6|question7|question8|question9|advice1BV    |advice1AVTV     |advice1TV |advice2BV    |advice2AVTV     |advice2TV |
         |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij    |Aanvullend Goed |Tand Beter|Zorg Vrij    |Aanvullend Beter|Tand Goed |
         |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Geregeld|Aanvullend Best |Tand Best |Zorg Geregeld|Aanvullend Beter|Tand Beter|       
-  
-  Scenario: bestaande klant door vraag 9 beantwoorden
+    
+  Scenario Outline: bestaande klant door vraag 9 beantwoorden
+    Given I am on the zorgCheckTool page of the Unive website
+    When I answer 9 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    |question9|<question9>|
+    Then Verify the button points to wijzigen in MijnUnive
 
-  Scenario: bestaande klant door URL parameter
+        Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|
+        |C        |D        |A        |C        |D        |C        |B        |B        |        A|
+
+  Scenario Outline: bestaande klant door URL parameter geeft geen 9e vraag en verwijst naar MijnUnive
+    Given I am on the zorgCheckToolBekendeKlantParameter page of the Unive website
+    When I answer 8 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    Then Verify the button points to wijzigen in MijnUnive
+
+        Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|question9|
+        |C        |D        |A        |C        |D        |C        |B        |B        |        A|
 
   Scenario: Verschillende collectieven via URL parameter
