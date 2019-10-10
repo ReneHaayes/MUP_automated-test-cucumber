@@ -1,7 +1,8 @@
 import { GenericMethods } from "../generic/genericMethods";
 import { ZorgCheckToolElements } from "./zorgCheckToolElements";
 import { multipleChoiceEnum, genericEnum } from "../enum/genericEnum";
-import { pakkettenEnum } from "../enum/zorgEnum";
+import { pakkettenEnum, collectievenEnum } from "../enum/zorgEnum";
+import { browser } from "protractor";
 
 let genericMethods: GenericMethods = new GenericMethods();
 let zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
@@ -35,6 +36,7 @@ export class ZorgCheckToolMethods {
     //answer question 8 and click next button
     await genericMethods.clickOnElement(this.getZorgCheckToolChoice(questionEight));
     await genericMethods.clickOnElement(zorgCheckToolElements.nextQuestionZorgCheckToolButtonClickElement);
+    await browser.sleep(1000);
       }
 
     getZorgCheckToolChoice(input: string): string {
@@ -169,7 +171,7 @@ export class ZorgCheckToolMethods {
     }
 
     async checkITextsForQuestionEight() {
-        await genericMethods.verifyTextInElement(zorgCheckToolElements.questionInformationElement, zorgCheckToolElements.question8InformationText);
+        await genericMethods.verifyTextContainsInElement(zorgCheckToolElements.questionInformationElement, zorgCheckToolElements.question8InformationText, 500);
         await genericMethods.verifyTextInElement(zorgCheckToolElements.questionInformationHeaderElement, zorgCheckToolElements.question8InformationHeaderText);
         await genericMethods.clickOnElement(zorgCheckToolElements.closeInformationOverlayClickElement);
     }
@@ -388,4 +390,88 @@ export class ZorgCheckToolMethods {
             }
         }
     }
+
+    async addCollective(collective: string){
+        await browser.sleep(1000);
+        await genericMethods.verifyTextInElement(zorgCheckToolElements.voegUwCollectiefToeH1OverlayElement, zorgCheckToolElements.voegUwCollectiefToeH1OverlayText);
+        await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayText);
+        await genericMethods.clickOnElement(zorgCheckToolElements.voegUwCollectiefToeInputElement);
+        await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collective);
+        await genericMethods.clickOnElement(zorgCheckToolElements.selectFirstCollectiefElement);
+    }
+
+
+    async collectiveCheck(collective: string) {
+        if(collective == collectievenEnum.OMRINGMEDEWERKERS){
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.OMRINGMEDEWERKERS);
+            await genericMethods.waitForElementNotVisible(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, 500);
+            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
+        }
+        else if(collective == collectievenEnum.CARINOVASERVICEPAKKET){
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.CARINOVASERVICEPAKKET);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoThuiszorgCollectiefText);
+            await genericMethods.waitForElementNotVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
+        }
+        else if(collective == collectievenEnum.HUURDERSVERENIGINGIJSSELSTEIN){      
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.CARINOVASERVICEPAKKET);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayNoZorgCollectiveText);
+            await genericMethods.waitForElementNotVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
+        }
+    }
+
+    async checkItjes(adviceOneBV: string, adviceOneAVTV: string, adviceOneTV: string, adviceTwoBV: string, 
+        adviceTwoAVTV: string, adviceTwoTV: string) {
+        if(adviceOneBV == pakkettenEnum.ZORGVRIJ && adviceOneAVTV == pakkettenEnum.AANVULLENDGOED && adviceOneTV == pakkettenEnum.TANDBETER &&
+            adviceTwoBV == pakkettenEnum.ZORGVRIJ && adviceTwoAVTV == pakkettenEnum.AANVULLENDBETER && adviceTwoTV == pakkettenEnum.TANDGOED){
+            //validatie voor het 1e scenario waarin na beantwoording advies 1 = vrij, aanvullend goed, tand beter en advies 2 = vrij, aanvullend beter, tand goed
+            //validatie Aanvullend Goed Overlay advies 1
+            await genericMethods.clickOnElement(zorgCheckToolElements.aanvullendAdviesEenItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.AANVULLENDGOED);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeAanvullendGoedText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+            //validatie Tand Beter Overlay advies 1
+            await genericMethods.clickOnElement(zorgCheckToolElements.tandAdviesEenItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.TANDBETER);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeTandBeterText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+            //validatie Aanvullend Beter advies 2
+            await genericMethods.clickOnElement(zorgCheckToolElements.aanvullendAdviesTweeItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.AANVULLENDBETER);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeAanvullendBeterText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+            //validatie Tand Goed advies 2
+            await genericMethods.clickOnElement(zorgCheckToolElements.tandAdviesTweeItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.TANDGOED);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeTandGoedText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+        }
+        else if (adviceOneBV == pakkettenEnum.ZORGSELECT && adviceOneAVTV == pakkettenEnum.AANVULLENDBEST && adviceOneTV == pakkettenEnum.TANDBEST &&
+            adviceTwoBV == pakkettenEnum.ZORGSELECT && adviceTwoAVTV == pakkettenEnum.AANVULLENDBETER && adviceTwoTV == pakkettenEnum.TANDBETER){
+            //validatie voor het 2e scenario waarin na beantwoording advies 1 = select, aanvullend best, tand best en advies 2 = select, aanvullend beter, tand beter
+            //validatie Aanvullend Best Overlay advies 1
+            await genericMethods.clickOnElement(zorgCheckToolElements.aanvullendAdviesEenItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.AANVULLENDBEST);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeAanvullendBestText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+            //validatie Tand Best Overlay advies 1
+            await genericMethods.clickOnElement(zorgCheckToolElements.tandAdviesEenItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.TANDBEST);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeTandBestText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+            //validatie Aanvullend Beter Overlay advies 2
+            await genericMethods.clickOnElement(zorgCheckToolElements.aanvullendAdviesTweeItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.AANVULLENDBETER);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeAanvullendBeterText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+            //validatie Tand Beter Overlay advies 2
+            await genericMethods.clickOnElement(zorgCheckToolElements.tandAdviesTweeItjeElement);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayH2Element, pakkettenEnum.TANDBETER);
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.overlayAdditionalTextElement, zorgCheckToolElements.itjeTandBeterText);
+            await genericMethods.clickOnElement(zorgCheckToolElements.overlayCloseElement);
+        }
+        else {
+            throw new Error('no correct scenario');
+        } 
+    }
+
 }

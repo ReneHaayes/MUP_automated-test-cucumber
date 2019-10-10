@@ -37,8 +37,7 @@ question2InformationText: string = 'Bekende alternatieve geneeswijzen zijn: Acup
 question2InformationHeaderText: string = 'Maakt u wel eens gebruik van alternatieve zorg?';
 question3InformationText: string = 'Bekende anticonceptiemiddelen zijn een spiraaltje, pessarium of de pil.';
 question3InformationHeaderText: string = 'Gebruikt u anticonceptie en bent u ouder dan 21 jaar?';
-question8InformationText: string = 'Het scheelt ongeveer € 20 premie per maand als u alleen gebruik maakt van gecontracteerde zorgverleners. Bij niet-gecontracteerde zorgverleners krijgt u dan 70% van de behandelingskosten vergoed.\n' + 
-'Wilt u een vergoeding bij alle zorgverleners? Dan kunt u beter ja invullen bij deze vraag.\n' + 'Zorgverleners zijn bijvoorbeeld ziekenhuizen, oogartsen of verloskundigen.';
+question8InformationText: string = 'Het scheelt ongeveer € 20 premie per maand als u alleen gebruik maakt van gecontracteerde zorgverleners.';
 question8InformationHeaderText: string = 'Bent u bereid om meer te betalen zodat u zelf uw zorgverlener kunt kiezen?';
 closeInformationOverlayClickElement: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
 question5answerDInformationText: string = 'Let op: Voor deze vergoeding geldt een jaar wachttijd. Als u in 2019 de verzekering afsluit, kunt u in 2021 gebruik maken van deze vergoeding.';
@@ -72,5 +71,40 @@ aanvullendBestActiveElement: string = '[class="unive-additional-insurances-item 
 tandGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="GTU"]';
 tandBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BTU"]';
 tandBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UTU"]';
+
+//COLLECTIEVEN
+voegCollectiefToeOpenOverlayClickElement: string = '[class="button button--plain"]';
+voegCollectiefToeOpenOverlaySpanElement: string = 'health-check-collectief > ui-button > button > span';
+voegCollectiefToeOpenOverlayText: string = 'Voeg uw collectief toe';
+voegUwCollectiefToeH1OverlayElement: string = '[class="ui-modal__title ng-star-inserted"]';
+voegUwCollectiefToeH1OverlayText: string = 'Voeg uw collectief toe';
+voegUwCollectiefToeInputElement: string = '[placeholder="Naam of internetcode collectief"][type="text"]';
+toegevoegdCollectiefElement: string = 'div.search-collectief__selected.ng-star-inserted';
+additionalInfoTextCollectiveOverlayElement: string = 'f-collectief-search-search > p';
+additionalInfoTextCollectiveOverlayText: string = 'Mogelijk kunt u via uw werkgever of vereniging profiteren van collectieve korting en extra voordelen. Vul hieronder de naam in van het collectief of de internetcode.';
+additionalInfoTextCollectiveOverlayNoZorgCollectiveText: string = 'De naam of internetcode die u heeft ingevuld is correct, maar helaas krijgt u voor de zorgverzekering geen collectieve korting.';
+selectFirstCollectiefElement: string = 'div.search-collectief__results.ng-star-inserted > ul';
+voegCollectiefToeButtonClickElement: string = 'div.search-collectief__confirm-button.ng-star-inserted > ui-button > button';
+additionalInfoThuiszorgCollectiefElement: string = 'f-collectief-search-search > div.search-collectief__subtext.ng-star-inserted';
+additionalInfoThuiszorgCollectiefText: string = 'Dit betreft een thuiszorg collectief. Neem contact op met een van onze adviseurs.';
+deleteCollectiveClickElement: string = '[class="search-collectief__delete"]';
+closeOverlay: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
+
+//i-TEXTS BIJ ADVIES
+aanvullendAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
+tandAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > health-check-result-item-top > div > div:nth-child(4) > div.health-check-result-top__label > div > ui-info > button';
+aanvullendAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(2) > div.health-check-result-top__label > div > ui-info > button';
+tandAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
+itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie';
+itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin';
+itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid';
+itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
+itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd';
+itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist';
+
+//OVERLAY ELEMENTEN
+overlayH2Element: string = '[class="ui-modal__title ng-star-inserted"]';
+overlayAdditionalTextElement: string = '[class="ui-modal__text ng-star-inserted"]';
+overlayCloseElement: string = '[class="ui-modal__close"]';
 
 }

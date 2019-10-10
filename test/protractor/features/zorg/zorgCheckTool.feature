@@ -51,7 +51,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
     |question2|A|
     When I click on the i-button
     Then Verify that the correct i-texts for question three are shown
-  
+    
   Scenario: Check i-text at question 8
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 7 questions with:
@@ -108,7 +108,7 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
       Examples:
         |question1|question2|question3|question4|question5|question6|question7|question8|
         |B        |A        |B        |D        |C        |A        |A        |A        |
-
+    
   Scenario Outline: Check juist emailadres en verzending advies
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 8 questions with:
@@ -153,3 +153,74 @@ Feature: Check if zorgCheckTool provides the correct advices for different answe
         |B        |A        |B        |D        |C        |A        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Beter|
         |C        |D        |A        |C        |D        |C        |B        |B        |Zorg Select|Aanvullend Best |Tand Best |
         |A        |A        |B        |A        |B        |A        |B        |A        |Zorg Vrij  |Geen            |Geen      |
+
+  Scenario Outline: Check melding bij selecteren (fout) collectief
+    Given I am on the zorgCheckTool page of the Unive website
+    When I click on add collective button
+    And I search for collective with:
+    |collective|<collective>|
+    Then I expect the correct messages to be shown with:
+    |collective|<collective>|
+
+      Examples: 
+      |collective                    |
+      |Huurdersvereniging Ijsselstein|
+      |Omring Medewerkers            |
+      |Carinova Servicepakket        |
+  
+  Scenario Outline: Check of toevoegen collectief juist werkt
+    Given I am on the zorgCheckTool page of the Unive website
+    When I click on add collective button
+    And I search for collective with:
+    |collective|<collective>|
+    And I apply the collective
+    Then verify that the collective is correctly applied on startpage of the tool
+
+      Examples: 
+      |collective                    |
+      |Omring Medewerkers            |
+   
+  Scenario: Verwijder collectief
+    Given I am on the zorgCheckTool page of the Unive website
+    When I click on add collective button
+    And I search for collective with:
+    |collective|Omring Medewerkers|
+    And I delete the collective
+    Then verify I am able to search for collective again
+
+  Scenario: Voeg fout collectief toe en in 2e toevoegveld juist collectief
+    Given I am on the zorgCheckTool page of the Unive website
+    When I click on add collective button
+    And I search for collective with:
+    |collective|Huurdersvereniging Ijsselstein|
+    Then I am able to enter a correct collective in the second input field
+    And I apply the collective
+    And verify that the collective is correctly applied on startpage of the tool
+
+  Scenario Outline: check i-tjes bij adviezen voor aanvullende pakketten en tandpakketten, geen i-tjes voor basis
+    Given I am on the zorgCheckTool page of the Unive website
+    When I answer 8 questions with:
+    |question1|<question1>|
+    |question2|<question2>|
+    |question3|<question3>|
+    |question4|<question4>|
+    |question5|<question5>|
+    |question6|<question6>|
+    |question7|<question7>|
+    |question8|<question8>|
+    Then Verify that the i-tjes are correctly shown for the advices with:
+    |advice1BV  |<advice1BV>  |
+    |advice1AVTV|<advice1AVTV>|
+    |advice1TV  |<advice1TV>  |
+    |advice2BV  |<advice2BV>  |
+    |advice2AVTV|<advice2AVTV>|
+    |advice2TV  |<advice2TV>  |
+
+        Examples:
+        |question1|question2|question3|question4|question5|question6|question7|question8|advice1BV  |advice1AVTV     |advice1TV |advice2BV  |advice2AVTV     |advice2TV |
+        |B        |A        |B        |D        |C        |A        |A        |A        |Zorg Vrij  |Aanvullend Goed |Tand Beter|Zorg Vrij  |Aanvullend Beter|Tand Goed |
+        |C        |D        |A        |C        |D        |C        |B        |B        |Zorg Select|Aanvullend Best |Tand Best |Zorg Select|Aanvullend Beter|Tand Beter|
+
+  Scenario: check collectief toepassing in advies bij verschillende antwoorden voor basisverzekering (vraag 8)
+
+  Scenario: bestaande klant

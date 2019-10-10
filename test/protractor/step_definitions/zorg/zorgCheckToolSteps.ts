@@ -3,6 +3,7 @@ import { ZorgCheckToolMethods } from '../../pageobjects/zorg/zorgCheckToolMethod
 import { GenericMethods } from '../../pageobjects/generic/genericMethods';
 import { ZorgCheckToolElements } from '../../pageobjects/zorg/zorgCheckToolElements';
 import { browser } from 'protractor';
+import { collectievenEnum } from '../../pageobjects/enum/zorgEnum';
 
 let zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
 let genericMethods: GenericMethods = new GenericMethods();
@@ -148,6 +149,7 @@ Then(/^the send email button is available$/, async () => {
 });
 
 Then(/^the success message is shown$/, async () => {
+    await browser.sleep(500);
     await genericMethods.verifyTextContainsInElement(zorgCheckToolElements.emailDitAdviesOverlaySuccessElement, zorgCheckToolElements.emailDitAdviesOverlaySuccessText, 500);
 });
 
@@ -169,5 +171,63 @@ Then(/^The adviceresult is prefilled in the wizard with:$/, async (data) => {
         dataTable.advice1BV,
         dataTable.advice1AVTV,
         dataTable.advice1TV
+    );
+});
+
+When(/^I click on add collective button$/, async () => {
+    await browser.sleep(1000);
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.voegCollectiefToeOpenOverlaySpanElement, zorgCheckToolElements.voegCollectiefToeOpenOverlayText);
+    await genericMethods.clickOnElement(zorgCheckToolElements.voegCollectiefToeOpenOverlayClickElement);
+});
+
+When(/^I search for collective with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgCheckToolMethods.addCollective(
+        dataTable.collective
+    );
+});
+
+Then (/^I expect the correct messages to be shown with:$/, async(data) => {
+    const dataTable = data.rowsHash();
+    await zorgCheckToolMethods.collectiveCheck(
+        dataTable.collective
+    );
+});
+
+When(/^I apply the collective$/, async () => {
+    await genericMethods.clickOnElement(zorgCheckToolElements.voegCollectiefToeButtonClickElement);
+});
+
+Then (/^verify that the collective is correctly applied on startpage of the tool$/, async() => {
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.voegCollectiefToeOpenOverlaySpanElement, collectievenEnum.OMRINGMEDEWERKERS);
+});
+
+When (/^I delete the collective$/, async() => {
+    await genericMethods.clickOnElement(zorgCheckToolElements.deleteCollectiveClickElement);
+});
+
+Then (/^verify I am able to search for collective again$/, async() => {
+    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegUwCollectiefToeInputElement, 500);
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayText);
+    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.additionalInfoThuiszorgCollectiefElement, 500);
+    await genericMethods.clickOnElement(zorgCheckToolElements.closeOverlay);
+});
+
+Then (/^I am able to enter a correct collective in the second input field$/, async() => {
+    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegUwCollectiefToeInputElement, 500);
+    await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayNoZorgCollectiveText);
+    await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collectievenEnum.OMRINGMEDEWERKERS);
+    await genericMethods.clickOnElement(zorgCheckToolElements.selectFirstCollectiefElement);
+});
+
+Then (/^Verify that the i-tjes are correctly shown for the advices with:$/, async(data) => {
+    const dataTable = data.rowsHash();
+    await zorgCheckToolMethods.checkItjes(
+        dataTable.advice1BV,
+        dataTable.advice1AVTV,
+        dataTable.advice1TV,
+        dataTable.advice2BV,
+        dataTable.advice2AVTV,
+        dataTable.advice2TV
     );
 });

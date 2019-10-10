@@ -9,3 +9,9 @@ export enum pakkettenEnum {
     TANDBETER = 'Tand Beter',
     TANDBEST = 'Tand Best'
   }
+
+export enum collectievenEnum {
+    OMRINGMEDEWERKERS = 'Omring Medewerkers',
+    CARINOVASERVICEPAKKET = 'Carinova Servicepakket',
+    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein'
+}
