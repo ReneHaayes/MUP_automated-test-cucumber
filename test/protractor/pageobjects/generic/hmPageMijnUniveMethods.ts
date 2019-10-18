@@ -1,7 +1,7 @@
 import {browser} from "protractor";
 import {homePageEnum} from '../enum/woonVerzekeringEnum';
 import {verzekeringPaginasEnum} from '../enum/genericEnum';
-import {genericMethods, getUrlUnive, hmPageMijnUniveElements} from "../../support";
+import {genericMethods, getUrlUnive, hmPageMijnUniveElements} from '@support';
 
 export class HmPageMijnUniveMethods {
 

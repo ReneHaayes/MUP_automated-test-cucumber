@@ -10,5 +10,5 @@ Feature: Forgot password flow.
 
     Examples:
       | persona | newPassword |
-      | annie   | Test123!    |
+      | berend  | Test123!    |
 

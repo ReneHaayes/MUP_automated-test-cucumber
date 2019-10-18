@@ -37,7 +37,7 @@ export class MijnUniveAccountElements {
 
   //NOT RECOGNISABLE CUSTOMER
   customerNotRecognisabelTextElement: string = '[class*="toast--warning"]';
-  customerNotRecognisableText: string = 'Op basis van deze gegevens kunnen wij u niet als klant herkennen. Pas uw gegevens aan, of bel met onze Klantenservice: (0592) 34 93 45. (409:130)';
+  customerNotRecognisableText: string = 'Op basis van deze gegevens kunnen wij u niet als klant herkennen. Pas uw gegevens aan, of bel met onze Klantenservice: 0592 349 345.';
 
   //CHANGE PASSWORD
   changePasswordClickElement: string = '[href="/mijnunive/wachtwoord-wijzigen"]';

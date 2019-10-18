@@ -10,4 +10,4 @@ Feature: Deleting an Account and afterwards creating an account.
 
     Examples:
       | persona |
-      | annie   |
+      | berend  |

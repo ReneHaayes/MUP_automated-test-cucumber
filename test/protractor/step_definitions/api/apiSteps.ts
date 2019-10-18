@@ -3,12 +3,12 @@ import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
 import {apiElements, apiMethods} from "../../support";
 
 Given(/^api on location$/, async () => {
-  let createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody('Welkom01!', 'annie'));
+  let createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody('Welkom01!', 'berend'));
   console.log(createAccount.body.toString());
   console.log(createAccount.statusCode);
-  // await apiMethods.getTokenWhenAlreadySignedIn('annie');
+  // await apiMethods.getTokenWhenAlreadySignedIn('berend');
 });
 
 When(/^search api$/, async () => {
-  await apiMethods.checkIfAccountExistsWhenDoesntExistCreateAccount("annie")
+  await apiMethods.checkIfAccountExistsWhenDoesntExistCreateAccount("berend")
 });

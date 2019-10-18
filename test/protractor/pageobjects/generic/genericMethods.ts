@@ -4,7 +4,7 @@ import * as chaistring from 'chai-string';
 import {dateEnum, gender, genericEnum, specificIdentification} from "../enum/genericEnum";
 import {legalEnum} from "../enum/autoVerzekeringEnum";
 import * as path from "path";
-import {genericElements, getUrlUnive, nawElements, personaData} from "../../support";
+import {genericElements, getUrlUnive, nawElements, personaData} from "@support";
 
 chai.use(chaistring);
 const expect = chai.expect;

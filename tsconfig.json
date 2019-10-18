@@ -2,6 +2,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./test/dist/out-tsc",
+    "paths": {
+      "@support": ["../test/protractor/support/index.ts"]
+    },
     "baseUrl": "test",
     "sourceMap": true,
     "declaration": false,
