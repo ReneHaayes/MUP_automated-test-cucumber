@@ -3,9 +3,11 @@ import {
   camperVerzekeringElements,
   camperVerzekeringMethods,
   camperWithLicensePlate,
-  genericElements, genericMethods,
-  nawElements, personaData
-} from "../../../support";
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData
+} from "@support";
 
 
 When(/^I enter step one and click next on step two of camperverzekering for (.*) with$/, async (licensePlate: string) => {

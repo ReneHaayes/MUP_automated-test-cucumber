@@ -1,5 +1,5 @@
 import {browser} from "protractor";
-import {carWithLicensePlate, genericMethods, oldtimerVerzekeringElements} from "../../../support";
+import {carWithLicensePlate, genericMethods, oldtimerVerzekeringElements} from "@support";
 
 export class OldtimerVerzekeringMethods {
 

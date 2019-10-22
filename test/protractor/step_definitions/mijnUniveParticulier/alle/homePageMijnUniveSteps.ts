@@ -1,5 +1,5 @@
 import {Then,When} from "cucumber";
-import {hmPageMijnUniveMethods} from "../../../support";
+import {hmPageMijnUniveMethods} from "@support";
 
 When(/^Customer press the button (.*) on the Mijn Unive homepage header$/, async (button: string) => {
   await hmPageMijnUniveMethods.clickHeaderAndGoToPage(button)

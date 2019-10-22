@@ -1,5 +1,5 @@
 import {Then, When} from 'cucumber';
-import {aovZzpElements, aovZzpMethods, genericMethods, personaData} from "../../../support";
+import {aovZzpElements, aovZzpMethods, genericMethods, personaData} from "@support";
 
 When(/^I enter step one page of aovZzp with premie of (.*)$/, async (premie: string) => {
   await aovZzpMethods.dragAndDropUwPremie(premie);

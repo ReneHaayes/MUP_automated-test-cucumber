@@ -1,7 +1,7 @@
 import {HttpClient} from "protractor-http-client/dist/http-client";
 import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
 import {verzekeringPaginasEnum} from "../enum/genericEnum";
-import {apiElements, genericMethods, personaData} from "../../support";
+import {apiElements, genericMethods, personaData} from "@support";
 
 
 export class ApiMethods {

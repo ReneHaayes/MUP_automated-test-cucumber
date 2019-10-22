@@ -1,6 +1,4 @@
-import {homePageEnum} from "../enum/woonVerzekeringEnum";
 import {browser} from "protractor";
-import {verzekeringPaginasEnum} from "../enum/genericEnum";
 import {
   aansprakelijkheidsVerzekerElements,
   aovZzpElements,
@@ -8,7 +6,8 @@ import {
   genericElements, genericMethods,
   getUrlUnive, hmPageElements,
   productPageElements, reisVerzekeringElements, situatieGewijzigdElements, zakelijkRechtsBijstandVerzekeringElements
-} from "../../support";
+} from "@support";
+import {homePageEnum, verzekeringPaginasEnum} from "@enum";
 
 export class HmPageMethods {
 

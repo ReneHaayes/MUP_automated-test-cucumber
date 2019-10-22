@@ -1,10 +1,7 @@
 import {When} from "cucumber";
 import {
-  companyData,
-  genericElements, genericMethods,
-  nawElements, personaData,
-  zakelijkAansprakelijkheidsVerzekeringElements
-} from "../../../support";
+  companyData, genericElements, genericMethods, nawElements, personaData, zakelijkAansprakelijkheidsVerzekeringElements
+} from "@support";
 
 When(/^I enter step one page and click next on step two for zakelijk aansprakelijkheidsverzekering with company (.*)$/, async function (company: string) {
   await genericMethods.typeText(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));

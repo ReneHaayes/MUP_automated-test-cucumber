@@ -1,7 +1,6 @@
 import {Then, When} from "cucumber";
-
 import {browser} from "protractor";
-import {genericMethods, mijnVerzekeringenElements} from "../../../../support";
+import {genericMethods, mijnVerzekeringenElements} from "@support";
 
 When(/^Customer changes a vehicle with licenseplate: (.*)$/, async (licensePlate: string) => {
   await genericMethods.clickOnElement(mijnVerzekeringenElements.voertuigWijzigenClickElement);

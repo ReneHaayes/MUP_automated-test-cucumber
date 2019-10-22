@@ -1,4 +1,4 @@
-import {genericMethods, mijnSchadeEnClaimElements} from "../../../support";
+import {genericMethods, mijnSchadeEnClaimElements} from "@support";
 
 export class MijnSchadeEnClaimMethods {
 

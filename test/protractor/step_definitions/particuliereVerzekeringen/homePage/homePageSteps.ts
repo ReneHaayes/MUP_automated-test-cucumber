@@ -1,5 +1,5 @@
 import {Then, When} from "cucumber";
-import {hmPageMethods} from "../../../support";
+import {hmPageMethods} from "@support";
 
 
 When(/^I press the button (.*) on the homepage$/, async (button: string) => {

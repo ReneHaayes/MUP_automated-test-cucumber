@@ -2,10 +2,12 @@ import {When} from "cucumber";
 import {
   companyData,
   eigenVervoerVerzekeringMethods,
-  genericElements, genericMethods,
-  nawElements, personaData,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
   zakelijkRechtsBijstandVerzekeringElements
-} from "../../../support";
+} from "@support";
 
 When(/^I enter step one page and click next on step two of zakelijk rechtsbijstand verzekering with:$/, async function (data) {
   const dataTable = data.rowsHash();

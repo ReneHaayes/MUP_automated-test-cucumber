@@ -5,9 +5,10 @@ import {
   genericElements,
   genericMethods,
   loginPageElements,
-  loginPageMethods, mijnUniveAccountElements,
+  loginPageMethods,
+  mijnUniveAccountElements,
   personaData
-} from "../../../../support";
+} from "@support";
 
 When(/^Check if (.*) already exists$/, async (persona: string) => {
   await apiMethods.checkIfAccountExistsWhenDoesntExistCreateAccount(persona);

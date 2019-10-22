@@ -1,11 +1,17 @@
 import {When} from 'cucumber';
 import {
   autoVerzekeringElements,
-  bedrijfsAutoVerzekeringElements, bedrijfsAutoVerzekeringMethods,
-  businessCarWithLicensePlate, companyData, genericElements, genericMethods,
-  nawElements, personaData,
-  vehicleElements, zakelijkAansprakelijkheidsVerzekeringElements
-} from "../../../support";
+  bedrijfsAutoVerzekeringElements,
+  bedrijfsAutoVerzekeringMethods,
+  businessCarWithLicensePlate,
+  companyData,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  vehicleElements,
+  zakelijkAansprakelijkheidsVerzekeringElements
+} from "@support";
 
 When(/^I enter step one page of bedrijfs autoverzekeringen for (.*) with$/, async (company: string, data) => {
   const dataTable = data.rowsHash();

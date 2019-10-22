@@ -1,11 +1,15 @@
 import {When} from "cucumber";
 import {browser} from "protractor";
 import {
-  aansprakelijkheidsVerzekeringMethods, companyData, genericElements,
+  aansprakelijkheidsVerzekeringMethods,
+  companyData,
+  genericElements,
   genericMethods,
-  nawElements, personaData, zorgeloosOnlineVerzekeringElements,
+  nawElements,
+  personaData,
+  zorgeloosOnlineVerzekeringElements,
   zorgeloosOnlineVerzekeringMethod
-} from "../../../support";
+} from "@support";
 
 When(/^I enter step one page of zorgeloos onlineverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await aansprakelijkheidsVerzekeringMethods.clickFamilyComposition(familyCompositionInput);

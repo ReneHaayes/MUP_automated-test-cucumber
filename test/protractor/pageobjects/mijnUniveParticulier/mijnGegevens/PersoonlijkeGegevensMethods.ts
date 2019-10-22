@@ -1,6 +1,5 @@
-import {PaymentData} from "../../enum/MijnUniveParticulierEnum";
-import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-import {genericMethods, mijnUniveAccountElements} from "../../../support";
+import {genericMethods, mijnUniveAccountElements} from "@support";
+import {familyCompositionEnum, PaymentData} from "@enum";
 
 export class PersoonlijkeGegevensMethods {
 

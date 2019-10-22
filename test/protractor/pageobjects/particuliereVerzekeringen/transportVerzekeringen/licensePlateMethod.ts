@@ -1,11 +1,12 @@
-import {licensePlateHmPageEnum} from "../../enum/licensePlateEnum";
-import {genericEnum} from "../../enum/genericEnum";
 import {
-  autoVerzekeringElements, bedrijfsAutoVerzekeringElements,
+  autoVerzekeringElements,
+  bedrijfsAutoVerzekeringElements,
   businessCarWithLicensePlate,
-  carWithLicensePlate, genericMethods,
+  carWithLicensePlate,
+  genericMethods,
   hmPageElements
-} from "../../../support";
+} from "@support";
+import {genericEnum, licensePlateHmPageEnum} from "@enum";
 
 export class LicensePlateMethod {
 

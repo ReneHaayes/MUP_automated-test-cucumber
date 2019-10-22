@@ -1,4 +1,4 @@
-import {licensePlates} from "../enum/licensePlateEnum";
+import {licensePlates} from "@enum";
 
 export class Camper {
 
@@ -20,7 +20,6 @@ export class Camper {
 export class CamperWithLicensePlate {
 
   CAMPER_BLJL41: Camper = new Camper(licensePlates.CAMPER_BLJL41, 'SPARTAN', 'CRUISE-MASTER', '15000', '0000');
-
 
   getCamperBrandName(input: string): string {
     switch (input) {

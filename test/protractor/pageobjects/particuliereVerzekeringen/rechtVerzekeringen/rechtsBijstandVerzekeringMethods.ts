@@ -1,6 +1,6 @@
-import {familyCompositionEnum} from '../../enum/aansprakelijkheidsVerzekeringEnum';
 import {browser} from 'protractor';
-import {genericElements, genericMethods, rechtsBijstandVerzekeringElements} from "../../../support";
+import {genericElements, genericMethods, rechtsBijstandVerzekeringElements} from "@support";
+import {familyCompositionEnum} from "@enum";
 
 export class RechtsBijstandVerzekeringMethods {
 
@@ -31,4 +31,5 @@ export class RechtsBijstandVerzekeringMethods {
       }
     }
   }
+
 }

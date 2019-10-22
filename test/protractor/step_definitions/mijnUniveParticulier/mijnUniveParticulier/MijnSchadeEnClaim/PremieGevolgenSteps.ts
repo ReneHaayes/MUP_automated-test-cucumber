@@ -1,6 +1,6 @@
 import {Then, When} from "cucumber";
 import {browser} from "protractor";
-import {genericMethods, mijnSchadeEnClaimElements} from "../../../../support";
+import {genericMethods, mijnSchadeEnClaimElements} from "@support";
 
 When(/^Customer select premiegevolgen berekenen for polis with number: (.*)$/, async (polisNumber: string) => {
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.polisForPremiegevolgenPageWithPolisNumber(polisNumber));

@@ -1,4 +1,4 @@
-import {licensePlates} from "../enum/licensePlateEnum";
+import {licensePlates} from "@enum";
 
 export class BusinessCar {
 
@@ -11,10 +11,9 @@ export class BusinessCar {
   fuelType: string;
   firstAdmission: string;
   reportingCode: string;
-  weight: string; 
+  weight: string;
 
-  constructor(licensePlate: string, brandName: string, brandType: string, constructionYear: string, model: string, bodyType: string,
-              fuelType: string, firstAdmission: string, reportingCode: string, weight: string) {
+  constructor(licensePlate: string, brandName: string, brandType: string, constructionYear: string, model: string, bodyType: string, fuelType: string, firstAdmission: string, reportingCode: string, weight: string) {
     this.licensePlate = licensePlate;
     this.brandName = brandName;
     this.brandType = brandType;
@@ -30,8 +29,7 @@ export class BusinessCar {
 
 export class BusinessCarWithLicensePlate {
 
-  BUSINESS_CAR_48VDS3: BusinessCar = new BusinessCar(licensePlates.BUSINESS_CAR_48VDS3, 'Fiat', 'DUCATO', '2007', '35L 3.0 MJ MH2 GV',
-    "Bestelauto", 'Diesel', '12-09-2001', '0000', '1496');
+  BUSINESS_CAR_48VDS3: BusinessCar = new BusinessCar(licensePlates.BUSINESS_CAR_48VDS3, 'Fiat', 'DUCATO', '2007', '35L 3.0 MJ MH2 GV', "Bestelauto", 'Diesel', '12-09-2001', '0000', '1496');
 
   getCarFuelType(input: string): string {
     switch (input) {

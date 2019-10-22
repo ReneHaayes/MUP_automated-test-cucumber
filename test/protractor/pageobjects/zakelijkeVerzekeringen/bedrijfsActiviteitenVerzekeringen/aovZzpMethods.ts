@@ -1,7 +1,6 @@
 import {browser, by, element, ElementFinder} from "protractor";
-import {incapacitation, AovZzpUwpremie} from "../../enum/aovZzpEnum";
-import {durationEntrepreneur, gender, specificIdentification, genericEnum} from "../../enum/genericEnum";
-import {aovZzpElements, genericElements, genericMethods, personaData} from "../../../support";
+import {aovZzpElements, genericElements, genericMethods, personaData} from "@support";
+import {AovZzpUwpremie, durationEntrepreneur, gender, genericEnum, incapacitation, specificIdentification} from "@enum";
 
 export class AovZzpMethods {
 

@@ -1,6 +1,6 @@
 import {Then, When} from "cucumber";
 import {browser} from "protractor";
-import {genericMethods, mijnUniveAccountElements, verhuizingDoorgevenElements} from "../../../../support";
+import {genericMethods, mijnUniveAccountElements, verhuizingDoorgevenElements} from "@support";
 
 When(/^Customer changes move details with:$/, async (data) => {
   const dataTable = data.rowsHash();

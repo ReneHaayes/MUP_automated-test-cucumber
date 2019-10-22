@@ -1,12 +1,11 @@
 import {
   durationEntrepreneur,
   gender,
-  houseNumberAddition,
-  personaName,
+  houseNumberAddition, personaName,
   phoneNumber,
   prefix,
   specificIdentification
-} from "../enum/genericEnum";
+} from "@enum";
 
 export class Persona {
 

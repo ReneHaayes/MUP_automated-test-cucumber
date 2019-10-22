@@ -1,7 +1,7 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
-import {verzekeringPaginasEnum} from '../../../pageobjects/enum/genericEnum';
-import {autoVerzekeringElements, genericElements, genericMethods, getUrlUnive} from "../../../support";
+import {autoVerzekeringElements, genericElements, genericMethods, getUrlUnive} from "@support";
+import {verzekeringPaginasEnum} from "@enum";
 
 
 When(/^I press the button premie berekenen on the amp autoverzekering page$/, async () => {

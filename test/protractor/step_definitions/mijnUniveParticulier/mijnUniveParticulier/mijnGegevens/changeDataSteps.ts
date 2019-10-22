@@ -3,11 +3,18 @@ import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
 import {browser} from "protractor";
 import {
   apiElements,
-  apiMethods, genericElements,
-  genericMethods, hmPageElements, loginPageElements, loginPageMethods, mailhogMethods,
-  mijnUniveAccountElements, personaData,
-  persoonlijkeGegevensElements, persoonlijkeGegevensMethods
-} from "../../../../support";
+  apiMethods,
+  genericElements,
+  genericMethods,
+  hmPageElements,
+  loginPageElements,
+  loginPageMethods,
+  mailhogMethods,
+  mijnUniveAccountElements,
+  personaData,
+  persoonlijkeGegevensElements,
+  persoonlijkeGegevensMethods
+} from "@support";
 
 
 When(/^Customer changes password for (.*) with (.*)$/, async (persona: string, newPassword: string) => {
@@ -92,16 +99,13 @@ When(/^Customer changes family composition preferences with (.*)$/, async (famil
 });
 
 Then(/^Verify thank you page for payment data changed$/, async () => {
-  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.formThankYouText,
-    browser.getPageTimeout);
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.formThankYouText, browser.getPageTimeout);
 });
 
 Then(/^Verify thank you message is shown for changing contact preferences$/, async () => {
-  await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesSuccesMessageTextElement,
-    mijnUniveAccountElements.contactPreferencesSuccesMessageText);
+  await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesSuccesMessageTextElement, mijnUniveAccountElements.contactPreferencesSuccesMessageText);
 });
 
 Then(/^Verify thank you message is shown for family composition preferences$/, async () => {
-  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement,
-    mijnUniveAccountElements.familyCompositionSuccesThankYouText, browser.getPageTimeout);
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.familyCompositionSuccesThankYouText, browser.getPageTimeout);
 });

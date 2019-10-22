@@ -1,7 +1,6 @@
-import {polisDetailsUrlEnum, verzekeringPaginasEnum} from '../enum/genericEnum';
 import {browser} from 'protractor';
-import {homePageEnum} from '../enum/woonVerzekeringEnum';
-import {apiElements, genericElements} from "../../support";
+import {homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
+import {apiElements, genericElements} from "@support";
 
 export class GetUrlUnive {
 

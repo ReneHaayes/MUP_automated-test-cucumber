@@ -1,6 +1,5 @@
-import {activityEnum} from "../../enum/genericEnum";
-import {vehicleInfoEnum} from "../../enum/autoVerzekeringEnum";
-import {eigenVervoerVerzekeringElements, genericMethods} from "../../../support";
+import {eigenVervoerVerzekeringElements, genericMethods} from "@support";
+import {activityEnum, vehicleInfoEnum} from "@enum";
 
 
 export class EigenVervoerVerzekeringMethods {
@@ -128,6 +127,5 @@ export class EigenVervoerVerzekeringMethods {
       }
     }
   }
-
 
 }

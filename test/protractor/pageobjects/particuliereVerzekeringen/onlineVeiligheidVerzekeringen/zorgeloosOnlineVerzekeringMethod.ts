@@ -1,7 +1,6 @@
 import {browser} from "protractor";
-import {gender, genericEnum} from "../../enum/genericEnum";
-import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-import {genericElements, genericMethods, nawElements, zorgeloosOnlineVerzekeringElements} from "../../../support";
+import {genericElements, genericMethods, nawElements, zorgeloosOnlineVerzekeringElements} from "@support";
+import {familyCompositionEnum, gender, genericEnum} from "@enum";
 
 export class ZorgeloosOnlineVerzekeringMethods {
 

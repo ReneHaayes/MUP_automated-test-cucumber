@@ -1,12 +1,9 @@
 import {Then, When} from "cucumber";
 import {browser} from "protractor";
-import {statusEnum} from "../../../../pageobjects/enum/genericEnum";
 import {
-  genericMethods,
-  mijnSchadeEnClaimElements,
-  mijnSchadeEnClaimMethods,
-  mijnVerzekeringElements
-} from "../../../../support";
+  genericMethods, mijnSchadeEnClaimElements, mijnSchadeEnClaimMethods, mijnVerzekeringElements
+} from "@support";
+import {statusEnum} from "@enum";
 
 When(/^Customer selects algemene voorwaarden$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.algemeneVoorwaardenClickElement);
@@ -144,8 +141,7 @@ Then(/^Verify uploaded (.*) is show in the list beneath$/, async (filename: stri
 });
 
 Then(/^Verify thank you message for creating a change is correctly shown$/, async () => {
-  await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.changeInsuranceThankYouTextElement, mijnVerzekeringElements.changeInsuranceThankYouText,
-    browser.getPageTimeout);
+  await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.changeInsuranceThankYouTextElement, mijnVerzekeringElements.changeInsuranceThankYouText, browser.getPageTimeout);
 });
 
 Then(/^Verify algemene voorwaarden is available on screen as a pdf$/, async () => {

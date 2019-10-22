@@ -1,5 +1,4 @@
-import {licensePlates} from "../enum/licensePlateEnum";
-import {vehicleKindEnum} from "../enum/bromfietsVerzekeringEnum";
+import {licensePlates, vehicleKindEnum} from "@enum";
 
 export class Motor {
 
@@ -26,7 +25,6 @@ export class MotorWithLicensePlate {
   MOTOR_MPTT99: Motor = new Motor(licensePlates.MOTOR_MPTT99, 'SUZUKI', vehicleKindEnum.MOTOR, '2004', 'GSX R 750', '2999');
   QUAD_97XFTK: Motor = new Motor(licensePlates.QUAD_97XFTK, 'hsun', vehicleKindEnum.QUAD, '2007', 'HS150S', '3999');
   TRIKE_21PLN1: Motor = new Motor(licensePlates.TRIKE_21PLN1, 'courage trike', vehicleKindEnum.TRIKE, '2011', 'CT100TDI TIP', '4960');
-
 
   getMotorBrandName(input: string): string {
     switch (input) {

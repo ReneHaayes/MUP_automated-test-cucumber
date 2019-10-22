@@ -1,7 +1,5 @@
-import {typeBoatEnum} from "../../enum/bootEnum";
-import {materialEnum} from "../../enum/woonVerzekeringEnum";
-import {fuelTypEnum} from "../../enum/genericEnum";
-import {bootVerzekeringElements, genericMethods} from "../../../support";
+import {bootVerzekeringElements, genericMethods} from "@support";
+import {fuelTypEnum, materialEnum, typeBoatEnum} from "@enum";
 
 export class BootVerzekeringMethods {
 
