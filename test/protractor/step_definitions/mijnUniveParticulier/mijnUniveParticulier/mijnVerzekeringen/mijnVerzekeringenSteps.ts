@@ -67,9 +67,11 @@ When(/^Customer claims a autoverzekering damage by filling in the form for polis
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
   await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneInputElement, '0612345678');
   await genericMethods.clickOnFinishButton();
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimCloseLightBoxClickElement);
   //STEP SIX
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
   //STEP SEVEN
+  await browser.sleep(2500);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
 });
@@ -99,6 +101,7 @@ When(/^Customer claims a woonverzekering damage by filling in the form for polis
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOtherCompanyInvolvementFalseClickElement);
   await genericMethods.clickOnNextButton();
   await genericMethods.clickOnFinishButton();
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
   //STEP EIGHT
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);

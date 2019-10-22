@@ -20,8 +20,8 @@ export class MijnVerzekeringenElements {
 
   changeInsuranceClickElement: string = '[href*="poliswijzigen"]';
   changeInsuranceDescriptionAreaInputElement: string = '[title="Beschrijving van de wijziging"]';
-  changeInsuranceSubmitButtonClickElement: string = '[name="btnSubmit"]';
-  changeInsuranceThankYouTextElement: string = '[class="eforms-container"] > p';
+  changeInsuranceSubmitButtonClickElement: string = '[class="button form-buttons__button"]';
+  changeInsuranceThankYouTextElement: string = '[class="form-container"] > p';
   changeInsuranceThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
 
   //LOADER

@@ -12,5 +12,5 @@ Feature: Changing data for moving to a new house
       | newPhoneNumberPrivate | 1234567890        |
 
     Examples:
-      | persona |
-      | annie   |
+      | persona     |
+      | woestenburg |

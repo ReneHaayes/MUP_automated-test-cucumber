@@ -220,9 +220,6 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveContactVoorkeurenDoorgeven;
       }
-      case verzekeringPaginasEnum.MIJN_UNIVE_IDENTITEITSGEGEVENS_DOORGEVEN: {
-        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveIdentiteitsGegevensDoorgeven;
-      }
       case verzekeringPaginasEnum.MIJN_UNIVE_VERHUISGEGEVENS_DOORGEVEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveVerhuisGegevensDoorgeven;
       }

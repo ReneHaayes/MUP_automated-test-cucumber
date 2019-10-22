@@ -10,7 +10,7 @@ Feature: Fault situations for creating account.
 
     Examples:
       | persona |
-      | berend  |
+      | woestenburg  |
 
   Scenario Outline: Check if the notification appears that the password filled in is not correct according to the standards
     Given Customer is on the mijn unive particulier page of the Unive website
