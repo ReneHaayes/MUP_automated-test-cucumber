@@ -17,6 +17,8 @@ When(/^I enter step four page of aovZzp for persona (.*)$/, async (persona: stri
   await genericMethods.typeText(aovZzpElements.zzpYourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataEmailAddress, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(aovZzpElements.zzpYourDataBSNnumberElement, personaData.getPersonaBsn(persona));
+  await genericMethods.typeText(aovZzpElements.zzpOtherDataProfessionElement, personaData.getPersonaProfession(persona));
+  await genericMethods.typeText(aovZzpElements.zzpOtherDataKvkNumberElement, personaData.getPersonaKvkNumber(persona));
   await aovZzpMethods.selectYourDataDurationEntrepreneur(personaData.getPersonaDurationEntrepreneur(persona));
   await genericMethods.typeText(aovZzpElements.aovZzpAccountNumberDataElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(aovZzpElements.aovZzpAccountNumberDataElement);
