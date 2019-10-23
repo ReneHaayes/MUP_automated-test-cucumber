@@ -75,6 +75,7 @@ export enum verzekeringPaginasEnum {
   HOME_TSTPROJ = 'tstProj',
   HOME_PI = 'pi',
   HOME_TST = 'tst',
+  HOME_ZAKELIJK = 'zakelijktest',
   AUTOVERZEKERING_PAT = 'Autoverzekering',
   AOVZZP_PAT = 'aovZzp',
   ANNULERINGSVERZEKERING = 'Annuleringsverzekering',
