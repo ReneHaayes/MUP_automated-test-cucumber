@@ -1,7 +1,6 @@
-import {polisDetailsUrlEnum, verzekeringPaginasEnum} from '../enum/genericEnum';
 import {browser} from 'protractor';
-import {homePageEnum} from '../enum/woonVerzekeringEnum';
-import {apiElements, genericElements} from "../../support";
+import {homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
+import {apiElements, genericElements} from "@support";
 
 export class GetUrlUnive {
 
@@ -219,9 +218,6 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveContactVoorkeurenDoorgeven;
-      }
-      case verzekeringPaginasEnum.MIJN_UNIVE_IDENTITEITSGEGEVENS_DOORGEVEN: {
-        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveIdentiteitsGegevensDoorgeven;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_VERHUISGEGEVENS_DOORGEVEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveVerhuisGegevensDoorgeven;

@@ -1,6 +1,6 @@
 import {browser} from "protractor";
 import {When} from "cucumber";
-import {genericMethods, personaData, persoonlijkeGegevensElements} from "../../../../support";
+import {genericMethods, personaData, persoonlijkeGegevensElements} from "@support";
 
 When(/^(.*) changes personal details with:$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();

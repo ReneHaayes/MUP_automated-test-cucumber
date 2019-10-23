@@ -22,14 +22,14 @@ export class LoginPageElements {
   veelgesteldeVragenHeaderTextElement: string = '[class="action_title"]';
   veelgesteldeVragenHeaderText: string = 'Hulp nodig bij Mijn Univé?';
 
-  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveTextElement: string = '#aanmelden-–-hoe-meld-ik-me-aan-voor-mijn-unive';
-  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveText: string = 'Op www.unive.nl/mijnunive kiest u voor ‘Aanmelden voor Mijn Univé’ en vult u eenmalig een aantal persoonlijke gegevens in, zoals klantnummer en een wachtwoord. Aan de hand daarvan zoeken wij u op in onze klantenadministratie. Hebben wij u gevonden, dan krijgt u een bevestigingsmailtje met een activeringslink. Nadat u via die link uw account heeft geactiveerd, heeft u direct toegang tot Mijn Univé.';
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveTextElement: string = '[id="hoe-meld-ik-me-aan-voor-mijn-unive-mijn-unive"] > a > h3';
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveText: string = 'Op www.unive.nl/mijnunive kiest u voor ‘Aanmelden voor Mijn Univé’ en vult u eenmalig een aantal persoonlijke gegevens in, zoals uw geboortedatum, postcode en een wachtwoord. Aan de hand daarvan zoeken wij u op in onze klantenadministratie. Hebben wij u gevonden, dan krijgt u een bevestigingsmailtje met een activeringslink. Nadat u via die link uw account heeft geactiveerd, heeft u direct toegang tot Mijn Univé.';
 
-  veelgesteldeVraagAntwoordGeopend: string = '[class="faqList_answer _is_expanded"][aria-hidden="false"]';
+  veelgesteldeVraagAntwoordGeopend: string = '[class="faqList"] > dd:nth-child(6) > p';
 
   //MAILHOG
   mailtoHeaderTextElement: string = '[class*="messages"] > div:nth-child(1) [ng-repeat="to in message.Content.Headers[\'To\']"]';
-  firstMessageClickElement:string = '[class*="messages"] > div:nth-child(1)';
+  firstMessageClickElement: string = '[class*="messages"] > div:nth-child(1)';
   painButtonClickElement: string = '[href="#preview-plain"]';
   verifyEmailClickElement: string = '[class="tab-pane ng-binding active"] [href*="https://login.pat.unive.nl/personal/verify-email"]';
   successMessageTextElement: string = '[data-message="success"]';

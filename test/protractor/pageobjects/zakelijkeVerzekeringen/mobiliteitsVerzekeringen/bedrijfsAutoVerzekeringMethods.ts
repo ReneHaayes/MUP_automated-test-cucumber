@@ -1,11 +1,8 @@
 import {browser} from "protractor";
-import {basisDekkingEnum, yearlyMileageEnum} from "../../enum/autoVerzekeringEnum";
 import {
-  bedrijfsAutoVerzekeringElements,
-  businessCarWithLicensePlate,
-  genericElements,
-  genericMethods
-} from "../../../support";
+  bedrijfsAutoVerzekeringElements, businessCarWithLicensePlate, genericElements, genericMethods
+} from "@support";
+import {basisDekkingEnum, yearlyMileageEnum} from "@enum";
 
 export class BedrijfsAutoVerzekeringMethods {
 
@@ -14,8 +11,7 @@ export class BedrijfsAutoVerzekeringMethods {
     await genericMethods.typeText(bedrijfsAutoVerzekeringElements.licensePlateElement, licensePlate);
     await browser.sleep(500);
     await genericMethods.clickOnTAB(bedrijfsAutoVerzekeringElements.licensePlateElement);
-    await genericMethods.waitForElementIsVisibleWithXpath(bedrijfsAutoVerzekeringElements.brandElementXpath +
-      '[contains(text(),"' + businessCarWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
+    await genericMethods.waitForElementIsVisibleWithXpath(bedrijfsAutoVerzekeringElements.brandElementXpath + '[contains(text(),"' + businessCarWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
   }
 
   async clickOnYearlyMileage(input: string) {

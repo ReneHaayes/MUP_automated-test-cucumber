@@ -1,5 +1,5 @@
 import {When} from "cucumber";
-import {bikeElements, genericElements, genericMethods, nawElements, personaData} from "../../../support";
+import {bikeElements, genericElements, genericMethods, nawElements, personaData} from "@support";
 
 When(/^I enter step one and step two page of fiets verzekeringen for persona (.*) with:$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();

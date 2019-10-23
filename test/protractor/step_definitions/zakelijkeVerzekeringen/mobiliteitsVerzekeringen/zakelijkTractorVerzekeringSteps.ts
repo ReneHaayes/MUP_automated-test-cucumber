@@ -1,12 +1,14 @@
 import {When} from "cucumber";
 import {
   companyData,
-  genericElements, genericMethods,
-  nawElements, personaData,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
   vehicleElements,
   zakelijkTractorVerzekeringElements,
   zakelijkTractorVerzekerinigMethods
-} from "../../../support";
+} from "@support";
 
 When(/^I enter step one page and click next on step two of zakelijk tractorverzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();

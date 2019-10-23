@@ -1,7 +1,6 @@
-import {selectAlleVerzekeringEnum} from "../../enum/alleVerzekeringEnum";
-import {breadCrumbEnum, verzekeringPaginasEnum} from "../../enum/genericEnum";
 import {browser} from "protractor";
-import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements} from "../../../support";
+import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements} from "@support";
+import {breadCrumbEnum, selectAlleVerzekeringEnum, verzekeringPaginasEnum} from "@enum";
 
 export class AlleVerzekeringenMethods {
 

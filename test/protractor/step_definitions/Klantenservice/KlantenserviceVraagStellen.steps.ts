@@ -1,5 +1,5 @@
 import {When, Then} from 'cucumber';
-import {genericMethods, klantenserviceVraagStellenElements} from "../../support";
+import {genericMethods, klantenserviceVraagStellenElements} from "@support";
 
 When(/^Customer fills in form for schadeverzekeringen vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);

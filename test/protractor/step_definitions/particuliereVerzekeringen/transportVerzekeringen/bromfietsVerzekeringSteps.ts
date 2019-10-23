@@ -1,15 +1,9 @@
 import {When} from "cucumber";
 import {
-  genericElements,
-  genericMethods,
-  mopedMethods,
-  mopedWithLicensePlate,
-  nawElements, personaData,
-  vehicleElements
-} from "../../../support";
+  genericElements, genericMethods, mopedMethods, mopedWithLicensePlate, nawElements, personaData, vehicleElements
+} from "@support";
 
-When(/^I enter step one page of moped for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string,
-                                                                                                                                    licensePlate: string, damageFreeYears: string) => {
+When(/^I enter step one page of moped for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string, licensePlate: string, damageFreeYears: string) => {
   await mopedMethods.enterLicensePlate(licensePlate);
   await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoBrandNameElement, mopedWithLicensePlate.getMopedBrandName(licensePlate));
   await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoModelElement, mopedWithLicensePlate.getMopedModel(licensePlate));

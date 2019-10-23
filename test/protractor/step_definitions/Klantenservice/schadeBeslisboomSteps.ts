@@ -1,5 +1,5 @@
 import { When, Then } from 'cucumber';
-import {genericMethods, schadeBeslisboomElements} from "../../support";
+import {genericMethods, schadeBeslisboomElements} from "@support";
 
 // Auto Oldtimer Steps:
 

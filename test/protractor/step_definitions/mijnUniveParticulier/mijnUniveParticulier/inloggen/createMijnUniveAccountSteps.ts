@@ -5,9 +5,10 @@ import {
   genericElements,
   genericMethods,
   loginPageElements,
-  loginPageMethods, mijnUniveAccountElements,
+  loginPageMethods,
+  mijnUniveAccountElements,
   personaData
-} from "../../../../support";
+} from "@support";
 
 When(/^Check if (.*) already exists$/, async (persona: string) => {
   await apiMethods.checkIfAccountExistsWhenDoesntExistCreateAccount(persona);
@@ -90,5 +91,5 @@ Then(/^The notification account number not valid shows$/, async () => {
 });
 
 Then(/^The notification that the data is not recognisable shows$/, async () => {
-  await genericMethods.verifyTextInElement(mijnUniveAccountElements.customerNotRecognisabelTextElement, mijnUniveAccountElements.customerNotRecognisableText);
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.customerNotRecognisabelTextElement, mijnUniveAccountElements.customerNotRecognisableText, browser.getPageTimeout);
 });

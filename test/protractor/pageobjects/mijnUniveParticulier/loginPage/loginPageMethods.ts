@@ -1,7 +1,6 @@
 import {browser} from "protractor";
-import {veelgesteldeVragenEnum} from "../../enum/veelgesteldeVragenEnum";
-import {verzekeringPaginasEnum} from "../../enum/genericEnum";
-import {genericElements, genericMethods, loginPageElements, personaData} from "../../../support";
+import {genericElements, genericMethods, loginPageElements, personaData} from "@support";
+import {veelgesteldeVragenEnum, verzekeringPaginasEnum} from "@enum";
 
 export class LoginPageMethods {
 

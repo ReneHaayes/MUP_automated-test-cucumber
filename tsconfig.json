@@ -2,6 +2,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./test/dist/out-tsc",
+    "paths": {
+      "@support": ["../test/protractor/support/index.ts"],
+      "@enum": ["../test/protractor/support/enum.ts"]
+    },
     "baseUrl": "test",
     "sourceMap": true,
     "declaration": false,

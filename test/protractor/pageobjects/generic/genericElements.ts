@@ -87,7 +87,6 @@ export class GenericElements {
   mijnGegevens: string = 'mijn-gegevens';
   mijnUniveBetaalgegevensWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'betaalgegevens-wijzigen';
   mijnUniveContactVoorkeurenDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'contactvoorkeuren';
-  mijnUniveIdentiteitsGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'identiteitsgegevens';
   mijnUniveVerhuisGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'verhuizingdoorgeven';
   mijnUniveMijnGegevens: string = this.mijnUnivePage +'/'+  this.mijnGegevens;
   mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'gezinssituatiewijzigen';

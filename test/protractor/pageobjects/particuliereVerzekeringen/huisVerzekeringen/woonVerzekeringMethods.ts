@@ -1,18 +1,16 @@
 import {browser} from "protractor";
+import {genericElements, genericMethods, hmPageElements, personaData, woonVerzekeringElements} from "@support";
 import {
   additionalOption,
+  genericEnum,
   hmPageWoonVerzekeringEnum,
   inhabited,
   kindStraw,
-  superficiesAndContents,
-  totalSurface,
-  materialEnum
-} from "../../enum/woonVerzekeringEnum";
-import {genericEnum} from "../../enum/genericEnum";
-import {genericElements, genericMethods, hmPageElements, personaData, woonVerzekeringElements} from "../../../support";
+  materialEnum, superficiesAndContents,
+  totalSurface
+} from "@enum";
 
 export class WoonVerzekeringMethods {
-
 
   async clickWallHouse(input: string) {
     switch (input) {

@@ -2,12 +2,17 @@ import {When} from 'cucumber';
 import {browser} from 'protractor';
 import {
   autoVerzekeringElements,
-  autoVerzekeringElementsStepThree, autoVerzekeringMethods, autoVerzekeringMethodsStepThreeAndFour,
-  carWithLicensePlate, companyData, genericElements,
+  autoVerzekeringElementsStepThree,
+  autoVerzekeringMethods,
+  autoVerzekeringMethodsStepThreeAndFour,
+  carWithLicensePlate,
+  companyData,
+  genericElements,
   genericMethods,
-  nawElements, personaData,
+  nawElements,
+  personaData,
   vehicleElements
-} from "../../../support";
+} from "@support";
 
 
 When(/^I enter step one page of autoverzekeringen for (.*) with$/, async (persona: string, data) => {
@@ -68,8 +73,7 @@ When(/^I enter step four page of autoverzekering for (.*)$/, async (persona: str
 When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) with:$/, async (company: string, data) => {
   const dataTable = data.rowsHash();
   await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
-  await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath
-    + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
+  await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverNoClickElement);
   await genericMethods.typeText(autoVerzekeringElements.sameDriverZipCodeCompanyElement, companyData.getCompanyZipcode(company));
@@ -80,8 +84,7 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
 When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) with different (.*) driver:$/, async (company: string, persona: string, data) => {
   const dataTable = data.rowsHash();
   await autoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
-  await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath
-    + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
+  await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverYesClickElement);
   await genericMethods.typeText(nawElements.specificDriverZipCodeElement, companyData.getCompanyZipcode(company));

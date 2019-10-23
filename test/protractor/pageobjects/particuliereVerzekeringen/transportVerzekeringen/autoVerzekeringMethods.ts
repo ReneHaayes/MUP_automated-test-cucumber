@@ -1,14 +1,13 @@
 import {browser} from 'protractor';
-import {genericEnum} from "../../enum/genericEnum";
+import {autoVerzekeringElements, carWithLicensePlate, genericElements, genericMethods} from "@support";
 import {
   aanvullendeOptiesEnum,
-  basisDekkingEnum,
-  vehicleAccEnum,
-  ownRiskEnum, totalPremieEnum,
-  yearlyMileageEnum,
-  whoDrivesCarMost
-} from "../../enum/autoVerzekeringEnum";
-import {autoVerzekeringElements, carWithLicensePlate, genericElements, genericMethods} from "../../../support";
+  basisDekkingEnum, genericEnum,
+  ownRiskEnum,
+  totalPremieEnum, vehicleAccEnum,
+  whoDrivesCarMost,
+  yearlyMileageEnum
+} from "@enum";
 
 export class AutoVerzekeringMethods {
 
@@ -246,4 +245,5 @@ export class AutoVerzekeringMethods {
       }
     }
   }
+
 }

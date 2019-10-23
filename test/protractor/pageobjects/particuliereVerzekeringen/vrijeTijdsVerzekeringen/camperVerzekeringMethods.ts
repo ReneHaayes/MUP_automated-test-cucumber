@@ -1,5 +1,5 @@
 import {browser} from "protractor";
-import {camperVerzekeringElements, camperWithLicensePlate, genericMethods} from "../../../support";
+import {camperVerzekeringElements, camperWithLicensePlate, genericMethods} from "@support";
 
 export class CamperVerzekeringMethods {
 

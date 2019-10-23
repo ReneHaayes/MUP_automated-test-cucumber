@@ -37,7 +37,7 @@ export class MijnUniveAccountElements {
 
   //NOT RECOGNISABLE CUSTOMER
   customerNotRecognisabelTextElement: string = '[class*="toast--warning"]';
-  customerNotRecognisableText: string = 'Op basis van deze gegevens kunnen wij u niet als klant herkennen. Pas uw gegevens aan, of bel met onze Klantenservice: (0592) 34 93 45. (409:130)';
+  customerNotRecognisableText: string = 'Op basis van deze gegevens kunnen wij u niet als klant herkennen. Pas uw gegevens aan, of bel met onze Klantenservice: 0592 349 345.';
 
   //CHANGE PASSWORD
   changePasswordClickElement: string = '[href="/mijnunive/wachtwoord-wijzigen"]';
@@ -63,7 +63,7 @@ export class MijnUniveAccountElements {
   currentIbanAccountNumberInputElement: string = '#iban_current';
   newIbanAccountnumberInputElement: string = '#iban_new';
   startDateChangeInputElement: string = '#start_date';
-  authorisationCheckBoxAutomaticCollectionClickElement: string = '[for="payment_method__authorized_0"]';
+  authorisationCheckBoxAutomaticCollectionClickElement: string = '[for="payment_account__authorized_0"]';
 
   //SELECT PAYMENT PERIOD
   paymentPeriodSelectElement: string = '#payment_term__frequency';
@@ -82,13 +82,6 @@ export class MijnUniveAccountElements {
   contactPreferencesH1TitleText: string = 'Mijn contactvoorkeuren';
   contactPreferencesSuccesMessageTextElement: string = '[class="mainMessage"] > p';
   contactPreferencesSuccesMessageText: string = 'Het bijwerken van de contactvoorkeuren is gelukt.';
-
-  //IDENTITY PREFERENCES
-  typeIdentitySelectElement: string = '#idtype';
-  typeIdentityDriversLicenseSelectElement: string = 'Rijbewijs';
-  idNumberInputElement: string = '#idnummer';
-  identityPreferencesChangingSuccesTextElement: string = '[class="page-content__block"] > p';
-  identityPreferencesChangingSuccesText: string = 'U heeft uw identiteitsgegevens succesvol aan ons doorgegeven.';
 
   //FAMILY COMPOSITION
   familyCompositionOnePersonNoChildrenClickElement: string = '[For="wat-is-uw-gezinssituatie_0"]';

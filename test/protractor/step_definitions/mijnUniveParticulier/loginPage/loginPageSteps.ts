@@ -1,7 +1,7 @@
 import {Given, Then, When} from 'cucumber';
-import {verzekeringPaginasEnum} from "../../../pageobjects/enum/genericEnum";
 import {browser} from "protractor";
-import {genericElements, genericMethods, loginPageElements, loginPageMethods, personaData} from "../../../support";
+import {genericElements, genericMethods, loginPageElements, loginPageMethods, personaData} from "@support";
+import {verzekeringPaginasEnum} from "@enum";
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);

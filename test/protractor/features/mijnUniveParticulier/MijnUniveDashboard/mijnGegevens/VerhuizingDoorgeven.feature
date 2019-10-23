@@ -11,5 +11,5 @@ Feature: Changing data for moving to a new address
     Then Verify succes message for changing address is shown
 
     Examples:
-      | persona |
-      | annie   |
+      | persona     |
+      | woestenburg |

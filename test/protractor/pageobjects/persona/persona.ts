@@ -1,12 +1,11 @@
 import {
   durationEntrepreneur,
   gender,
-  houseNumberAddition,
-  personaName,
+  houseNumberAddition, personaName,
   phoneNumber,
   prefix,
   specificIdentification
-} from "../enum/genericEnum";
+} from "@enum";
 
 export class Persona {
 
@@ -77,7 +76,7 @@ export class PersonaData {
     'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
   salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15', '06', '1992', 'Enschede', '7412XW', '31',
     'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'onjuisteemailadres@test.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
+    '5088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
   neymar: Persona = new Persona('Neymar', 'N', 'da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
     'ABC', gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
     'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98', 'Welkom01!');
@@ -87,9 +86,9 @@ export class PersonaData {
   illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing-van Bruggen', '28', '10', '1962', 'Deventer', '7412XW', '91',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
     '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  annie: Persona = new Persona('Annie', 'A', prefix.NO_PREFIX, 'Jans', '25', '05', '1960', 'Rolde', '9451GK', '99451',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'anniejans@ziggo.nl', '5088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+  woestenburg: Persona = new Persona('Annie', 'AF', prefix.NO_PREFIX, 'Woestenburg', '19', '10', '1956', 'Venhuizen', '1606XA', '11',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
+    'a.woestenburg@quicknet.nl', '3872', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
 
 
   getPersonaZipcode(input: string): string {
@@ -97,8 +96,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.zipCode;
       }
-      case personaName.ANNIE: {
-        return this.annie.zipCode;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.zipCode;
       }
       case personaName.RONALDO: {
         return this.ronaldo.zipCode;
@@ -126,8 +125,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthDay;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthDay;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthDay;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthDay;
@@ -150,14 +149,14 @@ export class PersonaData {
     }
 
   }
-  
+
   getPersonaBirthMonth(input: string): string {
     switch (input) {
       case personaName.ILLING: {
         return this.illing.birthMonth;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthMonth;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthMonth;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthMonth;
@@ -186,8 +185,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthYear;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthYear;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthYear;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthYear;
@@ -216,8 +215,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthDay + '-' + this.illing.birthMonth + '-' + this.illing.birthYear;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthDay + '-' + this.annie.birthMonth + '-' + this.annie.birthYear;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthDay + '-' + this.woestenburg.birthMonth + '-' + this.woestenburg.birthYear;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthDay + '-' + this.ronaldo.birthMonth + '-' + this.ronaldo.birthYear;
@@ -240,14 +239,14 @@ export class PersonaData {
     }
 
   }
-  
+
   getPersonaLastName(input: string): string {
     switch (input) {
       case personaName.ILLING: {
         return this.illing.lastName;
       }
-      case personaName.ANNIE: {
-        return this.annie.lastName;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.lastName;
       }
       case personaName.RONALDO: {
         return this.ronaldo.lastName;
@@ -275,8 +274,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.firstName;
       }
-      case personaName.ANNIE: {
-        return this.annie.firstName;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.firstName;
       }
       case personaName.RONALDO: {
         return this.ronaldo.firstName;
@@ -305,8 +304,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.gender;
       }
-      case personaName.ANNIE: {
-        return this.annie.gender;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.gender;
       }
       case personaName.RONALDO: {
         return this.ronaldo.gender;
@@ -335,8 +334,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.initials;
       }
-      case personaName.ANNIE: {
-        return this.annie.initials;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.initials;
       }
       case personaName.RONALDO: {
         return this.ronaldo.initials;
@@ -364,8 +363,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.prefix;
       }
-      case personaName.ANNIE: {
-        return this.annie.prefix;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.prefix;
       }
       case personaName.RONALDO: {
         return this.ronaldo.prefix;
@@ -393,8 +392,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthPlace;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthPlace;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthPlace;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthPlace;
@@ -422,8 +421,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.houseNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.houseNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.houseNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.houseNumber;
@@ -451,8 +450,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.houseNumberAddition;
       }
-      case personaName.ANNIE: {
-        return this.annie.houseNumberAddition;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.houseNumberAddition;
       }
       case personaName.RONALDO: {
         return this.ronaldo.houseNumberAddition;
@@ -480,8 +479,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.phoneNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.phoneNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.phoneNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.phoneNumber;
@@ -509,8 +508,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.specificIdentification;
       }
-      case personaName.ANNIE: {
-        return this.annie.specificIdentification;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.specificIdentification;
       }
       case personaName.RONALDO: {
         return this.ronaldo.specificIdentification;
@@ -538,8 +537,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.specificIdentificationNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.specificIdentificationNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.specificIdentificationNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.specificIdentificationNumber;
@@ -567,8 +566,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.eMailAddress;
       }
-      case personaName.ANNIE: {
-        return this.annie.eMailAddress;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.eMailAddress;
       }
       case personaName.RONALDO: {
         return this.ronaldo.eMailAddress;
@@ -596,8 +595,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.accountNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.accountNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.accountNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.accountNumber;
@@ -625,8 +624,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.bsn;
       }
-      case personaName.ANNIE: {
-        return this.annie.bsn;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.bsn;
       }
       case personaName.RONALDO: {
         return this.ronaldo.bsn;
@@ -654,8 +653,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.profession;
       }
-      case personaName.ANNIE: {
-        return this.annie.profession;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.profession;
       }
       case personaName.RONALDO: {
         return this.ronaldo.profession;
@@ -683,8 +682,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.kvkNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.kvkNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.kvkNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.kvkNumber;
@@ -712,8 +711,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.durationEntrepreneur;
       }
-      case personaName.ANNIE: {
-        return this.annie.durationEntrepreneur;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.durationEntrepreneur;
       }
       case personaName.RONALDO: {
         return this.ronaldo.durationEntrepreneur;
@@ -741,8 +740,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.height;
       }
-      case personaName.ANNIE: {
-        return this.annie.height;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.height;
       }
       case personaName.RONALDO: {
         return this.ronaldo.height;
@@ -770,8 +769,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.weight;
       }
-      case personaName.ANNIE: {
-        return this.annie.weight;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.weight;
       }
       case personaName.RONALDO: {
         return this.ronaldo.weight;
@@ -799,8 +798,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.password;
       }
-      case personaName.ANNIE: {
-        return this.annie.password;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.password;
       }
       case personaName.RONALDO: {
         return this.ronaldo.password;

@@ -1,5 +1,5 @@
 import {Then, When} from "cucumber";
-import {alleVerzekeringenMethods, genericElements, genericMethods} from "../../../support";
+import {alleVerzekeringenMethods, genericElements, genericMethods} from "@support";
 
 When(/^I select (.*) and click on (.*) at the alle verzekeringen page$/, async (select: string, buttonPage: string) => {
   await alleVerzekeringenMethods.selectAlleVerzekeringDropdown(select);

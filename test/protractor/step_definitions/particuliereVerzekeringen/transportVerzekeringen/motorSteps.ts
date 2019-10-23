@@ -1,12 +1,7 @@
 import {When} from "cucumber";
 import {
-  autoVerzekeringElements,
-  genericElements,
-  genericMethods,
-  motorElements, motorMethods,
-  nawElements,
-  personaData
-} from "../../../support";
+  autoVerzekeringElements, genericElements, genericMethods, motorElements, motorMethods, nawElements, personaData
+} from "@support";
 
 
 When(/^I enter step one page for motor with license plate (.*) with:$/, async (licensePlate: string, data) => {

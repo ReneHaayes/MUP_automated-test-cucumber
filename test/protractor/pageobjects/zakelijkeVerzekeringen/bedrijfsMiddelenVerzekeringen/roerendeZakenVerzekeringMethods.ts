@@ -1,5 +1,5 @@
-import {activityEnum} from "../../enum/genericEnum";
-import {genericMethods, roerendeZakenVerzekeringElements} from "../../../support";
+import {genericMethods, roerendeZakenVerzekeringElements} from "@support";
+import {activityEnum} from "@enum";
 
 export class RoerendeZakenVerzekeringMethods {
 

@@ -9,5 +9,5 @@ Feature: Deleting an Account and afterwards creating an account.
     Then Aanmelden gelukt shows on screen for persona: <persona>
 
     Examples:
-      | persona |
-      | annie   |
+      | persona     |
+      | woestenburg |

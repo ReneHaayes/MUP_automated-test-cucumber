@@ -1,10 +1,7 @@
 import {When} from "cucumber";
 import {
-  genericElements, genericMethods,
-  nawElements,
-  ongevallenVerzekeringElements,
-  ongevallenVerzekeringMethods, personaData
-} from "../../../support";
+  genericElements, genericMethods, nawElements, ongevallenVerzekeringElements, ongevallenVerzekeringMethods, personaData
+} from "@support";
 
 When(/^I enter step one page of ongevallenverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await ongevallenVerzekeringMethods.clickFamilyComposition(familyCompositionInput);

@@ -1,7 +1,7 @@
-import { When, Then } from 'cucumber';
-import { browser } from 'protractor';
-import { verzekeringPaginasEnum } from '../../../pageobjects/enum/genericEnum';
-import {genericElements, genericMethods, getUrlUnive, woonVerzekeringElements} from "../../../support";
+import {When, Then} from 'cucumber';
+import {browser} from 'protractor';
+import {genericElements, genericMethods, getUrlUnive, woonVerzekeringElements} from "@support";
+import {verzekeringPaginasEnum} from "@enum";
 
 When(/^I press the button premie berekenen on the amp woonverzekering page$/, async () => {
   await genericMethods.waitForElementIsVisible(woonVerzekeringElements.ampBerekenUwPremieButtonClickElement, browser.getPageTimeout);
@@ -13,8 +13,8 @@ Then(/^Verify elements on premie berekenen woon page is shown$/, async () => {
     await genericMethods.clickOnCookie(genericElements.cookieClickElement);
   } catch (e) {
 
-}
-    const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.WOONVERZEKERING_PAT);
-    await genericMethods.verifyUrlContains(url);
-    await genericMethods.waitForElementIsVisible(woonVerzekeringElements.zipCodeInputElement, browser.getPageTimeout);
+  }
+  const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.WOONVERZEKERING_PAT);
+  await genericMethods.verifyUrlContains(url);
+  await genericMethods.waitForElementIsVisible(woonVerzekeringElements.zipCodeInputElement, browser.getPageTimeout);
 });

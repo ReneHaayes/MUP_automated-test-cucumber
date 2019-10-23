@@ -3,9 +3,11 @@ import {
   companyData,
   eigenVervoerVerzekeringElements,
   eigenVervoerVerzekeringMethods,
-  genericElements, genericMethods,
-  nawElements, personaData
-} from "../../../support";
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData
+} from "@support";
 
 When(/^I enter step one page and click next on step two of eigen vervoer verzekering with:$/, async function (data) {
   const dataTable = data.rowsHash();

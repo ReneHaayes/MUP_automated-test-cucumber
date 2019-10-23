@@ -1,5 +1,5 @@
 import {browser} from 'protractor';
-import {genericMethods, situatieGewijzigdElements} from "../../support";
+import {genericMethods, situatieGewijzigdElements} from "@support";
 
 export class SituatieGewijzigdMethods {
 

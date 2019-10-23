@@ -1,12 +1,7 @@
 import {When, Then} from "cucumber";
 import {
-  genericElements,
-  genericMethods,
-  nawElements,
-  personaData,
-  reisVerzekeringElements,
-  reisVerzekeringMethods
-} from "../../../support";
+  genericElements, genericMethods, nawElements, personaData, reisVerzekeringElements, reisVerzekeringMethods
+} from "@support";
 
 When(/^I enter step one and step two page of doorlopende verzekeringen for myself$/, async () => {
   await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);

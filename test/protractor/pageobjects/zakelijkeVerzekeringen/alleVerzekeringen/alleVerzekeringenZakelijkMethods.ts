@@ -1,11 +1,8 @@
-import {breadCrumbEnum, verzekeringPaginasEnum} from "../../enum/genericEnum";
 import {browser} from "protractor";
 import {
-  alleVerzekeringenElements,
-  alleVerzekeringenZakelijkElements,
-  genericElements,
-  genericMethods
-} from "../../../support";
+  alleVerzekeringenElements, alleVerzekeringenZakelijkElements, genericElements, genericMethods
+} from "@support";
+import {breadCrumbEnum, verzekeringPaginasEnum} from "@enum";
 
 export class AlleVerzekeringenZakelijkMethods {
 

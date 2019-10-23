@@ -1,11 +1,7 @@
 import {Then, When} from "cucumber";
 import {
-  genericElements,
-  genericMethods,
-  nawElements, personaData,
-  woonVerzekeringElements,
-  woonVerzekeringMethods
-} from "../../../support";
+  genericElements, genericMethods, nawElements, personaData, woonVerzekeringElements, woonVerzekeringMethods
+} from "@support";
 
 When(/^I enter step one page of woonverzekering for persona (.*)$/, async (persona: string) => {
   await genericMethods.typeText(woonVerzekeringElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));

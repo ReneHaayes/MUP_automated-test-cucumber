@@ -1,10 +1,12 @@
 import {When} from "cucumber";
 import {
-  genericElements, genericMethods,
-  nawElements, personaData,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
   rechtsBijstandVerzekeringElements,
   rechtsBijstandVerzekeringMethods
-} from "../../../support";
+} from "@support";
 
 When(/^I enter step one page of rechtsbijstandverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await rechtsBijstandVerzekeringMethods.clickFamilyComposition(familyCompositionInput);

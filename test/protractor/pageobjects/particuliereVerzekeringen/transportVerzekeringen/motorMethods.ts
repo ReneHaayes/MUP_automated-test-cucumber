@@ -1,16 +1,11 @@
 import {browser} from "protractor";
-import {licensePlates} from "../../enum/licensePlateEnum";
-import {genericEnum} from "../../enum/genericEnum";
-import {alarmSystemEnum} from "../../enum/motorEnum";
-import {aanvullendeOptiesEnum, basisDekkingEnum, vehicleAccEnum} from "../../enum/autoVerzekeringEnum";
-import {vehicleKindEnum} from "../../enum/bromfietsVerzekeringEnum";
 import {
-  autoVerzekeringElements, genericElements,
-  genericMethods,
-  motorElements,
-  motorWithLicensePlate,
-  vehicleElements
-} from "../../../support";
+  autoVerzekeringElements, genericElements, genericMethods, motorElements, motorWithLicensePlate, vehicleElements
+} from "@support";
+import {
+  aanvullendeOptiesEnum, alarmSystemEnum, basisDekkingEnum, genericEnum, licensePlates, vehicleAccEnum, vehicleKindEnum
+} from "@enum";
+
 
 export class MotorMethods {
 
@@ -86,22 +81,19 @@ export class MotorMethods {
       case basisDekkingEnum.WA: {
         await genericMethods.clickOnElement(motorElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
         await genericMethods.clickOnElement(motorElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
         await genericMethods.clickOnElement(motorElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -115,22 +107,19 @@ export class MotorMethods {
       case aanvullendeOptiesEnum.PECH_HULP_NL: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(motorElements.pechHulpNlElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.RECHTSHULP_VERKEER: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(motorElements.rechtsHulpVerkeerElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.ONGEVALLEN_VERZEKERING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(motorElements.ongevallenVerzekeringElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -143,20 +132,17 @@ export class MotorMethods {
     switch (input) {
       case vehicleAccEnum.ACC_TM_500: {
         await genericMethods.selectInDropdown(motorElements.expandAccElement, motorElements.expandAccTm500Element);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc500 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc500 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_1500: {
         await genericMethods.selectInDropdown(motorElements.expandAccElement, motorElements.expandAccTm1500Element);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc1500 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc1500 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_2500: {
         await genericMethods.selectInDropdown(motorElements.expandAccElement, motorElements.expandAccTm2500Element);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc2500 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc2500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
