@@ -12,14 +12,14 @@ Feature: Changing data for persona when logged in.
       | woestenburg | Test123!    |
 
 
-  Scenario Outline: Change emailadres for login.
-    Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website
-    When Customer changes email address with <newEmailAddress>
-    Then Verify <persona> is logged in with <newEmailAddress> for new email address
-
-    Examples:
-      | persona     | newEmailAddress    |
-      | woestenburg | test123@test123.nl |
+#  Scenario Outline: Change emailadres for login.
+#    Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website
+#    When Customer changes email address with <newEmailAddress>
+#    Then Verify <persona> is logged in with <newEmailAddress> for new email address
+#
+#    Examples:
+#      | persona     | newEmailAddress    |
+#      | woestenburg | test123@test123.nl |
 
   Scenario Outline: Change payment data for persona when logged in
     Given Customer woestenburg is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website

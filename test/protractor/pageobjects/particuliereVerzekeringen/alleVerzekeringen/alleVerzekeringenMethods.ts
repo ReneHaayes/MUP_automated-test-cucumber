@@ -290,7 +290,7 @@ export class AlleVerzekeringenMethods {
       }
       case verzekeringPaginasEnum.PENSIOEN: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.PENSIOEN);
-        await genericMethods.verifyTextInElementIgnoreCase(hmPageElements.overUniveTitleTextElement, verzekeringPaginasEnum.PENSIOEN);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.pensioenH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.PENSIOEN, 2);
         break;
