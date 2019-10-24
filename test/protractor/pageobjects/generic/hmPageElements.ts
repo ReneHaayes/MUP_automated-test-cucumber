@@ -93,6 +93,7 @@ export class HmPageElements {
   zoekenPageButtonInputElement: string = '[class="banner_searchBarSubmit"]';
   zoekenPageButtonClickElement: string = '[class="searchBar_submit"]';
   headerMijnUniveClickElement: string = '[data-toggle-menu="mijnunive"]';
+  mijnUniveLoggedInUserClickElement: string = '[class="mainUserStatus__name"]';
   headerMijnUniveZorgClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zorg"]';
   headerMijnUniveParticulierClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Particulier"]';
   headerMijnUniveZakelijkClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zakelijk"]';

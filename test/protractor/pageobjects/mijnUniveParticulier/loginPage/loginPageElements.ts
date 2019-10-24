@@ -11,6 +11,7 @@ export class LoginPageElements {
 
   //MIJN UNIVE LOGGED IN
   loggedInHeaderH1TextElement: string = '[class="page-content__block__title"] h1';
+  loggedInHeaderH1Text2Element: string = '[class="h-page-title is-visible-desktop-only"]';
   loggedInHeaderH1Text: string = 'Mijn overzicht';
 
   //ERRORS

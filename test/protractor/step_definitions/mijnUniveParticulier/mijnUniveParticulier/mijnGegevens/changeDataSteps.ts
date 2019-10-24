@@ -54,9 +54,10 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
     browser.switchTo().window(handles[1]);
   });
   //GO TO MIJN UNIVE AND LOG OFF
-  await genericMethods.clickOnElement(hmPageElements.headerMijnUniveClickElement);
-  await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
-  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await browser.sleep(5000);
+  await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
+  // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
   await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
   //LOGIN WITH NEW EMAIL ADDRESS AND VERIFY
   await loginPageMethods.login(newEmailAddress, personaData.getPersonaPassword(persona));
@@ -73,9 +74,10 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
     browser.switchTo().window(handles[2]);
   });
   //GO TO MIJN UNIVE AND LOG OFF
-  await genericMethods.clickOnElement(hmPageElements.headerMijnUniveClickElement);
-  await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
-  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await browser.sleep(5000);
+  await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
+  // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
   await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
   //LOGIN AND VERIFY YOU ARE LOGGED IN WITH NORMAL PERSONA
   await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
