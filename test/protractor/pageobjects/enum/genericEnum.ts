@@ -76,6 +76,8 @@ export enum verzekeringPaginasEnum {
   HOME_PI = 'pi',
   HOME_TST = 'tst',
   HOME_ZAKELIJK = 'zakelijktest',
+  HOME_SALES = 'sales',
+  HOME_SERVICE = 'service',
   AUTOVERZEKERING_PAT = 'Autoverzekering',
   AOVZZP_PAT = 'aovZzp',
   ANNULERINGSVERZEKERING = 'Annuleringsverzekering',
@@ -159,8 +161,7 @@ export enum verzekeringPaginasEnum {
   MAILHOG = 'mailhog',
   OAUTH = 'oauth',
   VERZEKERINGEN = 'verzekeringen',
-  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen'
-
+  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
 }
 
 export enum polisDetailsUrlEnum {
