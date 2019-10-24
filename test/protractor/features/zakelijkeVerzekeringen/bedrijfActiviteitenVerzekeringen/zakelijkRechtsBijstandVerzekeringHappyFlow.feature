@@ -17,4 +17,4 @@ Feature: Happy flow for 'zakelijk rechtsbijstand verzekering'
     Examples:
       | persona | company         |
       | ronaldo | rg timmerwerken |
-
+    
