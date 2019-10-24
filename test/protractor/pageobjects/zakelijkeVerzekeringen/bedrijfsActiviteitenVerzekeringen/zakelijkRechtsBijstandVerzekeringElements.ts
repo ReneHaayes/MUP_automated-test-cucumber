@@ -1,5 +1,14 @@
 export class ZakelijkRechtsBijstandVerzekeringElements {
 
+  //COMPANY
+  kvkNumberInputElement: string = '#_Form_IF31406_34108';
+  getCompanyDataButtonClickElement: string = '#_Form_IF31406_39313';
+  companyNameTextElement: string = '[ng-class*="R31406_3"]  strong';
+  correctCompanyDataYesClickElement: string = '[data-label-id*="LA_IF31406_39608"] .radioList > label:nth-child(1)';
+  correctCompanyDataNoClickElement: string = '[data-label-id*="LA_IF31406_39608"] .radioList > label:nth-child(2)';
+  otherActivitiesYesClickElement: string = '[data-label-id*="LA_IF23282_30161"] .radioList > label:nth-child(1)';
+  otherActivitiesNoClickElement: string = '[data-label-id*="LA_IF23282_30161"] .radioList > label:nth-child(2)';
+
   //ACTIVITY
   activityZZPClickElement: string = '[data-label-id*="LA_IF26031_21827"] .radioList > label:nth-child(1)';
   activityMKBClickElement: string = '[data-label-id*="LA_IF26031_21827"] .radioList > label:nth-child(2)';
