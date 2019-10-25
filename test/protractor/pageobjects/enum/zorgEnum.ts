@@ -20,3 +20,17 @@ export enum collectievenEnum {
     CARINOVASERVICEPAKKET = 'Carinova Servicepakket',
     HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein'
 }
+
+export enum crossSellEnum {
+    DOORLOPENDEREISVERZEKERING = 'Doorlopende reisverzekering',
+    DOORLOPENDEREISENANNULERINGSVERZEKERING = 'Doorlopende reis- en annuleringsverzekering',
+    ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
+    AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
+    RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
+    VOORUZELF = 'voor uzelf',
+    USP1RECHTSBIJSTAND = 'Verkeer',
+    USP2RECHTSBIJSTAND = 'Vrije keuze van rechtshulpverlener (€ 3500)',
+    USP1ONGEVALLEN = 'Blijvende invaliditeit (€ 75.000)',
+    USP2ONGEVALLEN = 'Overlijden (€ 10.000)',
+    USP1AANSPRAKELIJKHEID = 'Aansprakelijkheidsverzekering particulier'
+}

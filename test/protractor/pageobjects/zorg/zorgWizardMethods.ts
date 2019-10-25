@@ -1,5 +1,6 @@
 import { genericMethods, zorgWizardElements } from "../../support";
-import { pakkettenEnum } from "../enum/zorgEnum";
+import { pakkettenEnum, crossSellEnum } from "../enum/zorgEnum";
+import { gender } from "../enum/genericEnum";
 
 export class ZorgWizardMethods {
 
@@ -69,6 +70,42 @@ export class ZorgWizardMethods {
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis );
+        }
+    }
+
+    async clickDataGender(input: string) {
+        switch (input) {
+          case gender.MALE: {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensGenderMaleRadioButtonElement);
+            break;
+          }
+          case gender.FEMALE: {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensGenderFemaleRadioButtonElement);
+            break;
+          }
+          default: {
+            throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+          }
+        }
+    }
+
+    async checkCrossSell() {
+        if(await genericMethods.getText(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement) == crossSellEnum.RECHTSBIJSTANDVERZEKERING) {
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1USP1TextElement, crossSellEnum.USP1RECHTSBIJSTAND);
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1USP2TextElement, crossSellEnum.USP2RECHTSBIJSTAND);
+        }
+        else if(await genericMethods.getText(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement) == crossSellEnum.ONGEVALLENVERZEKERING) {
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1USP1TextElement, crossSellEnum.USP1ONGEVALLEN);
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1USP2TextElement, crossSellEnum.USP2ONGEVALLEN);
+        }
+        else if(await genericMethods.getText(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement) == crossSellEnum.AANSPRAKELIJKHEIDSVERZEKERING) {
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);
+            await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1USP1TextElement, crossSellEnum.USP1AANSPRAKELIJKHEID);
+        }
+        else {
+            throw new Error('There is no correct header for CrossSellItem');
         }
     }
 }

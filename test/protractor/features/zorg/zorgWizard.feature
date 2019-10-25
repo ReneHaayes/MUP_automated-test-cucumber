@@ -1,4 +1,4 @@
-@zorgWizard
+@zorgWizardCollectieven
 
 Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszorg als niet-thuiszorg)
 

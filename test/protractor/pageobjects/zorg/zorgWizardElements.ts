@@ -5,6 +5,7 @@ zorgverzekeringTitelH1Text: string = 'Uw zorgverzekering afsluiten';
 zorgverzekeringTitelH1TextElement: string = 'div > h1';
 zorgverzekeringAddCollectiveButtonOpenOverlayClickElement: string = 'unive-collective > div > div > button';
 collectiveDeleteButtonClickElement: string = '[class="unive-collective__delete"]';
+volgendeUwGegevensSubmitButtonClickElement: string = '[class="button button--secondary"][type="submit"]';
 
     //OVERLAY COLLECTIEF TOEVOEGEN
 addCollectiveTitelH2TextElement: string = 'div.unive-modal__header > div > h2';
@@ -51,4 +52,37 @@ moduleTandOngevallenClickElement: string = '[class="unive-additional-insurances-
 moduleTand250ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTG"]';
 moduleTand500ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTB"]';
 moduleBuitenlanddekkingClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BBB"]';
+
+//ZORGWIZARD PAGINA 2 UW GEGEVENS
+uwGegevensBirthdateTextElement: string = '[id="dateofbirth"]';
+uwGegevensInitalsTextElement: string = '[id="initials"]';
+uwGegevensPrefixTextElement: string = '[id="namePrefix"]';
+uwGegevensLastnameTextElement: string = '[id="lastName"]';
+uwGegevensGenderMaleRadioButtonElement: string = '[id="gender_man"]';
+uwGegevensGenderFemaleRadioButtonElement: string = '[id="gender_vrouw"]';
+uwGegevensPostalcodeTextElement: string = '[id="zipCode"]';
+uwGegevensHousenumberTextElement: string = '[id="houseNumber"]';
+uwGegevensHousenumberAdditionTextElement: string = '[id="toevoeging"]';
+uwGegevensEmailaddressTextElement: string = '[id="email"]';
+uwGegevensPhoneNumberTextElement: string = '[id="phone"]';
+uwGegevensIBANTextElement: string = '[id="iban"]';
+uwGegevensAutomatischeIncassoClickElement: string = '[id="paymentMethod_true"]';
+uwGegevensInkomstenQuestionOneRadioYesClickElement: string = '[id="inkomstenBuitenland_true"]';
+uwGegevensInkomstenQuestionOneRadioNoClickElement: string = '[id="inkomstenBuitenland_false"]';
+uwGegevensInkomstenQuestionTwoRadioYesClickElement: string = '[id="inkomstenNL_true"]';
+uwGegevensInkomstenQuestionTwoRadioNoClickElement: string = '[id="inkomstenNL_false"]';
+uwGegevensVolgendeSubmitButtonClickElement: string = '[class="button button--primary"][type="submit"]';
+
+//ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
+bijnaVerzekerdBSNTextElement: string = '[placeholder="012345678"]';
+
+//ZORGWIZARD BEDANKTPAGINA
+bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
+bedanktCrossSellItem1TitleH3TextElement: string = 'unive-cross-sell-item:nth-child(3) > div > div.cross-sell-item__content > h3';
+bedanktCrossSellItem1SubtitleTextElement: string = 'unive-cross-sell-item:nth-child(3) > div > div.cross-sell-item__content > span';
+bedanktCrossSellElement2: string = '[class="cross-sell-item cross-sell-item--reverse"]';
+bedanktCrossSellItem2TitleH3TextElement: string = 'unive-cross-sell-item:nth-child(4) > div > div.cross-sell-item__content > h3';
+bedanktCrossSellItem2SubtitleTextElement: string = 'unive-cross-sell-item:nth-child(4) > div > div.cross-sell-item__content > span';
+bedanktCrossSellItem1USP1TextElement: string = 'unive-usp-list > div > ul > li:nth-child(1)';
+bedanktCrossSellItem1USP2TextElement: string = 'unive-usp-list > div > ul > li:nth-child(2)';
 }

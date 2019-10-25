@@ -1,6 +1,7 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
-import { genericMethods, zorgWizardElements, zorgWizardMethods} from '../../support';
+import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData} from '../../support';
+import { crossSellEnum } from '../../pageobjects/enum/zorgEnum';
 
 When(/^I do nothing$/, async() => {
     await browser.sleep(250);
@@ -91,4 +92,62 @@ Then(/^Verify that all modules are clickable$/, async () => {
 
 When(/^Click on Pakketten button$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.pakkettenButtonClickElement);
+});
+
+When(/^I select insurances on step 1 of wizard$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.pakkettenButtonClickElement);
+});
+
+When(/^I click on Volgende page one$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement);
+});
+
+When(/^I click on Volgende page two$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+});
+
+When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: string) => {
+    await genericMethods.typeText(zorgWizardElements.uwGegevensBirthdateTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensInitalsTextElement, personaData.getPersonaInitials(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPrefixTextElement, personaData.getPersonaPrefix(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensLastnameTextElement, personaData.getPersonaLastName(persona));
+    await zorgWizardMethods.clickDataGender(personaData.getPersonaGender(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPostalcodeTextElement, personaData.getPersonaZipcode(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensHousenumberTextElement, personaData.getPersonaHouseNumber(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensHousenumberAdditionTextElement, personaData.getPersonaHouseNumberAddition(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensEmailaddressTextElement, personaData.getPersonaEmailAddress(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPhoneNumberTextElement, personaData.getPersonaPhoneNumber(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensIBANTextElement, personaData.getPersonaAccountNumber(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensAutomatischeIncassoClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionOneRadioNoClickElement);
+});
+
+When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
+    await genericMethods.typeText(zorgWizardElements.bijnaVerzekerdBSNTextElement, personaData.getPersonaBsn(persona));
+});
+
+When(/^I click on bevestigen before crossSell$/, async () => {  
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+    await browser.sleep(1000);
+});
+
+Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {
+    await browser.sleep(1000);  
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement, crossSellEnum.DOORLOPENDEREISVERZEKERING);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement2, 250);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem2TitleH3TextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem2SubtitleTextElement, crossSellEnum.VOORUZELF);
+});
+
+When(/^I select basic insurance Zorg Vrij with Aanvullend Goed$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterClickElement);
+});
+
+Then(/^validate that crossSell is visible and shows correct data$/, async () => {
+    await browser.sleep(1000);  
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
+    await zorgWizardMethods.checkCrossSell();
 });
