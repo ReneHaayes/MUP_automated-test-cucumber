@@ -28,6 +28,7 @@ import {ZakelijkTractorVerzekeringMethods} from "../pageobjects/zakelijkeVerzeke
 import {ApiMethods} from "../pageobjects/api/apiMethods";
 import {WoonVerzekeringMethods} from "../pageobjects/particuliereVerzekeringen/huisVerzekeringen/woonVerzekeringMethods";
 import {ZorgCheckToolMethods} from "../pageobjects/zorg/zorgCheckToolMethods";
+import {ZorgWizardMethods} from "../pageobjects/zorg/zorgWizardMethods";
 
 export const situatieGewijzigdMethods: SituatieGewijzigdMethods = new SituatieGewijzigdMethods();
 export const hmPageMijnUniveMethods: HmPageMijnUniveMethods = new HmPageMijnUniveMethods();
@@ -59,3 +60,4 @@ export const zakelijkTractorVerzekerinigMethods: ZakelijkTractorVerzekeringMetho
 export const apiMethods: ApiMethods = new ApiMethods();
 export const woonVerzekeringMethods: WoonVerzekeringMethods = new WoonVerzekeringMethods();
 export const zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
+export const zorgWizardMethods: ZorgWizardMethods = new ZorgWizardMethods();
