@@ -80,7 +80,7 @@ voegCollectiefToeOpenOverlaySpanElement: string = 'health-check-collectief > ui-
 voegCollectiefToeOpenOverlayText: string = 'Voeg uw collectief toe';
 voegUwCollectiefToeH1OverlayElement: string = '[class="ui-modal__title ng-star-inserted"]';
 voegUwCollectiefToeH1OverlayText: string = 'Voeg uw collectief toe';
-voegUwCollectiefToeInputElement: string = '[placeholder="Naam of internetcode collectief"][type="text"]';
+voegUwCollectiefToeInputElement: string = '[placeholder="Naam of internetcode collectief"]';
 toegevoegdCollectiefElement: string = 'div.search-collectief__selected.ng-star-inserted';
 additionalInfoTextCollectiveOverlayElement: string = 'f-collectief-search-search > p';
 additionalInfoTextCollectiveOverlayText: string = 'Mogelijk kunt u via uw werkgever of vereniging profiteren van collectieve korting en extra voordelen. Vul hieronder de naam in van het collectief of de internetcode.';

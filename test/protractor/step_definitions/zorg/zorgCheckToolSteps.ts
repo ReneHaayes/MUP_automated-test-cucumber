@@ -95,10 +95,12 @@ Then(/^Verify that the advices are correctly shown with:$/, async (data) => {
 });
 
 Then(/^Verify that the correct i-texts for question two are shown$/, async () => {
+    await browser.sleep(250);
     await zorgCheckToolMethods.checkITextsForQuestionTwo();
 });
 
 Then(/^Verify that the correct i-texts for question three are shown$/, async () => {
+    await browser.sleep(250);
     await zorgCheckToolMethods.checkITextsForQuestionThree();
 });
 
