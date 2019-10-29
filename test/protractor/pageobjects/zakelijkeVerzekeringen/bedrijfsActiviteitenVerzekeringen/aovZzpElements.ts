@@ -1,7 +1,7 @@
 export class AovZzpElements {
 
   //SLIDER
-  sliderElement: string = '.aov-zzp-premium .noUi-handle';
+  sliderElement: string = '.zzp-flex-premium__slider .noUi-handle';
 
   //BUTTONS
   nextButton: string = 'unive-wizard-button';
