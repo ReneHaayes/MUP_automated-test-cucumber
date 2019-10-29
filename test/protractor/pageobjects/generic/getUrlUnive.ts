@@ -192,18 +192,6 @@ export class GetUrlUnive {
       case homePageEnum.ONDERNEMERSCAN: {
         return this.getEnv(browser.params.env.environment) + genericElements.ondernemersScan;
       }
-      case verzekeringPaginasEnum.AMP_AUTOVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampAutoverzekering;
-      }
-      case verzekeringPaginasEnum.AMP_WOONVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampWoonverzekering;
-      }
-      case verzekeringPaginasEnum.AMP_BROMFIETSVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampBromfietsverzekering;
-      }
-      case verzekeringPaginasEnum.AMP_DOORLOPENDEREISVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampDoorlopendeReisverzekering;
-      }
       case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.collectieveZorgVerzekering;
       }

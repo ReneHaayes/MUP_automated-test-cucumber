@@ -1,4 +1,3 @@
-import {MopedElements} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/mopedElements";
 import {BikeElements} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/bikeElements";
 import {ScootMobielVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/scootMobielVerzekeringElements";
 import {CaravanVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/caravanVerzekeringElements";
@@ -18,7 +17,6 @@ import {AutoVerzekeringElementsStepThree} from "../pageobjects/particuliereVerze
 import {WoonVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/huisVerzekeringen/woonVerzekeringElements";
 import {ReisVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
 
-export const mopedElements: MopedElements = new MopedElements();
 export const bikeElements: BikeElements = new BikeElements();
 export const scootMobielVerzekeringElements: ScootMobielVerzekeringElements = new ScootMobielVerzekeringElements();
 export const caravanVerzekeringElements: CaravanVerzekeringElements = new CaravanVerzekeringElements();
