@@ -24,12 +24,15 @@ basisVerzekeringSelectClickElement: string = '[class="unive-basic-insurances-cov
 basisVerzekeringSelectNietMogelijkElement: string = '[class="unive-basic-insurances-coverage__inactive-text"]';
 basisVerzekeringShowAllBasicInsurancesClickElement: string = 'unive-basic-insurances > button';
 aanvullendeVerzekeringAanvullendGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BAVU"]';
+aanvullendeVerzekeringCollectiefAanvullendGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BAVZU"]';
 aanvullendGoedTextElement: string = 'unive-additional-insurances-group:nth-child(2) unive-additional-insurances-item:nth-child(1) label';
 aanvullendeVerzekeringAanvullendGoedKortingTextElement: string = 'unive-additional-insurances-item:nth-child(1) > div.unive-additional-insurances-item__inside > div > span';
 aanvullendeVerzekeringAanvullendBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UAVU"]';
+aanvullendeVerzekeringCollectiefAanvullendBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UAVZU"]';
 aanvullendBeterTextElement: string = 'unive-additional-insurances-group:nth-child(2) unive-additional-insurances-item:nth-child(2) label';
 aanvullendeVerzekeringAanvullendBeterKortingTextElement: string = 'unive-additional-insurances-item:nth-child(2) > div.unive-additional-insurances-item__inside > div > span';
 aanvullendeVerzekeringAanvullendBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="PZU"]';
+aanvullendeVerzekeringCollectiefAanvullendBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="PZZU"]';
 aanvullendBestTextElement: string = 'unive-additional-insurances-group:nth-child(2) unive-additional-insurances-item:nth-child(3) label';
 aanvullendeVerzekeringAanvullendBestKortingTextElement: string = 'unive-additional-insurances-item:nth-child(3) > div.unive-additional-insurances-item__inside > div > span';
 tandVerzekeringenTandOngevallenClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTO"]';

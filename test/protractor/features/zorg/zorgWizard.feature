@@ -11,7 +11,7 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
         Then validate that the collective overlay shows with correct elements
-    
+
     Scenario Outline: Toevoegen van een niet thuiszorg collectief, selecteer zorg vrij/geregeld en verifieer dat alle aanvullende pakketten aanwezig en klikbaar zijn met juiste kortingstexten
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -26,9 +26,11 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |discountAanvullend|<discountAanvullend>|
 
         Examples:
-        |collective        |insuranceBasis|discountBasis|discountAanvullend|
-        |Omring Medewerkers|Zorg Vrij     |5%           |10%               |
-        |Nic Oud BV        |Zorg Geregeld |3%           |10%               |
+        |collective            |insuranceBasis|discountBasis|discountAanvullend|
+        |Omring Medewerkers    |Zorg Vrij     |5%           |10%               |
+        |Nic Oud BV            |Zorg Geregeld |3%           |10%               |
+        |Carinova Servicepakket|Zorg Vrij     |5%           |10%               |
+        |Carinova Servicepakket|Zorg Geregeld |5%           |10%               |
     
     Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
         Given I am on the Zorgverzekering page of the Unive website
@@ -38,7 +40,7 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And I select basic insurance Zorg Vrij
         Then verify show all basic insurance is not visible
         And verify it is not possible to choose zorg select
-    
+        
     Scenario Outline: delete collectief en klik door alle pakketten heen met zorg vrij en zorg geregeld
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -50,9 +52,10 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And verify that all aanvullende packages and tand packages -not collective- are clickable
 
         Examples:
-        |collective        |insuranceBasis|
-        |Omring Medewerkers|Zorg Vrij     |
-        |Omring Medewerkers|Zorg Geregeld |
+        |collective            |insuranceBasis|
+        |Omring Medewerkers    |Zorg Vrij     |
+        |Carinova Servicepakket|Zorg Geregeld |
+
     
     Scenario: selecteer zorg select, check dat je niet collectief toe kunt voegen, check daarna of alle losse modules klikbaar zijn en alle pakketten klikbaar zijn
         Given I am on the Zorgverzekering page of the Unive website
