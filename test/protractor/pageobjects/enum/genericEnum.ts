@@ -72,6 +72,7 @@ export enum verzekeringPaginasEnum {
   ALLE_VERZEKERINGEN_ZAKELIJK = 'alle verzekeringen zakelijk',
   HOME_BUS = 'business',
   HOME_PAT = 'pat',
+  HOME_OPA = 'opa',
   HOME_TSTPROJ = 'tstProj',
   HOME_PI = 'pi',
   HOME_TST = 'tst',

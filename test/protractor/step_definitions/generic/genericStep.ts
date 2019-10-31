@@ -1,6 +1,4 @@
 import {Given, Then, When} from 'cucumber';
-import {logToHtmlReport} from '../../support/hooks';
-import {browser} from 'protractor';
 import {genericElements, genericMethods} from "@support";
 import {genericEnum} from "@enum";
 
@@ -14,27 +12,11 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
 });
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
-  try {
-    if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'opslaan van het verzoek', browser.getPageTimeout) == true) {
-      logToHtmlReport(this, 'The known bug with the text: "Opslaan van het verzoek" shows on the screen');
-    } else if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout) == true) {
-      logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
-    }
-  } catch (e) {
-    await genericMethods.verifyThankYouPageTitle(persona);
-  }
+  await genericMethods.verifyThankYouPageTitle(persona);
 });
 
 Then(/^Thank you page for zakelijk is shown$/, async function () {
-  try {
-    if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'opslaan van het verzoek', browser.getPageTimeout) == true) {
-      logToHtmlReport(this, 'The known bug with the text: "Opslaan van het verzoek" shows on the screen');
-    } else if (await genericMethods.verifyTextContainsInElementBoolean(genericElements.errorMessageElement, 'fout opgetreden', browser.getPageTimeout) == true) {
-      logToHtmlReport(this, 'The known bug with the text: "Er is een fout opgetreden" shows on the screen');
-    }
-  } catch (e) {
-    await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
-  }
+  await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
 });
 
 

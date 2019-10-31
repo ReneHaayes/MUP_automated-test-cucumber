@@ -260,6 +260,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_PAT: {
         return 'https://pat.unive.nl/';
       }
+      case verzekeringPaginasEnum.HOME_OPA: {
+        return 'https://opa.unive.nl/';
+      }
       case verzekeringPaginasEnum.HOME_TSTPROJ: {
         return 'https://tstproj.unive.nl/';
       }
