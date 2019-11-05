@@ -53,7 +53,7 @@ informationBelowSelectedAnswersTextElement: string = '[class="health-check-quest
 //E-MAIL DIT ADVIES
 emailDitAdviesButtonAdvicePageClickElement: string = 'div.health-check-result__top > ui-button > button';
 emailDitAdviesOverlayHeaderElement: string = '[class="ui-modal__title ng-star-inserted"]';
-emailDitAdviesOverlayHeaderText: string = 'Mail uw zorgadvies';
+emailDitAdviesOverlayHeaderText: string = 'Mail uw Zorgcheck resultaat';
 emailDitAdviesOverlayDataEmailAddressElement: string = '[id="resultEmail"]';
 emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = ' form > ui-button > button';
 emailDitAdviesOverlayVerstuurMijnAdviesInvalidEmailClickElement: string = '[class="button button--secondary button--icon button--disabled"]';
@@ -80,7 +80,7 @@ voegCollectiefToeOpenOverlaySpanElement: string = 'health-check-collectief > ui-
 voegCollectiefToeOpenOverlayText: string = 'Voeg uw collectief toe';
 voegUwCollectiefToeH1OverlayElement: string = '[class="ui-modal__title ng-star-inserted"]';
 voegUwCollectiefToeH1OverlayText: string = 'Voeg uw collectief toe';
-voegUwCollectiefToeInputElement: string = '[placeholder="Naam of internetcode collectief"]';
+voegUwCollectiefToeInputElement: string = '[placeholder="Naam collectief of internetcode"]';
 toegevoegdCollectiefElement: string = 'div.search-collectief__selected.ng-star-inserted';
 additionalInfoTextCollectiveOverlayElement: string = 'f-collectief-search-search > p';
 additionalInfoTextCollectiveOverlayText: string = 'Mogelijk kunt u via uw werkgever of vereniging profiteren van collectieve korting en extra voordelen. Vul hieronder de naam in van het collectief of de internetcode.';
@@ -97,9 +97,9 @@ aanvullendAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) 
 tandAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > health-check-result-item-top > div > div:nth-child(4) > div.health-check-result-top__label > div > ui-info > button';
 aanvullendAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(2) > div.health-check-result-top__label > div > ui-info > button';
 tandAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
-itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie';
+itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie.';
 itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin';
-itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid';
+itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid.';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
 itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd';
 itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist';
