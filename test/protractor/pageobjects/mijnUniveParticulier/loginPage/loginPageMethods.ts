@@ -30,13 +30,13 @@ export class LoginPageMethods {
   }
 
   async login(emailAddress: string, password: string) {
-    await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
-    await genericMethods.typeText(loginPageElements.loginPasswordInputElement, password);
-    await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
     try {
       await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
     } catch {
     }
+    await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
+    await genericMethods.typeText(loginPageElements.loginPasswordInputElement, password);
+    await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
   }
 
 

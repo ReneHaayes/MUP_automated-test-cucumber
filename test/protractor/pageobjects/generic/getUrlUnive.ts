@@ -196,7 +196,7 @@ export class GetUrlUnive {
         return this.getEnv(browser.params.env.environment) + genericElements.collectieveZorgVerzekering;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
-        return this.getEnv(verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER) + genericElements.loginMijnUniveParticulierURL;
+        return this.getEnv(browser.params.env.environment) + genericElements.loginMijnUniveParticulierURL;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_GEGEVENS: {
         return this.getEnv((browser.params.env.environment) + genericElements.mijnUniveMijnGegevens);
@@ -268,9 +268,6 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.HOME_SERVICE: {
         return 'https://service.unive.nl/';
-      }
-      case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
-        return 'https://login.pat.unive.nl/';
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
