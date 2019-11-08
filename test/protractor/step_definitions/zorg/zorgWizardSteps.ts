@@ -186,3 +186,8 @@ Then(/^I answer inkomstenvragen with:$/, async (data) => {
         dataTable.inkomstenNL
     );
 });
+
+Then(/^validate errormessage and it is not possible to navigate to step 3$/, async () => {  
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensInkomstenFoutmeldingTextElement, zorgWizardElements.uwGegevensInkomstenFoutmeldingText);
+});

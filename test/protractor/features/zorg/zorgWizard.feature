@@ -84,3 +84,18 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         Examples:
         |persona|inkomstenNietNL|inkomstenNL|
         |ronaldo|Ja             |Ja         |
+    
+    Scenario Outline: Niet mogelijk om door te navigeren naar stap 3 bij geen inkomen uit NL
+        Given I am on the Zorgverzekering page of the Unive website
+        When I select basic insurance Zorg Select
+        And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
+        And I enter personal data on step 2 of wizard with <persona>
+        And I answer inkomstenvragen with:
+        |inkomstenNietNL|<inkomstenNietNL>|
+        |inkomstenNL    |<inkomstenNL>    |
+        Then validate errormessage and it is not possible to navigate to step 3
+
+        Examples:
+        |persona|inkomstenNietNL|inkomstenNL|
+        |ronaldo|Ja             |Nee        |

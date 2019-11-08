@@ -87,6 +87,8 @@ uwGegegevensUwBetaalgegevensText: string = 'Uw betaalgegevens';
 uwGegevensUwBetaalgegevensTextElement: string = 'unive-fieldset:nth-child(4) > fieldset > legend';
 uwGegevensInkomstenText: string = 'Inkomsten';
 uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset > legend';
+uwGegevensInkomstenFoutmeldingTextElement: string = '[class="unive-form-input-error"]';
+uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact met ons op via 072 52 77 595.';
 uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
 
 //ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
