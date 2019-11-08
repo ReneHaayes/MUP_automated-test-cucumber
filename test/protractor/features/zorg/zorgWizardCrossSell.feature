@@ -9,7 +9,7 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         And I enter personal data on step 2 of wizard with <persona>
         And I click on Volgende page two
         And I enter BSN on step 3 with <persona>
-        And I click on bevestigen before crossSell
+        And I click on bevestigen step 3
         Then validate that doorlopende reis crossSell is visible and shows correct data
 
         Examples:
@@ -23,7 +23,7 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         And I enter personal data on step 2 of wizard with <persona>
         And I click on Volgende page two
         And I enter BSN on step 3 with <persona>
-        And I click on bevestigen before crossSell
+        And I click on bevestigen step 3
         Then validate that crossSell is visible and shows correct data
 
         Examples:

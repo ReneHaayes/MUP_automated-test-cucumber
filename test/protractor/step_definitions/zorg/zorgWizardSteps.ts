@@ -1,7 +1,7 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
 import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData} from '../../support';
-import { crossSellEnum } from '../../pageobjects/enum/zorgEnum';
+import { crossSellEnum, genderBedanktPaginaEnum } from '../../pageobjects/enum/zorgEnum';
 
 When(/^I do nothing$/, async() => {
     await browser.sleep(250);
@@ -126,7 +126,7 @@ When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
     await genericMethods.typeText(zorgWizardElements.bijnaVerzekerdBSNTextElement, personaData.getPersonaBsn(persona));
 });
 
-When(/^I click on bevestigen before crossSell$/, async () => {  
+When(/^I click on bevestigen step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
     await browser.sleep(1000);
 });
@@ -150,4 +150,32 @@ Then(/^validate that crossSell is visible and shows correct data$/, async () => 
     await browser.sleep(1000);  
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
     await zorgWizardMethods.checkCrossSell();
+});
+
+When(/^I validate that all legends are visible on step 2$/, async () => {
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensH1TextElement, zorgWizardElements.uwGegevensH1Text);
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensVerzekeringsVerledenTextElement, zorgWizardElements.uwGegevensVerzekeringsVerledenText);
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensIngangsdatumTextElement, zorgWizardElements.uwGegevensIngangsdatumText);
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensUwgegevensTextElement, zorgWizardElements.uwGegevensUwGegevensText);
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensUwBetaalgegevensTextElement, zorgWizardElements.uwGegegevensUwBetaalgegevensText);
+    await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensInkomstenTextElement, zorgWizardElements.uwGegevensInkomstenText);
+});
+
+When(/^I select geen verzekering overstapreden in dropdown$/, async () => {
+    await genericMethods.clickOnElementWithXpath(zorgWizardElements.uwGegevensVerzekeringsVerledenDropdownClickElement);
+});
+
+When(/^I validate that all legends are visible on step 3$/, async () => {
+    await browser.sleep(250);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, zorgWizardElements.bijnaVerzekerdBurgerservicenummerText);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
+});
+
+Then(/^validate that bedanktpagina and all elements are correct with (.*)$/, async (persona: string) => {
+    await browser.sleep(250);  
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.HEER, 100);
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaInitials(persona), 100);
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaPrefix(persona), 100);
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaLastName(persona), 100);
 });

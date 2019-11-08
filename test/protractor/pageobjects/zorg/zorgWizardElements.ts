@@ -75,9 +75,28 @@ uwGegevensInkomstenQuestionOneRadioNoClickElement: string = '[id="inkomstenBuite
 uwGegevensInkomstenQuestionTwoRadioYesClickElement: string = '[id="inkomstenNL_true"]';
 uwGegevensInkomstenQuestionTwoRadioNoClickElement: string = '[id="inkomstenNL_false"]';
 uwGegevensVolgendeSubmitButtonClickElement: string = '[class="button button--primary"][type="submit"]';
+uwGegevensH1Text: string = 'Uw gegevens';
+uwGegevensH1TextElement: string = '[class="unive-wizard-accordion-panel_title unive-wizard-accordion-panel_title--active"]';
+uwGegevensVerzekeringsVerledenText: string = 'Verzekeringsverleden';
+uwGegevensVerzekeringsVerledenTextElement: string = 'unive-fieldset:nth-child(1) > fieldset > legend';
+uwGegevensIngangsdatumText: string = 'Ingangsdatum';
+uwGegevensIngangsdatumTextElement: string = 'unive-fieldset:nth-child(2) > fieldset > legend';
+uwGegevensUwGegevensText: string = 'Uw gegevens';
+uwGegevensUwgegevensTextElement: string = 'unive-fieldset:nth-child(3) > fieldset > legend';
+uwGegegevensUwBetaalgegevensText: string = 'Uw betaalgegevens';
+uwGegevensUwBetaalgegevensTextElement: string = 'unive-fieldset:nth-child(4) > fieldset > legend';
+uwGegevensInkomstenText: string = 'Inkomsten';
+uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset > legend';
+uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
 
 //ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
 bijnaVerzekerdBSNTextElement: string = '[placeholder="012345678"]';
+bijnaVerzekerdH1Text: string = 'Bijna verzekerd';
+bijnaVerzekerdH1TextElement: string = '[class="unive-wizard-accordion-panel_title unive-wizard-accordion-panel_title--active"]';
+bijnaVerzekerdBurgerservicenummerText: string = 'Burgerservicenummer';
+bijnaVerzekerdBurgerservicenummerTextElement: string = 'unive-almost-insured-bsn > unive-fieldset > fieldset > legend';
+bijnaVerzekerdUBentBijnaVerzekerdText: string = 'U bent bijna verzekerd';
+bijnaVerzekerdUBentBijnaVerzekerdTextElement: string = '[class="unive-legend unive-legend--plain"]';
 
 //ZORGWIZARD BEDANKTPAGINA
 bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
@@ -88,4 +107,5 @@ bedanktCrossSellItem2TitleH3TextElement: string = 'unive-cross-sell-item:nth-chi
 bedanktCrossSellItem2SubtitleTextElement: string = 'unive-cross-sell-item:nth-child(4) > div > div.cross-sell-item__content > span';
 bedanktCrossSellItem1USP1TextElement: string = 'unive-usp-list > div > ul > li:nth-child(1)';
 bedanktCrossSellItem1USP2TextElement: string = 'unive-usp-list > div > ul > li:nth-child(2)';
+bedanktPaginaCustomerNameTextElement: string = 'div:nth-child(2) > h2';
 }

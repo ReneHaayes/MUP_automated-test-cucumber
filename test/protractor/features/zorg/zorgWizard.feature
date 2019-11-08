@@ -64,3 +64,20 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And Verify that all modules are clickable
         And Click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
+    
+    Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedanktpagina de juiste elementen bevatten
+        Given I am on the Zorgverzekering page of the Unive website
+        When I select basic insurance Zorg Select
+        And I click on Volgende page one
+        And I validate that all legends are visible on step 2
+        And I select geen verzekering overstapreden in dropdown
+        And I enter personal data on step 2 of wizard with <persona>
+        And I click on Volgende page two
+        And I validate that all legends are visible on step 3
+        And I enter BSN on step 3 with <persona>
+        And I click on bevestigen step 3
+        Then validate that bedanktpagina and all elements are correct with <persona>
+
+        Examples:
+        |persona|
+        |ronaldo|

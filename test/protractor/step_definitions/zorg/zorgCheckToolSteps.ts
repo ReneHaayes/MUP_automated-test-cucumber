@@ -111,7 +111,6 @@ Then(/^Verify that the correct i-texts for question eight are shown$/, async () 
 When(/^I click on the i-button$/, async() => {
     await browser.sleep(250);
     await genericMethods.clickOnElement(zorgCheckToolElements.questionInformationClickElement);
-    await browser.sleep(250);
 });
 
 When(/^I select answer for question 5 with:$/, async (data) => {

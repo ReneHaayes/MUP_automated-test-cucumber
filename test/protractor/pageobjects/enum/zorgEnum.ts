@@ -34,3 +34,8 @@ export enum crossSellEnum {
     USP2ONGEVALLEN = 'Overlijden (€ 10.000)',
     USP1AANSPRAKELIJKHEID = 'Aansprakelijkheidsverzekering particulier'
 }
+
+export enum genderBedanktPaginaEnum {
+    HEER = 'heer',
+    MEVROUW = 'mevrouw'
+}
