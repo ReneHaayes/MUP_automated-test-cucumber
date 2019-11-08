@@ -1,5 +1,5 @@
 import { genericMethods, zorgWizardElements } from "../../support";
-import { pakkettenEnum, crossSellEnum, collectievenEnum } from "../enum/zorgEnum";
+import { pakkettenEnum, crossSellEnum, collectievenEnum, inkomstenDropdownEnum } from "../enum/zorgEnum";
 import { gender } from "../enum/genericEnum";
 
 export class ZorgWizardMethods {
@@ -129,5 +129,22 @@ export class ZorgWizardMethods {
         else {
             throw new Error('There is no correct header for CrossSellItem');
         }
+    }
+
+    async inkomstenCheckbox(inkomstenNietNL: string, inkomstenNL: string) {
+        if(inkomstenNietNL == inkomstenDropdownEnum.NEE) {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionOneRadioNoClickElement);
+        }
+        else if(inkomstenNietNL == inkomstenDropdownEnum.JA && inkomstenNL == inkomstenDropdownEnum.JA) {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionOneRadioYesClickElement);
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionTwoRadioYesClickElement);
+        }
+        else if(inkomstenNietNL == inkomstenDropdownEnum.JA && inkomstenNL == inkomstenDropdownEnum.NEE) {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionOneRadioYesClickElement);
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionTwoRadioNoClickElement);
+        }
+        else {
+            throw new Error('There is no correct choice for inkomen');
+        } 
     }
 }

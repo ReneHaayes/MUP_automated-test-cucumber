@@ -39,3 +39,8 @@ export enum genderBedanktPaginaEnum {
     HEER = 'heer',
     MEVROUW = 'mevrouw'
 }
+
+export enum inkomstenDropdownEnum {
+    JA = 'Ja',
+    NEE = 'Nee'
+}

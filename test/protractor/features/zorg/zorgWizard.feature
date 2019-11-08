@@ -72,6 +72,9 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And I validate that all legends are visible on step 2
         And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
+        And I answer inkomstenvragen with:
+        |inkomstenNietNL|<inkomstenNietNL>|
+        |inkomstenNL    |<inkomstenNL>    |
         And I click on Volgende page two
         And I validate that all legends are visible on step 3
         And I enter BSN on step 3 with <persona>
@@ -79,5 +82,5 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         Then validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
-        |persona|
-        |ronaldo|
+        |persona|inkomstenNietNL|inkomstenNL|
+        |ronaldo|Ja             |Ja         |

@@ -119,7 +119,6 @@ When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: st
     await genericMethods.typeText(zorgWizardElements.uwGegevensPhoneNumberTextElement, personaData.getPersonaPhoneNumber(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensIBANTextElement, personaData.getPersonaAccountNumber(persona));
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensAutomatischeIncassoClickElement);
-    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionOneRadioNoClickElement);
 });
 
 When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
@@ -178,4 +177,12 @@ Then(/^validate that bedanktpagina and all elements are correct with (.*)$/, asy
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaInitials(persona), 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaPrefix(persona), 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaLastName(persona), 100);
+});
+
+Then(/^I answer inkomstenvragen with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.inkomstenCheckbox(
+        dataTable.inkomstenNietNL,
+        dataTable.inkomstenNL
+    );
 });
