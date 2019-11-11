@@ -79,7 +79,7 @@ export class ZorgWizardMethods {
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);
     }
 
-    async selectInsuranceBasis(insuranceBasis: string){
+    async selectInsuranceBasisWithCollective(insuranceBasis: string){
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
             //klik op en verifieer basisverzekering
             await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
@@ -92,6 +92,21 @@ export class ZorgWizardMethods {
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis );
+        }
+    }
+
+    async selectInsuranceBasisNoCollective(insuranceBasis: string){
+        if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
+            await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
+            await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringSelectClickElement);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
+            await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringGeregeldClickElement);
+        }
+        else {
+            throw new Error('No correct basic insurance found for' + insuranceBasis);
         }
     }
 

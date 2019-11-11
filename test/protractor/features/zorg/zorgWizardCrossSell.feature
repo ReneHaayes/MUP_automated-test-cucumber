@@ -4,7 +4,8 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
     
     Scenario Outline: doorlopen van de zorgwizard (geen aanvullende pakketten) en check of doorlopende reis crosssell wordt getoond
         Given I am on the Zorgverzekering page of the Unive website
-        When I select basic insurance Zorg Vrij
+        When I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
         And I click on Volgende page one
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
@@ -16,8 +17,8 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         Then validate that doorlopende reis crossSell is visible and shows correct data
 
         Examples:
-        |persona|inkomstenNietNL|inkomstenNL|
-        |ronaldo|Nee            |           |
+        |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
+        |ronaldo|Nee            |           |Zorg Vrij     |
         
     Scenario Outline: doorlopen van de zorgwizard (met aanvullende pakketten) en check of rechtsbijstand crosssell wordt getoond
         Given I am on the Zorgverzekering page of the Unive website

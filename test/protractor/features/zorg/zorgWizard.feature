@@ -37,7 +37,8 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         When I click on add collective button in wizard
         And I add a collective with:
         |collective|Omring Medewerkers|
-        And I select basic insurance Zorg Vrij
+        And I select basic insurance no collective with:
+        |insuranceBasis|Zorg Vrij|
         Then verify show all basic insurance is not visible
         And verify it is not possible to choose zorg select
         
@@ -47,7 +48,7 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And I add a collective with:
         |collective|<collective>|
         And I delete the collective in wizard
-        Then select basic insurance with:
+        Then I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
         And verify that all aanvullende packages and tand packages -not collective- are clickable
 
@@ -56,18 +57,19 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |Omring Medewerkers    |Zorg Vrij     |
         |Carinova Servicepakket|Zorg Geregeld |
 
-    
     Scenario: selecteer zorg select, check dat je niet collectief toe kunt voegen, check daarna of alle losse modules klikbaar zijn en alle pakketten klikbaar zijn
         Given I am on the Zorgverzekering page of the Unive website
-        When I select basic insurance Zorg Select
+        When I select basic insurance no collective with:
+        |insuranceBasis|Zorg Select|
         Then Verify I am not able to add collective
         And Verify that all modules are clickable
-        And Click on Pakketten button
+        And I click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
     
     Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedanktpagina de juiste elementen bevatten
         Given I am on the Zorgverzekering page of the Unive website
-        When I select basic insurance Zorg Select
+        When I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
         And I click on Volgende page one
         And I validate that all legends are visible on step 2
         And I select geen verzekering overstapreden in dropdown
@@ -82,12 +84,13 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         Then validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
-        |persona|inkomstenNietNL|inkomstenNL|
-        |ronaldo|Ja             |Ja         |
+        |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
+        |ronaldo|Ja             |Ja         |Zorg Select   |
     
     Scenario Outline: Niet mogelijk om door te navigeren naar stap 3 bij geen inkomen uit NL
         Given I am on the Zorgverzekering page of the Unive website
-        When I select basic insurance Zorg Select
+        When I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
         And I click on Volgende page one
         And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
@@ -97,5 +100,5 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         Then validate errormessage and it is not possible to navigate to step 3
 
         Examples:
-        |persona|inkomstenNietNL|inkomstenNL|
-        |ronaldo|Ja             |Nee        |
+        |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
+        |ronaldo|Ja             |Nee        |Zorg Select   | 

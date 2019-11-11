@@ -39,10 +39,6 @@ Then (/^select basic insurance and validate that all aanvullende packages -not t
     );
 });
 
-When(/^I select basic insurance Zorg Vrij$/, async () => {
-    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
-});
-
 Then(/^verify show all basic insurance is not visible$/, async () => {
     await genericMethods.waitForElementNotVisible(zorgWizardElements.basisVerzekeringShowAllBasicInsurancesClickElement, 250);
 });
@@ -55,9 +51,16 @@ When(/^I delete the collective in wizard$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.collectiveDeleteButtonClickElement);
 });
 
-Then(/^select basic insurance with:$/, async (data) => {
+Then(/^I select basic insurance including collective with:$/, async (data) => {
     const dataTable = data.rowsHash();
-    await zorgWizardMethods.selectInsuranceBasis(
+    await zorgWizardMethods.selectInsuranceBasisWithCollective(
+        dataTable.insuranceBasis
+    );
+});
+
+Then(/^I select basic insurance no collective with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.selectInsuranceBasisNoCollective(
         dataTable.insuranceBasis
     );
 });
@@ -70,10 +73,6 @@ Then(/^verify that all aanvullende packages and tand packages -not collective- a
     await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
-});
-
-When(/^I select basic insurance Zorg Select$/, async () => {
-    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringSelectClickElement);
 });
 
 Then(/^Verify I am not able to add collective$/, async () => {
@@ -90,11 +89,7 @@ Then(/^Verify that all modules are clickable$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.moduleBuitenlanddekkingClickElement);
 });
 
-When(/^Click on Pakketten button$/, async () => {
-    await genericMethods.clickOnElement(zorgWizardElements.pakkettenButtonClickElement);
-});
-
-When(/^I select insurances on step 1 of wizard$/, async () => {
+When(/^I click on Pakketten button$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.pakkettenButtonClickElement);
 });
 
