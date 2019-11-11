@@ -4,7 +4,6 @@ import {browser} from "protractor";
 import {
   apiElements,
   apiMethods,
-  genericElements,
   genericMethods,
   hmPageElements,
   loginPageElements,
@@ -39,10 +38,7 @@ Then(/^Verify (.*) is logged in with (.*) for new password$/, async (persona: st
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(loginPageElements.loginPasswordInputElement, newPassword);
   await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
-  try {
-    await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
-  } catch {
-  }
+  await genericMethods.goToPage("mijn unive particulier");
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
   let createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody(newPassword, persona));
   await genericMethods.verifyNumber(await createAccount.statusCode, 200);
@@ -70,19 +66,19 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
   await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
   await mailhogMethods.verifyEmailHandling(personaData.getPersonaEmailAddress(persona));
   //FOCUS ON NEW TAB
-  await browser.getAllWindowHandles().then(function (handles) {
-    browser.switchTo().window(handles[2]);
-  });
-  //GO TO MIJN UNIVE AND LOG OFF
-  await browser.sleep(5000);
-  await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
-  // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
-  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
-  await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
-  //LOGIN AND VERIFY YOU ARE LOGGED IN WITH NORMAL PERSONA
-  await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
-  await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
-  await genericMethods.verifyTextInElement(persoonlijkeGegevensElements.emailAddressTextElement, personaData.getPersonaEmailAddress(persona));
+  // await browser.getAllWindowHandles().then(function (handles) {
+  //   browser.switchTo().window(handles[2]);
+  // });
+  // //GO TO MIJN UNIVE AND LOG OFF
+  // await browser.sleep(5000);
+  // await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
+  // // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
+  // await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
+  // await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
+  // //LOGIN AND VERIFY YOU ARE LOGGED IN WITH NORMAL PERSONA
+  // await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
+  // await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
+  // await genericMethods.verifyTextInElement(persoonlijkeGegevensElements.emailAddressTextElement, personaData.getPersonaEmailAddress(persona));
 });
 
 When(/^Customer changes payment data with form for (.*)$/, async (paymentData: string) => {

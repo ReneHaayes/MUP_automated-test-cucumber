@@ -69,11 +69,8 @@ When(/^the correct password is filled in with (.*) and at repeat fill in the (.*
 });
 
 When(/^the account number is filled in with (.*)$/, async (password: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.clickOnElement(mijnUniveAccountElements.accountAanmakenButtonClickElement);
-  try {
-    await genericMethods.clickOnElement(genericElements.cookieClickElement)
-  } finally {
-  }
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveLastFourNumberOfAccountNumberInputElement, password);
   await genericMethods.clickOnTAB(mijnUniveAccountElements.mijnUniveLastFourNumberOfAccountNumberInputElement);
 });

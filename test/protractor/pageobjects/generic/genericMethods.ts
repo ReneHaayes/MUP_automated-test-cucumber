@@ -26,6 +26,7 @@ export class GenericMethods {
 
   async clickOnElement(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const elementToClick: ElementFinder = element(by.css(selector));
     await browser.controlFlow().execute(() => {
@@ -219,6 +220,7 @@ export class GenericMethods {
 
   async typeText(selector: string, text: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const typeTextElement: ElementFinder = element(by.css(selector));
     await browser.controlFlow().execute(() => {
@@ -327,14 +329,10 @@ export class GenericMethods {
   }
 
   async clickOnNextButton() {
-    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await this.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.nextButton);
   }
 
   async clickOnFinishButton() {
-    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await this.waitForElementIsVisible(genericElements.finishButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.finishButton);
   }
 

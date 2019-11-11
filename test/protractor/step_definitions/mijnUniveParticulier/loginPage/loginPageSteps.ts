@@ -16,6 +16,7 @@ When(/^Persona (.*) logs in$/, async (persona: string) => {
 });
 
 When(/^Customer logs in with wrong email address (.*)$/, async (emailAddress: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
   await genericMethods.clickOnTAB(loginPageElements.loginEmailInputElement);
 });
@@ -35,7 +36,7 @@ When(/^verify the answer to (.*)$/, async (veelgesteldeVraag: string) => {
 });
 
 When(/^persona (.*) forgot his password and resets it with new password (.*)$/, async (persona: string, newPassword: string) => {
-  console.log(newPassword);
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   //Forgot password flow till send email:
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordClickElement);
   await genericMethods.typeText(loginPageElements.forgotPasswordEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));

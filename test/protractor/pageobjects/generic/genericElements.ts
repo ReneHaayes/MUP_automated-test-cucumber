@@ -104,6 +104,7 @@ export class GenericElements {
 
   //LOADER
   loader: string = 'body > div.blockUI.blockMsg.blockPage';
+  loaderQis: string = '[class="blockOverlay"]';
 
   //ACCOUNTNUMBER
   accountNumberElement: string = '#_Form_IF2533_3702';
