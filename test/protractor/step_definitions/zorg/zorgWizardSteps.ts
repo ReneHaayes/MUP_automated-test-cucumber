@@ -135,8 +135,7 @@ Then(/^validate that doorlopende reis crossSell is visible and shows correct dat
     await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem2SubtitleTextElement, crossSellEnum.VOORUZELF);
 });
 
-When(/^I select basic insurance Zorg Vrij with Aanvullend Goed$/, async () => {
-    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
+When(/^I select Aanvullend Beter$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterClickElement);
 });
 
@@ -182,7 +181,14 @@ Then(/^I answer inkomstenvragen with:$/, async (data) => {
     );
 });
 
-Then(/^validate errormessage and it is not possible to navigate to step 3$/, async () => {  
+Then(/^validate errormessage inkomstenvragen and it is not possible to navigate to step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
     await genericMethods.verifyTextInElement(zorgWizardElements.uwGegevensInkomstenFoutmeldingTextElement, zorgWizardElements.uwGegevensInkomstenFoutmeldingText);
+});
+
+Then(/^validate the introtexts are correctly shown$/, async () => {  
+    await genericMethods.verifyTextInElement(zorgWizardElements.introTextAanvullendeVerzekeringenH2TextElement, zorgWizardElements.introTextAanvullendeVerzekeringenH2Text);
+    await genericMethods.verifyTextInElement(zorgWizardElements.introTextAanvullendeVerzekeringenTextElement, zorgWizardElements.introTextAanvullendeVerzekeringenText);
+    await genericMethods.verifyTextInElement(zorgWizardElements.introTextPartnerKindH2TextElement, zorgWizardElements.introTextPartnerKindH2Text);
+    await genericMethods.verifyTextInElement(zorgWizardElements.introTextPartnerKindTextElement, zorgWizardElements.introTextPartnerKindText);
 });

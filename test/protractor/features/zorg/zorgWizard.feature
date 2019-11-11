@@ -1,4 +1,4 @@
-@zorgWizardCollectieven
+@zorgWizard
 
 Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszorg als niet-thuiszorg)
 
@@ -97,8 +97,13 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
         |inkomstenNL    |<inkomstenNL>    |
-        Then validate errormessage and it is not possible to navigate to step 3
+        Then validate errormessage inkomstenvragen and it is not possible to navigate to step 3
 
         Examples:
         |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
-        |ronaldo|Ja             |Nee        |Zorg Select   | 
+        |ronaldo|Ja             |Nee        |Zorg Select   |
+    
+    Scenario: Valideer de introteksten voor aanvullende verzekeringen en partner kind op stap 1 (wanneer nog geen basisverzekering is geselecteerd)
+        Given I am on the Zorgverzekering page of the Unive website
+        When I do nothing
+        Then validate the introtexts are correctly shown

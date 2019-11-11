@@ -22,7 +22,9 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         
     Scenario Outline: doorlopen van de zorgwizard (met aanvullende pakketten) en check of rechtsbijstand crosssell wordt getoond
         Given I am on the Zorgverzekering page of the Unive website
-        When I select basic insurance Zorg Vrij with Aanvullend Goed
+        When I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        And I select Aanvullend Beter
         And I click on Volgende page one
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
@@ -34,5 +36,5 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         Then validate that crossSell is visible and shows correct data
 
         Examples:
-        |persona|inkomstenNietNL|inkomstenNL|
-        |ronaldo|Ja             |Ja         |
+        |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
+        |ronaldo|Ja             |Ja         |Zorg Vrij     |

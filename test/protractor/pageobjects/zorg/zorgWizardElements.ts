@@ -18,6 +18,14 @@ addCollectiveFirstSearchResultClickElement: string = 'div.unive-search-collectiv
 addCollectiveButtonClickElement: string = 'unive-search-collective > button';
 
     //PAKKETTEN
+introTextAanvullendeVerzekeringenH2TextElement: string = 'unive-additional-insurances > unive-wizard-subtitle > div > h2';
+introTextAanvullendeVerzekeringenH2Text: string = 'Aanvullende verzekeringen';
+introTextAanvullendeVerzekeringenTextElement: string = 'unive-applicants-content > unive-additional-insurances > unive-wizard-subtitle > div > p';
+introTextAanvullendeVerzekeringenText: string = 'Kies voor losse modules per zorgsoort. Of verzeker de meest voorkomende zorg met een ruim aanvullend pakket.';
+introTextPartnerKindH2TextElement: string = 'unive-partner-child > unive-wizard-subtitle > div > h2';
+introTextPartnerKindH2Text: string = 'Partner of kind meeverzekeren';
+introTextPartnerKindTextElement: string = 'unive-partner-child > unive-wizard-subtitle > div > p';
+introTextPartnerKindText: string = 'Kies minimaal eerst voor uzelf een basisverzekering. Vervolgens kunt u partner en kinderen toevoegen.';
 basisVerzekeringVrijClickElement: string = '[class="unive-basic-insurances-coverage"][data-basic-insurance-code="VRY"]';
 basisVerzekeringGeregeldClickElement: string = '[class="unive-basic-insurances-coverage"][data-basic-insurance-code="GER"]';
 basisVerzekeringSelectClickElement: string = '[class="unive-basic-insurances-coverage"][data-basic-insurance-code="ZVSU"]';
