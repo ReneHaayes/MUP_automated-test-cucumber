@@ -1,3 +1,6 @@
+require('ts-node/register');
+require('tsconfig-paths/register');
+
 exports.config = {
   seleniumAddress: 'http://selenium-hub.selenium:4444/wd/hub',
   // ignoreUncaughtExceptions: true,
