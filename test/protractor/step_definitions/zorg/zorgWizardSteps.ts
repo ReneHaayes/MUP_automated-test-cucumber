@@ -192,3 +192,15 @@ Then(/^validate the introtexts are correctly shown$/, async () => {
     await genericMethods.verifyTextInElement(zorgWizardElements.introTextPartnerKindH2TextElement, zorgWizardElements.introTextPartnerKindH2Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.introTextPartnerKindTextElement, zorgWizardElements.introTextPartnerKindText);
 });
+
+When(/^I select eigen risico and validate that the eigen risico text is shown in basis verzekering blok with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.checkEigenRisico(
+        dataTable.insuranceBasis,
+        dataTable.eigenRisico
+    );
+});
+
+When(/^I click on show all basic insurances$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringShowAllBasicInsurancesClickElement);
+});

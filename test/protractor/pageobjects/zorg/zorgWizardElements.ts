@@ -6,6 +6,10 @@ zorgverzekeringTitelH1TextElement: string = 'div > h1';
 zorgverzekeringAddCollectiveButtonOpenOverlayClickElement: string = 'unive-collective > div > div > button';
 collectiveDeleteButtonClickElement: string = '[class="unive-collective__delete"]';
 volgendeUwGegevensSubmitButtonClickElement: string = '[class="button button--secondary"][type="submit"]';
+eigenRisicoEersteText: string = "van";
+eigenRisicoTweedeText: string = "voor";
+eigenRisicoTextElement: string = 'unive-deductible-excess > p';
+eigenRisicoText: string = 'U kiest voor een vrijwillig eigen risico. De korting is in de premie verwerkt.';
 
     //OVERLAY COLLECTIEF TOEVOEGEN
 addCollectiveTitelH2TextElement: string = 'div.unive-modal__header > div > h2';

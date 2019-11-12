@@ -107,3 +107,38 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         Given I am on the Zorgverzekering page of the Unive website
         When I do nothing
         Then validate the introtexts are correctly shown
+    
+    Scenario Outline: Valideer of eigen risico juist wordt toegepast op basisverzekeringspakketten (Zorg Select)
+        Given I am on the Zorgverzekering page of the Unive website
+        When I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        Then I select eigen risico and validate that the eigen risico text is shown in basis verzekering blok with:
+        |insuranceBasis|<insuranceBasis>|
+        |eigenRisico   |<eigenRisico>   |
+
+        Examples:
+        |insuranceBasis|eigenRisico|
+        |Zorg Select   |385        |
+        |Zorg Select   |485        |
+        |Zorg Select   |585        |
+        |Zorg Select   |685        |
+        |Zorg Select   |785        |
+        |Zorg Select   |885        |
+        
+    Scenario Outline: Valideer of eigen risico juist wordt toegepast op basisverzekeringspakketten (Zorg Geregeld)
+        Given I am on the Zorgverzekering page of the Unive website
+        When I click on show all basic insurances
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        Then I select eigen risico and validate that the eigen risico text is shown in basis verzekering blok with:
+        |insuranceBasis|<insuranceBasis>|
+        |eigenRisico   |<eigenRisico>   |
+
+        Examples:
+        |insuranceBasis|eigenRisico|
+        |Zorg Geregeld |385        |
+        |Zorg Geregeld |485        |
+        |Zorg Geregeld |585        |
+        |Zorg Geregeld |685        |
+        |Zorg Geregeld |785        |
+        |Zorg Geregeld |885        |

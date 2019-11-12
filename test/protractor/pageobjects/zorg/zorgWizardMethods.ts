@@ -1,5 +1,5 @@
 import { genericMethods, zorgWizardElements } from "../../support";
-import { pakkettenEnum, crossSellEnum, collectievenEnum, inkomstenDropdownEnum } from "../enum/zorgEnum";
+import { pakkettenEnum, crossSellEnum, collectievenEnum, inkomstenDropdownEnum, eigenRisicoEnum } from "../enum/zorgEnum";
 import { gender } from "../enum/genericEnum";
 
 export class ZorgWizardMethods {
@@ -161,5 +161,73 @@ export class ZorgWizardMethods {
         else {
             throw new Error('There is no correct choice for inkomen');
         } 
+    }
+
+    async checkEigenRisico(insuranceBasis: string, eigenRisico: string) {
+        await genericMethods.clickOnElementWithXpath(this.getEigenRisico(eigenRisico));
+        if(insuranceBasis == pakkettenEnum.ZORGSELECT){
+            if(eigenRisico == eigenRisicoEnum.EigenRisico_385){
+            await genericMethods.waitForElementNotVisible(this.checkEigenRisicoTextBasis(insuranceBasis), 100);
+            await genericMethods.waitForElementNotVisible(this.checkEigenRisicoTextBasis(insuranceBasis), 100);
+            }
+            else if(eigenRisico != eigenRisicoEnum.EigenRisico_385){
+            await genericMethods.verifyTextContainsInElement(this.checkEigenRisicoTextBasis(insuranceBasis), zorgWizardElements.eigenRisicoEersteText, 100);
+            await genericMethods.verifyTextContainsInElement(this.checkEigenRisicoTextBasis(insuranceBasis), zorgWizardElements.eigenRisicoTweedeText, 100);
+            await genericMethods.verifyTextInElement(zorgWizardElements.eigenRisicoTextElement, zorgWizardElements.eigenRisicoText);
+            }
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
+            if(eigenRisico == eigenRisicoEnum.EigenRisico_385){
+            await genericMethods.waitForElementNotVisible(this.checkEigenRisicoTextBasis(insuranceBasis), 100);
+            await genericMethods.waitForElementNotVisible(this.checkEigenRisicoTextBasis(insuranceBasis), 100);
+                }
+            else if(eigenRisico != eigenRisicoEnum.EigenRisico_385){
+            await genericMethods.verifyTextContainsInElement(this.checkEigenRisicoTextBasis(insuranceBasis), zorgWizardElements.eigenRisicoEersteText, 100);
+            await genericMethods.verifyTextContainsInElement(this.checkEigenRisicoTextBasis(insuranceBasis), zorgWizardElements.eigenRisicoTweedeText, 100);
+            await genericMethods.verifyTextInElement(zorgWizardElements.eigenRisicoTextElement, zorgWizardElements.eigenRisicoText);
+            }
+        }
+        else {
+            throw new Error('There is no correct choice for basisverzekering');
+        }           
+    }
+
+    checkEigenRisicoTextBasis(input: string): string {
+        switch (input) {
+            case pakkettenEnum.ZORGSELECT: {
+                return 'unive-basic-insurances-coverage:nth-child(1) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount'
+            }
+        }
+        switch (input) {
+            case pakkettenEnum.ZORGGEREGELD: {
+                return 'unive-basic-insurances-coverage:nth-child(2) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount'
+            }
+        }
+    }
+
+    getEigenRisico(input: string): string {
+        switch (input) {
+            case eigenRisicoEnum.EigenRisico_385: {
+                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="0"]'
+            }
+            case eigenRisicoEnum.EigenRisico_485: {
+                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="1"]'
+            }
+            case eigenRisicoEnum.EigenRisico_585: {
+                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="2"]'
+            }
+            case eigenRisicoEnum.EigenRisico_685: {
+                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="3"]'
+            }
+            case eigenRisicoEnum.EigenRisico_785: {
+                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="4"]'
+            }
+            case eigenRisicoEnum.EigenRisico_885: {
+                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="5"]'
+            }
+            default: {
+                throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+              }
+        }
     }
 }

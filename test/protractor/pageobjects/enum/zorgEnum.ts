@@ -44,3 +44,12 @@ export enum inkomstenDropdownEnum {
     JA = 'Ja',
     NEE = 'Nee'
 }
+
+export enum eigenRisicoEnum {
+    EigenRisico_385 = '385',
+    EigenRisico_485 = '485',
+    EigenRisico_585 = '585',
+    EigenRisico_685 = '685',
+    EigenRisico_785 = '785',
+    EigenRisico_885 = '885',
+}
