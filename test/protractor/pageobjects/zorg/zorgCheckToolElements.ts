@@ -53,7 +53,7 @@ informationBelowSelectedAnswersTextElement: string = '[class="health-check-quest
 //E-MAIL DIT ADVIES
 emailDitAdviesButtonAdvicePageClickElement: string = 'div.health-check-result__top > ui-button > button';
 emailDitAdviesOverlayHeaderElement: string = '[class="ui-modal__title ng-star-inserted"]';
-emailDitAdviesOverlayHeaderText: string = 'Mail uw Zorgcheck resultaat';
+emailDitAdviesOverlayHeaderText: string = 'Mail uw ZorgCheck resultaat';
 emailDitAdviesOverlayDataEmailAddressElement: string = '[id="resultEmail"]';
 emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = ' form > ui-button > button';
 emailDitAdviesOverlayVerstuurMijnAdviesInvalidEmailClickElement: string = '[class="button button--secondary button--icon button--disabled"]';
@@ -101,8 +101,8 @@ itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapi
 itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin';
 itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid.';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
-itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd';
-itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist';
+itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd.';
+itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist.';
 
 //OVERLAY ELEMENTEN
 overlayH2Element: string = '[class="ui-modal__title ng-star-inserted"]';
