@@ -204,3 +204,12 @@ When(/^I select eigen risico and validate that the eigen risico text is shown in
 When(/^I click on show all basic insurances$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringShowAllBasicInsurancesClickElement);
 });
+
+When(/^I select premie per jaar optie$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.premiePerJaarClickElement);
+});
+
+Then(/^Verify that payment by acceptgiro option is visible$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensUwBetaalgegevensAcceptgiroClickElement);
+});
+

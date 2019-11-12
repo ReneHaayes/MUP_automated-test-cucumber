@@ -142,3 +142,11 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |Zorg Geregeld |685        |
         |Zorg Geregeld |785        |
         |Zorg Geregeld |885        |
+    
+    Scenario: selecteer premie per jaar en check of op stap 2 acceptgiro zichtbaar is
+        Given I am on the Zorgverzekering page of the Unive website
+        When I select basic insurance no collective with:
+        |insuranceBasis|Zorg Select|
+        And I select premie per jaar optie
+        And I click on Volgende page one
+        Then Verify that payment by acceptgiro option is visible

@@ -10,6 +10,8 @@ eigenRisicoEersteText: string = "van";
 eigenRisicoTweedeText: string = "voor";
 eigenRisicoTextElement: string = 'unive-deductible-excess > p';
 eigenRisicoText: string = 'U kiest voor een vrijwillig eigen risico. De korting is in de premie verwerkt.';
+premiePerMaandClickElement: string = 'div > select > option:nth-child(1)';
+premiePerJaarClickElement: string = 'div > select > option:nth-child(2)';
 
     //OVERLAY COLLECTIEF TOEVOEGEN
 addCollectiveTitelH2TextElement: string = 'div.unive-modal__header > div > h2';
@@ -97,11 +99,13 @@ uwGegevensUwGegevensText: string = 'Uw gegevens';
 uwGegevensUwgegevensTextElement: string = 'unive-fieldset:nth-child(3) > fieldset > legend';
 uwGegegevensUwBetaalgegevensText: string = 'Uw betaalgegevens';
 uwGegevensUwBetaalgegevensTextElement: string = 'unive-fieldset:nth-child(4) > fieldset > legend';
+uwGegevensUwBetaalgegevensAcceptgiroClickElement: string = '[id="paymentMethod_acceptgiro"]';
 uwGegevensInkomstenText: string = 'Inkomsten';
 uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset > legend';
 uwGegevensInkomstenFoutmeldingTextElement: string = '[class="unive-form-input-error"]';
 uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact met ons op via 072 52 77 595.';
 uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
+
 
 //ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
 bijnaVerzekerdBSNTextElement: string = '[placeholder="012345678"]';
