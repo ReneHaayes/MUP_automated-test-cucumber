@@ -81,6 +81,7 @@ export enum homePageEnum {
   KLACHTENFORMULIER = 'klachtenformulier',
   VRAAGSTELLEN = 'vraagStellen',
   SCHADE = 'schade',
+  SCHADE_SERVICE = 'schade service',
   KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
   ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
   RECHTSBIJSTAND = 'rechtsbijstand',

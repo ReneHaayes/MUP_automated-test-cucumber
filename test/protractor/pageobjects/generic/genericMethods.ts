@@ -133,6 +133,7 @@ export class GenericMethods {
 
   async waitForElementClickable(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
+    await browser.sleep(1000);
     await browser.wait(ec.elementToBeClickable(selectorToWaitFor), waitFor);
   }
 

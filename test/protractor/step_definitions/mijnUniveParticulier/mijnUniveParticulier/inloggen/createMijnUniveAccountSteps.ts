@@ -15,11 +15,8 @@ When(/^Check if (.*) already exists$/, async (persona: string) => {
 });
 
 When(/^Customer (.*) creates an account for mijn Unive$/, async (persona: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.clickOnElement(mijnUniveAccountElements.accountAanmakenButtonClickElement);
-  try {
-    await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
-  } catch {
-  }
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveBirthdayInputElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveZipcodeInputElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveLastFourNumberOfAccountNumberInputElement, personaData.getPersonaAccountNumber(persona));
@@ -48,21 +45,15 @@ Then(/^The notification that there is already an account for this e-mail adres s
 });
 
 When(/^the password is filled in with (.*)$/, async (password: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.clickOnElement(mijnUniveAccountElements.accountAanmakenButtonClickElement);
-  try {
-    await genericMethods.clickOnElement(genericElements.cookieClickElement)
-  } finally {
-  }
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveChoosePasswordInputElement, password);
   await genericMethods.clickOnTAB(mijnUniveAccountElements.mijnUniveChoosePasswordInputElement);
 });
 
 When(/^the correct password is filled in with (.*) and at repeat fill in the (.*)$/, async (password: string, incorrectPassword: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.clickOnElement(mijnUniveAccountElements.accountAanmakenButtonClickElement);
-  try {
-    await genericMethods.clickOnElement(genericElements.cookieClickElement)
-  } finally {
-  }
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveChoosePasswordInputElement, password);
   await genericMethods.typeText(mijnUniveAccountElements.mijnUnivePasswordConfirmationInputElement, incorrectPassword);
   await genericMethods.clickOnTAB(mijnUniveAccountElements.mijnUnivePasswordConfirmationInputElement);

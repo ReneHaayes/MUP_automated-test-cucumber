@@ -64,6 +64,7 @@ export class MijnUniveAccountElements {
   newIbanAccountnumberInputElement: string = '#iban_new';
   startDateChangeInputElement: string = '#start_date';
   authorisationCheckBoxAutomaticCollectionClickElement: string = '[for="payment_method__authorized_0"]';
+  authorisationCheckBoxAutomaticCollectionSecondClickElement: string = '[for="payment_account__authorized_0"]';
 
   //SELECT PAYMENT PERIOD
   paymentPeriodSelectElement: string = '#payment_term__frequency';

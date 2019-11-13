@@ -9,10 +9,10 @@ Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, asyn
 });
 
 When(/^Persona (.*) logs in$/, async (persona: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(loginPageElements.loginPasswordInputElement, personaData.getPersonaPassword(persona));
   await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
-  await genericMethods.clickOnElement(genericElements.cookieClickElement);
 });
 
 When(/^Customer logs in with wrong email address (.*)$/, async (emailAddress: string) => {

@@ -24,7 +24,7 @@ export class PersoonlijkeGegevensMethods {
         await genericMethods.typeText(mijnUniveAccountElements.newIbanAccountnumberInputElement, PaymentData.IBAN);
         await genericMethods.typeText(mijnUniveAccountElements.startDateChangeInputElement, genericMethods.getDate('today'));
         await genericMethods.clickOnTAB(mijnUniveAccountElements.startDateChangeInputElement);
-        await genericMethods.clickOnElement(mijnUniveAccountElements.authorisationCheckBoxAutomaticCollectionClickElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.authorisationCheckBoxAutomaticCollectionSecondClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }

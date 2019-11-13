@@ -16,6 +16,7 @@ import {AutoVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/
 import {AutoVerzekeringElementsStepThree} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElementsStepThree";
 import {WoonVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/huisVerzekeringen/woonVerzekeringElements";
 import {ReisVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
+import {SchadeServiceElements} from "../pageobjects/Klantenservice/SchadeServiceElements";
 
 export const bikeElements: BikeElements = new BikeElements();
 export const scootMobielVerzekeringElements: ScootMobielVerzekeringElements = new ScootMobielVerzekeringElements();
@@ -36,3 +37,4 @@ export const autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree 
 export const woonVerzekeringElements: WoonVerzekeringElements = new WoonVerzekeringElements();
 export const aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
 export const reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
+export const schadeServiceElements: SchadeServiceElements = new SchadeServiceElements();

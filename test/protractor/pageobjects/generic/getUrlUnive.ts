@@ -159,6 +159,9 @@ export class GetUrlUnive {
       case homePageEnum.SCHADE: {
         return this.getEnv(browser.params.env.environment) + genericElements.schade;
       }
+      case homePageEnum.SCHADE_SERVICE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.schadeService;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
