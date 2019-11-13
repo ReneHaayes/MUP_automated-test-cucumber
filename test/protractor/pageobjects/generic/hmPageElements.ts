@@ -77,8 +77,8 @@ export class HmPageElements {
   bekijkAlleContactMogelijkhedenButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Bekijk alle contactmogelijkheden"]';
 
 
-  zorgNotaDeclarerenTitleTextElement: string = '[class*="detailContent_title"]';
-  zorgNotaDeclarerenTitleText: string = "Uw zorgnota's declareren bij Univé";
+  zorgNotaDeclarerenTitleTextElement: string = 'section:nth-child(1) > h4';
+  zorgNotaDeclarerenTitleText: string = "Via de Univé App";
   zorgNotaDeclarerenBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Declareren"]';
   alarmCentraleTitleTextElement: string = '[class*="action_title"]';
   alarmCentraleTitleText: string = 'Alarmcentrale';
