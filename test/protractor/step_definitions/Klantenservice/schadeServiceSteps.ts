@@ -1,5 +1,6 @@
-import {When} from "cucumber";
+import {Then, When} from "cucumber";
 import {genericMethods, schadeServiceElements} from "@support";
+import {browser} from "protractor";
 
 When(/^Customer selects (.*) for schade service (.*)$/, async (city: string, carCaravanCamper: string) => {
   switch (carCaravanCamper) {
@@ -27,7 +28,20 @@ When(/^Customer selects (.*) for schade service (.*)$/, async (city: string, car
   }
 });
 
-When(/^Verify (.*) is available on location (.*)$/, async (servicePointTitle: string, location: string) => {
+When(/^Customer selects schadehersteller with (.*) on the map in city (.*)$/, async (schadeHerstellerName: string, city: string) => {
+  await genericMethods.typeText(schadeServiceElements.placeOrZipcodeInputElement, city);
+  await genericMethods.clickOnElement(schadeServiceElements.submitButtonClickElement);
+  await genericMethods.waitForElementNotVisible(schadeServiceElements.locationFinderLoaderElement, browser.getPageTimeout);
+  await genericMethods.clickOnElementWithXpath(schadeServiceElements.getLocationFinderClickElement(schadeHerstellerName));
+});
+
+Then(/^Verify (.*) is available on location (.*)$/, async (servicePointTitle: string, location: string) => {
   await genericMethods.verifyTextInElement(schadeServiceElements.getTitleForLocationTextElement(location), servicePointTitle);
 });
 
+Then(/^Verify (.*) and (.*) on (.*) are shown correctly when schadeservice is selected$/, async (address: string, openingHours: string, day: string) => {
+  await genericMethods.verifyTextContainsInElement(schadeServiceElements.selectedSchadeServiceAddresTextElement, address, browser.getPageTimeout);
+  await genericMethods.verifyTextInElementWithXpath(schadeServiceElements.getOpeningHoursDayTextElement(day), day);
+  await genericMethods.verifyTextInElementContainsWithXpath(schadeServiceElements.getOpeningHoursDayHoursTextElement(day), openingHours);
+
+});

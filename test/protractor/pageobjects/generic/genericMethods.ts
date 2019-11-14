@@ -248,6 +248,13 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
+  async verifyTextInElementContainsWithXpath(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getTextWithXpath(selector);
+    await expect(selectorToString).to.have.string(assertionText);
+  }
+
   async verifyTextInElement(selector: string, assertionText: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
