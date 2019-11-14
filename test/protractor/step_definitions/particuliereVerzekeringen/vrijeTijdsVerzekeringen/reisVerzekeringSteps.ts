@@ -9,6 +9,17 @@ When(/^I enter step one and step two page of doorlopende verzekeringen for mysel
   await genericMethods.clickOnNextButton();
 });
 
+When(/^I enter step one page of doorlopende verzekeringen for myself$/, async () => {
+  await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter email (.*) for email mij deze premie berekenen$/, async (emailAddress: string) => {
+  await genericMethods.clickOnElement(reisVerzekeringElements.emailMijDezePremieBerekeningButtonClickElement);
+  await genericMethods.typeText(reisVerzekeringElements.emailMijDezePremieBerekeningEmailAddressInputElement, emailAddress);
+  await genericMethods.clickOnElement(reisVerzekeringElements.emailMijDezePremieBerekeningSendButtonClickElement);
+});
+
 When(/^I enter details of (.*) in your data page of reis verzekeringen$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
@@ -57,6 +68,9 @@ When(/^I click on the (.*) to insure$/, async (familyMembers: string) => {
 
 Then(/^the (.*) I have checked are present on the page$/, async (familyMembers: string) => {
   await reisVerzekeringMethods.checkFamilyMemberCheckedOnStepOne(familyMembers);
-
 });
 
+// er komt een bericht met "Er is een fout opgetreden" dit komt omdat de mailserver op PAT niet is ingesteld. Wij kunnen hieraan verifieren dat het correct is.
+Then(/^Verify the correct wrong message is shown$/, async () => {
+  await genericMethods.verifyTextInElement(reisVerzekeringElements.emailMijDezePremieBerekeningWrongTrueMessageTextElement, reisVerzekeringElements.emailMijDezePremieBerekeningWrongTrueMessageText);
+});

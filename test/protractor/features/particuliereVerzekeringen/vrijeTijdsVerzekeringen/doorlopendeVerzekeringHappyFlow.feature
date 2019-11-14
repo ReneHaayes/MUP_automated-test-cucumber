@@ -16,3 +16,9 @@
       | persona | page                               |
       | ronaldo | Doorlopende reisverzekering        |
       | ronaldo | doorlopende annuleringsverzekering |
+
+    Scenario: Filling in step one to check for email premie berekenen.
+      Given I am on the Doorlopende reisverzekering page of the Unive website
+      When I enter step one page of doorlopende verzekeringen for myself
+      And I enter email test@test.com for email mij deze premie berekenen
+      Then Verify the correct wrong message is shown

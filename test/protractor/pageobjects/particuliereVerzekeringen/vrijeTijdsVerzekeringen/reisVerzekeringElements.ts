@@ -43,4 +43,12 @@ export class ReisVerzekeringElements {
   summarySpaceMyPartner: string = 'Uw partner';
   summarySpaceMychildren: string = 'Uw kinderen';
 
+  //EMAIL MIJ DEZE PREMIEBEREKENING
+  emailMijDezePremieBerekeningButtonClickElement = '#_Form_IF2523_3671';
+  emailMijDezePremieBerekeningEmailAddressInputElement = '#_EmailPremiumCalculation__1';
+  emailMijDezePremieBerekeningSendButtonClickElement = '#_EmailPremiumCalculation_send';
+  emailMijDezePremieBerekeningWrongTrueMessageTextElement = '[class="mainMessage"] > p';
+  emailMijDezePremieBerekeningWrongTrueMessageText = 'Er is een fout opgetreden.'
+
+
 }
