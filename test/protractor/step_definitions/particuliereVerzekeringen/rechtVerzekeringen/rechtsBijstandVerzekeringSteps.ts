@@ -1,19 +1,30 @@
-import {When} from "cucumber";
+import {Then, When} from "cucumber";
 import {
   genericElements,
   genericMethods,
   nawElements,
   personaData,
   rechtsBijstandVerzekeringElements,
-  rechtsBijstandVerzekeringMethods
+  rechtsBijstandVerzekeringMethods,
+  stickyBalkElements,
+  stickyBalkMethods
 } from "@support";
+import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";
 
 When(/^I enter step one page of rechtsbijstandverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await rechtsBijstandVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
   await genericMethods.clickOnNextButton();
   //Click on Next at step two page
   await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.verkeerEnvoertuigen);
+  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.RECHTSBIJSTAND);
   await genericMethods.clickOnNextButton();
+});
+
+Then(/^Customer can select bekijk controleer gegevens for rechtsbijstandverzekering in almost insured page with correct data$/, async () => {
+  await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
+  await stickyBalkMethods.verifySummaryRechtsbijstandVerzekering();
+  await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
+  await genericMethods.clickOnFinishButton();
 });
 
 When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen$/, async (persona: string) => {
