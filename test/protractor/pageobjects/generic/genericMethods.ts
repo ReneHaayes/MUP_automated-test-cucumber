@@ -37,6 +37,19 @@ export class GenericMethods {
     })
   }
 
+  async doubleClickOnElement(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      browser.actions().doubleClick(elementToClick).perform();
+    })
+  }
+
   async clickOnElementWithXpath(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
@@ -146,6 +159,7 @@ export class GenericMethods {
       throw new Error('Element with selector: ' + selector + ', is still visible');
     }
   }
+
   async waitForElementNotVisibleWithSleep(selector: string, waitFor: number, sleepForMilliSeconds: number) {
     try {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
@@ -371,11 +385,12 @@ export class GenericMethods {
       }
     }
   }
+
   async clickAfwijkendeBestuurderDataGender(input: string) {
     switch (input) {
       case gender.MALE: {
         await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await this.clickOnElement(nawElements.afwijkendeBestuurderDataGenderMaleClickElement );
+        await this.clickOnElement(nawElements.afwijkendeBestuurderDataGenderMaleClickElement);
         break;
       }
       case gender.FEMALE: {
