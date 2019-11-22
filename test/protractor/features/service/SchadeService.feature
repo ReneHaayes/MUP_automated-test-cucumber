@@ -2,7 +2,7 @@
 
 Feature: Check if schade service is functioning correctly
 
-  Scenario Outline: Verify schade service for Auto, both.
+  Scenario Outline: Verify schade service for Auto, camper and caravan.
     Given I am on the schade service page of the Unive website
     When Customer selects <city> for schade service <carCaravanCamper>
     Then Verify <servicePoint> is available on location <location>
@@ -15,7 +15,7 @@ Feature: Check if schade service is functioning correctly
       | caravan          | Van Duinkerken Rekreatie     | 2        | Nijmegen |
 
 
-  Scenario Outline: Verify schade service for Auto, both.
+  Scenario Outline: Verify schade service for car with selecting servicepoint.
     Given I am on the schade service page of the Unive website
     When Customer selects schadehersteller with <servicePoint> on the map in city <city>
     Then Verify <address> and <openingHours> on <day> are shown correctly when schadeservice is selected
