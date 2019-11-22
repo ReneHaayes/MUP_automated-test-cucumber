@@ -15,7 +15,7 @@ When(/^Check if (.*) already exists$/, async (persona: string) => {
 });
 
 When(/^Customer (.*) creates an account for mijn Unive$/, async (persona: string) => {
-  await genericMethods.clickOnElement(genericElements.cookieClickElement);
+  // await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.clickOnElement(mijnUniveAccountElements.accountAanmakenButtonClickElement);
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveBirthdayInputElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveZipcodeInputElement, personaData.getPersonaZipcode(persona));
