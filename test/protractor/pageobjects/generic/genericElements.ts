@@ -4,7 +4,7 @@ export class GenericElements {
   autoVerzUrlPat: string = 'autoverzekering/premieberekenen-en-afsluiten';
   aovZzpPat: string = 'zakelijk/arbeidsongeschiktheidsverzekering-zzp/premieberekenen-en-afsluiten#/uw-premie';
   aansprakelijkheidsVerzekeringPat: string = 'aansprakelijkheidsverzekering/premieberekenen-en-afsluiten';
-  autoVerzProductPagePat: string = 'autoverzekering';
+  autoVerzProductPagePat: string = 'autoverzekering/';
   woonVerzPat: string = 'woonverzekering/premieberekenen-en-afsluiten';
   woonVerzPatProductPage: string = 'woonverzekering';
   bromfietsVerzekeringPat: string = 'bromfietsverzekering/premieberekenen-en-afsluiten';
@@ -34,6 +34,7 @@ export class GenericElements {
   caravanVerzekeringPp: string = 'caravanverzekering';
   doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
   fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
+  fietsVerzekeringPp: string = 'fietsverzekering/';
   kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
   oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
   ongevallenVerzekering: string = 'ongevallenverzekering/premieberekenen-en-afsluiten';
@@ -77,6 +78,7 @@ export class GenericElements {
   vraagStellen: string = 'klantenservice/vraagstellen';
   schade: string = 'schade';
   schadeService: string = 'schadeservice';
+  pensioen: string = 'pensioen/';
 
 
   //MIJN UNIVE URL

@@ -86,5 +86,5 @@ Then(/^the (.*) I have checked are present on the page$/, async (familyMembers: 
 
 // er komt een bericht met "Er is een fout opgetreden" dit komt omdat de mailserver op PAT niet is ingesteld. Wij kunnen hieraan verifieren dat het correct is.
 Then(/^Verify the correct wrong message is shown$/, async () => {
-  await genericMethods.verifyTextInElement(reisVerzekeringElements.emailMijDezePremieBerekeningWrongTrueMessageTextElement, reisVerzekeringElements.emailMijDezePremieBerekeningWrongTrueMessageText);
+  await genericMethods.verifyTextInElement(reisVerzekeringElements.emailMijDezePremieBerekeningSendSuccesfullMessageTextElement, reisVerzekeringElements.emailMijDezePremieBerekeningSendSuccesfullMessageText);
 });

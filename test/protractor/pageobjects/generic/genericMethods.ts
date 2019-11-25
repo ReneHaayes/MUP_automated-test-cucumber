@@ -574,6 +574,10 @@ export class GenericMethods {
     await expect(input).to.equal(assertionNumber);
   }
 
+  async verifyText(input: string, assertionText: string) {
+    await expect(input).to.equal(assertionText);
+  }
+
   async verifyTextContains(input: string, assertionText: string) {
     await expect(input).to.have.string(assertionText);
   }
@@ -584,4 +588,10 @@ export class GenericMethods {
     } catch (e) {
     }
   }
+
+  async getAnalyticsText(input: string): Promise<string> {
+    let test = await browser.executeScript('return '+ input +';');
+    return test.toString();
+  }
+
 }

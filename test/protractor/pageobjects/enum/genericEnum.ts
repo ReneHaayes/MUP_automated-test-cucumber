@@ -114,6 +114,7 @@ export enum verzekeringPaginasEnum {
   CARAVANVERZEKERING_PP = 'caravanverzekering product page',
   DOORLOPENDE_ANNULERINGSVERZEKERING = 'doorlopende annuleringsverzekering',
   FIETSVERZEKERING = 'Fietsverzekering',
+  FIETSVERZEKERING_PP = 'fietsverzekering pp',
   ELEKTRISCHE_FIETSVERZEKERING = 'Elektrische fietsverzekering',
   ELEKTRISCHE_FIETSVERZEKERING_PP = 'elektrische-fietsverzekering',
   KOSTBAARHEDEN_VERZEKERING = 'Kostbaarhedenverzekering',
