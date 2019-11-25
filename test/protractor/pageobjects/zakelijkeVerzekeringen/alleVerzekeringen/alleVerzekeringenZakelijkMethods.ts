@@ -10,7 +10,7 @@ export class AlleVerzekeringenZakelijkMethods {
     switch (input) {
       case verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkAansprakelijkheidsVerzekeringPp);
-        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.zakelijkAansprakelijkheidsVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.AANSPRAKELIJKHEIDSVERZEKERINGBEDRIJVEN, 3);

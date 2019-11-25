@@ -147,8 +147,6 @@ When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with 
   await genericMethods.typeText(nawElements.afwijkendeBestuurderPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.afwijkendeBestuurderLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickAfwijkendeBestuurderDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(nawElements.afwijkendeBestuurderBirthdateStepTwoElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(nawElements.afwijkendeBestuurderZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(nawElements.afwijkendeBestuurderHouseNumberElement, personaData.getPersonaHouseNumber(persona));
 
   await genericMethods.clickOnNextButton();

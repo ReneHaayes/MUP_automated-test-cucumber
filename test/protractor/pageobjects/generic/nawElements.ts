@@ -13,8 +13,6 @@ export class NawElements {
   afwijkendeBestuurderPrefixElement: string = '#_Form_IF25916_3689';
   afwijkendeBestuurderLastNameElement: string = '#_Form_IF25916_3690';
   afwijkendeBestuurderBirthdateStepOneElement: string = '#_Form_IF31207_39216';
-  afwijkendeBestuurderBirthdateStepTwoElement: string = '#_Form_IF25916_3692';
-  afwijkendeBestuurderZipCodeElement: string = '#_Form_IF25916_3693';
   afwijkendeBestuurderHouseNumberElement: string = '#_Form_IF25916_3694';
   afwijkendeBestuurderDataGenderMaleClickElement: string = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(1)';
   afwijkendeBestuurderDataGenderFemaleClickElement: string = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(2)';
