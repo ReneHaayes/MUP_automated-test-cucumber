@@ -112,6 +112,7 @@ export class HmPageElements {
   klantenServiceTitleText: string = 'Klantenservice';
   zipcodePlaceTitleTextElement: string = '[class="locationFinder_title"]';
   zipcodePlaceTitleText: string = 'Zoek een Univé-winkel bij u in de buurt';
+  zipcodePlaceTableZwolleTextElement: string = '[class="locationFinder_locationList _search_complete"] li:nth-child(1) [class=location_title]';
   footerOndernemersScanClickElement: string = '[class="mainFooterContent_menuLink"][href*="ondernemersscan"]';
   footerOndernemersScanH1TextElement: string = '[class="action_title"]';
   footerKlantenServiceZakelijkTitleTextElement: string = '[itemprop="telephone"]';
