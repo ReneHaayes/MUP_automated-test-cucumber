@@ -590,8 +590,13 @@ export class GenericMethods {
   }
 
   async getAnalyticsText(input: string): Promise<string> {
+    try {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     let test = await browser.executeScript('return '+ input +';');
     return test.toString();
+    } catch (e) {
+      throw new Error('ananlytics kaduuuk');
+    }
   }
 
 }

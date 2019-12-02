@@ -1,7 +1,7 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
 import {
-  autoVerzekeringElements,
+  analyticsGenericElements, autoVerzekeringElements,
   autoVerzekeringElementsStepThree,
   autoVerzekeringMethods,
   autoVerzekeringMethodsStepThreeAndFour,
@@ -18,6 +18,9 @@ import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";
 
 
 When(/^Customer enters step one page of autoverzekeringen for (.*) with license plate (.*)$/, async (persona: string, licensePlate: string) => {
+  //ANALYTICS
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.firstQisPageviewPaginaId), 'AddApplicationViaCompanySite_addPolicyForm_1_auto');
+  //ANALYTICS
   await autoVerzekeringMethods.enterLicensePlate(licensePlate);
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectWhoDrivesTheCarTheMost('mySelf');
@@ -32,6 +35,9 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
 
 
 When(/^Customer enters step two page of autoverzekering with collective (.*)$/, async (collective: string) => {
+  //ANALYTICS
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.secondQisPageviewPaginaId), 'AddApplicationViaCompanySite_addPolicyForm_2_auto');
+  //ANALYTICS
   await autoVerzekeringMethods.clickOnBasisDekking('waPlus');
   await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
   await autoVerzekeringMethods.selectOwnRisk('ownRisk500');
@@ -52,6 +58,10 @@ Then(/^Customer can select bekijk controleer gegevens for autoverzekering in alm
 });
 
 When(/^Customer enters step three page of autoverzekering for (.*)$/, async (licensePlate: string) => {
+  //ANALYTICS
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.thirthQisPageviewPaginaId), 'AddApplicationViaCompanySite_addPolicyForm_3_auto');
+  //ANALYTICS
+
   //INSERT DATE INFORMATION
   await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
