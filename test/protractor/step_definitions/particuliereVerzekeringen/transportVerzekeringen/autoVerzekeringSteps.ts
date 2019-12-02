@@ -15,11 +15,12 @@ import {
   vehicleElements
 } from "@support";
 import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";
+import {anaEnum} from "@enum";
 
 
 When(/^Customer enters step one page of autoverzekeringen for (.*) with license plate (.*)$/, async (persona: string, licensePlate: string) => {
   //ANALYTICS
-  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.firstQisPageviewPaginaId), 'AddApplicationViaCompanySite_addPolicyForm_1_auto');
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewPaginaId(anaEnum.FIRST)), 'AddApplicationViaCompanySite_addPolicyForm_1_auto');
   //ANALYTICS
   await autoVerzekeringMethods.enterLicensePlate(licensePlate);
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
@@ -36,7 +37,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
 
 When(/^Customer enters step two page of autoverzekering with collective (.*)$/, async (collective: string) => {
   //ANALYTICS
-  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.secondQisPageviewPaginaId), 'AddApplicationViaCompanySite_addPolicyForm_2_auto');
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewPaginaId(anaEnum.SECOND)), 'AddApplicationViaCompanySite_addPolicyForm_2_auto');
   //ANALYTICS
   await autoVerzekeringMethods.clickOnBasisDekking('waPlus');
   await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
@@ -52,6 +53,9 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
 
 
 Then(/^Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data$/, async () => {
+  //ANALYTICS
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewPaginaId(anaEnum.FIFTH)), 'AddApplicationViaCompanySite_addPolicyForm_5_auto');
+  //ANALYTICS
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
   await stickyBalkMethods.verifySummaryAutoVerzekering();
   await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
@@ -59,7 +63,7 @@ Then(/^Customer can select bekijk controleer gegevens for autoverzekering in alm
 
 When(/^Customer enters step three page of autoverzekering for (.*)$/, async (licensePlate: string) => {
   //ANALYTICS
-  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.thirthQisPageviewPaginaId), 'AddApplicationViaCompanySite_addPolicyForm_3_auto');
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewPaginaId(anaEnum.THIRTH)), 'AddApplicationViaCompanySite_addPolicyForm_3_auto');
   //ANALYTICS
 
   //INSERT DATE INFORMATION
@@ -73,6 +77,9 @@ When(/^Customer enters step three page of autoverzekering for (.*)$/, async (lic
 });
 
 When(/^Customer enters step four page of autoverzekering for (.*)$/, async (persona: string) => {
+  //ANALYTICS
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewPaginaId(anaEnum.FOURTH)), 'AddApplicationViaCompanySite_addPolicyForm_4_auto');
+  //ANALYTICS
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
@@ -168,4 +175,12 @@ When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with 
   await genericMethods.typeText(nawElements.afwijkendeBestuurderHouseNumberElement, personaData.getPersonaHouseNumber(persona));
 
   await genericMethods.clickOnNextButton();
+});
+
+Then(/^The thank you page for (.*) is visible for page autoverzekering$/, async function (persona: string) {
+  await genericMethods.verifyThankYouPageTitle(persona);
+  //ANALYTICS
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewPaginaId(anaEnum.SIXTH)), 'AddApplicationViaCompanySite_addPolicyThankYou_auto');
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.qisPageviewTransactieId(anaEnum.SIXTH)), '125089015112');
+  //ANALYTICS
 });
