@@ -10,6 +10,14 @@ eigenRisicoEersteText: string = "van";
 eigenRisicoTweedeText: string = "voor";
 eigenRisicoTextElement: string = 'unive-deductible-excess > p';
 eigenRisicoText: string = 'U kiest voor een vrijwillig eigen risico. De korting is in de premie verwerkt.';
+eigenRisicoBasisVerzekeringSelectTextElement: string = 'unive-basic-insurances-coverage:nth-child(1) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount';
+eigenRisicoBasisVerzekeringGeregeldTextElement: string = 'unive-basic-insurances-coverage:nth-child(2) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount';
+eigenRisico385DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="0"]';
+eigenRisico485DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="1"]';
+eigenRisico585DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="2"]';
+eigenRisico685DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="3"]';
+eigenRisico785DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="4"]';
+eigenRisico885DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="5"]';
 premiePerMaandClickElement: string = 'div > select > option:nth-child(1)';
 premiePerJaarClickElement: string = 'div > select > option:nth-child(2)';
 
@@ -105,7 +113,6 @@ uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset
 uwGegevensInkomstenFoutmeldingTextElement: string = '[class="unive-form-input-error"]';
 uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact met ons op via 072 52 77 595.';
 uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
-
 
 //ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
 bijnaVerzekerdBSNTextElement: string = '[placeholder="012345678"]';

@@ -195,12 +195,12 @@ export class ZorgWizardMethods {
     checkEigenRisicoTextBasis(input: string): string {
         switch (input) {
             case pakkettenEnum.ZORGSELECT: {
-                return 'unive-basic-insurances-coverage:nth-child(1) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount'
+                return zorgWizardElements.eigenRisicoBasisVerzekeringSelectTextElement;
             }
         }
         switch (input) {
             case pakkettenEnum.ZORGGEREGELD: {
-                return 'unive-basic-insurances-coverage:nth-child(2) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount'
+                return zorgWizardElements.eigenRisicoBasisVerzekeringGeregeldTextElement;
             }
         }
     }
@@ -208,22 +208,22 @@ export class ZorgWizardMethods {
     getEigenRisico(input: string): string {
         switch (input) {
             case eigenRisicoEnum.EigenRisico_385: {
-                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="0"]'
+                return zorgWizardElements.eigenRisico385DropdownClickElement;
             }
             case eigenRisicoEnum.EigenRisico_485: {
-                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="1"]'
+                return zorgWizardElements.eigenRisico485DropdownClickElement;
             }
             case eigenRisicoEnum.EigenRisico_585: {
-                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="2"]'
+                return zorgWizardElements.eigenRisico585DropdownClickElement;
             }
             case eigenRisicoEnum.EigenRisico_685: {
-                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="3"]'
+                return zorgWizardElements.eigenRisico685DropdownClickElement;
             }
             case eigenRisicoEnum.EigenRisico_785: {
-                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="4"]'
+                return zorgWizardElements.eigenRisico785DropdownClickElement;
             }
             case eigenRisicoEnum.EigenRisico_885: {
-                return '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="5"]'
+                return zorgWizardElements.eigenRisico885DropdownClickElement;
             }
             default: {
                 throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

@@ -1,17 +1,20 @@
 @zorgWizard
 
-Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszorg als niet-thuiszorg)
-
+Feature: Validatie van functionaliteit in de zorgwizard
+    
+    @collectieven
     Scenario: Valideer het laden van de pagina (door H1 te checken)
         Given I am on the Zorgverzekering page of the Unive website
         When I do nothing
         Then validate the Zorgverzekering page is correctly loaded
     
+    @collectieven
     Scenario: Valideer het laden van de collectieven overlay met alle benodigde elementen
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
         Then validate that the collective overlay shows with correct elements
-
+    
+    @collectieven
     Scenario Outline: Toevoegen van een niet thuiszorg collectief, selecteer zorg vrij/geregeld en verifieer dat alle aanvullende pakketten aanwezig en klikbaar zijn met juiste kortingstexten
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -32,6 +35,7 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |Carinova Servicepakket|Zorg Vrij     |5%           |10%               |
         |Carinova Servicepakket|Zorg Geregeld |5%           |10%               |
     
+    @collectieven
     Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -41,7 +45,8 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |insuranceBasis|Zorg Vrij|
         Then verify show all basic insurance is not visible
         And verify it is not possible to choose zorg select
-        
+    
+    @collectieven    
     Scenario Outline: delete collectief en klik door alle pakketten heen met zorg vrij en zorg geregeld
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -56,7 +61,8 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |collective            |insuranceBasis|
         |Omring Medewerkers    |Zorg Vrij     |
         |Carinova Servicepakket|Zorg Geregeld |
-
+    
+    @collectieven
     Scenario: selecteer zorg select, check dat je niet collectief toe kunt voegen, check daarna of alle losse modules klikbaar zijn en alle pakketten klikbaar zijn
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
@@ -66,6 +72,7 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And I click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
     
+    @bedanktPagina
     Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedanktpagina de juiste elementen bevatten
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
@@ -108,6 +115,7 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         When I do nothing
         Then validate the introtexts are correctly shown
     
+    @eigenRisico
     Scenario Outline: Valideer of eigen risico juist wordt toegepast op basisverzekeringspakketten (Zorg Select)
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
@@ -124,7 +132,8 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         |Zorg Select   |685        |
         |Zorg Select   |785        |
         |Zorg Select   |885        |
-        
+    
+    @eigenRisico    
     Scenario Outline: Valideer of eigen risico juist wordt toegepast op basisverzekeringspakketten (Zorg Geregeld)
         Given I am on the Zorgverzekering page of the Unive website
         When I click on show all basic insurances
@@ -150,3 +159,5 @@ Feature: Check of het mogelijk is om een collectief toe te voegen (zowel thuiszo
         And I select premie per jaar optie
         And I click on Volgende page one
         Then Verify that payment by acceptgiro option is visible
+    
+    

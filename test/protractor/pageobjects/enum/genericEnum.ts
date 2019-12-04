@@ -40,7 +40,8 @@ export enum personaName {
   MESSI = 'messi',
   SALAH = 'salah',
   NEYMAR = 'neymar',
-  POGBA = 'pogba'
+  POGBA = 'pogba',
+  TESTVROUWCUSTOMERRECOGNITION = 'testvrouwCustomerRecognition'
 }
 
 export enum companyNameEnum {

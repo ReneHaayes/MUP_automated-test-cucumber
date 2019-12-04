@@ -90,6 +90,9 @@ export class PersonaData {
   annie: Persona = new Persona('Annie', 'A', prefix.NO_PREFIX, 'Jans', '25', '05', '1960', 'Rolde', '9451GK', '99451',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'anniejans@ziggo.nl', '5088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+  testvrouwCustomerRecognition: Persona = new Persona('Annejanke', 'A', prefix.NO_PREFIX, 'Testvrouw', '02', '03', '1994', 'Zwolle', '8011TS', '126',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0592444523', specificIdentification.PASSPORT, 'ACP26N', 'a.testvrouw@unive.nl',
+    'NL49ANDL0687747724', '185580531', 'dolfijnentrainer', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');  
 
 
   getPersonaZipcode(input: string): string {
@@ -113,6 +116,9 @@ export class PersonaData {
         return this.salah.zipCode;
       }
       case personaName.POGBA: {
+        return this.pogba.zipCode;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.zipCode;
       }
       default: {
@@ -142,6 +148,9 @@ export class PersonaData {
         return this.salah.birthDay;
       }
       case personaName.POGBA: {
+        return this.pogba.birthDay;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.birthDay;
       }
       default: {
@@ -174,6 +183,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.birthMonth;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.birthMonth;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -202,6 +214,9 @@ export class PersonaData {
         return this.salah.birthYear;
       }
       case personaName.POGBA: {
+        return this.pogba.birthYear;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.birthYear;
       }
       default: {
@@ -234,6 +249,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.birthDay + '-' + this.pogba.birthMonth + '-' + this.pogba.birthYear;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.birthDay + '-' + this.pogba.birthMonth + '-' + this.pogba.birthYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -264,6 +282,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.lastName;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.lastName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -291,6 +312,9 @@ export class PersonaData {
         return this.salah.firstName;
       }
       case personaName.POGBA: {
+        return this.pogba.firstName;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.firstName;
       }
       default: {
@@ -323,6 +347,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.gender;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.gender;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -351,6 +378,9 @@ export class PersonaData {
         return this.salah.initials;
       }
       case personaName.POGBA: {
+        return this.pogba.initials;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.initials;
       }
       default: {
@@ -382,6 +412,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.prefix;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.prefix;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -409,6 +442,9 @@ export class PersonaData {
         return this.salah.birthPlace;
       }
       case personaName.POGBA: {
+        return this.pogba.birthPlace;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.birthPlace;
       }
       default: {
@@ -440,6 +476,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.houseNumber;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.houseNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -467,6 +506,9 @@ export class PersonaData {
         return this.salah.houseNumberAddition;
       }
       case personaName.POGBA: {
+        return this.pogba.houseNumberAddition;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.houseNumberAddition;
       }
       default: {
@@ -498,6 +540,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.phoneNumber;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.phoneNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -525,6 +570,9 @@ export class PersonaData {
         return this.salah.specificIdentification;
       }
       case personaName.POGBA: {
+        return this.pogba.specificIdentification;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.specificIdentification;
       }
       default: {
@@ -556,6 +604,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.specificIdentificationNumber;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.specificIdentificationNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -583,6 +634,9 @@ export class PersonaData {
         return this.salah.eMailAddress;
       }
       case personaName.POGBA: {
+        return this.pogba.eMailAddress;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.eMailAddress;
       }
       default: {
@@ -614,6 +668,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.accountNumber;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.accountNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -641,6 +698,9 @@ export class PersonaData {
         return this.salah.bsn;
       }
       case personaName.POGBA: {
+        return this.pogba.bsn;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.bsn;
       }
       default: {
@@ -672,6 +732,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.profession;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.profession;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -699,6 +762,9 @@ export class PersonaData {
         return this.salah.kvkNumber;
       }
       case personaName.POGBA: {
+        return this.pogba.kvkNumber;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.kvkNumber;
       }
       default: {
@@ -730,6 +796,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.durationEntrepreneur;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.durationEntrepreneur;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -757,6 +826,9 @@ export class PersonaData {
         return this.salah.height;
       }
       case personaName.POGBA: {
+        return this.pogba.height;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.height;
       }
       default: {
@@ -788,6 +860,9 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.weight;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.pogba.weight;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -815,6 +890,9 @@ export class PersonaData {
         return this.salah.password;
       }
       case personaName.POGBA: {
+        return this.pogba.password;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.pogba.password;
       }
       default: {
