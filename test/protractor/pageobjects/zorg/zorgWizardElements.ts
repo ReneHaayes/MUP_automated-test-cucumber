@@ -27,9 +27,9 @@ addCollectiveTitelH2Text: string = 'Bekijk of u voordeel heeft op uw zorgverzeke
 addCollectiveTitelSubtextElement: string = 'unive-collective-modal > unive-search-collective > p';
 addCollectiveTitelSubtext: string = 'Mogelijk kunt u via uw werkgever of vereniging profiteren van collectieve korting en extra voordelen. Vul hieronder de naam in van het collectief of de internetcode.';
 addCollectiveTextInputElement: string = '[placeholder="Naam collectief of internetcode"][type="text"]';
-addCollectiveCloseOverlayButtonClickElement: string = 'div.unive-modal__footer > button';
 addCollectiveFirstSearchResultClickElement: string = 'div.unive-search-collective__results > ul > li';
 addCollectiveButtonClickElement: string = 'unive-search-collective > button';
+closeOverlayButtonClickElement: string = 'div.unive-modal__footer > button';
 
     //PAKKETTEN
 introTextAanvullendeVerzekeringenH2TextElement: string = 'unive-additional-insurances > unive-wizard-subtitle > div > h2';
@@ -77,6 +77,14 @@ moduleTandOngevallenClickElement: string = '[class="unive-additional-insurances-
 moduleTand250ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTG"]';
 moduleTand500ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTB"]';
 moduleBuitenlanddekkingClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BBB"]';
+
+//VERGOEDINGENOVERLAY
+bekijkVergoedingenOverlayZorgSelectClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//button[@class="button button--plain"]';
+bekijkVergoedingenOverlayZorgVrijClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//button[@class="button button--plain"]';
+bekijkVergoedingenOverlayZorgGeregeldClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//button[@class="button button--plain"]';
+vergoedingenOverlayZorgSelectTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
+vergoedingenOverlayZorgVrijTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
+vergoedingenOverlayZorgGeregeldTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
 
 //ZORGWIZARD PAGINA 2 UW GEGEVENS
 uwGegevensBirthdateTextElement: string = '[id="dateofbirth"]';

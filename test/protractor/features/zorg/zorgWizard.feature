@@ -160,4 +160,17 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on Volgende page one
         Then Verify that payment by acceptgiro option is visible
     
-    
+    @vergoedingenOverlay
+    Scenario Outline: valideer overlay basisverzekeringen
+        Given I am on the Zorgverzekering page of the Unive website
+        When I click on Bekijk de vergoedingen button of basic insurance with:
+        |insuranceBasis|<insuranceBasis>|
+        Then validate basic insurances are shown correctly with:
+        |insuranceBasis|<insuranceBasis>|
+        And close the overlay
+
+        Examples:
+        |insuranceBasis|
+        |Zorg Select   |
+        |Zorg Vrij     |
+        |Zorg Geregeld |

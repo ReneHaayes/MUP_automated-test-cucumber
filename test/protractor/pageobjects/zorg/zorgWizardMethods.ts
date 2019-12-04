@@ -230,4 +230,35 @@ export class ZorgWizardMethods {
               }
         }
     }
+
+    async openBasisVergoedingenOverlay(insuranceBasis: string){
+        if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayZorgVrijClickElement);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayZorgSelectClickElement);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
+            await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringShowAllBasicInsurancesClickElement);
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayZorgGeregeldClickElement);
+        }
+        else {
+            throw new Error('No correct basic insurance found for' + insuranceBasis);
+        }
+    }
+
+    async checkBasisVergoedingenOverlay(insuranceBasis: string){
+        if(insuranceBasis == pakkettenEnum.ZORGVRIJ || insuranceBasis == pakkettenEnum.ZORGSELECT){
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgVrijTextElement, pakkettenEnum.ZORGVRIJ);
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgSelectTextElement, pakkettenEnum.ZORGSELECT);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgVrijTextElement, pakkettenEnum.ZORGVRIJ);
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgSelectTextElement, pakkettenEnum.ZORGSELECT);
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgGeregeldTextElement, pakkettenEnum.ZORGGEREGELD);
+        }
+        else {
+            throw new Error('No correct basic insurance found for' + insuranceBasis);
+        }
+    }
 }

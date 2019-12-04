@@ -19,7 +19,7 @@ Then (/^validate that the collective overlay shows with correct elements$/, asyn
     await genericMethods.verifyTextInElement(zorgWizardElements.addCollectiveTitelH2TextElement, zorgWizardElements.addCollectiveTitelH2Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.addCollectiveTitelSubtextElement, zorgWizardElements.addCollectiveTitelSubtext);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.addCollectiveTextInputElement, 250);
-    await genericMethods.clickOnElement(zorgWizardElements.addCollectiveCloseOverlayButtonClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.closeOverlayButtonClickElement);
 });
 
 When(/^I add a collective with:$/, async (data) => {
@@ -213,3 +213,20 @@ Then(/^Verify that payment by acceptgiro option is visible$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensUwBetaalgegevensAcceptgiroClickElement);
 });
 
+When(/^I click on Bekijk de vergoedingen button of basic insurance with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.openBasisVergoedingenOverlay(
+        dataTable.insuranceBasis
+    );
+});
+
+Then(/^validate basic insurances are shown correctly with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.checkBasisVergoedingenOverlay(
+        dataTable.insuranceBasis
+    );
+});
+
+Then(/^close the overlay$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.closeOverlayButtonClickElement);
+});
