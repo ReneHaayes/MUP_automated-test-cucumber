@@ -4,6 +4,8 @@ export class ZorgCheckToolElements {
 startZorgCheckToolButtonClickElement: string = '[buttontext="Start de ZorgCheck"] > button'; 
 nextQuestionZorgCheckToolButtonClickElement: string = '[class*="button button--secondary button--icon"]';
 previousQuestionZorgCheckToolButtonClickElement: string = '[class="button button--plain"]';
+directRegelenZorgverzekeringButtonClickElement: string = 'div.health-check-start__bottom-line > ui-button > button';
+directRegelenZorgverzekeringURL: string = 'https://gezondheid.unive.nl/zorgverzekering/premieberekenen-en-afsluiten/?icmp=IL-3';
 
 //MULTIPLE CHOICE ANSWERS
 answerAZorgCheckToolClickElement: string = '[for="A"]';

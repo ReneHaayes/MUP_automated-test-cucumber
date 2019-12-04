@@ -297,3 +297,8 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
   Scenario: thuiszorgcollectief via parameter op URL meegeven en check dat deze niet aanwezig is op startpagina tool
     Given I am on the zorgCheckToolThuiszorgCollectiefParameter page of the Unive website
     Then verify that the collective is not present on startpage of the tool
+  
+  Scenario: direct zorgverzekering afsluiten is aanwezig en verwijst naar wizard op nieuwe tab
+    Given I am on the zorgCheckTool page of the Unive website
+    When I click on the regel het direct link
+    Then validate I get redirected to the zorgwizard with the correct code is in the URL

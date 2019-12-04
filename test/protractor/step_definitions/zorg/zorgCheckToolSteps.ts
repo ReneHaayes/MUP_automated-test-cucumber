@@ -1,7 +1,7 @@
 import {When, Then, Given} from 'cucumber';
 import { browser } from 'protractor';
 import { collectievenEnum } from '../../pageobjects/enum/zorgEnum';
-import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods} from "../../support";
+import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods, zorgWizardElements} from "../../support";
 
 When(/^I answer 9 questions with:$/, async (data) => {
     const dataTable = data.rowsHash();
@@ -251,4 +251,17 @@ Then(/^Verify the button points to wijzigen in MijnUnive$/, async () => {
 
 Then (/^verify that the collective is not present on startpage of the tool$/, async() => {
     await genericMethods.verifyTextInElement(zorgCheckToolElements.voegCollectiefToeOpenOverlaySpanElement, zorgCheckToolElements.voegUwCollectiefToeH1OverlayText);
+});
+
+When (/^I click on the regel het direct link$/, async() => {
+    await genericMethods.clickOnElement(zorgCheckToolElements.directRegelenZorgverzekeringButtonClickElement);
+});
+
+Then (/^validate I get redirected to the zorgwizard with the correct code is in the URL$/, async() => {
+    await browser.getAllWindowHandles().then(function (handles) {
+        browser.switchTo().window(handles[1]);
+    });
+    await browser.sleep(500);
+    await genericMethods.verifyUrlIs(zorgCheckToolElements.directRegelenZorgverzekeringURL);
+    await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
 });
