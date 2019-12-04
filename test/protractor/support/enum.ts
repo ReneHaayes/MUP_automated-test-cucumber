@@ -11,7 +11,9 @@ export {licensePlates} from "../pageobjects/enum/licensePlateEnum";
 export {typeBoatEnum, boatNamesEnum} from "../pageobjects/enum/bootEnum";
 export {incapacitation, AovZzpUwpremie} from "../pageobjects/enum/aovZzpEnum";
 export {toolsEnum} from "../pageobjects/enum/zakelijkAansprakelijkheidsVerzekeringEnum";
-export {anaEnum} from "../pageobjects/analytics/analyticsGenericElements";
+export {
+  anaEnumLocation, anaEnumObjectName, anaEnumSearchObject
+}from "../pageobjects/analytics/analyticsGenericElements";
 
 export {
   additionalOption, hmPageWoonVerzekeringEnum, inhabited, kindStraw, superficiesAndContents, totalSurface, materialEnum

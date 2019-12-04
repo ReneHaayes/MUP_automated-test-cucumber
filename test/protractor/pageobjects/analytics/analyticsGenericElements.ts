@@ -1,49 +1,22 @@
-export enum anaEnum {
-  FIRST = 'first', SECOND = 'second', THIRTH = 'thirth', FOURTH = 'fourth', FIFTH = 'fifth', SIXTH = 'sixth'
+export enum anaEnumLocation {
+  FIRST = '0', SECOND = '1', THIRTH = '2', FOURTH = '3', FIFTH = '4', SIXTH = '5'
+}
 
+export enum anaEnumObjectName {
+  QIS_PAGEVIEW = 'qis pageview', PAGEVIEW = 'pageview'
+}
+
+export enum anaEnumSearchObject {
+  PAGINA_NAAM = 'pagina_naam',
+  PAGINA_ID = 'pagina_id',
+  TRANSACTIE_ID = 'verzekeringen[0].contract.transactie_id'
 }
 
 export class AnalyticsGenericElements {
 
   //GENERIC
-  advEventHistoryPageview(input: string): string {
-    switch (input) {
-      case anaEnum.FIRST: {
-        return 'window.adv_event.history[0][1].'
-      }
-      case anaEnum.SECOND: {
-        return 'window.adv_event.history[8][1].'
-      }
-      case anaEnum.THIRTH: {
-        return 'window.adv_event.history[13][1].'
-      }
-      case anaEnum.FOURTH: {
-        return 'window.adv_event.history[18][1].'
-      }
-      case anaEnum.FIFTH: {
-        return 'window.adv_event.history[23][1].'
-      }
-      case anaEnum.SIXTH: {
-        return 'window.adv_event.history[28][1].'
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
-
-  //PAGEVIEW
-  pageviewPaginaNaam(input: string): string {
-    return this.advEventHistoryPageview(input) + 'paginanaam';
-  }
-
-  //QIS_PAGEVIEW
-  qisPageviewPaginaId(input: string): string {
-    return this.advEventHistoryPageview(input) + 'pagina_id';
-  }
-
-  qisPageviewTransactieId(input: string): string {
-    return this.advEventHistoryPageview(input) + 'verzekeringen[0].contract.transactie_id';
+  advEventHistory(location: string, objectName: string, searchObject: string): string {
+    return 'window.adv_event.history.filter(historyItem => {return historyItem[0] == "' + objectName + '"})[' + location + '][1].' + searchObject;
   }
 
 }
