@@ -248,7 +248,11 @@ export class ZorgWizardMethods {
     }
 
     async checkBasisVergoedingenOverlay(insuranceBasis: string){
-        if(insuranceBasis == pakkettenEnum.ZORGVRIJ || insuranceBasis == pakkettenEnum.ZORGSELECT){
+        if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgVrijTextElement, pakkettenEnum.ZORGVRIJ);
+            await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgSelectTextElement, pakkettenEnum.ZORGSELECT);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
             await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgVrijTextElement, pakkettenEnum.ZORGVRIJ);
             await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgSelectTextElement, pakkettenEnum.ZORGSELECT);
         }
@@ -256,6 +260,21 @@ export class ZorgWizardMethods {
             await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgVrijTextElement, pakkettenEnum.ZORGVRIJ);
             await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgSelectTextElement, pakkettenEnum.ZORGSELECT);
             await genericMethods.verifyTextInElementWithXpath(zorgWizardElements.vergoedingenOverlayZorgGeregeldTextElement, pakkettenEnum.ZORGGEREGELD);
+        }
+        else {
+            throw new Error('No correct basic insurance found for' + insuranceBasis);
+        }
+    }
+
+    async selectBasisVergoedingenOverlay(insuranceBasis: string){
+        if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingZorgVrijButtonClickElement);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingZorgSelectButtonClickElement);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingZorgGeregeldButtonClickElement);
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis);

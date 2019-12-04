@@ -85,6 +85,9 @@ bekijkVergoedingenOverlayZorgGeregeldClickElement: string = '//unive-basic-insur
 vergoedingenOverlayZorgSelectTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
 vergoedingenOverlayZorgVrijTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
 vergoedingenOverlayZorgGeregeldTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
+selecteerVergoedingZorgSelectButtonClickElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//button)[2]';
+selecteerVergoedingZorgVrijButtonClickElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//button)[2]';
+selecteerVergoedingZorgGeregeldButtonClickElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//button)[2]';
 
 //ZORGWIZARD PAGINA 2 UW GEGEVENS
 uwGegevensBirthdateTextElement: string = '[id="dateofbirth"]';

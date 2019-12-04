@@ -229,4 +229,16 @@ Then(/^validate basic insurances are shown correctly with:$/, async (data) => {
 
 Then(/^close the overlay$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.closeOverlayButtonClickElement);
+    await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
+});
+
+Then(/^select basic insurance from overlay with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.selectBasisVergoedingenOverlay(
+        dataTable.insuranceBasis
+    );
+});
+
+Then(/^validate overlay is closed and page 1 of wizard is shown$/, async () => {
+    await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
 });
