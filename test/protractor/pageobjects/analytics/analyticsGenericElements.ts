@@ -9,7 +9,9 @@ export enum anaEnumObjectName {
 export enum anaEnumSearchObject {
   PAGINA_NAAM = 'pagina_naam',
   PAGINA_ID = 'pagina_id',
-  TRANSACTIE_ID = 'verzekeringen[0].contract.transactie_id'
+  TRANSACTIE_ID = 'verzekeringen[0].contract.transactie_id',
+  SECOND_DEKKING = 'verzekeringen[0].objecten[0].dekkingen[1].dekking',
+  REGIONALE_UNIVE = 'verzekerde.regionale_unive'
 }
 
 export class AnalyticsGenericElements {
@@ -18,5 +20,7 @@ export class AnalyticsGenericElements {
   advEventHistory(location: string, objectName: string, searchObject: string): string {
     return 'window.adv_event.history.filter(historyItem => {return historyItem[0] == "' + objectName + '"})[' + location + '][1].' + searchObject;
   }
+
+
 
 }

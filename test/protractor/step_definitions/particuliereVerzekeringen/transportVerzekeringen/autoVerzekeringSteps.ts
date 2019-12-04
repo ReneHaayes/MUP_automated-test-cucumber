@@ -1,7 +1,8 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
 import {
-  analyticsGenericElements, autoVerzekeringElements,
+  analyticsAutoverzekeringElements, analyticsGenericElements,
+  autoVerzekeringElements,
   autoVerzekeringElementsStepThree,
   autoVerzekeringMethods,
   autoVerzekeringMethodsStepThreeAndFour,
@@ -11,7 +12,8 @@ import {
   genericMethods,
   nawElements,
   personaData,
-  stickyBalkElements, stickyBalkMethods,
+  stickyBalkElements,
+  stickyBalkMethods,
   vehicleElements
 } from "@support";
 import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";
@@ -30,7 +32,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
   await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, '2');
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIRST, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    'AddApplicationViaCompanySite_addPolicyForm_1_auto');
+    analyticsAutoverzekeringElements.firstPagePaginaId);
   //ANALYTICS
 
   await genericMethods.clickOnNextButton();
@@ -50,7 +52,7 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
 
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.SECOND, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    'AddApplicationViaCompanySite_addPolicyForm_2_auto');
+    analyticsAutoverzekeringElements.secondPagePaginaId);
   //ANALYTICS
 
   await genericMethods.clickOnNextButton();
@@ -60,7 +62,7 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
 Then(/^Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data$/, async () => {
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIFTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    'AddApplicationViaCompanySite_addPolicyForm_5_auto');
+    analyticsAutoverzekeringElements.fifthPagePaginaId);
   //ANALYTICS
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
   await stickyBalkMethods.verifySummaryAutoVerzekering();
@@ -78,7 +80,7 @@ When(/^Customer enters step three page of autoverzekering for (.*)$/, async (lic
 
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.THIRTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    'AddApplicationViaCompanySite_addPolicyForm_3_auto');  //ANALYTICS
+    analyticsAutoverzekeringElements.thirthPagePaginaId);  //ANALYTICS
 
   await genericMethods.clickOnNextButton();
 });
@@ -98,7 +100,7 @@ When(/^Customer enters step four page of autoverzekering for (.*)$/, async (pers
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FOURTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    'AddApplicationViaCompanySite_addPolicyForm_4_auto');
+    analyticsAutoverzekeringElements.fourthPagePaginaId);
   //ANALYTICS
   await genericMethods.clickOnNextButton();
 });
@@ -189,8 +191,12 @@ Then(/^The thank you page for (.*) is visible for page autoverzekering$/, async 
   await genericMethods.verifyThankYouPageTitle(persona);
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.SIXTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    'AddApplicationViaCompanySite_addPolicyThankYou_auto');
+    analyticsAutoverzekeringElements.thankYouPagePaginaId);
   await genericMethods.verifyTextNotEmpty(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.SIXTH, anaEnumObjectName.QIS_PAGEVIEW,
     anaEnumSearchObject.TRANSACTIE_ID)));
+  await genericMethods.verifyTextNotEmpty(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.SIXTH, anaEnumObjectName.QIS_PAGEVIEW,
+    anaEnumSearchObject.SECOND_DEKKING)));
+  await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIFTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.REGIONALE_UNIVE)),
+    analyticsAutoverzekeringElements.nulVierVierAchtVijf);
   //ANALYTICS
 });
