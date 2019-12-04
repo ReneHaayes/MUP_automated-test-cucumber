@@ -3,9 +3,14 @@ import {
   aansprakelijkheidsVerzekerElements,
   aovZzpElements,
   eigenVervoerVerzekeringElements,
-  genericElements, genericMethods,
-  getUrlUnive, hmPageElements,
-  productPageElements, reisVerzekeringElements, situatieGewijzigdElements, zakelijkRechtsBijstandVerzekeringElements
+  genericElements,
+  genericMethods,
+  getUrlUnive,
+  hmPageElements,
+  productPageElements,
+  reisVerzekeringElements,
+  situatieGewijzigdElements,
+  zakelijkRechtsBijstandVerzekeringElements
 } from "@support";
 import {homePageEnum, verzekeringPaginasEnum} from "@enum";
 
@@ -342,6 +347,7 @@ export class HmPageMethods {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZIPCODE_PLACE);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.zipcodePlaceTitleTextElement, hmPageElements.zipcodePlaceTitleText);
+        await genericMethods.verifyTextInElement(hmPageElements.zipcodePlaceTableZwolleTextElement, 'Zwolle (Univé Noord-Holland)');
         break;
       }
       case homePageEnum.KLANTENSERVICE: {
