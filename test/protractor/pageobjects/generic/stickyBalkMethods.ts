@@ -12,7 +12,7 @@ export class StickyBalkMethods {
 
     switch (input) {
       case homePageEnum.AUTOVERZEKERING: {
-        this.verifySummaryAutoVerzekering();
+        await this.verifySummaryAutoVerzekering();
         break;
       }
       case homePageEnum.RECHTSBIJSTAND: {

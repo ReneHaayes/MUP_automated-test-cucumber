@@ -13,7 +13,7 @@ Feature: Happy flow for 'personenautoverzekering'
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    Then The thank you page for <persona> is shown
+    Then The thank you page for <persona> is visible for page autoverzekering
 
     Examples:
       | licensePlate | persona |

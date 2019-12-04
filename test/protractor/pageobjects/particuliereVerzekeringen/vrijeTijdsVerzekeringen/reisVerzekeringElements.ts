@@ -47,8 +47,8 @@ export class ReisVerzekeringElements {
   emailMijDezePremieBerekeningButtonClickElement = '#_Form_IF2523_3671';
   emailMijDezePremieBerekeningEmailAddressInputElement = '#_EmailPremiumCalculation__1';
   emailMijDezePremieBerekeningSendButtonClickElement = '#_EmailPremiumCalculation_send';
-  emailMijDezePremieBerekeningWrongTrueMessageTextElement = '[class="mainMessage"] > p';
-  emailMijDezePremieBerekeningWrongTrueMessageText = 'Er is een fout opgetreden.'
+  emailMijDezePremieBerekeningSendSuccesfullMessageTextElement = '[ng-if="determineShowThankYouMessage()"] > p';
+  emailMijDezePremieBerekeningSendSuccesfullMessageText = 'De premieberekening is verzonden naar het door u ingevoerde e-mailadres.'
 
 
 }

@@ -574,6 +574,18 @@ export class GenericMethods {
     await expect(input).to.equal(assertionNumber);
   }
 
+  async verifyText(input: string, assertionText: string) {
+    await expect(input).to.equal(assertionText);
+  }
+
+  async verifyTextNotEmpty(input: string) {
+    try {
+    await expect(input.length).not.to.equal(0);
+    } catch (e) {
+      throw new Error('The length of ' + input + ' is:' + input.length + ' it should not be empty.');
+    }
+  }
+
   async verifyTextContains(input: string, assertionText: string) {
     await expect(input).to.have.string(assertionText);
   }
@@ -584,4 +596,15 @@ export class GenericMethods {
     } catch (e) {
     }
   }
+
+  async getAnalyticsText(input: string): Promise<string> {
+    try {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    let test = await browser.executeScript('return '+ input +';');
+    return test.toString();
+    } catch (e) {
+      throw new Error('Analytics for: ' + input  + ' cant be found');
+    }
+  }
+
 }

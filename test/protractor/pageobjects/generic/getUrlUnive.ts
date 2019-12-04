@@ -1,5 +1,5 @@
 import {browser} from 'protractor';
-import {homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
+import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
 import {apiElements, genericElements} from "@support";
 
 export class GetUrlUnive {
@@ -95,6 +95,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.FIETSVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.fietsVerzekering;
+      }
+      case verzekeringPaginasEnum.FIETSVERZEKERING_PP: {
+        return this.getEnv(browser.params.env.environment) + genericElements.fietsVerzekeringPp;
       }
       case verzekeringPaginasEnum.KOSTBAARHEDEN_VERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.kostbaarhedenVerzekering;
@@ -227,6 +230,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_POSTVAK: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnPostvak;
+      }
+      case breadCrumbEnum.PENSIOEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.pensioen;
       }
       case polisDetailsUrlEnum.POLISDETAILS_DERDEN_1600478601: {
         return this.getEnv(browser.params.env.environment) + genericElements.polisDetailsNumber1600478601Url;

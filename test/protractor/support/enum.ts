@@ -11,10 +11,14 @@ export {licensePlates} from "../pageobjects/enum/licensePlateEnum";
 export {typeBoatEnum, boatNamesEnum} from "../pageobjects/enum/bootEnum";
 export {incapacitation, AovZzpUwpremie} from "../pageobjects/enum/aovZzpEnum";
 export {toolsEnum} from "../pageobjects/enum/zakelijkAansprakelijkheidsVerzekeringEnum";
+export {
+  anaEnumLocation, anaEnumObjectName, anaEnumSearchObject
+}from "../pageobjects/analytics/analyticsGenericElements";
 
 export {
   additionalOption, hmPageWoonVerzekeringEnum, inhabited, kindStraw, superficiesAndContents, totalSurface, materialEnum
 } from "../pageobjects/enum/woonVerzekeringEnum";
+
 
 export {
   aanvullendeOptiesEnum,
@@ -26,7 +30,6 @@ export {
   whoDrivesCarMost,
   vehicleInfoEnum,
   maxSpeedEnum,
-
 } from "../pageobjects/enum/autoVerzekeringEnum";
 
 export {
