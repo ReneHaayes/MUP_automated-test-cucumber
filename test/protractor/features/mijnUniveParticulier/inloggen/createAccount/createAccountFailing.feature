@@ -9,8 +9,8 @@ Feature: Fault situations for creating account.
     Then The notification that there is already an account for this e-mail adres show on screen
 
     Examples:
-      | persona     |
-      | woestenburg |
+      | persona |
+      | ako     |
 
   Scenario Outline: Check if the notification appears that the password filled in is not correct according to the standards
     Given Customer is on the mijn unive particulier page of the Unive website
