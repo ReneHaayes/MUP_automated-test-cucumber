@@ -1,4 +1,4 @@
-@forgotPasswordMijnUniveParticulier
+@forgotPasswordMijnUniveParticulier @onegini
 
 Feature: Forgot password flow.
 

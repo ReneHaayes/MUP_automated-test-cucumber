@@ -1,4 +1,4 @@
-@changeDataForPersona
+@changeDataForPersona @onegini
 
 Feature: Changing data for persona when logged in.
 

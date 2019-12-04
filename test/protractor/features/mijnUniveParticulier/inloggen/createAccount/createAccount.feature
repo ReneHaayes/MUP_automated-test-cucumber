@@ -1,4 +1,4 @@
-@createMijnUniveAccount
+@createMijnUniveAccount @onegini
 
 Feature: Deleting an Account and afterwards creating an account.
 

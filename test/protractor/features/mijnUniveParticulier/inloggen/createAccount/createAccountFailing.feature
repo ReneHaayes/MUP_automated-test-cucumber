@@ -1,4 +1,4 @@
-@createMijnUniveAccountFailing
+@createMijnUniveAccountFailing @onegini
 
 Feature: Fault situations for creating account.
 
