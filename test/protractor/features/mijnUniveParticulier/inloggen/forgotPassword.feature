@@ -9,6 +9,6 @@ Feature: Forgot password flow.
 
 
     Examples:
-      | persona     | newPassword |
-      | woestenburg | Test123!    |
+      | persona | newPassword    |
+      | aakoek  | Wachtwoord123! |
 
