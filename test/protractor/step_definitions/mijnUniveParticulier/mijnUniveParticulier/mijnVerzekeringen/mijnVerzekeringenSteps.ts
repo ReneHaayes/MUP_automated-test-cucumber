@@ -64,10 +64,8 @@ When(/^Customer claims a autoverzekering damage by filling in the form for polis
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
   await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneInputElement, '0612345678');
   await genericMethods.clickOnFinishButton();
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimCloseLightBoxClickElement);
+  // await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimCloseLightBoxClickElement);
   //STEP SIX
-  console.log("wachten!!");
-  // await browser.sleep(2500);
   await genericMethods.waitForElementClickable(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
   //STEP SEVEN
