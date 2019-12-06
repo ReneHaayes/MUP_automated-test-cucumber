@@ -1,7 +1,7 @@
 export class ZorgCheckToolElements {
 
 //BUTTONS
-startZorgCheckToolButtonClickElement: string = '[buttontext="Start de ZorgCheck"] > button'; 
+startZorgCheckToolButtonClickElement: string = 'health-check-start > health-check-card > div > ui-card > div > div > ui-button > button'; 
 nextQuestionZorgCheckToolButtonClickElement: string = '[class*="button button--secondary button--icon"]';
 previousQuestionZorgCheckToolButtonClickElement: string = '[class="button button--plain"]';
 directRegelenZorgverzekeringButtonClickElement: string = 'div.health-check-start__bottom-line > ui-button > button';
@@ -56,8 +56,8 @@ informationBelowSelectedAnswersTextElement: string = '[class="health-check-quest
 emailDitAdviesButtonAdvicePageClickElement: string = 'div.health-check-result__top > ui-button > button';
 emailDitAdviesOverlayHeaderElement: string = '[class="ui-modal__title ng-star-inserted"]';
 emailDitAdviesOverlayHeaderText: string = 'Mail uw ZorgCheck resultaat';
-emailDitAdviesOverlayDataEmailAddressElement: string = '[id="resultEmail"]';
-emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = ' form > ui-button > button';
+emailDitAdviesOverlayDataEmailAddressElement: string = 'ui-input > div > label > input';
+emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = 'health-check-result-email > div > div > ui-button > button';
 emailDitAdviesOverlayVerstuurMijnAdviesInvalidEmailClickElement: string = '[class="button button--secondary button--icon button--disabled"]';
 emailDitAdviesOverlayCloseClickElement: string = ' div.ui-modal__footer.ng-star-inserted > ui-button > button';
 emailDitAdviesOverlayIncorrectEmailMessageText: string = 'Vul een geldig e-mailadres in (j.jansen@unive.nl).';
@@ -100,7 +100,7 @@ tandAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > heal
 aanvullendAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(2) > div.health-check-result-top__label > div > ui-info > button';
 tandAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
 itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie.';
-itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin';
+itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin.';
 itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid.';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
 itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd.';
