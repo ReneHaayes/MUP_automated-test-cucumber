@@ -124,6 +124,12 @@ uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset
 uwGegevensInkomstenFoutmeldingTextElement: string = '[class="unive-form-input-error"]';
 uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact met ons op via 072 52 77 595.';
 uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
+actievePolisOverlayHeaderTextElement: string = 'div > div.unive-modal__header > div';
+actievePolisOverlayHeaderText: string = 'Uw wijzigingen doorgeven?';
+actievePolisOverlayWijzigButtonClickElement: string = 'div.unive-modal__content > a';
+actievePolisOverlayWijzigMijnUniveURL: string = 'https://gezondheid.unive.nl/mijnunivezorg/inloggen';
+mijnUniveH1TextElement: string = 'div > h1';
+mijnUniveH1Text: string = 'Mijn Univé Zorg';
 
 //ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
 bijnaVerzekerdBSNTextElement: string = '[placeholder="012345678"]';

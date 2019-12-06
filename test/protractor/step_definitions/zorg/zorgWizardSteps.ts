@@ -242,3 +242,18 @@ Then(/^select basic insurance from overlay with:$/, async (data) => {
 Then(/^validate overlay is closed and page 1 of wizard is shown$/, async () => {
     await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
 });
+
+Then(/^Verify that active policy pop-up is shown$/, async () => {
+    await genericMethods.verifyTextInElement(zorgWizardElements.actievePolisOverlayHeaderTextElement, zorgWizardElements.actievePolisOverlayHeaderText);
+});
+
+Then (/^validate button navigates to MijnUnive$/, async() => {
+    await genericMethods.clickOnElement(zorgWizardElements.actievePolisOverlayWijzigButtonClickElement);
+    await browser.sleep(500);
+    await browser.getAllWindowHandles().then(function (handles) {
+        browser.switchTo().window(handles[1]);
+    });
+    await browser.sleep(500);
+    await genericMethods.verifyUrlIs(zorgWizardElements.actievePolisOverlayWijzigMijnUniveURL);
+    await genericMethods.verifyTextInElement(zorgWizardElements.mijnUniveH1TextElement, zorgWizardElements.mijnUniveH1Text);
+});
