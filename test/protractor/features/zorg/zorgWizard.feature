@@ -161,7 +161,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Then Verify that payment by acceptgiro option is visible
     
     @actievePolisCheck
-    Scenario Outline: valideer dat de actieve polis check getriggered wordt en de klant niet door kan navigeren in de wizard (behalve naar MijnUnive)
+    Scenario Outline: valideer dat de actieve polis check getriggered wordt en de klant niet door kan navigeren in de wizard op stap 2 (behalve naar MijnUnive)
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
@@ -177,6 +177,25 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|persona            |inkomstenNietNL|
         |Zorg Select   |testmanActivePolicy|Nee            |
     
+    @actievePolisCheck
+    Scenario Outline: valideer dat de actieve polis check getriggered wordt en de klant niet door kan navigeren in de wizard op stap 3 (behalve naar MijnUnive)
+        Given I am on the Zorgverzekering page of the Unive website
+        When I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        And I click on Volgende page one
+        And I enter personal data on step 2 of wizard with <persona1>
+        And I answer inkomstenvragen with:
+        |inkomstenNietNL|<inkomstenNietNL>|
+        And I click on Volgende page two
+        And I enter BSN on step 3 with <persona2>
+        And I click on bevestigen step 3
+        Then Verify that active policy pop-up is shown
+        And validate button navigates to MijnUnive
+
+        Examples:
+        |insuranceBasis|persona1|persona2           |inkomstenNietNL|
+        |Zorg Select   |pogba   |testmanActivePolicy|Nee            |
+
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
         Given I am on the Zorgverzekering page of the Unive website
