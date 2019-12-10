@@ -20,6 +20,8 @@ eigenRisico785DropdownClickElement: string = '(//div[@formarrayname="applicants"
 eigenRisico885DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="5"]';
 premiePerMaandClickElement: string = 'div > select > option:nth-child(1)';
 premiePerJaarClickElement: string = 'div > select > option:nth-child(2)';
+bekijkOpbouwPremieButtonClickElement: string = 'div.unive-total-price-detail__row.unive-total-price-detail__row--right > div > button';
+bekijkOpbouwPremieFirstTextElement: string = 'unive-summary-item > div > div:nth-child(1)';
 
     //OVERLAY COLLECTIEF TOEVOEGEN
 addCollectiveTitelH2TextElement: string = 'div.unive-modal__header > div > h2';
@@ -150,4 +152,8 @@ bedanktCrossSellItem2SubtitleTextElement: string = 'unive-cross-sell-item:nth-ch
 bedanktCrossSellItem1USP1TextElement: string = 'unive-usp-list > div > ul > li:nth-child(1)';
 bedanktCrossSellItem1USP2TextElement: string = 'unive-usp-list > div > ul > li:nth-child(2)';
 bedanktPaginaCustomerNameTextElement: string = 'div:nth-child(2) > h2';
+
+//FLOATINGBUTTON
+floatingButtonClickElement: string = 'body > div.floatingButton > a';
+floatingButtonCloseClickElement: string = 'body > div.floatingButton > i';
 }

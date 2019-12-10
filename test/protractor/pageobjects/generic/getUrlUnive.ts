@@ -265,6 +265,12 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGCHECKTOOLNIETTHUISZORGCOLLECTIEFPARAMETER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktoolNietThuiszorgCollectiefParameter;
       }
+      case verzekeringPaginasEnum.EIGENRISICO: {
+        return this.getEnv(browser.params.env.environment) + genericElements.eigenRisico;
+      }
+      case verzekeringPaginasEnum.ZORGVRIJ: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVrij;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

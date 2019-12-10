@@ -1,7 +1,7 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
 import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData} from '../../support';
-import { crossSellEnum, genderBedanktPaginaEnum } from '../../pageobjects/enum/zorgEnum';
+import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum } from '../../pageobjects/enum/zorgEnum';
 
 When(/^I do nothing$/, async() => {
     await browser.sleep(250);
@@ -256,4 +256,21 @@ Then (/^validate button navigates to MijnUnive$/, async() => {
     await browser.sleep(500);
     await genericMethods.verifyUrlIs(zorgWizardElements.actievePolisOverlayWijzigMijnUniveURL);
     await genericMethods.verifyTextInElement(zorgWizardElements.mijnUniveH1TextElement, zorgWizardElements.mijnUniveH1Text);
+});
+
+When(/^I click on the floating button$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.floatingButtonClickElement);
+});
+
+Then(/^Validate the floating button is not present$/, async () => {
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.floatingButtonClickElement, 100);
+});
+
+Then(/^validate that customer is redirected to wizard with the correct products prefilled$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.bekijkOpbouwPremieButtonClickElement);
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 100);
+});
+
+When(/^I click on the close floating button$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.floatingButtonCloseClickElement);
 });

@@ -196,6 +196,51 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|persona1|persona2           |inkomstenNietNL|
         |Zorg Select   |pogba   |testmanActivePolicy|Nee            |
 
+    @floatingButton
+    Scenario Outline: valideer aanwezigheid floating button bij wegnavigeren uit de wizard
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        When I am on the zorgVrij page of the Unive website
+        And I click on the floating button
+        Then validate that customer is redirected to wizard with the correct products prefilled
+        And Validate the floating button is not present
+    
+        Examples:
+        |insuranceBasis|page    |
+        |Zorg Select   |zorgVrij|
+
+    @floatingButton
+    Scenario Outline: valideer aanwezigheid floating button bij wegnavigeren uit de wizard
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        When I am on the autoverzekeringProductPage page of the Unive website
+        And Validate the floating button is not present
+        And I am on the eigenRisico page of the Unive website
+        And I click on the floating button
+        Then validate that customer is redirected to wizard with the correct products prefilled
+        And Validate the floating button is not present
+    
+        Examples:
+        |insuranceBasis|
+        |Zorg Select   |
+
+    @floatingButton
+    Scenario Outline: valideer dat floating button niet meer verschijnt na wegklikken via het kruisje
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        When I am on the zorgVrij page of the Unive website
+        And I click on the close floating button
+        And I am on the Zorgverzekering page of the Unive website
+        And I am on the zorgVrij page of the Unive website
+        Then Validate the floating button is not present
+    
+        Examples:
+        |insuranceBasis|page    |
+        |Zorg Select   |zorgVrij|
+
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
         Given I am on the Zorgverzekering page of the Unive website

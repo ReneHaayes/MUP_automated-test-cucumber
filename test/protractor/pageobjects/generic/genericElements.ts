@@ -84,6 +84,8 @@ export class GenericElements {
   zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';
   zorgchecktoolThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=hS95ugVE';
   zorgchecktoolNietThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=bH49xS38';
+  eigenRisico: string = 'zorgverzekering/eigenrisico';
+  zorgVrij: string = 'zorgverzekering/vrij';
 
 
 
