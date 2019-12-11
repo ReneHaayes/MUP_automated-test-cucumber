@@ -22,6 +22,15 @@ premiePerMaandClickElement: string = 'div > select > option:nth-child(1)';
 premiePerJaarClickElement: string = 'div > select > option:nth-child(2)';
 bekijkOpbouwPremieButtonClickElement: string = 'div.unive-total-price-detail__row.unive-total-price-detail__row--right > div > button';
 bekijkOpbouwPremieFirstTextElement: string = 'unive-summary-item > div > div:nth-child(1)';
+addPartnerButtonClickElement: string = 'unive-partner-child > div > div:nth-child(1) > button';
+addKindButtonClickElement: string = 'unive-partner-child > div > div:nth-child(2) > button';
+
+    //OVERLAY PARTNER KIND
+switchToKindTabButtonClickElement: string = 'unive-partner-child-modal > unive-button-switch > div > button:nth-child(2)';
+switchToPartnerTabButtonClickElement: string = 'unive-partner-child-modal > unive-button-switch > div > button:nth-child(1)';
+geboortedatumPartnerKindTextElement: string = 'form > div.unive-form-group > div';
+sameInsurancePartnerChildCheckBoxClickElement: string = 'div.unive-form-input_wrapper.unive-form-input_wrapper--full > div';
+uwGekozenPakketPartnerChildTextElement: string = 'form > unive-usp-list > div > ul';
 
     //OVERLAY COLLECTIEF TOEVOEGEN
 addCollectiveTitelH2TextElement: string = 'div.unive-modal__header > div > h2';

@@ -241,6 +241,22 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|page    |
         |Zorg Select   |zorgVrij|
 
+
+    @addPartnerKind
+    Scenario Outline: Valideer het openen en de werking van de partner/kind overlay
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        When I click on partner toevoegen button
+        And I navigate to child tab
+        And I navigate to partner tab
+        And close the overlay
+        Then validate overlay is closed and page 1 of wizard is shown
+
+        Examples:
+        |insuranceBasis|
+        |Zorg Select   |
+
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
         Given I am on the Zorgverzekering page of the Unive website

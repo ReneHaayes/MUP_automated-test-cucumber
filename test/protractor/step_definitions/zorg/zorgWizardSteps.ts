@@ -274,3 +274,15 @@ Then(/^validate that customer is redirected to wizard with the correct products 
 When(/^I click on the close floating button$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.floatingButtonCloseClickElement);
 });
+
+When(/^I click on partner toevoegen button$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.addPartnerButtonClickElement);
+});
+
+When(/^I navigate to child tab$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.switchToKindTabButtonClickElement);
+});
+
+When(/^I navigate to partner tab$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.switchToPartnerTabButtonClickElement);
+});
