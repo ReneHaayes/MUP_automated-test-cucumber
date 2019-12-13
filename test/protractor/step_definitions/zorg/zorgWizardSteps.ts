@@ -167,7 +167,7 @@ When(/^I validate that all legends are visible on step 3$/, async () => {
 
 Then(/^validate that bedanktpagina and all elements are correct with (.*)$/, async (persona: string) => {
     await browser.sleep(250);  
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.HEER, 100);
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.MEVROUW, 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaInitials(persona), 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaPrefix(persona), 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaLastName(persona), 100);
@@ -372,4 +372,11 @@ Then(/^validate all active insurances are visible$/, async () => {
 
 Then(/^validate no active insurance is visible for partner$/, async () => { 
     await zorgWizardMethods.accordeonProductCheckNotVisible("2");
+});
+
+Then(/^validate that BSN field is not visible on step 3$/, async () => {
+    await browser.sleep(250);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, 100);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
 });
