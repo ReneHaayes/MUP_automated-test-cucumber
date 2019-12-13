@@ -256,6 +256,51 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |insuranceBasis|
         |Zorg Select   |
+    
+    @addPartnerKind
+    Scenario Outline: Valideer het toevoegen van partner/kind
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|<insuranceAanvullend>|
+        And I select tand insurance with:
+        |insuranceTand|<insuranceTand>|
+        When I click on partner toevoegen button
+        And I add a partner or child -same insurance checkbox checked- with <persona1>
+        And validate partner has the same insurance as policyholder with:
+        |insuranceBasis     |<insuranceBasis>     |
+        |insuranceAanvullend|<insuranceAanvullend>|
+        |insuranceTand      |<insuranceTand>      |
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona2>
+        And validate child under 18 has the same insurance as policyholder with:
+        |insuranceBasis     |<insuranceBasis>     |
+        |insuranceAanvullend|<insuranceAanvullend>|
+        |insuranceTand      |<insuranceTand>      |        
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona3>
+        Then validate child has no insurance selected
+        
+        Examples:
+        |insuranceBasis|insuranceAanvullend|insuranceTand|persona1   |persona2          |persona3          |
+        |Zorg Select   |Aanvullend Goed    |Tand Goed    |testPartner|testkindOnder18Een|testkindBoven18Een|
+
+    @addPartnerKind
+    Scenario Outline: Valideer het in- en uitvouwen van de partner/kind headers
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        When I click on partner toevoegen button
+        And I add a partner or child -same insurance checkbox checked- with <persona>
+        Then validate I am able to open accordion for both
+        And validate all active insurances are visible
+        And validate I am able to close accordion for partner
+        And validate no active insurance is visible for partner
+        
+        Examples:
+        |insuranceBasis|persona    |
+        |Zorg Select   |testPartner|
 
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering

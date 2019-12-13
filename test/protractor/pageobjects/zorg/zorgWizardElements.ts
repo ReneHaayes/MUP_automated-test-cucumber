@@ -10,8 +10,10 @@ eigenRisicoEersteText: string = "van";
 eigenRisicoTweedeText: string = "voor";
 eigenRisicoTextElement: string = 'unive-deductible-excess > p';
 eigenRisicoText: string = 'U kiest voor een vrijwillig eigen risico. De korting is in de premie verwerkt.';
-eigenRisicoBasisVerzekeringSelectTextElement: string = 'unive-basic-insurances-coverage:nth-child(1) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount';
-eigenRisicoBasisVerzekeringGeregeldTextElement: string = 'unive-basic-insurances-coverage:nth-child(2) > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount';
+eigenRisicoBasisVerzekeringSelectTextElement: string = 'unive-basic-insurances-coverage:nth-child(1) > div > div.unive-basic-insurances-coverage__top > ' + 
+                                                       'div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount';
+eigenRisicoBasisVerzekeringGeregeldTextElement: string = 'unive-basic-insurances-coverage:nth-child(2) > div > div.unive-basic-insurances-coverage__top > ' + 
+                                                         'div.unive-basic-insurances-coverage__currency.unive-basic-insurances-coverage__currency--discount';
 eigenRisico385DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="0"]';
 eigenRisico485DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="1"]';
 eigenRisico585DropdownClickElement: string = '(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])[1]//select/option[@value="2"]';
@@ -28,15 +30,17 @@ addKindButtonClickElement: string = 'unive-partner-child > div > div:nth-child(2
     //OVERLAY PARTNER KIND
 switchToKindTabButtonClickElement: string = 'unive-partner-child-modal > unive-button-switch > div > button:nth-child(2)';
 switchToPartnerTabButtonClickElement: string = 'unive-partner-child-modal > unive-button-switch > div > button:nth-child(1)';
-geboortedatumPartnerKindTextElement: string = 'form > div.unive-form-group > div';
-sameInsurancePartnerChildCheckBoxClickElement: string = 'div.unive-form-input_wrapper.unive-form-input_wrapper--full > div';
+geboortedatumPartnerKindTextElement: string = '[id="dateOfBirthPartnerChild"]';
+sameInsurancePartnerChildCheckBoxClickElement: string = '[for="copyInsurance"]';
 uwGekozenPakketPartnerChildTextElement: string = 'form > unive-usp-list > div > ul';
+partnerKindToevoegenButtonClickElement: string = 'unive-partner-child-modal > form > button';
 
     //OVERLAY COLLECTIEF TOEVOEGEN
 addCollectiveTitelH2TextElement: string = 'div.unive-modal__header > div > h2';
 addCollectiveTitelH2Text: string = 'Bekijk of u voordeel heeft op uw zorgverzekering';
 addCollectiveTitelSubtextElement: string = 'unive-collective-modal > unive-search-collective > p';
-addCollectiveTitelSubtext: string = 'Mogelijk kunt u via uw werkgever of vereniging profiteren van collectieve korting en extra voordelen. Vul hieronder de naam in van het collectief of de internetcode.';
+addCollectiveTitelSubtext: string = 'Mogelijk kunt u via uw werkgever of vereniging profiteren van collectieve korting en extra voordelen. Vul hieronder de naam ' + 
+                                    'in van het collectief of de internetcode.';
 addCollectiveTextInputElement: string = '[placeholder="Naam collectief of internetcode"][type="text"]';
 addCollectiveFirstSearchResultClickElement: string = 'div.unive-search-collective__results > ul > li';
 addCollectiveButtonClickElement: string = 'unive-search-collective > button';
@@ -76,10 +80,12 @@ tandVerzekeringenTandBeterClickElement: string = '[class="unive-additional-insur
 tandBeterTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(3) label';
 tandVerzekeringenTandBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UTU"]';
 tandBestTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(4) label';
-basisVerzekeringCollectiefKortingTextElement: string = 'unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active > div > div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__collective';
+basisVerzekeringCollectiefKortingTextElement: string = 'unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active > div > ' +
+                                                       'div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__collective';
 collectiefKortingText: string = '% korting via';
 collectiefNietMogelijkTextElement: string = '[class="unive-collective__inactive-text"]';
-collectiefNietMogelijkText: string = 'U heeft voor uzelf of een medeverzekerde gekozen voor Zorg Select. Daarmee profiteert u direct van de laagste premie, er is geen collectief mogelijk.';
+collectiefNietMogelijkText: string = 'U heeft voor uzelf of een medeverzekerde gekozen voor Zorg Select. Daarmee profiteert u direct van de laagste premie, er is geen ' + 
+                                     'collectief mogelijk.';
 modulesButtonClickElement: string = '[data-type-button="modules"]';
 pakkettenButtonClickElement: string = '[data-type-button="pakketten"]';
 moduleFysio9ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BFG"]';
@@ -88,14 +94,47 @@ moduleTandOngevallenClickElement: string = '[class="unive-additional-insurances-
 moduleTand250ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTG"]';
 moduleTand500ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTB"]';
 moduleBuitenlanddekkingClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BBB"]';
+basisVrijActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
+basisGeregeldActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
+basisSelectActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
+aanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BAVU"]';
+aanvullendBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UAVU"]';
+aanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="PZU"]';
+tandOngevallenActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BTO"]';
+tandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="GTU"]';
+tandBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BTU"]';
+tandBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UTU"]';
+kindOnder18BasisVrijActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]' + 
+                             '[data-basic-insurance-code="VRY"]';
+kindOnder18BasisGeregeldActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]'+ 
+                                 '[data-basic-insurance-code="GER"]';
+kindOnder18BasisSelectActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]' + 
+                               '[data-basic-insurance-code="ZVSU"]';
+kindOnder18AanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                  '[data-additional-insurance-code="BAVU"]';
+kindOnder18AanvullendBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
+                                   '[data-additional-insurance-code="UAVU"]';
+kindOnder18AanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
+                                  '[data-additional-insurance-code="PZU"]';
+kindOnder18TandOngevallenActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                  '[data-additional-insurance-code="BTO"]';
+kindOnder18TandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                            '[data-additional-insurance-code="GTU"]';
+kindOnder18TandBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                             '[data-additional-insurance-code="BTU"]';
+kindOnder18TandBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                            '[data-additional-insurance-code="UTU"]';
 
 //VERGOEDINGENOVERLAY
 bekijkVergoedingenOverlayZorgSelectClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//button[@class="button button--plain"]';
 bekijkVergoedingenOverlayZorgVrijClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//button[@class="button button--plain"]';
 bekijkVergoedingenOverlayZorgGeregeldClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//button[@class="button button--plain"]';
-vergoedingenOverlayZorgSelectTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
-vergoedingenOverlayZorgVrijTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
-vergoedingenOverlayZorgGeregeldTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
+vergoedingenOverlayZorgSelectTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]' + 
+                                                   '/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
+vergoedingenOverlayZorgVrijTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]' +
+                                                 '/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
+vergoedingenOverlayZorgGeregeldTextElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]' + 
+                                                     '/.//label[@class="unive-basic-insurances-coverage__label"])[2]';
 selecteerVergoedingZorgSelectButtonClickElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//button)[2]';
 selecteerVergoedingZorgVrijButtonClickElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//button)[2]';
 selecteerVergoedingZorgGeregeldButtonClickElement: string = '(//unive-basic-insurances-coverage[@data-basic-insurance-code="GER"]/.//button)[2]';
@@ -133,7 +172,8 @@ uwGegevensUwBetaalgegevensAcceptgiroClickElement: string = '[id="paymentMethod_a
 uwGegevensInkomstenText: string = 'Inkomsten';
 uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset > legend';
 uwGegevensInkomstenFoutmeldingTextElement: string = '[class="unive-form-input-error"]';
-uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact met ons op via 072 52 77 595.';
+uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact ' + 
+                                             'met ons op via 072 52 77 595.';
 uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
 actievePolisOverlayHeaderTextElement: string = 'div > div.unive-modal__header > div';
 actievePolisOverlayHeaderText: string = 'Uw wijzigingen doorgeven?';

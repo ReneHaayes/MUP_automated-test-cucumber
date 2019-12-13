@@ -45,7 +45,8 @@ export enum personaName {
   TESTMANACTIVEPOLICY = 'testmanActivePolicy',
   TESTKINDCUSTOMERRECOGNITION = 'testkindCustomerRecognition',
   TESTKINDONDER18EEN = 'testkindOnder18Een',
-  TESTKINDBOVEN18EEN = 'testkindBoven18Een'
+  TESTKINDBOVEN18EEN = 'testkindBoven18Een',
+  TESTPARTNER = 'testPartner'
 }
 
 export enum companyNameEnum {

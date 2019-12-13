@@ -279,10 +279,97 @@ When(/^I click on partner toevoegen button$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.addPartnerButtonClickElement);
 });
 
+When(/^I click on kind toevoegen button$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.addKindButtonClickElement);
+});
+
 When(/^I navigate to child tab$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.switchToKindTabButtonClickElement);
 });
 
 When(/^I navigate to partner tab$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.switchToPartnerTabButtonClickElement);
+});
+
+When(/^I select aanvullende insurance no collective with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.selectAanvullendInsurance(
+        dataTable.insuranceAanvullend
+    );
+});
+
+When(/^I select tand insurance with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.selectTandInsurance(
+        dataTable.insuranceTand
+    );
+});
+
+When(/^I add a partner or child -same insurance checkbox checked- with (.*)$/, async (persona: string) => {
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.sameInsurancePartnerChildCheckBoxClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+});
+
+When(/^I add a partner or child -not same insurance checkbox checked- with (.*)$/, async (persona: string) => {
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+});
+
+When(/^validate partner has the same insurance as policyholder with:$/, async (data) => {
+    await browser.sleep(250);
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.validateBasisInsurance(
+        dataTable.insuranceBasis
+    );
+    await zorgWizardMethods.validateAanvullendInsurance(
+        dataTable.insuranceAanvullend
+    );
+    await zorgWizardMethods.validateTandInsurance(
+        dataTable.insuranceTand
+    );
+});
+
+When(/^validate child under 18 has the same insurance as policyholder with:$/, async (data) => {
+    await browser.sleep(250);
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.validateBasisInsuranceUnder18(
+        dataTable.insuranceBasis
+    );
+    await zorgWizardMethods.validateAanvullendInsuranceUnder18(
+        dataTable.insuranceAanvullend
+    );
+    await zorgWizardMethods.validateTandInsuranceUnder18(
+        dataTable.insuranceTand
+    );
+});
+
+Then(/^validate child has no insurance selected$/, async () => {
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.basisVrijActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.basisGeregeldActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.basisSelectActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendGoedActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendBeterActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendBestActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.tandOngevallenActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.tandGoedActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.tandBeterActive, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.tandBestActive, 100);
+});
+
+Then(/^validate I am able to open accordion for both$/, async () => {
+    await zorgWizardMethods.accordeonOpenClose("1");
+});
+
+Then(/^validate I am able to close accordion for partner$/, async () => {
+    await zorgWizardMethods.accordeonOpenClose("2");
+});
+
+Then(/^validate all active insurances are visible$/, async () => {
+    await zorgWizardMethods.accordeonProductCheckVisible("2");
+    await zorgWizardMethods.accordeonProductCheckVisible("1");
+});
+
+Then(/^validate no active insurance is visible for partner$/, async () => { 
+    await zorgWizardMethods.accordeonProductCheckNotVisible("2");
 });
