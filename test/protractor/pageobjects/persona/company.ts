@@ -30,8 +30,10 @@ export class Company {
 export class CompanyData {
 
   facebook: Company = new Company('Facebook', '7412XW', '37131558', legalEnum.BV, '91', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
-  rg_timmerwerken: Company = new Company('R.G. TIMMERWERKEN', '9646AS', '68727720', legalEnum.EENMANSZAAK, '8', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
-  // Specifiek zakelijktest rg_timmerwerken zipcode 7412XW - housenumber 91 - kvkNumber:'37131558'
+  rg_timmerwerken: Company = new Company('R.G. TIMMERWERKEN', '1906WS', '37131558', legalEnum.EENMANSZAAK, '35', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
+  // rg_timmerwerken zipcode 7412XW - housenumber 91 - kvkNumber:'37131558' - Old data
+  // rg_timmerwerken zipcode 1906WS - housenumber 35 - kvkNumber:'37131558' - Old data kvk nummer en adres klopt.
+  // 'R.G. TIMMERWERKEN', '9646AS', '68727720', legalEnum.EENMANSZAAK, '8' - Data New KvK 9-12-2019
 
   getCompanyName(input: string): string {
     switch (input) {
