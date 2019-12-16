@@ -126,6 +126,38 @@ export class ZorgWizardMethods {
         }
     }
 
+    async clickDataGenderPartner(input: string) {
+        switch (input) {
+          case gender.MALE: {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensPartnerGenderMaleRadioButtonElement);
+            break;
+          }
+          case gender.FEMALE: {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensPartnerGenderFemaleRadioButtonElement);
+            break;
+          }
+          default: {
+            throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+          }
+        }
+    }
+
+    async clickDataGenderKind(input: string) {
+        switch (input) {
+          case gender.MALE: {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensKindGenderMaleRadioButtonElement);
+            break;
+          }
+          case gender.FEMALE: {
+            await genericMethods.clickOnElement(zorgWizardElements.uwGegevensKindGenderFemaleRadioButtonElement);
+            break;
+          }
+          default: {
+            throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+          }
+        }
+    }
+
     async checkCrossSell() {
         if(await genericMethods.getText(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement) == crossSellEnum.RECHTSBIJSTANDVERZEKERING) {
             await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);

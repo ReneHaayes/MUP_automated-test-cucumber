@@ -231,6 +231,25 @@ export class GenericMethods {
     })
   }
 
+  async clearText(selector: string, length: number) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const typeTextElement: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
+    });
+    length = length || 100;
+    let backspaceSeries = '';
+    for (let i = 0; i < length; i++) {
+      backspaceSeries += protractor.Key.BACK_SPACE;
+    }
+    await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
+      typeTextElement.clear().then(() => {
+        typeTextElement.sendKeys(backspaceSeries);
+      })
+    })
+  }
+
   async clickOnTAB(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);

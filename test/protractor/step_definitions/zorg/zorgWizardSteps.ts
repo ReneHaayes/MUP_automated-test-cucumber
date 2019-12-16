@@ -375,8 +375,114 @@ Then(/^validate no active insurance is visible for partner$/, async () => {
 });
 
 Then(/^validate that BSN field is not visible on step 3$/, async () => {
-    await browser.sleep(250);
+    await browser.sleep(500);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
     await genericMethods.waitForElementNotVisible(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, 100);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
+});
+
+Then(/^I select (.*) for (.*)$/, async (insuranceBasis: string, persona: string) => { 
+    //voeg basisverzekering toe
+    await zorgWizardMethods.selectInsuranceBasisNoCollective(insuranceBasis);
+    await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement);
+    //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.typeText(zorgWizardElements.uwGegevensBirthdateTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensInitalsTextElement, personaData.getPersonaInitials(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPrefixTextElement, personaData.getPersonaPrefix(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensLastnameTextElement, personaData.getPersonaLastName(persona));
+    await zorgWizardMethods.clickDataGender(personaData.getPersonaGender(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPostalcodeTextElement, personaData.getPersonaZipcode(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensHousenumberTextElement, personaData.getPersonaHouseNumber(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensHousenumberAdditionTextElement, personaData.getPersonaHouseNumberAddition(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensEmailaddressTextElement, personaData.getPersonaEmailAddress(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPhoneNumberTextElement, personaData.getPersonaPhoneNumber(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensIBANTextElement, personaData.getPersonaAccountNumber(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensAutomatischeIncassoClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensInkomstenQuestionOneRadioNoClickElement);
+    //navigeer naar stap 3
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+});
+
+Then(/^I change birthdate of policyholder (.*)$/, async (persona: string) => { 
+    //navigeer van stap 3 naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //wijzig geboortedatum
+    await genericMethods.clearText(zorgWizardElements.uwGegevensBirthdateTextElement, 10);
+    await genericMethods.typeText(zorgWizardElements.uwGegevensBirthdateTextElement, personaData.getPersonaBirthDate(persona));
+    //navigeer naar stap 3
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+    await browser.sleep(500);
+});
+
+Then(/^validate there is one BSN field on step 3$/, async () => {
+    await browser.sleep(500);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdBSN1TextElement, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdBSNPersonaPolicyHolderLabelElement, 100);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
+});
+
+Then(/^validate there are two BSN fields on step 3$/, async () => {
+    await browser.sleep(500);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdBSNPersonaPolicyHolderLabelElement, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdBSNPersonaFirstAfterPolicyHolderLabelElement, 100);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
+});
+
+Then(/^I add a partner (.*)$/, async (persona: string) => { 
+    //navigeer van stap 3 naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //navigeer van stap 2 naar stap 1
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //voeg partner toe
+    await genericMethods.clickOnElement(zorgWizardElements.addPartnerButtonClickElement);
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.sameInsurancePartnerChildCheckBoxClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+    //navigeer naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement)
+    //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerInitialsTextElement, personaData.getPersonaInitials(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerPrefixTextElement, personaData.getPersonaPrefix(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerLastnameTextElement, personaData.getPersonaLastName(persona));
+    await zorgWizardMethods.clickDataGenderPartner(personaData.getPersonaGender(persona));
+    //navigeer naar stap 3
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+    await browser.sleep(500);
+});
+
+Then(/^I add a child (.*)$/, async (persona: string) => { 
+    //navigeer van stap 3 naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //navigeer van stap 2 naar stap 1
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //voeg partner toe
+    await genericMethods.clickOnElement(zorgWizardElements.addKindButtonClickElement);
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.sameInsurancePartnerChildCheckBoxClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+    //navigeer naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement)
+    //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.typeText(zorgWizardElements.uwGegevensKindInitialsTextElement, personaData.getPersonaInitials(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensKindPrefixTextElement, personaData.getPersonaPrefix(persona));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensKindLastnameTextElement, personaData.getPersonaLastName(persona));
+    await zorgWizardMethods.clickDataGenderKind(personaData.getPersonaGender(persona));
+    //navigeer naar stap 3
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+    await browser.sleep(500);
+});
+
+Then(/^delete partner$/, async () => { 
+    //navigeer van stap 3 naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //navigeer van stap 2 naar stap 1
+    await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
+    //delete partner
+    await genericMethods.clickOnElement(zorgWizardElements.deletePartnerButtonClickElement);
+    //navigeer naar stap 2
+    await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement)
+    //navigeer naar stap 3
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
 });

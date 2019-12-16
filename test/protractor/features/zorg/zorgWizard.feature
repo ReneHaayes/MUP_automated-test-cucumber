@@ -320,6 +320,29 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |insuranceBasis|persona                     |inkomstenNietNL|
         |Zorg Select   |testvrouwCustomerRecognition|Nee            |
+    
+    @klantHerkenning1
+    Scenario Outline: valideer dat klantherkenning werkt en een bekende klant geen BSN hoeft in te voeren op stap 3
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select <insuranceBasis> for <persona>
+        And validate that BSN field is not visible on step 3
+        And I change birthdate of policyholder <persona2>
+        And validate there is one BSN field on step 3
+        When I add a partner <persona3>
+        And validate there are two BSN fields on step 3
+        And I add a child <persona4>
+        And validate there are two BSN fields on step 3
+        And I change birthdate of policyholder <persona>
+        And validate there is one BSN field on step 3
+        And delete partner
+        And I add a partner <persona4>
+        Then validate that BSN field is not visible on step 3
+        And I click on bevestigen step 3
+        And validate that bedanktpagina and all elements are correct with <persona>
+
+        Examples:
+        |insuranceBasis|persona                     |persona2|persona3   |persona4                   |
+        |Zorg Select   |testvrouwCustomerRecognition|pogba   |testPartner|testkindCustomerRecognition|
 
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering

@@ -26,6 +26,8 @@ bekijkOpbouwPremieButtonClickElement: string = 'div.unive-total-price-detail__ro
 bekijkOpbouwPremieFirstTextElement: string = 'unive-summary-item > div > div:nth-child(1)';
 addPartnerButtonClickElement: string = 'unive-partner-child > div > div:nth-child(1) > button';
 addKindButtonClickElement: string = 'unive-partner-child > div > div:nth-child(2) > button';
+deletePartnerButtonClickElement: string = 'unive-applicants:nth-child(2) > div > unive-applicants-heading > div > div > div > ' + 
+                                          'div.unive-applicants-heading__col.unive-applicants-heading__col--right > button';
 
     //OVERLAY PARTNER KIND
 switchToKindTabButtonClickElement: string = 'unive-partner-child-modal > unive-button-switch > div > button:nth-child(2)';
@@ -181,15 +183,32 @@ actievePolisOverlayWijzigButtonClickElement: string = 'div.unive-modal__content 
 actievePolisOverlayWijzigMijnUniveURL: string = 'https://gezondheid.unive.nl/mijnunivezorg/inloggen';
 mijnUniveH1TextElement: string = 'div > h1';
 mijnUniveH1Text: string = 'Mijn Univé Zorg';
+uwGegevensPartnerInitialsTextElement: string = '[id="initials-partner"]';
+uwGegevensPartnerPrefixTextElement: string = '[id="namePrefix-partner"]';
+uwGegevensPartnerLastnameTextElement: string = '[id="lastName-partner"]';
+uwGegevensPartnerGenderMaleRadioButtonElement: string = '[id="gender-partner_man"]';
+uwGegevensPartnerGenderFemaleRadioButtonElement: string = '[id="gender-partner_vrouw"]';
+uwGegevensKindInitialsTextElement: string = '[id="initials-kind0"]';
+uwGegevensKindPrefixTextElement: string = '[id="namePrefix-kind0"]';
+uwGegevensKindLastnameTextElement: string = '[id="lastName-kind0"]';
+uwGegevensKindGenderMaleRadioButtonElement: string = '[id="gender-kind0_man"]';
+uwGegevensKindGenderFemaleRadioButtonElement: string = '[id="gender-kind0_vrouw"]';
 
 //ZORGWIZARD PAGINA 3 BIJNA VERZEKERD
 bijnaVerzekerdBSNTextElement: string = '[placeholder="012345678"]';
+bijnaVerzekerdBSN1TextElement: string = 'unive-wizard-accordion-panel:nth-child(3) > li > unive-almost-insured > div > div > form > unive-almost-insured-bsn > unive-fieldset' + 
+                                        ' > fieldset > unive-unive-formgroup > div > unive-input-text > div';
+bijnaVerzekerdBSN2TextElement: string = 'unive-wizard-accordion-panel:nth-child(4) > li > unive-almost-insured > div > div > form > unive-almost-insured-bsn > unive-fieldset' + 
+                                        ' > fieldset > unive-unive-formgroup > div > unive-input-text > div';
+bijnaVerzekerdBSNPersonaPolicyHolderLabelElement: string = 'unive-unive-formgroup:nth-child(3) > div > div > label';
+bijnaVerzekerdBSNPersonaFirstAfterPolicyHolderLabelElement: string = 'unive-unive-formgroup:nth-child(4) > div > div > label';
 bijnaVerzekerdH1Text: string = 'Bijna verzekerd';
 bijnaVerzekerdH1TextElement: string = '[class="unive-wizard-accordion-panel_title unive-wizard-accordion-panel_title--active"]';
 bijnaVerzekerdBurgerservicenummerText: string = 'Burgerservicenummer';
 bijnaVerzekerdBurgerservicenummerTextElement: string = 'unive-almost-insured-bsn > unive-fieldset > fieldset > legend';
 bijnaVerzekerdUBentBijnaVerzekerdText: string = 'U bent bijna verzekerd';
 bijnaVerzekerdUBentBijnaVerzekerdTextElement: string = '[class="unive-legend unive-legend--plain"]';
+backButtonEachStepClickElement: string = 'button.button.button--plain.button--back';
 
 //ZORGWIZARD BEDANKTPAGINA
 bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
