@@ -4,7 +4,7 @@ export class ZorgCheckToolElements {
 startZorgCheckToolButtonClickElement: string = 'health-check-start > health-check-card > div > ui-card > div > div > ui-button > button'; 
 nextQuestionZorgCheckToolButtonClickElement: string = '[class*="button button--secondary button--icon"]';
 previousQuestionZorgCheckToolButtonClickElement: string = '[class="button button--plain"]';
-directRegelenZorgverzekeringButtonClickElement: string = 'div.health-check-start__bottom-line > ui-button > button';
+directRegelenZorgverzekeringButtonClickElement: string = 'div.health-check-start__bottom-line > a';
 directRegelenZorgverzekeringURL: string = 'https://gezondheid.unive.nl/zorgverzekering/premieberekenen-en-afsluiten/?icmp=IL-3';
 
 //MULTIPLE CHOICE ANSWERS
@@ -62,7 +62,7 @@ emailDitAdviesOverlayCloseClickElement: string = ' div.ui-modal__footer.ng-star-
 emailDitAdviesOverlayIncorrectEmailMessageText: string = 'Vul een geldig e-mailadres in (j.jansen@unive.nl).';
 emailDitAdviesOverlayIncorrectEmailMessageElement: string = '[class="error-message"]';
 emailDitAdviesOverlaySuccessElement: string = '[class="health-check-result-email__intro ng-star-inserted"]';
-emailDitAdviesOverlaySuccessText: string = 'Het ZorgCheck advies is verzonden naar';
+emailDitAdviesOverlaySuccessText: string = 'Uw ZorgCheck resultaat is verzonden naar';
 
 //PREFILLS WIZARD
 zorgSelectActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
@@ -91,7 +91,7 @@ voegCollectiefToeButtonClickElement: string = 'div.search-collectief__confirm-bu
 additionalInfoThuiszorgCollectiefElement: string = 'f-collectief-search-search > div.search-collectief__subtext.ng-star-inserted';
 additionalInfoThuiszorgCollectiefText: string = 'Het door u geselecteerde collectief is een thuiszorgcollectief. Hiervoor gelden andere vergoedingen. Neem contact op met onze adviseurs voor een ZorgCheck op maat.';
 deleteCollectiveClickElement: string = '[class="search-collectief__delete"]';
-closeOverlay: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
+closeOverlay: string = 'div.ui-modal__header > button';
 
 //i-TEXTS BIJ ADVIES
 aanvullendAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
@@ -102,8 +102,9 @@ itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapi
 itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin.';
 itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
-itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd.';
-itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist.';
+itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd. Tot € 500,- per jaar (inclusief Tand Ongevallen).';
+itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist. ' + 
+                           'Tot € 1.000,- per jaar (inclusief Tand Ongevallen).';
 
 //OVERLAY ELEMENTEN
 overlayH2Element: string = '[class="ui-modal__title ng-star-inserted"]';

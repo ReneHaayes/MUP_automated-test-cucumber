@@ -113,14 +113,14 @@ When(/^I click on the i-button$/, async() => {
     await genericMethods.clickOnElement(zorgCheckToolElements.questionInformationClickElement);
 });
 
-When(/^I select answer for question 5 with:$/, async (data) => {
+When(/^I answer question 5 with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgCheckToolMethods.fillInOneQuestion(
         dataTable.question5
     );
 });
 
-When(/^I select answer for question 6 with:$/, async (data) => {
+When(/^I answer question 6 with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgCheckToolMethods.fillInOneQuestion(
         dataTable.question6
@@ -253,7 +253,7 @@ When (/^I click on the regel het direct link$/, async() => {
     await genericMethods.clickOnElement(zorgCheckToolElements.directRegelenZorgverzekeringButtonClickElement);
 });
 
-Then (/^validate I get redirected to the zorgwizard with the correct code is in the URL$/, async() => {
+Then (/^validate I get redirected to the zorgwizard with the correct code in the URL$/, async() => {
     await browser.getAllWindowHandles().then(function (handles) {
         browser.switchTo().window(handles[1]);
     });

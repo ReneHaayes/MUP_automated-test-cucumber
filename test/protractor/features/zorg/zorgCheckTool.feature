@@ -73,7 +73,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
     |question2|A|
     |question3|A|
     |question4|A|
-    When I select answer for question 5 with:
+    When I answer question 5 with:
     |question5|D|
     Then Verify that the correct i-text is shown below selected answer for question five
   
@@ -85,7 +85,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
     |question3|A|
     |question4|A|
     |question5|A|
-    When I select answer for question 6 with:
+    When I answer question 6 with:
     |question6|D|
     Then Verify that the correct i-text is shown below selected answer for question six
   
@@ -300,4 +300,4 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
   Scenario: direct zorgverzekering afsluiten is aanwezig en verwijst naar wizard op nieuwe tab
     Given I am on the zorgCheckTool page of the Unive website
     When I click on the regel het direct link
-    Then validate I get redirected to the zorgwizard with the correct code is in the URL
+    Then validate I get redirected to the zorgwizard with the correct code in the URL
