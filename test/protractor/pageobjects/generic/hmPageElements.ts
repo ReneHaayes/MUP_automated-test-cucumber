@@ -12,7 +12,7 @@ export class HmPageElements {
 
   homePageBusinessBedrijfsAutoverzekeringClickElement: string = '[href*="/zakelijk/bedrijfsautoverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessArbeidsongeschiktheidClickElement: string = '[href*="/zakelijk/arbeidsongeschiktheidsverzekering"][class*="insurances_tabLinkAction"]';
-  homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten"]';
+  homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href="/zakelijk/arbeidsongeschiktheidsverzekering-zzp/premieberekenen-en-afsluiten"]';
   homePageBusinessRechtsbijstandClickElement: string = '[href*="/zakelijk/rechtsbijstandverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessRechtsbijstandPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
   homePageBusinessEigenVervoerClickElement: string = '[href*="/zakelijk/eigenvervoerverzekering"][class*="insurances_tabLinkAction"]';
@@ -114,8 +114,8 @@ export class HmPageElements {
   zipcodePlaceTitleText: string = 'Zoek een Univé-winkel bij u in de buurt';
   footerOndernemersScanClickElement: string = '[class="mainFooterContent_menuLink"][href*="ondernemersscan"]';
   footerOndernemersScanH1TextElement: string = '[class="action_title"]';
-  footerKlantenServiceZakelijkTitleTextElement: string = '[itemprop="telephone"]';
-  footerKlantenServiceZakelijkTitleText: string = 'Klantenservice Zakelijk';
+  footerKlantenServiceZakelijkTitleTextElement: string = '[class="mainFooterContent_contactOptionPhone"]';
+  footerKlantenServiceZakelijkTitleText: string = '0592 349 649';
 
   //ZAKELIJK
   gebouwH2TextElement: string = '[class="productsMain_title"]';
@@ -136,6 +136,6 @@ export class HmPageElements {
   mijnUniveZakelijkUsernameInputElement: string = '#_MyQISLogonEnterCredentials__1';
   mijnUniveZakelijkPasswordInputElement: string = '#_MyQISLogonEnterCredentials__2';
   mijnUniveZakelijkSubmitButtonClickElement: string = '#_MyQISLogonEnterCredentials_logonButton';
-  mijnUniveZakelijkHomePageH3TextElement: string = '[class="logIn_content"] [id="inloggen-mijnqis"]';
-  mijnUniveZakelijkHomePageH3Text: string = 'Mijn Unive Zakelijk';
+  mijnUniveZakelijkHomePageH3TextElement: string = '[href="https://pat.unive.nl/zakelijk/mijnunive/inloggen"][class="button--primary mainMijnUnive_action"]';
+  mijnUniveZakelijkHomePageH4Text: string = 'Mijn Univé Zakelijk';
 }

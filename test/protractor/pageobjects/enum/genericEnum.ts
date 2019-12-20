@@ -147,7 +147,7 @@ export enum verzekeringPaginasEnum {
   GEBOUWENVERZEKERING = 'Gebouwenverzekering',
   HANDELAARSKENTEKENVERZEKERING = 'Handelaarskentekenverzekering',
   MILIEUSCHADEVERZEKERING = 'Milieuschadeverzekering',
-  VRACHTAUTOVERZEKERING = 'Vrachtautoverzekering',
+  VRACHTAUTOVERZEKERING = 'Vrachtwagenverzekering',
   WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering',
   MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
   MIJN_UNIVE_BETAALGEGEVENS_WIJZIGEN = 'mijn unive betaalgegevens wijzigen',
