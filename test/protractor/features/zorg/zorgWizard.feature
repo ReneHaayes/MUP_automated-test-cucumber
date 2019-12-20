@@ -362,6 +362,20 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |zorgVerzekeringBasisGeregeldParameter|Zorg Geregeld |testvrouwCustomerRecognition|Nee            |
         |zorgVerzekeringBasisVrijParameter    |Zorg Vrij     |testvrouwCustomerRecognition|Nee            |
 
+    @parameterURLCollectief
+    Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor een collectief de wizard binnen te komen
+        Given I am on the <page> page of the Unive website
+        When I select basic insurance including collective with:
+        |insuranceBasis|<insuranceBasis>|
+        |collective    |<collective>    |
+        Then I delete the collective in wizard
+        And I select basic insurance no collective with:
+        |insuranceBasis|Zorg Select|
+
+        Examples:
+        |page                                           |insuranceBasis|collective        |
+        |zorgVerzekeringNietThuiszorgCollectiefParameter|Zorg Geregeld |Omring Medewerkers|
+
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
         Given I am on the Zorgverzekering page of the Unive website

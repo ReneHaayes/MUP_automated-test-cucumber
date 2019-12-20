@@ -54,7 +54,8 @@ When(/^I delete the collective in wizard$/, async () => {
 Then(/^I select basic insurance including collective with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgWizardMethods.selectInsuranceBasisWithCollective(
-        dataTable.insuranceBasis
+        dataTable.insuranceBasis,
+        dataTable.collective
     );
 });
 

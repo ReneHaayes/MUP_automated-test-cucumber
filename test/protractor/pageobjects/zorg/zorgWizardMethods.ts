@@ -79,16 +79,22 @@ export class ZorgWizardMethods {
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);
     }
 
-    async selectInsuranceBasisWithCollective(insuranceBasis: string){
+    async selectInsuranceBasisWithCollective(insuranceBasis: string, collective: string){
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
             //klik op en verifieer basisverzekering
             await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
-            await genericMethods.waitForElementNotVisible(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, 250);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, 250);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
             //klik op en verifieer basisverzekering
             await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringGeregeldClickElement);
-            await genericMethods.waitForElementNotVisible(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, 250);
+            if(collective == collectievenEnum.OMRINGMEDEWERKERS){
+                await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, 250);
+                await genericMethods.verifyTextContainsInElement(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, collectievenEnum.OMRINGMEDEWERKERS, 100);
+            }
+            else {
+                await genericMethods.waitForElementNotVisible(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, 250);
+            }
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis );
