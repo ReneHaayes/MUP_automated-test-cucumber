@@ -461,4 +461,21 @@ export class ZorgWizardMethods {
         await genericMethods.waitForElementNotVisible('unive-applicants:nth-child(' + data + ') > div > unive-applicants-content > unive-basic-insurances > div >' +
         ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 100);    
     }
+
+
+    async validateOpbouwPremieBasis(insuranceBasis: string){
+        await genericMethods.clickOnElement(zorgWizardElements.bekijkOpbouwPremieButtonClickElement);
+        if(insuranceBasis == pakkettenEnum.ZORGSELECT){
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 100);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGVRIJ, 100);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGGEREGELD, 100);
+        }
+        else{
+            throw new Error('No correct basis insurance found for' + insuranceBasis);
+        }
+    }
 }

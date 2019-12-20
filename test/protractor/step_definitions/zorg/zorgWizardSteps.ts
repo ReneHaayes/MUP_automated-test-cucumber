@@ -1,7 +1,7 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
 import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData} from '../../support';
-import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum } from '../../pageobjects/enum/zorgEnum';
+import { crossSellEnum, genderBedanktPaginaEnum } from '../../pageobjects/enum/zorgEnum';
 
 When(/^I do nothing$/, async() => {
     await browser.sleep(250);
@@ -44,6 +44,7 @@ Then(/^verify show all basic insurance is not visible$/, async () => {
 });
 
 Then(/^verify it is not possible to choose zorg select$/, async () => {
+    await browser.sleep(15000);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVerzekeringSelectNietMogelijkElement, 250);
 });
 
@@ -267,9 +268,11 @@ Then(/^Validate the floating button is not present$/, async () => {
     await genericMethods.waitForElementNotVisible(zorgWizardElements.floatingButtonClickElement, 100);
 });
 
-Then(/^validate that customer is redirected to wizard with the correct products prefilled$/, async () => {
-    await genericMethods.clickOnElement(zorgWizardElements.bekijkOpbouwPremieButtonClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 100);
+Then(/^validate that customer is redirected to wizard with the correct products prefilled with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.validateOpbouwPremieBasis(
+        dataTable.insuranceBasis
+    );
 });
 
 When(/^I click on the close floating button$/, async () => {
@@ -494,4 +497,8 @@ When(/^validate correct basic insurance is active with:$/, async (data) => {
     await zorgWizardMethods.validateBasisInsurance(
         dataTable.insuranceBasis
     );
+});
+
+When (/^I close the opbouw premieberekening overlay$/, async() => {
+    await genericMethods.clickOnElement(zorgWizardElements.closeOpbouwPremieBerekeningButtonClickElement);
 });

@@ -202,12 +202,13 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|<insuranceBasis>|
         When I am on the zorgVrij page of the Unive website
         And I click on the floating button
-        Then validate that customer is redirected to wizard with the correct products prefilled
+        Then validate that customer is redirected to wizard with the correct products prefilled with:
+        |insuranceBasis|<insuranceBasis>|
         And Validate the floating button is not present
     
         Examples:
-        |insuranceBasis|page    |
-        |Zorg Select   |zorgVrij|
+        |insuranceBasis|
+        |Zorg Select   |
 
     @floatingButton
     Scenario Outline: valideer aanwezigheid floating button bij wegnavigeren uit de wizard
@@ -218,7 +219,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And Validate the floating button is not present
         And I am on the eigenRisico page of the Unive website
         And I click on the floating button
-        Then validate that customer is redirected to wizard with the correct products prefilled
+        Then validate that customer is redirected to wizard with the correct products prefilled with:
+        |insuranceBasis|<insuranceBasis>|
         And Validate the floating button is not present
     
         Examples:
@@ -237,8 +239,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Then Validate the floating button is not present
     
         Examples:
-        |insuranceBasis|page    |
-        |Zorg Select   |zorgVrij|
+        |insuranceBasis|
+        |Zorg Select   |
 
 
     @addPartnerKind
@@ -375,6 +377,18 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |page                                           |insuranceBasis|collective        |
         |zorgVerzekeringNietThuiszorgCollectiefParameter|Zorg Geregeld |Omring Medewerkers|
+
+    @parameterURLCollectief
+    Scenario Outline: valideer dingen
+        Given I am on the <page> page of the Unive website
+        When validate that customer is redirected to wizard with the correct products prefilled with:
+        |insuranceBasis|<insuranceBasis>|
+        And I close the opbouw premieberekening overlay
+        Then Verify I am not able to add collective
+
+        Examples:
+        |page                                                 |insuranceBasis|
+        |zorgVerzekeringThuiszorgCollectiefZorgSelectParameter|Zorg Select   |
 
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
