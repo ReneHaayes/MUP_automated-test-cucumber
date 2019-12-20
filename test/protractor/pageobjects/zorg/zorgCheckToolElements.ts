@@ -43,7 +43,7 @@ question3InformationText: string = 'Bekende anticonceptiemiddelen zijn een spira
 question3InformationHeaderText: string = 'Gebruikt u anticonceptie en bent u ouder dan 21 jaar?';
 question8InformationText: string = 'Het scheelt ongeveer € 20 premie per maand als u alleen gebruik maakt van gecontracteerde zorgverleners.';
 question8InformationHeaderText: string = 'Bent u bereid om meer te betalen zodat u zelf uw zorgverlener kunt kiezen?';
-closeInformationOverlayClickElement: string = 'div.ui-modal__footer.ng-star-inserted > ui-button > button';
+closeInformationOverlayClickElement: string = 'div.ui-modal__container > div > div.ui-modal__header > button';
 question5answerDInformationText: string = 'Let op: Voor deze vergoeding geldt een jaar wachttijd. Als u in 2019 de verzekering afsluit, kunt u in 2021 gebruik maken van deze vergoeding.';
 question5InformationHeaderText: string = 'Verwacht u dat uw kind een beugel nodig heeft?';
 question6AnswerDInformationText: string = 'Let op: Voor de vergoeding van kronen, bruggen, gedeeltelijke protheses en implantaten geldt een jaar wachttijd. Als u in 2019 de verzekering afsluit, kunt u in 2021 gebruik maken van deze vergoeding.';
@@ -58,10 +58,9 @@ emailDitAdviesOverlayHeaderElement: string = '[class="ui-modal__title ng-star-in
 emailDitAdviesOverlayHeaderText: string = 'Mail uw ZorgCheck resultaat';
 emailDitAdviesOverlayDataEmailAddressElement: string = 'ui-input > div > label > input';
 emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = 'health-check-result-email > div > div > ui-button > button';
-emailDitAdviesOverlayVerstuurMijnAdviesInvalidEmailClickElement: string = '[class="button button--secondary button--icon button--disabled"]';
 emailDitAdviesOverlayCloseClickElement: string = ' div.ui-modal__footer.ng-star-inserted > ui-button > button';
 emailDitAdviesOverlayIncorrectEmailMessageText: string = 'Vul een geldig e-mailadres in (j.jansen@unive.nl).';
-emailDitAdviesOverlayIncorrectEmailMessageElement: string = '[class="health-check-result-email__error ng-star-inserted"]';
+emailDitAdviesOverlayIncorrectEmailMessageElement: string = '[class="error-message"]';
 emailDitAdviesOverlaySuccessElement: string = '[class="health-check-result-email__intro ng-star-inserted"]';
 emailDitAdviesOverlaySuccessText: string = 'Het ZorgCheck advies is verzonden naar';
 
@@ -99,9 +98,9 @@ aanvullendAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) 
 tandAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > health-check-result-item-top > div > div:nth-child(4) > div.health-check-result-top__label > div > ui-info > button';
 aanvullendAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(2) > div.health-check-result-top__label > div > ui-info > button';
 tandAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
-itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie.';
+itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie';
 itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin.';
-itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid.';
+itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
 itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd.';
 itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist.';

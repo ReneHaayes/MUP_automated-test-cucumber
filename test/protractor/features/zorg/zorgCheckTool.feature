@@ -37,7 +37,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
         |A        |A        |B        |A        |B        |A        |B        |A        |        B|Zorg Vrij  |Geen            |Geen      |Zorg Vrij  |Aanvullend Goed |Geen      |
         |A        |A        |B        |A        |C        |D        |B        |B        |        B|Zorg Select|Geen            |Tand Best |Zorg Select|Geen            |Tand Beter|
         |A        |A        |B        |A        |B        |C        |B        |A        |        B|Zorg Vrij  |Geen            |Tand Beter|Zorg Vrij  |Geen            |Tand Goed |
-
+  
   Scenario: Check i-text bij vraag 2
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 1 question with:
@@ -88,7 +88,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
     When I select answer for question 6 with:
     |question6|D|
     Then Verify that the correct i-text is shown below selected answer for question six
-
+  
   Scenario Outline: Check foutief emailadres melding bij email dit advies
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 9 questions with:
@@ -105,7 +105,6 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
     When I enter an emailaddress with:
     |emailaddress|geenapenstaartje.nl|
     Then the correct errormessage is shown
-    And send email button is not available
       
       Examples:
         |question1|question2|question3|question4|question5|question6|question7|question8|question9|

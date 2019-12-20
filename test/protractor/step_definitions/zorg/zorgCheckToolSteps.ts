@@ -152,10 +152,6 @@ Then(/^the correct errormessage is shown$/, async () => {
     await genericMethods.verifyTextInElement(zorgCheckToolElements.emailDitAdviesOverlayIncorrectEmailMessageElement, zorgCheckToolElements.emailDitAdviesOverlayIncorrectEmailMessageText);
 });
 
-Then(/^send email button is not available$/, async () => {
-    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.emailDitAdviesOverlayVerstuurMijnAdviesInvalidEmailClickElement, 1000);
-});
-
 Then(/^the send email button is available$/, async () => {
     await genericMethods.clickOnElement(zorgCheckToolElements.emailDitAdviesOverlayVerstuurMijnAdviesClickElement);
 });

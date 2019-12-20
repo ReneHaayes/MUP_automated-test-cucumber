@@ -350,11 +350,11 @@ export class ZorgWizardMethods {
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
             await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVrijActive, 100);
         }
-        else if(insuranceBasis = pakkettenEnum.ZORGSELECT){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisSelectActive, 100);
-        }
-        else if(insuranceBasis = pakkettenEnum.ZORGGEREGELD){
+        else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
             await genericMethods.waitForElementIsVisible(zorgWizardElements.basisGeregeldActive, 100);
+        }
+        else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisSelectActive, 100);
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis);

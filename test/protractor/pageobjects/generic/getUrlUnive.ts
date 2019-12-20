@@ -271,6 +271,27 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGVRIJ: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgVrij;
       }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGTHUISZORGCOLLECTIEFPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringThuiszorgCollectiefParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringNietThuiszorgCollectiefParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGTHUISZORGCOLLECTIEFZORGSELECTPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringThuiszorgCollectiefZorgSelectParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFZORGSELECTPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGBASISSELECTPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisSelectParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGBASISGEREGELDPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisGeregeldParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGBASISVRIJPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisVrijParameter;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

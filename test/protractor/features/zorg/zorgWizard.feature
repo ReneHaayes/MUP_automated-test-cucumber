@@ -2,7 +2,6 @@
 
 Feature: Validatie van functionaliteit in de zorgwizard
     
-    @collectieven
     Scenario: Valideer het laden van de pagina (door H1 te checken)
         Given I am on the Zorgverzekering page of the Unive website
         When I do nothing
@@ -321,7 +320,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|persona                     |inkomstenNietNL|
         |Zorg Select   |testvrouwCustomerRecognition|Nee            |
     
-    @klantHerkenning1
+    @klantHerkenning
     Scenario Outline: valideer dat klantherkenning werkt en een bekende klant geen BSN hoeft in te voeren op stap 3
         Given I am on the Zorgverzekering page of the Unive website
         And I select <insuranceBasis> for <persona>
@@ -343,6 +342,25 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |insuranceBasis|persona                     |persona2|persona3   |persona4                   |
         |Zorg Select   |testvrouwCustomerRecognition|pogba   |testPartner|testkindCustomerRecognition|
+
+    @parameterURLBasisverzekering
+    Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor de basisverzekering de wizard binnen te komen
+        Given I am on the <page> page of the Unive website
+        Then validate correct basic insurance is active with:
+        |insuranceBasis|<insuranceBasis>|
+        And I click on Volgende page one
+        And I enter personal data on step 2 of wizard with <persona>
+        And I answer inkomstenvragen with:
+        |inkomstenNietNL|<inkomstenNietNL>|
+        And I click on Volgende page two
+        And I click on bevestigen step 3
+        And validate that bedanktpagina and all elements are correct with <persona>
+        
+        Examples:
+        |page                                 |insuranceBasis|persona                     |inkomstenNietNL|
+        |zorgVerzekeringBasisSelectParameter  |Zorg Select   |testvrouwCustomerRecognition|Nee            |
+        |zorgVerzekeringBasisGeregeldParameter|Zorg Geregeld |testvrouwCustomerRecognition|Nee            |
+        |zorgVerzekeringBasisVrijParameter    |Zorg Vrij     |testvrouwCustomerRecognition|Nee            |
 
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering

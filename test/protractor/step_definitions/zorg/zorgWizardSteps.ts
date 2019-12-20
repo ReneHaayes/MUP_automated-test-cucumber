@@ -486,3 +486,11 @@ Then(/^delete partner$/, async () => {
     //navigeer naar stap 3
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
 });
+
+When(/^validate correct basic insurance is active with:$/, async (data) => {
+    await browser.sleep(250);
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.validateBasisInsurance(
+        dataTable.insuranceBasis
+    );
+});

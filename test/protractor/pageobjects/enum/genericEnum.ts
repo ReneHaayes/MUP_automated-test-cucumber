@@ -173,7 +173,14 @@ export enum verzekeringPaginasEnum {
   ZORGCHECKTOOLTHUISZORGCOLLECTIEFPARAMETER = 'zorgCheckToolThuiszorgCollectiefParameter',
   ZORGCHECKTOOLNIETTHUISZORGCOLLECTIEFPARAMETER = 'zorgCheckToolNietThuiszorgCollectiefParameter',
   EIGENRISICO = 'eigenRisico',
-  ZORGVRIJ = 'zorgVrij'
+  ZORGVRIJ = 'zorgVrij',
+  ZORGVERZEKERINGTHUISZORGCOLLECTIEFPARAMETER = 'zorgVerzekeringThuiszorgCollectiefParameter',
+  ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFPARAMETER = 'zorgVerzekeringNietThuiszorgCollectiefParameter',
+  ZORGVERZEKERINGTHUISZORGCOLLECTIEFZORGSELECTPARAMETER = 'zorgVerzekeringThuiszorgCollectiefZorgSelectParameter',
+  ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFZORGSELECTPARAMETER = 'zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter',
+  ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
+  ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
+  ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter'
 }
 
 export enum polisDetailsUrlEnum {
