@@ -434,7 +434,7 @@ Then(/^validate there are two BSN fields on step 3$/, async () => {
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
 });
 
-Then(/^I add a partner (.*)$/, async (persona: string) => { 
+Then(/^I add a partner step 1 and 3 with (.*)$/, async (persona: string) => { 
     //navigeer van stap 3 naar stap 2
     await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
     //navigeer van stap 2 naar stap 1
@@ -501,4 +501,38 @@ When(/^validate correct basic insurance is active with:$/, async (data) => {
 
 When (/^I close the opbouw premieberekening overlay$/, async() => {
     await genericMethods.clickOnElement(zorgWizardElements.closeOpbouwPremieBerekeningButtonClickElement);
+});
+
+When (/^I add children with:$/, async(data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.addNumberofChildren(
+        dataTable.count,
+        dataTable.persona2
+    );
+});
+
+When (/^validate kind toevoegen button is not available$/, async() => {
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.addKindButtonClickElement, 150);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.achtKinderenMeldingTextElement, 150);
+});
+
+When (/^validate partner toevoegen button is not available$/, async() => {
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.partnerKindToevoegenButtonClickElement, 150);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.partnerAlToegevoegdMeldingTextElement, 150);
+});
+
+Then(/^I enter personal data on step 2 of wizard for partner with (.*)$/, async (persona1: string) => { 
+    //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerInitialsTextElement, personaData.getPersonaInitials(persona1));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerPrefixTextElement, personaData.getPersonaPrefix(persona1));
+    await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerLastnameTextElement, personaData.getPersonaLastName(persona1));
+    await zorgWizardMethods.clickDataGenderPartner(personaData.getPersonaGender(persona1));
+});
+
+When (/^I enter personal data on step 2 of wizard for children with:$/, async(data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.enterPersonalDataNumberOfChildren(
+        dataTable.count,
+        dataTable.persona2
+    );
 });

@@ -28,6 +28,8 @@ addPartnerButtonClickElement: string = 'unive-partner-child > div > div:nth-chil
 addKindButtonClickElement: string = 'unive-partner-child > div > div:nth-child(2) > button';
 deletePartnerButtonClickElement: string = 'unive-applicants:nth-child(2) > div > unive-applicants-heading > div > div > div > ' + 
                                           'div.unive-applicants-heading__col.unive-applicants-heading__col--right > button';
+achtKinderenMeldingTextElement: string = 'unive-partner-child > div > div:nth-child(2) > span';
+partnerAlToegevoegdMeldingTextElement: string = 'unive-partner-child > div > div:nth-child(1) > span';
 closeOpbouwPremieBerekeningButtonClickElement: string = 'div.unive-modal__header > button';
 
     //OVERLAY PARTNER KIND

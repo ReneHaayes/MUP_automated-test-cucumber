@@ -329,14 +329,14 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And validate that BSN field is not visible on step 3
         And I change birthdate of policyholder <persona2>
         And validate there is one BSN field on step 3
-        When I add a partner <persona3>
+        When I add a partner step 1 and 3 with <persona3>
         And validate there are two BSN fields on step 3
         And I add a child <persona4>
         And validate there are two BSN fields on step 3
         And I change birthdate of policyholder <persona>
         And validate there is one BSN field on step 3
         And delete partner
-        And I add a partner <persona4>
+        And I add a partner step 1 and 3 with <persona4>
         Then validate that BSN field is not visible on step 3
         And I click on bevestigen step 3
         And validate that bedanktpagina and all elements are correct with <persona>
@@ -379,7 +379,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |zorgVerzekeringNietThuiszorgCollectiefParameter|Zorg Geregeld |Omring Medewerkers|
 
     @parameterURLCollectief
-    Scenario Outline: valideer dingen
+    Scenario Outline: valideer dat wanneer je zorg select met collectief prefilled, dat het collectief niet geprefilled wordt, maar zorg select wel
         Given I am on the <page> page of the Unive website
         When validate that customer is redirected to wizard with the correct products prefilled with:
         |insuranceBasis|<insuranceBasis>|
@@ -389,6 +389,34 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |page                                                 |insuranceBasis|
         |zorgVerzekeringThuiszorgCollectiefZorgSelectParameter|Zorg Select   |
+
+    @addMaxChildren
+    Scenario Outline: valideer dat het mogelijk is om een verzekering af te sluiten met een partner en 8 kinderen
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        When I click on partner toevoegen button
+        And I add a partner or child -same insurance checkbox checked- with <persona>
+        And validate partner toevoegen button is not available
+        And I add children with:
+        |count   |<count>   |
+        |persona2|<persona2>|
+        And validate kind toevoegen button is not available
+        And I click on Volgende page one
+        And I enter personal data on step 2 of wizard with <persona>
+        And I answer inkomstenvragen with:
+        |inkomstenNietNL|<inkomstenNietNL>|
+        And I enter personal data on step 2 of wizard for partner with <persona>
+        And I enter personal data on step 2 of wizard for children with:
+        |count   |<count>   |
+        |persona2|<persona2>|        
+        And I click on Volgende page two
+        And I click on bevestigen step 3
+        Then validate that bedanktpagina and all elements are correct with <persona>
+
+        Examples:
+        |insuranceBasis|persona                     |count|persona2                   |inkomstenNietNL|
+        |Zorg Select   |testvrouwCustomerRecognition|8    |testkindCustomerRecognition|Nee            |
 
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering

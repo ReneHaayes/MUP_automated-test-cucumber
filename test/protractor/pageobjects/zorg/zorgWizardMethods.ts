@@ -1,4 +1,4 @@
-import { genericMethods, zorgWizardElements } from "../../support";
+import { genericMethods, zorgWizardElements, personaData } from "../../support";
 import { pakkettenEnum, crossSellEnum, collectievenEnum, inkomstenDropdownEnum, eigenRisicoEnum } from "../enum/zorgEnum";
 import { gender } from "../enum/genericEnum";
 
@@ -477,5 +477,28 @@ export class ZorgWizardMethods {
         else{
             throw new Error('No correct basis insurance found for' + insuranceBasis);
         }
+    }
+
+    async addNumberofChildren(count: number, persona2: string){
+        var i;
+        for (i= 0; i < count; i++) {
+            //klik op kind toevoegen button
+            await genericMethods.clickOnElement(zorgWizardElements.addKindButtonClickElement);
+            //voeg geboortedatum toe en voeg kind toe
+            await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona2));
+            await genericMethods.clickOnElement(zorgWizardElements.sameInsurancePartnerChildCheckBoxClickElement);
+            await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+        }    
+    }
+
+    async enterPersonalDataNumberOfChildren(count: number, persona2: string){
+        var i;
+        for (i= 0; i < count; i++) {
+            //klik op kind toevoegen button
+            await genericMethods.typeText('[id="initials-kind'+ i +'"]', personaData.getPersonaInitials(persona2));
+            await genericMethods.typeText('[id="namePrefix-kind'+ i +'"]', personaData.getPersonaPrefix(persona2));
+            await genericMethods.typeText('[id="lastName-kind'+ i + '"]', personaData.getPersonaLastName(persona2));
+            await genericMethods.clickOnElement('[id="gender-kind'+ i +'_man"]');
+        }    
     }
 }
