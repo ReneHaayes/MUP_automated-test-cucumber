@@ -60,7 +60,7 @@ emailDitAdviesOverlayDataEmailAddressElement: string = 'ui-input > div > label >
 emailDitAdviesOverlayVerstuurMijnAdviesClickElement: string = 'health-check-result-email > div > div > ui-button > button';
 emailDitAdviesOverlayCloseClickElement: string = ' div.ui-modal__footer.ng-star-inserted > ui-button > button';
 emailDitAdviesOverlayIncorrectEmailMessageText: string = 'Vul een geldig e-mailadres in (j.jansen@unive.nl).';
-emailDitAdviesOverlayIncorrectEmailMessageElement: string = '[class="error-message"]';
+emailDitAdviesOverlayIncorrectEmailMessageElement: string = '[class="error__message"]';
 emailDitAdviesOverlaySuccessElement: string = '[class="health-check-result-email__intro ng-star-inserted"]';
 emailDitAdviesOverlaySuccessText: string = 'Uw ZorgCheck resultaat is verzonden naar';
 
@@ -99,7 +99,7 @@ tandAdviesEenItjeElement: string = 'health-check-result-item:nth-child(1) > heal
 aanvullendAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(2) > div.health-check-result-top__label > div > ui-info > button';
 tandAdviesTweeItjeElement: string = 'health-check-result-item:nth-child(2) > health-check-result-item-top > div > div:nth-child(3) > div.health-check-result-top__label > div > ui-info > button';
 itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapie, tegen een scherpe premie';
-itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin.';
+itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin';
 itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
 itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd. Tot € 500,- per jaar (inclusief Tand Ongevallen).';
