@@ -299,6 +299,13 @@ export class GenericMethods {
     await expect(selectorToString).to.have.string(assertionText);
   }
 
+  async verifyTextContainsInElementWithXpath(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getTextWithXpath(selector);
+    await expect(selectorToString).to.have.string(assertionText);
+  }  
+
   async verifyTextContainsInElementBoolean(selector: string, assertionText: string, waitFor: number): Promise<boolean> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, waitFor);

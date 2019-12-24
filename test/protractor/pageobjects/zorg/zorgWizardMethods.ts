@@ -501,4 +501,14 @@ export class ZorgWizardMethods {
             await genericMethods.clickOnElement('[id="gender-kind'+ i +'_man"]');
         }    
     }
+
+    async eigenRisicoMultipleApplicants(applicantIndex: number, eigenRisicoOptie: number) {
+        await genericMethods.clickOnElementWithXpath('(//div[@formarrayname="applicants"]//*[@class="unive-applicants"])['+ applicantIndex +
+                                                     ']//select/option[@value="'+ eigenRisicoOptie +'"]');
+    }
+
+    async getItemsPerApplicantInOpbouwPremieOverlay(applicantIndex: number, itemIndex: number) {
+        return '((//div[@class="unive-summary__applicant"])['+ applicantIndex +
+                                                     ']//div[@class="unive-summary-item__col"])['+ itemIndex +'"]';
+    }
 }

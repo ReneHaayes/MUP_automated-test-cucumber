@@ -418,6 +418,25 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|persona                     |count|persona2                   |inkomstenNietNL|
         |Zorg Select   |testvrouwCustomerRecognition|8    |testkindCustomerRecognition|Nee            |
 
+    @opbouwPremie
+    Scenario Outline: Valideer het toevoegen van partner/kind
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select zorg geregeld, eigen risico 885, aanvullend beter and tand beter
+        And I select zorg select, eigen risico 485, aanvullend best and tand goed partner <persona1>
+        And I select zorg vrij en eigen risico 885 kind >18 één <persona2>
+        And I select zorg select, eigen risico 385, fysio18, tand ongevallen and werelddekking kind >18 twee <persona2>
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona3>       
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona3>
+        Then validate I am able to open and close all accordions
+        And open premie opbouw overlay
+        And validate data of all subscriptions in premie opbouw overlay
+        
+        Examples:
+        |persona1   |persona2          |persona3          |
+        |testPartner|testkindBoven18Een|testkindOnder18Een|
+
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
         Given I am on the Zorgverzekering page of the Unive website

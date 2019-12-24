@@ -1,7 +1,7 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
-import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData} from '../../support';
-import { crossSellEnum, genderBedanktPaginaEnum } from '../../pageobjects/enum/zorgEnum';
+import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '../../support';
+import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum, eigenRisicoEnum, moduleEnum } from '../../pageobjects/enum/zorgEnum';
 
 When(/^I do nothing$/, async() => {
     await browser.sleep(250);
@@ -535,4 +535,120 @@ When (/^I enter personal data on step 2 of wizard for children with:$/, async(da
         dataTable.count,
         dataTable.persona2
     );
+});
+
+When (/^I select zorg geregeld, eigen risico 885, aanvullend beter and tand beter$/, async () => { 
+    //toevoegen van geregeld, eigen risico 885, aanvullend beter en tand beter voor hoofdverzekerde
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringShowAllBasicInsurancesClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringGeregeldClickElement);
+    await zorgWizardMethods.eigenRisicoMultipleApplicants(1, 5);
+    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
+});
+
+When (/^I select zorg select, eigen risico 485, aanvullend best and tand goed partner (.*)$/, async (persona: string) => { 
+    //voeg partner toe
+    await genericMethods.clickOnElement(zorgWizardElements.addPartnerButtonClickElement);
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+    //toevoegen van select, eigen risico 485, aanvullend best en tand goed voor partner
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringSelectClickElement);
+    await zorgWizardMethods.eigenRisicoMultipleApplicants(2, 1);
+    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
+});
+
+When (/^I select zorg vrij en eigen risico 885 kind >18 één (.*)$/, async (persona: string) => { 
+    //voeg eerste kind boven 18 toe
+    await genericMethods.clickOnElement(zorgWizardElements.addKindButtonClickElement);
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+    //toevoegen van vrij en eigen risico 885 voor eerste kind onder 18
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
+    await zorgWizardMethods.eigenRisicoMultipleApplicants(3, 5);
+});
+
+When (/^I select zorg select, eigen risico 385, fysio18, tand ongevallen and werelddekking kind >18 twee (.*)$/, async (persona: string) => { 
+    //voeg tweede kind boven 18 toe
+    await genericMethods.clickOnElement(zorgWizardElements.addKindButtonClickElement);
+    await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
+    await genericMethods.clickOnElement(zorgWizardElements.partnerKindToevoegenButtonClickElement);
+    //toevoegen van select, eigen risico 385, fysio18, tand ongevallen en werelddekking voor tweede kind onder 18
+    await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringSelectClickElement);
+    await zorgWizardMethods.eigenRisicoMultipleApplicants(4, 0);
+    await genericMethods.clickOnElement(zorgWizardElements.modulesButtonClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.moduleFysio18ClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.moduleTandOngevallenClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.moduleBuitenlanddekkingClickElement);
+});
+
+Then (/^validate I am able to open and close all accordions$/, async() => {
+    await genericMethods.scrollTilTop();
+    await zorgWizardMethods.accordeonOpenClose("5");
+    await zorgWizardMethods.accordeonOpenClose("4");
+    await zorgWizardMethods.accordeonOpenClose("3");
+    await zorgWizardMethods.accordeonOpenClose("2");
+    await zorgWizardMethods.accordeonOpenClose("1");
+    await zorgWizardMethods.accordeonOpenClose("1");
+    await zorgWizardMethods.accordeonOpenClose("2");
+    await zorgWizardMethods.accordeonOpenClose("3");
+    await zorgWizardMethods.accordeonOpenClose("4");
+    await zorgWizardMethods.accordeonOpenClose("5");
+    await zorgWizardMethods.accordeonOpenClose("6");
+});
+
+Then (/^open premie opbouw overlay$/, async() => {
+    await genericMethods.clickOnElement(zorgWizardElements.bekijkOpbouwPremieButtonClickElement);
+    await browser.sleep(500);
+});
+
+Then (/^validate data of all subscriptions in premie opbouw overlay$/, async() => {
+    //valideer pakketten van hoofdverzekerde
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGGEREGELD);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+    eigenRisicoEnum.EigenRisico_885);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[2]', 
+    pakkettenEnum.AANVULLENDBETER);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[3]', 
+    pakkettenEnum.TANDBETER);
+    //valideer pakketten van partner
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[2]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGSELECT);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[2]//div[@class="unive-summary-item__col"])[1]', 
+    eigenRisicoEnum.EigenRisico_485);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[2]//div[@class="unive-summary-item__col"])[2]', 
+    pakkettenEnum.AANVULLENDBEST);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[2]//div[@class="unive-summary-item__col"])[3]', 
+    pakkettenEnum.TANDGOED);
+    //valideer pakketten van eerste kind >18
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[3]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGVRIJ);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[3]//div[@class="unive-summary-item__col"])[1]', 
+    eigenRisicoEnum.EigenRisico_885);
+    //valideer pakketten van tweede kind >18
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[4]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGSELECT);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[4]//div[@class="unive-summary-item__col"])[1]', 
+    eigenRisicoEnum.EigenRisico_385);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[4]//div[@class="unive-summary-item__col"])[2]', 
+    moduleEnum.FYSIO18);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[4]//div[@class="unive-summary-item__col"])[3]', 
+    moduleEnum.TANDONGEVALLENMODULE);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[4]//div[@class="unive-summary-item__col"])[4]', 
+    moduleEnum.BUITENLANDDEKKING);    
+    //valideer pakketten van eerste kind <18
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[5]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGGEREGELD);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[5]//div[@class="unive-summary-item__col"])[2]', 
+    pakkettenEnum.AANVULLENDBEST); 
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[5]//div[@class="unive-summary-item__col"])[3]', 
+    pakkettenEnum.TANDBETER);   
+    //valideer pakketten van tweede kind <18
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[6]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGGEREGELD);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[6]//div[@class="unive-summary-item__col"])[2]', 
+    pakkettenEnum.AANVULLENDBEST); 
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[6]//div[@class="unive-summary-item__col"])[3]', 
+    pakkettenEnum.TANDBETER);  
 });

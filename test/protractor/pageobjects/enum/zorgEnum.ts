@@ -15,6 +15,15 @@ export enum pakkettenEnum {
     TANDONGEVALLEN = 'Tand Ongevallen'
   }
 
+export enum moduleEnum {
+    FYSIO9 = 'Fysio 9',
+    FYSIO18 = 'Fysio 18',
+    TANDONGEVALLENMODULE = 'Tand Ongevallen',
+    TAND250 = 'Tand 250',
+    TAND500 = 'Tand 500',
+    BUITENLANDDEKKING = 'Buitenlanddekking'
+}
+
 export enum collectievenEnum {
     OMRINGMEDEWERKERS = 'Omring Medewerkers',
     CARINOVASERVICEPAKKET = 'Carinova Servicepakket',
