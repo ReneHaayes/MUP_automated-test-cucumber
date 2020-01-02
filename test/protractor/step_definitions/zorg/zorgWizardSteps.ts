@@ -222,7 +222,7 @@ When(/^I click on Bekijk de vergoedingen button of basic insurance with:$/, asyn
     );
 });
 
-Then(/^validate basic insurances are shown correctly with:$/, async (data) => {
+Then(/^validate basic insurances are shown correctly in overlay with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgWizardMethods.checkBasisVergoedingenOverlay(
         dataTable.insuranceBasis
@@ -651,4 +651,15 @@ Then (/^validate data of all subscriptions in premie opbouw overlay$/, async() =
     pakkettenEnum.AANVULLENDBEST); 
     await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[6]//div[@class="unive-summary-item__col"])[3]', 
     pakkettenEnum.TANDBETER);  
+});
+
+Then (/^validate overlay wachttijd Tand Best opens$/, async() => {
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.actievePolisOverlayHeaderTextElement, 150);
+    await genericMethods.verifyTextInElement(zorgWizardElements.actievePolisOverlayHeaderTextElement, zorgWizardElements.tandBestWachttijdOverlayHeaderText);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBestWachttijdOverlayPakketWijzigenButtonClickElement, 150);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBestWachttijdOverlayVolgendeUwGegevensButtonClickElement, 150);
+});
+
+Then (/^I click on Volgende button in overlay wachttijd Tand Best$/, async() => {
+    await genericMethods.clickOnElement(zorgWizardElements.tandBestWachttijdOverlayVolgendeUwGegevensButtonClickElement);
 });

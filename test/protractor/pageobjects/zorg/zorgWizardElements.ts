@@ -31,6 +31,9 @@ deletePartnerButtonClickElement: string = 'unive-applicants:nth-child(2) > div >
 achtKinderenMeldingTextElement: string = 'unive-partner-child > div > div:nth-child(2) > span';
 partnerAlToegevoegdMeldingTextElement: string = 'unive-partner-child > div > div:nth-child(1) > span';
 closeOpbouwPremieBerekeningButtonClickElement: string = 'div.unive-modal__header > button';
+tandBestWachttijdOverlayPakketWijzigenButtonClickElement: string = 'div.dental-modal__footer > button.unive-modal__link.button.button--plain';
+tandBestWachttijdOverlayVolgendeUwGegevensButtonClickElement: string = 'div.dental-modal__footer > button.button.button--primary.dental-modal__footer__button';
+tandBestWachttijdOverlayHeaderText: string = 'Wachttijd van toepassing';
 
     //OVERLAY PARTNER KIND
 switchToKindTabButtonClickElement: string = 'unive-partner-child-modal > unive-button-switch > div > button:nth-child(2)';

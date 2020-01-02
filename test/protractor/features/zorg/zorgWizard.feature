@@ -193,7 +193,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
 
         Examples:
         |insuranceBasis|persona1|persona2           |inkomstenNietNL|
-        |Zorg Select   |pogba   |testmanActivePolicy|Nee            |
+        |Zorg Select   |annie   |testmanActivePolicy|Nee            |
 
     @floatingButton
     Scenario Outline: valideer aanwezigheid floating button bij wegnavigeren uit de wizard
@@ -343,7 +343,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
 
         Examples:
         |insuranceBasis|persona                     |persona2|persona3   |persona4                   |
-        |Zorg Select   |testvrouwCustomerRecognition|pogba   |testPartner|testkindCustomerRecognition|
+        |Zorg Select   |testvrouwCustomerRecognition|annie   |testPartner|testkindCustomerRecognition|
 
     @parameterURLBasisverzekering
     Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor de basisverzekering de wizard binnen te komen
@@ -437,12 +437,28 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona1   |persona2          |persona3          |
         |testPartner|testkindBoven18Een|testkindOnder18Een|
 
+    @tandBestWachttijd
+    Scenario Outline: Valideer de wachttijd overlay bij het Tand Best pakket
+        Given I am on the Zorgverzekering page of the Unive website
+        And I select basic insurance no collective with:
+        |insuranceBasis|<insuranceBasis>|
+        And I select tand insurance with:
+        |insuranceTand|<insuranceTand>|
+        When I click on Volgende page one
+        Then validate overlay wachttijd Tand Best opens
+        And I click on Volgende button in overlay wachttijd Tand Best
+        And I validate that all legends are visible on step 2
+
+        Examples:
+        |insuranceBasis|insuranceTand|
+        |Zorg Select   |Tand Best    |
+
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen en sluiten overlay zonder selectie verzekering
         Given I am on the Zorgverzekering page of the Unive website
         When I click on Bekijk de vergoedingen button of basic insurance with:
         |insuranceBasis|<insuranceBasis>|
-        Then validate basic insurances are shown correctly with:
+        Then validate basic insurances are shown correctly in overlay with:
         |insuranceBasis|<insuranceBasis>|
         And close the overlay
 
@@ -457,7 +473,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I click on Bekijk de vergoedingen button of basic insurance with:
         |insuranceBasis|<insuranceBasis>|
-        And validate basic insurances are shown correctly with:
+        And validate basic insurances are shown correctly in overlay with:
         |insuranceBasis|<insuranceBasis>|
         And select basic insurance from overlay with:
         |insuranceBasis|<insuranceBasis>|
