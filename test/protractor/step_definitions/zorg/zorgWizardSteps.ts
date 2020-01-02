@@ -240,6 +240,17 @@ Then(/^validate aanvullende insurances are shown correctly in overlay$/, async (
     await zorgWizardMethods.checkAanvullendVergoedingenOverlay();
 });
 
+When(/^I click on Bekijk de vergoedingen button of tand insurance with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.openTandVergoedingenOverlay(
+        dataTable.insuranceTand
+    );
+});
+
+Then(/^validate tand insurances are shown correctly in overlay$/, async () => {
+    await zorgWizardMethods.checkTandVergoedingenOverlay();
+});
+
 Then(/^close the overlay$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.closeOverlayButtonClickElement);
     await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
@@ -256,6 +267,13 @@ Then(/^select aanvullende insurance from overlay with:$/, async (data) => {
     const dataTable = data.rowsHash();
     await zorgWizardMethods.selectAanvullendVergoedingenOverlay(
         dataTable.insuranceAanvullend
+    );
+});
+
+Then(/^select tand insurance from overlay with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.selectTandVergoedingenOverlay(
+        dataTable.insuranceTand
     );
 });
 

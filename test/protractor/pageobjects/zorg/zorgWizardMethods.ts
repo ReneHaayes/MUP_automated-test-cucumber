@@ -355,6 +355,49 @@ export class ZorgWizardMethods {
         }
     }
 
+    async openTandVergoedingenOverlay(insuranceTand: string){
+        if(insuranceTand == pakkettenEnum.TANDONGEVALLEN){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayTandOngevallenClickElement);
+        }
+        else if(insuranceTand == pakkettenEnum.TANDGOED){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayTandGoedClickElement);
+        }
+        else if(insuranceTand == pakkettenEnum.TANDBETER){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayTandBeterClickElement);
+        }
+        else if(insuranceTand == pakkettenEnum.TANDBEST){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayTandBestClickElement);
+        }
+        else {
+            throw new Error('No correct aanvullende insurance found for' + insuranceTand);
+        }
+    }
+
+    async checkTandVergoedingenOverlay(){
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayTandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN);
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayTandGoedTextElement, pakkettenEnum.TANDGOED);
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayTandBeterTextElement, pakkettenEnum.TANDBETER);
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayTandBestTextElement, pakkettenEnum.TANDBEST);
+    }
+
+    async selectTandVergoedingenOverlay(insuranceTand: string){
+        if(insuranceTand == pakkettenEnum.TANDONGEVALLEN){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingTandOngevallenButtonClickElement);
+        }
+        else if(insuranceTand == pakkettenEnum.TANDGOED){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingTandGoedButtonClickElement);
+        }
+        else if(insuranceTand == pakkettenEnum.TANDBETER){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingTandBeterButtonClickElement);
+        }
+        else if(insuranceTand == pakkettenEnum.TANDBEST){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingTandBestButtonClickElement);
+        }
+        else {
+            throw new Error('No correct basic insurance found for' + insuranceTand);
+        }
+    }
+
     async selectAanvullendInsurance(insuranceAanvullend: string){
         if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
             await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);

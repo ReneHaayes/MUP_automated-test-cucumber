@@ -161,6 +161,24 @@ selecteerVergoedingAanvullendGoedButtonClickElement: string = '(//unive-addition
 selecteerVergoedingAanvullendBeterButtonClickElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="UAVU"]/.//button)[2]';
 selecteerVergoedingAanvullendBestButtonClickElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="PZU"]/.//button)[2]';
 
+//VERGOEDINGENOVERLAYTAND
+bekijkVergoedingenOverlayTandOngevallenClickElement: string = '//unive-additional-insurances-item[@data-additional-insurance-code="BTO"]' +
+                                                              '/.//button[@class="button button--plain" and contains(text(), "Bekijk de vergoedingen")]';
+bekijkVergoedingenOverlayTandGoedClickElement: string = '//unive-additional-insurances-item[@data-additional-insurance-code="GTU"]' +
+                                                        '/.//button[@class="button button--plain" and contains(text(), "Bekijk de vergoedingen")]';
+bekijkVergoedingenOverlayTandBeterClickElement: string = '//unive-additional-insurances-item[@data-additional-insurance-code="BTU"]' +
+                                                         '/.//button[@class="button button--plain" and contains(text(), "Bekijk de vergoedingen")]';
+bekijkVergoedingenOverlayTandBestClickElement: string = '//unive-additional-insurances-item[@data-additional-insurance-code="UTU"]' +
+                                                        '/.//button[@class="button button--plain" and contains(text(), "Bekijk de vergoedingen")]';
+vergoedingenOverlayTandOngevallenTextElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="BTO"]/.//label)[2]';
+vergoedingenOverlayTandGoedTextElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="GTU"]/.//label)[2]';
+vergoedingenOverlayTandBeterTextElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="BTU"]/.//label)[2]';
+vergoedingenOverlayTandBestTextElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="UTU"]/.//label)[2]';
+selecteerVergoedingTandOngevallenButtonClickElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="BTO"]/.//button)[2]';
+selecteerVergoedingTandGoedButtonClickElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="GTU"]/.//button)[2]';
+selecteerVergoedingTandBeterButtonClickElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="BTU"]/.//button)[2]';
+selecteerVergoedingTandBestButtonClickElement: string = '(//unive-additional-insurances-item[@data-additional-insurance-code="UTU"]/.//button)[2]';                                                        
+
 //ZORGWIZARD PAGINA 2 UW GEGEVENS
 uwGegevensBirthdateTextElement: string = '[id="dateofbirth"]';
 uwGegevensInitalsTextElement: string = '[id="initials"]';
