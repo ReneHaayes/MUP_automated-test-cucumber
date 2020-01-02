@@ -319,6 +319,42 @@ export class ZorgWizardMethods {
         }
     }
 
+    async openAanvullendVergoedingenOverlay(insuranceAanvullend: string){
+        if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayAanvullendGoedClickElement);
+        }
+        else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBETER){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayAanvullendBeterClickElement);
+        }
+        else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBEST){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.bekijkVergoedingenOverlayAanvullendBestClickElement);
+        }
+        else {
+            throw new Error('No correct aanvullende insurance found for' + insuranceAanvullend);
+        }
+    }
+
+    async checkAanvullendVergoedingenOverlay(){
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayAanvullendGoedTextElement, pakkettenEnum.AANVULLENDGOED);
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayAanvullendBeterTextElement, pakkettenEnum.AANVULLENDBETER);
+        await genericMethods.verifyTextContainsInElementWithXpath(zorgWizardElements.vergoedingenOverlayAanvullendBestTextElement, pakkettenEnum.AANVULLENDBEST);
+    }
+
+    async selectAanvullendVergoedingenOverlay(insuranceAanvullend: string){
+        if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingAanvullendGoedButtonClickElement);
+        }
+        else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBETER){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingAanvullendBeterButtonClickElement);
+        }
+        else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBEST){
+            await genericMethods.clickOnElementWithXpath(zorgWizardElements.selecteerVergoedingAanvullendBestButtonClickElement);
+        }
+        else {
+            throw new Error('No correct basic insurance found for' + insuranceAanvullend);
+        }
+    }
+
     async selectAanvullendInsurance(insuranceAanvullend: string){
         if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
             await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);

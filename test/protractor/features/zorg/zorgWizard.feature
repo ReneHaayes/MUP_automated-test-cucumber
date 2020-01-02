@@ -465,9 +465,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |insuranceBasis|
         |Zorg Select   |
-        |Zorg Vrij     |
-        |Zorg Geregeld |
-    
+  
     @vergoedingenOverlay
     Scenario Outline: valideer overlay basisverzekeringen met selecteren van een basisverzekering
         Given I am on the Zorgverzekering page of the Unive website
@@ -477,10 +475,15 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|<insuranceBasis>|
         And select basic insurance from overlay with:
         |insuranceBasis|<insuranceBasis>|
-        Then validate overlay is closed and page 1 of wizard is shown
+        And I click on Bekijk de vergoedingen button of aanvullende insurance with:
+        |insuranceAanvullend|<insuranceAanvullend>|
+        Then validate aanvullende insurances are shown correctly in overlay
+        And select aanvullende insurance from overlay with:
+        |insuranceAanvullend|<insuranceAanvullend>|
+        And validate overlay is closed and page 1 of wizard is shown
 
         Examples:
-        |insuranceBasis|
-        |Zorg Select   |
-        |Zorg Vrij     |
-        |Zorg Geregeld |
+        |insuranceBasis|insuranceAanvullend|
+        |Zorg Select   |Aanvullend Goed    |
+        |Zorg Vrij     |Aanvullend Beter   |
+        |Zorg Geregeld |Aanvullend Best    |
