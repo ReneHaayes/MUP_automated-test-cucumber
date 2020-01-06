@@ -493,3 +493,82 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |Zorg Vrij     |Aanvullend Beter   |Tand Goed      |
         |Zorg Geregeld |Aanvullend Best    |Tand Beter     |
         |Zorg Select   |Aanvullend Beter   |Tand Ongevallen|
+    
+    @ouderKindTabel
+    Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op pakketten en collectief
+        Given I am on the Zorgverzekering page of the Unive website
+        And I add a hoofdverzekerde with zorg select, aanvullend best en tand goed
+        And I click on partner toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona>
+        And I add for partner zorg vrij, aanvullend goed en tand best
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona1>
+        And I validate child under 18 has zorg vrij, aanvullend best and tand best
+        When I change hoofdverzekerde from zorg select to zorg geregeld
+        And I click on add collective button in wizard
+        And I add a collective with:
+        |collective|Carinova Servicepakket|
+        And I validate child under 18 has zorg vrij and tand best
+        And I add to partner collectief aanvullend goed
+        Then validate child under 18 has zorg vrij, collectief aanvullend goed and tand best
+        And I delete the collective in wizard
+
+        Examples:
+        |persona    |persona1          |      
+        |testPartner|testkindOnder18Een|
+    
+    @ouderKindTabel
+    Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op losse modules
+        Given I am on the Zorgverzekering page of the Unive website
+        And I add a hoofdverzekerde with zorg geregeld, aanvullend best en tand goed
+        And I click on partner toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona>
+        And I add for partner zorg vrij en tand best
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona1>
+        And I validate child under 18 has zorg vrij, aanvullend best and tand best
+        When I change partner to zorg select and modules fysio9, tand500 and werelddekking
+        And I validate child under 18 has zorg geregeld, aanvullend best and tand goed
+        And I change hoofdverzekerde to zorg select and modules fysio18, tand ongevallen, tand250 and werelddekking
+        And I validate child under 18 has zorg select and modules fysio18, tand ongevallen, tand500 and werelddekking
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona2>
+        And I add for child above 18 zorg vrij, aanvullend best en tand best
+        And I validate child under 18 has zorg select and modules fysio18, tand ongevallen, tand500 and werelddekking
+        And I change hoofdverzekerde and partner to zorg geregeld
+        Then validate child under 18 has zorg geregeld without any modules
+        And add to partner tand goed
+        And validate child under 18 has zorg geregeld and tand goed
+
+        Examples:
+        |persona    |persona1          |persona2          |      
+        |testPartner|testkindOnder18Een|testkindBoven18Een|
+
+        @ouderKindTabel
+    Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op kinderen toevoegen/verwijderen
+        Given I am on the Zorgverzekering page of the Unive website
+        And I click on add collective button in wizard
+        And I add a collective with:
+        |collective|Carinova Servicepakket| 
+        And I add a hoofdverzekerde with zorg vrij
+        And I click on partner toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona>
+        And I add for partner zorg geregeld, collectief aanvullend goed and tand goed
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona1>
+        And I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed extended accordeon
+        When I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona2>
+        And I add for first child above 18 zorg vrij and tand best
+        And I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona2>
+        And I add for second child above 18 zorg vrij and tand best
+        And I delete child under 18
+        And I click on kind toevoegen button
+        And I add a partner or child -not same insurance checkbox checked- with <persona1>
+        Then I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed
+
+        Examples:
+        |persona    |persona1          |persona2          |      
+        |testPartner|testkindOnder18Een|testkindBoven18Een|

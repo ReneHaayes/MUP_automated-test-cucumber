@@ -28,6 +28,8 @@ addPartnerButtonClickElement: string = 'unive-partner-child > div > div:nth-chil
 addKindButtonClickElement: string = 'unive-partner-child > div > div:nth-child(2) > button';
 deletePartnerButtonClickElement: string = 'unive-applicants:nth-child(2) > div > unive-applicants-heading > div > div > div > ' + 
                                           'div.unive-applicants-heading__col.unive-applicants-heading__col--right > button';
+deleteFirstChildButtonClickElement: string = 'unive-applicants:nth-child(3) > div > unive-applicants-heading > div > div > div > ' + 
+'div.unive-applicants-heading__col.unive-applicants-heading__col--right > button';
 achtKinderenMeldingTextElement: string = 'unive-partner-child > div > div:nth-child(2) > span';
 partnerAlToegevoegdMeldingTextElement: string = 'unive-partner-child > div > div:nth-child(1) > span';
 closeOpbouwPremieBerekeningButtonClickElement: string = 'div.unive-modal__header > button';
@@ -120,6 +122,10 @@ kindOnder18BasisSelectActive = '[class="unive-basic-insurances-coverage unive-ba
                                '[data-basic-insurance-code="ZVSU"]';
 kindOnder18AanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                   '[data-additional-insurance-code="BAVU"]';
+kindOnder18CollectiefAanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                            '[data-additional-insurance-code="BAVZU"]';
+kindOnder18CollectiefAanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                            '[data-additional-insurance-code="PZZU"]';
 kindOnder18AanvullendBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
                                    '[data-additional-insurance-code="UAVU"]';
 kindOnder18AanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
@@ -132,7 +138,16 @@ kindOnder18TandBeterActive = '[class="unive-additional-insurances-item unive-add
                              '[data-additional-insurance-code="BTU"]';
 kindOnder18TandBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                             '[data-additional-insurance-code="UTU"]';
+kindOnder18ModuleFysio18Active = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                 '[data-additional-insurance-code="BFB"]';
+kindOnder18ModuleTandOngevallenActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                        '[data-additional-insurance-code="TOM"]';
+kindOnder18ModuleTand500Active = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                 '[data-additional-insurance-code="BTB"]';
+kindOnder18ModuleBuitenlanddekkingActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                           '[data-additional-insurance-code="BBB"]';
 
+                                 
 //VERGOEDINGENOVERLAYBASIS
 bekijkVergoedingenOverlayZorgSelectClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="ZVSU"]/.//button[@class="button button--plain"]';
 bekijkVergoedingenOverlayZorgVrijClickElement: string = '//unive-basic-insurances-coverage[@data-basic-insurance-code="VRY"]/.//button[@class="button button--plain"]';
@@ -218,7 +233,7 @@ uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insu
 actievePolisOverlayHeaderTextElement: string = 'div > div.unive-modal__header > div';
 actievePolisOverlayHeaderText: string = 'Uw wijzigingen doorgeven?';
 actievePolisOverlayWijzigButtonClickElement: string = 'div.unive-modal__content > a';
-actievePolisOverlayWijzigMijnUniveURL: string = 'https://gezondheid.unive.nl/mijnunivezorg/inloggen';
+actievePolisOverlayWijzigMijnUniveURL: string = 'unive.nl/mijnunivezorg/inloggen';
 mijnUniveH1TextElement: string = 'div > h1';
 mijnUniveH1Text: string = 'Mijn Univé Zorg';
 uwGegevensPartnerInitialsTextElement: string = '[id="initials-partner"]';
