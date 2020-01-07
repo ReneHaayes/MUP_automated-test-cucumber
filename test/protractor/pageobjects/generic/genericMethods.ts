@@ -106,6 +106,15 @@ export class GenericMethods {
     }
   }
 
+  async waitForElementIsPresent(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css(selector));
+      await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is not visible');
+    }
+  }
+
   async verifyUrlContains(url: string) {
     const currentUrl: string = await browser.getCurrentUrl();
     await expect(currentUrl).to.have.string(url);
