@@ -193,7 +193,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
 
         Examples:
         |insuranceBasis|persona1|persona2           |inkomstenNietNL|
-        |Zorg Select   |ronaldo   |testmanActivePolicy|Nee            |
+        |Zorg Select   |annie   |testmanActivePolicy|Nee            |
 
     @floatingButton
     Scenario Outline: valideer aanwezigheid floating button bij wegnavigeren uit de wizard
@@ -343,7 +343,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
 
         Examples:
         |insuranceBasis|persona                     |persona2|persona3   |persona4                   |
-        |Zorg Select   |testvrouwCustomerRecognition|ronaldo   |testPartner|testkindCustomerRecognition|
+        |Zorg Select   |testvrouwCustomerRecognition|annie   |testPartner|testkindCustomerRecognition|
 
     @parameterURLBasisverzekering
     Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor de basisverzekering de wizard binnen te komen
