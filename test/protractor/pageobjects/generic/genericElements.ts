@@ -69,7 +69,7 @@ export class GenericElements {
   handelaarsKentekenVerzekering: string = 'zakelijk/handelaarskentekenverzekering';
   milieSchadeVerzekering: string = 'zakelijk/milieuschadeverzekering';
   zakelijkMotorVerzekering: string = 'zakelijk/motorverzekering';
-  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtautoverzekering';
+  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering: string = 'zakelijk/werkmaterieelverzekering';
   loginMijnUniveParticulierURL: string = 'mijnunive/inloggen';
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
