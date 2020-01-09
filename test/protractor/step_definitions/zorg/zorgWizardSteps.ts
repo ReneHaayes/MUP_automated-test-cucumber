@@ -101,6 +101,7 @@ When(/^I click on Volgende page one$/, async () => {
 
 When(/^I click on Volgende page two$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdH1TextElement, 150);
 });
 
 When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: string) => {
@@ -161,7 +162,8 @@ When(/^I select geen verzekering overstapreden in dropdown$/, async () => {
 });
 
 When(/^I validate that all legends are visible on step 3$/, async () => {
-    await browser.sleep(250);
+    await browser.sleep(500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdH1TextElement, 150);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, zorgWizardElements.bijnaVerzekerdBurgerservicenummerText);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
@@ -714,6 +716,7 @@ When (/^I add for partner zorg vrij, aanvullend goed en tand best$/, async() => 
 });
 
 When (/^I validate child under 18 has zorg vrij, aanvullend best and tand best$/, async() => {
+    await browser.sleep(500);
     await genericMethods.scrollTilTop();
     await browser.sleep(500);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);

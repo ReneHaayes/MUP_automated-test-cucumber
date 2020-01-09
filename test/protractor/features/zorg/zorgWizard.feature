@@ -419,7 +419,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |Zorg Select   |testvrouwCustomerRecognition|8    |testkindCustomerRecognition|Nee            |
 
     @opbouwPremie
-    Scenario Outline: Valideer het toevoegen van partner/kind
+    Scenario Outline: Valideer opbouw premie
         Given I am on the Zorgverzekering page of the Unive website
         And I select zorg geregeld, eigen risico 885, aanvullend beter and tand beter
         And I select zorg select, eigen risico 485, aanvullend best and tand goed partner <persona1>
