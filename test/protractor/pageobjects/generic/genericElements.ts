@@ -56,6 +56,7 @@ export class GenericElements {
   overUnive: string = 'overunive';
   zipcodePlaceZoeken: string = 'contact/zoek-winkel';
   zakelijkZzp: string = 'zakelijk/zzp';
+  cms: string = 'cms/';
   zakelijkAgrarier: string = 'zakelijk/agrariers';
   zakelijkGebouwen: string = 'zakelijk/gebouwenverzekering';
   afspraakMakenZakelijk: string = 'zakelijk/klantenservice/afspraak';

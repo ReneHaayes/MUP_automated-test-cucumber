@@ -171,6 +171,9 @@ export class GetUrlUnive {
       case homePageEnum.ZZP_ER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkZzp;
       }
+      case homePageEnum.CMS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.cms;
+      }
       case homePageEnum.AGRARIER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkAgrarier;
       }
