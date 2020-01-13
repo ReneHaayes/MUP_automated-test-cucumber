@@ -41,6 +41,12 @@ export enum personaName {
   SALAH = 'salah',
   NEYMAR = 'neymar',
   POGBA = 'pogba',
+  TESTVROUWCUSTOMERRECOGNITION = 'testvrouwCustomerRecognition',
+  TESTMANACTIVEPOLICY = 'testmanActivePolicy',
+  TESTKINDCUSTOMERRECOGNITION = 'testkindCustomerRecognition',
+  TESTKINDONDER18EEN = 'testkindOnder18Een',
+  TESTKINDBOVEN18EEN = 'testkindBoven18Een',
+  TESTPARTNER = 'testPartner',
   AAKOEK = 'aakoek',
   AKO = 'ako',
   AVONK = 'avonk',
@@ -65,7 +71,8 @@ export enum genericEnum {
   NEW = 'new',
   SECONDHAND = 'secondhand',
   REPLACEMENT = 'replacement',
-  EXTRA = 'EXTRA'
+  EXTRA = 'EXTRA',
+  GEEN = 'Geen'
 }
 
 export enum verzekeringPaginasEnum {
@@ -168,6 +175,20 @@ export enum verzekeringPaginasEnum {
   OAUTH = 'oauth',
   VERZEKERINGEN = 'verzekeringen',
   BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
+  ZORGCHECKTOOL = 'zorgCheckTool',
+  GEZONDHEID = 'gezondheid',
+  ZORGCHECKTOOLBKPARAMETER = 'zorgCheckToolBekendeKlantParameter',
+  ZORGCHECKTOOLTHUISZORGCOLLECTIEFPARAMETER = 'zorgCheckToolThuiszorgCollectiefParameter',
+  ZORGCHECKTOOLNIETTHUISZORGCOLLECTIEFPARAMETER = 'zorgCheckToolNietThuiszorgCollectiefParameter',
+  EIGENRISICO = 'eigenRisico',
+  ZORGVRIJ = 'zorgVrij',
+  ZORGVERZEKERINGTHUISZORGCOLLECTIEFPARAMETER = 'zorgVerzekeringThuiszorgCollectiefParameter',
+  ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFPARAMETER = 'zorgVerzekeringNietThuiszorgCollectiefParameter',
+  ZORGVERZEKERINGTHUISZORGCOLLECTIEFZORGSELECTPARAMETER = 'zorgVerzekeringThuiszorgCollectiefZorgSelectParameter',
+  ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFZORGSELECTPARAMETER = 'zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter',
+  ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
+  ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
+  ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter',
 }
 
 export enum polisDetailsUrlEnum {
@@ -200,6 +221,13 @@ export enum numbersEnum {
   _8 = '8',
   _9 = '9',
   _10 = '10'
+}
+
+export enum multipleChoiceEnum {
+  A = 'A',
+  B = 'B',
+  C = 'C',
+  D = 'D',
 }
 
 export enum activityEnum {

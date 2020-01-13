@@ -249,6 +249,45 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.BEKIJK_DE_VEEL_GESTELDE_VRAGEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.veelgesteldevragenURL;
       }
+      case verzekeringPaginasEnum.ZORGCHECKTOOL: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktool;
+      }
+      case verzekeringPaginasEnum.ZORGCHECKTOOLBKPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktoolBekendeKlantParameter;
+      }
+      case verzekeringPaginasEnum.ZORGCHECKTOOLTHUISZORGCOLLECTIEFPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktoolThuiszorgCollectiefParameter;
+      }
+      case verzekeringPaginasEnum.ZORGCHECKTOOLNIETTHUISZORGCOLLECTIEFPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgchecktoolNietThuiszorgCollectiefParameter;
+      }
+      case verzekeringPaginasEnum.EIGENRISICO: {
+        return this.getEnv(browser.params.env.environment) + genericElements.eigenRisico;
+      }
+      case verzekeringPaginasEnum.ZORGVRIJ: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVrij;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGTHUISZORGCOLLECTIEFPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringThuiszorgCollectiefParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringNietThuiszorgCollectiefParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGTHUISZORGCOLLECTIEFZORGSELECTPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringThuiszorgCollectiefZorgSelectParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFZORGSELECTPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGBASISSELECTPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisSelectParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGBASISGEREGELDPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisGeregeldParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGBASISVRIJPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisVrijParameter;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -280,6 +319,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.HOME_SERVICE: {
         return 'https://service.unive.nl/';
+      }
+      case verzekeringPaginasEnum.GEZONDHEID: {
+        return 'https://gezondheid.unive.nl/';
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

@@ -16,6 +16,8 @@ import {AutoVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/
 import {AutoVerzekeringElementsStepThree} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringElementsStepThree";
 import {WoonVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/huisVerzekeringen/woonVerzekeringElements";
 import {ReisVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
+import {ZorgCheckToolElements} from "../pageobjects/zorg/zorgCheckToolElements";
+import {ZorgWizardElements} from "../pageobjects/zorg/zorgWizardElements";
 import {SchadeServiceElements} from "../pageobjects/Klantenservice/SchadeServiceElements";
 import {AnalyticsAutoverzekeringElements} from "../pageobjects/analytics/analyticsAutoverzekeringElements";
 
@@ -38,5 +40,7 @@ export const autoVerzekeringElementsStepThree: AutoVerzekeringElementsStepThree 
 export const woonVerzekeringElements: WoonVerzekeringElements = new WoonVerzekeringElements();
 export const aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerElements = new AansprakelijkheidsVerzekerElements();
 export const reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
+export const zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
+export const zorgWizardElements: ZorgWizardElements = new ZorgWizardElements();
 export const schadeServiceElements: SchadeServiceElements = new SchadeServiceElements();
 export const analyticsAutoverzekeringElements: AnalyticsAutoverzekeringElements = new AnalyticsAutoverzekeringElements();
