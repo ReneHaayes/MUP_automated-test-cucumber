@@ -46,8 +46,7 @@ export enum personaName {
   TESTKINDCUSTOMERRECOGNITION = 'testkindCustomerRecognition',
   TESTKINDONDER18EEN = 'testkindOnder18Een',
   TESTKINDBOVEN18EEN = 'testkindBoven18Een',
-  TESTPARTNER = 'testPartner'
-  POGBA = 'pogba',
+  TESTPARTNER = 'testPartner',
   AAKOEK = 'aakoek',
   AKO = 'ako',
   AVONK = 'avonk',
@@ -189,8 +188,7 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGNIETTHUISZORGCOLLECTIEFZORGSELECTPARAMETER = 'zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter',
   ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
   ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
-  ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter'
-  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
+  ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter',
 }
 
 export enum polisDetailsUrlEnum {

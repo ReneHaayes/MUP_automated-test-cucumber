@@ -1,4 +1,3 @@
-import {MopedElements} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/mopedElements";
 import {BikeElements} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/bikeElements";
 import {ScootMobielVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/transportVerzekeringen/scootMobielVerzekeringElements";
 import {CaravanVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/caravanVerzekeringElements";
