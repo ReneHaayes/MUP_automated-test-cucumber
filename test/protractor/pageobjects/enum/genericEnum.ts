@@ -35,7 +35,7 @@ export enum specificIdentification {
 
 export enum personaName {
   ILLING = 'illing',
-  ANNIE = 'annie',
+  WOESTENBURG = 'woestenburg',
   RONALDO = 'ronaldo',
   MESSI = 'messi',
   SALAH = 'salah',
@@ -47,6 +47,11 @@ export enum personaName {
   TESTKINDONDER18EEN = 'testkindOnder18Een',
   TESTKINDBOVEN18EEN = 'testkindBoven18Een',
   TESTPARTNER = 'testPartner'
+  POGBA = 'pogba',
+  AAKOEK = 'aakoek',
+  AKO = 'ako',
+  AVONK = 'avonk',
+  ERICHTERS = 'erichters'
 }
 
 export enum companyNameEnum {
@@ -79,9 +84,13 @@ export enum verzekeringPaginasEnum {
   ALLE_VERZEKERINGEN_ZAKELIJK = 'alle verzekeringen zakelijk',
   HOME_BUS = 'business',
   HOME_PAT = 'pat',
+  HOME_OPA = 'opa',
   HOME_TSTPROJ = 'tstProj',
   HOME_PI = 'pi',
   HOME_TST = 'tst',
+  HOME_ZAKELIJK = 'zakelijktest',
+  HOME_SALES = 'sales',
+  HOME_SERVICE = 'service',
   AUTOVERZEKERING_PAT = 'Autoverzekering',
   AOVZZP_PAT = 'aovZzp',
   ANNULERINGSVERZEKERING = 'Annuleringsverzekering',
@@ -117,6 +126,7 @@ export enum verzekeringPaginasEnum {
   CARAVANVERZEKERING_PP = 'caravanverzekering product page',
   DOORLOPENDE_ANNULERINGSVERZEKERING = 'doorlopende annuleringsverzekering',
   FIETSVERZEKERING = 'Fietsverzekering',
+  FIETSVERZEKERING_PP = 'fietsverzekering pp',
   ELEKTRISCHE_FIETSVERZEKERING = 'Elektrische fietsverzekering',
   ELEKTRISCHE_FIETSVERZEKERING_PP = 'elektrische-fietsverzekering',
   KOSTBAARHEDEN_VERZEKERING = 'Kostbaarhedenverzekering',
@@ -150,12 +160,11 @@ export enum verzekeringPaginasEnum {
   GEBOUWENVERZEKERING = 'Gebouwenverzekering',
   HANDELAARSKENTEKENVERZEKERING = 'Handelaarskentekenverzekering',
   MILIEUSCHADEVERZEKERING = 'Milieuschadeverzekering',
-  VRACHTAUTOVERZEKERING = 'Vrachtautoverzekering',
+  VRACHTAUTOVERZEKERING = 'Vrachtwagenverzekering',
   WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering',
   MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
   MIJN_UNIVE_BETAALGEGEVENS_WIJZIGEN = 'mijn unive betaalgegevens wijzigen',
   MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN = 'mijn unive contactvoorkeuren doorgeven',
-  MIJN_UNIVE_IDENTITEITSGEGEVENS_DOORGEVEN = 'mijn unive identiteitsgegevens doorgeven',
   MIJN_UNIVE_VERHUISGEGEVENS_DOORGEVEN = 'mijn unive verhuisgegevens doorgeven',
   MIJN_UNIVE_MIJN_GEGEVENS = 'mijn unive mijn gegevens',
   MIJN_UNIVE_GEZINSSITUATIE_WIJZIGEN = 'mijn unive gezinssituatie wijzigen',
@@ -181,6 +190,7 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
   ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
   ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter'
+  BEKIJK_DE_VEEL_GESTELDE_VRAGEN = 'bekijk de veelgestelde vragen',
 }
 
 export enum polisDetailsUrlEnum {

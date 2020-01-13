@@ -1,6 +1,5 @@
-import {PaymentData} from "../../enum/MijnUniveParticulierEnum";
-import {familyCompositionEnum} from "../../enum/aansprakelijkheidsVerzekeringEnum";
-import {genericMethods, mijnUniveAccountElements} from "../../../support";
+import {genericMethods, mijnUniveAccountElements} from "@support";
+import {familyCompositionEnum, PaymentData} from "@enum";
 
 export class PersoonlijkeGegevensMethods {
 
@@ -25,7 +24,7 @@ export class PersoonlijkeGegevensMethods {
         await genericMethods.typeText(mijnUniveAccountElements.newIbanAccountnumberInputElement, PaymentData.IBAN);
         await genericMethods.typeText(mijnUniveAccountElements.startDateChangeInputElement, genericMethods.getDate('today'));
         await genericMethods.clickOnTAB(mijnUniveAccountElements.startDateChangeInputElement);
-        await genericMethods.clickOnElement(mijnUniveAccountElements.authorisationCheckBoxAutomaticCollectionClickElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.authorisationCheckBoxAutomaticCollectionSecondClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
@@ -45,10 +44,6 @@ export class PersoonlijkeGegevensMethods {
       }
       case familyCompositionEnum.LIVING_TOGETHER: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionLiveTogetherNoChildrenClickElement);
-        await genericMethods.typeText(mijnUniveAccountElements.familyCompositionPartnerLivingTogetherInitialsInputElement, 'A');
-        await genericMethods.typeText(mijnUniveAccountElements.familyCompositionPartnerLivingTogetehrLastnameInputElement, 'test');
-        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionSelectGenderLivingTogetherMaleClickElement);
-        await genericMethods.typeText(mijnUniveAccountElements.familyCompositionBirthdateLivingTogetherInputElement, '01-01-1985');
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionIunderstandClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
@@ -61,10 +56,6 @@ export class PersoonlijkeGegevensMethods {
       }
       case familyCompositionEnum.FAMILY_WITH_CHILDREN: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionFamilyWithChildrenClickElement);
-        await genericMethods.typeText(mijnUniveAccountElements.familyCompositionPartnerFamilyInitialsInputElement, 'A');
-        await genericMethods.typeText(mijnUniveAccountElements.familyCompositionPartnerFamilyLastnameInputElement, 'test');
-        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionSelectGenderFamilyFemaleClickElement);
-        await genericMethods.typeText(mijnUniveAccountElements.familyCompositionBirthdateFamilyInputElement, '01-01-1985');
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionIunderstandClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;

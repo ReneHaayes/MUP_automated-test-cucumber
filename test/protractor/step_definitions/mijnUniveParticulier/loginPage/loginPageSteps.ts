@@ -1,7 +1,7 @@
 import {Given, Then, When} from 'cucumber';
-import {verzekeringPaginasEnum} from "../../../pageobjects/enum/genericEnum";
 import {browser} from "protractor";
-import {genericElements, genericMethods, loginPageElements, loginPageMethods, personaData} from "../../../support";
+import {genericElements, genericMethods, loginPageElements, loginPageMethods, personaData} from "@support";
+import {verzekeringPaginasEnum} from "@enum";
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);
@@ -9,13 +9,14 @@ Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, asyn
 });
 
 When(/^Persona (.*) logs in$/, async (persona: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(loginPageElements.loginPasswordInputElement, personaData.getPersonaPassword(persona));
   await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
-  await genericMethods.clickOnElement(genericElements.cookieClickElement);
 });
 
 When(/^Customer logs in with wrong email address (.*)$/, async (emailAddress: string) => {
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
   await genericMethods.clickOnTAB(loginPageElements.loginEmailInputElement);
 });
@@ -35,7 +36,7 @@ When(/^verify the answer to (.*)$/, async (veelgesteldeVraag: string) => {
 });
 
 When(/^persona (.*) forgot his password and resets it with new password (.*)$/, async (persona: string, newPassword: string) => {
-  console.log(newPassword);
+  await genericMethods.clickOnElement(genericElements.cookieClickElement);
   //Forgot password flow till send email:
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordClickElement);
   await genericMethods.typeText(loginPageElements.forgotPasswordEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));

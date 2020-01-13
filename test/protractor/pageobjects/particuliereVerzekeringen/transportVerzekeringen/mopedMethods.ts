@@ -1,14 +1,11 @@
 import {browser} from "protractor";
-import {vehicleKindEnum} from "../../enum/bromfietsVerzekeringEnum";
-import {aanvullendeOptiesEnum, basisDekkingEnum, ownRiskEnum, vehicleAccEnum} from "../../enum/autoVerzekeringEnum";
-import {genericEnum} from "../../enum/genericEnum";
+
 import {
-  autoVerzekeringElements,
-  genericElements,
-  genericMethods,
-  mopedWithLicensePlate,
-  vehicleElements
-} from "../../../support";
+  autoVerzekeringElements, genericElements, genericMethods, mopedWithLicensePlate, vehicleElements
+} from "@support";
+import {
+  aanvullendeOptiesEnum, basisDekkingEnum, genericEnum, ownRiskEnum, vehicleAccEnum, vehicleKindEnum
+} from "@enum";
 
 export class MopedMethods {
 
@@ -77,22 +74,19 @@ export class MopedMethods {
       case basisDekkingEnum.WA: {
         await genericMethods.clickOnElement(vehicleElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
         await genericMethods.clickOnElement(vehicleElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
         await genericMethods.clickOnElement(vehicleElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -106,29 +100,25 @@ export class MopedMethods {
       case aanvullendeOptiesEnum.PECH_HULP_NL: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.pechHulpNlElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.RECHTSHULP_VERKEER: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.rechtsHulpVerkeerElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.ONGEVALLEN_VERZEKERING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.ongevallenVerzekeringElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.AANSCHAFWAARDE_REGELING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.aanschafWaardeRegelingElement);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAanschafWaardeRegeling + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAanschafWaardeRegeling + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -141,20 +131,17 @@ export class MopedMethods {
     switch (input) {
       case vehicleAccEnum.ACC_TM_150: {
         await genericMethods.selectInDropdown(vehicleElements.accElement, vehicleElements.accTm150);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc150 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc150 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_250: {
         await genericMethods.selectInDropdown(vehicleElements.accElement, vehicleElements.accTm250);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc250 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc250 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_500: {
         await genericMethods.selectInDropdown(vehicleElements.accElement, vehicleElements.accTm500);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc500 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAcc500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -167,20 +154,17 @@ export class MopedMethods {
     switch (input) {
       case ownRiskEnum.OWN_RISK_100: {
         await genericMethods.selectInDropdown(vehicleElements.ownRiskElement, autoVerzekeringElements.ownRisk100);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk100 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk100 + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_250: {
         await genericMethods.selectInDropdown(vehicleElements.ownRiskElement, autoVerzekeringElements.ownRisk250);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk250 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk250 + '")]', browser.getPageTimeout);
         break;
       }
       case ownRiskEnum.OWN_RISK_500: {
         await genericMethods.selectInDropdown(vehicleElements.ownRiskElement, autoVerzekeringElements.ownRisk500);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOwnRisk500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {

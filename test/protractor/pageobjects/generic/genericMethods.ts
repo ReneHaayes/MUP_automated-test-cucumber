@@ -1,10 +1,10 @@
 import {browser, by, element, ElementFinder, protractor} from 'protractor';
 import * as chai from 'chai';
 import * as chaistring from 'chai-string';
-import {dateEnum, gender, genericEnum, specificIdentification} from "../enum/genericEnum";
-import {legalEnum} from "../enum/autoVerzekeringEnum";
 import * as path from "path";
-import {genericElements, getUrlUnive, nawElements, personaData} from "../../support";
+
+import {genericElements, getUrlUnive, nawElements, personaData} from "@support";
+import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from "@enum";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -26,6 +26,7 @@ export class GenericMethods {
 
   async clickOnElement(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const elementToClick: ElementFinder = element(by.css(selector));
     await browser.controlFlow().execute(() => {
@@ -33,6 +34,19 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
+    })
+  }
+
+  async doubleClickOnElement(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      browser.actions().doubleClick(elementToClick).perform();
     })
   }
 
@@ -132,6 +146,7 @@ export class GenericMethods {
 
   async waitForElementClickable(selector: string, waitFor: number) {
     const selectorToWaitFor: ElementFinder = element(by.css(selector));
+    await browser.sleep(1000);
     await browser.wait(ec.elementToBeClickable(selectorToWaitFor), waitFor);
   }
 
@@ -144,6 +159,7 @@ export class GenericMethods {
       throw new Error('Element with selector: ' + selector + ', is still visible');
     }
   }
+
   async waitForElementNotVisibleWithSleep(selector: string, waitFor: number, sleepForMilliSeconds: number) {
     try {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
@@ -219,6 +235,7 @@ export class GenericMethods {
 
   async typeText(selector: string, text: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const typeTextElement: ElementFinder = element(by.css(selector));
     await browser.controlFlow().execute(() => {
@@ -262,6 +279,13 @@ export class GenericMethods {
     await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
     const selectorToString: string = await this.getTextWithXpath(selector);
     await expect(selectorToString).to.equal(assertionText);
+  }
+
+  async verifyTextInElementContainsWithXpath(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getTextWithXpath(selector);
+    await expect(selectorToString).to.have.string(assertionText);
   }
 
   async verifyTextInElement(selector: string, assertionText: string) {
@@ -353,14 +377,10 @@ export class GenericMethods {
   }
 
   async clickOnNextButton() {
-    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await this.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.nextButton);
   }
 
   async clickOnFinishButton() {
-    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    await this.waitForElementIsVisible(genericElements.finishButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.finishButton);
   }
 
@@ -391,11 +411,12 @@ export class GenericMethods {
       }
     }
   }
+
   async clickAfwijkendeBestuurderDataGender(input: string) {
     switch (input) {
       case gender.MALE: {
         await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await this.clickOnElement(nawElements.afwijkendeBestuurderDataGenderMaleClickElement );
+        await this.clickOnElement(nawElements.afwijkendeBestuurderDataGenderMaleClickElement);
         break;
       }
       case gender.FEMALE: {
@@ -579,6 +600,18 @@ export class GenericMethods {
     await expect(input).to.equal(assertionNumber);
   }
 
+  async verifyText(input: string, assertionText: string) {
+    await expect(input).to.equal(assertionText);
+  }
+
+  async verifyTextNotEmpty(input: string) {
+    try {
+    await expect(input.length).not.to.equal(0);
+    } catch (e) {
+      throw new Error('The length of ' + input + ' is:' + input.length + ' it should not be empty.');
+    }
+  }
+
   async verifyTextContains(input: string, assertionText: string) {
     await expect(input).to.have.string(assertionText);
   }
@@ -589,4 +622,15 @@ export class GenericMethods {
     } catch (e) {
     }
   }
+
+  async getAnalyticsText(input: string): Promise<string> {
+    try {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    let test = await browser.executeScript('return '+ input +';');
+    return test.toString();
+    } catch (e) {
+      throw new Error('Analytics for: ' + input  + ' cant be found');
+    }
+  }
+
 }

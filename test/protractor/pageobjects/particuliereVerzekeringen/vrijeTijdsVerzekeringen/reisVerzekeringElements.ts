@@ -43,9 +43,12 @@ export class ReisVerzekeringElements {
   summarySpaceMyPartner: string = 'Uw partner';
   summarySpaceMychildren: string = 'Uw kinderen';
 
-  //AMP
-  ampImageElement: string = '[alt="Afbeelding"][src*="doorlopende_reisverzekering_illustratie_2x.png"]';
-  ampBerekenUwPremieButtonClickElement: string = '[href="/doorlopende-reisverzekering/premieberekenen-en-afsluiten"]';
+  //EMAIL MIJ DEZE PREMIEBEREKENING
+  emailMijDezePremieBerekeningButtonClickElement = '#_Form_IF2523_3671';
+  emailMijDezePremieBerekeningEmailAddressInputElement = '#_EmailPremiumCalculation__1';
+  emailMijDezePremieBerekeningSendButtonClickElement = '#_EmailPremiumCalculation_send';
+  emailMijDezePremieBerekeningSendSuccesfullMessageTextElement = '[ng-if="determineShowThankYouMessage()"] > p';
+  emailMijDezePremieBerekeningSendSuccesfullMessageText = 'De premieberekening is verzonden naar het door u ingevoerde e-mailadres.'
 
 
 }

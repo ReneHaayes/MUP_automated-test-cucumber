@@ -1,5 +1,5 @@
-import {verzekeringPaginasEnum} from "../../enum/genericEnum";
-import {genericMethods, loginPageElements, mijnUniveAccountElements} from "../../../support";
+import {genericMethods, loginPageElements, mijnUniveAccountElements} from "@support";
+import {verzekeringPaginasEnum} from "@enum";
 
 export class MailhogMethods {
 

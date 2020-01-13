@@ -37,6 +37,7 @@ export class MijnSchadeEnClaimElements {
   damageClaimPrivateTripClickElement: string = '#_Form_IF12539_16809_prive';
   damageClaimInsuredIllingWasOnTheTripClickElement: string = '#_Form_IF12539_16816';
   damageClaimHappenedBeforeTripClickElement: string = '#_Form_IF12539_16823_vooraf';
+  damageClaimCloseLightBoxClickElement: string = '[class="closeLightbox"] > a';
 
   damageClaimSelectCauseClickElement(question: string, cause: string): string {
     return "//*[contains(text(),'" + question + "')]/following::*[contains(text(),'" + cause + "')]/preceding::span[1]/descendant::input"

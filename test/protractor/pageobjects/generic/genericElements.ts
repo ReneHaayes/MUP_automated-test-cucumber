@@ -34,6 +34,7 @@ export class GenericElements {
   caravanVerzekeringPp: string = 'caravanverzekering';
   doorlopendeAnnuleringsVerzekering: string = 'annuleringsverzekering/premieberekenen-en-afsluiten';
   fietsVerzekering: string = 'fietsverzekering/premieberekenen-en-afsluiten';
+  fietsVerzekeringPp: string = 'fietsverzekering/';
   kostbaarhedenVerzekering: string = 'kostbaarhedenverzekering/premieberekenen-en-afsluiten';
   oldtimerVerzekering: string = 'oldtimerverzekering/premieberekenen-en-afsluiten';
   ongevallenVerzekering: string = 'ongevallenverzekering/premieberekenen-en-afsluiten';
@@ -55,6 +56,7 @@ export class GenericElements {
   overUnive: string = 'overunive';
   zipcodePlaceZoeken: string = 'contact/zoek-winkel';
   zakelijkZzp: string = 'zakelijk/zzp';
+  cms: string = 'cms/';
   zakelijkAgrarier: string = 'zakelijk/agrariers';
   zakelijkGebouwen: string = 'zakelijk/gebouwenverzekering';
   afspraakMakenZakelijk: string = 'zakelijk/klantenservice/afspraak';
@@ -64,22 +66,21 @@ export class GenericElements {
   mijnUniveZakelijk: string = 'https://zakelijk.unive.nl/QIS_Customer/';
   mijnUniveZakelijkHomePage: string = 'zakelijk/mijnunive/inloggen';
   ondernemersScan: string = 'zakelijk/ondernemersscan';
-  ampAutoverzekering: string = 'amp/autoverzekering';
-  ampWoonverzekering: string = 'amp/woonverzekering';
-  ampBromfietsverzekering: string = 'amp/bromfietsverzekering';
-  ampDoorlopendeReisverzekering: string = 'amp/doorlopende-reisverzekering';
   collectieveZorgVerzekering: string = 'zorgverzekering/collectief';
   handelaarsKentekenVerzekering: string = 'zakelijk/handelaarskentekenverzekering';
   milieSchadeVerzekering: string = 'zakelijk/milieuschadeverzekering';
   zakelijkMotorVerzekering: string = 'zakelijk/motorverzekering';
-  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtautoverzekering';
+  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering: string = 'zakelijk/werkmaterieelverzekering';
-  loginMijnUniveParticulierURL: string = 'login';
+  loginMijnUniveParticulierURL: string = 'mijnunive/inloggen';
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
   mailhogPatURL: string = 'https://mailhog.pat.unive.nl';
   klachtenFormulier: string = 'klantenservice/klacht';
   vraagStellen: string = 'klantenservice/vraagstellen';
   schade: string = 'schade';
+  schadeService: string = 'schadeservice';
+  pensioen: string = 'pensioen/';
+
   zorgchecktool: string = 'zorgverzekering/zorgcheck';
   zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';
   zorgchecktoolThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=hS95ugVE';
@@ -99,7 +100,6 @@ export class GenericElements {
   mijnGegevens: string = 'mijn-gegevens';
   mijnUniveBetaalgegevensWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'betaalgegevens-wijzigen';
   mijnUniveContactVoorkeurenDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'contactvoorkeuren';
-  mijnUniveIdentiteitsGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'identiteitsgegevens';
   mijnUniveVerhuisGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'verhuizingdoorgeven';
   mijnUniveMijnGegevens: string = this.mijnUnivePage +'/'+  this.mijnGegevens;
   mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'gezinssituatiewijzigen';
@@ -121,6 +121,7 @@ export class GenericElements {
 
   //LOADER
   loader: string = 'body > div.blockUI.blockMsg.blockPage';
+  loaderQis: string = '[class="blockOverlay"]';
 
   //ACCOUNTNUMBER
   accountNumberElement: string = '#_Form_IF2533_3702';

@@ -1,10 +1,7 @@
 import {Then, When} from "cucumber";
 import {
-  bedrijfsAutoVerzekeringElements,
-  businessCarWithLicensePlate,
-  genericMethods,
-  licensePlateMethod
-} from "../../../support";
+  bedrijfsAutoVerzekeringElements, businessCarWithLicensePlate, genericMethods, licensePlateMethod
+} from "@support";
 
 When(/^I press the button (.*) for the following license plate (.*) on the page for autoverzekering$/, async (button: string, licensePlate: string) => {
   await licensePlateMethod.clickOnAutoVerzekeringButton(button, licensePlate);

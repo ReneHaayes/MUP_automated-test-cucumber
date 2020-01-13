@@ -1,14 +1,18 @@
-import {homePageEnum} from "../enum/woonVerzekeringEnum";
 import {browser} from "protractor";
-import {verzekeringPaginasEnum} from "../enum/genericEnum";
 import {
   aansprakelijkheidsVerzekerElements,
   aovZzpElements,
   eigenVervoerVerzekeringElements,
-  genericElements, genericMethods,
-  getUrlUnive, hmPageElements,
-  productPageElements, reisVerzekeringElements, situatieGewijzigdElements, zakelijkRechtsBijstandVerzekeringElements
-} from "../../support";
+  genericElements,
+  genericMethods,
+  getUrlUnive,
+  hmPageElements,
+  productPageElements,
+  reisVerzekeringElements,
+  situatieGewijzigdElements,
+  zakelijkRechtsBijstandVerzekeringElements
+} from "@support";
+import {homePageEnum, verzekeringPaginasEnum} from "@enum";
 
 export class HmPageMethods {
 
@@ -303,7 +307,7 @@ export class HmPageMethods {
       }
       case homePageEnum.RECHTSBIJSTAND: {
         await genericMethods.verifyUrlContains(genericElements.zakelijkRechtsBijstandVerzekeringPp);
-        await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.activityZZPClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.getCompanyDataButtonClickElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.EIGEN_VERVOER: {
@@ -343,6 +347,7 @@ export class HmPageMethods {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZIPCODE_PLACE);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.zipcodePlaceTitleTextElement, hmPageElements.zipcodePlaceTitleText);
+        await genericMethods.verifyTextInElement(hmPageElements.zipcodePlaceTableZwolleTextElement, 'Zwolle (Univé Noord-Holland)');
         break;
       }
       case homePageEnum.KLANTENSERVICE: {
@@ -388,7 +393,7 @@ export class HmPageMethods {
       case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveZakelijkHomePageH3TextElement, hmPageElements.mijnUniveZakelijkHomePageH3Text);
+        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveZakelijkHomePageH3TextElement, hmPageElements.mijnUniveZakelijkHomePageH4Text);
         break;
       }
       default: {

@@ -1,12 +1,7 @@
 import {When} from "cucumber";
 import {
-  caravanVerzekeringElements,
-  genericElements,
-  genericMethods,
-  nawElements,
-  personaData,
-  vehicleElements
-} from "../../../support";
+  caravanVerzekeringElements, genericElements, genericMethods, nawElements, personaData, vehicleElements
+} from "@support";
 
 When(/^I enter step one and click next on step two of caravan verzekering$/, async () => {
   await genericMethods.clickOnElement(caravanVerzekeringElements.tourCaravanClickElement);

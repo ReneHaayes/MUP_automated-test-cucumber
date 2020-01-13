@@ -1,4 +1,4 @@
-@loginPageMijnUniveParticulier
+@loginPageMijnUniveParticulier @onegini
 
 Feature: Login page for Mijn Unive Particulier
 

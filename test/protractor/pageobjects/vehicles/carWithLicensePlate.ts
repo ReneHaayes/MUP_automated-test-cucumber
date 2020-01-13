@@ -1,5 +1,4 @@
-import {licensePlates} from "../enum/licensePlateEnum";
-import {fuelTypEnum, genericEnum} from "../enum/genericEnum";
+import {fuelTypEnum, genericEnum, licensePlates} from "@enum";
 
 export class Car {
 
@@ -14,8 +13,7 @@ export class Car {
   reportingCode: string;
   estimatedValue: string;
 
-  constructor(licensePlate: string, brandName: string, brandType: string, constructionYear: string, model: string, bodyType: string,
-              fuelType: string, firstAdmission: string, reportingCode: string, estimatedValue: string) {
+  constructor(licensePlate: string, brandName: string, brandType: string, constructionYear: string, model: string, bodyType: string, fuelType: string, firstAdmission: string, reportingCode: string, estimatedValue: string) {
     this.licensePlate = licensePlate;
     this.brandName = brandName;
     this.brandType = brandType;
@@ -31,14 +29,11 @@ export class Car {
 
 export class CarWithLicensePlate {
 
-  PERSONCAR_06HNDL: Car = new Car(licensePlates.PERSONCAR_06HNDL, 'BMW', '3-SERIE', '2001', '318CI EXECUTIVE',
-    "Softtop", fuelTypEnum.BENZINE, '12-09-2001', '0000', genericEnum.EMPTY);
+  PERSONCAR_06HNDL: Car = new Car(licensePlates.PERSONCAR_06HNDL, 'BMW', '3-SERIE', '2001', '318CI EXECUTIVE', "Softtop", fuelTypEnum.BENZINE, '12-09-2001', '0000', genericEnum.EMPTY);
 
-  PERSONCAR_80SRB4: Car = new Car(licensePlates.PERSONCAR_80SRB4, 'Renault', 'CLIO', '2011', '1.5 DCI AUTHENTIQUE',
-    'Hatchback', fuelTypEnum.DIESEL, '01-01-2011', '0000', genericEnum.EMPTY);
+  PERSONCAR_80SRB4: Car = new Car(licensePlates.PERSONCAR_80SRB4, 'Renault', 'CLIO', '2011', '1.5 DCI AUTHENTIQUE', 'Hatchback', fuelTypEnum.DIESEL, '01-01-2011', '0000', genericEnum.EMPTY);
 
-  OLDTIMER_RG81HX: Car = new Car(licensePlates.OLDTIMER_RG81HX, 'ALFA ROMEO', 'GT', '1973', '1.3 JUNIOR',
-    'Hatchback', fuelTypEnum.BENZINE, '01-01-2011', '0000', '15000');
+  OLDTIMER_RG81HX: Car = new Car(licensePlates.OLDTIMER_RG81HX, 'ALFA ROMEO', 'GT', '1973', '1.3 JUNIOR', 'Hatchback', fuelTypEnum.BENZINE, '01-01-2011', '0000', '15000');
 
   getCarFuelType(input: string): string {
     switch (input) {

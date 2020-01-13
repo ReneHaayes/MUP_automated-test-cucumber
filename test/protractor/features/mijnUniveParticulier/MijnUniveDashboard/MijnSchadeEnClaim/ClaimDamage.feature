@@ -4,7 +4,7 @@ Feature: Claiming damages
 
   Scenario: Verify customer can claim a damage for autoverzekering
     Given Customer illing is logged in on the mijn unive mijn schade en claim page of the Unive website
-    When Customer claims a autoverzekering damage by filling in the form for polis 77955620
+    When Customer claims a autoverzekering damage by filling in the form for polis 77611876
     Then Verify damage claim succes message is shown
 
   Scenario: Verify customer can claim a damage for woonverzekering

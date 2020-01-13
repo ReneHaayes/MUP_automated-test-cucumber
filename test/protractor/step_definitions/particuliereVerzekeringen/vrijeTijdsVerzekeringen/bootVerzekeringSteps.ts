@@ -3,9 +3,11 @@ import {
   boatWithName,
   bootVerzekeringElements,
   bootVerzekeringMethods,
-  genericElements, genericMethods,
-  nawElements, personaData
-} from "../../../support";
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData
+} from "@support";
 
 When(/^I enter step one and click next on step two of bootverzekering with:$/, async (data) => {
   const dataTable = data.rowsHash();

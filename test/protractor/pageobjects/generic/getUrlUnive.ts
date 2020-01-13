@@ -1,7 +1,6 @@
-import {polisDetailsUrlEnum, verzekeringPaginasEnum} from '../enum/genericEnum';
 import {browser} from 'protractor';
-import {homePageEnum} from '../enum/woonVerzekeringEnum';
-import {apiElements, genericElements} from "../../support";
+import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
+import {apiElements, genericElements} from "@support";
 
 export class GetUrlUnive {
 
@@ -97,6 +96,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.FIETSVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.fietsVerzekering;
       }
+      case verzekeringPaginasEnum.FIETSVERZEKERING_PP: {
+        return this.getEnv(browser.params.env.environment) + genericElements.fietsVerzekeringPp;
+      }
       case verzekeringPaginasEnum.KOSTBAARHEDEN_VERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.kostbaarhedenVerzekering;
       }
@@ -160,11 +162,17 @@ export class GetUrlUnive {
       case homePageEnum.SCHADE: {
         return this.getEnv(browser.params.env.environment) + genericElements.schade;
       }
+      case homePageEnum.SCHADE_SERVICE: {
+        return this.getEnv(browser.params.env.environment) + genericElements.schadeService;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
       case homePageEnum.ZZP_ER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkZzp;
+      }
+      case homePageEnum.CMS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.cms;
       }
       case homePageEnum.AGRARIER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkAgrarier;
@@ -193,23 +201,11 @@ export class GetUrlUnive {
       case homePageEnum.ONDERNEMERSCAN: {
         return this.getEnv(browser.params.env.environment) + genericElements.ondernemersScan;
       }
-      case verzekeringPaginasEnum.AMP_AUTOVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampAutoverzekering;
-      }
-      case verzekeringPaginasEnum.AMP_WOONVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampWoonverzekering;
-      }
-      case verzekeringPaginasEnum.AMP_BROMFIETSVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampBromfietsverzekering;
-      }
-      case verzekeringPaginasEnum.AMP_DOORLOPENDEREISVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.ampDoorlopendeReisverzekering;
-      }
       case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.collectieveZorgVerzekering;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
-        return this.getEnv(verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER) + genericElements.loginMijnUniveParticulierURL;
+        return this.getEnv(browser.params.env.environment) + genericElements.loginMijnUniveParticulierURL;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_GEGEVENS: {
         return this.getEnv((browser.params.env.environment) + genericElements.mijnUniveMijnGegevens);
@@ -219,9 +215,6 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveContactVoorkeurenDoorgeven;
-      }
-      case verzekeringPaginasEnum.MIJN_UNIVE_IDENTITEITSGEGEVENS_DOORGEVEN: {
-        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveIdentiteitsGegevensDoorgeven;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_VERHUISGEGEVENS_DOORGEVEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveVerhuisGegevensDoorgeven;
@@ -240,6 +233,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_POSTVAK: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnPostvak;
+      }
+      case breadCrumbEnum.PENSIOEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.pensioen;
       }
       case polisDetailsUrlEnum.POLISDETAILS_DERDEN_1600478601: {
         return this.getEnv(browser.params.env.environment) + genericElements.polisDetailsNumber1600478601Url;
@@ -303,6 +299,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_PAT: {
         return 'https://pat.unive.nl/';
       }
+      case verzekeringPaginasEnum.HOME_OPA: {
+        return 'https://opa.unive.nl/';
+      }
       case verzekeringPaginasEnum.HOME_TSTPROJ: {
         return 'https://tstproj.unive.nl/';
       }
@@ -312,8 +311,14 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_TST: {
         return 'https://tst.unive.nl/';
       }
-      case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
-        return 'https://login.pat.unive.nl/';
+      case verzekeringPaginasEnum.HOME_ZAKELIJK: {
+        return 'https://zakelijktest.unive.nl/';
+      }
+      case verzekeringPaginasEnum.HOME_SALES: {
+        return 'https://sales.unive.nl/';
+      }
+      case verzekeringPaginasEnum.HOME_SERVICE: {
+        return 'https://service.unive.nl/';
       }
       case verzekeringPaginasEnum.GEZONDHEID: {
         return 'https://gezondheid.unive.nl/';

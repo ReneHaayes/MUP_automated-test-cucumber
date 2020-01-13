@@ -1,11 +1,8 @@
-import {breadCrumbEnum, verzekeringPaginasEnum} from "../../enum/genericEnum";
 import {browser} from "protractor";
 import {
-  alleVerzekeringenElements,
-  alleVerzekeringenZakelijkElements,
-  genericElements,
-  genericMethods
-} from "../../../support";
+  alleVerzekeringenElements, alleVerzekeringenZakelijkElements, genericElements, genericMethods
+} from "@support";
+import {breadCrumbEnum, verzekeringPaginasEnum} from "@enum";
 
 export class AlleVerzekeringenZakelijkMethods {
 
@@ -13,7 +10,7 @@ export class AlleVerzekeringenZakelijkMethods {
     switch (input) {
       case verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkAansprakelijkheidsVerzekeringPp);
-        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.zakelijkAansprakelijkheidsVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.AANSPRAKELIJKHEIDSVERZEKERINGBEDRIJVEN, 3);
@@ -107,7 +104,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.PERSONENAUTOVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.zakelijkePersonenAutoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.ZAKELIJK_MOTOVERZEKERING: {

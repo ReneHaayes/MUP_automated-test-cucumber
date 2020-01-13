@@ -9,5 +9,5 @@ Feature: Going to damage and claim page and checking the different details on pa
 
     Examples:
       | damage number | persona |
-      | 2735521       | illing  |
+      | 2848063       | illing  |
       | 265664        | illing  |

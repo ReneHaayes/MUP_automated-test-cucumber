@@ -1,12 +1,11 @@
 import {
   durationEntrepreneur,
   gender,
-  houseNumberAddition,
-  personaName,
+  houseNumberAddition, personaName,
   phoneNumber,
   prefix,
   specificIdentification
-} from "../enum/genericEnum";
+} from "@enum";
 
 export class Persona {
 
@@ -77,7 +76,7 @@ export class PersonaData {
     'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
   salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15', '06', '1992', 'Enschede', '7412XW', '31',
     'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'onjuisteemailadres@test.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
+    '5088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
   neymar: Persona = new Persona('Neymar', 'N', 'da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
     'ABC', gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
     'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98', 'Welkom01!');
@@ -87,9 +86,21 @@ export class PersonaData {
   illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing-van Bruggen', '28', '10', '1962', 'Deventer', '7412XW', '91',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
     '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  annie: Persona = new Persona('Annie', 'A', prefix.NO_PREFIX, 'Jans', '25', '05', '1960', 'Rolde', '9451GK', '99451',
+  woestenburg: Persona = new Persona('Annie', 'AF', prefix.NO_PREFIX, 'Woestenburg', '19', '10', '1956', 'Venhuizen', '1606XA', '11',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
+    'a.woestenburg@quicknet.nl', '3872', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+  aakoek: Persona = new Persona('Annie', 'AA', prefix.NO_PREFIX, 'Koek', '07', '07', '1976', 'Enschede', '7546ET', '59',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
+    'aakoek@hotmail.com', '2487', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
+  ako: Persona = new Persona('Ako', 'AJC', prefix.NO_PREFIX, 'Koek', '09', '04', '1962', 'Kudelstaart', '1433DC', '4',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'anniejans@ziggo.nl', '5088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+    'ako62@live.nl', '8582', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
+  avonk: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Vonk', '19', '10', '1968', 'Apeldoorn', '7323MG', '4',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
+    'antonie.vonk@live.nl', '1322', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
+  erichters: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Evers', '01', '01', '1937', 'Delfzijl', '9934LP',
+    '6', houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
+    'eversrichters@ziggo.nl', '7671', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
   testvrouwCustomerRecognition: Persona = new Persona('Zappie', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1972', 'Amsterdam', '1012NX', '1',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0592444523', specificIdentification.PASSPORT, 'ACP26N', 'zz@top.nl',
     'NL49ANDL0687747724', '232099765', 'dolfijnentrainer', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
@@ -109,13 +120,14 @@ export class PersonaData {
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
 
+
   getPersonaZipcode(input: string): string {
     switch (input) {
       case personaName.ILLING: {
         return this.illing.zipCode;
       }
-      case personaName.ANNIE: {
-        return this.annie.zipCode;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.zipCode;
       }
       case personaName.RONALDO: {
         return this.ronaldo.zipCode;
@@ -131,6 +143,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.zipCode;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.zipCode;
+      }
+      case personaName.AKO: {
+        return this.ako.zipCode;
+      }
+      case personaName.AVONK: {
+        return this.avonk.zipCode;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.zipCode;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.zipCode;
@@ -149,7 +173,7 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.zipCode;
-      }  
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -161,8 +185,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthDay;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthDay;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthDay;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthDay;
@@ -196,21 +220,33 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.birthDay;
-      } 
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.birthDay;
+      }
+      case personaName.AKO: {
+        return this.ako.birthDay;
+      }
+      case personaName.AVONK: {
+        return this.avonk.birthDay;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.birthDay;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
 
   }
-  
+
   getPersonaBirthMonth(input: string): string {
     switch (input) {
       case personaName.ILLING: {
         return this.illing.birthMonth;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthMonth;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthMonth;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthMonth;
@@ -244,7 +280,19 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.birthMonth;
-      } 
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.birthMonth;
+      }
+      case personaName.AKO: {
+        return this.ako.birthMonth;
+      }
+      case personaName.AVONK: {
+        return this.avonk.birthMonth;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.birthMonth;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -257,8 +305,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthYear;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthYear;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthYear;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthYear;
@@ -274,6 +322,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.birthYear;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.birthYear;
+      }
+      case personaName.AKO: {
+        return this.ako.birthYear;
+      }
+      case personaName.AVONK: {
+        return this.avonk.birthYear;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.birthYear;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.birthYear;
@@ -305,8 +365,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthDay + '-' + this.illing.birthMonth + '-' + this.illing.birthYear;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthDay + '-' + this.annie.birthMonth + '-' + this.annie.birthYear;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthDay + '-' + this.woestenburg.birthMonth + '-' + this.woestenburg.birthYear;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthDay + '-' + this.ronaldo.birthMonth + '-' + this.ronaldo.birthYear;
@@ -341,20 +401,32 @@ export class PersonaData {
       case personaName.TESTPARTNER: {
         return this.testPartner.birthDay + '-' + this.testPartner.birthMonth + '-' + this.testPartner.birthYear;
       }
+      case personaName.AAKOEK: {
+        return this.aakoek.birthDay + '-' + this.aakoek.birthMonth + '-' + this.aakoek.birthYear;
+      }
+      case personaName.AKO: {
+        return this.ako.birthDay + '-' + this.ako.birthMonth + '-' + this.ako.birthYear;
+      }
+      case personaName.AVONK: {
+        return this.avonk.birthDay + '-' + this.avonk.birthMonth + '-' + this.avonk.birthYear;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.birthDay + '-' + this.erichters.birthMonth + '-' + this.erichters.birthYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
 
   }
-  
+
   getPersonaLastName(input: string): string {
     switch (input) {
       case personaName.ILLING: {
         return this.illing.lastName;
       }
-      case personaName.ANNIE: {
-        return this.annie.lastName;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.lastName;
       }
       case personaName.RONALDO: {
         return this.ronaldo.lastName;
@@ -389,6 +461,18 @@ export class PersonaData {
       case personaName.TESTPARTNER: {
         return this.testPartner.lastName;
       }
+      case personaName.AAKOEK: {
+        return this.aakoek.lastName;
+      }
+      case personaName.AKO: {
+        return this.ako.lastName;
+      }
+      case personaName.AVONK: {
+        return this.avonk.lastName;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.lastName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -400,8 +484,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.firstName;
       }
-      case personaName.ANNIE: {
-        return this.annie.firstName;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.firstName;
       }
       case personaName.RONALDO: {
         return this.ronaldo.firstName;
@@ -436,6 +520,18 @@ export class PersonaData {
       case personaName.TESTPARTNER: {
         return this.testPartner.firstName;
       }
+      case personaName.AAKOEK: {
+        return this.aakoek.firstName;
+      }
+      case personaName.AKO: {
+        return this.ako.firstName;
+      }
+      case personaName.AVONK: {
+        return this.avonk.firstName;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.firstName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -448,8 +544,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.gender;
       }
-      case personaName.ANNIE: {
-        return this.annie.gender;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.gender;
       }
       case personaName.RONALDO: {
         return this.ronaldo.gender;
@@ -465,6 +561,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.gender;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.gender;
+      }
+      case personaName.AKO: {
+        return this.ako.gender;
+      }
+      case personaName.AVONK: {
+        return this.avonk.gender;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.gender;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.gender;
@@ -496,8 +604,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.initials;
       }
-      case personaName.ANNIE: {
-        return this.annie.initials;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.initials;
       }
       case personaName.RONALDO: {
         return this.ronaldo.initials;
@@ -513,6 +621,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.initials;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.initials;
+      }
+      case personaName.AKO: {
+        return this.ako.initials;
+      }
+      case personaName.AVONK: {
+        return this.avonk.initials;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.initials;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.initials;
@@ -543,8 +663,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.prefix;
       }
-      case personaName.ANNIE: {
-        return this.annie.prefix;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.prefix;
       }
       case personaName.RONALDO: {
         return this.ronaldo.prefix;
@@ -560,6 +680,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.prefix;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.prefix;
+      }
+      case personaName.AKO: {
+        return this.ako.prefix;
+      }
+      case personaName.AVONK: {
+        return this.avonk.prefix;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.prefix;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.prefix;
@@ -590,8 +722,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.birthPlace;
       }
-      case personaName.ANNIE: {
-        return this.annie.birthPlace;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.birthPlace;
       }
       case personaName.RONALDO: {
         return this.ronaldo.birthPlace;
@@ -607,6 +739,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.birthPlace;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.birthPlace;
+      }
+      case personaName.AKO: {
+        return this.ako.birthPlace;
+      }
+      case personaName.AVONK: {
+        return this.avonk.birthPlace;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.birthPlace;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.birthPlace;
@@ -637,8 +781,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.houseNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.houseNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.houseNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.houseNumber;
@@ -654,6 +798,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.houseNumber;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.houseNumber;
+      }
+      case personaName.AKO: {
+        return this.ako.houseNumber;
+      }
+      case personaName.AVONK: {
+        return this.avonk.houseNumber;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.houseNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.houseNumber;
@@ -684,8 +840,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.houseNumberAddition;
       }
-      case personaName.ANNIE: {
-        return this.annie.houseNumberAddition;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.houseNumberAddition;
       }
       case personaName.RONALDO: {
         return this.ronaldo.houseNumberAddition;
@@ -701,6 +857,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.houseNumberAddition;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.houseNumberAddition;
+      }
+      case personaName.AKO: {
+        return this.ako.houseNumberAddition;
+      }
+      case personaName.AVONK: {
+        return this.avonk.houseNumberAddition;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.houseNumberAddition;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.houseNumberAddition;
@@ -731,8 +899,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.phoneNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.phoneNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.phoneNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.phoneNumber;
@@ -748,6 +916,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.phoneNumber;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.phoneNumber;
+      }
+      case personaName.AKO: {
+        return this.ako.phoneNumber;
+      }
+      case personaName.AVONK: {
+        return this.avonk.phoneNumber;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.phoneNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.phoneNumber;
@@ -778,8 +958,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.specificIdentification;
       }
-      case personaName.ANNIE: {
-        return this.annie.specificIdentification;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.specificIdentification;
       }
       case personaName.RONALDO: {
         return this.ronaldo.specificIdentification;
@@ -795,6 +975,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.specificIdentification;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.specificIdentification;
+      }
+      case personaName.AKO: {
+        return this.ako.specificIdentification;
+      }
+      case personaName.AVONK: {
+        return this.avonk.specificIdentification;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.specificIdentification;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.specificIdentification;
@@ -825,8 +1017,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.specificIdentificationNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.specificIdentificationNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.specificIdentificationNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.specificIdentificationNumber;
@@ -842,6 +1034,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.specificIdentificationNumber;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.specificIdentificationNumber;
+      }
+      case personaName.AKO: {
+        return this.ako.specificIdentificationNumber;
+      }
+      case personaName.AVONK: {
+        return this.avonk.specificIdentificationNumber;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.specificIdentificationNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.specificIdentificationNumber;
@@ -872,8 +1076,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.eMailAddress;
       }
-      case personaName.ANNIE: {
-        return this.annie.eMailAddress;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.eMailAddress;
       }
       case personaName.RONALDO: {
         return this.ronaldo.eMailAddress;
@@ -889,6 +1093,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.eMailAddress;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.eMailAddress;
+      }
+      case personaName.AKO: {
+        return this.ako.eMailAddress;
+      }
+      case personaName.AVONK: {
+        return this.avonk.eMailAddress;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.eMailAddress;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.eMailAddress;
@@ -919,8 +1135,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.accountNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.accountNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.accountNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.accountNumber;
@@ -936,6 +1152,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.accountNumber;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.accountNumber;
+      }
+      case personaName.AKO: {
+        return this.ako.accountNumber;
+      }
+      case personaName.AVONK: {
+        return this.avonk.accountNumber;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.accountNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.accountNumber;
@@ -966,8 +1194,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.bsn;
       }
-      case personaName.ANNIE: {
-        return this.annie.bsn;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.bsn;
       }
       case personaName.RONALDO: {
         return this.ronaldo.bsn;
@@ -983,6 +1211,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.bsn;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.bsn;
+      }
+      case personaName.AKO: {
+        return this.ako.bsn;
+      }
+      case personaName.AVONK: {
+        return this.avonk.bsn;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.bsn;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.bsn;
@@ -1013,8 +1253,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.profession;
       }
-      case personaName.ANNIE: {
-        return this.annie.profession;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.profession;
       }
       case personaName.RONALDO: {
         return this.ronaldo.profession;
@@ -1030,6 +1270,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.profession;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.profession;
+      }
+      case personaName.AKO: {
+        return this.ako.profession;
+      }
+      case personaName.AVONK: {
+        return this.avonk.profession;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.profession;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.profession;
@@ -1060,8 +1312,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.kvkNumber;
       }
-      case personaName.ANNIE: {
-        return this.annie.kvkNumber;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.kvkNumber;
       }
       case personaName.RONALDO: {
         return this.ronaldo.kvkNumber;
@@ -1077,6 +1329,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.kvkNumber;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.kvkNumber;
+      }
+      case personaName.AKO: {
+        return this.ako.kvkNumber;
+      }
+      case personaName.AVONK: {
+        return this.avonk.kvkNumber;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.kvkNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.kvkNumber;
@@ -1107,8 +1371,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.durationEntrepreneur;
       }
-      case personaName.ANNIE: {
-        return this.annie.durationEntrepreneur;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.durationEntrepreneur;
       }
       case personaName.RONALDO: {
         return this.ronaldo.durationEntrepreneur;
@@ -1124,6 +1388,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.durationEntrepreneur;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.durationEntrepreneur;
+      }
+      case personaName.AKO: {
+        return this.ako.durationEntrepreneur;
+      }
+      case personaName.AVONK: {
+        return this.avonk.durationEntrepreneur;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.durationEntrepreneur;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.durationEntrepreneur;
@@ -1154,8 +1430,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.height;
       }
-      case personaName.ANNIE: {
-        return this.annie.height;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.height;
       }
       case personaName.RONALDO: {
         return this.ronaldo.height;
@@ -1171,6 +1447,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.height;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.height;
+      }
+      case personaName.AKO: {
+        return this.ako.height;
+      }
+      case personaName.AVONK: {
+        return this.avonk.height;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.height;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.height;
@@ -1201,8 +1489,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.weight;
       }
-      case personaName.ANNIE: {
-        return this.annie.weight;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.weight;
       }
       case personaName.RONALDO: {
         return this.ronaldo.weight;
@@ -1218,6 +1506,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.weight;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.weight;
+      }
+      case personaName.AKO: {
+        return this.ako.weight;
+      }
+      case personaName.AVONK: {
+        return this.avonk.weight;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.weight;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.weight;
@@ -1248,8 +1548,8 @@ export class PersonaData {
       case personaName.ILLING: {
         return this.illing.password;
       }
-      case personaName.ANNIE: {
-        return this.annie.password;
+      case personaName.WOESTENBURG: {
+        return this.woestenburg.password;
       }
       case personaName.RONALDO: {
         return this.ronaldo.password;
@@ -1265,6 +1565,18 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.password;
+      }
+      case personaName.AAKOEK: {
+        return this.aakoek.password;
+      }
+      case personaName.AKO: {
+        return this.ako.password;
+      }
+      case personaName.AVONK: {
+        return this.avonk.password;
+      }
+      case personaName.ERICHTERS: {
+        return this.erichters.password;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.password;

@@ -1,6 +1,4 @@
-import {materialEnum} from "../enum/woonVerzekeringEnum";
-import {fuelTypEnum} from "../enum/genericEnum";
-import {boatNamesEnum, typeBoatEnum} from "../enum/bootEnum";
+import {boatNamesEnum, fuelTypEnum, materialEnum, typeBoatEnum} from "@enum";
 
 export class Boat {
 
@@ -18,8 +16,7 @@ export class Boat {
   value: string;
   length: string;
 
-  constructor(name: string, brandName: string, type: string, constructionYear: string, material: string, motorBrandName: string, motorNumber: string,
-              motorConstructionYear: string, motorPurchaseYear: string, fuelType: string, power: string, value: string, length: string) {
+  constructor(name: string, brandName: string, type: string, constructionYear: string, material: string, motorBrandName: string, motorNumber: string, motorConstructionYear: string, motorPurchaseYear: string, fuelType: string, power: string, value: string, length: string) {
 
     this.name = name;
     this.brandName = brandName;
@@ -39,8 +36,7 @@ export class Boat {
 
 export class BoatWithName {
 
-  azzam: Boat = new Boat(boatNamesEnum.AZZAM, boatNamesEnum.AZZAM, typeBoatEnum.SLOEP, '2018', materialEnum.KUNSTSTOF_POLYESTER, 'Kawasaki', '12345',
-    '2018', '2018', fuelTypEnum.DIESEL, '100', '15000', '15');
+  azzam: Boat = new Boat(boatNamesEnum.AZZAM, boatNamesEnum.AZZAM, typeBoatEnum.SLOEP, '2018', materialEnum.KUNSTSTOF_POLYESTER, 'Kawasaki', '12345', '2018', '2018', fuelTypEnum.DIESEL, '100', '15000', '15');
 
   getBoatName(input: string): string {
     switch (input) {

@@ -1,5 +1,5 @@
-import {toolsEnum} from "../../enum/zakelijkAansprakelijkheidsVerzekeringEnum";
-import {genericMethods, zakelijkAansprakelijkheidsVerzekeringElements} from "../../../support";
+import {genericMethods, zakelijkAansprakelijkheidsVerzekeringElements} from "@support";
+import {toolsEnum} from "@enum";
 
 export class ZakelijkAansprakelijkheidsVerzekeringMethods {
 

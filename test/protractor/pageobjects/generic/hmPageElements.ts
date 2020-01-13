@@ -12,7 +12,7 @@ export class HmPageElements {
 
   homePageBusinessBedrijfsAutoverzekeringClickElement: string = '[href*="/zakelijk/bedrijfsautoverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessArbeidsongeschiktheidClickElement: string = '[href*="/zakelijk/arbeidsongeschiktheidsverzekering"][class*="insurances_tabLinkAction"]';
-  homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/zzp-inkomensverzekering/premieberekenen-en-afsluiten"]';
+  homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href="/zakelijk/arbeidsongeschiktheidsverzekering-zzp/premieberekenen-en-afsluiten"]';
   homePageBusinessRechtsbijstandClickElement: string = '[href*="/zakelijk/rechtsbijstandverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessRechtsbijstandPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
   homePageBusinessEigenVervoerClickElement: string = '[href*="/zakelijk/eigenvervoerverzekering"][class*="insurances_tabLinkAction"]';
@@ -77,8 +77,8 @@ export class HmPageElements {
   bekijkAlleContactMogelijkhedenButtonClickElement: string = '[aria-hidden*="false"] [class*="mainSiteNav_category"] [class*="mainSiteNav_button"][title*="Bekijk alle contactmogelijkheden"]';
 
 
-  zorgNotaDeclarerenTitleTextElement: string = '[class*="detailContent_title"]';
-  zorgNotaDeclarerenTitleText: string = "Uw zorgnota's declareren bij Univé";
+  zorgNotaDeclarerenTitleTextElement: string = 'section:nth-child(1) > h4';
+  zorgNotaDeclarerenTitleText: string = "Via de Univé App";
   zorgNotaDeclarerenBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Declareren"]';
   alarmCentraleTitleTextElement: string = '[class*="action_title"]';
   alarmCentraleTitleText: string = 'Alarmcentrale';
@@ -93,6 +93,7 @@ export class HmPageElements {
   zoekenPageButtonInputElement: string = '[class="banner_searchBarSubmit"]';
   zoekenPageButtonClickElement: string = '[class="searchBar_submit"]';
   headerMijnUniveClickElement: string = '[data-toggle-menu="mijnunive"]';
+  mijnUniveLoggedInUserClickElement: string = '[class="mainUserStatus__name"]';
   headerMijnUniveZorgClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zorg"]';
   headerMijnUniveParticulierClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Particulier"]';
   headerMijnUniveZakelijkClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zakelijk"]';
@@ -111,10 +112,11 @@ export class HmPageElements {
   klantenServiceTitleText: string = 'Klantenservice';
   zipcodePlaceTitleTextElement: string = '[class="locationFinder_title"]';
   zipcodePlaceTitleText: string = 'Zoek een Univé-winkel bij u in de buurt';
+  zipcodePlaceTableZwolleTextElement: string = '[class="locationFinder_locationList _search_complete"] li:nth-child(1) [class=location_title]';
   footerOndernemersScanClickElement: string = '[class="mainFooterContent_menuLink"][href*="ondernemersscan"]';
   footerOndernemersScanH1TextElement: string = '[class="action_title"]';
-  footerKlantenServiceZakelijkTitleTextElement: string = '[itemprop="telephone"]';
-  footerKlantenServiceZakelijkTitleText: string = 'Klantenservice Zakelijk';
+  footerKlantenServiceZakelijkTitleTextElement: string = '[class="mainFooterContent_contactOptionPhone"]';
+  footerKlantenServiceZakelijkTitleText: string = '0592 349 649';
 
   //ZAKELIJK
   gebouwH2TextElement: string = '[class="productsMain_title"]';
@@ -135,6 +137,6 @@ export class HmPageElements {
   mijnUniveZakelijkUsernameInputElement: string = '#_MyQISLogonEnterCredentials__1';
   mijnUniveZakelijkPasswordInputElement: string = '#_MyQISLogonEnterCredentials__2';
   mijnUniveZakelijkSubmitButtonClickElement: string = '#_MyQISLogonEnterCredentials_logonButton';
-  mijnUniveZakelijkHomePageH3TextElement: string = '[class="logIn_content"] [id="inloggen-mijnqis"]';
-  mijnUniveZakelijkHomePageH3Text: string = 'Mijn Unive Zakelijk';
+  mijnUniveZakelijkHomePageH3TextElement: string = '[href="https://pat.unive.nl/zakelijk/mijnunive/inloggen"][class="button--primary mainMijnUnive_action"]';
+  mijnUniveZakelijkHomePageH4Text: string = 'Mijn Univé Zakelijk';
 }

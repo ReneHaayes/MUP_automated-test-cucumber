@@ -1,4 +1,4 @@
-@changeDataForPersona
+@changeDataForPersona @onegini
 
 Feature: Changing data for persona when logged in.
 
@@ -8,9 +8,8 @@ Feature: Changing data for persona when logged in.
     Then Verify <persona> is logged in with <newPassword> for new password
 
     Examples:
-      | persona | newPassword |
-      | annie   | Test123!    |
-
+      | persona | newPassword    |
+      | avonk   | Wachtwoord123! |
 
   Scenario Outline: Change emailadres for login.
     Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website
@@ -18,11 +17,11 @@ Feature: Changing data for persona when logged in.
     Then Verify <persona> is logged in with <newEmailAddress> for new email address
 
     Examples:
-      | persona | newEmailAddress    |
-      | annie   | test123@test123.nl |
+      | persona   | newEmailAddress    |
+      | erichters | test123@test123.nl |
 
   Scenario Outline: Change payment data for persona when logged in
-    Given Customer annie is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website
+    Given Customer woestenburg is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website
     When Customer changes payment data with form for <payment data>
     Then Verify thank you page for payment data changed
 
@@ -33,12 +32,6 @@ Feature: Changing data for persona when logged in.
       | iban accountnumber |
 
   Scenario: Change contact preferences for persona when logged in
-    Given Customer annie is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
+    Given Customer woestenburg is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
     When Customer changes contact preferences
     Then Verify thank you message is shown for changing contact preferences
-
-  Scenario: Change identification data for persona when logged in
-    Given Customer annie is logged in on the mijn unive identiteitsgegevens doorgeven page of the Unive website
-    When Customer changes identity preferences
-    Then Verify thank you message is shown for changing identity preferences
-

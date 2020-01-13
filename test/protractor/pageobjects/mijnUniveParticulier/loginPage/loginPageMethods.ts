@@ -1,7 +1,6 @@
 import {browser} from "protractor";
-import {veelgesteldeVragenEnum} from "../../enum/veelgesteldeVragenEnum";
-import {verzekeringPaginasEnum} from "../../enum/genericEnum";
-import {genericElements, genericMethods, loginPageElements, personaData} from "../../../support";
+import {genericElements, genericMethods, loginPageElements, personaData} from "@support";
+import {veelgesteldeVragenEnum, verzekeringPaginasEnum} from "@enum";
 
 export class LoginPageMethods {
 
@@ -31,13 +30,13 @@ export class LoginPageMethods {
   }
 
   async login(emailAddress: string, password: string) {
-    await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
-    await genericMethods.typeText(loginPageElements.loginPasswordInputElement, password);
-    await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
     try {
       await genericMethods.waitForElementAndClick(genericElements.cookieClickElement, 10000)
     } catch {
     }
+    await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
+    await genericMethods.typeText(loginPageElements.loginPasswordInputElement, password);
+    await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
   }
 
 

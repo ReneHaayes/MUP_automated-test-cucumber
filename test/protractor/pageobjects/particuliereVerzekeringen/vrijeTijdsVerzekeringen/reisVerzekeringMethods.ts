@@ -1,6 +1,6 @@
-import {numbersEnum} from "../../enum/genericEnum";
-import { browser } from 'protractor';
-import {genericElements, genericMethods, hmPageElements, reisVerzekeringElements} from "../../../support";
+import {browser} from 'protractor';
+import {genericElements, genericMethods, hmPageElements, reisVerzekeringElements} from "@support";
+import {numbersEnum} from "@enum";
 
 export class ReisVerzekeringMethods {
 
@@ -118,10 +118,8 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf en Mijn Partner checked': {
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyself + '")]', browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyPartner + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyself + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyPartner + '")]', browser.getPageTimeout);
         break;
       }
       case 'Mijzelf en Mijn kinderen checked': {
@@ -131,8 +129,7 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf checked': {
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyself + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyself + '")]', browser.getPageTimeout);
         break;
       }
       case 'Mijn Partner en Mijn kinderen checked': {
@@ -142,8 +139,7 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijn Partner checked': {
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyPartner + '")]', browser.getPageTimeout);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyPartner + '")]', browser.getPageTimeout);
         break;
       }
       case 'Mijn kinderen checked': {

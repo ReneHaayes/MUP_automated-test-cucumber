@@ -3,7 +3,7 @@
 Feature: Changing family composition for persona when logged in.
 
   Scenario Outline: Change identification data for persona when logged in
-    Given Customer annie is logged in on the mijn unive gezinssituatie wijzigen page of the Unive website
+    Given Customer woestenburg is logged in on the mijn unive gezinssituatie wijzigen page of the Unive website
     When Customer changes family composition preferences with <family composition>
     Then Verify thank you message is shown for family composition preferences
 
@@ -11,5 +11,5 @@ Feature: Changing family composition for persona when logged in.
       | family composition   |
       | one person           |
       | living together      |
-      | one parent          |
+      | one parent           |
       | family with children |

@@ -1,5 +1,5 @@
 import {Then, When} from "cucumber";
-import {alleVerzekeringenZakelijkMethods, genericElements, genericMethods} from "../../../support";
+import {alleVerzekeringenZakelijkMethods, genericElements, genericMethods} from "@support";
 
 
 When(/^I click on (.*) at the alle verzekeringen zakelijk page$/, async (buttonPage: string) => {

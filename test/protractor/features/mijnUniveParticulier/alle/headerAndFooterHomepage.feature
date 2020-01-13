@@ -14,7 +14,6 @@ Feature: Header and footer happyflow
       | verzekeringen  |
       | klantenservice |
 
-  @jaapjan
   Scenario Outline: Click on the footer in MU and check the elements and verify if the outcome is correct.
     Given Customer illing is logged in on the mijn unive particulier page of the Unive website
     When Customer press the button <button> on the Mijn Unive homepage footer

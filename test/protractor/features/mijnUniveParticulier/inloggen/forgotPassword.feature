@@ -1,4 +1,4 @@
-@forgotPasswordMijnUniveParticulier
+@forgotPasswordMijnUniveParticulier @onegini
 
 Feature: Forgot password flow.
 
@@ -9,6 +9,6 @@ Feature: Forgot password flow.
 
 
     Examples:
-      | persona | newPassword |
-      | annie   | Test123!    |
+      | persona | newPassword    |
+      | aakoek  | Wachtwoord123! |
 

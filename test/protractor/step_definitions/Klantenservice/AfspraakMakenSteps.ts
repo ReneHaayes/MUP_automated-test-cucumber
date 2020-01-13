@@ -1,6 +1,6 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
-import {afspraakMakenElements, genericMethods, klachtenFormulierElements} from "../../support";
+import {afspraakMakenElements, genericMethods, klachtenFormulierElements} from "@support";
 
 When(/^Customer fills in afspraak maken form correctly$/, async () => {
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);

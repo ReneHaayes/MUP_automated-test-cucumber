@@ -96,8 +96,4 @@ export class AutoVerzekeringElements {
   collectiveAutoCompleteClickElement: string = '.autocomplete-suggestion';
   collectiveResultTextElement: string = '#_Form_IF4105_6208';
 
-  //AMP
-  ampImageElement: string = '[alt="Afbeelding"][src*="autoverzekering_illustratie_2x.png"]';
-  ampBerekenUwPremieButtonClickElement: string = '[href="/autoverzekering/premieberekenen-en-afsluiten"]';
-
 }

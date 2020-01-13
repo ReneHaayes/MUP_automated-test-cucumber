@@ -1,7 +1,6 @@
-import {selectAlleVerzekeringEnum} from "../../enum/alleVerzekeringEnum";
-import {breadCrumbEnum, verzekeringPaginasEnum} from "../../enum/genericEnum";
 import {browser} from "protractor";
-import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements} from "../../../support";
+import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements} from "@support";
+import {breadCrumbEnum, selectAlleVerzekeringEnum, verzekeringPaginasEnum} from "@enum";
 
 export class AlleVerzekeringenMethods {
 
@@ -291,7 +290,7 @@ export class AlleVerzekeringenMethods {
       }
       case verzekeringPaginasEnum.PENSIOEN: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.PENSIOEN);
-        await genericMethods.verifyTextInElementIgnoreCase(hmPageElements.overUniveTitleTextElement, verzekeringPaginasEnum.PENSIOEN);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.pensioenH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.PENSIOEN, 2);
         break;

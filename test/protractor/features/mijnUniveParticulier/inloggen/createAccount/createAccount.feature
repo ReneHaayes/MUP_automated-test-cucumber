@@ -1,4 +1,4 @@
-@createMijnUniveAccount
+@createMijnUniveAccount @onegini
 
 Feature: Deleting an Account and afterwards creating an account.
 
@@ -10,4 +10,4 @@ Feature: Deleting an Account and afterwards creating an account.
 
     Examples:
       | persona |
-      | annie   |
+      | ako     |

@@ -32,7 +32,7 @@ export class HmPageMijnUniveElements {
 
   footerBekijkDeVeelGesteldeVragenClickElement: string ='[class="footer__help"] [href="/klantenservice/veelgesteldevragen"]';
 
-  footerBekijkDeVeelGesteldeVragenTextElement: string = '[class="filterContentHeading_title"]';
+  footerBekijkDeVeelGesteldeVragenTextElement: string = '[class="decisiontree_title"]';
   footerBekijkDeVeelGesteldeVragenTitleText: string = 'Veelgestelde vragen overzicht';
 
 }

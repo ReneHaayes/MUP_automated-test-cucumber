@@ -81,6 +81,7 @@ export enum homePageEnum {
   KLACHTENFORMULIER = 'klachtenformulier',
   VRAAGSTELLEN = 'vraagStellen',
   SCHADE = 'schade',
+  SCHADE_SERVICE = 'schade service',
   KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
   ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
   RECHTSBIJSTAND = 'rechtsbijstand',
@@ -93,5 +94,6 @@ export enum homePageEnum {
   KLACHT_INDIENEN = 'klacht indienen',
   SCHADE_BESLISBOOM = 'schade beslisboom',
   INLOGGEN = 'inloggen',
-  ONDERNEMERSCAN = 'Ondernemersscan'
+  ONDERNEMERSCAN = 'Ondernemersscan',
+  CMS = 'cms'
 }

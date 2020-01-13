@@ -19,8 +19,9 @@ import {WoonVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/
 import {ReisVerzekeringElements} from "../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringElements";
 import {ZorgCheckToolElements} from "../pageobjects/zorg/zorgCheckToolElements";
 import {ZorgWizardElements} from "../pageobjects/zorg/zorgWizardElements";
+import {SchadeServiceElements} from "../pageobjects/Klantenservice/SchadeServiceElements";
+import {AnalyticsAutoverzekeringElements} from "../pageobjects/analytics/analyticsAutoverzekeringElements";
 
-export const mopedElements: MopedElements = new MopedElements();
 export const bikeElements: BikeElements = new BikeElements();
 export const scootMobielVerzekeringElements: ScootMobielVerzekeringElements = new ScootMobielVerzekeringElements();
 export const caravanVerzekeringElements: CaravanVerzekeringElements = new CaravanVerzekeringElements();
@@ -42,3 +43,5 @@ export const aansprakelijkheidsVerzekerElements: AansprakelijkheidsVerzekerEleme
 export const reisVerzekeringElements: ReisVerzekeringElements = new ReisVerzekeringElements();
 export const zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolElements();
 export const zorgWizardElements: ZorgWizardElements = new ZorgWizardElements();
+export const schadeServiceElements: SchadeServiceElements = new SchadeServiceElements();
+export const analyticsAutoverzekeringElements: AnalyticsAutoverzekeringElements = new AnalyticsAutoverzekeringElements();

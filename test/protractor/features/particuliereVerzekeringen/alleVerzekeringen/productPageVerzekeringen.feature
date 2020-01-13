@@ -37,7 +37,6 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw huis            | Kostbaarhedenverzekering     |
       | uw gezondheid      | MijnGemak                    |
 
-
   Scenario Outline: Check the elements and dropdowns on the alle verzekeringen page 2.
     Given I am on the alle verzekeringen page of the Unive website
     When I select <select> and click on <buttonPage> at the alle verzekeringen bottom page
@@ -48,6 +47,6 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw recht               | rechtsbijstandverzekering     |
       | alle verzekeringen     | aansprakelijkheidsverzekering |
       | uw financiele toekomst | pensioen                      |
-      | alle verzekeringen     | lijfrenteverzekering          |
+#      | alle verzekeringen     | lijfrenteverzekering          |
       | uw nabestaanden        | uitvaartverzekering           |
       | alle verzekeringen     | overlijdensrisicoverzekering  |

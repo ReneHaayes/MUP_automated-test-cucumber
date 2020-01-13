@@ -1,3 +1,6 @@
+require('ts-node/register');
+require('tsconfig-paths/register');
+
 exports.config = {
   // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
