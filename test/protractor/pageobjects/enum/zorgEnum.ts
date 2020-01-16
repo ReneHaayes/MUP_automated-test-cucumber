@@ -26,7 +26,7 @@ export enum moduleEnum {
 
 export enum collectievenEnum {
     OMRINGMEDEWERKERS = 'Omring Medewerkers',
-    CARINOVASERVICEPAKKET = 'Carinova Servicepakket',
+    CARINOVASERVICEPAKKET = 'Carinova Thuizz',
     HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein'
 }
 

@@ -31,8 +31,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |collective            |insuranceBasis|discountBasis|discountAanvullend|
         |Omring Medewerkers    |Zorg Vrij     |5%           |10%               |
         |Nic Oud BV            |Zorg Geregeld |3%           |10%               |
-        |Carinova Servicepakket|Zorg Vrij     |5%           |10%               |
-        |Carinova Servicepakket|Zorg Geregeld |5%           |10%               |
+        |Carinova Thuizz       |Zorg Vrij     |5%           |10%               |
+        |Carinova Thuizz       |Zorg Geregeld |5%           |10%               |
     
     @collectieven
     Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
@@ -59,7 +59,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |collective            |insuranceBasis|
         |Omring Medewerkers    |Zorg Vrij     |
-        |Carinova Servicepakket|Zorg Geregeld |
+        |Carinova Thuizz       |Zorg Geregeld |
     
     @collectieven
     Scenario: selecteer zorg select, check dat je niet collectief toe kunt voegen, check daarna of alle losse modules klikbaar zijn en alle pakketten klikbaar zijn
@@ -507,7 +507,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         When I change hoofdverzekerde from zorg select to zorg geregeld
         And I click on add collective button in wizard
         And I add a collective with:
-        |collective|Carinova Servicepakket|
+        |collective|Carinova Thuizz|
         And I validate child under 18 has zorg vrij and tand best
         And I add to partner collectief aanvullend goed
         Then validate child under 18 has zorg vrij, collectief aanvullend goed and tand best
@@ -549,7 +549,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I click on add collective button in wizard
         And I add a collective with:
-        |collective|Carinova Servicepakket| 
+        |collective|Carinova Thuizz| 
         And I add a hoofdverzekerde with zorg vrij
         And I click on partner toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona>
