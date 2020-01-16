@@ -101,7 +101,7 @@ When(/^I click on Volgende page one$/, async () => {
 
 When(/^I click on Volgende page two$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdH1TextElement, 150);
+    await genericMethods.waitForElementIsInvisibleClassName(zorgWizardElements.spinnerButtonClickElement, 500);
 });
 
 When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: string) => {
@@ -125,7 +125,7 @@ When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
 
 When(/^I click on bevestigen step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
-    await browser.sleep(1000);
+    await genericMethods.waitForElementIsInvisibleClassName(zorgWizardElements.spinnerButtonClickElement, 500);
 });
 
 Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {
@@ -162,7 +162,6 @@ When(/^I select geen verzekering overstapreden in dropdown$/, async () => {
 });
 
 When(/^I validate that all legends are visible on step 3$/, async () => {
-    await browser.sleep(500);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdH1TextElement, 150);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, zorgWizardElements.bijnaVerzekerdBurgerservicenummerText);
