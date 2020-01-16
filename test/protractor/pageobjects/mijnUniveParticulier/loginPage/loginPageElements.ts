@@ -5,7 +5,7 @@ export class LoginPageElements {
   homeHeaderLayoutText: string = 'Welkom bij Mijn Univé';
 
   //MIJN UNIVE LOGIN
-  loginEmailInputElement: string = '#email';
+  loginEmailInputElement: string = '#emailphone';
   loginPasswordInputElement: string = '#password';
   loginSubmitButtonClickElement: string = '[id="loginForm"] button';
 
@@ -40,7 +40,7 @@ export class LoginPageElements {
   forgotPasswordClickElement: string = '#reset-password';
   forgotPasswordEmailAddressInputElement: string = '#email';
   forgotPasswordSubmitButtonClickElement: string = '#confirm';
-  forgotPasswordMessageWhenEnteredEmailAddressTextElement: string = '#messageBox > span';
+  forgotPasswordMessageWhenEnteredEmailAddressTextElement: string = '[class="login-options"] > div:nth-child(1) > h4';
   plainClickElement: string = '[href="#preview-plain"]';
   resetPasswordInEmailClickElement: string = '[href*="reset-password"]';
 
