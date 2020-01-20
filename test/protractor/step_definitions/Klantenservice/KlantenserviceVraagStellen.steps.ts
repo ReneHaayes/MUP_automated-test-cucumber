@@ -1,18 +1,11 @@
 import {When, Then} from 'cucumber';
-import {genericMethods, klantenserviceVraagStellenElements} from "@support";
+import {genericMethods, klantenserviceVraagStellenElements, klantenserviceVraagstellenMethods} from "@support";
 import {browser} from "protractor";
 
 When(/^Customer fills in form for schadeverzekeringen vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
   await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.bentUKlantBijUniveJaPrive);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'AB');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.geslachtContactpersoonMan);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-2000');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.emailAdresInputElements, 'info@univee.nl');
+  await klantenserviceVraagstellenMethods.fillInKlantenServiceVraagstellenForm();
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 
@@ -20,13 +13,13 @@ When(/^Customer wait 2 minutes and fills in form for schadeverzekeringen vraag s
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
   await browser.sleep(125000);
   await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.bentUKlantBijUniveJaPrive);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'AB');
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.geslachtContactpersoonMan);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-2000');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.typeText(klantenserviceVraagStellenElements.emailAdresInputElements, 'info@univee.nl');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
@@ -34,13 +27,13 @@ When(/^Customer wait 2 minutes and fills in form for schadeverzekeringen vraag s
 When(/^Customer fills in form for schadeverzekeringen vraag stellen and double clicks on button$/,async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
   await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.bentUKlantBijUniveJaPrive);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'AB');
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.geslachtContactpersoonMan);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-2000');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.typeText(klantenserviceVraagStellenElements.emailAdresInputElements, 'info@univee.nl');
   await genericMethods.doubleClickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
@@ -62,43 +55,45 @@ When(/^Customer fills in form for zorgverzekeringen vraag stellen$/, async () =>
 
 When(/^Customer fills in form for levensverzekeringen vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.levensverzekeringenButtonClickElement);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.typeText(klantenserviceVraagStellenElements.levensverzekeringVraagOfOpmerkingInputElement, 'Vraag of opmerking');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.levensverzekeringBentUKlantJa);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'TE');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.levensverzekeringGeslachtMan);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-1990');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'info@univee.nl');
+  await klantenserviceVraagstellenMethods.fillInKlantenServiceVraagstellenForm();
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
+  // await genericMethods.clickOnElement(klantenserviceVraagStellenElements.levensverzekeringBentUKlantJa);
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'TE');
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
+  // await genericMethods.clickOnElement(klantenserviceVraagStellenElements.levensverzekeringGeslachtMan);
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-1990');
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'info@univee.nl');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 
 When(/^Customer fills in form for rechtsbijstandverzekering vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.rechtsbijstandverzekeringButtonClickElement);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.rechtsbijstandRubriekDropdownValueVraag);
   await genericMethods.typeText(klantenserviceVraagStellenElements.rechtsbijstandVraagOfOpmerkingInputElement, 'vraag');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.rechtsbijstandBentUKlantJa);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'TE');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
-  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.rechtsbijstandGeslachtMan);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-1990');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'infoo@univee.nl');
+  await klantenserviceVraagstellenMethods.fillInKlantenServiceVraagstellenForm();
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
+  // await genericMethods.clickOnElement(klantenserviceVraagStellenElements.rechtsbijstandBentUKlantJa);
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'TE');
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
+  // await genericMethods.clickOnElement(klantenserviceVraagStellenElements.rechtsbijstandGeslachtMan);
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-1990');
+  // await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'infoo@univee.nl');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 
 When(/^Customer fills in form for verzekeringspakket vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.verzekeringspakketButtonClickElement);
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.typeText(klantenserviceVraagStellenElements.verzekeringspakketVraagOfOpmerkingInputElement, 'Vraag of opmerking');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.verzekeringspakketBentUKlantJa);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenVoorlettersInputElement, 'TE');
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenAchternaamInputElement, 'Test');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.verzekeringspakketGeslachtMan);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-1990');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenPostcodeInputElement, '8017 JC');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenHuisnummerInputElement, '1');
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'infoo@univee.nl');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });

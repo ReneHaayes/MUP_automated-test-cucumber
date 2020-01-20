@@ -7,7 +7,7 @@ export class MijnVerzekeringenElements {
 
   //VERZEKERINGSOVERZICHT
   polisDetailsClickElement(polisNumber: string): string {
-    return "[class='tile__link media'][href*='" + polisNumber + "']"
+    return "[class='package__list'] [class='tile__link media'][href*='" + polisNumber + "']"
   }
 
   //POLIS DETAILS

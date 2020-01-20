@@ -83,9 +83,9 @@ export class HmPageElements {
   alarmCentraleTitleTextElement: string = '[class*="action_title"]';
   alarmCentraleTitleText: string = 'Alarmcentrale';
   alarmCentraleBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Alarmcentrale"]';
-  mijnUniveLoginTitleTextElement: string = '[class*="login-box"] [class="headline"]';
+  mijnUniveLoginTitleTextElement: string = '[id="loginForm"] [class="login-headline"]';
   mijnUniveLoginTitleText: string = 'Inloggen met uw account';
-  mijnUniveEmailInputElement: string = '#email';
+  mijnUniveEmailInputElement: string = '#emailphone';
   mijnUnivePasswordInputElement: string = '#password';
 
   //HEADER

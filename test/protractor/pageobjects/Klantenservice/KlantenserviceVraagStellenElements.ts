@@ -29,7 +29,7 @@ export class KlantenserviceVraagStellenElements {
     // Radiobuttons Schadeverzekeringen
     stichtingWinstoogmerkJaClickElement = '[class="eforms-input-group"] > label:nth-child(1)';
     bentUKlantBijUniveJaPrive = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
-    geslachtContactpersoonMan = '#field_3 > div:nth-child(6) > div.eforms-input-group > label:nth-child(1)';
+    geslachtContactpersoonMan = '#field_3 > div:nth-child(7) > div.eforms-input-group > label:nth-child(1)';
     stichtingEerderGesponsordJa = '#page0 > div:nth-child(21) > div > label:nth-child(1)';
 
     // Input Elements Zorgverzekeringen
@@ -64,7 +64,7 @@ export class KlantenserviceVraagStellenElements {
 
     // Radiobuttons verzekeringspakket
     verzekeringspakketBentUKlantJa = '#field_2 > div:nth-child(2) > div > label:nth-child(1)';
-    verzekeringspakketGeslachtMan = '#field_2 > div:nth-child(6) > div > label:nth-child(1)';
+    verzekeringspakketGeslachtMan = '#field_2 > div:nth-child(7) > div > label:nth-child(1)';
 
     // Input Elements wijziging
     wijzigingRubriekDrobdownValueAdresgegevensWijzigen = '#field_0 > div > div > select > option:nth-child(2)';
@@ -95,7 +95,7 @@ export class KlantenserviceVraagStellenElements {
 
     // Radiobuttons Overig
     overigBentUKlantJa = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
-    overigGeslachtMan = '#field_3 > div:nth-child(6) > div > label:nth-child(1)';
+    overigGeslachtMan = '#field_3 > div:nth-child(7) > div > label:nth-child(1)';
 
     // Confirmation
     vraagStellenConfirmationTextElement = '[class="eforms eforms-generiekEmail"] > div > p';
