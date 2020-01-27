@@ -95,5 +95,7 @@ export enum homePageEnum {
   SCHADE_BESLISBOOM = 'schade beslisboom',
   INLOGGEN = 'inloggen',
   ONDERNEMERSCAN = 'Ondernemersscan',
-  CMS = 'cms'
+  CMS = 'cms',
+  BEDRIJFSAUTO = 'Bedrijfsauto',
+  ZAKELIJKE_PERSONENAUTO = 'Zakelijke personenauto'
 }

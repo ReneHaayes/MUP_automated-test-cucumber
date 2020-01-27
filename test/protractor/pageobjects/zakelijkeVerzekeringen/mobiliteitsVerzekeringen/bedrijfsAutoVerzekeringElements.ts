@@ -44,7 +44,7 @@ export class BedrijfsAutoVerzekeringElements {
   sideBarAllRisk: string = 'All risk';
 
   //DATE ELEMENTS
-  startDateOnYourNameElement: string = '#_Form_IF20210_3681';
+  startDateOnYourNameElement: string = '#_Form_IF34740_3681';
 
   //MELDCODE
   reportingCode: string = '#_Form_IF20210_3682';
