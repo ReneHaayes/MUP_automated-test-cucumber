@@ -187,7 +187,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |inkomstenNietNL|<inkomstenNietNL>|
         And I click on Volgende page two
         And I enter BSN on step 3 with <persona2>
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         Then Verify that active policy pop-up is shown
         And validate button navigates to MijnUnive
 
@@ -343,7 +343,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
 
         Examples:
         |insuranceBasis|persona                     |persona2|persona3   |persona4                   |
-        |Zorg Select   |testvrouwCustomerRecognition|ronaldo   |testPartner|testkindCustomerRecognition|
+        |Zorg Select   |testvrouwCustomerRecognition|ronaldo |testPartner|testkindCustomerRecognition|
 
     @parameterURLBasisverzekering
     Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor de basisverzekering de wizard binnen te komen

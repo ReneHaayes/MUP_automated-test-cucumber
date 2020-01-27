@@ -169,7 +169,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
       |collective                    |
       |Huurdersvereniging Ijsselstein|
       |Omring Medewerkers            |
-      |Carinova Servicepakket        |
+      |Carinova Thuizz               |
       
   Scenario Outline: Check of toevoegen collectief juist werkt
     Given I am on the zorgCheckTool page of the Unive website
