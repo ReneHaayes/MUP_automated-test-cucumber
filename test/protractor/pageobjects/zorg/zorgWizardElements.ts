@@ -262,6 +262,7 @@ bijnaVerzekerdBurgerservicenummerTextElement: string = 'unive-almost-insured-bsn
 bijnaVerzekerdUBentBijnaVerzekerdText: string = 'U bent bijna verzekerd';
 bijnaVerzekerdUBentBijnaVerzekerdTextElement: string = '[class="unive-legend unive-legend--plain"]';
 backButtonEachStepClickElement: string = 'button.button.button--plain.button--back';
+spinnerButtonClickElement: string = '[class="button--spinner"]';
 
 //ZORGWIZARD BEDANKTPAGINA
 bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
