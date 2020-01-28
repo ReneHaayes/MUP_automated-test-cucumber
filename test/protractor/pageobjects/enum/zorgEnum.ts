@@ -31,7 +31,8 @@ export enum collectievenEnum {
     CARINOVATHUIZZ = 'Carinova Thuizz',
     CARINOVATHUIZZ1 = 'Carinova ',
     CARINOVATHUIZZ2 = 'Thuizz',
-    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein'
+    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein',
+    CARINOVASERVICEPAKKET = 'Carinova Servicepakket'
 }
 
 export enum crossSellEnum {
