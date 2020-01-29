@@ -5,6 +5,7 @@ import * as path from "path";
 
 import {genericElements, getUrlUnive, nawElements, personaData} from "@support";
 import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from "@enum";
+import * as blueharvest from "blue-harvest";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -276,8 +277,8 @@ export class GenericMethods {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
     });
     await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
-        typeTextElement.sendKeys(text);
-      })
+      typeTextElement.sendKeys(text);
+    })
   }
 
   async clearText(selector: string, length: number) {
@@ -360,7 +361,7 @@ export class GenericMethods {
     await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
     const selectorToString: string = await this.getTextWithXpath(selector);
     await expect(selectorToString).to.have.string(assertionText);
-  }  
+  }
 
   async verifyTextContainsInElementBoolean(selector: string, assertionText: string, waitFor: number): Promise<boolean> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
@@ -640,9 +641,24 @@ export class GenericMethods {
     await expect(input).to.equal(true);
   }
 
+  async makeScreenshotAndVerifyWithBaseline(baseImage: string) {
+    try {
+      const basePath = path.join(__dirname, '../../', 'baseScreenshot/' + baseImage + '.png');
+      const data = await browser.takeScreenshot();
+      await blueharvest.compareScreenshot(data, basePath, '../test/target/');
+    } catch (e) {
+      throw new Error('The screenshot dont match see ./target folder for the differences between base image: ' + baseImage + ' || ' + e);
+    }
+  }
+
+  async addMaskForElement(input: string, zIndex = 99999, xOffset = -20, yOffset = -20, sizeMultiplier = 4){
+    const e = element(by.css(input));
+    await blueharvest.addMask(e, 'black', zIndex, xOffset, yOffset, sizeMultiplier);
+  }
+
   async verifyTextNotEmpty(input: string) {
     try {
-    await expect(input.length).not.to.equal(0);
+      await expect(input.length).not.to.equal(0);
     } catch (e) {
       throw new Error('The length of ' + input + ' is:' + input.length + ' it should not be empty.');
     }
@@ -661,11 +677,11 @@ export class GenericMethods {
 
   async getAnalyticsText(input: string): Promise<string> {
     try {
-    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-    let test = await browser.executeScript('return '+ input +';');
-    return test.toString();
+      await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+      let test = await browser.executeScript('return ' + input + ';');
+      return test.toString();
     } catch (e) {
-      throw new Error('Analytics for: ' + input  + ' cant be found');
+      throw new Error('Analytics for: ' + input + ' cant be found');
     }
   }
 

@@ -1,18 +1,13 @@
-import {When} from "cucumber";
-import * as blueharvest from 'blue-harvest';
-import * as path from "path";
+import {Then, When} from "cucumber";
+import {genericMethods, hmPageElements, visualElements} from "@support";
 import {browser} from "protractor";
-import {genericMethods} from "@support";
 
 
-When(/^I test screenshots$/, async () => {
-  const goldenPath = path.join(__dirname, '../../', `baseScreenshot/download.png`);
-  await browser.sleep(20000);
-  const data = await browser.takeScreenshot();
-  await console.log('stap1');
-  // await logImageToHtmlReport()
-  const result = await blueharvest.compareScreenshot(data, goldenPath, './');
-  console.log('stap2');
-  // await browser.logImageToHtmlReport(this, result);
-  await genericMethods.verifyScreenshot(result);
+When(/^The page waits for licenseplate element is visible$/, async () => {
+  await genericMethods.waitForElementIsVisible(hmPageElements.licensePlateWidgetInputElement, browser.getPageTimeout);
+});
+
+Then(/^Verify visual elements on the homepage are the same compared to the base screenshot: (.*)$/, async (baseImage: string) => {
+  await genericMethods.addMaskForElement(visualElements.scrollLeftBottomElement);
+  await genericMethods.makeScreenshotAndVerifyWithBaseline(baseImage);
 });
