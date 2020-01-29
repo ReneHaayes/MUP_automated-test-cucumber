@@ -636,6 +636,10 @@ export class GenericMethods {
     await expect(input).to.equal(assertionText);
   }
 
+  async verifyScreenshot(input: string) {
+    await expect(input).to.equal(true);
+  }
+
   async verifyTextNotEmpty(input: string) {
     try {
     await expect(input.length).not.to.equal(0);
