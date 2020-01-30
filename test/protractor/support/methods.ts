@@ -27,6 +27,8 @@ import {BedrijfsAutoVerzekeringMethods} from "../pageobjects/zakelijkeVerzekerin
 import {ZakelijkTractorVerzekeringMethods} from "../pageobjects/zakelijkeVerzekeringen/mobiliteitsVerzekeringen/zakelijkTractorVerzekeringMethods";
 import {ApiMethods} from "../pageobjects/api/apiMethods";
 import {WoonVerzekeringMethods} from "../pageobjects/particuliereVerzekeringen/huisVerzekeringen/woonVerzekeringMethods";
+import {ZorgCheckToolMethods} from "../pageobjects/zorg/zorgCheckToolMethods";
+import {ZorgWizardMethods} from "../pageobjects/zorg/zorgWizardMethods";
 import {OndernemersScanMethods} from '../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanMethods';
 
 export const situatieGewijzigdMethods: SituatieGewijzigdMethods = new SituatieGewijzigdMethods();
@@ -58,4 +60,3 @@ export const bedrijfsAutoVerzekeringMethods: BedrijfsAutoVerzekeringMethods = ne
 export const zakelijkTractorVerzekerinigMethods: ZakelijkTractorVerzekeringMethods = new ZakelijkTractorVerzekeringMethods();
 export const apiMethods: ApiMethods = new ApiMethods();
 export const woonVerzekeringMethods: WoonVerzekeringMethods = new WoonVerzekeringMethods();
-export const ondernemersScanMethods: OndernemersScanMethods = new OndernemersScanMethods();

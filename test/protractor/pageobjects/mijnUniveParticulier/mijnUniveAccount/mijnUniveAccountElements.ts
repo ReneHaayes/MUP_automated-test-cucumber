@@ -1,7 +1,8 @@
 export class MijnUniveAccountElements {
 
   //CREATE MIJN UNIVE ACCOUNT
-  accountAanmakenButtonClickElement: string = '[id="section3"] [class="btn submit-btn col-xs-12"]';
+  accountAanmakenButtonClickElement: string = '[id="section3"] [class*="btn submit-btn col-xs-12"]';
+  identificeerUwZonderIdinButtonClickElement: string = '[href="/personal/sign-up-unp"]';
   mijnUniveBirthdayInputElement: string = '#geboortedatum';
   mijnUniveZipcodeInputElement: string = '#postcode';
   mijnUniveLastFourNumberOfAccountNumberInputElement: string = '#bankAccount';
@@ -19,7 +20,7 @@ export class MijnUniveAccountElements {
 
   //DELETE ACCOUNT
   accountVerwijderenClickElement: string = '[class="button-link link link--warning"][href="/mijnunive/account-verwijderen"]';
-  submitVerwijderMijnAccountClickElement: string = '[class="deleteAccount_submit"]';
+  submitVerwijderMijnAccountClickElement: string = '#account-delete';
 
   //SUCCESVOL AANMELDEN
   aanmeldenSuccesvolTextElement: string = '#aanmelden-succesvol';

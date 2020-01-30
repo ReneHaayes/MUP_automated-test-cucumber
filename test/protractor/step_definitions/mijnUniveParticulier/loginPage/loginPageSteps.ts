@@ -41,8 +41,8 @@ When(/^persona (.*) forgot his password and resets it with new password (.*)$/, 
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordClickElement);
   await genericMethods.typeText(loginPageElements.forgotPasswordEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordSubmitButtonClickElement);
-  await genericMethods.verifyTextContainsInElement(loginPageElements.forgotPasswordMessageWhenEnteredEmailAddressTextElement,
-    'verstuurd waarmee u uw wachtwoord kunt herstellen', browser.getPageTimeout);
+  await genericMethods.verifyTextInElement(loginPageElements.forgotPasswordMessageWhenEnteredEmailAddressTextElement,
+    'We hebben uw aanvraag ontvangen');
   //Handling the email with new password:
   await genericMethods.goToPage(verzekeringPaginasEnum.MAILHOG);
   await genericMethods.verifyTextInElement(loginPageElements.mailtoHeaderTextElement, personaData.getPersonaEmailAddress(persona));

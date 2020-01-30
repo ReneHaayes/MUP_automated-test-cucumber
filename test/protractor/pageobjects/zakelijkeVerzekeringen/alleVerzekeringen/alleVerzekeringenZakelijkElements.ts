@@ -29,6 +29,7 @@ export class AlleVerzekeringenZakelijkElements {
   zakelijkRechtsbijstandVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
   tractorVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/zakelijk/tractorverzekering/premieberekenen-en-afsluiten"]';
   vrachtAutoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten"]';
+  zakelijkePersonenAutoverzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/zakelijk/personenautoverzekering/premieberekenen-en-afsluiten"]'
 
 
 

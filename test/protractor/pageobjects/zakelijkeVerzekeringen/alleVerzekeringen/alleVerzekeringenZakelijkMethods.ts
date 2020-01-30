@@ -104,7 +104,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.PERSONENAUTOVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.zakelijkePersonenAutoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.ZAKELIJK_MOTOVERZEKERING: {

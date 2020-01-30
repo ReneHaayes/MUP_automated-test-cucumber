@@ -106,6 +106,15 @@ export class GenericMethods {
     }
   }
 
+  async waitForElementIsPresent(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css(selector));
+      await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is not visible');
+    }
+  }
+
   async verifyUrlContains(url: string) {
     const currentUrl: string = await browser.getCurrentUrl();
     await expect(currentUrl).to.have.string(url);
@@ -248,6 +257,25 @@ export class GenericMethods {
     })
   }
 
+  async clearText(selector: string, length: number) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const typeTextElement: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
+    });
+    length = length || 100;
+    let backspaceSeries = '';
+    for (let i = 0; i < length; i++) {
+      backspaceSeries += protractor.Key.BACK_SPACE;
+    }
+    await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
+      typeTextElement.clear().then(() => {
+        typeTextElement.sendKeys(backspaceSeries);
+      })
+    })
+  }
+
   async clickOnTAB(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
@@ -303,6 +331,13 @@ export class GenericMethods {
     const selectorToString: string = await this.getText(selector);
     await expect(selectorToString).to.have.string(assertionText);
   }
+
+  async verifyTextContainsInElementWithXpath(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleWithXpath(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getTextWithXpath(selector);
+    await expect(selectorToString).to.have.string(assertionText);
+  }  
 
   async verifyTextContainsInElementBoolean(selector: string, assertionText: string, waitFor: number): Promise<boolean> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);

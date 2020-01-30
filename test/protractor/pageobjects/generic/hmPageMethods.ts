@@ -307,7 +307,7 @@ export class HmPageMethods {
       }
       case homePageEnum.RECHTSBIJSTAND: {
         await genericMethods.verifyUrlContains(genericElements.zakelijkRechtsBijstandVerzekeringPp);
-        await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.activityZZPClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.getCompanyDataButtonClickElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.EIGEN_VERVOER: {
@@ -393,7 +393,7 @@ export class HmPageMethods {
       case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveZakelijkHomePageH3TextElement, hmPageElements.mijnUniveZakelijkHomePageH3Text);
+        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveZakelijkHomePageH3TextElement, hmPageElements.mijnUniveZakelijkHomePageH4Text);
         break;
       }
       default: {

@@ -47,6 +47,7 @@ Then(/^The notification that there is already an account for this e-mail adres s
 When(/^the password is filled in with (.*)$/, async (password: string) => {
   await genericMethods.clickOnElement(genericElements.cookieClickElement);
   await genericMethods.clickOnElement(mijnUniveAccountElements.accountAanmakenButtonClickElement);
+  await genericMethods.clickOnElement(mijnUniveAccountElements.identificeerUwZonderIdinButtonClickElement);
   await genericMethods.typeText(mijnUniveAccountElements.mijnUniveChoosePasswordInputElement, password);
   await genericMethods.clickOnTAB(mijnUniveAccountElements.mijnUniveChoosePasswordInputElement);
 });

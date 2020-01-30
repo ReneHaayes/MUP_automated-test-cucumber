@@ -101,6 +101,24 @@ export class PersonaData {
   erichters: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Evers', '01', '01', '1937', 'Delfzijl', '9934LP',
     '6', houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'eversrichters@ziggo.nl', '7671', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
+  testvrouwCustomerRecognition: Persona = new Persona('Zappie', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1972', 'Amsterdam', '1012NX', '1',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0592444523', specificIdentification.PASSPORT, 'ACP26N', 'zz@top.nl',
+    'NL49ANDL0687747724', '232099765', 'dolfijnentrainer', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  testmanActivePolicy: Persona = new Persona('Zulu', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1955', 'Amsterdam', '1012NX', '3',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'actieve@polis.nl',
+    'NL02ABNA0123456789', '559488944', 'plintenplakker', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  testkindCustomerRecognition: Persona = new Persona('Zulu', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1890', 'Amsterdam', '1012NX', '3',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'actieve@polis.nl',
+    'NL02ABNA0123456789', '559488944', 'plintenplakker', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  testkindOnder18Een: Persona = new Persona('Dennis', 'D.', 'het', 'Kind onder achttien een', '04', '03', '2012', 'Amsterdam', '1012NX', '3',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'kindonder18@een.nl',
+    'NL02ABNA0123456789', '586265594', 'student', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  testkindBoven18Een: Persona = new Persona('Berend', 'B.', 'het', 'Kind boven achttien een', '11', '05', '1999', 'Amsterdam', '1012NX', '3',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'kindboven18@een.nl',
+    'NL02ABNA0123456789', '670020916', 'student', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  testPartner: Persona = new Persona('Arie', 'A.', 'de', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
+    'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
 
 
   getPersonaZipcode(input: string): string {
@@ -138,6 +156,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.zipCode;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.zipCode;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.zipCode;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.zipCode;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.zipCode;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.zipCode;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.zipCode;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -166,6 +202,24 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.birthDay;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.birthDay;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.birthDay;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.birthDay;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.birthDay;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.birthDay;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.birthDay;
       }
       case personaName.AAKOEK: {
         return this.aakoek.birthDay;
@@ -208,6 +262,24 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.birthMonth;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.birthMonth;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.birthMonth;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.birthMonth;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.birthMonth;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.birthMonth;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.birthMonth;
       }
       case personaName.AAKOEK: {
         return this.aakoek.birthMonth;
@@ -263,6 +335,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.birthYear;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.birthYear;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.birthYear;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.birthYear;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.birthYear;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.birthYear;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.birthYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -292,6 +382,24 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.birthDay + '-' + this.pogba.birthMonth + '-' + this.pogba.birthYear;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.birthDay + '-' + this.testvrouwCustomerRecognition.birthMonth + '-' + this.testvrouwCustomerRecognition.birthYear;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.birthDay + '-' + this.testmanActivePolicy.birthMonth + '-' + this.testmanActivePolicy.birthYear;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.birthDay + '-' + this.testkindCustomerRecognition.birthMonth + '-' + this.testkindCustomerRecognition.birthYear;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.birthDay + '-' + this.testkindOnder18Een.birthMonth + '-' + this.testkindOnder18Een.birthYear;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.birthDay + '-' + this.testkindBoven18Een.birthMonth + '-' + this.testkindBoven18Een.birthYear;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.birthDay + '-' + this.testPartner.birthMonth + '-' + this.testPartner.birthYear;
       }
       case personaName.AAKOEK: {
         return this.aakoek.birthDay + '-' + this.aakoek.birthMonth + '-' + this.aakoek.birthYear;
@@ -335,6 +443,24 @@ export class PersonaData {
       case personaName.POGBA: {
         return this.pogba.lastName;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.lastName;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.lastName;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.lastName;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.lastName;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.lastName;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.lastName;
+      }
       case personaName.AAKOEK: {
         return this.aakoek.lastName;
       }
@@ -375,6 +501,24 @@ export class PersonaData {
       }
       case personaName.POGBA: {
         return this.pogba.firstName;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.firstName;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.firstName;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.firstName;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.firstName;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.firstName;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.firstName;
       }
       case personaName.AAKOEK: {
         return this.aakoek.firstName;
@@ -430,6 +574,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.gender;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.gender;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.gender;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.gender;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.gender;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.gender;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.gender;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -472,6 +634,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.initials;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.initials;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.initials;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.initials;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.initials;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.initials;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.initials;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -512,6 +692,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.prefix;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.prefix;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.prefix;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.prefix;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.prefix;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.prefix;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.prefix;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -554,6 +752,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.birthPlace;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.birthPlace;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.birthPlace;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.birthPlace;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.birthPlace;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.birthPlace;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.birthPlace;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -594,6 +810,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.houseNumber;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.houseNumber;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.houseNumber;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.houseNumber;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.houseNumber;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.houseNumber;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.houseNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -636,6 +870,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.houseNumberAddition;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.houseNumberAddition;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.houseNumberAddition;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.houseNumberAddition;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.houseNumberAddition;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.houseNumberAddition;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.houseNumberAddition;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -676,6 +928,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.phoneNumber;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.phoneNumber;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.phoneNumber;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.phoneNumber;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.phoneNumber;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.phoneNumber;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.phoneNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -718,6 +988,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.specificIdentification;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.specificIdentification;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.specificIdentification;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.specificIdentification;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.specificIdentification;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.specificIdentification;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.specificIdentification;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -758,6 +1046,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.specificIdentificationNumber;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.specificIdentificationNumber;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.specificIdentificationNumber;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.specificIdentificationNumber;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.specificIdentificationNumber;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.specificIdentificationNumber;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.specificIdentificationNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -800,6 +1106,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.eMailAddress;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.eMailAddress;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.eMailAddress;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.eMailAddress;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.eMailAddress;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.eMailAddress;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.eMailAddress;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -840,6 +1164,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.accountNumber;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.accountNumber;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.accountNumber;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.accountNumber;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.accountNumber;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.accountNumber;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.accountNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -882,6 +1224,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.bsn;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.bsn;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.bsn;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.bsn;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.bsn;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.bsn;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.bsn;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -922,6 +1282,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.profession;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.profession;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.profession;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.profession;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.profession;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.profession;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.profession;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -964,6 +1342,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.kvkNumber;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.kvkNumber;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.kvkNumber;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.kvkNumber;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.kvkNumber;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.kvkNumber;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.kvkNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1004,6 +1400,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.durationEntrepreneur;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.durationEntrepreneur;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.durationEntrepreneur;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.durationEntrepreneur;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.durationEntrepreneur;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.durationEntrepreneur;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.durationEntrepreneur;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1046,6 +1460,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.height;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.height;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.height;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.height;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.height;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.height;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.height;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1087,6 +1519,24 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.weight;
       }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.weight;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.weight;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.weight;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.weight;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.weight;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.weight;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1127,6 +1577,24 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.password;
+      }
+      case personaName.TESTVROUWCUSTOMERRECOGNITION: {
+        return this.testvrouwCustomerRecognition.password;
+      }
+      case personaName.TESTMANACTIVEPOLICY: {
+        return this.testmanActivePolicy.password;
+      }
+      case personaName.TESTKINDCUSTOMERRECOGNITION: {
+        return this.testkindCustomerRecognition.password;
+      }
+      case personaName.TESTKINDONDER18EEN: {
+        return this.testkindOnder18Een.password;
+      }
+      case personaName.TESTKINDBOVEN18EEN: {
+        return this.testkindBoven18Een.password;
+      }
+      case personaName.TESTPARTNER: {
+        return this.testPartner.password;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

@@ -56,6 +56,7 @@ export class GenericElements {
   overUnive: string = 'overunive';
   zipcodePlaceZoeken: string = 'contact/zoek-winkel';
   zakelijkZzp: string = 'zakelijk/zzp';
+  cms: string = 'cms/';
   zakelijkAgrarier: string = 'zakelijk/agrariers';
   zakelijkGebouwen: string = 'zakelijk/gebouwenverzekering';
   afspraakMakenZakelijk: string = 'zakelijk/klantenservice/afspraak';
@@ -69,7 +70,7 @@ export class GenericElements {
   handelaarsKentekenVerzekering: string = 'zakelijk/handelaarskentekenverzekering';
   milieSchadeVerzekering: string = 'zakelijk/milieuschadeverzekering';
   zakelijkMotorVerzekering: string = 'zakelijk/motorverzekering';
-  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtautoverzekering';
+  vrachtAutoVerzekering: string = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering: string = 'zakelijk/werkmaterieelverzekering';
   loginMijnUniveParticulierURL: string = 'mijnunive/inloggen';
   veelgesteldevragenURL: string = 'klantenservice/veelgesteldevragen';
@@ -80,6 +81,19 @@ export class GenericElements {
   schadeService: string = 'schadeservice';
   pensioen: string = 'pensioen/';
 
+  zorgchecktool: string = 'zorgverzekering/zorgcheck';
+  zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';
+  zorgchecktoolThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=hS95ugVE';
+  zorgchecktoolNietThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=bH49xS38';
+  eigenRisico: string = 'zorgverzekering/eigenrisico';
+  zorgVrij: string = 'zorgverzekering/vrij';
+  zorgVerzekeringThuiszorgCollectiefParameter: string = this.zorgVerzekering + '?internetcode=hS95ugVE';
+  zorgVerzekeringNietThuiszorgCollectiefParameter: string = this.zorgVerzekering + '?internetcode=bH49xS38';
+  zorgVerzekeringThuiszorgCollectiefZorgSelectParameter: string = this.zorgVerzekeringThuiszorgCollectiefParameter + '&bv=ZVSU';
+  zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter: string = this.zorgVerzekeringNietThuiszorgCollectiefParameter + '&bv=ZVSU';
+  zorgVerzekeringBasisSelectParameter: string = this.zorgVerzekering + '?bv=ZVSU';
+  zorgVerzekeringBasisGeregeldParameter: string = this.zorgVerzekering + '?bv=GER';
+  zorgVerzekeringBasisVrijParameter: string = this.zorgVerzekering + '?bv=VRY';
 
   //MIJN UNIVE URL
   mijnUnivePage: string = 'mijnunive';
