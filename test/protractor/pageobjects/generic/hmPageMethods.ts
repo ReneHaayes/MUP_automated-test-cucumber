@@ -143,7 +143,7 @@ export class HmPageMethods {
         await genericMethods.clickOnElement(hmPageElements.footerKlantenServiceClickElement);
         break;
       }
-      case homePageEnum.ONDERNEMERSCAN: {
+      case homePageEnum.ONDERNEMERSSCAN: {
         await genericMethods.clickOnElement(hmPageElements.footerOndernemersScanClickElement);
         break;
       }
@@ -358,10 +358,10 @@ export class HmPageMethods {
         await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, verzekeringPaginasEnum.KLANTENSERVICE);
         break;
       }
-      case homePageEnum.ONDERNEMERSCAN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ONDERNEMERSCAN);
+      case homePageEnum.ONDERNEMERSSCAN: {
+        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ONDERNEMERSSCAN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.verifyTextInElement(hmPageElements.footerOndernemersScanH1TextElement, homePageEnum.ONDERNEMERSCAN);
+        await genericMethods.verifyTextInElement(hmPageElements.footerOndernemersScanH1TextElement, homePageEnum.ONDERNEMERSSCAN);
         break;
       }
       case homePageEnum.KLANTENSERVICE_ZAKELIJK: {

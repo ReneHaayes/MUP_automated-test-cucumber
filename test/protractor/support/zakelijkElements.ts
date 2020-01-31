@@ -7,6 +7,7 @@ import {BedrijfsAutoVerzekeringElements} from "../pageobjects/zakelijkeVerzekeri
 import {ProductPageElements} from "../pageobjects/generic/productPageElements";
 import {AovZzpElements} from "../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpElements";
 import {ZakelijkRechtsBijstandVerzekeringElements} from "../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements";
+import {OndernemersScanElements} from "../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanElements";
 
 export const alleVerzekeringenZakelijkElements: AlleVerzekeringenZakelijkElements = new AlleVerzekeringenZakelijkElements();
 export const zakelijkAansprakelijkheidsVerzekeringElements: ZakelijkAansprakelijkheidsVerzekeringElements = new ZakelijkAansprakelijkheidsVerzekeringElements();
@@ -17,3 +18,4 @@ export const bedrijfsAutoVerzekeringElements: BedrijfsAutoVerzekeringElements = 
 export const productPageElements: ProductPageElements = new ProductPageElements();
 export const aovZzpElements: AovZzpElements = new AovZzpElements();
 export const zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVerzekeringElements = new ZakelijkRechtsBijstandVerzekeringElements;
+export const ondernemersScanElements: OndernemersScanElements = new OndernemersScanElements();
