@@ -26,8 +26,13 @@ export enum moduleEnum {
 
 export enum collectievenEnum {
     OMRINGMEDEWERKERS = 'Omring Medewerkers',
-    CARINOVASERVICEPAKKET = 'Carinova Servicepakket',
-    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein'
+    OMRINGMEDEWERKERS1 = 'Omring ',
+    OMRINGMEDEWERKERS2 = 'Medewerkers',
+    CARINOVATHUIZZ = 'Carinova Thuizz',
+    CARINOVATHUIZZ1 = 'Carinova ',
+    CARINOVATHUIZZ2 = 'Thuizz',
+    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein',
+    CARINOVASERVICEPAKKET = 'Carinova Servicepakket'
 }
 
 export enum crossSellEnum {

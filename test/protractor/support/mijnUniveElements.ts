@@ -13,12 +13,14 @@ import {MijnUniveAccountElements} from "../pageobjects/mijnUniveParticulier/mijn
 import {MijnSchadeEnClaimElements} from "../pageobjects/mijnUniveParticulier/MijnSchadeEnClaim/MijnSchadeEnClaimElements";
 import {ApiElements} from "../pageobjects/api/apiElements";
 import {HmPageElements} from "../pageobjects/generic/hmPageElements";
+import {KlantenserviceVraagstellenMethods} from "../pageobjects/Klantenservice/KlantenserviceVraagstellenMethods";
 
 export const mijnVerzekeringElements: MijnVerzekeringenElements = new MijnVerzekeringenElements();
 export const mijnVerzekeringenElements: MijnVerzekeringenElements = new MijnVerzekeringenElements();
 export const klachtenFormulierElements: KlachtenFormulierElements = new KlachtenFormulierElements();
 export const afspraakMakenElements: AfspraakMakenElements = new AfspraakMakenElements();
 export const klantenserviceVraagStellenElements: KlantenserviceVraagStellenElements = new KlantenserviceVraagStellenElements();
+export const klantenserviceVraagstellenMethods: KlantenserviceVraagstellenMethods = new KlantenserviceVraagstellenMethods();
 export const schadeBeslisboomElements: SchadeBeslisboomElements = new SchadeBeslisboomElements();
 export const persoonlijkeGegevensElements: PersoonlijkeGegevensElements = new PersoonlijkeGegevensElements();
 export const verhuizingDoorgevenElements: VerhuizingDoorgevenElements = new VerhuizingDoorgevenElements();

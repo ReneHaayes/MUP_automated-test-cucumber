@@ -3,14 +3,18 @@ export class MijnUniveAccountElements {
   //CREATE MIJN UNIVE ACCOUNT
   accountAanmakenButtonClickElement: string = '[id="section3"] [class*="btn submit-btn col-xs-12"]';
   identificeerUwZonderIdinButtonClickElement: string = '[href="/personal/sign-up-unp"]';
-  mijnUniveBirthdayInputElement: string = '#geboortedatum';
-  mijnUniveZipcodeInputElement: string = '#postcode';
-  mijnUniveLastFourNumberOfAccountNumberInputElement: string = '#bankAccount';
+  mijnUniveLastnameInputElement: string = '#lastName';
+  mijnUniveBirthdayInputElement: string = '#dateOfBirth';
+  mijnUniveZipcodeInputElement: string = '#postalCode';
+  mijnUniveHouseNumberInputElement: string = '#houseNumber';
+  mijnUniveStreetNameInputElement: string = '#streetName';
+  mijnUniveCityInputElement: string = '#city';
+  mijnUniveLastFourNumberOfAccountNumberInputElement: string = '#bankAccountVerificationCustomAttribute';
   mijnUniveEmailAddressInputElement: string = '#email';
   mijnUniveEmailAddressConfirmationInputElement: string = '#emailConfirmation';
   mijnUniveChoosePasswordInputElement: string = '#password';
-  mijnUnivePasswordConfirmationInputElement: string = '#password-confirmation';
-  mijnUniveSubmitButtonClickElement: string = '[class="register_submit"]';
+  mijnUnivePasswordConfirmationInputElement: string = '#confirmPassword';
+  mijnUniveSubmitButtonClickElement: string = '[class="btn submit-btn"]';
 
   //MIJN UNIVE MENU
   mijnGegevensMenuClickElement: string = '[class="page-nav-item__link media"][href="/mijnunive/mijn-gegevens"]';
@@ -20,24 +24,37 @@ export class MijnUniveAccountElements {
 
   //DELETE ACCOUNT
   accountVerwijderenClickElement: string = '[class="button-link link link--warning"][href="/mijnunive/account-verwijderen"]';
-  submitVerwijderMijnAccountClickElement: string = '#account-delete';
+  submitVerwijderMijnAccountClickElement: string = '[class="deleteAccount_submit"]';
 
   //SUCCESVOL AANMELDEN
   aanmeldenSuccesvolTextElement: string = '#aanmelden-succesvol';
   aanmeldenSuccesvolText: string = 'Aanmelden gelukt!';
 
   //ALREADY EXIST
-  alReadyExistsTextElement: string = '[data-warning-message*="Er bestaat al een Mijn Univé-account voor dit e-mailadres. Het is niet mogelijk om een nieuw account aan te maken."]';
+  alReadyExistsTextElement: string = '[class*="login-box"] > h2';
+  alreadyExistsText: string = 'Er bestaat al een Mijn Univé-account voor dit e-mailadres.';
 
   //PASSWORD DONT MATCH
   passwordDoesntSatisfyTheCorrectInputTextElement: string = '[class="register_field _is_invalid"] [data-error-text="Het wachtwoord voldoet niet aan de eisen."]';
-  passwordDontMatchTextElement: string = '[class="register_field _is_invalid"] [data-error-text="De wachtwoorden komen niet overeen."]';
+  passwordIsEasyToGuessTextElement: string = '[for="password"][class="help-block"]';
+  passwordIsEasyToGuessNeedCapitalText: string = 'Uw wachtwoord is te gemakkelijk te raden. Het wachtwoord moet ten minste één hoofdletter bevatten.';
+  passwordIsEasyToGuessNeedSmallLetterText: string = 'Uw wachtwoord is te gemakkelijk te raden. Het wachtwoord moet ten minste één kleine letter bevatten.';
+  passwordIsEasyToGuessMinimumEightCharText: string = 'Uw wachtwoord moet minimaal 8 tekens lang zijn.';
+  passwordIsEasyToGuessMinimumSpecialCharText: string = 'Uw wachtwoord is te gemakkelijk te raden. Het wachtwoord moet ten minste één speciaal teken bevatten.';
+
+
+  passwordDontMatchTextElement: string = '[for="confirmPassword"][class="help-block"]';
+  passwordDontMatchText: string = 'De wachtwoorden komen niet overeen.';
 
   //ACCOUNTNUMBER INVALID
-  accountNumberInvalidElement: string = '[class="register_field _is_invalid"] [data-error-text="Vul een geldig bankrekeningnummer in (1234)."]';
+  accountNumberInvalidTextElement: string = '[for="bankAccountVerificationCustomAttribute"][class="help-block"]';
+  accountNumberInvalidToShortText: string = 'De ingevulde waarde is te kort';
+  accountNumberInvalidOnlyNumbersText: string = 'Dit veld mag alleen cijfers bevatten';
+  accountNumberInvalidToLongText: string = 'De ingevulde waarde is te lang';
+
 
   //NOT RECOGNISABLE CUSTOMER
-  customerNotRecognisabelTextElement: string = '[class*="toast--warning"]';
+  customerNotRecognisabelTextElement: string = '[class="align-self-start pre-creation-error_msg"]';
   customerNotRecognisableText: string = 'Op basis van deze gegevens kunnen wij u niet als klant herkennen. Pas uw gegevens aan, of bel met onze Klantenservice: 0592 349 345.';
 
   //CHANGE PASSWORD

@@ -1,7 +1,8 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
-import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '../../support';
+import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '@support';
 import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum, eigenRisicoEnum, moduleEnum } from '../../pageobjects/enum/zorgEnum';
+import { personaName } from 'protractor/support/enum';
 
 When(/^I do nothing$/, async() => {
     await browser.sleep(250);
@@ -101,7 +102,7 @@ When(/^I click on Volgende page one$/, async () => {
 
 When(/^I click on Volgende page two$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdH1TextElement, 150);
+    await genericMethods.waitForElementIsInvisibleClassName(zorgWizardElements.spinnerButtonClickElement, 500);
 });
 
 When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: string) => {
@@ -125,7 +126,7 @@ When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
 
 When(/^I click on bevestigen step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
-    await browser.sleep(1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 2500);
 });
 
 Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {
@@ -162,7 +163,6 @@ When(/^I select geen verzekering overstapreden in dropdown$/, async () => {
 });
 
 When(/^I validate that all legends are visible on step 3$/, async () => {
-    await browser.sleep(500);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bijnaVerzekerdH1TextElement, 150);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, zorgWizardElements.bijnaVerzekerdBurgerservicenummerText);
@@ -170,8 +170,13 @@ When(/^I validate that all legends are visible on step 3$/, async () => {
 });
 
 Then(/^validate that bedanktpagina and all elements are correct with (.*)$/, async (persona: string) => {
-    await browser.sleep(250);  
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.MEVROUW, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktPaginaCustomerNameTextElement, 500);
+    if(persona == personaName.RONALDO) {
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.HEER, 100);
+    }  
+    else {
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.MEVROUW, 100);
+    }
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaInitials(persona), 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaPrefix(persona), 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, personaData.getPersonaLastName(persona), 100);

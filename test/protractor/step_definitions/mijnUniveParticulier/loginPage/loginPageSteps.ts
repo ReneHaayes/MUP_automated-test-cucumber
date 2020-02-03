@@ -1,7 +1,14 @@
 import {Given, Then, When} from 'cucumber';
 import {browser} from "protractor";
-import {genericElements, genericMethods, loginPageElements, loginPageMethods, personaData} from "@support";
-import {verzekeringPaginasEnum} from "@enum";
+import {
+  analyticsGenericElements,
+  genericElements,
+  genericMethods,
+  loginPageElements,
+  loginPageMethods,
+  personaData
+} from "@support";
+import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject, verzekeringPaginasEnum} from "@enum";
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);
@@ -62,7 +69,6 @@ Then(/^(.*) can log in with (.*)$/, async (persona: string, newPassword: string)
   await genericMethods.typeText(loginPageElements.loginPasswordInputElement, newPassword);
   await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
-
 });
 
 
@@ -72,6 +78,8 @@ Then(/^the title for veelgestelde vragen appears on screen$/, async () => {
 
 Then(/^the title Mijn overzicht appears on screen$/, async () => {
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await genericMethods.verifyTextNotEmpty(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIRST, anaEnumObjectName.PAGEVIEW,
+    anaEnumSearchObject.KLANT_ONEGINI_ID)));
 });
 
 Then(/^the password error text (.*) appears$/, async (errorText: string) => {

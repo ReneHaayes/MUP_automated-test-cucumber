@@ -169,6 +169,16 @@ export class GenericMethods {
     }
   }
 
+  async waitForElementIsInvisibleClassName(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.className(selector));
+      await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
+      await browser.sleep(500);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is not visible');
+    }
+  }
+
   async waitForElementNotVisibleWithSleep(selector: string, waitFor: number, sleepForMilliSeconds: number) {
     try {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
@@ -255,6 +265,19 @@ export class GenericMethods {
         typeTextElement.sendKeys(text);
       })
     })
+  }
+
+  async typeTextNoClear(selector: string, text: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    await this.waitForElementIsVisible(selector, browser.getPageTimeout);
+    const typeTextElement: ElementFinder = element(by.css(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
+    });
+    await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
+        typeTextElement.sendKeys(text);
+      })
   }
 
   async clearText(selector: string, length: number) {

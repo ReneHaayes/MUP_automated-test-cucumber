@@ -20,6 +20,8 @@ export class HmPageElements {
   homePageBusinessBedrijfsautoPremieBerekenenClickElement: string = '[class*="simpleWidget_form"][data-funnel-personenauto-zakelijk*="/zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten"] button';
   homePageBusinessPersonenautoZakelijkClickElement: string = '[href*="/zakelijk/personenautoverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessPersonenautoZakelijkPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/personenautoverzekering/premieberekenen-en-afsluiten"]';
+  homePageBusinessEigenVervoerClickElement: string = '[href*="/zakelijk/eigenvervoerverzekering"][class*="insurances_tabLinkAction"]';
+  homePageBusinessEigenVervoerPremieBerekenenClickElement: string = '[class*="inlineAnchor_button"][href*="/zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten"]';
 
   //LICENSE PLATE
   licensePlateWidgetInputElement: string = '#kenteken';
@@ -83,9 +85,9 @@ export class HmPageElements {
   alarmCentraleTitleTextElement: string = '[class*="action_title"]';
   alarmCentraleTitleText: string = 'Alarmcentrale';
   alarmCentraleBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Alarmcentrale"]';
-  mijnUniveLoginTitleTextElement: string = '[class*="login-box"] [class="headline"]';
+  mijnUniveLoginTitleTextElement: string = '[id="loginForm"] [class="login-headline"]';
   mijnUniveLoginTitleText: string = 'Inloggen met uw account';
-  mijnUniveEmailInputElement: string = '#email';
+  mijnUniveEmailInputElement: string = '#emailphone';
   mijnUnivePasswordInputElement: string = '#password';
 
   //HEADER

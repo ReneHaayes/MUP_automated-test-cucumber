@@ -114,4 +114,4 @@ export const HappyFlowNoStaff = [
     question: 'Kunt u juridische hulp betalen bij een zakelijk geschil?',
     answer: 'Ja'
   }
-]
+];

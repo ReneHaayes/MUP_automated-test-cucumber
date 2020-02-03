@@ -198,7 +198,7 @@ export class GetUrlUnive {
       case homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveZakelijkHomePage;
       }
-      case homePageEnum.ONDERNEMERSCAN: {
+      case homePageEnum.ONDERNEMERSSCAN: {
         return this.getEnv(browser.params.env.environment) + genericElements.ondernemersScan;
       }
       case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {

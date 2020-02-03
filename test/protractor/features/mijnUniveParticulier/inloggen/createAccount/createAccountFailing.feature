@@ -12,45 +12,54 @@ Feature: Fault situations for creating account.
       | persona |
       | ako     |
 
-  Scenario Outline: Check if the notification appears that the password filled in is not correct according to the standards
+  Scenario: Check if the notification appears that the password filled in is not correct according to the standards
     Given Customer is on the mijn unive particulier page of the Unive website
-    When the password is filled in with <password>
-    Then The notification password isn't filled in correctly shows
+    When the password is filled in with welkom01!
+    Then The notification password isn't filled correctly need a capital shows
 
-    Examples:
-      | password  |
-      | welkom01! |
-      | WELKOM01! |
-      | Welkom!   |
-      | Welkom01  |
-
-  Scenario Outline: Check if the notification that passwords doesn't match appear
+  Scenario: Check if the notification appears that the password filled in is not correct according to the standards
     Given Customer is on the mijn unive particulier page of the Unive website
-    When the correct password is filled in with <correctPassword> and at repeat fill in the <incorrectPassword>
+    When the password is filled in with WELKOM01!
+    Then The notification password isn't filled correctly need a small letter shows
+
+  Scenario: Check if the notification appears that the password filled in is not correct according to the standards
+    Given Customer is on the mijn unive particulier page of the Unive website
+    When the password is filled in with Welkom!
+    Then The notification password isn't filled correctly need minimum eight characters shows
+
+  Scenario: Check if the notification appears that the password filled in is not correct according to the standards
+    Given Customer is on the mijn unive particulier page of the Unive website
+    When the password is filled in with Welkom01
+    Then The notification password isn't filled correctly need minimum special character shows
+
+  Scenario: Check if the notification that passwords doesn't match appear
+    Given Customer is on the mijn unive particulier page of the Unive website
+    When the correct password is filled in with Welkom01! and at repeat fill in the welkom01!
     Then The notification password doesn't match correctly shows
 
-    Examples:
-      | correctPassword | incorrectPassword |
-      | Welkom01!       | welkom01!         |
+
+  Scenario: Check if the notification appears that the accountnumber is not correct
+    Given Customer is on the mijn unive particulier page of the Unive website
+    When the account number is filled in with 1
+    Then The notification account number to short shows
+
+  Scenario: Check if the notification appears that the accountnumber is not correct
+    Given Customer is on the mijn unive particulier page of the Unive website
+    When the account number is filled in with 12345
+    Then The notification account number to long shows
 
   Scenario Outline: Check if the notification appears that the accountnumber is not correct
     Given Customer is on the mijn unive particulier page of the Unive website
-    When the account number is filled in with <account number>
-    Then The notification account number not valid shows
+    When the account number is filled in with <account numbers>
+    Then The notification account number only numbers shows
 
     Examples:
-      | account number |
-      | 1              |
-      | 123!           |
-      | 12345          |
-      | test           |
-      | !!!!           |
+      | account numbers |
+      | 123!            |
+      | test            |
+      | !!!!            |
 
-  Scenario Outline: Check if the account is not recognisable.
+  Scenario: Check if the account is not recognisable.
     Given Customer is on the mijn unive particulier page of the Unive website
-    When Customer <persona> creates an account for mijn Unive
+    When Customer salah creates an account for mijn Unive
     Then The notification that the data is not recognisable shows
-
-    Examples:
-      | persona |
-      | salah   |
