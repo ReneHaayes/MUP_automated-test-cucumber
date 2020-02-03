@@ -22,11 +22,10 @@ export class OndernemersScanElements {
   phoneNumberElement: string = 'ui-input[label*="Telefoonnummer"] .input__input-field';
   phoneNumberText: string = '0612345678';
   MakeAppointment: string = '//*[contains(text(),"Maak een afspraak")]';
-
 }
 
 
-export const scenario1 = [
+export const HappyFlowNoStaff = [
   {
     question: 'In welke branche bent u werkzaam?',
     answer: 'Bouwnijverheid'
@@ -115,4 +114,4 @@ export const scenario1 = [
     question: 'Kunt u juridische hulp betalen bij een zakelijk geschil?',
     answer: 'Ja'
   }
-]
+];

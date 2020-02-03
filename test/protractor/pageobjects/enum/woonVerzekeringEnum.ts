@@ -94,6 +94,8 @@ export enum homePageEnum {
   KLACHT_INDIENEN = 'klacht indienen',
   SCHADE_BESLISBOOM = 'schade beslisboom',
   INLOGGEN = 'inloggen',
+  ONDERNEMERSSCAN = 'Ondernemersscan',
   CMS = 'cms',
-  ONDERNEMERSSCAN = 'Ondernemersscan'
+  BEDRIJFSAUTO = 'Bedrijfsauto',
+  ZAKELIJKE_PERSONENAUTO = 'Zakelijke personenauto'
 }

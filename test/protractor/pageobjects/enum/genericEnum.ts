@@ -55,7 +55,8 @@ export enum personaName {
 
 export enum companyNameEnum {
   FACEBOOK = 'facebook',
-  RG_TIMMERWERKEN = 'rg timmerwerken'
+  RG_TIMMERWERKEN = 'rg timmerwerken',
+  GRONDVERZET_MACHINE_VERHUUR_SPRINGER = 'Grondverzet_machine_verhuur_Springer'
 }
 
 export enum genericEnum {

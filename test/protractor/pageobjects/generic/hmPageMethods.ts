@@ -1,8 +1,7 @@
 import {browser} from "protractor";
 import {
   aansprakelijkheidsVerzekerElements,
-  aovZzpElements,
-  eigenVervoerVerzekeringElements,
+  aovZzpElements, eigenVervoerVerzekeringElements,
   genericElements,
   genericMethods,
   getUrlUnive,
@@ -11,7 +10,7 @@ import {
   reisVerzekeringElements,
   situatieGewijzigdElements,
   zakelijkRechtsBijstandVerzekeringElements
-} from "@support";
+} from '@support';
 import {homePageEnum, verzekeringPaginasEnum} from "@enum";
 
 export class HmPageMethods {

@@ -9,15 +9,14 @@ import {
   genericMethods,
   nawElements,
   personaData,
-  vehicleElements,
   zakelijkAansprakelijkheidsVerzekeringElements
 } from "@support";
 
 When(/^I enter step one page of bedrijfs autoverzekeringen for (.*) with$/, async (company: string, data) => {
   const dataTable = data.rowsHash();
   await bedrijfsAutoVerzekeringMethods.enterLicensePlate(dataTable.licensePlate);
-  await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.businessClickElement);
-  await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.deductVatYesElement);
+  await genericMethods.typeText(bedrijfsAutoVerzekeringElements.startDateOnYourNameElement, genericMethods.getDate('today'));
+  await genericMethods.clickOnTAB(bedrijfsAutoVerzekeringElements.startDateOnYourNameElement);
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.ownProductsYesElement);
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.zipCodeInputElement, companyData.getCompanyZipcode(company));
   await bedrijfsAutoVerzekeringMethods.clickOnYearlyMileage(dataTable.yearlyMileage);
@@ -40,8 +39,6 @@ When(/^I enter step three page of bedrijfs autoverzekering with (.*)$/, async (c
   await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
 
   //INSERT DATE INFORMATION
-  await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
-  await genericMethods.typeText(bedrijfsAutoVerzekeringElements.startDateOnYourNameElement, genericMethods.getDate('today'));
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentUserYesElement);
