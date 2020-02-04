@@ -11,7 +11,7 @@ import {
   situatieGewijzigdElements,
   zakelijkRechtsBijstandVerzekeringElements
 } from '@support';
-import {homePageEnum, verzekeringPaginasEnum} from "@enum";
+import {homePageEnum, verzekeringPaginasEnum, zakelijkHomePageEnum} from "@enum";
 
 export class HmPageMethods {
 
@@ -178,7 +178,7 @@ export class HmPageMethods {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessRechtsbijstandPremieBerekenenClickElement);
         break;
       }
-      case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
+      case zakelijkHomePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessAansprakelijkheidClickElement);
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessAansprakelijkheidPremieBerekenenClickElement);
         break;
@@ -324,7 +324,7 @@ export class HmPageMethods {
         await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.getCompanyDataButtonClickElement, browser.getPageTimeout);
         break;
       }
-      case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
+      case zakelijkHomePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
         const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.zakelijkAansprakelijkheidsVerzekeringTextElement, hmPageElements.zakelijkAansprakelijkheidsVerzekeringText);

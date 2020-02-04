@@ -62,7 +62,7 @@ export enum hmPageWoonVerzekeringEnum {
 }
 
 export enum homePageEnum {
-  AANSPRAKELIJKHEIDSVERZEKERING = 'aansprakelijkheidsverzekering',
+  AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
   ZORGVERZEKERING = 'Zorgverzekering',
   REISVERZEKERING = 'Reisverzekering',
   AUTOVERZEKERING = 'Autoverzekering',
@@ -98,4 +98,8 @@ export enum homePageEnum {
   CMS = 'cms',
   BEDRIJFSAUTO = 'Bedrijfsauto',
   ZAKELIJKE_PERSONENAUTO = 'Zakelijke personenauto'
+}
+
+export enum zakelijkHomePageEnum {
+  AANSPRAKELIJKHEIDSVERZEKERING = 'aansprakelijkheidsverzekering'
 }

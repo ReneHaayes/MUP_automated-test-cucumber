@@ -1,6 +1,7 @@
 export {veelgesteldeVragenEnum} from "../pageobjects/enum/veelgesteldeVragenEnum";
 export {legalEnum} from "../pageobjects/enum/autoVerzekeringEnum";
 export {homePageEnum} from '../pageobjects/enum/woonVerzekeringEnum';
+export {zakelijkHomePageEnum} from '../pageobjects/enum/woonVerzekeringEnum';
 export {familyCompositionEnum} from "../pageobjects/enum/aansprakelijkheidsVerzekeringEnum";
 export {PaymentData} from "../pageobjects/enum/MijnUniveParticulierEnum";
 export {selectAlleVerzekeringEnum} from "../pageobjects/enum/alleVerzekeringEnum";
