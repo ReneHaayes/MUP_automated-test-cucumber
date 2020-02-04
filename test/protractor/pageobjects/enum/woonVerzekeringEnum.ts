@@ -99,3 +99,7 @@ export enum homePageEnum {
   BEDRIJFSAUTO = 'Bedrijfsauto',
   ZAKELIJKE_PERSONENAUTO = 'Zakelijke personenauto'
 }
+
+export enum zakelijkHomePageEnum {
+  AANSPRAKELIJKHEIDSVERZEKERING = 'aansprakelijkheidsverzekering'
+}
