@@ -165,6 +165,9 @@ export class GetUrlUnive {
       case homePageEnum.SCHADE_SERVICE: {
         return this.getEnv(browser.params.env.environment) + genericElements.schadeService;
       }
+      case homePageEnum.WINKELZOEKER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.winkelzoeker;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }

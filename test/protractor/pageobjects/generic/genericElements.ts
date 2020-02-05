@@ -79,6 +79,7 @@ export class GenericElements {
   vraagStellen: string = 'klantenservice/vraagstellen';
   schade: string = 'schade';
   schadeService: string = 'schadeservice';
+  winkelzoeker: string = 'contact/zoek-winkel';
   pensioen: string = 'pensioen/';
 
   zorgchecktool: string = 'zorgverzekering/zorgcheck';

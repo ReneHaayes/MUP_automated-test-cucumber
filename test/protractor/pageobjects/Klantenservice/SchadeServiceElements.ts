@@ -1,28 +1,26 @@
 export class SchadeServiceElements {
 
-  placeOrZipcodeInputElement = '#searchLocation';
-  submitButtonClickElement = '[class="locationFinder_searchSubmit"]';
+  placeOrZipcodeInputElement = 'map-search ::sr #search-input-field ::sr input';
+  submitButtonClickElement = 'map-search ::sr #search-submit-button';
 
-  selectCaravanClickElement = '[class="locationFinder_filters_radio"]:nth-child(1) > label:nth-child(3)';
-  selectCamperClickElement = '[class="locationFinder_filters_radio"]:nth-child(1) > label:nth-child(4)';
-  selectBothClickElement = '[class="locationFinder_filters_radio"]:nth-child(2) > label:nth-child(4)';
-  locationFinderLoaderElement = '[class="locationFinder_mapPlaceholder _is_loading"]';
+  selectCaravanClickElement = 'map-search ::sr [value="caravan"]';
+  selectCamperClickElement = 'map-search ::sr [value="camper"]';
+  selectAutoClickElement = 'map-search ::sr [value="bodywork"]';
+  locationFinderLoaderElement = 'map-search ::sr [class*="animation-spin"]';
 
-  selectedSchadeServiceAddresTextElement = '[class="location _is_selected"] [class="location_address"] span:nth-child(1)';
+  getOpeningHoursDayHoursTextElement = 'map-search ::sr map-search-result-list ::sr map-search-result-item ::sr #opening-hours > div:nth-child(2) > div.w-full.ml-3 > div > div:nth-child(2)';
+
+  selectedSchadeServiceAddresTextElement = 'map-search ::sr map-search-result-list ::sr map-search-result-item ::sr [id="address"]';
 
   getTitleForLocationTextElement(input: string): string {
-    return '[class="location"]:nth-child('+input+') h3';
+    return 'map-search ::sr map-search-result-list ::sr map-search-result-item:nth-child(' + input + ') ::sr #title'
   }
 
   getLocationFinderClickElement(input: string): string {
-    return '//*[@class="locationFinder_locationList"]//*[text()="'+input+'"]';
+    return 'map-search ::sr [title="' + input + '"]';
   }
 
-  getOpeningHoursDayTextElement(input: string){
-    return '//*[@class="location _is_selected"]//*[@class="location_detailOpeningHoursLine"]//*[text()="'+input+'"]';
-  }
-
-  getOpeningHoursDayHoursTextElement(input: string){
-    return '//*[@class="location _is_selected"]//*[@class="location_detailOpeningHoursLine"]//*[text()="'+input+'"]/following-sibling::span';
+  getOpeningHoursDayTextElement(input: string) {
+    return '//*[@class="location _is_selected"]//*[@class="location_detailOpeningHoursLine"]//*[text()="' + input + '"]';
   }
 }
