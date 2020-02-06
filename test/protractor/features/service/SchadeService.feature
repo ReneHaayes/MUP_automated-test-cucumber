@@ -25,11 +25,14 @@ Feature: Check if schade service is functioning correctly
       | schade service | UAS Pouw Zwolle | Zwolle | Lippestraat 5   | 08:00-17:15  |
       | winkelzoeker   | Univé Zwolle    | Zwolle | Nieuwstraat 126 | 09:00-17:30  |
 
-  Scenario Outline: Check analytics for schadesrvice and winkelzoeker pages.
-    Given I am on the <page> page of the Unive website
-    Then Verify that the correct paginanaam <paginaNaam ana> is show for page
+    #ANALYTICS
 
-    Examples:
-      | page           | paginaNaam ana           |
-      | schade service | Home:Schadeservice       |
-      | winkelzoeker   | Home:Contact:Zoek winkel |
+  Scenario: Check analytics for schadeservice and winkelzoeker pages.
+    Given I am on the schade service page of the Unive website
+    When Clicked on the first search element for the city zwolle
+    Then Verify that the correct knop interactie anlytics is shown for page schadeservice
+
+  Scenario: Check analytics for schadeservice and winkelzoeker pages.
+    Given I am on the winkelzoeker page of the Unive website
+    When Clicked on the first search element for the city zwolle
+    Then Verify that the correct knop interactie anlytics is shown for page winkelzoeker
