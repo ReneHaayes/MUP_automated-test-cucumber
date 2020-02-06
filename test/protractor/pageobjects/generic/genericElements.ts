@@ -82,6 +82,8 @@ export class GenericElements {
   winkelzoeker: string = 'contact/zoek-winkel';
   pensioen: string = 'pensioen/';
 
+  faqPageWatIsEenWaAutoVerzekering: string = 'faq/autoverzekering/wat-is-een-wa-autoverzekering';
+
   zorgchecktool: string = 'zorgverzekering/zorgcheck';
   zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';
   zorgchecktoolThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=hS95ugVE';
@@ -99,15 +101,15 @@ export class GenericElements {
   //MIJN UNIVE URL
   mijnUnivePage: string = 'mijnunive';
   mijnGegevens: string = 'mijn-gegevens';
-  mijnUniveBetaalgegevensWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'betaalgegevens-wijzigen';
-  mijnUniveContactVoorkeurenDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'contactvoorkeuren';
-  mijnUniveVerhuisGegevensDoorgeven: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'verhuizingdoorgeven';
-  mijnUniveMijnGegevens: string = this.mijnUnivePage +'/'+  this.mijnGegevens;
-  mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage +'/'+  this.mijnGegevens +'/'+ 'gezinssituatiewijzigen';
-  mijnUniveMijnVerzekeringen: string = this.mijnUnivePage +'/'+ 'polisoverzicht';
-  mijnUniveMijnSchadeEnClaim: string = this.mijnUnivePage +'/'+ 'schade';
+  mijnUniveBetaalgegevensWijzigen: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'betaalgegevens-wijzigen';
+  mijnUniveContactVoorkeurenDoorgeven: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'contactvoorkeuren';
+  mijnUniveVerhuisGegevensDoorgeven: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'verhuizingdoorgeven';
+  mijnUniveMijnGegevens: string = this.mijnUnivePage + '/' + this.mijnGegevens;
+  mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'gezinssituatiewijzigen';
+  mijnUniveMijnVerzekeringen: string = this.mijnUnivePage + '/' + 'polisoverzicht';
+  mijnUniveMijnSchadeEnClaim: string = this.mijnUnivePage + '/' + 'schade';
   mijnUnivePremiegevolgenBerekenen: string = this.mijnUniveMijnSchadeEnClaim + '/premiegevolgen-berekenen';
-  mijnUniveMijnPostvak: string = this.mijnUnivePage +'/'+ 'mijn-postvak';
+  mijnUniveMijnPostvak: string = this.mijnUnivePage + '/' + 'mijn-postvak';
 
 
   //POLISDETAILS

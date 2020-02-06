@@ -6,6 +6,7 @@ export class SchadeServiceElements {
   selectCaravanClickElement = 'map-search ::sr [value="caravan"]';
   selectCamperClickElement = 'map-search ::sr [value="camper"]';
   selectAutoClickElement = 'map-search ::sr [value="bodywork"]';
+  selectRuitschadeClickElement = 'map-search ::sr [value="window"]';
   locationFinderLoaderElement = 'map-search ::sr [class*="animation-spin"]';
 
   getOpeningHoursDayHoursTextElement = 'map-search ::sr map-search-result-list ::sr map-search-result-item ::sr #opening-hours > div:nth-child(2) > div.w-full.ml-3 > div > div:nth-child(2)';

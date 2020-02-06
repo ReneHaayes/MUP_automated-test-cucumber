@@ -9,6 +9,12 @@ When(/^Customer selects (.*) for schade service (.*)$/, async (city: string, car
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.submitButtonClickElement);
       break;
     }
+    case "autoruit": {
+      await genericMethods.clickOnElementShadowRoot(schadeServiceElements.selectRuitschadeClickElement);
+      await genericMethods.typeTextShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, city);
+      await genericMethods.clickOnElementShadowRoot(schadeServiceElements.submitButtonClickElement);
+      break;
+    }
     case "caravan": {
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.selectCaravanClickElement);
       await genericMethods.typeTextShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, city);
