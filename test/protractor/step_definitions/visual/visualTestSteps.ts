@@ -1,5 +1,5 @@
 import {Then, When} from "cucumber";
-import {genericElements, genericMethods, hmPageElements} from "@support";
+import {genericElements, genericMethods, hmPageElements, visualMethods} from "@support";
 import {browser} from "protractor";
 
 When(/^The page waits for licenseplate element is visible$/, async () => {
@@ -8,5 +8,5 @@ When(/^The page waits for licenseplate element is visible$/, async () => {
 });
 
 Then(/^Verify visual elements are the same compared to the base screenshot: (.*)$/, async (baseImage: string) => {
-  await genericMethods.makeScreenshotAndVerifyWithBaseline(baseImage, true);
+  await visualMethods.makeScreenshotAndVerifyWithBaseline(baseImage, 'home');
 });

@@ -3,9 +3,9 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import * as path from "path";
 
-import {genericElements, getUrlUnive, nawElements, personaData, visualElements} from "@support";
+import {genericElements, getUrlUnive, nawElements, personaData} from "@support";
 import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from "@enum";
-import * as blueharvest from "blue-harvest";
+
 import {selectorEnum} from "../enum/genericEnum";
 
 chai.use(chaistring);
@@ -650,27 +650,6 @@ export class GenericMethods {
     await expect(input).to.equal(true);
   }
 
-  async makeScreenshotAndVerifyWithBaseline(baseImage: string, addMaskForScrollHome = false, width = 1920, height = 5000) {
-    await protractor.browser.manage().window().setSize(width, height);
-    await browser.sleep(2000);
-    if (addMaskForScrollHome) {
-      await this.addMaskForElement(visualElements.scrollLeftBottomElement);
-    }
-    try {
-      const basePath = path.join(__dirname, '../../', 'baseScreenshot/' + baseImage + '.png');
-      const data = await browser.takeScreenshot();
-      await blueharvest.compareScreenshot(data, basePath, '../test/target/');
-    } catch (e) {
-      throw new Error('The screenshot dont match see ./target folder for the differences between base image: ' + baseImage + ' || ' + e);
-    }
-    await protractor.browser.manage().window().maximize();
-  }
-
-  async addMaskForElement(input: string, zIndex = 99999, xOffset = -20, yOffset = -20, sizeMultiplier = 4){
-    const e = element(by.css(input));
-    await blueharvest.addMask(e, 'black', zIndex, xOffset, yOffset, sizeMultiplier);
-  }
-
   async verifyTextNotEmpty(input: string) {
     try {
       await expect(input.length).not.to.equal(0);
@@ -700,7 +679,7 @@ export class GenericMethods {
     }
   }
 
-  returnSelector(input: selectorEnum): any{
+  returnSelector(input: selectorEnum): any {
     switch (input) {
       case selectorEnum.XPATH: {
         return by.xpath
