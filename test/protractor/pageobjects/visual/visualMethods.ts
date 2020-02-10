@@ -5,7 +5,7 @@ import * as blueharvest from "blue-harvest";
 
 export class VisualMethods {
 
-  async makeScreenshotAndVerifyWithBaseline(baseImage: string, addMask = '', width = 1920, height = 5000) {
+  async makeScreenshotAndVerifyWithBaseline(baseImage: string, addMask = '', width = 1920, height = 10000) {
     await protractor.browser.manage().window().setSize(width, height);
     await browser.sleep(2000);
     await this.addMaskToVerify(addMask);
