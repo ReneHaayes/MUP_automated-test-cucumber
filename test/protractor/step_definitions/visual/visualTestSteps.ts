@@ -8,5 +8,5 @@ When(/^The page waits for licenseplate element is visible$/, async () => {
 });
 
 Then(/^Verify visual elements are the same compared to the base screenshot: (.*)$/, async (baseImage: string) => {
-  await genericMethods.makeScreenshotAndVerifyWithBaseline(baseImage);
+  await genericMethods.makeScreenshotAndVerifyWithBaseline(baseImage, true);
 });
