@@ -6,6 +6,7 @@ import * as path from "path";
 import {genericElements, getUrlUnive, nawElements, personaData} from "@support";
 import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from "@enum";
 import * as blueharvest from "blue-harvest";
+import {selectorEnum} from "../enum/genericEnum";
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -216,6 +217,14 @@ export class GenericMethods {
 
   async scrollTilTop() {
     await browser.executeScript('window.scrollTo(0,0);');
+  }
+
+  async scrollToElement(selector: selectorEnum, input: string) {
+    let test123 = this.returnSelector(selector);
+    const elementToClick: ElementFinder = element(test123(input));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
   }
 
   async getText(selector: string): Promise<string> {
@@ -642,6 +651,7 @@ export class GenericMethods {
   }
 
   async makeScreenshotAndVerifyWithBaseline(baseImage: string) {
+    await browser.sleep(2000);
     try {
       const basePath = path.join(__dirname, '../../', 'baseScreenshot/' + baseImage + '.png');
       const data = await browser.takeScreenshot();
@@ -682,6 +692,23 @@ export class GenericMethods {
       return test.toString();
     } catch (e) {
       throw new Error('Analytics for: ' + input + ' cant be found');
+    }
+  }
+
+  returnSelector(input: selectorEnum): any{
+    switch (input) {
+      case selectorEnum.XPATH: {
+        return by.xpath
+      }
+      case selectorEnum.CSS: {
+        return by.css
+      }
+      case selectorEnum.CSS_SR: {
+        return by.css_sr
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
     }
   }
 

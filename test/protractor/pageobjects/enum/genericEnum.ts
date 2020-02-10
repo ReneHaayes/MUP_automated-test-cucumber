@@ -276,6 +276,8 @@ export enum breadCrumbEnum {
   BESTUURDERSAANSPRAKELIJKHEIDSVERZEKERING = 'Bestuurdersaansprakelijkheidsverzekering',
   CONSTRUCTIE_ALLRISK_VERZEKERING = 'Constructie all-riskverzekering',
   PERSONENAUTOVERZEKERING = 'Personenautoverzekering'
+}
 
-
+export enum selectorEnum {
+  XPATH, CSS, CSS_SR
 }
