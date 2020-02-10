@@ -1,6 +1,7 @@
 import {browser} from 'protractor';
 import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
 import {apiElements, genericElements} from "@support";
+import {faqPage} from "../enum/genericEnum";
 
 export class GetUrlUnive {
 
@@ -165,6 +166,9 @@ export class GetUrlUnive {
       case homePageEnum.SCHADE_SERVICE: {
         return this.getEnv(browser.params.env.environment) + genericElements.schadeService;
       }
+      case homePageEnum.WINKELZOEKER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.winkelzoeker;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
@@ -287,6 +291,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.ZORGVERZEKERINGBASISVRIJPARAMETER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisVrijParameter;
+      }
+      case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

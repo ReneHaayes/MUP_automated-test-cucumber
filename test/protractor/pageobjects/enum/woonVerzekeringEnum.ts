@@ -82,6 +82,7 @@ export enum homePageEnum {
   VRAAGSTELLEN = 'vraagStellen',
   SCHADE = 'schade',
   SCHADE_SERVICE = 'schade service',
+  WINKELZOEKER = 'winkelzoeker',
   KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
   ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
   RECHTSBIJSTAND = 'rechtsbijstand',

@@ -49,4 +49,7 @@ export class SchadeBeslisboomElements {
 
     // Fiets/E-bike Text Elements
     eenAanrijdingMetMijnFietsText = '#dt_3_0 > article > h5';
+
+    leesMeerButtonWatIsEenWaAutoverzekeringClickElement: string = '[href*="autoverzekering"][class="inlineAnchor_button--primary"]';
+
 }

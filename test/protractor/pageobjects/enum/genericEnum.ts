@@ -193,6 +193,10 @@ export enum verzekeringPaginasEnum {
   ONDERNEMERSSCAN_TITLE = 'Ondernemersscan van Univé'
 }
 
+export enum faqPage {
+  WAT_IS_EEN_WA_AUTOVERZEKERING = 'wat is een wa autoverzekering'
+}
+
 export enum polisDetailsUrlEnum {
   POLISDETAILS_DERDEN_1600478601 = 'polisdetails 1600478601'
 }
