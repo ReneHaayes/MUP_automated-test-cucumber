@@ -190,7 +190,8 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
   ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
   ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter',
-  ONDERNEMERSSCAN_TITLE = 'Ondernemersscan van Univé'
+  ONDERNEMERSSCAN_TITLE = 'Ondernemersscan van Univé',
+  CALAMITEITEIN = 'calamiteiten'
 }
 
 export enum faqPage {
