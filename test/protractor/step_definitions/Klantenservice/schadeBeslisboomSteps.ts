@@ -1,5 +1,5 @@
 import {When, Then} from 'cucumber';
-import {alleVerzekeringenMethods, genericMethods, schadeBeslisboomElements} from "@support";
+import {alleVerzekeringenMethods, genericMethods, schadeBeslisboomElements, schadeServiceElements} from "@support";
 import {verzekeringPaginasEnum} from "@enum";
 
 // Auto Oldtimer Steps:
@@ -31,6 +31,30 @@ When(/^Customer clicks on button Mijn auto is gestolen$/, async () => {
 
 When(/^Customer clicks on button Inbraak in mijn auto$/, async () => {
   await genericMethods.clickOnElement(schadeBeslisboomElements.inbraakInMijnAutoButtonElement);
+});
+
+When(/^Customer navigates to ruitschade and fills in kenteken for dekkingscheck with (.*) and date (.*)$/, async (licensePlate: string, date: string) => {
+  await genericMethods.clickOnElement(schadeBeslisboomElements.vervoerButtonElement);
+  await genericMethods.clickOnElement(schadeBeslisboomElements.autoButtonElement);
+  await genericMethods.clickOnElement(schadeBeslisboomElements.ruitschadeButtonElement);
+  await genericMethods.typeTextShadowRoot(schadeBeslisboomElements.licensePlateWidgetDekkingsCheckInputElement, licensePlate);
+  await genericMethods.typeTextShadowRoot(schadeBeslisboomElements.dateDekkingsCheckInputElement, genericMethods.getDate(date));
+  await genericMethods.clickOnElementShadowRoot(schadeBeslisboomElements.bekijkDekkingDekkingsCheckSubmitButtonClickElement);
+});
+
+Then(/^Verify button direct contact correctly appears$/, async () => {
+  await genericMethods.waitForElementIsVisibleShadowRoot(schadeBeslisboomElements.directContactButtonClickElement, 10000);
+});
+
+When(/^Customer fills place or zipcode in input element (.*)$/, async (placeOrZipcode: string) => {
+  await genericMethods.typeTextShadowRoot(schadeBeslisboomElements.zipcodeOrPlaceInputElement, placeOrZipcode);
+  await genericMethods.clickOnElementShadowRoot(schadeBeslisboomElements.zoekSchadeHerstellerButtonClickElement);
+});
+
+Then(/^Verify that dekkingscheck correctly navigates to schadeservice and correctly fills in the place (.*)$/, async (placeOrZipcode: string) => {
+  await genericMethods.verifyValueTextInElementShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, placeOrZipcode);
+  await genericMethods.verifyUrlContains('schadeservice?type-of-damage=window&p=' + placeOrZipcode);
+
 });
 
 When(/^Customer clicks on button Ruitschade$/, async () => {
