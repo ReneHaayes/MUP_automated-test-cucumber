@@ -9,9 +9,9 @@ export class ZorgWizardMethods {
         await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS1);
         await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS2);
     }
-    else if(collective == collectievenEnum.CARINOVATHUIZZ){
-        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.CARINOVATHUIZZ1);
-        await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.CARINOVATHUIZZ2);
+    else if(collective == collectievenEnum.ICARELEDENVERENIGING){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING1);
+        await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING2);
     }
     else {
         await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collective);
@@ -35,7 +35,7 @@ export class ZorgWizardMethods {
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, collective, 250);
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, discountBasis, 250);
     }
-    if(collective == collectievenEnum.CARINOVATHUIZZ){
+    if(collective == collectievenEnum.ICARELEDENVERENIGING){
     //klik op en verifieer aanvullend goed
     await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendGoedClickElement);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.COLLECTIEFAANVULLENDGOED, 100);
@@ -55,7 +55,7 @@ export class ZorgWizardMethods {
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);    
     }
-    else if (collective != collectievenEnum.CARINOVATHUIZZ){
+    else if (collective != collectievenEnum.ICARELEDENVERENIGING){
     //klik op en verifieer aanvullend goed
     await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.AANVULLENDGOED, 100);

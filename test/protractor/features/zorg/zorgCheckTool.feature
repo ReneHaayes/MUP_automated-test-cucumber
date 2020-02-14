@@ -156,7 +156,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
         |B        |A        |B        |D        |C        |A        |A        |A        |        B|Zorg Vrij  |Aanvullend Goed |Tand Beter|
         |C        |D        |A        |C        |D        |C        |B        |B        |        B|Zorg Select|Aanvullend Best |Tand Best |
         |A        |A        |B        |A        |B        |A        |B        |A        |        B|Zorg Vrij  |Geen            |Geen      |
-  @joost  
+   
   Scenario Outline: Check melding bij selecteren (fout) collectief
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
