@@ -8,6 +8,6 @@ Feature: Going to damage and claim page and checking the different details on pa
     Then Verify damage claim with damage number <damage number> is shown correctly
 
     Examples:
-      | damage number | persona |
-      | 2848063       | illing  |
-      | 265664        | illing  |
+      | damage number | persona     |
+      | 2848709       | woestenburg |
+      | 2848708       | woestenburg |

@@ -1,5 +1,5 @@
 import {Then, When} from "cucumber";
-import {alleVerzekeringenMethods, genericElements, genericMethods} from "@support";
+import {alleVerzekeringenElements, alleVerzekeringenMethods, genericElements, genericMethods} from "@support";
 
 When(/^I select (.*) and click on (.*) at the alle verzekeringen page$/, async (select: string, buttonPage: string) => {
   await alleVerzekeringenMethods.selectAlleVerzekeringDropdown(select);
@@ -19,3 +19,6 @@ Then(/^Verify elements on (.*) product page is shown$/, async (buttonPage: strin
   await alleVerzekeringenMethods.verifyAlleVerzekeringInput(buttonPage);
 });
 
+Then(/^Verify calamiteiten page is shown correctly$/, async () => {
+  await genericMethods.verifyTextInElementShadowRoot(alleVerzekeringenElements.calamiteitenFirstTileTitleTextElement, 'Aanslagen');
+});

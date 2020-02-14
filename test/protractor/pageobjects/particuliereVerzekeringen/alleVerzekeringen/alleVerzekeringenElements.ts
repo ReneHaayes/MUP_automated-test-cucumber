@@ -62,5 +62,7 @@ export class AlleVerzekeringenElements {
   uitvaartVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/uitvaartverzekering/afspraak"]';
   mijngemakVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href="http://unive.mijngemak.nl/"]';
 
+  //CALAMITEITEN
+  calamiteitenFirstTileTitleTextElement: string = 'card-container ::sr [class="flex flex-wrap pb-4 -mx-3"] > [class*="p-3"]:nth-child(1) ::sr [class*="pb-2"]';
 
 }

@@ -9,10 +9,12 @@ Feature: Check if the business homepage shows the buttons correctly.
 
     Examples:
       | button                        |
-      | Aansprakelijkheidsverzekering |
+      | Bedrijfsauto                  |
+      | Zakelijke personenauto        |
       | arbeidsongeschiktheid         |
       | rechtsbijstand                |
-      | eigen vervoer                 |
+      | aansprakelijkheidsverzekering |
+
 
   Scenario Outline: Click on the menu and check the elements and verify if the outcome is correct.
     Given I am on the business page of the Unive website

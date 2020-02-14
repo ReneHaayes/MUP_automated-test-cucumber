@@ -2,7 +2,7 @@ export class ZakelijkTractorVerzekeringElements {
 
   //TRACTOR DATA
   searchTractorDataClickElement: string = '#_Form_IF21823_28551';
-  valueInputElement: string = '#_Form_IF21834_28558';
+  valueInputElement: string = '#_Form_IF21834_28557';
   trackAndTraceSystemYesClickElement: string = '[data-label-id*="LA_IF21835_28560"] .radioList > label:nth-child(1)';
   trackAndTraceSystemNoClickElement: string = '[data-label-id*="LA_IF21835_28560"] .radioList > label:nth-child(2)';
   chassisNumberInputElement: string = '#_Form_IF21862_28619';

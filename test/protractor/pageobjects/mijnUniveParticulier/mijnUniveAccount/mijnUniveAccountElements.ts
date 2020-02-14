@@ -24,7 +24,7 @@ export class MijnUniveAccountElements {
 
   //DELETE ACCOUNT
   accountVerwijderenClickElement: string = '[class="button-link link link--warning"][href="/mijnunive/account-verwijderen"]';
-  submitVerwijderMijnAccountClickElement: string = '[class="deleteAccount_submit"]';
+  submitVerwijderMijnAccountClickElement: string = '#account-delete';
 
   //SUCCESVOL AANMELDEN
   aanmeldenSuccesvolTextElement: string = '#aanmelden-succesvol';

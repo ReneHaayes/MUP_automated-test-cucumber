@@ -1,8 +1,7 @@
 import {browser} from "protractor";
 import {
   aansprakelijkheidsVerzekerElements,
-  aovZzpElements,
-  eigenVervoerVerzekeringElements,
+  aovZzpElements, autoVerzekeringElements, bedrijfsAutoVerzekeringElements,
   genericElements,
   genericMethods,
   getUrlUnive,
@@ -11,8 +10,8 @@ import {
   reisVerzekeringElements,
   situatieGewijzigdElements,
   zakelijkRechtsBijstandVerzekeringElements
-} from "@support";
-import {homePageEnum, verzekeringPaginasEnum} from "@enum";
+} from '@support';
+import {homePageEnum, verzekeringPaginasEnum, zakelijkHomePageEnum} from "@enum";
 
 export class HmPageMethods {
 
@@ -143,7 +142,7 @@ export class HmPageMethods {
         await genericMethods.clickOnElement(hmPageElements.footerKlantenServiceClickElement);
         break;
       }
-      case homePageEnum.ONDERNEMERSCAN: {
+      case homePageEnum.ONDERNEMERSSCAN: {
         await genericMethods.clickOnElement(hmPageElements.footerOndernemersScanClickElement);
         break;
       }
@@ -159,6 +158,16 @@ export class HmPageMethods {
 
   async clickButtonBusinessHomePageAndGoToPremieBerekenen(input: string) {
     switch (input) {
+      case homePageEnum.BEDRIJFSAUTO: {
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoPremieBerekenenClickElement);
+        break;
+      }
+      case homePageEnum.ZAKELIJKE_PERSONENAUTO: {
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessPersonenautoZakelijkClickElement);
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessPersonenautoZakelijkPremieBerekenenClickElement);
+        break;
+      }
       case homePageEnum.ARBEIDSONGESCHIKTHEID: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessArbeidsongeschiktheidClickElement);
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement);
@@ -169,12 +178,7 @@ export class HmPageMethods {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessRechtsbijstandPremieBerekenenClickElement);
         break;
       }
-      case homePageEnum.EIGEN_VERVOER: {
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessEigenVervoerClickElement);
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessEigenVervoerPremieBerekenenClickElement);
-        break;
-      }
-      case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
+      case zakelijkHomePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessAansprakelijkheidClickElement);
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessAansprakelijkheidPremieBerekenenClickElement);
         break;
@@ -299,6 +303,16 @@ export class HmPageMethods {
 
   async verifyElementIsShownOnPremieBerekenenBusinessPage(input: string) {
     switch (input) {
+      case homePageEnum.BEDRIJFSAUTO: {
+        await genericMethods.verifyUrlContains(genericElements.bedrijfsAutoVerzekeringPp);
+        await genericMethods.waitForElementIsVisible(bedrijfsAutoVerzekeringElements.licensePlateElement, browser.getPageTimeout);
+        break;
+      }
+      case homePageEnum.ZAKELIJKE_PERSONENAUTO: {
+        await genericMethods.verifyUrlContains(genericElements.personenAutoVerzekeringZakelijk);
+        await genericMethods.waitForElementIsVisible(autoVerzekeringElements.licensePlateElement, browser.getPageTimeout);
+        break;
+      }
       case homePageEnum.ARBEIDSONGESCHIKTHEID: {
         const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.AOVZZP_PAT);
         await genericMethods.verifyUrlContains(url);
@@ -310,12 +324,7 @@ export class HmPageMethods {
         await genericMethods.waitForElementIsVisible(zakelijkRechtsBijstandVerzekeringElements.getCompanyDataButtonClickElement, browser.getPageTimeout);
         break;
       }
-      case homePageEnum.EIGEN_VERVOER: {
-        await genericMethods.verifyUrlContains(genericElements.eigenVervoerVerzekeringPp);
-        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.activityEigenVervoerSelectElement, browser.getPageTimeout);
-        break;
-      }
-      case homePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
+      case zakelijkHomePageEnum.AANSPRAKELIJKHEIDSVERZEKERING: {
         const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.zakelijkAansprakelijkheidsVerzekeringTextElement, hmPageElements.zakelijkAansprakelijkheidsVerzekeringText);
@@ -358,10 +367,10 @@ export class HmPageMethods {
         await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, verzekeringPaginasEnum.KLANTENSERVICE);
         break;
       }
-      case homePageEnum.ONDERNEMERSCAN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ONDERNEMERSCAN);
+      case homePageEnum.ONDERNEMERSSCAN: {
+        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ONDERNEMERSSCAN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.verifyTextInElement(hmPageElements.footerOndernemersScanH1TextElement, homePageEnum.ONDERNEMERSCAN);
+        await genericMethods.verifyTextInElement(hmPageElements.footerOndernemersScanH1TextElement, verzekeringPaginasEnum.ONDERNEMERSSCAN_TITLE);
         break;
       }
       case homePageEnum.KLANTENSERVICE_ZAKELIJK: {

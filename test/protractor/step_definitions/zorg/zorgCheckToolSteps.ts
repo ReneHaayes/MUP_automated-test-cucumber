@@ -1,7 +1,7 @@
 import {When, Then, Given} from 'cucumber';
 import { browser } from 'protractor';
 import { collectievenEnum } from '../../pageobjects/enum/zorgEnum';
-import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods, zorgWizardElements} from "../../support";
+import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods, zorgWizardElements} from "@support";
 
 When(/^I answer 9 questions with:$/, async (data) => {
     const dataTable = data.rowsHash();

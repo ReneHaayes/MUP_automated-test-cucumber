@@ -55,7 +55,8 @@ export enum personaName {
 
 export enum companyNameEnum {
   FACEBOOK = 'facebook',
-  RG_TIMMERWERKEN = 'rg timmerwerken'
+  RG_TIMMERWERKEN = 'rg timmerwerken',
+  GRONDVERZET_MACHINE_VERHUUR_SPRINGER = 'Grondverzet_machine_verhuur_Springer'
 }
 
 export enum genericEnum {
@@ -189,6 +190,12 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
   ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
   ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter',
+  ONDERNEMERSSCAN_TITLE = 'Ondernemersscan van Univé',
+  CALAMITEITEIN = 'calamiteiten'
+}
+
+export enum faqPage {
+  WAT_IS_EEN_WA_AUTOVERZEKERING = 'wat is een wa autoverzekering'
 }
 
 export enum polisDetailsUrlEnum {

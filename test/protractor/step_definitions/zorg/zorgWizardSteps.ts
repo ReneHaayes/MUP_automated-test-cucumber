@@ -1,6 +1,6 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
-import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '../../support';
+import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '@support';
 import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum, eigenRisicoEnum, moduleEnum } from '../../pageobjects/enum/zorgEnum';
 import { personaName } from 'protractor/support/enum';
 

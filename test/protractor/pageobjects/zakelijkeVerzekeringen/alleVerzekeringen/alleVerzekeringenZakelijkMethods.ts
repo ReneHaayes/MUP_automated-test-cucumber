@@ -161,7 +161,7 @@ export class AlleVerzekeringenZakelijkMethods {
 
 
   async clickAlleVerzekeringInput(input: string) {
-    await genericMethods.clickOnElement('[class="linkLists_categoryItem"] [title="' + input + '"]');
+    await genericMethods.clickOnElement('[class="allInsurances_listItemLink"][title="' + input + '"]');
   }
 
 }

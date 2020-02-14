@@ -42,18 +42,18 @@ export class LicensePlateMethod {
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_BUS: {
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsAutoverzekeringClickElement);
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
         await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetBusinessButtonElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_BUS: {
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsAutoverzekeringClickElement);
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetBusinessButtonElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsAutoverzekeringClickElement);
+        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
         break;
       }

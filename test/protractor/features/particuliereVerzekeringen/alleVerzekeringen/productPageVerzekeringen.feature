@@ -50,3 +50,7 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
 #      | alle verzekeringen     | lijfrenteverzekering          |
       | uw nabestaanden        | uitvaartverzekering           |
       | alle verzekeringen     | overlijdensrisicoverzekering  |
+
+    Scenario: Check if the calamiteiten page is available
+      Given I am on the calamiteiten page of the Unive website
+      Then Verify calamiteiten page is shown correctly
