@@ -437,8 +437,8 @@ export class ZorgCheckToolMethods {
             await genericMethods.waitForElementNotVisible(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, 500);
             await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
         }
-        else if(collective == collectievenEnum.CARINOVASERVICEPAKKET){
-            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.CARINOVASERVICEPAKKET);
+        else if(collective == collectievenEnum.ICARELEDENVERENIGING){
+            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.ICARELEDENVERENIGING);
             await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoThuiszorgCollectiefText);
             await genericMethods.waitForElementNotVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
         }

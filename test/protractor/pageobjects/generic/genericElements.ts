@@ -90,7 +90,7 @@ export class GenericElements {
   zorgchecktoolNietThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=bH49xS38';
   eigenRisico: string = 'zorgverzekering/eigenrisico';
   zorgVrij: string = 'zorgverzekering/vrij';
-  zorgVerzekeringThuiszorgCollectiefParameter: string = this.zorgVerzekering + '?internetcode=hS95ugVE';
+  zorgVerzekeringThuiszorgCollectiefParameter: string = this.zorgVerzekering + '?internetcode=qJ78rU63';
   zorgVerzekeringNietThuiszorgCollectiefParameter: string = this.zorgVerzekering + '?internetcode=bH49xS38';
   zorgVerzekeringThuiszorgCollectiefZorgSelectParameter: string = this.zorgVerzekeringThuiszorgCollectiefParameter + '&bv=ZVSU';
   zorgVerzekeringNietThuiszorgCollectiefZorgSelectParameter: string = this.zorgVerzekeringNietThuiszorgCollectiefParameter + '&bv=ZVSU';

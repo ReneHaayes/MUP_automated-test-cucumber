@@ -129,6 +129,10 @@ When(/^I click on bevestigen step 3$/, async () => {
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 2500);
 });
 
+When(/^I click on bevestigen step 3 without bedankpagina check$/, async () => {  
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+});
+
 Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {
     await browser.sleep(1000);  
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
