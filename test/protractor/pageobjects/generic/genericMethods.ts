@@ -323,6 +323,12 @@ export class GenericMethods {
     return text.getWebElement().getAttribute('value')
   }
 
+  async getValueShadowRoot(selector: string): Promise<string> {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    const text: ElementFinder = element(by.css_sr(selector));
+    return text.getWebElement().getAttribute('value')
+  }
+
   async getNoText(selector: string, elementToWaitFor: string): Promise<string> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(elementToWaitFor, browser.getPageTimeout);
@@ -375,6 +381,17 @@ export class GenericMethods {
     })
   }
 
+  async typeTextShadowRootHideElement(selector: string, text: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    let test123: any = by.css_sr;
+    const typeTextElement: ElementFinder = element(test123(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
+    });
+    typeTextElement.sendKeys(text);
+  }
+
   async typeTextNoClear(selector: string, text: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
@@ -384,8 +401,8 @@ export class GenericMethods {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
     });
     await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
-        typeTextElement.sendKeys(text);
-      })
+      typeTextElement.sendKeys(text);
+    })
   }
 
   async clearText(selector: string, length: number) {
@@ -460,6 +477,12 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const selectorToString: string = await this.getValue(selector);
+    await expect(selectorToString).to.equal(assertionText);
+  }
+
+  async verifyValueTextInElementShadowRoot(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    const selectorToString: string = await this.getValueShadowRoot(selector);
     await expect(selectorToString).to.equal(assertionText);
   }
 
@@ -670,7 +693,21 @@ export class GenericMethods {
     switch (input) {
       case dateEnum.TODAY: {
         const date = new Date();
-        return String(date.getDate()) + '-' + String(date.getMonth() + 1) + '-' + String(date.getFullYear());
+        let dd;
+        let mm;
+        if (date.getDate() < 10) {
+          dd = '0' + date.getDate().toString();
+        } else {
+          dd = date.getDate().toString();
+        }
+        let monthPlusOne = date.getMonth() + 1;
+        if (monthPlusOne < 10) {
+          mm = '0' + monthPlusOne.toString();
+        } else {
+          mm = monthPlusOne.toString();
+        }
+        console.log(dd + '-' + mm + '-' + String(date.getFullYear()));
+        return dd + '-' + mm + '-' + String(date.getFullYear());
       }
       case dateEnum.SEVEN_DAY_TRIP: {
         const today = new Date();
