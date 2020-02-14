@@ -14,5 +14,5 @@ Feature: Happy flow for 'roerende zaken verzekering'
     Then The thank you page for <persona> is shown
 
     Examples:
-      | persona | company  |
-      | ronaldo | facebook |
+      | persona | company         |
+      | ronaldo | rg timmerwerken |

@@ -22,7 +22,7 @@ When(/^I enter zipcode and emailadres to get my results of the Ondernemersscan$/
 
 
 When(/^I enter my details for personal advice$/, async () => {
-  await genericMethods.waitForElementIsVisibleWithXpath( "//*[@class='appointment__title']", 80000);
+  await genericMethods.waitForElementIsVisibleWithXpath( "//*[@class='appointment__title']", 50000);
   await genericMethods.verifyTextContains(await genericMethods.getTextWithXpath("//*[@class='appointment__title']"), 'Bedankt voor uw tijd. Het rapport is naar u gemaild.');
   await genericMethods.clickOnElementWithXpath(ondernemersScanElements.genderElement);
   await genericMethods.typeText(ondernemersScanElements.initialsElement,ondernemersScanElements.initialsText);
@@ -35,6 +35,7 @@ When(/^I enter my details for personal advice$/, async () => {
 
 
 Then(/^Thank you page for make appointment is shown$/, async () => {
+  await genericMethods.waitForElementIsVisibleWithXpath( "//*[@class='thank-you__title']", 50000);
   await genericMethods.verifyTextContains(await genericMethods.getTextWithXpath("//*[@class='thank-you__title']"), 'Bedankt voor het maken van een afspraak.');
 });
 
