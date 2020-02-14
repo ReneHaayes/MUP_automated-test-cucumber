@@ -31,6 +31,9 @@ export enum collectievenEnum {
     CARINOVATHUIZZ = 'Carinova Thuizz',
     CARINOVATHUIZZ1 = 'Carinova ',
     CARINOVATHUIZZ2 = 'Thuizz',
+    ICARELEDENVERENIGING = 'Icare Ledenvereniging',
+    ICARELEDENVERENIGING1 = 'Icare ',
+    ICARELEDENVERENIGING2 = 'Ledenvereniging',
     HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging Ijsselstein'
 }
 
