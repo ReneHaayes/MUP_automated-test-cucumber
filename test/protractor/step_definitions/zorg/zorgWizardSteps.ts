@@ -106,6 +106,10 @@ When(/^I click on Volgende page two$/, async () => {
     await genericMethods.waitForElementClickable(zorgWizardElements.bijnaVerzekerdControlerenClickElement, 15000);
 });
 
+When(/^I click on Volgende page two no wait$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
+});
+
 When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: string) => {
     await genericMethods.typeText(zorgWizardElements.uwGegevensBirthdateTextElement, personaData.getPersonaBirthDate(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensInitalsTextElement, personaData.getPersonaInitials(persona));

@@ -177,7 +177,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
-        And I click on Volgende page two
+        And I click on Volgende page two no wait
         Then Verify that active policy pop-up is shown
         And validate button navigates to MijnUnive
 
