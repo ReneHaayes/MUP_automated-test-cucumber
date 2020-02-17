@@ -173,6 +173,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I select aanvullende insurance no collective with:
         |insuranceAanvullend|Aanvullend Best|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -192,6 +193,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I select aanvullende insurance no collective with:
         |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona1>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -202,7 +204,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And validate button navigates to MijnUnive
 
         Examples:
-        |insuranceBasis|persona1|persona2           |inkomstenNietNL|
+        |insuranceBasis|persona1  |persona2           |inkomstenNietNL|
         |Zorg Select   |ronaldo   |testmanActivePolicy|Nee            |
 
     @floatingButton
@@ -321,6 +323,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I select aanvullende insurance no collective with:
         |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -365,6 +368,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I select aanvullende insurance no collective with:
         |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -419,6 +423,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona2|<persona2>|
         And validate kind toevoegen button is not available
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|

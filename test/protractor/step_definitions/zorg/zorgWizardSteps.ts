@@ -439,6 +439,7 @@ Then(/^I select (.*) for (.*)$/, async (insuranceBasis: string, persona: string)
     await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement);
     //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.clickOnElementWithXpath(zorgWizardElements.uwGegevensVerzekeringsVerledenDropdownClickElement);
     await genericMethods.typeText(zorgWizardElements.uwGegevensBirthdateTextElement, personaData.getPersonaBirthDate(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensInitalsTextElement, personaData.getPersonaInitials(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensPrefixTextElement, personaData.getPersonaPrefix(persona));
@@ -496,6 +497,7 @@ Then(/^I add a partner step 1 and 3 with (.*)$/, async (persona: string) => {
     //navigeer naar stap 2
     await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement)
     //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.clickOnElementWithXpath(zorgWizardElements.uwGegevensVerzekeringsVerledenDropdownClickElement);
     await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerInitialsTextElement, personaData.getPersonaInitials(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerPrefixTextElement, personaData.getPersonaPrefix(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensPartnerLastnameTextElement, personaData.getPersonaLastName(persona));
@@ -510,7 +512,7 @@ Then(/^I add a child (.*)$/, async (persona: string) => {
     await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
     //navigeer van stap 2 naar stap 1
     await genericMethods.clickOnElement(zorgWizardElements.backButtonEachStepClickElement);
-    //voeg partner toe
+    //voeg kind toe
     await genericMethods.clickOnElement(zorgWizardElements.addKindButtonClickElement);
     await genericMethods.typeText(zorgWizardElements.geboortedatumPartnerKindTextElement, personaData.getPersonaBirthDate(persona));
     await genericMethods.clickOnElement(zorgWizardElements.sameInsurancePartnerChildCheckBoxClickElement);
@@ -518,6 +520,7 @@ Then(/^I add a child (.*)$/, async (persona: string) => {
     //navigeer naar stap 2
     await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement)
     //voeg persoonsgegevens op stap 2 toe
+    await genericMethods.clickOnElementWithXpath(zorgWizardElements.uwGegevensVerzekeringsVerledenDropdownClickElement);
     await genericMethods.typeText(zorgWizardElements.uwGegevensKindInitialsTextElement, personaData.getPersonaInitials(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensKindPrefixTextElement, personaData.getPersonaPrefix(persona));
     await genericMethods.typeText(zorgWizardElements.uwGegevensKindLastnameTextElement, personaData.getPersonaLastName(persona));
