@@ -76,6 +76,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I validate that all legends are visible on step 2
         And I select geen verzekering overstapreden in dropdown
@@ -97,6 +99,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
@@ -155,6 +159,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|Zorg Select|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Beter|
         And I select premie per jaar optie
         And I click on Volgende page one
         Then Verify that payment by acceptgiro option is visible
@@ -164,6 +170,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Best|
         And I click on Volgende page one
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
@@ -181,6 +189,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I enter personal data on step 2 of wizard with <persona1>
         And I answer inkomstenvragen with:
@@ -308,6 +318,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
@@ -350,6 +362,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the <page> page of the Unive website
         Then validate correct basic insurance is active with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
@@ -395,6 +409,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         When I click on partner toevoegen button
         And I add a partner or child -same insurance checkbox checked- with <persona>
         And validate partner toevoegen button is not available
@@ -442,6 +458,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I select tand insurance with:
         |insuranceTand|<insuranceTand>|
         When I click on Volgende page one

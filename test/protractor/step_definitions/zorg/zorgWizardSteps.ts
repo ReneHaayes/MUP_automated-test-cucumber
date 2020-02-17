@@ -434,8 +434,9 @@ Then(/^validate that BSN field is not visible on step 3$/, async () => {
 });
 
 Then(/^I select (.*) for (.*)$/, async (insuranceBasis: string, persona: string) => { 
-    //voeg basisverzekering toe
+    //voeg basisverzekering en aanvullende verzekering toe toe
     await zorgWizardMethods.selectInsuranceBasisNoCollective(insuranceBasis);
+    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.volgendeUwGegevensSubmitButtonClickElement);
     //voeg persoonsgegevens op stap 2 toe
     await genericMethods.typeText(zorgWizardElements.uwGegevensBirthdateTextElement, personaData.getPersonaBirthDate(persona));
