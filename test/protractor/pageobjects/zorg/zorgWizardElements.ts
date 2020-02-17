@@ -229,6 +229,7 @@ uwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(5) > fieldset
 uwGegevensInkomstenFoutmeldingTextElement: string = '[class="unive-form-input-error"]';
 uwGegevensInkomstenFoutmeldingText: string = 'Zonder inkomsten uit Nederland kunt u online geen zorgverzekering afsluiten. Neem voor meer informatie telefonisch contact ' + 
                                              'met ons op via 072 52 77 595.';
+uwGegevensInkomstenBuitenlandLabelElement: string = '[for="inkomstenBuitenland"]';
 uwGegevensVerzekeringsVerledenDropdownClickElement: string = '//select[@id="insurancePeriod"]//option[@value=6]';
 actievePolisOverlayHeaderTextElement: string = 'div > div.unive-modal__header > div';
 actievePolisOverlayHeaderText: string = 'Uw wijzigingen doorgeven?';
@@ -263,6 +264,7 @@ bijnaVerzekerdUBentBijnaVerzekerdText: string = 'U bent bijna verzekerd';
 bijnaVerzekerdUBentBijnaVerzekerdTextElement: string = '[class="unive-legend unive-legend--plain"]';
 backButtonEachStepClickElement: string = 'button.button.button--plain.button--back';
 spinnerButtonClickElement: string = '[class="button--spinner"]';
+bijnaVerzekerdControlerenClickElement: string = 'p:nth-child(1) > span > a';
 
 //ZORGWIZARD BEDANKTPAGINA
 bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
@@ -274,6 +276,7 @@ bedanktCrossSellItem2SubtitleTextElement: string = 'unive-cross-sell-item:nth-ch
 bedanktCrossSellItem1USP1TextElement: string = 'unive-usp-list > div > ul > li:nth-child(1)';
 bedanktCrossSellItem1USP2TextElement: string = 'unive-usp-list > div > ul > li:nth-child(2)';
 bedanktPaginaCustomerNameTextElement: string = 'div:nth-child(2) > h2';
+bedanktMijnUniveZorgClickElement: string = 'li:nth-child(2) > div > p > a';
 
 //FLOATINGBUTTON
 floatingButtonClickElement: string = 'body > div.floatingButton > a';

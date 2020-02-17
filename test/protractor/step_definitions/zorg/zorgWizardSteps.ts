@@ -102,7 +102,8 @@ When(/^I click on Volgende page one$/, async () => {
 
 When(/^I click on Volgende page two$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
-    await genericMethods.waitForElementIsInvisibleClassName(zorgWizardElements.spinnerButtonClickElement, 500);
+    await genericMethods.waitForElementIsInvisibleClassName(zorgWizardElements.spinnerButtonClickElement, 15000);
+    await genericMethods.waitForElementClickable(zorgWizardElements.bijnaVerzekerdControlerenClickElement, 15000);
 });
 
 When(/^I enter personal data on step 2 of wizard with (.*)$/, async (persona: string) => {
@@ -127,6 +128,7 @@ When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
 When(/^I click on bevestigen step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 2500);
+    await genericMethods.waitForElementClickable(zorgWizardElements.bedanktMijnUniveZorgClickElement, 15000);
 });
 
 When(/^I click on bevestigen step 3 without bedankpagina check$/, async () => {  

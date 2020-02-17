@@ -71,8 +71,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
     
-    @bedanktPagina
-    Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedanktpagina de juiste elementen bevatten
+    @bedankPagina
+    Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedankpagina de juiste elementen bevatten
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
