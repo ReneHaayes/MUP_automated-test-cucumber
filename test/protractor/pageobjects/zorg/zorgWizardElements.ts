@@ -266,7 +266,7 @@ backButtonEachStepClickElement: string = 'button.button.button--plain.button--ba
 spinnerButtonClickElement: string = '[class="button--spinner"]';
 bijnaVerzekerdControlerenClickElement: string = 'p:nth-child(1) > span > a';
 
-//ZORGWIZARD BEDANKTPAGINA
+//ZORGWIZARD BEDANKPAGINA
 bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
 bedanktCrossSellItem1TitleH3TextElement: string = 'unive-cross-sell-item:nth-child(3) > div > div.cross-sell-item__content > h3';
 bedanktCrossSellItem1SubtitleTextElement: string = 'unive-cross-sell-item:nth-child(3) > div > div.cross-sell-item__content > span';

@@ -2,6 +2,7 @@
 
 Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell opties worden getoond
     
+    @BedankpaginaDRV
     Scenario Outline: doorlopen van de zorgwizard (geen aanvullende pakketten) en check of doorlopende reis crosssell wordt getoond
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
@@ -19,7 +20,8 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         Examples:
         |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
         |ronaldo|Nee            |           |Zorg Vrij     |
-        
+
+    @oudBedankpaginaOVPAVPRBV    
     Scenario Outline: doorlopen van de zorgwizard (met aanvullende pakketten) en check of rechtsbijstand crosssell wordt getoond
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
