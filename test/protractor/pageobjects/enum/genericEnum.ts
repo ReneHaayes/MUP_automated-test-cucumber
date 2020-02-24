@@ -170,6 +170,7 @@ export enum verzekeringPaginasEnum {
   MIJN_UNIVE_GEZINSSITUATIE_WIJZIGEN = 'mijn unive gezinssituatie wijzigen',
   MIJN_UNIVE_MIJN_VERZEKERINGEN = 'mijn unive mijn verzekeringen',
   MIJN_UNIVE_MIJN_SCHADE_EN_CLAIM = 'mijn unive mijn schade en claim',
+  MIJN_UNIVE_VERZEKERING_BIJSLUITEN = 'mijn unive verzekering bijsluiten',
   MIJN_UNIVE_PREMIEGEVOLGEN_BEREKENEN = 'mijn unive premigevolgen berekenen',
   MIJN_UNIVE_MIJN_POSTVAK = 'mijn unive mijn postvak',
   MAILHOG = 'mailhog',
@@ -227,7 +228,10 @@ export enum numbersEnum {
   _7 = '7',
   _8 = '8',
   _9 = '9',
-  _10 = '10'
+  _10 = '10',
+  FIRST = 'first',
+  SECOND = 'second',
+  THIRTH = 'thirth'
 }
 
 export enum multipleChoiceEnum {
