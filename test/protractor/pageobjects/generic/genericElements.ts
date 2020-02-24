@@ -109,6 +109,7 @@ export class GenericElements {
   mijnUniveMijnVerzekeringen: string = this.mijnUnivePage + '/' + 'polisoverzicht';
   mijnUniveMijnSchadeEnClaim: string = this.mijnUnivePage + '/' + 'schade';
   mijnUnivePremiegevolgenBerekenen: string = this.mijnUniveMijnSchadeEnClaim + '/premiegevolgen-berekenen';
+  mijnUniveVerzekeringBijsluiten: string = this.mijnUnivePage + '/' + 'verzekering-bijsluiten';
   mijnUniveMijnPostvak: string = this.mijnUnivePage + '/' + 'mijn-postvak';
 
 
