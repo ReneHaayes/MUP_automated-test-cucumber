@@ -8,7 +8,7 @@ import {
   vehicleElements,
   zakelijkTractorVerzekeringElements,
   zakelijkTractorVerzekerinigMethods
-} from "@support";
+} from '@support';
 
 When(/^I enter step one page and click next on step two of zakelijk tractorverzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
@@ -50,5 +50,42 @@ When(/^I enter step four page of zakelijk tractorverzekering for (.*) with (.*)$
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step three page of zakelijk tractorverzekeringen with different owner:$/, async (data) => {
+  const dataTable = data.rowsHash();
+  await genericMethods.typeText(zakelijkTractorVerzekeringElements.licensePlateInputElement, dataTable.licensePlate);
+  await genericMethods.clickOnTAB(zakelijkTractorVerzekeringElements.licensePlateInputElement);
+  await genericMethods.typeText(zakelijkTractorVerzekeringElements.chassisNumberInputElement, dataTable.chassisNumber);
+  await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.ownerNoClickElement);
+  await genericMethods.clickOnNextButton()
+});
+
+When(/^I enter step four page of zakelijke tractorverzekering for (.*) with (.*) different owner (.*)$/, async (company: string, persona: string, natural_person: string ) => {
+  await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
+  await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
+  await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
+  await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
+  await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
+  await genericMethods.clickContactDataGender(personaData.getPersonaGender(persona));
+  await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
+  await genericMethods.clickOnTAB(genericElements.accountNumberElement);
+  await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
+  await genericMethods.clickOnElement(nawElements.differentOwnerNatuurlijkPersoonElement);
+  await genericMethods.typeText(nawElements.differentOwnerInitialsInputElement,personaData.getPersonaInitials(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerPrefixInputElement, personaData.getPersonaPrefix(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerLastNameInputElement, personaData.getPersonaLastName(natural_person));
+  await genericMethods.clickDifferentOwnerDataGender(personaData.getPersonaGender(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerBirthdateInputElement, personaData.getPersonaBirthDate(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerZipCodeInputElement, personaData.getPersonaZipcode(natural_person));
+  await genericMethods.clickOnTAB(nawElements.differentOwnerHouseNumberElement);
+  await genericMethods.typeText(nawElements.differentOwnerHouseNumberElement, personaData.getPersonaHouseNumber(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(natural_person));
+
+
   await genericMethods.clickOnNextButton();
 });

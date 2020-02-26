@@ -119,6 +119,8 @@ export class NawElements {
   differentOwnerZipCodeInputElement: string = '#_Form_IF25918_3693';
   differentOwnerHouseNumberElement: string = '#_Form_IF25918_3694';
   differentOwnerHouseNumberAdditionElement: string = '#_Form_IF25918_3695';
+  differentOwnerNatuurlijkPersoonElement: string = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(1)';
+  differentOwnerBedrijfElement: string = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(2)';
 
   //RISC ADDRESS
   riscAddressZipcodeInputElement: string = '#_Form_IF17707_3693';

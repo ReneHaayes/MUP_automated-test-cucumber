@@ -82,7 +82,7 @@ When(/^I enter step four page of bedrijfsautoverzekering for (.*) with (.*) diff
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
-  await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentOwnerNatuurlijkPersoonElement);
+  await genericMethods.clickOnElement(nawElements.differentOwnerNatuurlijkPersoonElement);
   await genericMethods.typeText(nawElements.differentOwnerInitialsInputElement,personaData.getPersonaInitials(natural_person));
   await genericMethods.typeText(nawElements.differentOwnerPrefixInputElement, personaData.getPersonaPrefix(natural_person));
   await genericMethods.typeText(nawElements.differentOwnerLastNameInputElement, personaData.getPersonaLastName(natural_person));

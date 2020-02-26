@@ -41,5 +41,4 @@ export class ZakelijkAansprakelijkheidsVerzekeringElements {
   toolsSmalspoorSelectElement: string = 'string:smalspoor';
   toolsOverigSelectElement: string = 'string:overig';
   toolsGeenSelectElement: string = 'string:geen';
-
 }
