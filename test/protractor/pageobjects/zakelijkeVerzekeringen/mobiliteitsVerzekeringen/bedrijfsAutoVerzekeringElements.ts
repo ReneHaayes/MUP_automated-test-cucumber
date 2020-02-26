@@ -53,4 +53,7 @@ export class BedrijfsAutoVerzekeringElements {
   differentUserYesElement: string = '[data-label-id*="LA_IF20213_32050"] .radioList > label:nth-child(1)';
   differentUserNoElement: string = '[data-label-id*="LA_IF20213_32050"] .radioList > label:nth-child(2)';
 
+  //DIFFERENT OWNER
+  differentOwnerNatuurlijkPersoonElement: string = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(1)';
+  differentOwnerBedrijfElement: string = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(2)';
 }

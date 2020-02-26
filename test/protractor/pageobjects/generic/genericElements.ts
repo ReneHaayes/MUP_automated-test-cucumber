@@ -156,6 +156,4 @@ export class GenericElements {
 
   //SIDEBAR
   sideBarElement: string = '//*[@class="rbcontainer"]//*';
-
-
 }
