@@ -109,10 +109,20 @@ export class NawElements {
   contactDataZorgeloosOnlineGenderFemaleClickElement: string = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(2)';
   contactDataZorgeloosOnlineBirthdateInputElement: string = '#_Form_IF30707_3692';
 
+  //DIFFERENT OWNER
+  differentOwnerInitialsInputElement: string = '#_Form_IF25918_3688';
+  differentOwnerPrefixInputElement: string = '#_Form_IF25918_3689';
+  differentOwnerLastNameInputElement: string = '#_Form_IF25918_3690';
+  differentOwnerGenderMaleClickElement: string = '[data-label-id*="LA_IF25918_3691"] .radioList > label:nth-child(1)';
+  differentOwnerGenderFemaleClickElement: string = '[data-label-id*="LA_IF25918_3691"] .radioList > label:nth-child(2)';
+  differentOwnerBirthdateInputElement: string = '#_Form_IF25918_3692';
+  differentOwnerZipCodeInputElement: string = '#_Form_IF25918_3693';
+  differentOwnerHouseNumberElement: string = '#_Form_IF25918_3694';
+  differentOwnerHouseNumberAdditionElement: string = '#_Form_IF25918_3695';
+
   //RISC ADDRESS
   riscAddressZipcodeInputElement: string = '#_Form_IF17707_3693';
   riscAddressHouseNumberInputElement: string = '#_Form_IF17707_3694';
   riscAddressHouseNumberAddingInputElement: string = '#_Form_IF17707_3695';
-
 
 }
