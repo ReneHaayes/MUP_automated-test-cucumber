@@ -30,6 +30,7 @@ import {WoonVerzekeringMethods} from "../pageobjects/particuliereVerzekeringen/h
 import {OndernemersScanMethods} from "../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanMethods";
 import {ZorgCheckToolMethods} from "../pageobjects/zorg/zorgCheckToolMethods";
 import {ZorgWizardMethods} from "../pageobjects/zorg/zorgWizardMethods";
+import {VisualMethods} from "../pageobjects/visual/visualMethods";
 
 export const situatieGewijzigdMethods: SituatieGewijzigdMethods = new SituatieGewijzigdMethods();
 export const hmPageMijnUniveMethods: HmPageMijnUniveMethods = new HmPageMijnUniveMethods();
@@ -63,3 +64,5 @@ export const woonVerzekeringMethods: WoonVerzekeringMethods = new WoonVerzekerin
 export const ondernemersScanMethods: OndernemersScanMethods = new OndernemersScanMethods();
 export const zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
 export const zorgWizardMethods: ZorgWizardMethods = new ZorgWizardMethods();
+export const visualMethods: VisualMethods = new VisualMethods();
+

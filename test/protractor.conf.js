@@ -2,6 +2,7 @@ require('ts-node/register');
 require('tsconfig-paths/register');
 
 exports.config = {
+  SELENIUM_PROMISE_MANAGER: false,
   // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
   // ignoreUncaughtExceptions: true,
   allScriptsTimeout: 60000,
@@ -36,7 +37,8 @@ exports.config = {
     zakelijkeVerzekeringen: './protractor/features/zakelijkeVerzekeringen/**/*.feature',
     particuliereVerzekeringen: './protractor/features/particuliereVerzekeringen/**/*.feature',
     mijnUniveParticulier: './protractor/features/mijnUniveParticulier/**/*.feature',
-    service: './protractor/features/service/**/*.feature'
+    service: './protractor/features/service/**/*.feature',
+    visual: './protractor/features/visual/**/*.feature'
   },
 
   params: {
