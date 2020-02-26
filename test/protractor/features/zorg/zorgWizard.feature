@@ -31,8 +31,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |collective            |insuranceBasis|discountBasis|discountAanvullend|
         |Omring Medewerkers    |Zorg Vrij     |5%           |10%               |
         |Nic Oud BV            |Zorg Geregeld |3%           |10%               |
-        |Carinova Thuizz       |Zorg Vrij     |5%           |10%               |
-        |Carinova Thuizz       |Zorg Geregeld |5%           |10%               |
+        |Icare Ledenvereniging |Zorg Vrij     |5%           |10%               |
+        |Icare Ledenvereniging |Zorg Geregeld |5%           |10%               |
     
     @collectieven
     Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
@@ -59,7 +59,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |collective            |insuranceBasis|
         |Omring Medewerkers    |Zorg Vrij     |
-        |Carinova Thuizz       |Zorg Geregeld |
+        |Icare Ledenvereniging |Zorg Geregeld |
     
     @collectieven
     Scenario: selecteer zorg select, check dat je niet collectief toe kunt voegen, check daarna of alle losse modules klikbaar zijn en alle pakketten klikbaar zijn
@@ -187,7 +187,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |inkomstenNietNL|<inkomstenNietNL>|
         And I click on Volgende page two
         And I enter BSN on step 3 with <persona2>
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         Then Verify that active policy pop-up is shown
         And validate button navigates to MijnUnive
 
@@ -343,7 +343,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
 
         Examples:
         |insuranceBasis|persona                     |persona2|persona3   |persona4                   |
-        |Zorg Select   |testvrouwCustomerRecognition|ronaldo   |testPartner|testkindCustomerRecognition|
+        |Zorg Select   |testvrouwCustomerRecognition|ronaldo |testPartner|testkindCustomerRecognition|
 
     @parameterURLBasisverzekering
     Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor de basisverzekering de wizard binnen te komen
@@ -507,7 +507,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         When I change hoofdverzekerde from zorg select to zorg geregeld
         And I click on add collective button in wizard
         And I add a collective with:
-        |collective|Carinova Thuizz|
+        |collective|Icare Ledenvereniging|
         And I validate child under 18 has zorg vrij and tand best
         And I add to partner collectief aanvullend goed
         Then validate child under 18 has zorg vrij, collectief aanvullend goed and tand best
@@ -549,7 +549,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I click on add collective button in wizard
         And I add a collective with:
-        |collective|Carinova Thuizz| 
+        |collective|Icare Ledenvereniging| 
         And I add a hoofdverzekerde with zorg vrij
         And I click on partner toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona>

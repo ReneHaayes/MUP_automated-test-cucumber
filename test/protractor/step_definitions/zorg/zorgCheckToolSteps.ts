@@ -1,7 +1,7 @@
 import {When, Then, Given} from 'cucumber';
 import { browser } from 'protractor';
 import { collectievenEnum } from '../../pageobjects/enum/zorgEnum';
-import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods, zorgWizardElements} from "../../support";
+import {genericMethods, zorgCheckToolElements, zorgCheckToolMethods, zorgWizardElements} from "@support";
 
 When(/^I answer 9 questions with:$/, async (data) => {
     const dataTable = data.rowsHash();
@@ -258,6 +258,6 @@ Then (/^validate I get redirected to the zorgwizard with the correct code in the
         browser.switchTo().window(handles[1]);
     });
     await browser.sleep(500);
-    await genericMethods.verifyUrlIs(zorgCheckToolElements.directRegelenZorgverzekeringURL);
+    await genericMethods.verifyUrlContains(zorgCheckToolElements.directRegelenZorgverzekeringURL);
     await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
 });

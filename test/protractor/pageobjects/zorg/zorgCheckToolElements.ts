@@ -5,7 +5,7 @@ startZorgCheckToolButtonClickElement: string = 'health-check-start > health-chec
 nextQuestionZorgCheckToolButtonClickElement: string = '[class*="button button--secondary button--icon"]';
 previousQuestionZorgCheckToolButtonClickElement: string = '[class="button button--plain"]';
 directRegelenZorgverzekeringButtonClickElement: string = 'div.health-check-start__bottom-line > a';
-directRegelenZorgverzekeringURL: string = 'https://gezondheid.unive.nl/zorgverzekering/premieberekenen-en-afsluiten/?icmp=IL-3';
+directRegelenZorgverzekeringURL: string = 'unive.nl/zorgverzekering/premieberekenen-en-afsluiten/?icmp=IL-3';
 
 //MULTIPLE CHOICE ANSWERS
 answerAZorgCheckToolClickElement: string = '[for="A"]';

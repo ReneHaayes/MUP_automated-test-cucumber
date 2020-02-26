@@ -82,6 +82,7 @@ export enum homePageEnum {
   VRAAGSTELLEN = 'vraagStellen',
   SCHADE = 'schade',
   SCHADE_SERVICE = 'schade service',
+  WINKELZOEKER = 'winkelzoeker',
   KLANTENSERVICE_ZAKELIJK = 'klantenservice zakelijk',
   ARBEIDSONGESCHIKTHEID = 'arbeidsongeschiktheid',
   RECHTSBIJSTAND = 'rechtsbijstand',
@@ -94,6 +95,12 @@ export enum homePageEnum {
   KLACHT_INDIENEN = 'klacht indienen',
   SCHADE_BESLISBOOM = 'schade beslisboom',
   INLOGGEN = 'inloggen',
-  ONDERNEMERSCAN = 'Ondernemersscan',
-  CMS = 'cms'
+  ONDERNEMERSSCAN = 'Ondernemersscan',
+  CMS = 'cms',
+  BEDRIJFSAUTO = 'Bedrijfsauto',
+  ZAKELIJKE_PERSONENAUTO = 'Zakelijke personenauto'
+}
+
+export enum zakelijkHomePageEnum {
+  AANSPRAKELIJKHEIDSVERZEKERING = 'aansprakelijkheidsverzekering'
 }

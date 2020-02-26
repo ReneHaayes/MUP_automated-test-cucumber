@@ -1,6 +1,7 @@
 import {browser} from 'protractor';
 import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
 import {apiElements, genericElements} from "@support";
+import {faqPage} from "../enum/genericEnum";
 
 export class GetUrlUnive {
 
@@ -117,6 +118,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekering;
       }
+      case verzekeringPaginasEnum.CALAMITEITEIN: {
+        return this.getEnv(browser.params.env.environment) + verzekeringPaginasEnum.CALAMITEITEIN;
+      }
       case verzekeringPaginasEnum.ZAKELIJK_RECHTSBIJSTANDVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkRechtsBijstandVerzekering;
       }
@@ -165,6 +169,9 @@ export class GetUrlUnive {
       case homePageEnum.SCHADE_SERVICE: {
         return this.getEnv(browser.params.env.environment) + genericElements.schadeService;
       }
+      case homePageEnum.WINKELZOEKER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.winkelzoeker;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
@@ -198,7 +205,7 @@ export class GetUrlUnive {
       case homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveZakelijkHomePage;
       }
-      case homePageEnum.ONDERNEMERSCAN: {
+      case homePageEnum.ONDERNEMERSSCAN: {
         return this.getEnv(browser.params.env.environment) + genericElements.ondernemersScan;
       }
       case verzekeringPaginasEnum.COLLECTIEVE_ZORGVERZEKERING: {
@@ -230,6 +237,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PREMIEGEVOLGEN_BEREKENEN: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUnivePremiegevolgenBerekenen;
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_VERZEKERING_BIJSLUITEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveVerzekeringBijsluiten;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_POSTVAK: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveMijnPostvak;
@@ -287,6 +297,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.ZORGVERZEKERINGBASISVRIJPARAMETER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisVrijParameter;
+      }
+      case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
+        return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

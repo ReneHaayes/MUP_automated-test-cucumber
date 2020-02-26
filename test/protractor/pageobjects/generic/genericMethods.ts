@@ -14,6 +14,48 @@ const ec = protractor.ExpectedConditions;
 
 export class GenericMethods {
 
+  constructor() {
+    /**
+     * Usage:
+     *   O  element(by.css_sr('#parentElement #innerElement'))          <=> $('#parentElement #innerElement')
+     *   O  element(by.css_sr('#parentElement::sr #innerElement'))      <=> $('#parentElement').shadowRoot.$('#innerElement')
+     *   O  element.all(by.css_sr('#parentElement .inner-element'))     <=> $$('#parentElement .inner-element')
+     *   O  element.all(by.css_sr('#parentElement::sr .inner-element')) <=> $$('#parentElement').shadowRoot.$$('.inner-element')
+     *   O  parentElement.element(by.css_sr('#innerElement'))           <=> parentElement.$('#innerElement')
+     *   O  parentElement.element(by.css_sr('::sr #innerElement'))      <=> parentElement.shadowRoot.$('#innerElement')
+     *   O  parentElement.all(by.css_sr('.inner-element'))              <=> parentElement.$$('.inner-element')
+     *   O  parentElement.all(by.css_sr('::sr .inner-element'))         <=> parentElement.shadowRoot.$$('.inner-element')
+     */
+    by.addLocator('css_sr', (cssSelector: string, opt_parentElement: any) => {
+      let selectors = cssSelector.split('::sr');
+      if (selectors.length === 0) {
+        return [];
+      }
+      let shadowDomInUse = (document.head.attachShadow);
+      let getShadowRoot = (el: any) => ((el && shadowDomInUse) ? el.shadowRoot : el);
+      let findAllMatches = (selector: string, targets: any[], firstTry: boolean) => {
+        let using, i, matches = [];
+        for (i = 0; i < targets.length; ++i) {
+          using = (firstTry) ? targets[i] : getShadowRoot(targets[i]);
+          if (using) {
+            if (selector === '') {
+              matches.push(using);
+            } else {
+              Array.prototype.push.apply(matches, using.querySelectorAll(selector));
+            }
+          }
+        }
+        return matches;
+      };
+
+      let matches = findAllMatches(selectors.shift().trim(), [opt_parentElement || document], true);
+      while (selectors.length > 0 && matches.length > 0) {
+        matches = findAllMatches(selectors.shift().trim(), matches, false);
+      }
+      return matches;
+    });
+  }
+
   async clickOnCookie(selector: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     // await this.waitForElementIsVisible(selector, browser.getPageTimeout);
@@ -37,6 +79,30 @@ export class GenericMethods {
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
     })
+  }
+
+  async clickOnElementShadowRoot(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    await this.waitForElementIsVisibleShadowRoot(selector, browser.getPageTimeout);
+    const elementToClick: ElementFinder = element(by.css_sr(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
+      elementToClick.click();
+    });
+  }
+
+  async clickOnElementShadowRootHideElements(selector: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    await browser.sleep(2500);
+    const elementToClick: ElementFinder = element(by.css_sr(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
+    });
+    await elementToClick.click();
   }
 
   async doubleClickOnElement(selector: string) {
@@ -108,6 +174,15 @@ export class GenericMethods {
     }
   }
 
+  async waitForElementIsVisibleShadowRoot(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css_sr(selector));
+      await browser.wait(ec.visibilityOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is not visible');
+    }
+  }
+
   async waitForElementIsPresent(selector: string, waitFor: number) {
     try {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
@@ -164,6 +239,16 @@ export class GenericMethods {
   async waitForElementNotVisible(selector: string, waitFor: number) {
     try {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
+      await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
+      await browser.sleep(500);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is still visible');
+    }
+  }
+
+  async waitForElementNotVisibleShadowRoot(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css_sr(selector));
       await browser.wait(ec.invisibilityOf(selectorToWaitFor), waitFor);
       await browser.sleep(500);
     } catch (e) {
@@ -234,10 +319,23 @@ export class GenericMethods {
     return text.getText();
   }
 
+  async getTextShadowRoot(selector: string): Promise<string> {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleShadowRoot(selector, browser.getPageTimeout);
+    const text: ElementFinder = element(by.css_sr(selector));
+    return text.getText();
+  }
+
   async getValue(selector: string): Promise<string> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const text: ElementFinder = element(by.css(selector));
+    return text.getWebElement().getAttribute('value')
+  }
+
+  async getValueShadowRoot(selector: string): Promise<string> {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    const text: ElementFinder = element(by.css_sr(selector));
     return text.getWebElement().getAttribute('value')
   }
 
@@ -275,6 +373,33 @@ export class GenericMethods {
         typeTextElement.sendKeys(text);
       })
     })
+  }
+
+  async typeTextShadowRoot(selector: string, text: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    await this.waitForElementIsVisibleShadowRoot(selector, browser.getPageTimeout);
+    let test123: any = by.css_sr;
+    const typeTextElement: ElementFinder = element(test123(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
+    });
+    await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
+      typeTextElement.clear().then(() => {
+        typeTextElement.sendKeys(text);
+      })
+    })
+  }
+
+  async typeTextShadowRootHideElement(selector: string, text: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
+    let test123: any = by.css_sr;
+    const typeTextElement: ElementFinder = element(test123(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
+    });
+    typeTextElement.sendKeys(text);
   }
 
   async typeTextNoClear(selector: string, text: string) {
@@ -337,6 +462,13 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
+  async verifyTextInElementShadowRoot(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleShadowRoot(selector, browser.getPageTimeout);
+    const selectorToString: string = await this.getTextShadowRoot(selector);
+    await expect(selectorToString).to.equal(assertionText);
+  }
+
   async verifyTextInElementIgnoreCase(selector: string, assertionText: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
@@ -358,10 +490,23 @@ export class GenericMethods {
     await expect(selectorToString).to.equal(assertionText);
   }
 
+  async verifyValueTextInElementShadowRoot(selector: string, assertionText: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    const selectorToString: string = await this.getValueShadowRoot(selector);
+    await expect(selectorToString).to.equal(assertionText);
+  }
+
   async verifyTextContainsInElement(selector: string, assertionText: string, waitFor: number) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, waitFor);
     const selectorToString: string = await this.getText(selector);
+    await expect(selectorToString).to.have.string(assertionText);
+  }
+
+  async verifyTextContainsInElementShadowRoot(selector: string, assertionText: string, waitFor: number) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleShadowRoot(selector, waitFor);
+    const selectorToString: string = await this.getTextShadowRoot(selector);
     await expect(selectorToString).to.have.string(assertionText);
   }
 
@@ -558,7 +703,21 @@ export class GenericMethods {
     switch (input) {
       case dateEnum.TODAY: {
         const date = new Date();
-        return String(date.getDate()) + '-' + String(date.getMonth() + 1) + '-' + String(date.getFullYear());
+        let dd;
+        let mm;
+        if (date.getDate() < 10) {
+          dd = '0' + date.getDate().toString();
+        } else {
+          dd = date.getDate().toString();
+        }
+        let monthPlusOne = date.getMonth() + 1;
+        if (monthPlusOne < 10) {
+          mm = '0' + monthPlusOne.toString();
+        } else {
+          mm = monthPlusOne.toString();
+        }
+        console.log(dd + '-' + mm + '-' + String(date.getFullYear()));
+        return dd + '-' + mm + '-' + String(date.getFullYear());
       }
       case dateEnum.SEVEN_DAY_TRIP: {
         const today = new Date();

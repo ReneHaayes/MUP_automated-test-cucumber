@@ -1,6 +1,6 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
-import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '../../support';
+import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '@support';
 import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum, eigenRisicoEnum, moduleEnum } from '../../pageobjects/enum/zorgEnum';
 import { personaName } from 'protractor/support/enum';
 
@@ -127,6 +127,10 @@ When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
 When(/^I click on bevestigen step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 2500);
+});
+
+When(/^I click on bevestigen step 3 without bedankpagina check$/, async () => {  
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
 });
 
 Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {

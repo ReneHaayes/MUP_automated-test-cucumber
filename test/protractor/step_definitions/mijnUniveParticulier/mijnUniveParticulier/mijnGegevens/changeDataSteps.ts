@@ -5,7 +5,6 @@ import {
   apiElements,
   apiMethods,
   genericMethods,
-  hmPageElements,
   loginPageElements,
   loginPageMethods,
   mailhogMethods,
@@ -51,7 +50,7 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
   });
   //GO TO MIJN UNIVE AND LOG OFF
   await browser.sleep(5000);
-  await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
+  // await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
   // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
   await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
