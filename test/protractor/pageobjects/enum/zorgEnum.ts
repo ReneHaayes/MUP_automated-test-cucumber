@@ -35,8 +35,9 @@ export enum collectievenEnum {
 }
 
 export enum crossSellEnum {
-    DOORLOPENDEREISVERZEKERING = 'Doorlopende reisverzekering',
-    DOORLOPENDEREISENANNULERINGSVERZEKERING = 'Doorlopende reis- en annuleringsverzekering',
+    ZORGVERZEKERING = 'zorgverzekering',
+    DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
+    DOORLOPENDEREISENANNULERINGSVERZEKERING = 'doorlopende reis- en annuleringsverzekering',
     ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
     AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
     RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
