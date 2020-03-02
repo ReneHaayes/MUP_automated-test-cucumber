@@ -61,10 +61,8 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
     Examples:
       | page               | button              |
       | Home               | zorgnota declareren |
-      | Home               | postcode en plaats  |
       | Home               | klantenservice      |
       | Home               | over ons            |
       | alle verzekeringen | zorgnota declareren |
-      | alle verzekeringen | postcode en plaats  |
       | alle verzekeringen | klantenservice      |
       | alle verzekeringen | over ons            |

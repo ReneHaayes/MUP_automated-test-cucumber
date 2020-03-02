@@ -30,7 +30,7 @@ When(/^Customer clicks on (.*) tile of the popular product on verzekering bijslu
 When(/^Verify the tile correctly redirects url for the (.*) tile$/, async (wichtTile: string) => {
   switch (wichtTile) {
     case numbersEnum.FIRST: {
-      await genericMethods.verifyUrlContainsIgnoreCase('zorgverzekering');
+      await genericMethods.verifyUrlContainsIgnoreCase('woonverzekering');
       break;
     }
     case numbersEnum.SECOND: {

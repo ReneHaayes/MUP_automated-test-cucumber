@@ -60,13 +60,13 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
 
 
 Then(/^Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data$/, async () => {
+  await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
+  await stickyBalkMethods.verifySummaryAutoVerzekering();
+  await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIFTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
     analyticsAutoverzekeringElements.fifthPagePaginaId);
   //ANALYTICS
-  await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
-  await stickyBalkMethods.verifySummaryAutoVerzekering();
-  await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
 });
 
 When(/^Customer enters step three page of autoverzekering for (.*)$/, async (licensePlate: string) => {
