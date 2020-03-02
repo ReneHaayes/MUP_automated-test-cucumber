@@ -1,8 +1,9 @@
 import {Then, When} from "cucumber";
-import {genericMethods, klantenserviceDirectOnlineRegelenElements} from "@support";
+import {genericMethods, klantenserviceDirectOnlineRegelenElements, loginPageElements} from "@support";
 
 
 When(/^Customer navigates to klantenservice and clicks on tile (.*) for direct online regelen$/, async (tile: string) => {
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
   await genericMethods.goToPage('klantenservice');
   await genericMethods.clickOnElement(klantenserviceDirectOnlineRegelenElements.directOnlineRegelenTileClickElement(tile));
 });
