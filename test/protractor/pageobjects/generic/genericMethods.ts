@@ -193,17 +193,20 @@ export class GenericMethods {
   }
 
   async verifyUrlContains(url: string) {
+    await browser.sleep(500);
     const currentUrl: string = await browser.getCurrentUrl();
     await expect(currentUrl).to.have.string(url);
   }
 
   async verifyUrlContainsIgnoreCase(url: string) {
+    await browser.sleep(500);
     const currentUrl: string = await browser.getCurrentUrl();
     await expect(currentUrl).to.containIgnoreCase(url);
   }
 
 
   async verifyUrlIs(url: string) {
+    await browser.sleep(500);
     const currentUrl: string = await browser.getCurrentUrl();
     await expect(currentUrl).to.equal(url);
   }
@@ -734,7 +737,6 @@ export class GenericMethods {
         } else {
           mm = monthPlusOne.toString();
         }
-        console.log(dd + '-' + mm + '-' + String(date.getFullYear()));
         return dd + '-' + mm + '-' + String(date.getFullYear());
       }
       case dateEnum.SEVEN_DAY_TRIP: {

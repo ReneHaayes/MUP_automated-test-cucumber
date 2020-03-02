@@ -34,8 +34,8 @@ When(/^Customer logs in with wrong password (.*)$/, async (password: string) => 
 });
 
 When(/^Customer clicks on veelgestelde vragen button$/, async () => {
-  await genericMethods.clickOnElement(loginPageElements.veelgesteldeVragenClickElement);
   await genericMethods.clickOnElement(genericElements.cookieClickElement);
+  await genericMethods.clickOnElement(loginPageElements.veelgesteldeVragenClickElement);
 });
 
 When(/^verify the answer to (.*)$/, async (veelgesteldeVraag: string) => {

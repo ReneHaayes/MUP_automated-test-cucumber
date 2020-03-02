@@ -16,7 +16,7 @@ export class LoginPageElements {
 
   //ERRORS
   passwordErrorFieldTextElement: string = '[data-messagetype="fielderror"]';
-  emailAdresErrorFieldTextElement: string = '[for="email"][class="help-block"]';
+  emailAdresErrorFieldTextElement: string = '[for="emailphone"]';
 
   //VEELGESTELDE VRAGEN
   veelgesteldeVragenClickElement: string = '#unive-help';
