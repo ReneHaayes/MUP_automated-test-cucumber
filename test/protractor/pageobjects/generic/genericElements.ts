@@ -97,6 +97,8 @@ export class GenericElements {
   zorgVerzekeringBasisSelectParameter: string = this.zorgVerzekering + '?bv=ZVSU';
   zorgVerzekeringBasisGeregeldParameter: string = this.zorgVerzekering + '?bv=GER';
   zorgVerzekeringBasisVrijParameter: string = this.zorgVerzekering + '?bv=VRY';
+  zorgVerzekeringCrossSellInWizardParameter: string = this.zorgVerzekering + '?cs=1';
+  zorgVerzekeringCrossSellBedankpaginaParameter: string = this.zorgVerzekering + '?cs=0';
 
   //MIJN UNIVE URL
   mijnUnivePage: string = 'mijnunive';

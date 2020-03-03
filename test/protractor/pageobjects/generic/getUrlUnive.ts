@@ -295,6 +295,12 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGVERZEKERINGBASISVRIJPARAMETER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringBasisVrijParameter;
       }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGCROSSSELLINWIZARDPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringCrossSellInWizardParameter;
+      }
+      case verzekeringPaginasEnum.ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringCrossSellBedankpaginaParameter;
+      }
       case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
       }

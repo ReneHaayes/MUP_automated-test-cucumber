@@ -21,6 +21,10 @@ crossSellSecondDRVMetAnnuleringPriceElement: string = 'unive-cross-sell-wizard-i
                                                       + '> div.cross-sell-wizard-item__top > div.cross-sell-wizard-item__price > span';
 crossSellFirstDRVVergoedingenClickElement: string = 'unive-cross-sell-wizard-item:nth-child(1) > div > div.cross-sell-wizard-item__content > button';
 crossSellSecondDRVMetAnnuleringVergoedingenClickElement: string = 'unive-cross-sell-wizard-item:nth-child(2) > div > div.cross-sell-wizard-item__content > button';
+crossSellFirstSubtitleTextElement: string = 'unive-cross-sell-wizard-product:nth-child(1) > div > div.cross-sell-wizard-item__content > div.cross-sell-wizard-item__top > '
+                                            + 'div.cross-sell-wizard-item__header > div.cross-sell-wizard-item__subtitle';
+crossSellSecondSubtitleTextElement: string = 'unive-cross-sell-wizard-product:nth-child(2) > div > div.cross-sell-wizard-item__content > div.cross-sell-wizard-item__top > '
+                                            + 'div.cross-sell-wizard-item__header > div.cross-sell-wizard-item__subtitle';            
 vorigeButtonClickElement: string = 'button.button.button--plain.button--back';
 
 //UWGEGEVENS
