@@ -22,6 +22,7 @@ import {SchadeServiceElements} from "../pageobjects/Klantenservice/SchadeService
 import {AnalyticsAutoverzekeringElements} from "../pageobjects/analytics/analyticsAutoverzekeringElements";
 import {KlantenserviceDirectOnlineRegelenElements} from "../pageobjects/Klantenservice/klantenserviceDirectOnlineRegelenElements";
 import {VisualElements} from "../pageobjects/visual/visualElements";
+import {KlantenserviceNeemContactOpElements} from "../pageobjects/Klantenservice/klantenserviceNeemContactOpElements";
 
 export const bikeElements: BikeElements = new BikeElements();
 export const scootMobielVerzekeringElements: ScootMobielVerzekeringElements = new ScootMobielVerzekeringElements();
@@ -48,3 +49,4 @@ export const schadeServiceElements: SchadeServiceElements = new SchadeServiceEle
 export const analyticsAutoverzekeringElements: AnalyticsAutoverzekeringElements = new AnalyticsAutoverzekeringElements();
 export const visualElements: VisualElements = new VisualElements();
 export const klantenserviceDirectOnlineRegelenElements: KlantenserviceDirectOnlineRegelenElements = new KlantenserviceDirectOnlineRegelenElements();
+export const klantenserviceNeemContactOpElements: KlantenserviceNeemContactOpElements = new KlantenserviceNeemContactOpElements();
