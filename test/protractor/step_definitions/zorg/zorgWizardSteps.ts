@@ -1,6 +1,6 @@
 import {When, Then } from 'cucumber';
 import { browser } from 'protractor';
-import { genericMethods, zorgWizardElements, zorgWizardMethods, personaData } from '@support';
+import { genericMethods, zorgWizardElements, zorgWizardCrossSellElements, zorgWizardMethods, personaData } from '@support';
 import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum, eigenRisicoEnum, moduleEnum } from '../../pageobjects/enum/zorgEnum';
 import { personaName } from 'protractor/support/enum';
 
@@ -940,4 +940,17 @@ When (/^I add for second child above 18 zorg vrij and tand best$/, async() => {
 When (/^I delete child under 18$/, async() => {
     await genericMethods.scrollTilTop();
     await genericMethods.clickOnElement(zorgWizardElements.deleteFirstChildButtonClickElement);
+});
+
+
+//Cross sell in wizard steps hieronder
+
+Then (/^validate step 2 is buitenland step and all elements are present$/, async() => {
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapEenElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapTweeElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapDrieElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapVierElement, 250);
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.H1TextElement, zorgWizardCrossSellElements.H1Text);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.crossSellFirstDRVElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.crossSellSecondDRVMetAnnuleringElement, 250);
 });

@@ -1,4 +1,4 @@
-export class ZorgWizardElements {
+export class ZorgWizardCrossSellElements {
 
 //ALGEMEEN    
 unibolStapEenElement: string = 'unive-wizard-step:nth-child(1) > li > span';
@@ -9,8 +9,8 @@ unibolStapVierElement: string = 'unive-wizard-step:nth-child(4) > li > span';
 //BUITENLANDPAGINA
 H1TextElement: string = '[class="unive-wizard-accordion-panel_title unive-wizard-accordion-panel_title--active"]';
 H1Text: string = 'Buitenland';
-crossSellFirstDRVElement: string = 'unive-cross-sell-wizard-item:nth-child(1) > div';
-crossSellSecondDRVMetAnnuleringElement: string = 'unive-cross-sell-wizard-item:nth-child(2) > div';
+crossSellFirstDRVElement: string = 'unive-cross-sell-wizard-product:nth-child(1) > div';
+crossSellSecondDRVMetAnnuleringElement: string = 'unive-cross-sell-wizard-product:nth-child(2) > div';
 crossSellFirstDRVSubtitleTextElement: string = 'unive-cross-sell-wizard-item:nth-child(1) > div > div.cross-sell-wizard-item__content > div.cross-sell-wizard-item__top '
                                                + '> div.cross-sell-wizard-item__header > div.cross-sell-wizard-item__subtitle';
 crossSellSecondDRVMetAnnuleringSubtitleTextElement: string = 'unive-cross-sell-wizard-item:nth-child(2) > div > div.cross-sell-wizard-item__content > '

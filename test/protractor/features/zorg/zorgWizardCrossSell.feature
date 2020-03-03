@@ -46,6 +46,8 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I click on Volgende page one
+        Then validate step 2 is buitenland step and all elements are present
     
     Examples:
     |insuranceBasis|
