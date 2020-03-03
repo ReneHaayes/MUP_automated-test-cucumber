@@ -33,6 +33,21 @@ When(/^Customer selects (.*) polis with polis number: (.*)$/, async (polisStatus
   }
 });
 
+When(/^Customer goest to verzekeringskaarten for polis with polisnumber (.*)$/, async (polisNumber: string) => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
+  await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringsKaartenUrlClickElement);
+  // await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.verzekeringsKaartenWaitElement, 10000);
+});
+
+Then(/^Verify url for verzekeringskaarten contains the following (.*)$/, async (urlToVerify: string) => {
+  await browser.sleep(2500);
+  await browser.getAllWindowHandles().then(function (handles) {
+    browser.switchTo().window(handles[1]);
+  });
+  await genericMethods.verifyUrlContainsIgnoreCase('verzekeringskaarten');
+  await genericMethods.verifyUrlContainsIgnoreCase(urlToVerify);
+});
+
 When(/^Customer selects damage claim with damage number: (.*)$/, async (damageNumber: string) => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(damageNumber));
 });

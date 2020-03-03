@@ -7,8 +7,12 @@ export class MijnVerzekeringenElements {
 
   //VERZEKERINGSOVERZICHT
   polisDetailsClickElement(polisNumber: string): string {
-    return "[class='page-content__block__title'] [class='tile__link media'][href*='" + polisNumber + "']"
+    return "[data-accordion='insurances-overview'] [class='tile__link media'][href*='" + polisNumber + "']"
   }
+
+  //VERZEKERINGSKAARTEN
+  verzekeringsKaartenUrlClickElement: string = '[class="page-links"] [href*="verzekeringskaarten"]';
+  verzekeringsKaartenWaitElement: string = '[src*="verzekeringskaarten"]';
 
   //POLIS DETAILS
   polisNumberTextElement: string = '//*[contains(text(),"Polisnummer")]/following-sibling::div';
