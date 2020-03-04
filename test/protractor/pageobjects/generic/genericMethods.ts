@@ -183,6 +183,15 @@ export class GenericMethods {
     }
   }
 
+  async waitForElementIsPresentShadowRoot(selector: string, waitFor: number) {
+    try {
+      const selectorToWaitFor: ElementFinder = element(by.css_sr(selector));
+      await browser.wait(ec.presenceOf(selectorToWaitFor), waitFor);
+    } catch (e) {
+      throw new Error('Element with selector: ' + selector + ', is not visible');
+    }
+  }
+
   async waitForElementIsPresent(selector: string, waitFor: number) {
     try {
       const selectorToWaitFor: ElementFinder = element(by.css(selector));
