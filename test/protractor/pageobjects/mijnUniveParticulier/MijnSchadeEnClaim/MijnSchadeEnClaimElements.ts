@@ -10,6 +10,12 @@ export class MijnSchadeEnClaimElements {
     return '../../../' + filename
   }
 
+  //DAMAGE CLAIM
+  damageClaimSnelLinkClickElement: string = '[class="page-links"] > li:nth-child(1) > [class*="link"]';
+
+  damageClaimSelectSnelLinkPolisClickElement(polisNumber: string): string {
+    return '[class="tile__link media"][href*="' + polisNumber + '"]'
+  }
 
   //DAMAGE CLAIM STEP ONE
   damageClaimClickElement: string = '[href*="add-my-claim-by-policies"]';

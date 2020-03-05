@@ -184,6 +184,16 @@ Then(/^Verify damage claim with damage number (.*) is shown correctly$/, async (
   await genericMethods.verifyTextInElementWithXpath(mijnVerzekeringElements.damageNumberTextElement, damageNumber);
 });
 
+When(/^Customer selects schade melden snel link for polis with polis number (.*)$/, async (polisNumber: string) => {
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSnelLinkClickElement);
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSelectSnelLinkPolisClickElement(polisNumber));
+});
+
+Then(/^Verify correct schade melden form is loaded for polis polisnumber: (.*)$/, async (polisNumber: string) => {
+  await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimDateInputElement, browser.getPageTimeout);
+  await genericMethods.verifyUrlContainsIgnoreCase('mijnunive/schade/schade-melden?pnr=' + polisNumber);
+});
+
 Then(/^Verify insurance company (.*) and polis number (.*) is shown correctly$/, async (insuranceCompany: string, polisNumber: string) => {
   await genericMethods.verifyTextInElementWithXpath(mijnVerzekeringElements.polisNumberTextElement, polisNumber);
   await genericMethods.verifyTextInElementWithXpath(mijnVerzekeringElements.insuranceCompanyExternTextElement, insuranceCompany);
