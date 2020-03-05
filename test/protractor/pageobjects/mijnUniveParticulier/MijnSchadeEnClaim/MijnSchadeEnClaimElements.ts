@@ -10,11 +10,13 @@ export class MijnSchadeEnClaimElements {
     return '../../../' + filename
   }
 
-  //DAMAGE CLAIM
-  damageClaimSnelLinkClickElement: string = '[class="page-links"] > li:nth-child(1) > [class*="link"]';
+  //WIJZIGEN VERZEKERING
+  polisDetailsTitleTextElement: string = '[class="page-content__block__title"] > h1';
+  polisDetailsTitleText: string = 'Polisdetails';
+  wijzigenVerzekeringSnelLinkClickElement: string = '[class="page-links"] > li:nth-child(2) > [class*="link"]';
 
-  damageClaimSelectSnelLinkPolisClickElement(polisNumber: string): string {
-    return '[class="tile__link media"][href*="' + polisNumber + '"]'
+  wijzigenVerzekeringSelectSnelLinkPolisClickElement(polisNumber: string): string {
+    return '[class="modal-content__block"] [class="tile__link media"][href*="'+ polisNumber + '"][href*="polisdetails"]'
   }
 
   //DAMAGE CLAIM STEP ONE
