@@ -1,4 +1,4 @@
-import { genericMethods, zorgWizardElements, personaData } from "../../support";
+import { genericMethods, zorgWizardElements, personaData, zorgWizardCrossSellElements } from "../../support";
 import { pakkettenEnum, crossSellEnum, collectievenEnum, inkomstenDropdownEnum, eigenRisicoEnum } from "../enum/zorgEnum";
 import { gender } from "../enum/genericEnum";
 
@@ -599,5 +599,37 @@ export class ZorgWizardMethods {
     async getItemsPerApplicantInOpbouwPremieOverlay(applicantIndex: number, itemIndex: number) {
         return '((//div[@class="unive-summary__applicant"])['+ applicantIndex +
                                                      ']//div[@class="unive-summary-item__col"])['+ itemIndex +'"]';
+    }
+
+    async selectReisProduct(reisProduct: string){
+        if(reisProduct == crossSellEnum.DOORLOPENDEREISVERZEKERING){
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.crossSellFirstDRVElement);
+        }
+        else if(reisProduct == crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING){
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.crossSellSecondDRVMetAnnuleringElement);
+        }
+        else{
+            throw new Error('No correct basis insurance found for' + reisProduct);
+        }
+    }
+
+    async answerAcceptatieQuestions(verzekeringsVerleden: string, strafrechtelijkVerleden: string, schadeVerleden: string) {
+        //alle vragen met ja beantwoorden
+        if(verzekeringsVerleden == inkomstenDropdownEnum.JA && strafrechtelijkVerleden == inkomstenDropdownEnum.JA && schadeVerleden == inkomstenDropdownEnum.JA) {
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdVerzekeringsverledenJaRadioButton);
+            await genericMethods.typeText(zorgWizardCrossSellElements.bijnaVerzekerdVerzekeringsverledenToelichtingTextBox, zorgWizardCrossSellElements.bijnaVerzekerdVerklaringAlleVragenNaarWaarheidText);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenJaRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenCloseOverlayButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdSchadeverledenJaRadioButton);
+        }
+        //alle vragen met nee beantwoorden
+        else if(verzekeringsVerleden == inkomstenDropdownEnum.NEE && strafrechtelijkVerleden == inkomstenDropdownEnum.NEE && schadeVerleden == inkomstenDropdownEnum.NEE) {
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdVerzekeringsverledenNeeRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenNeeRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdSchadeverledenNeeRadioButton);
+        }
+        else {
+            throw new Error('There is no correct choice for acceptatievragen');
+        } 
     }
 }

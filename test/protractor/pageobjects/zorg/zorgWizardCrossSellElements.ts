@@ -42,6 +42,8 @@ buitenlandUwGegegevensUwBetaalgegevensText: string = 'Uw betaalgegevens';
 buitenlandUwGegevensUwBetaalgegevensTextElement: string = 'unive-fieldset:nth-child(5) > fieldset > legend';
 buitenlandUwGegevensInkomstenText: string = 'Inkomsten';
 buitenlandUwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(6) > fieldset > legend';
+buitenlandUwGegevensIngangsdatumDRVDateField: string = '[id="dateOfEntryCrossSell"]';
+buitenlandUwGegevensIngangsdatumDRV: string = '01-02-2021';
 
 //BIJNAVERZEKERD
 bijnaVerzekerdLegendAanvullendeVragenTextElement: string = 'unive-almost-insured-cross-sell > unive-fieldset > fieldset > legend';
@@ -58,11 +60,12 @@ bijnaVerzekerdVerzekeringsverledenNeeRadioButton: string = '#verzekeringsverlede
 bijnaVerzekerdVerzekeringsverledenToelichtingTextBox: string = '#verzekeringsverledenToelichting';
 bijnaVerzekerdStrafrechtelijkverledenJaRadioButton: string = '#strafrechtelijkverleden_true';
 bijnaVerzekerdStrafrechtelijkverledenNeeRadioButton: string = '#strafrechtelijkverleden_false';
-bijnaVerzekerdStrafrechtelijkeverledenOverlayH1TextElement: string = 'unive-almost-insured-cross-sell > unive-modal:nth-child(3) > div '
+bijnaVerzekerdStrafrechtelijkverledenOverlayH1TextElement: string = 'unive-almost-insured-cross-sell > unive-modal:nth-child(3) > div '
                                                                      + '> div.unive-modal__container > div > div.unive-modal__header > div';
+bijnaVerzekerdStrafrechtelijkverledenCloseOverlayButton: string = 'div > div.unive-modal__footer > button';
 bijnaVerzekerdSchadeverledenJaRadioButton: string = '#schadeverleden_true';
 bijnaVerzekerdSchadeverledenNeeRadioButton: string = '#schadeverleden_false';
-bijnaVerzekerdVoorlopigeDekkingTextElement: string = 'unive-almost-insured-text-cross-sell > div > p:nth-child(1) > strong';
+bijnaVerzekerdVoorlopigeDekkingTextElement: string = 'unive-almost-insured-text-cross-sell > div > p:nth-child(2) > strong';
 bijnaVerzekerdGeenVoorlopigeDekkingText: string = 'geen voorlopige dekking';
 bijnaVerzekerdVerklaringAlleVragenNaarWaarheidTextElement: string = 'unive-almost-insured-text-cross-sell > div > ul > li:nth-child(1)';
 bijnaVerzekerdVerklaringAlleVragenNaarWaarheidText: string = 'alle vragen naar waarheid heeft ingevuld';
@@ -81,6 +84,7 @@ bijnaVerzekerdTagline14DagenTextElement: string = 'unive-almost-insured-text > d
 //legends voor BSN en U bent bijna verzekerd komen uit zorgWizardElements
 
 //CONTROLEREN OVERLAY BIJNA VERZEKERD PAGINA
+overlayControlerenClickElement: string = 'unive-almost-insured-text > div > p:nth-child(1) > span > a';
 overlayControlerenH2TitelTextElement: string = 'unive-summary-cross-sell > div > h2';
 overlayControlerenH2TitelDRVAnnuleringText: string = 'Doorlopende reis- en annuleringsverzekering';
 overlayControlerenH2TitelDRVText: string = 'Doorlopende reisverzekering';
@@ -88,6 +92,7 @@ overlayControlerenDRVDekking1TextElement: string = 'unive-summary-cross-sell > d
 overlayControlerenDRVDekking2TextElement: string = 'unive-summary-cross-sell > div > div:nth-child(3) > unive-usp-list > div > ul > li:nth-child(2)';
 overlayControlerenDRVDekking3TextElement: string = 'unive-summary-cross-sell > div > div:nth-child(3) > unive-usp-list > div > ul > li:nth-child(3)';
 overlayControlerenDRVPremieTextElement: string = 'unive-summary-cross-sell > div > unive-summary-total > div > div:nth-child(1)';
+overlayControlerenCloseButtonClickElement: string = 'div > div.unive-modal__header > button';
 
 //BEDANKPAGINA
 bedankpaginaH1DRVTextElement: string = 'unive-cross-sell-confirmation > h1';
@@ -98,8 +103,8 @@ bedankpaginaIngangsdatumTextElement: string = 'unive-cross-sell-confirmation > o
 bedankpaginaIngangsdatumGelijkDRVText: string = 'Uw zorgverzekering en doorlopende reisverzekering gaan in op';
 bedankpaginaIngangsdatumGelijkDRVAnnuleringText: string = 'Uw zorgverzerzekering en doorlopende reis- en annuleringsverzekering gaan in op';
 bedankpaginaIngangsdatumOngelijkZorgText: string = 'Uw zorgverzekering gaat in op';
-bedankpaginaIngangsdatumOngelijkDRVText: string = 'Uw doorlopende reisverzekering gaat in op';
-bedankpaginaIngangsdatumOngelijkDRVAnnuleringText: string = 'Uw doorlopende reis- en annuleringsverzekering gaat in op';
+bedankpaginaIngangsdatumOngelijkDRVText: string = 'en uw doorlopende reisverzekering gaat in op';
+bedankpaginaIngangsdatumOngelijkDRVAnnuleringText: string = 'en uw doorlopende reis- en annuleringsverzekering gaat in op';
 bedankpaginaPolisTextElement: string = 'unive-cross-sell-confirmation > ol > li:nth-child(2) > div > p';
 bedankpaginaPolisText: string = 'U ontvangt uw zorg- en reispolis per mail. U kunt uw zorgpolis binnenkort ook inzien en '
                                 + 'downloaden via Mijn Univé Zorg. Uw reispolis kunt u inzien en downloaden via Mijn Univé.';

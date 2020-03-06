@@ -964,10 +964,82 @@ Then (/^there are only 3 unibols present$/, async() => {
 
 Then(/^validate that doorlopende reis crossSell is not visible$/, async () => {
     await browser.sleep(1000);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.bedanktCrossSellElement2, 250);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.bedanktCrossSellElement1, 5000);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.bedanktCrossSellElement2, 5000);
 });
 
 When(/^I click on Volgende Buitenland page$/, async () => {
     await genericMethods.clickOnElement(zorgWizardCrossSellElements.nextButtonClickElement);
+});
+
+When(/^adjust startdate of cross sell product$/, async () => {
+    await genericMethods.clearText(zorgWizardCrossSellElements.buitenlandUwGegevensIngangsdatumDRVDateField, 10);
+    await genericMethods.typeText(zorgWizardCrossSellElements.buitenlandUwGegevensIngangsdatumDRVDateField, zorgWizardCrossSellElements.buitenlandUwGegevensIngangsdatumDRV);
+});
+
+When (/^I select reisproduct with:$/, async(data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.selectReisProduct(
+        dataTable.reisProduct
+    );
+});
+
+When (/^I answer acceptatiequestions with:$/, async(data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.answerAcceptatieQuestions(
+        dataTable.verzekeringsVerleden,
+        dataTable.strafrechtelijkVerleden,
+        dataTable.schadeVerleden
+    );
+});
+
+When(/^I validate text geen voorlopige dekking is correct$/, async () => {
+    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 250);
+});
+
+When(/^I validate overlay controleren has correct zorg and DRV information$/, async () => {
+        //overlay openen
+        await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenClickElement);
+        //valideer zorg van hoofdverzekerde
+        await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+        pakkettenEnum.ZORGVRIJ);
+        await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+        eigenRisicoEnum.EigenRisico_385);
+        //valideer DRV hoofdverzekerde
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.overlayControlerenH2TitelTextElement, zorgWizardCrossSellElements.overlayControlerenH2TitelDRVText);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking1TextElement, 250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking2TextElement, 250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking3TextElement, 250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVPremieTextElement, 250);
+        //sluit overlay
+        await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
+});
+
+Then(/^validate all elements for zorg and (.*) are correct$/, async (reisProduct: string) => { 
+    //Valideer header
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaH1DRVTextElement, zorgWizardCrossSellElements.bedankpaginaH1DRVText);
+    //valideer DRV teksten op bedankpagina
+    if(reisProduct == crossSellEnum.DOORLOPENDEREISVERZEKERING) {
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelZorgverzekeringTextElement, crossSellEnum.ZORGVERZEKERING);
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelDRVTextElement, crossSellEnum.DOORLOPENDEREISVERZEKERING);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumOngelijkZorgText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumOngelijkDRVText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPolisTextElement, zorgWizardCrossSellElements.bedankpaginaPolisText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPremieTextElement, zorgWizardCrossSellElements.bedankpaginaPremieText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.ZORGVERZEKERING, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.DOORLOPENDEREISVERZEKERING, 250);
+    }
+    //valideer DRV met annulering teksten op bedankpagina
+    else if(reisProduct == crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING) {
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelZorgverzekeringTextElement, crossSellEnum.ZORGVERZEKERING);
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelDRVTextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumGelijkDRVAnnuleringText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPolisTextElement, zorgWizardCrossSellElements.bedankpaginaPolisText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPremieTextElement, zorgWizardCrossSellElements.bedankpaginaPremieText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.ZORGVERZEKERING, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING, 250);
+    }
+    else {
+        throw new Error('There is no correct choice for' + reisProduct);
+    } 
 });

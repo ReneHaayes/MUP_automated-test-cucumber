@@ -68,8 +68,8 @@ Feature: Check cross sell op stap 2 en op bedankpagina
     |insuranceBasis|
     |Zorg Vrij     |
 
-    @buitenlandStap1
-    Scenario Outline: check of buitenland stap wordt getoond en alle elementen aanwezig zijn bij binnenkomst met cs=1 parameter
+    @buitenlandStap
+    Scenario Outline: check of geen cross sell op bedankpagina wordt getoond wanneer er in de wizard geen product wordt geselecteerd op buitenland stap
     Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
     And I select basic insurance no collective with:
     |insuranceBasis|<insuranceBasis>|
@@ -87,20 +87,37 @@ Feature: Check cross sell op stap 2 en op bedankpagina
     And validate that bedanktpagina and all elements are correct with <persona>
     
     Examples:
-    |insuranceBasis|reisProduct                |persona|inkomstenNietNL|inkomstenNL|
-    |Zorg Vrij     |doorlopende reisverzekering|ronaldo|Nee            |           |
+    |insuranceBasis|persona|inkomstenNietNL|inkomstenNL|
+    |Zorg Vrij     |ronaldo|Nee            |           |
 
-    @buitenlandStap342434636
-    Scenario Outline: check of buitenland stap wordt getoond en alle elementen aanwezig zijn bij binnenkomst met cs=1 parameter
+    @buitenlandStap
+    Scenario Outline: check of DRV met annulering op buitenland stap goed gaat door de hele front-end
     Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
     And I select basic insurance no collective with:
     |insuranceBasis|<insuranceBasis>|
     And I click on Volgende page one
     When I select reisproduct with:
     |reisProduct|<reisProduct>|
-    And I click on Volgende buitenlandstep
-    Then 
+    And I click on Volgende Buitenland page
+    And I select geen verzekering overstapreden in dropdown
+    And adjust startdate of cross sell product
+    And I enter personal data on step 2 of wizard with <persona>
+    And I answer inkomstenvragen with:
+    |inkomstenNietNL|<inkomstenNietNL>|
+    |inkomstenNL    |<inkomstenNL>    |
+    And I click on Volgende page two
+    And I answer acceptatiequestions with:
+    |verzekeringsVerleden   |<verzekeringsVerleden>   |
+    |strafrechtelijkVerleden|<strafrechtelijkVerleden>|
+    |schadeVerleden         |<schadeVerleden>         |
+    And I enter BSN on step 3 with <persona>
+    And I validate text geen voorlopige dekking is correct
+    And I validate overlay controleren has correct zorg and DRV information
+    And I click on bevestigen step 3 without bedankpagina check
+    Then validate that doorlopende reis crossSell is not visible
+    And validate all elements for zorg and <reisProduct> are correct
+    And validate that bedanktpagina and all elements are correct with <persona>
     
     Examples:
-    |insuranceBasis|reisProduct                |
-    |Zorg Vrij     |doorlopende reisverzekering|
+    |insuranceBasis|reisProduct                |persona|inkomstenNietNL|inkomstenNL|verzekeringsVerleden|strafrechtelijkVerleden|schadeVerleden|
+    |Zorg Vrij     |doorlopende reisverzekering|ronaldo|Nee            |           |Ja                  |Ja                     |Ja            |
