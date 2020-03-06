@@ -267,16 +267,18 @@ spinnerButtonClickElement: string = '[class="button--spinner"]';
 bijnaVerzekerdControlerenClickElement: string = 'p:nth-child(1) > span > a';
 
 //ZORGWIZARD BEDANKPAGINA
-bedanktCrossSellElement1: string = '[class="cross-sell-item"]';
-bedanktCrossSellItem1TitleH3TextElement: string = 'unive-cross-sell-item:nth-child(3) > div > div.cross-sell-item__content > h3';
-bedanktCrossSellItem1SubtitleTextElement: string = 'unive-cross-sell-item:nth-child(3) > div > div.cross-sell-item__content > span';
+bedanktCrossSellElement1: string = 'unive-cross-sell > unive-cross-sell-product:nth-child(3) > div';
+bedanktCrossSellItem1TitleH3TextElement: string = 'unive-cross-sell-product:nth-child(3) > div > div.cross-sell-item__content > h3';
+bedanktCrossSellItem1SubtitleTextElement: string = 'unive-cross-sell-product:nth-child(3) > div > div.cross-sell-item__content > span';
 bedanktCrossSellElement2: string = '[class="cross-sell-item cross-sell-item--reverse"]';
-bedanktCrossSellItem2TitleH3TextElement: string = 'unive-cross-sell-item:nth-child(4) > div > div.cross-sell-item__content > h3';
-bedanktCrossSellItem2SubtitleTextElement: string = 'unive-cross-sell-item:nth-child(4) > div > div.cross-sell-item__content > span';
+bedanktCrossSellItem2TitleH3TextElement: string = 'unive-cross-sell-product:nth-child(4) > div > div.cross-sell-item__content > h3';
+bedanktCrossSellItem2SubtitleTextElement: string = 'unive-cross-sell-product:nth-child(4) > div > div.cross-sell-item__content > span';
 bedanktCrossSellItem1USP1TextElement: string = 'unive-usp-list > div > ul > li:nth-child(1)';
 bedanktCrossSellItem1USP2TextElement: string = 'unive-usp-list > div > ul > li:nth-child(2)';
 bedanktPaginaCustomerNameTextElement: string = 'div:nth-child(2) > h2';
 bedanktMijnUniveZorgClickElement: string = 'li:nth-child(2) > div > p > a';
+bedanktCrossSellItem1TitleH3Text: string = 'Doorlopende reisverzekering'; 
+bedanktCrossSellitem2TitleH3Text: string = 'Doorlopende reis- en annuleringsverzekering'; 
 
 //FLOATINGBUTTON
 floatingButtonClickElement: string = 'body > div.floatingButton > a';

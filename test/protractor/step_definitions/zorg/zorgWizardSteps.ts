@@ -142,10 +142,10 @@ When(/^I click on bevestigen step 3 without bedankpagina check$/, async () => {
 Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {
     await browser.sleep(1000);  
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
-    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement, crossSellEnum.DOORLOPENDEREISVERZEKERING);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement, zorgWizardElements.bedanktCrossSellItem1TitleH3Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement2, 250);
-    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem2TitleH3TextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING);
+    await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem2TitleH3TextElement, zorgWizardElements.bedanktCrossSellitem2TitleH3Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem2SubtitleTextElement, crossSellEnum.VOORUZELF);
 });
 
@@ -943,7 +943,7 @@ When (/^I delete child under 18$/, async() => {
 });
 
 
-//Cross sell in wizard steps hieronder
+//CrossSellInWizard steps hieronder
 
 Then (/^validate step 2 is buitenland step and all elements are present$/, async() => {
     await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapEenElement, 250);
@@ -954,3 +954,11 @@ Then (/^validate step 2 is buitenland step and all elements are present$/, async
     await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.crossSellFirstDRVElement, 250);
     await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.crossSellSecondDRVMetAnnuleringElement, 250);
 });
+
+Then (/^there are only 3 unibols present$/, async() => {
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapEenElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapTweeElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapDrieElement, 250);
+    await genericMethods.waitForElementNotVisible(zorgWizardCrossSellElements.unibolStapVierElement, 250);
+});
+

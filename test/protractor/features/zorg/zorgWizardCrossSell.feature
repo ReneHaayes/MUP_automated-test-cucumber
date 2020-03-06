@@ -8,6 +8,7 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -41,13 +42,27 @@ Feature: Check of na het doorlopen van de wizard de 4 verschillende crossSell op
         |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
         |ronaldo|Ja             |Ja         |Zorg Vrij     |
     
-    @crossSellInWizard
-    Scenario Outline: doorlopen van de wizard en cross sell bijsluiten vanuit de wizard
+    @buitenlandStap
+    Scenario Outline: check of buitenland stap wordt getoond en alle elementen aanwezig zijn bij binnenkomst met cs=1 parameter
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
         And I click on Volgende page one
         Then validate step 2 is buitenland step and all elements are present
+    
+    Examples:
+    |insuranceBasis|
+    |Zorg Vrij     |
+
+    @buitenlandStap
+    Scenario Outline: doorlopen van de wizard en cross sell bijsluiten vanuit de wizard
+    Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
+    When I select basic insurance no collective with:
+    |insuranceBasis|<insuranceBasis>|
+    And I select Aanvullend Beter
+    And I click on Volgende page one
+    Then I validate that all legends are visible on step 2
+    And there are only 3 unibols present
     
     Examples:
     |insuranceBasis|
