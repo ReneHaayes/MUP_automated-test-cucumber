@@ -994,7 +994,7 @@ When (/^I answer acceptatiequestions with:$/, async(data) => {
 });
 
 When(/^I validate text geen voorlopige dekking is correct$/, async () => {
-    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 250);
+    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 250);
 });
 
 When(/^I validate overlay controleren has correct zorg and DRV information$/, async () => {
@@ -1011,6 +1011,8 @@ When(/^I validate overlay controleren has correct zorg and DRV information$/, as
         await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking2TextElement, 250);
         await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking3TextElement, 250);
         await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVPremieTextElement, 250);
+        //valideer tekst GEEN voorlopige dekking
+        //NOG TOEVOEGEN
         //sluit overlay
         await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
 });
@@ -1042,4 +1044,29 @@ Then(/^validate all elements for zorg and (.*) are correct$/, async (reisProduct
     else {
         throw new Error('There is no correct choice for' + reisProduct);
     } 
+});
+
+When(/^I validate text voorlopige dekking is correct$/, async () => {
+    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 250);
+    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingDRVText, 250);
+});
+
+When(/^I validate overlay controleren has correct zorg and DRV met annulering information$/, async () => {
+    //overlay openen
+    await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenClickElement);
+    //valideer zorg van hoofdverzekerde
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+    pakkettenEnum.ZORGVRIJ);
+    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+    eigenRisicoEnum.EigenRisico_385);
+    //valideer DRV hoofdverzekerde
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.overlayControlerenH2TitelTextElement, zorgWizardCrossSellElements.overlayControlerenH2TitelDRVAnnuleringText);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking1TextElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking2TextElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking3TextElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVPremieTextElement, 250);
+    //valideer tekst voorlopige dekking
+    //NOGTOEVOEGEN
+    //sluit overlay
+    await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
 });

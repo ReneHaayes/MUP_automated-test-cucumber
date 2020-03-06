@@ -67,3 +67,9 @@ export enum eigenRisicoEnum {
     EigenRisico_785 = '785',
     EigenRisico_885 = '885',
 }
+
+export enum verzekerdenEnum {
+    UZELF = 'uzelf',
+    UZELFPARTNER = 'voor uzelf en uw partner',
+    UZELFPARTNERKINDEREN = 'voor uzelf, uw partner en uw kind(eren)'
+}
