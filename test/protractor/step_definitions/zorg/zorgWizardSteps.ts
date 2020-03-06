@@ -962,3 +962,12 @@ Then (/^there are only 3 unibols present$/, async() => {
     await genericMethods.waitForElementNotVisible(zorgWizardCrossSellElements.unibolStapVierElement, 250);
 });
 
+Then(/^validate that doorlopende reis crossSell is not visible$/, async () => {
+    await browser.sleep(1000);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.bedanktCrossSellElement2, 250);
+});
+
+When(/^I click on Volgende Buitenland page$/, async () => {
+    await genericMethods.clickOnElement(zorgWizardCrossSellElements.nextButtonClickElement);
+});

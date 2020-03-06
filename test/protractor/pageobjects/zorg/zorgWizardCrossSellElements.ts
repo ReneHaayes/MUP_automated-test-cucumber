@@ -26,6 +26,7 @@ crossSellFirstSubtitleTextElement: string = 'unive-cross-sell-wizard-product:nth
 crossSellSecondSubtitleTextElement: string = 'unive-cross-sell-wizard-product:nth-child(2) > div > div.cross-sell-wizard-item__content > div.cross-sell-wizard-item__top > '
                                             + 'div.cross-sell-wizard-item__header > div.cross-sell-wizard-item__subtitle';            
 vorigeButtonClickElement: string = 'button.button.button--plain.button--back';
+nextButtonClickElement: string = 'unive-form-button > div > button.button.button--primary';
 
 //UWGEGEVENS
 buitenlandUwGegevensVerzekeringsVerledenText: string = 'Verzekeringsverleden';
