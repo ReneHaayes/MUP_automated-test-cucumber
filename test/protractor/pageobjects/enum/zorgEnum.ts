@@ -42,6 +42,8 @@ export enum crossSellEnum {
     AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
     RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
     VOORUZELF = 'voor uzelf',
+    VOORUZELFPARTNER = 'voor uzelf en uw partner',
+    VOORUZELFPARTNERKINDEREN = 'voor uzelf, uw partner en uw kind(eren)',
     USP1RECHTSBIJSTAND = 'Verkeer',
     USP2RECHTSBIJSTAND = 'Vrije keuze van rechtshulpverlener (€ 3500)',
     USP1ONGEVALLEN = 'Blijvende invaliditeit (€ 75.000)',
@@ -66,10 +68,4 @@ export enum eigenRisicoEnum {
     EigenRisico_685 = '685',
     EigenRisico_785 = '785',
     EigenRisico_885 = '885',
-}
-
-export enum verzekerdenEnum {
-    UZELF = 'uzelf',
-    UZELFPARTNER = 'voor uzelf en uw partner',
-    UZELFPARTNERKINDEREN = 'voor uzelf, uw partner en uw kind(eren)'
 }

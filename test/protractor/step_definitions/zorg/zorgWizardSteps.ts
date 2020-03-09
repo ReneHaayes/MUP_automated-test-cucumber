@@ -1071,3 +1071,9 @@ When(/^I validate overlay controleren has correct zorg and DRV met annulering in
     //sluit overlay
     await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
 });
+
+Then(/^validate that subtitles show correct label on buitenlandpagina$/, async () => {
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.crossSellFirstSubtitleTextElement, crossSellEnum.VOORUZELFPARTNER);
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.crossSellSecondSubtitleTextElement, crossSellEnum.VOORUZELFPARTNER)
+});
+
