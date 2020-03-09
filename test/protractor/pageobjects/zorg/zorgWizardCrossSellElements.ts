@@ -95,6 +95,8 @@ overlayControlerenDRVDekking1TextElement: string = 'unive-summary-cross-sell > d
 overlayControlerenDRVDekking2TextElement: string = 'unive-summary-cross-sell > div > div:nth-child(3) > unive-usp-list > div > ul > li:nth-child(2)';
 overlayControlerenDRVDekking3TextElement: string = 'unive-summary-cross-sell > div > div:nth-child(3) > unive-usp-list > div > ul > li:nth-child(3)';
 overlayControlerenDRVPremieTextElement: string = 'unive-summary-cross-sell > div > unive-summary-total > div > div:nth-child(1)';
+overlayControlerenDRVGeenVoorlopigeDekkingTextElement: string = 'unive-summary > unive-almost-insured-text > div > unive-almost-insured-text-cross-sell > div > p:nth-child(2) > strong';
+overlayControlerenDRVVoorlopigeDekkingTextElement: string = 'unive-summary > unive-almost-insured-text > div > unive-almost-insured-text-cross-sell > div > p:nth-child(1) > strong';
 overlayControlerenCloseButtonClickElement: string = 'div > div.unive-modal__header > button';
 
 //BEDANKPAGINA
