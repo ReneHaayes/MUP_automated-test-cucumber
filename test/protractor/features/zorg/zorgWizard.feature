@@ -88,7 +88,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on Volgende page two
         And I validate that all legends are visible on step 3
         And I enter BSN on step 3 with <persona>
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         Then validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
@@ -329,7 +329,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |inkomstenNietNL|<inkomstenNietNL>|
         And I click on Volgende page two
         Then validate that BSN field is not visible on step 3
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         And validate that bedanktpagina and all elements are correct with <persona>
 
 
@@ -353,7 +353,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And delete partner
         And I add a partner step 1 and 3 with <persona4>
         Then validate that BSN field is not visible on step 3
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         And validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
@@ -373,7 +373,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
         And I click on Volgende page two
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         And validate that bedanktpagina and all elements are correct with <persona>
         
         Examples:
@@ -432,7 +432,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |count   |<count>   |
         |persona2|<persona2>|        
         And I click on Volgende page two
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         Then validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
