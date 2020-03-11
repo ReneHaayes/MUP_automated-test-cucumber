@@ -15,6 +15,7 @@ import {ApiElements} from "../pageobjects/api/apiElements";
 import {HmPageElements} from "../pageobjects/generic/hmPageElements";
 import {KlantenserviceVraagstellenMethods} from "../pageobjects/Klantenservice/KlantenserviceVraagstellenMethods";
 import {PopulaireProductenElements} from "../pageobjects/mijnUniveParticulier/verzekeringBijsluiten/populaireProductenElements";
+import {NbaElements} from "../pageobjects/mijnUniveParticulier/nba/nbaElements";
 
 export const mijnVerzekeringElements: MijnVerzekeringenElements = new MijnVerzekeringenElements();
 export const mijnVerzekeringenElements: MijnVerzekeringenElements = new MijnVerzekeringenElements();
@@ -34,3 +35,4 @@ export const mijnSchadeEnClaimElements: MijnSchadeEnClaimElements = new MijnScha
 export const apiElements: ApiElements = new ApiElements();
 export const hmPageElements: HmPageElements = new HmPageElements();
 export const populaireProductenElements: PopulaireProductenElements = new PopulaireProductenElements();
+export const nbaElements: NbaElements = new NbaElements();

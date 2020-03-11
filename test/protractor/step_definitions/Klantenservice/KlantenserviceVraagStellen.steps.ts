@@ -1,6 +1,9 @@
 import {When, Then} from 'cucumber';
-import {genericMethods, klantenserviceVraagStellenElements, klantenserviceVraagstellenMethods} from "@support";
+import {
+  genericMethods, klantenserviceVraagStellenElements, klantenserviceVraagstellenMethods, loginPageElements
+} from "@support";
 import {browser} from "protractor";
+import {homePageEnum} from "../../pageobjects/enum/woonVerzekeringEnum";
 
 When(/^Customer fills in form for schadeverzekeringen vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
@@ -9,7 +12,17 @@ When(/^Customer fills in form for schadeverzekeringen vraag stellen$/, async () 
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 
-When(/^Customer wait 2 minutes and fills in form for schadeverzekeringen vraag stellen$/,{timeout: 200000}, async () => {
+Then(/^Customer navigates to vraagstellen page for schadeverzekeringen and fills in correctly with prefill$/, async () => {
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await genericMethods.goToPage(homePageEnum.VRAAGSTELLEN);
+  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
+  await genericMethods.verifyUrlContainsIgnoreCase(homePageEnum.VRAAGSTELLEN);
+  await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag of opmerking');
+  await klantenserviceVraagstellenMethods.verifyValuesForPrefillVraagstellenForm();
+  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
+});
+
+When(/^Customer wait 2 minutes and fills in form for schadeverzekeringen vraag stellen$/, {timeout: 200000}, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
   await browser.sleep(125000);
   await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag');
@@ -24,7 +37,7 @@ When(/^Customer wait 2 minutes and fills in form for schadeverzekeringen vraag s
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 
-When(/^Customer fills in form for schadeverzekeringen vraag stellen and double clicks on button$/,async () => {
+When(/^Customer fills in form for schadeverzekeringen vraag stellen and double clicks on button$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
   await genericMethods.typeText(klantenserviceVraagStellenElements.uwVraagOfOpmerkingInputElements, 'Vraag');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.bentUKlantBijUniveJaPrive);
@@ -126,6 +139,16 @@ When(/^Customer fills in form for overig vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.overigGeslachtMan);
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenGeboortedatumInputElement, '01-01-1990');
   await genericMethods.typeText(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'infoo@univee.nl');
+  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
+});
+
+Then(/^Customer navigates to vraagstellen page for overig and fills in correctly with prefill$/, async () => {
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await genericMethods.goToPage(homePageEnum.VRAAGSTELLEN);
+  await genericMethods.clickOnElement(klantenserviceVraagStellenElements.overigButtonClickElement);
+  await genericMethods.verifyUrlContainsIgnoreCase(homePageEnum.VRAAGSTELLEN);
+  await genericMethods.typeText(klantenserviceVraagStellenElements.overigVraagOfOpmerkingInputElement, 'Vraag of opmerking');
+  await klantenserviceVraagstellenMethods.verifyValuesForPrefillVraagstellenForm();
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
 

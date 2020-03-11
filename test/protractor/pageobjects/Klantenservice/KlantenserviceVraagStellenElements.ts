@@ -89,6 +89,10 @@ export class KlantenserviceVraagStellenElements {
     vraagStellenPostcodeInputElement = '[name="personal_data__obm.zipcode"]';
     vraagStellenHuisnummerInputElement = '[name="personal_data__houseNumber"]';
     vraagStellenEMailAdresInputElement = '[name="personal_data__email"]';
+    vraagStellenStraatNaamInputElement = '[name="personal_data__street"]';
+    vraagStellenPlaatsInputElement = '[name="personal_data__city"]';
+    vraagstellenTelefoonnummerInputElement = '[name="personal_data__phonenumber"]';
+    vraagStellenClientNummerInputElement = '[name="personal_data__clientNumber"]';
 
     // Input Elements overig
     overigVraagOfOpmerkingInputElement = '[name="others__question"]';
