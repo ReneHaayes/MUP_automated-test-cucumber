@@ -80,6 +80,7 @@ export class GenericElements {
   schade: string = 'schade';
   schadeService: string = 'schadeservice';
   winkelzoeker: string = 'contact/zoek-winkel';
+  winkelDetails: string = 'mijnunive/winkel-details';
   pensioen: string = 'pensioen/';
 
   faqPageWatIsEenWaAutoVerzekering: string = 'faq/autoverzekering/wat-is-een-wa-autoverzekering';

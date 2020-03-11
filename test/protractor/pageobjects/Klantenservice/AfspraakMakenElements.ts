@@ -25,4 +25,7 @@ export class AfspraakMakenElements {
   confirmationTextElement: string = '[class="eforms-container"] > p';
   confirmationText: string = 'Hartelijk dank';
 
+  //AFSPRAAK MAKEN MIJN UNIVE
+  afspraakMakenWinkelDetailClickElement = '[class="page-content__block"] [class="button"]';
+
 }

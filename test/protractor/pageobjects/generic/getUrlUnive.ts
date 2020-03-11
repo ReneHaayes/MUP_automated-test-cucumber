@@ -172,6 +172,9 @@ export class GetUrlUnive {
       case homePageEnum.WINKELZOEKER: {
         return this.getEnv(browser.params.env.environment) + genericElements.winkelzoeker;
       }
+      case homePageEnum.WINKELDETAILS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.winkelDetails;
+      }
       case homePageEnum.ZIPCODE_PLACE: {
         return this.getEnv(browser.params.env.environment) + genericElements.zipcodePlaceZoeken;
       }
