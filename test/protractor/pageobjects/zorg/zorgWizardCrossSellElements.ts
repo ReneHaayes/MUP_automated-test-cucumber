@@ -44,6 +44,9 @@ buitenlandUwGegevensInkomstenText: string = 'Inkomsten';
 buitenlandUwGegevensInkomstenTextElement: string = 'unive-fieldset:nth-child(6) > fieldset > legend';
 buitenlandUwGegevensIngangsdatumDRVDateField: string = '[id="dateOfEntryCrossSell"]';
 buitenlandUwGegevensIngangsdatumDRV: string = '01-02-2021';
+buitenlandUwGegevensPopupIngangsdatumDRVH2TextElement: string = 'div.unive-modal__container > div > div.unive-modal__header > div > h2';
+buitenlandUwGegevensPopupIngangsdatumDRVH2Text: string = 'Ingangsdatum';
+buitenlandUwGegevensPopupCloseButtonClickElement: string = 'div.unive-modal__container > div > div.unive-modal__header > button';
 
 //BIJNAVERZEKERD
 bijnaVerzekerdLegendAanvullendeVragenTextElement: string = 'unive-almost-insured-cross-sell > unive-fieldset > fieldset > legend';

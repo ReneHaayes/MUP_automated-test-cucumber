@@ -131,7 +131,7 @@ When(/^I enter BSN on step 3 with (.*)$/, async (persona: string) => {
 
 When(/^I click on bevestigen step 3$/, async () => {  
     await genericMethods.clickOnElement(zorgWizardElements.uwGegevensVolgendeSubmitButtonClickElement);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 2500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 25000);
     await genericMethods.waitForElementClickable(zorgWizardElements.bedanktMijnUniveZorgClickElement, 15000);
 });
 
@@ -140,8 +140,8 @@ When(/^I click on bevestigen step 3 without bedankpagina check$/, async () => {
 });
 
 Then(/^validate that doorlopende reis crossSell is visible and shows correct data$/, async () => {
-    await browser.sleep(1000);  
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 250);
+    await browser.sleep(2500);  
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement1, 2500);
     await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1TitleH3TextElement, zorgWizardElements.bedanktCrossSellItem1TitleH3Text);
     await genericMethods.verifyTextInElement(zorgWizardElements.bedanktCrossSellItem1SubtitleTextElement, crossSellEnum.VOORUZELF);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktCrossSellElement2, 250);
@@ -946,7 +946,7 @@ When (/^I delete child under 18$/, async() => {
 //CrossSellInWizard steps hieronder
 
 Then (/^validate step 2 is buitenland step and all elements are present$/, async() => {
-    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapEenElement, 250);
+    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapEenElement, 2500);
     await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapTweeElement, 250);
     await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapDrieElement, 250);
     await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.unibolStapVierElement, 250);
@@ -1074,6 +1074,12 @@ When(/^I validate overlay controleren has correct zorg and DRV met annulering in
 
 Then(/^validate that subtitles show correct label on buitenlandpagina$/, async () => {
     await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.crossSellFirstSubtitleTextElement, crossSellEnum.VOORUZELFPARTNER);
-    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.crossSellSecondSubtitleTextElement, crossSellEnum.VOORUZELFPARTNER)
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.crossSellSecondSubtitleTextElement, crossSellEnum.VOORUZELFPARTNER);
+});
+
+When(/^I validate and close pop-up DRV ingangsdatum$/, async () => {
+    await browser.sleep(1000);
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.buitenlandUwGegevensPopupIngangsdatumDRVH2TextElement, zorgWizardCrossSellElements.buitenlandUwGegevensPopupIngangsdatumDRVH2Text);
+    await genericMethods.clickOnElement(zorgWizardCrossSellElements.buitenlandUwGegevensPopupCloseButtonClickElement);
 });
 
