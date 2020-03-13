@@ -101,6 +101,9 @@ export class PersonaData {
   erichters: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Evers', '01', '01', '1937', 'Delfzijl', '9934LP',
     '6', houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'eversrichters@ziggo.nl', '7671', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
+  knoppers: Persona = new Persona('Anton', 'AO', prefix.NO_PREFIX, 'Knoppers', '13', '12', '1952', 'Appingedam', '99002CM', '7',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'antonknoppers@kpnmail.nl',
+    'NL09RABO0313083398', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   testvrouwCustomerRecognition: Persona = new Persona('Zappie', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1972', 'Amsterdam', '1012NX', '1',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0592444523', specificIdentification.PASSPORT, 'ACP26N', 'zz@top.nl',
     'NL49ANDL0687747724', '232099765', 'dolfijnentrainer', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
@@ -155,6 +158,9 @@ export class PersonaData {
       }
       case personaName.ERICHTERS: {
         return this.erichters.zipCode;
+      }
+      case personaName.KNOPPERS: {
+        return this.knoppers.zipCode;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
         return this.testvrouwCustomerRecognition.zipCode;
@@ -233,6 +239,9 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.birthDay;
       }
+      case personaName.KNOPPERS: {
+        return this.knoppers.birthDay;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -293,6 +302,9 @@ export class PersonaData {
       case personaName.ERICHTERS: {
         return this.erichters.birthMonth;
       }
+      case personaName.KNOPPERS: {
+        return this.knoppers.birthMonth;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -302,6 +314,9 @@ export class PersonaData {
 
   getPersonaBirthYear(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.birthYear;
+      }
       case personaName.ILLING: {
         return this.illing.birthYear;
       }
@@ -362,6 +377,9 @@ export class PersonaData {
 
   getPersonaBirthDate(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.birthDay + '-' + this.knoppers.birthMonth + '-' + this.knoppers.birthYear;
+      }
       case personaName.ILLING: {
         return this.illing.birthDay + '-' + this.illing.birthMonth + '-' + this.illing.birthYear;
       }
@@ -422,6 +440,9 @@ export class PersonaData {
 
   getPersonaLastName(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.lastName;
+      }
       case personaName.ILLING: {
         return this.illing.lastName;
       }
@@ -481,6 +502,9 @@ export class PersonaData {
 
   getPersonaFirstName(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.firstName;
+      }
       case personaName.ILLING: {
         return this.illing.firstName;
       }
@@ -541,6 +565,9 @@ export class PersonaData {
 
   getPersonaGender(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.gender;
+      }
       case personaName.ILLING: {
         return this.illing.gender;
       }
@@ -601,6 +628,9 @@ export class PersonaData {
 
   getPersonaInitials(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.initials;
+      }
       case personaName.ILLING: {
         return this.illing.initials;
       }
@@ -660,6 +690,9 @@ export class PersonaData {
 
   getPersonaPrefix(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.prefix;
+      }
       case personaName.ILLING: {
         return this.illing.prefix;
       }
@@ -719,6 +752,9 @@ export class PersonaData {
 
   getPersonaBirthPlace(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.birthPlace;
+      }
       case personaName.ILLING: {
         return this.illing.birthPlace;
       }
@@ -778,6 +814,9 @@ export class PersonaData {
 
   getPersonaHouseNumber(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.houseNumber;
+      }
       case personaName.ILLING: {
         return this.illing.houseNumber;
       }
@@ -837,6 +876,9 @@ export class PersonaData {
 
   getPersonaHouseNumberAddition(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.houseNumberAddition;
+      }
       case personaName.ILLING: {
         return this.illing.houseNumberAddition;
       }
@@ -896,6 +938,9 @@ export class PersonaData {
 
   getPersonaPhoneNumber(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.phoneNumber;
+      }
       case personaName.ILLING: {
         return this.illing.phoneNumber;
       }
@@ -955,6 +1000,9 @@ export class PersonaData {
 
   getPersonaSpecificIdentification(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.specificIdentification;
+      }
       case personaName.ILLING: {
         return this.illing.specificIdentification;
       }
@@ -1014,6 +1062,9 @@ export class PersonaData {
 
   getPersonaSpecificIdentificationNumber(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.specificIdentificationNumber;
+      }
       case personaName.ILLING: {
         return this.illing.specificIdentificationNumber;
       }
@@ -1073,6 +1124,9 @@ export class PersonaData {
 
   getPersonaEmailAddress(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.eMailAddress;
+      }
       case personaName.ILLING: {
         return this.illing.eMailAddress;
       }
@@ -1132,6 +1186,9 @@ export class PersonaData {
 
   getPersonaAccountNumber(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.accountNumber;
+      }
       case personaName.ILLING: {
         return this.illing.accountNumber;
       }
@@ -1191,6 +1248,9 @@ export class PersonaData {
 
   getPersonaBsn(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.bsn;
+      }
       case personaName.ILLING: {
         return this.illing.bsn;
       }
@@ -1250,6 +1310,9 @@ export class PersonaData {
 
   getPersonaProfession(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.profession;
+      }
       case personaName.ILLING: {
         return this.illing.profession;
       }
@@ -1309,6 +1372,9 @@ export class PersonaData {
 
   getPersonaKvkNumber(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.kvkNumber;
+      }
       case personaName.ILLING: {
         return this.illing.kvkNumber;
       }
@@ -1368,6 +1434,9 @@ export class PersonaData {
 
   getPersonaDurationEntrepreneur(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.durationEntrepreneur;
+      }
       case personaName.ILLING: {
         return this.illing.durationEntrepreneur;
       }
@@ -1427,6 +1496,9 @@ export class PersonaData {
 
   getPersonaHeight(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.height;
+      }
       case personaName.ILLING: {
         return this.illing.height;
       }
@@ -1486,6 +1558,9 @@ export class PersonaData {
 
   getPersonaWeight(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.weight;
+      }
       case personaName.ILLING: {
         return this.illing.weight;
       }
@@ -1545,6 +1620,9 @@ export class PersonaData {
 
   getPersonaPassword(input: string): string {
     switch (input) {
+      case personaName.KNOPPERS: {
+        return this.knoppers.password;
+      }
       case personaName.ILLING: {
         return this.illing.password;
       }

@@ -11,7 +11,7 @@ Feature: Making sure the 'vraag stellen beslisboom' is functioning by filling in
     Given I am on the vraagStellen page of the Unive website
     When Customer fills in form for zorgverzekeringen vraag stellen
     Then Verify question is accepted with a confirmation text
-  
+
   Scenario: Verify form 'Levensverzekeringen' on vraagstellen page
     Given I am on the vraagStellen page of the Unive website
     When Customer fills in form for levensverzekeringen vraag stellen
@@ -35,4 +35,14 @@ Feature: Making sure the 'vraag stellen beslisboom' is functioning by filling in
   Scenario: Verify form 'Overig' on vraagstellen page
     Given I am on the vraagStellen page of the Unive website
     When Customer fills in form for overig vraag stellen
+    Then Verify question is accepted with a confirmation text
+
+  Scenario: Verify form 'Overig' on vraagstellen page is prefilled when logged in with user.
+    Given Customer illing is logged in on the mijn unive particulier page of the Unive website
+    When Customer navigates to vraagstellen page for overig and fills in correctly with prefill
+    Then Verify question is accepted with a confirmation text
+
+  Scenario: Verify form 'Schadeverzekeringen' on vraagstellen page is prefilled when logged in with user.
+    Given Customer illing is logged in on the mijn unive particulier page of the Unive website
+    When Customer navigates to vraagstellen page for schadeverzekeringen and fills in correctly with prefill
     Then Verify question is accepted with a confirmation text

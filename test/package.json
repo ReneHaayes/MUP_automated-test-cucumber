@@ -8,7 +8,11 @@
   },
   "dependencies": {
     "@angular/compiler": "6.1.7",
-    "@angular/core": "6.1.7"
+    "@angular/core": "6.1.7",
+    "@elastic/elasticsearch": "^7.6.0",
+    "assert": "^2.0.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "tsconfig-paths": "^3.9.0",
@@ -30,6 +34,7 @@
     "cucumber-junit": "1.7.1",
     "moment": "2.22.2",
     "moment-timezone": "0.5.17",
+    "blue-harvest": "^0.3.1",
     "pre-commit": "^1.2.2",
     "prettier": "1.13.4",
     "prettydiff": "99.0.1",

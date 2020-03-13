@@ -17,6 +17,8 @@ export class KlachtenFormulierElements {
   houseNumberInputElement: string = '[title="Huisnummer"]';
   birthDateInputElement: string = '[title="Geboortedatum"]';
   emailAddressInputElement: string = '[title="E-mailadres"]';
+  streetNameInputElement: string = '[name="personal_data__street"]';
+  phoneNumberInputElement: string = '[name="personal_data__phonenumber"]';
 
   //CONFIRMATION
   klachtFormConfirmationTextElement: string = '[class="eforms eforms-generiekEmail"] > div > p';

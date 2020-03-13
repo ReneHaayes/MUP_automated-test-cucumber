@@ -80,6 +80,7 @@ export class GenericElements {
   schade: string = 'schade';
   schadeService: string = 'schadeservice';
   winkelzoeker: string = 'contact/zoek-winkel';
+  winkelDetails: string = 'mijnunive/winkel-details';
   pensioen: string = 'pensioen/';
 
   faqPageWatIsEenWaAutoVerzekering: string = 'faq/autoverzekering/wat-is-een-wa-autoverzekering';
@@ -111,6 +112,7 @@ export class GenericElements {
   mijnUniveMijnVerzekeringen: string = this.mijnUnivePage + '/' + 'polisoverzicht';
   mijnUniveMijnSchadeEnClaim: string = this.mijnUnivePage + '/' + 'schade';
   mijnUnivePremiegevolgenBerekenen: string = this.mijnUniveMijnSchadeEnClaim + '/premiegevolgen-berekenen';
+  mijnUniveVerzekeringBijsluiten: string = this.mijnUnivePage + '/' + 'verzekering-bijsluiten';
   mijnUniveMijnPostvak: string = this.mijnUnivePage + '/' + 'mijn-postvak';
 
 
@@ -157,6 +159,4 @@ export class GenericElements {
 
   //SIDEBAR
   sideBarElement: string = '//*[@class="rbcontainer"]//*';
-
-
 }

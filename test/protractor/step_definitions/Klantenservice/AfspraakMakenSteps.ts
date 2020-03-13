@@ -1,14 +1,16 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
-import {afspraakMakenElements, genericMethods, klachtenFormulierElements} from "@support";
-import {genericEnum} from "@enum";
+import {
+  afspraakMakenElements, genericMethods, klachtenFormulierElements, loginPageElements, personaData
+} from "@support";
+import {genericEnum, homePageEnum} from "@enum";
 
 When(/^Customer fills in afspraak maken form correctly with already customer (yes|no)$/, async (alreadyCustomer: string) => {
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
   await genericMethods.typeText(klachtenFormulierElements.omschrijvingInputElement, 'omschrijving');
   await genericMethods.clickOnElement(afspraakMakenElements.selectAlreadyCustomerClickElement(alreadyCustomer));
   //verification if No is selected that client number is not shown.
-  if (alreadyCustomer == genericEnum.NO){
+  if (alreadyCustomer == genericEnum.NO) {
     await genericMethods.waitForElementIsPresent(afspraakMakenElements.selectAlreadyCustomerNoHiddenElement, browser.getPageTimeout);
   }
   await genericMethods.typeText(klachtenFormulierElements.initialsInputElement, 'tt');
@@ -22,6 +24,34 @@ When(/^Customer fills in afspraak maken form correctly with already customer (ye
   await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
 });
 
+When(/^Logged in customer fills in afspraak maken form correctly and prefill is filled in for persona (.*)$/, async (persona: string) => {
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await genericMethods.goToPage(homePageEnum.AFSPRAAK_MAKEN);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
+  await genericMethods.typeText(klachtenFormulierElements.omschrijvingInputElement, 'omschrijving');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.initialsInputElement, personaData.getPersonaInitials(persona) + '.');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.lastNameInputElement, personaData.getPersonaLastName(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.birthDateInputElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.zipCodeInputElement, '9939 PA');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, '27');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.streetNameInputElement, 'Hoofdweg');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.emailAddressInputElement, 'illing@kpnplanet.nl');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, '+31651077355');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.clientNumberInputElement, '1763239');
+  await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
+});
+
 Then(/^Verify afspraak maken form thank you text$/, async () => {
   await genericMethods.verifyTextContainsInElement(afspraakMakenElements.confirmationTextElement, afspraakMakenElements.confirmationText, browser.getPageTimeout);
+});
+
+Then(/^Customer navigates to winkel details and clicks on afspraak maken$/, async () => {
+  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
+  await genericMethods.goToPage(homePageEnum.WINKELDETAILS);
+  await genericMethods.clickOnElement(afspraakMakenElements.afspraakMakenWinkelDetailClickElement);
+});
+
+Then(/^Verify button in winkel details navigates to afspraak maken url$/, async () => {
+  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement, browser.getPageTimeout);
+  await genericMethods.verifyUrlContainsIgnoreCase('afspraak');
 });
