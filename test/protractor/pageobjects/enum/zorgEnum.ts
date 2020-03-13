@@ -35,12 +35,15 @@ export enum collectievenEnum {
 }
 
 export enum crossSellEnum {
-    DOORLOPENDEREISVERZEKERING = 'Doorlopende reisverzekering',
-    DOORLOPENDEREISENANNULERINGSVERZEKERING = 'Doorlopende reis- en annuleringsverzekering',
+    ZORGVERZEKERING = 'zorgverzekering',
+    DOORLOPENDEREISVERZEKERING = 'doorlopende reisverzekering',
+    DOORLOPENDEREISENANNULERINGSVERZEKERING = 'doorlopende reis- en annuleringsverzekering',
     ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
     AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
     RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
     VOORUZELF = 'voor uzelf',
+    VOORUZELFPARTNER = 'voor uzelf en uw partner',
+    VOORUZELFPARTNERKINDEREN = 'voor uzelf, uw partner en uw kind(eren)',
     USP1RECHTSBIJSTAND = 'Verkeer',
     USP2RECHTSBIJSTAND = 'Vrije keuze van rechtshulpverlener (€ 3500)',
     USP1ONGEVALLEN = 'Blijvende invaliditeit (€ 75.000)',

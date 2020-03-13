@@ -20,6 +20,7 @@ import {ZorgCheckToolElements} from "../pageobjects/zorg/zorgCheckToolElements";
 import {ZorgWizardElements} from "../pageobjects/zorg/zorgWizardElements";
 import {SchadeServiceElements} from "../pageobjects/Klantenservice/SchadeServiceElements";
 import {AnalyticsAutoverzekeringElements} from "../pageobjects/analytics/analyticsAutoverzekeringElements";
+import {ZorgWizardCrossSellElements} from "../pageobjects/zorg/zorgWizardCrossSellElements";
 import {KlantenserviceDirectOnlineRegelenElements} from "../pageobjects/Klantenservice/klantenserviceDirectOnlineRegelenElements";
 import {VisualElements} from "../pageobjects/visual/visualElements";
 import {KlantenserviceNeemContactOpElements} from "../pageobjects/Klantenservice/klantenserviceNeemContactOpElements";
@@ -47,6 +48,7 @@ export const zorgCheckToolElements: ZorgCheckToolElements = new ZorgCheckToolEle
 export const zorgWizardElements: ZorgWizardElements = new ZorgWizardElements();
 export const schadeServiceElements: SchadeServiceElements = new SchadeServiceElements();
 export const analyticsAutoverzekeringElements: AnalyticsAutoverzekeringElements = new AnalyticsAutoverzekeringElements();
+export const zorgWizardCrossSellElements: ZorgWizardCrossSellElements = new ZorgWizardCrossSellElements();
 export const visualElements: VisualElements = new VisualElements();
 export const klantenserviceDirectOnlineRegelenElements: KlantenserviceDirectOnlineRegelenElements = new KlantenserviceDirectOnlineRegelenElements();
 export const klantenserviceNeemContactOpElements: KlantenserviceNeemContactOpElements = new KlantenserviceNeemContactOpElements();

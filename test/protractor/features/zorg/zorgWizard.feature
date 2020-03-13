@@ -71,11 +71,13 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
     
-    @bedanktPagina
-    Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedanktpagina de juiste elementen bevatten
+    @bedankPagina
+    Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedankpagina de juiste elementen bevatten
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I validate that all legends are visible on step 2
         And I select geen verzekering overstapreden in dropdown
@@ -86,7 +88,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on Volgende page two
         And I validate that all legends are visible on step 3
         And I enter BSN on step 3 with <persona>
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         Then validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
@@ -97,6 +99,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
         And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
@@ -155,6 +159,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|Zorg Select|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Beter|
         And I select premie per jaar optie
         And I click on Volgende page one
         Then Verify that payment by acceptgiro option is visible
@@ -164,11 +170,14 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Best|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
-        And I click on Volgende page two
+        And I click on Volgende page two no wait
         Then Verify that active policy pop-up is shown
         And validate button navigates to MijnUnive
 
@@ -181,7 +190,10 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona1>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -192,7 +204,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And validate button navigates to MijnUnive
 
         Examples:
-        |insuranceBasis|persona1|persona2           |inkomstenNietNL|
+        |insuranceBasis|persona1  |persona2           |inkomstenNietNL|
         |Zorg Select   |ronaldo   |testmanActivePolicy|Nee            |
 
     @floatingButton
@@ -308,13 +320,16 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
         And I click on Volgende page two
         Then validate that BSN field is not visible on step 3
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         And validate that bedanktpagina and all elements are correct with <persona>
 
 
@@ -338,7 +353,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And delete partner
         And I add a partner step 1 and 3 with <persona4>
         Then validate that BSN field is not visible on step 3
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         And validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
@@ -350,12 +365,15 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the <page> page of the Unive website
         Then validate correct basic insurance is active with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
         And I click on Volgende page two
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         And validate that bedanktpagina and all elements are correct with <persona>
         
         Examples:
@@ -395,6 +413,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         When I click on partner toevoegen button
         And I add a partner or child -same insurance checkbox checked- with <persona>
         And validate partner toevoegen button is not available
@@ -403,6 +423,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona2|<persona2>|
         And validate kind toevoegen button is not available
         And I click on Volgende page one
+        And I select geen verzekering overstapreden in dropdown
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
@@ -411,7 +432,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |count   |<count>   |
         |persona2|<persona2>|        
         And I click on Volgende page two
-        And I click on bevestigen step 3
+        And I click on bevestigen step 3 without bedankpagina check
         Then validate that bedanktpagina and all elements are correct with <persona>
 
         Examples:
@@ -442,6 +463,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I select tand insurance with:
         |insuranceTand|<insuranceTand>|
         When I click on Volgende page one
