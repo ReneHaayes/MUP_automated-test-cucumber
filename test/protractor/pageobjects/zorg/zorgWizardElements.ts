@@ -283,4 +283,16 @@ bedanktCrossSellitem2TitleH3Text: string = 'Doorlopende reis- en annuleringsverz
 //FLOATINGBUTTON
 floatingButtonClickElement: string = 'body > div.floatingButton > a';
 floatingButtonCloseClickElement: string = 'body > div.floatingButton > i';
+
+//ZORGPREMIEALERT
+zpaVoorletters: string = '#field_0 > div:nth-child(2) > div > input';
+zpaAchternaam: string = '#field_0 > div:nth-child(4) > div > input';
+zpaRadioButtonMan: string = '#field_0 > div:nth-child(5) > div > label:nth-child(1) > span';
+zpaGeboortedatum: string = '#field_0 > div:nth-child(6) > div > input';
+zpaPostcode: string = '#field_6 > div:nth-child(1) > div > input';
+zpaHuisnummer: string = '#field_6 > div:nth-child(2) > div > input';
+zpaEmail: string = '#field_12 > div:nth-child(1) > div.eforms-input-group > input';
+zpaVerzendknop: string = 'body > main > section > div > div > div > div > form > div.eforms-buttons > button';
+zpaBedankpagina: string = 'body > main > section > div > div > div > div > div';
+zpaBedankpaginaText: string = 'Bedankt voor het doorgeven van uw gegevens.';
 }

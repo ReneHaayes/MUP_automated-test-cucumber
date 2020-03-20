@@ -1083,3 +1083,23 @@ When(/^I validate and close pop-up DRV ingangsdatum$/, async () => {
     await genericMethods.clickOnElement(zorgWizardCrossSellElements.buitenlandUwGegevensPopupCloseButtonClickElement);
 });
 
+
+
+
+
+
+When(/^I fill in the form a lot of times$/, async () => {  
+    var i;
+        for (i=0; i < 5; i++) {
+            await genericMethods.typeText(zorgWizardElements.zpaVoorletters, "A.A.");
+            await genericMethods.typeText(zorgWizardElements.zpaAchternaam, "Aap");
+            await genericMethods.clickOnElement(zorgWizardElements.zpaRadioButtonMan);
+            await genericMethods.typeText(zorgWizardElements.zpaGeboortedatum, "01-01-1980");
+            await genericMethods.typeText(zorgWizardElements.zpaPostcode, "1112XS");
+            await genericMethods.typeText(zorgWizardElements.zpaHuisnummer, "58");
+            await genericMethods.typeText(zorgWizardElements.zpaEmail, "a@b.com");
+            await genericMethods.clickOnElement(zorgWizardElements.zpaVerzendknop);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.zpaBedankpagina, zorgWizardElements.zpaBedankpaginaText, 250);
+            await genericMethods.goToPage('zorgPremieAlert');
+        }
+});

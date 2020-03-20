@@ -310,6 +310,9 @@ export class GetUrlUnive {
       case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
       }
+      case verzekeringPaginasEnum.ZORGPREMIEALERT: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

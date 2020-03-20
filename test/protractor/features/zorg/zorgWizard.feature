@@ -567,7 +567,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
 
-        @ouderKindTabel
+    @ouderKindTabel
     Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op kinderen toevoegen/verwijderen
         Given I am on the Zorgverzekering page of the Unive website
         And I click on add collective button in wizard
@@ -595,3 +595,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Examples:
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
+
+    @wilfried
+    Scenario: Checken van zorgpremie-alert pagina recaptcha
+        Given I am on the zorgPremieAlert page of the Unive website
+        When I fill in the form a lot of times

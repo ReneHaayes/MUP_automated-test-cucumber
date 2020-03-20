@@ -100,6 +100,7 @@ export class GenericElements {
   zorgVerzekeringBasisVrijParameter: string = this.zorgVerzekering + '?bv=VRY';
   zorgVerzekeringCrossSellInWizardParameter: string = this.zorgVerzekering + '?cs=1';
   zorgVerzekeringCrossSellBedankpaginaParameter: string = this.zorgVerzekering + '?cs=0';
+  zorgPremieAlert: string = 'zorgverzekering/zorgpremie-alert';
 
   //MIJN UNIVE URL
   mijnUnivePage: string = 'mijnunive';

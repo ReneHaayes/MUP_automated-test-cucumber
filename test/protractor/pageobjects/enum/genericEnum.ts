@@ -195,7 +195,8 @@ export enum verzekeringPaginasEnum {
   ONDERNEMERSSCAN_TITLE = 'Ondernemersscan van Univé',
   CALAMITEITEIN = 'calamiteiten',
   ZORGVERZEKERINGCROSSSELLINWIZARDPARAMETER = 'zorgVerzekeringCrossSellInWizardParameter',
-  ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter'
+  ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
+  ZORGPREMIEALERT = 'zorgPremieAlert'
 }
 
 export enum faqPage {
