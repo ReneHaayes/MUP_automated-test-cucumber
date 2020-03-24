@@ -20,7 +20,7 @@ export class ZorgWizardMethods {
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveButtonClickElement);
     }
 
-    async CheckPakkettenNietThuiszorgCollectief(collective: string, insuranceBasis: string, discountBasis: string, discountAanvullend: string){
+    async CheckPakkettenThuiszorgEnNietThuiszorgCollectief(collective: string, insuranceBasis: string, discountBasis: string, discountAanvullend: string){
     if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
         //klik op en verifieer basisverzekering
         await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);

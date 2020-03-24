@@ -21,7 +21,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |collective        |<collective>        |
         |discountBasis     |<discountBasis>     |
         |discountAanvullend|<discountAanvullend>|
-        Then select basic insurance and validate that all aanvullende packages -not thuiszorgcollective- and tand packages are visible and clickable with correct discount with:
+        Then select basic insurance and validate that all aanvullende packages and tand packages are visible and clickable with correct discount with:
         |collective        |<collective>        |
         |insuranceBasis    |<insuranceBasis>    |
         |discountBasis     |<discountBasis>     |

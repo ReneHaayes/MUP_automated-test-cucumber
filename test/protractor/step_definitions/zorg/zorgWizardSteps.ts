@@ -30,9 +30,9 @@ When(/^I add a collective with:$/, async (data) => {
     );
 });
 
-Then (/^select basic insurance and validate that all aanvullende packages -not thuiszorgcollective- and tand packages are visible and clickable with correct discount with:$/, async(data) => {
+Then (/^select basic insurance and validate that all aanvullende packages and tand packages are visible and clickable with correct discount with:$/, async(data) => {
     const dataTable = data.rowsHash();
-    await zorgWizardMethods.CheckPakkettenNietThuiszorgCollectief(
+    await zorgWizardMethods.CheckPakkettenThuiszorgEnNietThuiszorgCollectief(
         dataTable.collective,
         dataTable.insuranceBasis,
         dataTable.discountBasis,
