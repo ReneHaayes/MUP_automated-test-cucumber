@@ -228,8 +228,9 @@ When(/^I select premie per jaar optie$/, async () => {
     await genericMethods.clickOnElement(zorgWizardElements.premiePerJaarClickElement);
 });
 
-Then(/^Verify that payment by acceptgiro option is visible$/, async () => {
-    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensUwBetaalgegevensAcceptgiroClickElement);
+Then(/^Verify that payment by acceptgiro option is not visible and automatische incasso is visible$/, async () => {
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.uwGegevensUwBetaalgegevensAcceptgiroClickElement, 250);
+    await genericMethods.clickOnElement(zorgWizardElements.uwGegevensAutomatischeIncassoClickElement);
 });
 
 When(/^I click on Bekijk de vergoedingen button of basic insurance with:$/, async (data) => {

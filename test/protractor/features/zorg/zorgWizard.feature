@@ -163,7 +163,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceAanvullend|Aanvullend Beter|
         And I select premie per jaar optie
         And I click on Volgende page one
-        Then Verify that payment by acceptgiro option is visible
+        Then Verify that payment by acceptgiro option is not visible and automatische incasso is visible
     
     @actievePolisCheck
     Scenario Outline: valideer dat de actieve polis check getriggered wordt en de klant niet door kan navigeren in de wizard op stap 2 (behalve naar MijnUnive)
