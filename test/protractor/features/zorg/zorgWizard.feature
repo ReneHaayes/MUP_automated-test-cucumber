@@ -13,7 +13,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         When I click on add collective button in wizard
         Then validate that the collective overlay shows with correct elements
     
-    @collectieven
+    @collectieven1
     Scenario Outline: Toevoegen van een niet thuiszorg collectief, selecteer zorg vrij/geregeld en verifieer dat alle aanvullende pakketten aanwezig en klikbaar zijn met juiste kortingstexten
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -33,6 +33,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |Nic Oud BV            |Zorg Geregeld |3%           |10%               |
         |Icare Ledenvereniging |Zorg Vrij     |5%           |10%               |
         |Icare Ledenvereniging |Zorg Geregeld |5%           |10%               |
+        |VZZP                  |Zorg Vrij     |3%           |                  |
     
     @collectieven
     Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
