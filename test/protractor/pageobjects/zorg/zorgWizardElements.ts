@@ -284,6 +284,15 @@ bedanktCrossSellitem2TitleH3Text: string = 'Doorlopende reis- en annuleringsverz
 floatingButtonClickElement: string = 'body > div.floatingButton > a';
 floatingButtonCloseClickElement: string = 'body > div.floatingButton > i';
 
+//BORDERELCOLLECTIEF: 
+collectiefOverlayBetalingsTextElement: string = 'div.unive-modal__content > unive-collective-modal > unive-search-collective > p';
+collectiefOverlayBetalingsText: string = 'Bij dit collectief is jaarbetaling via uw werkgever of vereniging verplicht.';
+stickyBalkBetalingsTextElement: string = 'unive-total-price > unive-total-price-detail > div > div:nth-child(2) > div > p';
+stickyBalkJaarPremieTextElement: string = 'unive-total-price-detail > div > div.unive-total-price-detail__row.unive-total-price-detail__row--price > div:nth-child(1) > span';
+stickyBalkJaarPremieText: string = 'jaar (1% korting)';
+uwGegevensBetalingsMethodeRadioButtonTextElement: string = '[for=paymentMethod_acceptgiro]';
+uwGegevensBetalingsMethodeRadioButtonText: string = 'U betaalt via uw werkgever of vereniging';
+
 //ZORGPREMIEALERT
 zpaVoorletters: string = '#field_0 > div:nth-child(2) > div > input';
 zpaAchternaam: string = '#field_0 > div:nth-child(4) > div > input';

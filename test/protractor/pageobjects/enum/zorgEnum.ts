@@ -31,7 +31,8 @@ export enum collectievenEnum {
     ICARELEDENVERENIGING = 'Icare Ledenvereniging',
     ICARELEDENVERENIGING1 = 'Icare ',
     ICARELEDENVERENIGING2 = 'Ledenvereniging',
-    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging IJsselstein'
+    HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging IJsselstein',
+    SCHEERENVEEN = 'SC Heerenveen' 
 }
 
 export enum crossSellEnum {

@@ -8,15 +8,22 @@ export class ZorgWizardMethods {
     if(collective == collectievenEnum.OMRINGMEDEWERKERS){
         await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS1);
         await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS2);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
     }
     else if(collective == collectievenEnum.ICARELEDENVERENIGING){
         await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING1);
         await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING2);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if (collective == collectievenEnum.SCHEERENVEEN){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.SCHEERENVEEN);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+        await genericMethods.verifyTextInElement(zorgWizardElements.collectiefOverlayBetalingsTextElement, zorgWizardElements.collectiefOverlayBetalingsText);
     }
     else {
         await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collective);
-    }
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveButtonClickElement);
     }
 

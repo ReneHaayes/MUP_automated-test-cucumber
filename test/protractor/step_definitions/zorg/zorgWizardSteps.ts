@@ -1084,7 +1084,15 @@ When(/^I validate and close pop-up DRV ingangsdatum$/, async () => {
     await genericMethods.clickOnElement(zorgWizardCrossSellElements.buitenlandUwGegevensPopupCloseButtonClickElement);
 });
 
+When(/^I validate that correct premietermijn and text are in the stickybalk$/, async () => {
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.stickyBalkJaarPremieTextElement, zorgWizardElements.stickyBalkJaarPremieText, 250);
+    await genericMethods.verifyTextInElement(zorgWizardElements.stickyBalkBetalingsTextElement, zorgWizardElements.collectiefOverlayBetalingsText);
+});
 
+Then(/^validate betalingsoptie is correct on Uw Gegevens page$/, async () => {
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.uwGegevensBetalingsMethodeRadioButtonTextElement, 1000);
+    await genericMethods.verifyTextContainsInElement(zorgWizardElements.uwGegevensBetalingsMethodeRadioButtonTextElement, zorgWizardElements.uwGegevensBetalingsMethodeRadioButtonText, 250);
+});
 
 
 

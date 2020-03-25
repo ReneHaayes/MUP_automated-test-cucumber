@@ -71,6 +71,18 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
     
+    @borderelCollectief
+    Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
+        Given I am on the Zorgverzekering page of the Unive website
+        When I click on add collective button in wizard
+        And I add a collective with:
+        |collective|SC Heerenveen|
+        And I select basic insurance no collective with:
+        |insuranceBasis|Zorg Vrij|
+        And I validate that correct premietermijn and text are in the stickybalk
+        And I click on Volgende page one
+        Then validate betalingsoptie is correct on Uw Gegevens page
+    
     @bedankPagina
     Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedankpagina de juiste elementen bevatten
         Given I am on the Zorgverzekering page of the Unive website
