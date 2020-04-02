@@ -22,7 +22,6 @@ When(/^I enter step one page and click next on step two of eigen vervoer verzeke
 When(/^I enter step four page of eigen vervoer verzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.typeText(nawElements.companyDataNameInputElement, companyData.getCompanyName(company));
-  await genericMethods.selectLegal(companyData.getCompanyLegal(company));
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
   await genericMethods.typeText(nawElements.companyDataZipCodeInputElement, companyData.getCompanyZipcode(company));
   await genericMethods.clickOnTAB(nawElements.companyDataZipCodeInputElement);
