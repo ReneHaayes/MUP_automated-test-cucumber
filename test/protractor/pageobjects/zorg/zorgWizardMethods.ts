@@ -60,7 +60,19 @@ export class ZorgWizardMethods {
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.COLLECTIEFAANVULLENDBEST, 100);
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
-        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);    
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer tand ongevallen
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
+        //klik op en verifieer tand goed
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
+        //klik op en verifieer tand beter
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
+        //klik op en verifieer tand best
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);    
     }
     else if (collective == collectievenEnum.NICOUDBV || collective == collectievenEnum.OMRINGMEDEWERKERS){
         //klik op en verifieer aanvullend goed
@@ -81,6 +93,18 @@ export class ZorgWizardMethods {
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer tand ongevallen
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
+        //klik op en verifieer tand goed
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
+        //klik op en verifieer tand beter
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
+        //klik op en verifieer tand best
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);
     }
     else if (collective == collectievenEnum.VZZP) {
         //klik op en verifieer aanvullend goed
@@ -100,20 +124,20 @@ export class ZorgWizardMethods {
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.AANVULLENDBEST, 100);
         await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);
         await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);
-        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);  
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);
+        //klik op en verifieer tand ongevallen
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
+        //klik op en verifieer tand goed
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
+        //klik op en verifieer tand beter
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
+        //klik op en verifieer tand best
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);  
     }
-    //klik op en verifieer tand ongevallen
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
-    //klik op en verifieer tand goed
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
-    //klik op en verifieer tand beter
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
-    //klik op en verifieer tand best
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);
     }
 
     async selectInsuranceBasisWithCollective(insuranceBasis: string, collective: string){

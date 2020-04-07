@@ -85,10 +85,13 @@ aanvullendeVerzekeringAanvullendBestKortingTextElement: string = 'unive-addition
 tandVerzekeringenTandOngevallenClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTO"]';
 tandOngevallenTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(1) label';
 tandVerzekeringenTandGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="GTU"]';
+tandVerzekeringenCollectiefTandGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC2"]';
 tandGoedTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(2) label';
 tandVerzekeringenTandBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="BTU"]';
+tandVerzekeringenCollectiefTandBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC3"]';
 tandBeterTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(3) label';
 tandVerzekeringenTandBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UTU"]';
+tandVerzekeringenCollectiefTandBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC4"]';
 tandBestTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(4) label';
 basisVerzekeringCollectiefKortingTextElement: string = 'unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active > div > ' +
                                                        'div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__collective';
