@@ -68,12 +68,12 @@ emailDitAdviesOverlaySuccessText: string = 'Uw ZorgCheck resultaat is verzonden 
 zorgSelectActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
 zorgGeregeldActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
 ZorgVrijActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
-aanvullendGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BAVU"]';
-aanvullendBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UAVU"]';
-aanvullendBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="PZU"]';
-tandGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="GTU"]';
-tandBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="BTU"]';
-tandBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UTU"]';
+aanvullendGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC2"]';
+aanvullendBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC3"]';
+aanvullendBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC4"]';
+tandGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC2"]';
+tandBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC3"]';
+tandBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC4"]';
 
 //COLLECTIEVEN
 voegCollectiefToeOpenOverlayClickElement: string = '[class="button button--plain"]';
