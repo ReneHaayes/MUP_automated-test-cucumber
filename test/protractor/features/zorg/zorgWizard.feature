@@ -13,7 +13,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         When I click on add collective button in wizard
         Then validate that the collective overlay shows with correct elements
     
-    @collectieven1
+    @collectieven
     Scenario Outline: Toevoegen van een niet thuiszorg collectief, selecteer zorg vrij/geregeld en verifieer dat alle aanvullende pakketten aanwezig en klikbaar zijn met juiste kortingstexten
         Given I am on the Zorgverzekering page of the Unive website
         When I click on add collective button in wizard
@@ -168,7 +168,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |Zorg Geregeld |785        |
         |Zorg Geregeld |885        |
     
-    Scenario: selecteer premie per jaar en check of op stap 2 acceptgiro zichtbaar is
+    Scenario: selecteer premie per jaar en check of op stap 2 acceptgiro niet zichtbaar is
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|Zorg Select|
