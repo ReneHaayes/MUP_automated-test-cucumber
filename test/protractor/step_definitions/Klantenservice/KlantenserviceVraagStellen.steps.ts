@@ -157,5 +157,5 @@ Then(/^Verify Compaint question is accepted with a confirmation text$/, async ()
 });
 
 Then(/^Verify question is accepted with a confirmation text$/, async () => {
-  await genericMethods.verifyTextContainsInElement(klantenserviceVraagStellenElements.vraagStellenConfirmationTextElement, klantenserviceVraagStellenElements.vraagStellenConfirmationText, 15000);
+  await genericMethods.verifyTextContainsInElement(klantenserviceVraagStellenElements.vraagStellenConfirmationPrefillTextElement, klantenserviceVraagStellenElements.vraagStellenConfirmationText, browser.getPageTimeout);
 });

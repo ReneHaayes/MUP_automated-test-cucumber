@@ -162,18 +162,18 @@ export class AlleVerzekeringenMethods {
       }
       case verzekeringPaginasEnum.SCOOTERVERZEKERING_PAT: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.SCOOTERVERZEKERING_PAT);
-        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.SCOOTERVERZEKERING_PAT);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, 'Scooter verzekering ');
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.SCOOTERVERZEKERING_PAT, 2);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.scooterVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.scooterVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.MOTORVERZEKERING_PAT: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
-        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, 'Motor verzekering');
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORVERZEKERING_PAT, 2);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.motorVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.motorVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.FIETSVERZEKERING: {
@@ -202,10 +202,10 @@ export class AlleVerzekeringenMethods {
       }
       case verzekeringPaginasEnum.OLDTIMERVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.OLDTIMERVERZEKERING);
-        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.OLDTIMERVERZEKERING);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, 'Oldtimer-verzekering');
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.OLDTIMERVERZEKERING, 2);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.oldtimerVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.oldtimerVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.TRIKEVERZEKERING_PAT: {

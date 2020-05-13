@@ -16,6 +16,7 @@ When(/^I enter step one page of rechtsbijstandverzekering for family composition
   await genericMethods.clickOnNextButton();
   //Click on Next at step two page
   await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.verkeerEnvoertuigen);
+  await genericMethods.clickOnElement('[data-label-id="LA_IF32509_40517"] > label');
   await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.RECHTSBIJSTAND);
   await genericMethods.clickOnNextButton();
 });
@@ -38,8 +39,12 @@ When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);
+  await genericMethods.typeText(nawElements.yourDataEmailAddressConfirmElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressConfirmElement);
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);

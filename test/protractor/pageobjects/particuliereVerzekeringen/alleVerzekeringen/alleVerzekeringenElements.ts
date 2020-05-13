@@ -3,15 +3,15 @@ export class AlleVerzekeringenElements {
   //SELECT DROPDOWN
   selectVerzekeringenDropdownElement: string = '[class="eforms-dropdownBox"]';
   alleUniveVerzekeringenSelectElement: string = '0';
-  uwGezondheidSelectElement: string = '3';
-  uwVrijeTijdSelectElement: string = '4';
+  uwGezondheidSelectElement: string = '9';
+  uwVrijeTijdSelectElement: string = '8';
   uwVervoerSelectElement: string = '1';
   uwHuisSelectElement: string = '2';
-  uwRechtSelectElement: string = '5';
-  uwFinancieleToekomstSelectElement: string = '6';
-  uwNabestaandenSelectElement: string = '7';
-  uwCollectiefVoordeelSelectElement: string = '8';
-  uwOnlineVeiliigheidSelectElement: string = '9';
+  uwRechtSelectElement: string = '3';
+  uwFinancieleToekomstSelectElement: string = '4';
+  uwNabestaandenSelectElement: string = '5';
+  uwCollectiefVoordeelSelectElement: string = '6';
+  uwOnlineVeiliigheidSelectElement: string = '7';
 
   //TITLE
   hmPageTitleElement: string = '[class="detailContent_title"]';
@@ -39,7 +39,7 @@ export class AlleVerzekeringenElements {
 
 
   //BEREKEN UW PREMIE
-  zorgVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw zorgpremie"]';
+  zorgVerzekeringBerekenUwPremieButtonClickElement: string = '[class="heroHeader_textContent"] [class="inlineAnchor_button--secondary"]';
   collectieveZorgVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][title="Bereken uw zorgpremie"]';
   verzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"]';
   reisVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw reispremie"]';

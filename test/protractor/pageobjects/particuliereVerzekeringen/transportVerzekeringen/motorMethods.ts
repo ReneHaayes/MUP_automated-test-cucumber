@@ -12,9 +12,9 @@ export class MotorMethods {
   async enterLicensePlate(input: string) {
     switch (input) {
       case licensePlates.MOTOR_MPTT99: {
-        await genericMethods.typeText(motorElements.licensePlateMotorInputElement, input);
+        await genericMethods.typeText(motorElements.licensePlateQuadTrikeInputElement, input);
         await browser.sleep(500);
-        await genericMethods.clickOnTAB(motorElements.licensePlateMotorInputElement);
+        await genericMethods.clickOnTAB(motorElements.licensePlateQuadTrikeInputElement);
         // await genericMethods.waitForElementIsVisibleWithXpath(vehicleElements.licensePlateBrandNameElementWithXpath + '[contains(text(),"' + mopedWithLicensePlate.getMopedBrandName(licensePlate) + '")]', browser.getPageTimeout);
         break;
       }
