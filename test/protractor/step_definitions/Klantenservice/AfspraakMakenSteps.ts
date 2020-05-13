@@ -36,7 +36,7 @@ When(/^Logged in customer fills in afspraak maken form correctly and prefill is 
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, '27');
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.streetNameInputElement, 'Hoofdweg');
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.emailAddressInputElement, 'illing@kpnplanet.nl');
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, '+31651077355');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, '+31651077356');
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.clientNumberInputElement, '1763239');
   await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
 });
@@ -52,6 +52,6 @@ Then(/^Customer navigates to winkel details and clicks on afspraak maken$/, asyn
 });
 
 Then(/^Verify button in winkel details navigates to afspraak maken url$/, async () => {
-  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement, browser.getPageTimeout);
+  await genericMethods.waitForElementIsVisible('[class="base__title"]', browser.getPageTimeout);
   await genericMethods.verifyUrlContainsIgnoreCase('afspraak');
 });

@@ -92,7 +92,7 @@ export class LicensePlateMethod {
         break;
       }
       case genericEnum.DONT: {
-        await genericMethods.verifyTextNotInElement(bedrijfsAutoVerzekeringElements.brandNameElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), bedrijfsAutoVerzekeringElements.licensePlateElement);
+        await genericMethods.verifyTextNotInElement(autoVerzekeringElements.brandElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), autoVerzekeringElements.licensePlateElement);
         break;
       }
       default: {

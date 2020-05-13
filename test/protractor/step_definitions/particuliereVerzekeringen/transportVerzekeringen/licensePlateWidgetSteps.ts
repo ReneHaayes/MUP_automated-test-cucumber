@@ -1,6 +1,9 @@
 import {Then, When} from "cucumber";
 import {
-  bedrijfsAutoVerzekeringElements, businessCarWithLicensePlate, genericMethods, licensePlateMethod
+  autoVerzekeringElements,
+  businessCarWithLicensePlate,
+  genericMethods,
+  licensePlateMethod
 } from "@support";
 
 When(/^I press the button (.*) for the following license plate (.*) on the page for autoverzekering$/, async (button: string, licensePlate: string) => {
@@ -16,5 +19,5 @@ Then(/^The (.*) data (.*) appears for bedrijfs autoverzekering$/, async (license
 });
 
 Then(/^The (.*) data dont appears for business personenautoverzekering$/, async (licensePlate: string) => {
-  await genericMethods.verifyTextNotInElement(bedrijfsAutoVerzekeringElements.brandNamePersonenAutoElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), bedrijfsAutoVerzekeringElements.licensePlatePersonenAutoElement);
+  await genericMethods.verifyTextNotInElement(autoVerzekeringElements.brandElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), autoVerzekeringElements.licensePlateElement);
 });

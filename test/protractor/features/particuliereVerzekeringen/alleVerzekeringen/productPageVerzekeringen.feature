@@ -27,9 +27,6 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw vervoer         | Elektrische fietsverzekering |
       | uw vervoer         | Scootmobielverzekering       |
       | uw vervoer         | Oldtimerverzekering          |
-      | alle verzekeringen | Trikeverzekering             |
-      | alle verzekeringen | Quadverzekering              |
-      | alle verzekeringen | High speed e-bikeverzekering |
       | uw huis            | Woonpakket                   |
       | uw huis            | Inboedelverzekering          |
       | alle verzekeringen | Opstalverzekering            |

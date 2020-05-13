@@ -47,6 +47,7 @@ When(/^Customer selects schadehersteller with (.*) on the map in city (.*)$/, as
 });
 
 Then(/^Verify (.*) is available on location (.*)$/, async (servicePointTitle: string, location: string) => {
+  await browser.sleep(1000);
   await genericMethods.verifyTextInElementShadowRoot(schadeServiceElements.getTitleForLocationTextElement(location), servicePointTitle);
 });
 

@@ -22,7 +22,7 @@ export class KlantenserviceVraagstellenMethods {
     await genericMethods.verifyValueTextInElement(klantenserviceVraagStellenElements.vraagStellenStraatNaamInputElement, 'Hoofdweg');
     await genericMethods.verifyValueTextInElement(klantenserviceVraagStellenElements.vraagStellenPlaatsInputElement, 'TJUCHEM');
     await genericMethods.verifyValueTextInElement(klantenserviceVraagStellenElements.vraagStellenEMailAdresInputElement, 'illing@kpnplanet.nl');
-    await genericMethods.verifyValueTextInElement(klantenserviceVraagStellenElements.vraagstellenTelefoonnummerInputElement, '+31651077355');
+    await genericMethods.verifyValueTextInElement(klantenserviceVraagStellenElements.vraagstellenTelefoonnummerInputElement, '+31651077356');
     await genericMethods.verifyValueTextInElement(klantenserviceVraagStellenElements.vraagStellenClientNummerInputElement, '1763239');
   }
 }
