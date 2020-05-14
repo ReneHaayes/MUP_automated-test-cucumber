@@ -26,15 +26,17 @@ export enum moduleEnum {
 
 export enum collectievenEnum {
     OMRINGMEDEWERKERS = 'Omring Medewerkers',
-    OMRINGMEDEWERKERS1 = 'Omring ',
-    OMRINGMEDEWERKERS2 = 'Medewerkers',
+    OMRINGCODE = 'bH49xS38',
     ICARELEDENVERENIGING = 'Icare Ledenvereniging',
-    ICARELEDENVERENIGING1 = 'Icare ',
-    ICARELEDENVERENIGING2 = 'Ledenvereniging',
+    ICARECODE = 'qJ78rU63',
     HUURDERSVERENIGINGIJSSELSTEIN = 'Huurdersvereniging IJsselstein',
+    HUURDERSVERENIGINGIJSSELSTEINCODE = '3KgqiqcH',
     SCHEERENVEEN = 'SC Heerenveen',
+    SCHEERENVEENCODE = 'kQ01mL35',
     NICOUDBV = 'Nic Oud BV',
-    VZZP = 'VZZP' 
+    NICOUDBVCODE = 'uP90fI53',
+    VZZP = 'VZZP', 
+    VZZPCODE = 'tY89dX00'
 }
 
 export enum crossSellEnum {

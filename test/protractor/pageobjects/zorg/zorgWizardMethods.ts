@@ -6,17 +6,27 @@ export class ZorgWizardMethods {
 
     async addCollective(collective: string){
     if(collective == collectievenEnum.OMRINGMEDEWERKERS){
-        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS1);
-        await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS2);
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGCODE);
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
     }
     else if(collective == collectievenEnum.ICARELEDENVERENIGING){
-        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING1);
-        await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING2);
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARECODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if(collective == collectievenEnum.HUURDERSVERENIGINGIJSSELSTEIN){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.HUURDERSVERENIGINGIJSSELSTEINCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if(collective == collectievenEnum.NICOUDBV){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.NICOUDBVCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if(collective == collectievenEnum.VZZP){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.VZZPCODE);
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
     }
     else if (collective == collectievenEnum.SCHEERENVEEN){
-        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.SCHEERENVEEN);
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.SCHEERENVEENCODE);
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
         await genericMethods.verifyTextInElement(zorgWizardElements.collectiefOverlayBetalingsTextElement, zorgWizardElements.collectiefOverlayBetalingsText);
     }
