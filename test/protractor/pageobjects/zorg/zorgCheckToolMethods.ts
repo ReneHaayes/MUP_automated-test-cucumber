@@ -1,7 +1,7 @@
 import { multipleChoiceEnum, genericEnum } from "../enum/genericEnum";
 import { pakkettenEnum, collectievenEnum } from "../enum/zorgEnum";
 import { browser } from "protractor";
-import {genericMethods, zorgCheckToolElements} from "../../support";
+import {genericMethods, zorgCheckToolElements, zorgWizardCrossSellElements} from "../../support";
 
 export class ZorgCheckToolMethods {
 
@@ -426,7 +426,18 @@ export class ZorgCheckToolMethods {
         await genericMethods.verifyTextInElement(zorgCheckToolElements.voegUwCollectiefToeH1OverlayElement, zorgCheckToolElements.voegUwCollectiefToeH1OverlayText);
         await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayText);
         await genericMethods.clickOnElement(zorgCheckToolElements.voegUwCollectiefToeInputElement);
-        await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collective);
+        if(collective == collectievenEnum.HUURDERSVERENIGINGIJSSELSTEIN) {
+            await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collectievenEnum.HUURDERSVERENIGINGIJSSELSTEINCODE);
+        }
+        else if(collective == collectievenEnum.ICARELEDENVERENIGING) {
+            await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collectievenEnum.ICARECODE);
+        }
+        else if(collective == collectievenEnum.OMRINGMEDEWERKERS) {
+            await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collectievenEnum.OMRINGCODE);
+        }
+        else {
+            await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collective);
+        }
         await genericMethods.clickOnElement(zorgCheckToolElements.selectFirstCollectiefElement);
     }
 
