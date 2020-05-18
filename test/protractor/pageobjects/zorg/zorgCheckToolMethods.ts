@@ -1,7 +1,7 @@
 import { multipleChoiceEnum, genericEnum } from "../enum/genericEnum";
 import { pakkettenEnum, collectievenEnum } from "../enum/zorgEnum";
 import { browser } from "protractor";
-import {genericMethods, zorgCheckToolElements, zorgWizardCrossSellElements} from "../../support";
+import {genericMethods, zorgCheckToolElements } from "../../support";
 
 export class ZorgCheckToolMethods {
 
