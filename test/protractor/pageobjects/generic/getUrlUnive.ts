@@ -307,6 +307,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringCrossSellBedankpaginaParameter;
       }
+      case verzekeringPaginasEnum.PREFILL_OMRING_PASHOUDERS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.prefillOmringPashoudersUrl;
+      }
       case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
       }

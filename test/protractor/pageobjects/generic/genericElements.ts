@@ -82,6 +82,7 @@ export class GenericElements {
   winkelzoeker: string = 'contact/zoek-winkel';
   winkelDetails: string = 'mijnunive/winkel-details';
   pensioen: string = 'pensioen/';
+  prefillOmringPashoudersUrl: string = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
 
   faqPageWatIsEenWaAutoVerzekering: string = 'faq/autoverzekering/wat-is-een-wa-autoverzekering';
 

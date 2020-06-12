@@ -58,6 +58,9 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
   await genericMethods.clickOnNextButton();
 });
 
+Then(/^Verify step two page of autoverzekering automatically prefilled with collective (.*)$/, async (collective: string) => {
+  await genericMethods.verifyValueTextInElement(autoVerzekeringElements.collectiveResultTextElement, collective);
+});
 
 Then(/^Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data$/, async () => {
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
