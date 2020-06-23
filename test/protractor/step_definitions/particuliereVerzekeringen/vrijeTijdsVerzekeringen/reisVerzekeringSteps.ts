@@ -72,7 +72,7 @@ When(/^I enter step one and step two page of kortlopende annuleringsverzekering 
   await reisVerzekeringMethods.selectChildrenTillFourYears(dataTable.childrenTillFourYears);
   await genericMethods.typeText(reisVerzekeringElements.leavingDateInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(reisVerzekeringElements.returnDateInputElement, genericMethods.getDate('seven days'));
-  await genericMethods.clickOnElement('[data-label-id="LA_IF11808_16114"] > div > label:nth-child(1)');
+  // await genericMethods.clickOnElement('[data-label-id="LA_IF11808_16114"] > div > label:nth-child(1)');
   await genericMethods.typeText(reisVerzekeringElements.bookdateTripInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(reisVerzekeringElements.totalValueOfTripInputElement, dataTable.totalValue);
   await genericMethods.clickOnNextButton();  await genericMethods.clickOnNextButton();

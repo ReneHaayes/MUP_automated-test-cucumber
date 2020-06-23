@@ -25,6 +25,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectWhoDrivesTheCarTheMost('mySelf');
   await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateAfterFixElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderBirthdateAfterFixElement);
   await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeAfterFixElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive('no');
