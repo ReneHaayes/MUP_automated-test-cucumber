@@ -180,7 +180,8 @@ When(/^I validate that all legends are visible on step 3$/, async () => {
 });
 
 Then(/^validate that bedanktpagina and all elements are correct with (.*)$/, async (persona: string) => {
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.bedanktPaginaCustomerNameTextElement, 500);
+    await genericMethods.waitForElementIsPresent(zorgWizardElements.bedanktPaginaCustomerNameTextElement, 5000);
+    await genericMethods.waitForElementNotVisible(zorgWizardCrossSellElements.unibolStapEenElement, 5000);
     if(persona == personaName.RONALDO) {
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.bedanktPaginaCustomerNameTextElement, genderBedanktPaginaEnum.HEER, 100);
     }  

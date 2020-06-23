@@ -80,6 +80,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |collective|SC Heerenveen|
         And I select basic insurance no collective with:
         |insuranceBasis|Zorg Vrij|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
         And I validate that correct premietermijn and text are in the stickybalk
         And I click on Volgende page one
         Then validate betalingsoptie is correct on Uw Gegevens page
