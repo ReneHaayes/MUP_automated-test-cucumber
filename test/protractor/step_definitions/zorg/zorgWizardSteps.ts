@@ -5,7 +5,7 @@ import { crossSellEnum, genderBedanktPaginaEnum, pakkettenEnum, eigenRisicoEnum,
 import { personaName } from 'protractor/support/enum';
 
 When(/^I do nothing$/, async() => {
-    await browser.sleep(250);
+    await browser.sleep(500);
 });
 
 Then (/^validate the Zorgverzekering page is correctly loaded$/, async() => {
@@ -1095,7 +1095,9 @@ Then(/^validate betalingsoptie is correct on Uw Gegevens page$/, async () => {
     await genericMethods.verifyTextContainsInElement(zorgWizardElements.uwGegevensBetalingsMethodeRadioButtonTextElement, zorgWizardElements.uwGegevensBetalingsMethodeRadioButtonText, 250);
 });
 
-
+When(/^I change to (.*) page$/, async (page: string) => {
+    await genericMethods.goToPage(page);
+});
 
 
 When(/^I fill in the form a lot of times$/, async () => {  

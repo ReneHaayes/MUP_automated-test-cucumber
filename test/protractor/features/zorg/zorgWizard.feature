@@ -227,7 +227,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
-        When I am on the zorgVrij page of the Unive website
+        And I do nothing
+        When I change to zorgVrij page
         And I click on the floating button
         Then validate that customer is redirected to wizard with the correct products prefilled with:
         |insuranceBasis|<insuranceBasis>|
@@ -242,9 +243,10 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
-        When I am on the autoverzekeringProductPage page of the Unive website
+        And I do nothing
+        When I change to autoverzekeringProductPage page
         And Validate the floating button is not present
-        And I am on the eigenRisico page of the Unive website
+        And I change to eigenRisico page
         And I click on the floating button
         Then validate that customer is redirected to wizard with the correct products prefilled with:
         |insuranceBasis|<insuranceBasis>|
@@ -259,10 +261,13 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
-        When I am on the zorgVrij page of the Unive website
+        And I do nothing
+        When I change to zorgVrij page
         And I click on the close floating button
-        And I am on the Zorgverzekering page of the Unive website
-        And I am on the zorgVrij page of the Unive website
+        And I do nothing
+        And I change to Zorgverzekering page
+        And I do nothing
+        And I change to zorgVrij page
         Then Validate the floating button is not present
     
         Examples:
