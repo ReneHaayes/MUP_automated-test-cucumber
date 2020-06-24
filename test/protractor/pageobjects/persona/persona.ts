@@ -110,7 +110,7 @@ export class PersonaData {
   testmanActivePolicy: Persona = new Persona('Zulu', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1955', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'actieve@polis.nl',
     'NL02ABNA0123456789', '559488944', 'plintenplakker', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  testkindCustomerRecognition: Persona = new Persona('Zulu', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1890', 'Amsterdam', '1012NX', '3',
+  testkindCustomerRecognition: Persona = new Persona('Zulu', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1900', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'actieve@polis.nl',
     'NL02ABNA0123456789', '559488944', 'plintenplakker', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   testkindOnder18Een: Persona = new Persona('Dennis', 'D.', 'het', 'Kind onder achttien een', '04', '03', '2012', 'Amsterdam', '1012NX', '3',

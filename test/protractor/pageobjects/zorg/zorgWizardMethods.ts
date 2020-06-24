@@ -552,13 +552,13 @@ export class ZorgWizardMethods {
 
     async validateBasisInsuranceUnder18(insuranceBasis: string){
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 1000);
         }
         else if(insuranceBasis = pakkettenEnum.ZORGSELECT){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisSelectActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisSelectActive, 1000);
         }
         else if(insuranceBasis = pakkettenEnum.ZORGGEREGELD){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 1000);
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis);
