@@ -740,9 +740,9 @@ When (/^I validate child under 18 has zorg vrij, aanvullend best and tand best$/
     await browser.sleep(500);
     await genericMethods.scrollTilTop();
     await browser.sleep(500);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 1000);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
@@ -750,9 +750,9 @@ When (/^I validate child under 18 has zorg vrij, aanvullend best and tand best$/
 When (/^I validate child under 18 has zorg geregeld, aanvullend best and tand goed$/, async() => {
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 1000);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
@@ -765,11 +765,9 @@ When (/^I change hoofdverzekerde from zorg select to zorg geregeld$/, async() =>
     await zorgWizardMethods.accordeonOpenClose("1");
 });
 
-When (/^I validate child under 18 has zorg vrij and tand best$/, async() => {
+When (/^I validate child under 18 has zorg vrij$/, async() => {
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 1000);
 });
 
 When (/^I add to partner collectief aanvullend goed$/, async() => {
@@ -778,10 +776,9 @@ When (/^I add to partner collectief aanvullend goed$/, async() => {
     await zorgWizardMethods.accordeonOpenClose("2");
 });
 
-When (/^validate child under 18 has zorg vrij, collectief aanvullend goed and tand best$/, async() => {
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefAanvullendGoedActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 100);
+When (/^validate child under 18 has zorg vrij, collectief aanvullend goed$/, async() => {
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefAanvullendGoedActive, 1000);
 });
 
 When (/^I add a hoofdverzekerde with zorg geregeld, aanvullend best en tand goed$/, async() => {
@@ -898,43 +895,43 @@ When (/^I add a hoofdverzekerde with zorg vrij$/, async() => {
     await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
 });
 
-When (/^I add for partner zorg geregeld, collectief aanvullend goed and tand goed$/, async() => {
+When (/^I add for partner zorg geregeld, collectief aanvullend goed and collectief tand goed$/, async() => {
     await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringGeregeldClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendGoedClickElement);
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandGoedClickElement);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("2");
 });
 
-When (/^I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed extended accordeon$/, async() => {
+When (/^I validate child under 18 has zorg vrij, collectief aanvullend goed and collectief tand goed extended accordeon$/, async() => {
     await browser.sleep(500);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
     await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefAanvullendGoedActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefTandGoedActive, 100);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
 
-When (/^I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed$/, async() => {
+When (/^I validate child under 18 has zorg vrij, collectief aanvullend goed and collectief tand goed$/, async() => {
     await browser.sleep(500);
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefAanvullendGoedActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefAanvullendGoedActive, 1000);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18CollectiefTandGoedActive, 1000);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
 
-When (/^I add for first child above 18 zorg vrij and tand best$/, async() => {
+When (/^I add for first child above 18 zorg vrij and collectief tand best$/, async() => {
     await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandBestClickElement);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("4");
 });
 
-When (/^I add for second child above 18 zorg vrij and tand best$/, async() => {
+When (/^I add for second child above 18 zorg vrij and collectief tand best$/, async() => {
     await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
+    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandBestClickElement);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("5");
 });

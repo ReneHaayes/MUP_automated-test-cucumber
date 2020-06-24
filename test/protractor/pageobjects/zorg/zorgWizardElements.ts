@@ -126,9 +126,9 @@ kindOnder18BasisSelectActive = '[class="unive-basic-insurances-coverage unive-ba
 kindOnder18AanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                   '[data-additional-insurance-code="UCAC2"]';
 kindOnder18CollectiefAanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
-                                            '[data-additional-insurance-code="UCAC2"]';
+                                            '[data-additional-insurance-code="UZAZ2"]';
 kindOnder18CollectiefAanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
-                                            '[data-additional-insurance-code="UCAC4"]';
+                                            '[data-additional-insurance-code="UZAZ4"]';
 kindOnder18AanvullendBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
                                    '[data-additional-insurance-code="UCAC3"]';
 kindOnder18AanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
@@ -137,6 +137,8 @@ kindOnder18TandOngevallenActive = '[class="unive-additional-insurances-item univ
                                   '[data-additional-insurance-code="UCTCO"]';
 kindOnder18TandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                             '[data-additional-insurance-code="UCTC2"]';
+kindOnder18CollectiefTandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+                                      '[data-additional-insurance-code="UZTC2"]';
 kindOnder18TandBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                              '[data-additional-insurance-code="UCTC3"]';
 kindOnder18TandBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
