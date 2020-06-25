@@ -504,13 +504,13 @@ export class ZorgWizardMethods {
     
     async validateBasisInsurance(insuranceBasis: string){
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVrijActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVrijActive, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisGeregeldActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisGeregeldActive, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisSelectActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisSelectActive, 1000);
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis);
@@ -519,13 +519,13 @@ export class ZorgWizardMethods {
 
     async validateAanvullendInsurance(insuranceAanvullend: string){
         if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendGoedActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBeterActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBestActive, 1000);
         }
         else {
             throw new Error('No correct aanvullende insurance found for' + insuranceAanvullend);
@@ -534,16 +534,16 @@ export class ZorgWizardMethods {
 
     async validateTandInsurance(insuranceTand: string){
         if(insuranceTand == pakkettenEnum.TANDONGEVALLEN){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandOngevallenActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandOngevallenActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandGoedActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBeterActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBestActive, 1000);
         }
         else {
             throw new Error('No correct tand insurance found for' + insuranceTand);
@@ -567,13 +567,13 @@ export class ZorgWizardMethods {
 
     async validateAanvullendInsuranceUnder18(insuranceAanvullend: string){
         if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendGoedActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBeterActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 1000);
         }
         else {
             throw new Error('No correct aanvullende insurance found for' + insuranceAanvullend);
@@ -582,16 +582,16 @@ export class ZorgWizardMethods {
 
     async validateTandInsuranceUnder18(insuranceTand: string){
         if(insuranceTand == pakkettenEnum.TANDONGEVALLEN){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandOngevallenActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandOngevallenActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBeterActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 1000);
         }
         else {
             throw new Error('No correct tand insurance found for' + insuranceTand);
@@ -604,25 +604,25 @@ export class ZorgWizardMethods {
 
     async accordeonProductCheckVisible(data:string){
         await genericMethods.waitForElementIsVisible('unive-applicants:nth-child(' + data + ') > div > unive-applicants-content > unive-basic-insurances > div >' +
-        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 100);    
+        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 1000);    
     }
 
     async accordeonProductCheckNotVisible(data:string){
         await genericMethods.waitForElementNotVisible('unive-applicants:nth-child(' + data + ') > div > unive-applicants-content > unive-basic-insurances > div >' +
-        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 100);    
+        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 1000);    
     }
 
 
     async validateOpbouwPremieBasis(insuranceBasis: string){
         await genericMethods.clickOnElement(zorgWizardElements.bekijkOpbouwPremieButtonClickElement);
         if(insuranceBasis == pakkettenEnum.ZORGSELECT){
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 100);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGVRIJ, 100);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGVRIJ, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGGEREGELD, 100);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGGEREGELD, 1000);
         }
         else{
             throw new Error('No correct basis insurance found for' + insuranceBasis);
@@ -692,5 +692,32 @@ export class ZorgWizardMethods {
         else {
             throw new Error('There is no correct choice for acceptatievragen');
         } 
+    }
+
+    async validateVoorlopigeDekking(verzekeringsVerleden: string, strafrechtelijkVerleden: string, schadeverleden: string){
+        //overlay openen
+        await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenClickElement);
+        //valideer zorg van hoofdverzekerde
+        await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+        pakkettenEnum.ZORGVRIJ);
+        await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+        eigenRisicoEnum.EigenRisico_385);
+        //valideer DRV hoofdverzekerde
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.overlayControlerenH2TitelTextElement, zorgWizardCrossSellElements.overlayControlerenH2TitelDRVAnnuleringText);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking1TextElement, 1250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking2TextElement, 1250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking3TextElement, 1250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVPremieTextElement, 1250);
+        //valideer tekst voorlopige dekking
+            if(verzekeringsVerleden == inkomstenDropdownEnum.NEE && strafrechtelijkVerleden == inkomstenDropdownEnum.NEE && schadeverleden == inkomstenDropdownEnum.NEE) {
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 1250);
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingDRVText, 1250);
+            }
+            else {
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 1250);   
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 1250);
+            }
+        //sluit overlay
+        await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
     }
 }

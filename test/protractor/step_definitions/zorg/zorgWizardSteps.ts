@@ -1050,25 +1050,13 @@ When(/^I validate text voorlopige dekking is correct$/, async () => {
     await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingDRVText, 250);
 });
 
-When(/^I validate overlay controleren has correct zorg and DRV met annulering information$/, async () => {
-    //overlay openen
-    await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenClickElement);
-    //valideer zorg van hoofdverzekerde
-    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
-    pakkettenEnum.ZORGVRIJ);
-    await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
-    eigenRisicoEnum.EigenRisico_385);
-    //valideer DRV hoofdverzekerde
-    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.overlayControlerenH2TitelTextElement, zorgWizardCrossSellElements.overlayControlerenH2TitelDRVAnnuleringText);
-    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking1TextElement, 250);
-    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking2TextElement, 250);
-    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking3TextElement, 250);
-    await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVPremieTextElement, 250);
-    //valideer tekst voorlopige dekking
-    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 250);
-    await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingDRVText, 250);
-    //sluit overlay
-    await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
+When(/^I validate overlay controleren has correct zorg and DRV met annulering information with:$/, async (data) => {
+    const dataTable = data.rowsHash();
+    await zorgWizardMethods.validateVoorlopigeDekking(
+        dataTable.verzekeringsVerleden,
+        dataTable.strafrechtelijkVerleden,
+        dataTable.schadeVerleden
+    );
 });
 
 Then(/^validate that subtitles show correct label on buitenlandpagina$/, async () => {

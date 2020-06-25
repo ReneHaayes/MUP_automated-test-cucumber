@@ -113,7 +113,10 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |schadeVerleden         |<schadeVerleden>         |
         And I enter BSN on step 3 with <persona>
         And I validate text geen voorlopige dekking is correct
-        And I validate overlay controleren has correct zorg and DRV met annulering information
+        And I validate overlay controleren has correct zorg and DRV met annulering information with:
+        |verzekeringsVerleden   |<verzekeringsVerleden>   |
+        |strafrechtelijkVerleden|<strafrechtelijkVerleden>|
+        |schadeVerleden         |<schadeVerleden>         |
         And I click on bevestigen step 3 without bedankpagina check
         Then validate that doorlopende reis crossSell is not visible
         And validate all elements for zorg and <reisProduct> are correct
@@ -144,7 +147,10 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |schadeVerleden         |<schadeVerleden>         |
         And I enter BSN on step 3 with <persona>
         And I validate text voorlopige dekking is correct
-        And I validate overlay controleren has correct zorg and DRV met annulering information
+        And I validate overlay controleren has correct zorg and DRV met annulering information with:
+        |verzekeringsVerleden   |<verzekeringsVerleden>   |
+        |strafrechtelijkVerleden|<strafrechtelijkVerleden>|
+        |schadeVerleden         |<schadeVerleden>         |
         And I click on bevestigen step 3 without bedankpagina check
         Then validate that doorlopende reis crossSell is not visible
         And validate all elements for zorg and <reisProduct> are correct
