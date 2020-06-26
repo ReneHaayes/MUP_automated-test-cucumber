@@ -92,6 +92,7 @@ export enum verzekeringPaginasEnum {
   HOME_ZAKELIJK = 'zakelijktest',
   HOME_SALES = 'sales',
   HOME_SERVICE = 'service',
+  HOME_ATE = 'ate',
   AUTOVERZEKERING_PAT = 'Autoverzekering',
   AOVZZP_PAT = 'aovZzp',
   ANNULERINGSVERZEKERING = 'Annuleringsverzekering',

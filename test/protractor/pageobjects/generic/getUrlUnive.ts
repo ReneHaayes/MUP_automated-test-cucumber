@@ -348,6 +348,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.GEZONDHEID: {
         return 'https://gezondheid.unive.nl/';
       }
+      case verzekeringPaginasEnum.HOME_ATE: {
+        return 'https://qis-ate.unive.nl/';
+      }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
