@@ -307,6 +307,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgVerzekeringCrossSellBedankpaginaParameter;
       }
+      case verzekeringPaginasEnum.PREFILL_OMRING_PASHOUDERS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.prefillOmringPashoudersUrl;
+      }
       case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
       }
@@ -344,6 +347,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.GEZONDHEID: {
         return 'https://gezondheid.unive.nl/';
+      }
+      case verzekeringPaginasEnum.HOME_ATE: {
+        return 'https://qis-ate.unive.nl/';
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

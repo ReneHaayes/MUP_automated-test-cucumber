@@ -25,6 +25,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectWhoDrivesTheCarTheMost('mySelf');
   await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateAfterFixElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderBirthdateAfterFixElement);
   await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeAfterFixElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive('no');
@@ -58,6 +59,9 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
   await genericMethods.clickOnNextButton();
 });
 
+Then(/^Verify step two page of autoverzekering automatically prefilled with collective (.*)$/, async (collective: string) => {
+  await genericMethods.verifyValueTextInElement(autoVerzekeringElements.collectiveResultTextElement, collective);
+});
 
 Then(/^Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data$/, async () => {
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);

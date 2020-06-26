@@ -1,7 +1,8 @@
 export class MotorElements {
   //LICENSEPLATE
   licensePlateMotorInputElement: string = '#_Form_IF9914_9934';
-  licensePlateQuadTrikeInputElement: string = '#_Form_IF9913_9934';
+  licensePlateTrikeInputElement: string = '#_Form_IF9913_9934';
+  licensePlateQuadInputElement: string = '#_Form_IF9913_9934';
 
 
   //PRICE

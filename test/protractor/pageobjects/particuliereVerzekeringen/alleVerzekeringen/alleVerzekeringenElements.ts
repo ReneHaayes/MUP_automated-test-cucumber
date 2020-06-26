@@ -46,7 +46,7 @@ export class AlleVerzekeringenElements {
   camperVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/camperverzekering/premieberekenen-en-afsluiten"]';
   caravanVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/caravanverzekering/premieberekenen-en-afsluiten"]';
   bootVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/bootverzekering/premieberekenen-en-afsluiten"]';
-  autoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/autoverzekering/premieberekenen-en-afsluiten"]';
+  autoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="simpleWidget_submit"]';
   bromfietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bromfietsverzekering/premieberekenen-en-afsluiten"]';
   scooterVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/scooterverzekering/premieberekenen-en-afsluiten"]';
   motorVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/motorverzekering/premieberekenen-en-afsluiten"]';

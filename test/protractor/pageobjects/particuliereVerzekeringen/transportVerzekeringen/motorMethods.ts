@@ -12,24 +12,24 @@ export class MotorMethods {
   async enterLicensePlate(input: string) {
     switch (input) {
       case licensePlates.MOTOR_MPTT99: {
-        await genericMethods.typeText(motorElements.licensePlateQuadTrikeInputElement, input);
+        await genericMethods.typeText(motorElements.licensePlateTrikeInputElement, input);
         await browser.sleep(500);
-        await genericMethods.clickOnTAB(motorElements.licensePlateQuadTrikeInputElement);
+        await genericMethods.clickOnTAB(motorElements.licensePlateTrikeInputElement);
         // await genericMethods.waitForElementIsVisibleWithXpath(vehicleElements.licensePlateBrandNameElementWithXpath + '[contains(text(),"' + mopedWithLicensePlate.getMopedBrandName(licensePlate) + '")]', browser.getPageTimeout);
         break;
       }
       case licensePlates.QUAD_97XFTK: {
-        await genericMethods.typeText(motorElements.licensePlateQuadTrikeInputElement, input);
+        await genericMethods.typeText(motorElements.licensePlateQuadInputElement, input);
         await browser.sleep(500);
-        await genericMethods.clickOnTAB(motorElements.licensePlateQuadTrikeInputElement);
+        await genericMethods.clickOnTAB(motorElements.licensePlateQuadInputElement);
         await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
         await genericMethods.clickOnElement(motorElements.selectQuadElement);
         break;
       }
       case licensePlates.TRIKE_21PLN1: {
-        await genericMethods.typeText(motorElements.licensePlateQuadTrikeInputElement, input);
+        await genericMethods.typeText(motorElements.licensePlateTrikeInputElement, input);
         await browser.sleep(500);
-        await genericMethods.clickOnTAB(motorElements.licensePlateQuadTrikeInputElement);
+        await genericMethods.clickOnTAB(motorElements.licensePlateTrikeInputElement);
         await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
         await genericMethods.clickOnElement(motorElements.selectTrikeElement);
         break;
