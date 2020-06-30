@@ -1016,7 +1016,35 @@ When(/^I validate overlay controleren has correct zorg and DRV information$/, as
     await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
 });
 
-Then(/^validate all elements for zorg and (.*) are correct$/, async (reisProduct: string) => { 
+Then(/^validate all elements for zorg and (.*) are correct same startdate$/, async (reisProduct: string) => { 
+    //Valideer header
+    await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaH1DRVTextElement, zorgWizardCrossSellElements.bedankpaginaH1DRVText);
+    //valideer DRV teksten op bedankpagina
+    if(reisProduct == crossSellEnum.DOORLOPENDEREISVERZEKERING) {
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelZorgverzekeringTextElement, crossSellEnum.ZORGVERZEKERING);
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelDRVTextElement, crossSellEnum.DOORLOPENDEREISVERZEKERING);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumGelijkDRVText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPolisTextElement, zorgWizardCrossSellElements.bedankpaginaPolisText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPremieTextElement, zorgWizardCrossSellElements.bedankpaginaPremieText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.ZORGVERZEKERING, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.DOORLOPENDEREISVERZEKERING, 250);
+    }
+    //valideer DRV met annulering teksten op bedankpagina
+    else if(reisProduct == crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING) {
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelZorgverzekeringTextElement, crossSellEnum.ZORGVERZEKERING);
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelDRVTextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumGelijkDRVAnnuleringText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPolisTextElement, zorgWizardCrossSellElements.bedankpaginaPolisText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPremieTextElement, zorgWizardCrossSellElements.bedankpaginaPremieText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.ZORGVERZEKERING, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING, 250);
+    }
+    else {
+        throw new Error('There is no correct choice for' + reisProduct);
+    } 
+});
+
+Then(/^validate all elements for zorg and (.*) are correct different startdate$/, async (reisProduct: string) => { 
     //Valideer header
     await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaH1DRVTextElement, zorgWizardCrossSellElements.bedankpaginaH1DRVText);
     //valideer DRV teksten op bedankpagina
@@ -1034,7 +1062,8 @@ Then(/^validate all elements for zorg and (.*) are correct$/, async (reisProduct
     else if(reisProduct == crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING) {
         await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelZorgverzekeringTextElement, crossSellEnum.ZORGVERZEKERING);
         await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.bedankpaginaSubtitelDRVTextElement, crossSellEnum.DOORLOPENDEREISENANNULERINGSVERZEKERING);
-        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumGelijkDRVAnnuleringText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumOngelijkZorgText, 250);
+        await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaIngangsdatumTextElement, zorgWizardCrossSellElements.bedankpaginaIngangsdatumOngelijkDRVAnnuleringText, 250);
         await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPolisTextElement, zorgWizardCrossSellElements.bedankpaginaPolisText, 250);
         await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaPremieTextElement, zorgWizardCrossSellElements.bedankpaginaPremieText, 250);
         await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.bedankpaginaHeeftUNogVragenTextElement, crossSellEnum.ZORGVERZEKERING, 250);

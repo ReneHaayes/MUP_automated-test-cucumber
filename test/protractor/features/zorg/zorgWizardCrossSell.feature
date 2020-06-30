@@ -90,7 +90,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |insuranceBasis|persona|inkomstenNietNL|inkomstenNL|
         |Zorg Vrij     |ronaldo|Nee            |           |
 
-    @buitenlandStap
+    @buitenlandStap1
     Scenario Outline: check of DRV met annulering op buitenland stap goed gaat door de hele front-end
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
         And I select basic insurance no collective with:
@@ -119,14 +119,14 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |schadeVerleden         |<schadeVerleden>         |
         And I click on bevestigen step 3 without bedankpagina check
         Then validate that doorlopende reis crossSell is not visible
-        And validate all elements for zorg and <reisProduct> are correct
+        And validate all elements for zorg and <reisProduct> are correct different startdate
         And validate that bedanktpagina and all elements are correct with <persona>
         
         Examples:
         |insuranceBasis|reisProduct                                |persona|inkomstenNietNL|inkomstenNL|verzekeringsVerleden|strafrechtelijkVerleden|schadeVerleden|
-        |Zorg Vrij     |doorlopende reis- en annuleringsverzekering|ronaldo|Nee            |           |Ja                  |Ja                     |Ja            |
+        |Zorg Vrij     |doorlopende reis- en annuleringsverzekering|ronaldo|Nee            |           |Nee                 |Nee                     |Ja            |
 
-    @buitenlandStap
+    @buitenlandStap1
     Scenario Outline: check of DRV met annulering op buitenland stap goed gaat door de hele front-end
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
         And I select basic insurance no collective with:
@@ -153,7 +153,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |schadeVerleden         |<schadeVerleden>         |
         And I click on bevestigen step 3 without bedankpagina check
         Then validate that doorlopende reis crossSell is not visible
-        And validate all elements for zorg and <reisProduct> are correct
+        And validate all elements for zorg and <reisProduct> are correct same startdate
         And validate that bedanktpagina and all elements are correct with <persona>
     
         Examples:

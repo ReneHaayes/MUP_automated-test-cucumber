@@ -689,6 +689,12 @@ export class ZorgWizardMethods {
             await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenNeeRadioButton);
             await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdSchadeverledenNeeRadioButton);
         }
+        //eerste 2 vragen met nee en laatste met ja
+        else if(verzekeringsVerleden == inkomstenDropdownEnum.NEE && strafrechtelijkVerleden == inkomstenDropdownEnum.NEE && schadeVerleden == inkomstenDropdownEnum.JA){
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdVerzekeringsverledenNeeRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenNeeRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdSchadeverledenJaRadioButton);
+        }
         else {
             throw new Error('There is no correct choice for acceptatievragen');
         } 
@@ -714,8 +720,8 @@ export class ZorgWizardMethods {
                 await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingDRVText, 1250);
             }
             else {
-                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 1250);   
-                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 1250);
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVGeenVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 1250);   
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVGeenVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 1250);
             }
         //sluit overlay
         await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
