@@ -90,7 +90,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |insuranceBasis|persona|inkomstenNietNL|inkomstenNL|
         |Zorg Vrij     |ronaldo|Nee            |           |
 
-    @buitenlandStap1
+    @buitenlandStap
     Scenario Outline: check of DRV met annulering op buitenland stap goed gaat door de hele front-end
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
         And I select basic insurance no collective with:
@@ -126,7 +126,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |insuranceBasis|reisProduct                                |persona|inkomstenNietNL|inkomstenNL|verzekeringsVerleden|strafrechtelijkVerleden|schadeVerleden|
         |Zorg Vrij     |doorlopende reis- en annuleringsverzekering|ronaldo|Nee            |           |Nee                 |Nee                     |Ja            |
 
-    @buitenlandStap1
+    @buitenlandStap
     Scenario Outline: check of DRV met annulering op buitenland stap goed gaat door de hele front-end
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
         And I select basic insurance no collective with:
