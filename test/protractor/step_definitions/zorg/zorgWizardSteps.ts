@@ -801,6 +801,7 @@ When (/^I change hoofdverzekerde to zorg select and modules fysio18, tand ongeva
     await genericMethods.clickOnElement(zorgWizardElements.moduleTandOngevallenClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.moduleTand250ClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.moduleBuitenlanddekkingClickElement);
+    await browser.sleep(5000);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("1");
 });
@@ -808,11 +809,11 @@ When (/^I change hoofdverzekerde to zorg select and modules fysio18, tand ongeva
 When (/^I validate child under 18 has zorg select and modules fysio18, tand ongevallen, tand500 and werelddekking$/, async() => {
     await browser.sleep(500);
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisSelectActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisSelectActive, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 1500);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
@@ -826,6 +827,7 @@ When (/^I change partner to zorg select and modules fysio9, tand500 and wereldde
     await genericMethods.clickOnElement(zorgWizardElements.moduleFysio9ClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.moduleTand500ClickElement);
     await genericMethods.clickOnElement(zorgWizardElements.moduleBuitenlanddekkingClickElement);
+    await browser.sleep(5000);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("2");
 });
@@ -858,15 +860,15 @@ When (/^I change hoofdverzekerde and partner to zorg geregeld$/, async() => {
     await zorgWizardMethods.accordeonOpenClose("2");    
 });
 
-When (/^validate child under 18 has zorg geregeld without any modules$/, async() => {
+When (/^validate child under 18 has zorg geregeld and Tand Ongevallen$/, async() => {
     await browser.sleep(500);
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18BasisSelectActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18BasisSelectActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 1500);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });

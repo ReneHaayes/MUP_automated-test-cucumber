@@ -560,7 +560,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona    |persona1          |      
         |testPartner|testkindOnder18Een|
     
-    @ouderKindTabel
+    @ouderKindTabel1
     Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op losse modules
         Given I am on the Zorgverzekering page of the Unive website
         And I add a hoofdverzekerde with zorg geregeld, aanvullend best en tand goed
@@ -579,7 +579,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I add for child above 18 zorg vrij, aanvullend best en tand best
         And I validate child under 18 has zorg select and modules fysio18, tand ongevallen, tand500 and werelddekking
         And I change hoofdverzekerde and partner to zorg geregeld
-        Then validate child under 18 has zorg geregeld without any modules
+        Then validate child under 18 has zorg geregeld and Tand Ongevallen
         And add to partner tand goed
         And validate child under 18 has zorg geregeld and tand goed
 
@@ -587,7 +587,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
 
-    @ouderKindTabel1
+    @ouderKindTabel
     Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op kinderen toevoegen/verwijderen
         Given I am on the Zorgverzekering page of the Unive website
         And I click on add collective button in wizard
