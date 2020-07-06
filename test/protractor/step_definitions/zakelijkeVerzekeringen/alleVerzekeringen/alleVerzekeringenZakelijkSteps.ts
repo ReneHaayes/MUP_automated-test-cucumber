@@ -6,11 +6,11 @@ When(/^I click on (.*) at the alle verzekeringen zakelijk page$/, async (buttonP
   await alleVerzekeringenZakelijkMethods.clickAlleVerzekeringInput(buttonPage);
 });
 
-Then(/^Verify elements on (.*) product page zakelijk is shown$/, async (buttonPage: string) => {
+Then(/^Verify elements on (.*) product page zakelijk is shown$/, async (buttonPage2: string) => {
   try {
     await genericMethods.clickOnCookie(genericElements.cookieClickElement);
   } catch (e) {
   }
-  await alleVerzekeringenZakelijkMethods.verifyAlleVerzekeringInput(buttonPage);
+  await alleVerzekeringenZakelijkMethods.verifyAlleVerzekeringInput(buttonPage2);
 });
 

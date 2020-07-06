@@ -25,6 +25,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectWhoDrivesTheCarTheMost('mySelf');
   await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateAfterFixElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.clickOnTAB(nawElements.hoofdbestuurderBirthdateAfterFixElement);
   await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeAfterFixElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive('no');
@@ -58,6 +59,9 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
   await genericMethods.clickOnNextButton();
 });
 
+Then(/^Verify step two page of autoverzekering automatically prefilled with collective (.*)$/, async (collective: string) => {
+  await genericMethods.verifyValueTextInElement(autoVerzekeringElements.collectiveResultTextElement, collective);
+});
 
 Then(/^Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data$/, async () => {
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
@@ -95,6 +99,9 @@ When(/^Customer enters step four page of autoverzekering for (.*)$/, async (pers
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);
+  await genericMethods.typeText(nawElements.yourDataEmailAddressConfirmElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressConfirmElement);
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);

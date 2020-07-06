@@ -47,6 +47,9 @@ When(/^I enter details of (.*) in your data page of reis verzekeringen$/, async 
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);
+  await genericMethods.typeText(nawElements.yourDataEmailAddressConfirmElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressConfirmElement);
   await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
@@ -69,10 +72,10 @@ When(/^I enter step one and step two page of kortlopende annuleringsverzekering 
   await reisVerzekeringMethods.selectChildrenTillFourYears(dataTable.childrenTillFourYears);
   await genericMethods.typeText(reisVerzekeringElements.leavingDateInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(reisVerzekeringElements.returnDateInputElement, genericMethods.getDate('seven days'));
+  // await genericMethods.clickOnElement('[data-label-id="LA_IF11808_16114"] > div > label:nth-child(1)');
   await genericMethods.typeText(reisVerzekeringElements.bookdateTripInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(reisVerzekeringElements.totalValueOfTripInputElement, dataTable.totalValue);
-  await genericMethods.clickOnNextButton();
-  await genericMethods.clickOnNextButton();
+  await genericMethods.clickOnNextButton();  await genericMethods.clickOnNextButton();
 });
 
 When(/^I click on the (.*) to insure$/, async (familyMembers: string) => {

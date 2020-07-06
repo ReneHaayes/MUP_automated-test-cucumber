@@ -585,9 +585,9 @@ export class GenericMethods {
 
   async verifyThankYouPageTitle(persona: string) {
     if (personaData.getPersonaGender(persona) === gender.MALE) {
-      await this.verifyTextInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona))
+      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona), browser.getPageTimeout)
     } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
-      await this.verifyTextInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona))
+      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona), browser.getPageTimeout)
     } else {
       throw new Error('The input: "" ' + persona + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
     }

@@ -11,8 +11,8 @@ export class StickyBalkElements {
   bekijkOpbouwPremieSamenvattingGeselecteerdeBasisDekkingTextElement = '[class="line premium bold"] [class="label"]';
 
   //STICKY RECHTSBIJSTANDVERZEKERING
-  bekijkOpbouwPremieSamenvattingGezinssamenstellingTextElement = '#element1 > div > span.qisZone_sidebarData > div > dl > div > dd > div > div > div.value';
-  bekijkOpbouwPremieSamenvattingKeuzeTextElement = '#element1 > div > span.qisZone_sidebarPremium > div > dl > div > dd > div > div:nth-child(1) > div.label';
+  bekijkOpbouwPremieSamenvattingGezinssamenstellingTextElement = '#SIDEBAR-ID > div > span.qisZone_sidebarData > div > dl > div > dd > div > div > div.value';
+  bekijkOpbouwPremieSamenvattingKeuzeTextElement = '#SIDEBAR-ID > div > span.qisZone_sidebarPremium > div > dl > div > dd > div > div:nth-child(1) > div.label';
 
   //STICKY DOORLOPENDE VERZEKERING
   bekijkOpbouwPremieSamenvattingVerzekerdenTextElement = '#element1 > div > span.qisZone_sidebarData > div > dl > div > dd > div > div:nth-child(2)'

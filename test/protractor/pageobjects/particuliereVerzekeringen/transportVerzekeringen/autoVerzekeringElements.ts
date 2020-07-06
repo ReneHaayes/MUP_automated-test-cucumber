@@ -93,7 +93,7 @@ export class AutoVerzekeringElements {
 
   //COLLECTIVE
   collectiveInputElement: string = '.collectiveSearch_query';
-  collectiveAutoCompleteClickElement: string = '.autocomplete-suggestion';
+  collectiveAutoCompleteClickElement: string = '[class="autocomplete-items"] > div';
   collectiveResultTextElement: string = '#_Form_IF4105_6208';
 
 }

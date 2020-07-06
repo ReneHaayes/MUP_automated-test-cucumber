@@ -22,7 +22,7 @@ Feature: Check for Afspraak maken page is correctly handled
       | persona |
       | illing  |
 
-  Scenario: Verify afspraak maken form is prefilled with customer information when logged in
+  Scenario: Verify afspraak maken button is available when logged in
     Given Customer illing is logged in on the mijn unive particulier page of the Unive website
     When Customer navigates to winkel details and clicks on afspraak maken
     Then Verify button in winkel details navigates to afspraak maken url

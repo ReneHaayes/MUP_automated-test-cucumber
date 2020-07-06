@@ -1,5 +1,5 @@
 import {Then, When} from "cucumber";
-import {alleVerzekeringenElements, alleVerzekeringenMethods, genericElements, genericMethods} from "@support";
+import {alleVerzekeringenElements, alleVerzekeringenMethods, genericMethods} from "@support";
 
 When(/^I select (.*) and click on (.*) at the alle verzekeringen page$/, async (select: string, buttonPage: string) => {
   await alleVerzekeringenMethods.selectAlleVerzekeringDropdown(select);
@@ -12,10 +12,10 @@ When(/^I select (.*) and click on (.*) at the alle verzekeringen bottom page$/, 
 });
 
 Then(/^Verify elements on (.*) product page is shown$/, async (buttonPage: string) => {
-  try {
-    await genericMethods.clickOnCookie(genericElements.cookieClickElement);
-  } catch (e) {
-  }
+  // try {
+  //   await genericMethods.clickOnCookie(genericElements.cookieClickElement);
+  // } catch (e) {
+  // }
   await alleVerzekeringenMethods.verifyAlleVerzekeringInput(buttonPage);
 });
 

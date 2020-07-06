@@ -44,6 +44,7 @@ export class NawElements {
   yourDataSpecificIdentificationSomethingElseSelect: string = 'string:AndersLw';
   yourDataZipCodeElement: string = '#_Form_IF2530_3693';
   yourDataEmailAddressElement: string = '#_Form_IF2530_3701';
+  yourDataEmailAddressConfirmElement: string = '[data-input-field-id="IF2530_44414"]';
   yourDataPhoneNumberElement: string = '#_Form_IF2530_3699';
 
   //UW BETAAL GEGEVENS

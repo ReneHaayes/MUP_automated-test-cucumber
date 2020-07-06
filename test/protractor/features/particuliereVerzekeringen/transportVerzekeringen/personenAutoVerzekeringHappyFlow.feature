@@ -18,3 +18,9 @@ Feature: Happy flow for 'personenautoverzekering'
     Examples:
       | licensePlate | persona |
       | 06-HN-DL     | ronaldo |
+
+  Scenario: Checking if the prefill for collectives are working correctly
+    Given I am on the prefill omring pashouders page of the Unive website
+    When Customer enters step one page of autoverzekeringen for ronaldo with license plate 06-HN-DL
+    Then Verify step two page of autoverzekering automatically prefilled with collective string:16427
+
