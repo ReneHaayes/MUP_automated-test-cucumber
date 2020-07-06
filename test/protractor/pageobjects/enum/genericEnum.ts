@@ -197,6 +197,7 @@ export enum verzekeringPaginasEnum {
   CALAMITEITEIN = 'calamiteiten',
   ZORGVERZEKERINGCROSSSELLINWIZARDPARAMETER = 'zorgVerzekeringCrossSellInWizardParameter',
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
+  ZORGPREMIEALERT = 'zorgPremieAlert',
   PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders'
 }
 

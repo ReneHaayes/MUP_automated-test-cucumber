@@ -21,7 +21,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |collective        |<collective>        |
         |discountBasis     |<discountBasis>     |
         |discountAanvullend|<discountAanvullend>|
-        Then select basic insurance and validate that all aanvullende packages -not thuiszorgcollective- and tand packages are visible and clickable with correct discount with:
+        Then select basic insurance and validate that all aanvullende packages and tand packages are visible and clickable with correct discount with:
         |collective        |<collective>        |
         |insuranceBasis    |<insuranceBasis>    |
         |discountBasis     |<discountBasis>     |
@@ -33,6 +33,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |Nic Oud BV            |Zorg Geregeld |3%           |10%               |
         |Icare Ledenvereniging |Zorg Vrij     |5%           |10%               |
         |Icare Ledenvereniging |Zorg Geregeld |5%           |10%               |
+        |VZZP                  |Zorg Vrij     |3%           |                  |
     
     @collectieven
     Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
@@ -70,6 +71,20 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And Verify that all modules are clickable
         And I click on Pakketten button
         And verify that all aanvullende packages and tand packages -not collective- are clickable
+    
+    @borderelCollectief
+    Scenario: voeg collectief toe, selecteer zorg vrij, verifieer dat "laat alle basisverzekering" niet zichtbaar is, verifieer dat niet mogelijk is om zorg select te kiezen
+        Given I am on the Zorgverzekering page of the Unive website
+        When I click on add collective button in wizard
+        And I add a collective with:
+        |collective|SC Heerenveen|
+        And I select basic insurance no collective with:
+        |insuranceBasis|Zorg Vrij|
+        And I select aanvullende insurance no collective with:
+        |insuranceAanvullend|Aanvullend Goed|
+        And I validate that correct premietermijn and text are in the stickybalk
+        And I click on Volgende page one
+        Then validate betalingsoptie is correct on Uw Gegevens page
     
     @bedankPagina
     Scenario Outline: Doorlopen van de wizard en checken of bijna verzekerd pagina en bedankpagina de juiste elementen bevatten
@@ -155,7 +170,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |Zorg Geregeld |785        |
         |Zorg Geregeld |885        |
     
-    Scenario: selecteer premie per jaar en check of op stap 2 acceptgiro zichtbaar is
+    Scenario: selecteer premie per jaar en check of op stap 2 acceptgiro niet zichtbaar is
         Given I am on the Zorgverzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|Zorg Select|
@@ -163,7 +178,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceAanvullend|Aanvullend Beter|
         And I select premie per jaar optie
         And I click on Volgende page one
-        Then Verify that payment by acceptgiro option is visible
+        Then Verify that payment by acceptgiro option is not visible and automatische incasso is visible
     
     @actievePolisCheck
     Scenario Outline: valideer dat de actieve polis check getriggered wordt en de klant niet door kan navigeren in de wizard op stap 2 (behalve naar MijnUnive)
@@ -212,7 +227,8 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
-        When I am on the zorgVrij page of the Unive website
+        And I do nothing
+        When I change to zorgVrij page
         And I click on the floating button
         Then validate that customer is redirected to wizard with the correct products prefilled with:
         |insuranceBasis|<insuranceBasis>|
@@ -227,9 +243,10 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
-        When I am on the autoverzekeringProductPage page of the Unive website
+        And I do nothing
+        When I change to autoverzekeringProductPage page
         And Validate the floating button is not present
-        And I am on the eigenRisico page of the Unive website
+        And I change to eigenRisico page
         And I click on the floating button
         Then validate that customer is redirected to wizard with the correct products prefilled with:
         |insuranceBasis|<insuranceBasis>|
@@ -244,10 +261,13 @@ Feature: Validatie van functionaliteit in de zorgwizard
         Given I am on the Zorgverzekering page of the Unive website
         And I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|
-        When I am on the zorgVrij page of the Unive website
+        And I do nothing
+        When I change to zorgVrij page
         And I click on the close floating button
-        And I am on the Zorgverzekering page of the Unive website
-        And I am on the zorgVrij page of the Unive website
+        And I do nothing
+        And I change to Zorgverzekering page
+        And I do nothing
+        And I change to zorgVrij page
         Then Validate the floating button is not present
     
         Examples:
@@ -531,9 +551,9 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I click on add collective button in wizard
         And I add a collective with:
         |collective|Icare Ledenvereniging|
-        And I validate child under 18 has zorg vrij and tand best
+        And I validate child under 18 has zorg vrij
         And I add to partner collectief aanvullend goed
-        Then validate child under 18 has zorg vrij, collectief aanvullend goed and tand best
+        Then validate child under 18 has zorg vrij, collectief aanvullend goed
         And I delete the collective in wizard
 
         Examples:
@@ -559,7 +579,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I add for child above 18 zorg vrij, aanvullend best en tand best
         And I validate child under 18 has zorg select and modules fysio18, tand ongevallen, tand500 and werelddekking
         And I change hoofdverzekerde and partner to zorg geregeld
-        Then validate child under 18 has zorg geregeld without any modules
+        Then validate child under 18 has zorg geregeld and Tand Ongevallen
         And add to partner tand goed
         And validate child under 18 has zorg geregeld and tand goed
 
@@ -567,7 +587,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
 
-        @ouderKindTabel
+    @ouderKindTabel
     Scenario Outline: valideer de ouder kind tabel om te zien of kind < 18 de beste verzekering van hoofdverzekerde en partner meekrijgt - focus op kinderen toevoegen/verwijderen
         Given I am on the Zorgverzekering page of the Unive website
         And I click on add collective button in wizard
@@ -576,22 +596,27 @@ Feature: Validatie van functionaliteit in de zorgwizard
         And I add a hoofdverzekerde with zorg vrij
         And I click on partner toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona>
-        And I add for partner zorg geregeld, collectief aanvullend goed and tand goed
+        And I add for partner zorg geregeld, collectief aanvullend goed and collectief tand goed
         And I click on kind toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona1>
-        And I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed extended accordeon
+        And I validate child under 18 has zorg vrij, collectief aanvullend goed and collectief tand goed extended accordeon
         When I click on kind toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona2>
-        And I add for first child above 18 zorg vrij and tand best
-        And I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed
+        And I add for first child above 18 zorg vrij and collectief tand best
+        And I validate child under 18 has zorg vrij, collectief aanvullend goed and collectief tand goed
         And I click on kind toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona2>
-        And I add for second child above 18 zorg vrij and tand best
+        And I add for second child above 18 zorg vrij and collectief tand best
         And I delete child under 18
         And I click on kind toevoegen button
         And I add a partner or child -not same insurance checkbox checked- with <persona1>
-        Then I validate child under 18 has zorg vrij, collectief aanvullend goed and tand goed
+        Then I validate child under 18 has zorg vrij, collectief aanvullend goed and collectief tand goed
 
         Examples:
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
+
+    @wilfried
+    Scenario: Checken van zorgpremie-alert pagina recaptcha
+        Given I am on the zorgPremieAlert page of the Unive website
+        When I fill in the form a lot of times

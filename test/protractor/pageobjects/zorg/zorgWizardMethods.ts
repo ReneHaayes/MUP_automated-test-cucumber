@@ -6,21 +6,38 @@ export class ZorgWizardMethods {
 
     async addCollective(collective: string){
     if(collective == collectievenEnum.OMRINGMEDEWERKERS){
-        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS1);
-        await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGMEDEWERKERS2);
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.OMRINGCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
     }
     else if(collective == collectievenEnum.ICARELEDENVERENIGING){
-        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING1);
-        await genericMethods.typeTextNoClear(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARELEDENVERENIGING2);
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.ICARECODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if(collective == collectievenEnum.HUURDERSVERENIGINGIJSSELSTEIN){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.HUURDERSVERENIGINGIJSSELSTEINCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if(collective == collectievenEnum.NICOUDBV){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.NICOUDBVCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if(collective == collectievenEnum.VZZP){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.VZZPCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
+    else if (collective == collectievenEnum.SCHEERENVEEN){
+        await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collectievenEnum.SCHEERENVEENCODE);
+        await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+        await genericMethods.verifyTextInElement(zorgWizardElements.collectiefOverlayBetalingsTextElement, zorgWizardElements.collectiefOverlayBetalingsText);
     }
     else {
         await genericMethods.typeText(zorgWizardElements.addCollectiveTextInputElement, collective);
-    }
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveFirstSearchResultClickElement);
+    }
         await genericMethods.clickOnElement(zorgWizardElements.addCollectiveButtonClickElement);
     }
 
-    async CheckPakkettenNietThuiszorgCollectief(collective: string, insuranceBasis: string, discountBasis: string, discountAanvullend: string){
+    async CheckPakkettenThuiszorgEnNietThuiszorgCollectief(collective: string, insuranceBasis: string, discountBasis: string, discountAanvullend: string){
     if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
         //klik op en verifieer basisverzekering
         await genericMethods.clickOnElement(zorgWizardElements.basisVerzekeringVrijClickElement);
@@ -36,57 +53,101 @@ export class ZorgWizardMethods {
         await genericMethods.verifyTextContainsInElement(zorgWizardElements.basisVerzekeringCollectiefKortingTextElement, discountBasis, 250);
     }
     if(collective == collectievenEnum.ICARELEDENVERENIGING){
-    //klik op en verifieer aanvullend goed
-    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendGoedClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.COLLECTIEFAANVULLENDGOED, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, collective, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, discountAanvullend, 100);
-    //klik op en verifieer aanvullend beter
-    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendBeterClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBeterTextElement, pakkettenEnum.COLLECTIEFAANVULLENDBETER, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, collective, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, discountAanvullend, 100);
-    //klik op en verifieer aanvullend best
-    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendBestClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.COLLECTIEFAANVULLENDBEST, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);    
+        //klik op en verifieer aanvullend goed
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.COLLECTIEFAANVULLENDGOED, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, collective, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer aanvullend beter
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBeterTextElement, pakkettenEnum.COLLECTIEFAANVULLENDBETER, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, collective, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer aanvullend best
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringCollectiefAanvullendBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.COLLECTIEFAANVULLENDBEST, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer tand ongevallen
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
+        //klik op en verifieer tand goed
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
+        //klik op en verifieer tand beter
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
+        //klik op en verifieer tand best
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenCollectiefTandBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);    
     }
-    else if (collective != collectievenEnum.ICARELEDENVERENIGING){
-    //klik op en verifieer aanvullend goed
-    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.AANVULLENDGOED, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, collective, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, discountAanvullend, 100);
-    //klik op en verifieer aanvullend beter
-    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBeterTextElement, pakkettenEnum.AANVULLENDBETER, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, collective, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, discountAanvullend, 100);
-    //klik op en verifieer aanvullend best
-    await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.AANVULLENDBEST, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);
+    else if (collective == collectievenEnum.NICOUDBV || collective == collectievenEnum.OMRINGMEDEWERKERS){
+        //klik op en verifieer aanvullend goed
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.AANVULLENDGOED, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, collective, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer aanvullend beter
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBeterTextElement, pakkettenEnum.AANVULLENDBETER, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, collective, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer aanvullend best
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.AANVULLENDBEST, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, zorgWizardElements.collectiefKortingText, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, collective, 100);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, discountAanvullend, 100);
+        //klik op en verifieer tand ongevallen
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
+        //klik op en verifieer tand goed
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
+        //klik op en verifieer tand beter
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
+        //klik op en verifieer tand best
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);
     }
-    //klik op en verifieer tand ongevallen
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
-    //klik op en verifieer tand goed
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
-    //klik op en verifieer tand beter
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
-    //klik op en verifieer tand best
-    await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
-    await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);
+    else if (collective == collectievenEnum.VZZP) {
+        //klik op en verifieer aanvullend goed
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendGoedTextElement, pakkettenEnum.AANVULLENDGOED, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendGoedKortingTextElement, 100);   
+        //klik op en verifieer aanvullend beter
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBeterTextElement, pakkettenEnum.AANVULLENDBETER, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBeterKortingTextElement, 100);   
+        //klik op en verifieer aanvullend best
+        await genericMethods.clickOnElement(zorgWizardElements.aanvullendeVerzekeringAanvullendBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.aanvullendBestTextElement, pakkettenEnum.AANVULLENDBEST, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);
+        await genericMethods.waitForElementNotVisible(zorgWizardElements.aanvullendeVerzekeringAanvullendBestKortingTextElement, 100);
+        //klik op en verifieer tand ongevallen
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandOngevallenClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandOngevallenTextElement, pakkettenEnum.TANDONGEVALLEN, 100);
+        //klik op en verifieer tand goed
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandGoedClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandGoedTextElement, pakkettenEnum.TANDGOED, 100);
+        //klik op en verifieer tand beter
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBeterClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBeterTextElement, pakkettenEnum.TANDBETER, 100);
+        //klik op en verifieer tand best
+        await genericMethods.clickOnElement(zorgWizardElements.tandVerzekeringenTandBestClickElement);
+        await genericMethods.verifyTextContainsInElement(zorgWizardElements.tandBestTextElement, pakkettenEnum.TANDBEST, 100);  
+    }
     }
 
     async selectInsuranceBasisWithCollective(insuranceBasis: string, collective: string){
@@ -443,13 +504,13 @@ export class ZorgWizardMethods {
     
     async validateBasisInsurance(insuranceBasis: string){
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVrijActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisVrijActive, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisGeregeldActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisGeregeldActive, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGSELECT){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisSelectActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.basisSelectActive, 1000);
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis);
@@ -458,13 +519,13 @@ export class ZorgWizardMethods {
 
     async validateAanvullendInsurance(insuranceAanvullend: string){
         if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendGoedActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBeterActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.aanvullendBestActive, 1000);
         }
         else {
             throw new Error('No correct aanvullende insurance found for' + insuranceAanvullend);
@@ -473,16 +534,16 @@ export class ZorgWizardMethods {
 
     async validateTandInsurance(insuranceTand: string){
         if(insuranceTand == pakkettenEnum.TANDONGEVALLEN){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandOngevallenActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandOngevallenActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandGoedActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBeterActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.tandBestActive, 1000);
         }
         else {
             throw new Error('No correct tand insurance found for' + insuranceTand);
@@ -491,13 +552,13 @@ export class ZorgWizardMethods {
 
     async validateBasisInsuranceUnder18(insuranceBasis: string){
         if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisVrijActive, 1000);
         }
         else if(insuranceBasis = pakkettenEnum.ZORGSELECT){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisSelectActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisSelectActive, 1000);
         }
         else if(insuranceBasis = pakkettenEnum.ZORGGEREGELD){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 1000);
         }
         else {
             throw new Error('No correct basic insurance found for' + insuranceBasis);
@@ -506,13 +567,13 @@ export class ZorgWizardMethods {
 
     async validateAanvullendInsuranceUnder18(insuranceAanvullend: string){
         if(insuranceAanvullend == pakkettenEnum.AANVULLENDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendGoedActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBeterActive, 1000);
         }
         else if(insuranceAanvullend == pakkettenEnum.AANVULLENDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18AanvullendBestActive, 1000);
         }
         else {
             throw new Error('No correct aanvullende insurance found for' + insuranceAanvullend);
@@ -521,16 +582,16 @@ export class ZorgWizardMethods {
 
     async validateTandInsuranceUnder18(insuranceTand: string){
         if(insuranceTand == pakkettenEnum.TANDONGEVALLEN){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandOngevallenActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandOngevallenActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDGOED){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBETER){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBeterActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBeterActive, 1000);
         }
         else if(insuranceTand == pakkettenEnum.TANDBEST){
-            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 100);
+            await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandBestActive, 1000);
         }
         else {
             throw new Error('No correct tand insurance found for' + insuranceTand);
@@ -543,25 +604,25 @@ export class ZorgWizardMethods {
 
     async accordeonProductCheckVisible(data:string){
         await genericMethods.waitForElementIsVisible('unive-applicants:nth-child(' + data + ') > div > unive-applicants-content > unive-basic-insurances > div >' +
-        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 100);    
+        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 1000);    
     }
 
     async accordeonProductCheckNotVisible(data:string){
         await genericMethods.waitForElementNotVisible('unive-applicants:nth-child(' + data + ') > div > unive-applicants-content > unive-basic-insurances > div >' +
-        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 100);    
+        ' unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active', 1000);    
     }
 
 
     async validateOpbouwPremieBasis(insuranceBasis: string){
         await genericMethods.clickOnElement(zorgWizardElements.bekijkOpbouwPremieButtonClickElement);
         if(insuranceBasis == pakkettenEnum.ZORGSELECT){
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 100);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGSELECT, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGVRIJ, 100);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGVRIJ, 1000);
         }
         else if(insuranceBasis == pakkettenEnum.ZORGGEREGELD){
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGGEREGELD, 100);
+            await genericMethods.verifyTextContainsInElement(zorgWizardElements.bekijkOpbouwPremieFirstTextElement, pakkettenEnum.ZORGGEREGELD, 1000);
         }
         else{
             throw new Error('No correct basis insurance found for' + insuranceBasis);
@@ -628,8 +689,41 @@ export class ZorgWizardMethods {
             await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenNeeRadioButton);
             await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdSchadeverledenNeeRadioButton);
         }
+        //eerste 2 vragen met nee en laatste met ja
+        else if(verzekeringsVerleden == inkomstenDropdownEnum.NEE && strafrechtelijkVerleden == inkomstenDropdownEnum.NEE && schadeVerleden == inkomstenDropdownEnum.JA){
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdVerzekeringsverledenNeeRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdStrafrechtelijkverledenNeeRadioButton);
+            await genericMethods.clickOnElement(zorgWizardCrossSellElements.bijnaVerzekerdSchadeverledenJaRadioButton);
+        }
         else {
             throw new Error('There is no correct choice for acceptatievragen');
         } 
+    }
+
+    async validateVoorlopigeDekking(verzekeringsVerleden: string, strafrechtelijkVerleden: string, schadeverleden: string){
+        //overlay openen
+        await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenClickElement);
+        //valideer zorg van hoofdverzekerde
+        await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+        pakkettenEnum.ZORGVRIJ);
+        await genericMethods.verifyTextContainsInElementWithXpath('((//div[@class="unive-summary__applicant"])[1]//div[@class="unive-summary-item__col"])[1]', 
+        eigenRisicoEnum.EigenRisico_385);
+        //valideer DRV hoofdverzekerde
+        await genericMethods.verifyTextInElement(zorgWizardCrossSellElements.overlayControlerenH2TitelTextElement, zorgWizardCrossSellElements.overlayControlerenH2TitelDRVAnnuleringText);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking1TextElement, 1250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking2TextElement, 1250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVDekking3TextElement, 1250);
+        await genericMethods.waitForElementIsVisible(zorgWizardCrossSellElements.overlayControlerenDRVPremieTextElement, 1250);
+        //valideer tekst voorlopige dekking
+            if(verzekeringsVerleden == inkomstenDropdownEnum.NEE && strafrechtelijkVerleden == inkomstenDropdownEnum.NEE && schadeverleden == inkomstenDropdownEnum.NEE) {
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 1250);
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingDRVText, 1250);
+            }
+            else {
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVGeenVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdVoorlopigeDekkingZorgText, 1250);   
+                await genericMethods.verifyTextContainsInElement(zorgWizardCrossSellElements.overlayControlerenDRVGeenVoorlopigeDekkingTextElement, zorgWizardCrossSellElements.bijnaVerzekerdGeenVoorlopigeDekkingText, 1250);
+            }
+        //sluit overlay
+        await genericMethods.clickOnElement(zorgWizardCrossSellElements.overlayControlerenCloseButtonClickElement);
     }
 }
