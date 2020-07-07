@@ -41,6 +41,7 @@ When(/^I enter step three page of bedrijfs autoverzekering with (.*)$/, async (c
   //INSERT DATE INFORMATION
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
+  await genericMethods.clickOnTAB(bedrijfsAutoVerzekeringElements.differentUserYesElement);
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentUserYesElement);
   await genericMethods.clickOnNextButton();
 });
@@ -68,6 +69,7 @@ When(/^I enter step three page of bedrijfsautoverzekering with different owner w
   //INSERT DATE INFORMATION
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   //INSERT USE OF THE CAR INFORMATION
+  await genericMethods.clickOnTAB(bedrijfsAutoVerzekeringElements.differentUserYesElement);
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentUserNoElement);
   await genericMethods.clickOnNextButton();
 });
