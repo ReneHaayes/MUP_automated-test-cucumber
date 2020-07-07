@@ -26,7 +26,7 @@ export class AlleVerzekeringenZakelijkElements {
   maakAfspraakInlineButtonClickElement: string = '[href="/zakelijk/klantenservice/afspraak"]';
   bestuurdersAaansprakelijkheidsVerzekeringMaakAfspraakClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/afspraak"]';
   eigenVervoerVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten"]';
-  zakelijkRechtsbijstandVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
+  zakelijkRechtsbijstandVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href="/zakelijk/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
   tractorVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/zakelijk/tractorverzekering/premieberekenen-en-afsluiten"]';
   vrachtAutoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten"]';
   zakelijkePersonenAutoverzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/zakelijk/personenautoverzekering/premieberekenen-en-afsluiten"]'
