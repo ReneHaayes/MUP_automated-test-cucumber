@@ -883,12 +883,12 @@ When (/^add to partner tand goed$/, async() => {
 When (/^validate child under 18 has zorg geregeld and tand goed$/, async() => {
     await browser.sleep(500);
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 1500);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
