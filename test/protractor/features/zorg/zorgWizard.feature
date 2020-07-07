@@ -616,7 +616,3 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
 
-    @wilfried
-    Scenario: Checken van zorgpremie-alert pagina recaptcha
-        Given I am on the zorgPremieAlert page of the Unive website
-        When I fill in the form a lot of times
