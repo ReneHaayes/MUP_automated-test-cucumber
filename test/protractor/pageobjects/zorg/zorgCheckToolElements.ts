@@ -65,15 +65,15 @@ emailDitAdviesOverlaySuccessElement: string = '[class="health-check-result-email
 emailDitAdviesOverlaySuccessText: string = 'Uw ZorgCheck resultaat is verzonden naar';
 
 //PREFILLS WIZARD
-zorgSelectActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
-zorgGeregeldActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
-ZorgVrijActiveElement: string = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
-aanvullendGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC2"]';
-aanvullendBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC3"]';
-aanvullendBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC4"]';
-tandGoedActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC2"]';
-tandBeterActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC3"]';
-tandBestActiveElement: string = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC4"]';
+zorgSelectActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
+zorgGeregeldActiveElement: string = 'unive-applicants-content[style="display: block;"] class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
+ZorgVrijActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
+aanvullendGoedActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC2"]';
+aanvullendBeterActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC3"]';
+aanvullendBestActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC4"]';
+tandGoedActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC2"]';
+tandBeterActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC3"]';
+tandBestActiveElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC4"]';
 
 //COLLECTIEVEN
 voegCollectiefToeOpenOverlayClickElement: string = '[class="button button--plain"]';
@@ -102,9 +102,8 @@ itjeAanvullendGoedText: string = 'Verzekeren voor extra zorg, zoals fysiotherapi
 itjeAanvullendBeterText: string = 'Uitgebreid verzekeren voor extra zorg tegen een aantrekkelijke premie, met speciale vergoedingen voor het gezin';
 itjeAanvullendBestText: string = 'De meest uitgebreide aanvullende verzekering, voor maximale zekerheid';
 itjeTandGoedText: string = 'Met een gerust gevoel naar de tandarts en toch niet te veel premie betalen. Tot € 250 vergoeding per jaar';
-itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd. Tot € 500,- per jaar (inclusief Tand Ongevallen).';
-itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist. ' + 
-                           'Tot € 1.000,- per jaar (inclusief Tand Ongevallen).';
+itjeTandBeterText: string = 'Tandartskosten en orthodontie goed verzekerd';
+itjeTandBestText: string = 'Meest complete tandartsverzekering, zonder financiële zorgen naar tandarts, mondhygiënist en orthodontist';
 
 //OVERLAY ELEMENTEN
 overlayH2Element: string = '[class="ui-modal__title ng-star-inserted"]';

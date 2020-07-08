@@ -131,7 +131,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
       Examples:
         |question1|question2|question3|question4|question5|question6|question7|question8|question9|
         |B        |A        |B        |D        |C        |A        |A        |A        |        B|
-
+  
   Scenario Outline: Check de prefill in de zorgwizard na doorklikken op advies
     Given I am on the zorgCheckTool page of the Unive website
     And I answer 9 questions with:
@@ -145,8 +145,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
     |question8|<question8>|
     |question9|<question9>|
     When I click on the Kies deze verzekering button
-    Then I get redirected to zorgwizard on a new tab
-    And The adviceresult is prefilled in the wizard with:
+    Then The adviceresult is prefilled in the wizard with:
     |advice1BV  |<advice1BV>  |
     |advice1AVTV|<advice1AVTV>|
     |advice1TV  |<advice1TV>  |
@@ -182,7 +181,7 @@ Feature: Check of zorgCheckTool de juiste adviezen geeft bij verschillende invoe
       Examples: 
       |collective                    |
       |Omring Medewerkers            |
-      
+ 
   Scenario: Verwijder collectief
     Given I am on the zorgCheckTool page of the Unive website
     When I click on add collective button
