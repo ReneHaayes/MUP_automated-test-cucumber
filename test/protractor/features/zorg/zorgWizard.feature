@@ -357,7 +357,7 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|persona                     |inkomstenNietNL|
         |Zorg Select   |testvrouwCustomerRecognition|Nee            |
     
-    @klantHerkenning
+    @klantHerkenning1
     Scenario Outline: valideer dat klantherkenning werkt en een bekende klant geen BSN hoeft in te voeren op stap 3
         Given I am on the Zorgverzekering page of the Unive website
         And I select <insuranceBasis> for <persona>
