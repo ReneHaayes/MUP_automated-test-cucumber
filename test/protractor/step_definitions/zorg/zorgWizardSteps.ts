@@ -437,7 +437,7 @@ Then(/^validate no active insurance is visible for partner$/, async () => {
 Then(/^validate that BSN field is not visible on step 3$/, async () => {
     await browser.sleep(500);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdH1TextElement, zorgWizardElements.bijnaVerzekerdH1Text);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, 100);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.bijnaVerzekerdBurgerservicenummerTextElement, 2500);
     await genericMethods.verifyTextInElement(zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdTextElement, zorgWizardElements.bijnaVerzekerdUBentBijnaVerzekerdText);
 });
 
@@ -883,12 +883,12 @@ When (/^add to partner tand goed$/, async() => {
 When (/^validate child under 18 has zorg geregeld and tand goed$/, async() => {
     await browser.sleep(500);
     await zorgWizardMethods.accordeonOpenClose("3");
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 100);
-    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 100);
-    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 100);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18BasisGeregeldActive, 1500);
+    await genericMethods.waitForElementIsVisible(zorgWizardElements.kindOnder18TandGoedActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleFysio18Active, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTandOngevallenActive, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleTand500Active, 1500);
+    await genericMethods.waitForElementNotVisible(zorgWizardElements.kindOnder18ModuleBuitenlanddekkingActive, 1500);
     await genericMethods.scrollTilTop();
     await zorgWizardMethods.accordeonOpenClose("3");
 });
@@ -1113,21 +1113,4 @@ Then(/^validate betalingsoptie is correct on Uw Gegevens page$/, async () => {
 
 When(/^I change to (.*) page$/, async (page: string) => {
     await genericMethods.goToPage(page);
-});
-
-
-When(/^I fill in the form a lot of times$/, async () => {  
-    var i;
-        for (i=0; i < 5; i++) {
-            await genericMethods.typeText(zorgWizardElements.zpaVoorletters, "A.A.");
-            await genericMethods.typeText(zorgWizardElements.zpaAchternaam, "Aap");
-            await genericMethods.clickOnElement(zorgWizardElements.zpaRadioButtonMan);
-            await genericMethods.typeText(zorgWizardElements.zpaGeboortedatum, "01-01-1980");
-            await genericMethods.typeText(zorgWizardElements.zpaPostcode, "1112XS");
-            await genericMethods.typeText(zorgWizardElements.zpaHuisnummer, "58");
-            await genericMethods.typeText(zorgWizardElements.zpaEmail, "a@b.com");
-            await genericMethods.clickOnElement(zorgWizardElements.zpaVerzendknop);
-            await genericMethods.verifyTextContainsInElement(zorgWizardElements.zpaBedankpagina, zorgWizardElements.zpaBedankpaginaText, 250);
-            await genericMethods.goToPage('zorgPremieAlert');
-        }
 });

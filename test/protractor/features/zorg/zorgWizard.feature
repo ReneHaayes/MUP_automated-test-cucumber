@@ -387,20 +387,12 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |insuranceBasis|<insuranceBasis>|
         And I select aanvullende insurance no collective with:
         |insuranceAanvullend|Aanvullend Goed|
-        And I click on Volgende page one
-        And I select geen verzekering overstapreden in dropdown
-        And I enter personal data on step 2 of wizard with <persona>
-        And I answer inkomstenvragen with:
-        |inkomstenNietNL|<inkomstenNietNL>|
-        And I click on Volgende page two
-        And I click on bevestigen step 3 without bedankpagina check
-        And validate that bedanktpagina and all elements are correct with <persona>
         
         Examples:
-        |page                                 |insuranceBasis|persona                     |inkomstenNietNL|
-        |zorgVerzekeringBasisSelectParameter  |Zorg Select   |testvrouwCustomerRecognition|Nee            |
-        |zorgVerzekeringBasisGeregeldParameter|Zorg Geregeld |testvrouwCustomerRecognition|Nee            |
-        |zorgVerzekeringBasisVrijParameter    |Zorg Vrij     |testvrouwCustomerRecognition|Nee            |
+        |page                                 |insuranceBasis|inkomstenNietNL|
+        |zorgVerzekeringBasisSelectParameter  |Zorg Select   |Nee            |
+        |zorgVerzekeringBasisGeregeldParameter|Zorg Geregeld |Nee            |
+        |zorgVerzekeringBasisVrijParameter    |Zorg Vrij     |Nee            |
 
     @parameterURLCollectief
     Scenario Outline: valideer dat het mogelijk is om via een parameter op de URL voor een collectief de wizard binnen te komen
@@ -616,7 +608,3 @@ Feature: Validatie van functionaliteit in de zorgwizard
         |persona    |persona1          |persona2          |      
         |testPartner|testkindOnder18Een|testkindBoven18Een|
 
-    @wilfried
-    Scenario: Checken van zorgpremie-alert pagina recaptcha
-        Given I am on the zorgPremieAlert page of the Unive website
-        When I fill in the form a lot of times

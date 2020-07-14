@@ -22,8 +22,8 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
         |ronaldo|Nee            |           |Zorg Vrij     |
 
-    @oudBedankpaginaOVPAVPRBV    
-    Scenario Outline: doorlopen van de zorgwizard (met aanvullende pakketten) en check of rechtsbijstand crosssell wordt getoond
+    @oudBedankpaginaOVPAVPRBV  
+    Scenario Outline: doorlopen van de zorgwizard (met aanvullende pakketten) en check of rechtsbijstand crosssell wordt getoond (oud scenario toen er nog meerdere cross sell items op de bedankpagina stonden)
         Given I am on the zorgVerzekering page of the Unive website
         When I select basic insurance no collective with:
         |insuranceBasis|<insuranceBasis>|

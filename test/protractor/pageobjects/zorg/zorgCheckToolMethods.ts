@@ -220,203 +220,202 @@ export class ZorgCheckToolMethods {
     }
 
     async checkPrefill(adviceOneBV: string, adviceOneAVTV: string, adviceOneTV: string) {
-      
         if(adviceOneBV == pakkettenEnum.ZORGVRIJ){
-            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.ZorgVrijActiveElement, 500);
+            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.ZorgVrijActiveElement, 2500);
 
             if(adviceOneAVTV == pakkettenEnum.AANVULLENDGOED){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else if(adviceOneAVTV == pakkettenEnum.AANVULLENDBETER){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else if(adviceOneAVTV == pakkettenEnum.AANVULLENDBEST){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBestActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBestActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else {
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBestActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBestActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
             }
         }    
         else if(adviceOneBV == pakkettenEnum.ZORGSELECT){
-            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.zorgSelectActiveElement, 500);
+            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.zorgSelectActiveElement, 1500);
 
             if(adviceOneAVTV == pakkettenEnum.AANVULLENDGOED){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else if(adviceOneAVTV == pakkettenEnum.AANVULLENDBETER){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else if(adviceOneAVTV == pakkettenEnum.AANVULLENDBEST){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBestActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBestActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else {
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBestActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBestActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
             }
         }
         else{
-            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.zorgGeregeldActiveElement, 500);
+            await genericMethods.waitForElementIsVisible(zorgCheckToolElements.zorgGeregeldActiveElement, 1500);
 
             if(adviceOneAVTV == pakkettenEnum.AANVULLENDGOED){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else if(adviceOneAVTV == pakkettenEnum.AANVULLENDBETER){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else if(adviceOneAVTV == pakkettenEnum.AANVULLENDBEST){
-                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBestActiveElement, 500);
+                await genericMethods.waitForElementIsVisible(zorgCheckToolElements.aanvullendBestActiveElement, 1500);
 
                 if(adviceOneTV == pakkettenEnum.TANDGOED){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 500);    
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);    
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBETER){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
                 }
                 else if(adviceOneTV == pakkettenEnum.TANDBEST){
-                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
                 else {
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
                 }
             }
             else {
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBestActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 500);
-                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendGoedActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBeterActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.aanvullendBestActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandGoedActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBeterActiveElement, 1500);
+                await genericMethods.waitForElementNotVisible(zorgCheckToolElements.tandBestActiveElement, 1500);
             }
         }
     }
@@ -444,7 +443,7 @@ export class ZorgCheckToolMethods {
 
     async collectiveCheck(collective: string) {
         if(collective == collectievenEnum.OMRINGMEDEWERKERS){
-            await genericMethods.verifyTextInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.OMRINGMEDEWERKERS);
+            await genericMethods.verifyTextContainsInElement(zorgCheckToolElements.toegevoegdCollectiefElement, collectievenEnum.OMRINGMEDEWERKERS, 1500);
             await genericMethods.waitForElementNotVisible(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, 500);
             await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegCollectiefToeButtonClickElement, 500);
         }

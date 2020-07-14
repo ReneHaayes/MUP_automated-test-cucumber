@@ -65,33 +65,33 @@ introTextPartnerKindH2TextElement: string = 'unive-partner-child > unive-wizard-
 introTextPartnerKindH2Text: string = 'Partner of kind meeverzekeren';
 introTextPartnerKindTextElement: string = 'unive-partner-child > unive-wizard-subtitle > div > p';
 introTextPartnerKindText: string = 'Kies minimaal eerst voor uzelf een basisverzekering. Vervolgens kunt u partner en kinderen toevoegen.';
-basisVerzekeringVrijClickElement: string = '[class="unive-basic-insurances-coverage"][data-basic-insurance-code="VRY"]';
-basisVerzekeringGeregeldClickElement: string = '[class="unive-basic-insurances-coverage"][data-basic-insurance-code="GER"]';
-basisVerzekeringSelectClickElement: string = '[class="unive-basic-insurances-coverage"][data-basic-insurance-code="ZVSU"]';
-basisVerzekeringSelectNietMogelijkElement: string = '[class="unive-basic-insurances-coverage__inactive-text"]';
+basisVerzekeringVrijClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage"][data-basic-insurance-code="VRY"]';
+basisVerzekeringGeregeldClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage"][data-basic-insurance-code="GER"]';
+basisVerzekeringSelectClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage"][data-basic-insurance-code="ZVSU"]';
+basisVerzekeringSelectNietMogelijkElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage__inactive-text"]';
 basisVerzekeringShowAllBasicInsurancesClickElement: string = 'unive-basic-insurances > button';
-aanvullendeVerzekeringAanvullendGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCAC2"]';
-aanvullendeVerzekeringCollectiefAanvullendGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZAZ2"]';
+aanvullendeVerzekeringAanvullendGoedClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCAC2"]';
+aanvullendeVerzekeringCollectiefAanvullendGoedClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UZAZ2"]';
 aanvullendGoedTextElement: string = 'unive-additional-insurances-group:nth-child(2) unive-additional-insurances-item:nth-child(1) label';
 aanvullendeVerzekeringAanvullendGoedKortingTextElement: string = 'unive-additional-insurances-item:nth-child(1) > div.unive-additional-insurances-item__inside > div > span';
-aanvullendeVerzekeringAanvullendBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCAC3"]';
-aanvullendeVerzekeringCollectiefAanvullendBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZAZ3"]';
+aanvullendeVerzekeringAanvullendBeterClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCAC3"]';
+aanvullendeVerzekeringCollectiefAanvullendBeterClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UZAZ3"]';
 aanvullendBeterTextElement: string = 'unive-additional-insurances-group:nth-child(2) unive-additional-insurances-item:nth-child(2) label';
 aanvullendeVerzekeringAanvullendBeterKortingTextElement: string = 'unive-additional-insurances-item:nth-child(2) > div.unive-additional-insurances-item__inside > div > span';
-aanvullendeVerzekeringAanvullendBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCAC4"]';
-aanvullendeVerzekeringCollectiefAanvullendBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZAZ4"]';
+aanvullendeVerzekeringAanvullendBestClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCAC4"]';
+aanvullendeVerzekeringCollectiefAanvullendBestClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UZAZ4"]';
 aanvullendBestTextElement: string = 'unive-additional-insurances-group:nth-child(2) unive-additional-insurances-item:nth-child(3) label';
 aanvullendeVerzekeringAanvullendBestKortingTextElement: string = 'unive-additional-insurances-item:nth-child(3) > div.unive-additional-insurances-item__inside > div > span';
-tandVerzekeringenTandOngevallenClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTCO"]';
+tandVerzekeringenTandOngevallenClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTCO"]';
 tandOngevallenTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(1) label';
-tandVerzekeringenTandGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTC2"]';
-tandVerzekeringenCollectiefTandGoedClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC2"]';
+tandVerzekeringenTandGoedClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTC2"]';
+tandVerzekeringenCollectiefTandGoedClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC2"]';
 tandGoedTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(2) label';
-tandVerzekeringenTandBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTC3"]';
-tandVerzekeringenCollectiefTandBeterClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC3"]';
+tandVerzekeringenTandBeterClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTC3"]';
+tandVerzekeringenCollectiefTandBeterClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC3"]';
 tandBeterTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(3) label';
-tandVerzekeringenTandBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTC4"]';
-tandVerzekeringenCollectiefTandBestClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC4"]';
+tandVerzekeringenTandBestClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTC4"]';
+tandVerzekeringenCollectiefTandBestClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UZTC4"]';
 tandBestTextElement: string = 'unive-additional-insurances-group:nth-child(3) unive-additional-insurances-item:nth-child(4) label';
 basisVerzekeringCollectiefKortingTextElement: string = 'unive-basic-insurances-coverage.unive-basic-insurances-coverage.unive-basic-insurances-coverage--active > div > ' +
                                                        'div.unive-basic-insurances-coverage__top > div.unive-basic-insurances-coverage__collective';
@@ -99,57 +99,57 @@ collectiefKortingText: string = '% korting via';
 collectiefNietMogelijkTextElement: string = '[class="unive-collective__inactive-text"]';
 collectiefNietMogelijkText: string = 'U heeft voor uzelf of een medeverzekerde gekozen voor Zorg Select. Daarmee profiteert u direct van de laagste premie, er is geen ' + 
                                      'collectief mogelijk.';
-modulesButtonClickElement: string = '[data-type-button="modules"]';
-pakkettenButtonClickElement: string = '[data-type-button="pakketten"]';
-moduleFysio9ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCAXF"]';
-moduleFysio18ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCAXG"]';
-moduleTandOngevallenClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTCO"]';
-moduleTand250ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTXT"]';
-moduleTand500ClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCTXS"]';
-moduleBuitenlanddekkingClickElement: string = '[class="unive-additional-insurances-item"][data-additional-insurance-code="UCAXB"]';
-basisVrijActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
-basisGeregeldActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
-basisSelectActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
-aanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC2"]';
-aanvullendBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC3"]';
-aanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC4"]';
-tandOngevallenActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTCO"]';
-tandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC2"]';
-tandBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC3"]';
-tandBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC4"]';
-kindOnder18BasisVrijActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]' + 
+modulesButtonClickElement: string = 'unive-applicants-content[style="display: block;"] [data-type-button="modules"]';
+pakkettenButtonClickElement: string = 'unive-applicants-content[style="display: block;"] [data-type-button="pakketten"]';
+moduleFysio9ClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCAXF"]';
+moduleFysio18ClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCAXG"]';
+moduleTandOngevallenClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTCO"]';
+moduleTand250ClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTXT"]';
+moduleTand500ClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCTXS"]';
+moduleBuitenlanddekkingClickElement: string = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item"][data-additional-insurance-code="UCAXB"]';
+basisVrijActive = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="VRY"]';
+basisGeregeldActive = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="GER"]';
+basisSelectActive = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active"][data-basic-insurance-code="ZVSU"]';
+aanvullendGoedActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC2"]';
+aanvullendBeterActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC3"]';
+aanvullendBestActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCAC4"]';
+tandOngevallenActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTCO"]';
+tandGoedActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC2"]';
+tandBeterActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC3"]';
+tandBestActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active"][data-additional-insurance-code="UCTC4"]';
+kindOnder18BasisVrijActive = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]' + 
                              '[data-basic-insurance-code="VRY"]';
-kindOnder18BasisGeregeldActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]'+ 
+kindOnder18BasisGeregeldActive = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]'+ 
                                  '[data-basic-insurance-code="GER"]';
-kindOnder18BasisSelectActive = '[class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]' + 
+kindOnder18BasisSelectActive = 'unive-applicants-content[style="display: block;"] [class="unive-basic-insurances-coverage unive-basic-insurances-coverage--active unive-basic-insurances-coverage--plain"]' + 
                                '[data-basic-insurance-code="ZVSU"]';
-kindOnder18AanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18AanvullendGoedActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                   '[data-additional-insurance-code="UCAC2"]';
-kindOnder18CollectiefAanvullendGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18CollectiefAanvullendGoedActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                             '[data-additional-insurance-code="UZAZ2"]';
-kindOnder18CollectiefAanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18CollectiefAanvullendBestActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                             '[data-additional-insurance-code="UZAZ4"]';
-kindOnder18AanvullendBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
+kindOnder18AanvullendBeterActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
                                    '[data-additional-insurance-code="UCAC3"]';
-kindOnder18AanvullendBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
+kindOnder18AanvullendBestActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' +
                                   '[data-additional-insurance-code="UCAC4"]';
-kindOnder18TandOngevallenActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18TandOngevallenActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                   '[data-additional-insurance-code="UCTCO"]';
-kindOnder18TandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18TandGoedActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                             '[data-additional-insurance-code="UCTC2"]';
-kindOnder18CollectiefTandGoedActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18CollectiefTandGoedActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                       '[data-additional-insurance-code="UZTC2"]';
-kindOnder18TandBeterActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18TandBeterActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                              '[data-additional-insurance-code="UCTC3"]';
-kindOnder18TandBestActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18TandBestActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                             '[data-additional-insurance-code="UCTC4"]';
-kindOnder18ModuleFysio18Active = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18ModuleFysio18Active = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                  '[data-additional-insurance-code="UCAXG"]';
-kindOnder18ModuleTandOngevallenActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18ModuleTandOngevallenActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                         '[data-additional-insurance-code="UCTCO"]';
-kindOnder18ModuleTand500Active = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18ModuleTand500Active = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                  '[data-additional-insurance-code="UCTXS"]';
-kindOnder18ModuleBuitenlanddekkingActive = '[class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
+kindOnder18ModuleBuitenlanddekkingActive = 'unive-applicants-content[style="display: block;"] [class="unive-additional-insurances-item unive-additional-insurances-item--active unive-additional-insurances-item--plain"]' + 
                                            '[data-additional-insurance-code="UCAXB"]';
 
                                  

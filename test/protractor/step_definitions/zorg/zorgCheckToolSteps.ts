@@ -166,20 +166,18 @@ When(/^I click on the Kies deze verzekering button$/, async () => {
     await genericMethods.clickOnElement(zorgCheckToolElements.firstAdviceKiesDezeVerzekeringClickElement);
 });
 
-Then(/^I get redirected to zorgwizard on a new tab$/, async () => {
-    await browser.getAllWindowHandles().then(function (handles) {
-        browser.switchTo().window(handles[1]);
-    });
-    await browser.sleep(2000);
-});
-
 Then(/^The adviceresult is prefilled in the wizard with:$/, async (data) => {
-    const dataTable = data.rowsHash();
-    await zorgCheckToolMethods.checkPrefill(
-        dataTable.advice1BV,
-        dataTable.advice1AVTV,
-        dataTable.advice1TV
-    );
+    await browser.getAllWindowHandles().then(function (handles) {
+        browser.switchTo().window(handles[1]).then(function(){
+            const dataTable = data.rowsHash();
+            zorgCheckToolMethods.checkPrefill(
+            dataTable.advice1BV,
+            dataTable.advice1AVTV,
+            dataTable.advice1TV
+            );
+        });
+    });
+    
 });
 
 When(/^I click on add collective button$/, async () => {
@@ -207,24 +205,26 @@ When(/^I apply the collective$/, async () => {
 });
 
 Then (/^verify that the collective is correctly applied on startpage of the tool$/, async() => {
-    await genericMethods.verifyTextInElement(zorgCheckToolElements.voegCollectiefToeOpenOverlaySpanElement, collectievenEnum.OMRINGMEDEWERKERS);
+    await genericMethods.verifyTextContainsInElement(zorgCheckToolElements.voegCollectiefToeOpenOverlaySpanElement, collectievenEnum.OMRINGMEDEWERKERS, 1500);
 });
 
 When (/^I delete the collective$/, async() => {
     await genericMethods.clickOnElement(zorgCheckToolElements.deleteCollectiveClickElement);
+    await browser.sleep(1500);
 });
 
 Then (/^verify I am able to search for collective again$/, async() => {
-    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegUwCollectiefToeInputElement, 500);
+    await browser.sleep(1500);
+    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegUwCollectiefToeInputElement, 1500);
     await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayText);
-    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.additionalInfoThuiszorgCollectiefElement, 500);
+    await genericMethods.waitForElementNotVisible(zorgCheckToolElements.additionalInfoThuiszorgCollectiefElement, 1500);
     await genericMethods.clickOnElement(zorgCheckToolElements.closeOverlay);
 });
 
 Then (/^I am able to enter a correct collective in the second input field$/, async() => {
-    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegUwCollectiefToeInputElement, 500);
+    await genericMethods.waitForElementIsVisible(zorgCheckToolElements.voegUwCollectiefToeInputElement, 1500);
     await genericMethods.verifyTextInElement(zorgCheckToolElements.additionalInfoTextCollectiveOverlayElement, zorgCheckToolElements.additionalInfoTextCollectiveOverlayNoZorgCollectiveText);
-    await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collectievenEnum.OMRINGMEDEWERKERS);
+    await genericMethods.typeText(zorgCheckToolElements.voegUwCollectiefToeInputElement, collectievenEnum.OMRINGCODE);
     await genericMethods.clickOnElement(zorgCheckToolElements.selectFirstCollectiefElement);
 });
 
@@ -255,9 +255,11 @@ When (/^I click on the regel het direct link$/, async() => {
 
 Then (/^validate I get redirected to the zorgwizard with the correct code in the URL$/, async() => {
     await browser.getAllWindowHandles().then(function (handles) {
-        browser.switchTo().window(handles[1]);
+        browser.switchTo().window(handles[1]).then(function(){
+            browser.sleep(1500);
+            genericMethods.verifyUrlContains(zorgCheckToolElements.directRegelenZorgverzekeringURL);
+            genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
+        });
     });
-    await browser.sleep(500);
-    await genericMethods.verifyUrlContains(zorgCheckToolElements.directRegelenZorgverzekeringURL);
-    await genericMethods.verifyTextInElement(zorgWizardElements.zorgverzekeringTitelH1TextElement, zorgWizardElements.zorgverzekeringTitelH1Text);
+    
 });
