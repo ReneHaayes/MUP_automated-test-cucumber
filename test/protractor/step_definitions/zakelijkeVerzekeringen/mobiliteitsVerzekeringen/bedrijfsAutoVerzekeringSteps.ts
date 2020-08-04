@@ -36,7 +36,7 @@ When(/^I enter step three page of bedrijfs autoverzekering with (.*)$/, async (c
   // Copied this from zakelijkAansprakelijkheidsVerzekeringSteps.ts . The Kvk-koppeling was added to this dialogue
   await genericMethods.typeText(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.getCompanyDataButtonClickElement);
-  await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
+  await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElementB, companyData.getCompanyName(company));
 
   //INSERT DATE INFORMATION
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
@@ -64,7 +64,7 @@ When(/^I enter step three page of bedrijfsautoverzekering with different owner w
   // Copied this from zakelijkAansprakelijkheidsVerzekeringSteps.ts . The Kvk-koppeling was added to this dialogue
   await genericMethods.typeText(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.getCompanyDataButtonClickElement);
-  await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
+  await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElementB, companyData.getCompanyName(company));
 
   //INSERT DATE INFORMATION
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));

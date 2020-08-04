@@ -3,7 +3,9 @@ export class ZakelijkAansprakelijkheidsVerzekeringElements {
   //COMPANY DATA
   kvkNumberInputElement: string = '#_Form_IF31406_34108';
   getCompanyDataButtonClickElement: string = '#_Form_IF31406_39313';
-  companyNameTextElement: string = '[ng-class*="R31406_3"]  strong';
+  companyNameTextElement: string = '[ng-class*="R31406_2"]  strong';
+  // Tijdelijke oplossing: Bedrijfsautoverzekering maakt onterecht gebruik van ZakelijkAansprakelijkheidsVerzekering Elements.
+  companyNameTextElementB: string = '[ng-class*="R31406_3"]  strong';
   correctCompanyDataYesClickElement: string = '[data-label-id*="LA_IF31406_39608"] .radioList > label:nth-child(1)';
   correctCompanyDataNoClickElement: string = '[data-label-id*="LA_IF31406_39608"] .radioList > label:nth-child(2)';
   otherActivitiesYesClickElement: string = '[data-label-id*="LA_IF19217_24949"] .radioList > label:nth-child(1)';

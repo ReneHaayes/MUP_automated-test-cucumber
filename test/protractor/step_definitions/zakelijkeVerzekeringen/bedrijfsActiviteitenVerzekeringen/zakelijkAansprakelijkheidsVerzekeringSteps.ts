@@ -5,7 +5,7 @@ import {
 
 When(/^I enter step one page and click next on step two for zakelijk aansprakelijkheidsverzekering with company (.*)$/, async function (company: string) {
   await genericMethods.typeText(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
-  await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.getCompanyDataButtonClickElement);
+  await genericMethods.clickOnTAB(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement);
   await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.correctCompanyDataYesClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.otherActivitiesNoClickElement);
