@@ -1,5 +1,6 @@
 import {Then, When} from "cucumber";
-import {hmPageMethods} from "@support";
+import {genericMethods, getUrlUnive, hmPageMethods, schadeServiceElements} from "@support";
+import {browser} from "protractor";
 
 
 When(/^I press the button (.*) on the homepage$/, async (button: string) => {
@@ -64,4 +65,9 @@ When(/^I press the button (.*) on the footer$/, async (button: string) => {
 
 Then(/^Verify element on footer page for (.*) is shown$/, async (page: string) => {
   await hmPageMethods.verifyElementIsShownWhenClickedOnFooter(page);
+});
+
+Then(/^Verify element on winkels page are shown$/, async () => {
+  await genericMethods.verifyTextInElement(schadeServiceElements.winkelzoekerTitleTextElement, 'Zoek een Univé-winkel bij u in de buurt');
+  await genericMethods.verifyUrlIs(getUrlUnive.getEnv(browser.params.env.environment) + 'winkels');
 });

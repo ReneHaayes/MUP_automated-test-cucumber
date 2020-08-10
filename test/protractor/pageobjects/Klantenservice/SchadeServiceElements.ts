@@ -24,4 +24,6 @@ export class SchadeServiceElements {
   getOpeningHoursDayTextElement(input: string) {
     return '//*[@class="location _is_selected"]//*[@class="location_detailOpeningHoursLine"]//*[text()="' + input + '"]';
   }
+
+  winkelzoekerTitleTextElement = 'main-container > h1';
 }

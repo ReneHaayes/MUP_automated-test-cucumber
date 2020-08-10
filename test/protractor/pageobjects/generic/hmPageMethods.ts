@@ -32,6 +32,10 @@ export class HmPageMethods {
         await genericMethods.clickOnElement(hmPageElements.berekenUwPremieReisVerzekeringClickButton);
         break;
       }
+      case homePageEnum.WINKELS: {
+        await genericMethods.clickOnElement(hmPageElements.homePageWinkelsButtonClickElement);
+        break;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

@@ -65,6 +65,7 @@ export enum homePageEnum {
   AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
   ZORGVERZEKERING = 'Zorgverzekering',
   REISVERZEKERING = 'Reisverzekering',
+  WINKELS = 'winkels',
   AUTOVERZEKERING = 'Autoverzekering',
   WOONVERZEKERING = 'Woonverzekering',
   CARAVANVERZEKERING = 'Caravanverzekering',

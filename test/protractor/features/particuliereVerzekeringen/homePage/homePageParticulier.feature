@@ -66,3 +66,8 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
       | alle verzekeringen | zorgnota declareren |
       | alle verzekeringen | klantenservice      |
       | alle verzekeringen | over ons            |
+
+  Scenario: Click on the winkels button on the homepage.
+    Given I am on the Home page of the Unive website
+    When I press the button winkels on the homepage
+    Then Verify element on winkels page are shown
