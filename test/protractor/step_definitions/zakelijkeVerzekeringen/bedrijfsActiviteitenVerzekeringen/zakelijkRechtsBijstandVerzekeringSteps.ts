@@ -10,7 +10,7 @@ import {
 
 When(/^I enter step one page and click next on step two of zakelijk rechtsbijstand verzekering with:(.*)$/, async (company: string) => {
   await genericMethods.typeText(zakelijkRechtsBijstandVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
-  await genericMethods.clickOnElement(zakelijkRechtsBijstandVerzekeringElements.getCompanyDataButtonClickElement);
+  await genericMethods.clickOnTAB(zakelijkRechtsBijstandVerzekeringElements.kvkNumberInputElement);
   await genericMethods.verifyTextInElement(zakelijkRechtsBijstandVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
   await genericMethods.clickOnElement(zakelijkRechtsBijstandVerzekeringElements.correctCompanyDataYesClickElement);
   await genericMethods.clickOnNextButton();

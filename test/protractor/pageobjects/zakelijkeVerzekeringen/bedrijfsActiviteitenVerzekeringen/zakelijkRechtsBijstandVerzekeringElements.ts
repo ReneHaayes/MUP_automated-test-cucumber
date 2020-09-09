@@ -3,7 +3,7 @@ export class ZakelijkRechtsBijstandVerzekeringElements {
   //COMPANY
   kvkNumberInputElement: string = '#_Form_IF31406_34108';
   getCompanyDataButtonClickElement: string = '#_Form_IF31406_39313';
-  companyNameTextElement: string = '[ng-class*="R31406_3"]  strong';
+  companyNameTextElement: string = '[ng-class*="R31406_2"]  strong';
   correctCompanyDataYesClickElement: string = '[data-label-id*="LA_IF31406_39608"] .radioList > label:nth-child(1)';
   correctCompanyDataNoClickElement: string = '[data-label-id*="LA_IF31406_39608"] .radioList > label:nth-child(2)';
   otherActivitiesYesClickElement: string = '[data-label-id*="LA_IF23282_30161"] .radioList > label:nth-child(1)';
