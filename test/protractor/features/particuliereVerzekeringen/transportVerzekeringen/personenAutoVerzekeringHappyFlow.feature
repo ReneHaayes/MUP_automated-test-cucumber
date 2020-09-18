@@ -24,3 +24,11 @@ Feature: Happy flow for 'personenautoverzekering'
     When Customer enters step one page of autoverzekeringen for ronaldo with license plate 06-HN-DL
     Then Verify step two page of autoverzekering automatically prefilled with collective string:16427
 
+  Scenario: Checking the meldcode is mandatory
+    Given I am on the Autoverzekering page of the Unive website
+    When Customer enters step one page of autoverzekeringen for ronaldo with license plate 06-HN-DL
+    And Customer enters step two page of autoverzekering without collective
+    Then Verify meldcode is mandatory when you dont fill in
+
+
+

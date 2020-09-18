@@ -150,22 +150,22 @@ export class AutoVerzekeringMethods {
       case basisDekkingEnum.WA: {
         await genericMethods.clickOnElement(autoVerzekeringElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
+        // await genericMethods.waitForElementIsPresentWithXpath(
+        //   genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
         await genericMethods.clickOnElement(autoVerzekeringElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
+        // await genericMethods.waitForElementIsPresentWithXpath(
+        //   genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
         await genericMethods.clickOnElement(autoVerzekeringElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(
-          genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
+        // await genericMethods.waitForElementIsPresentWithXpath(
+        //   genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
         break;
       }
       default: {
