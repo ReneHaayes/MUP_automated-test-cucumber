@@ -59,6 +59,15 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
   await genericMethods.clickOnNextButton();
 });
 
+When(/^Customer enters step two page of autoverzekering without collective$/, async () => {
+  await autoVerzekeringMethods.clickOnBasisDekking('waPlus');
+  await autoVerzekeringMethods.selectOwnRisk('ownRisk500');
+  await autoVerzekeringMethods.clickOnAanvullendeOpties('Inzittendenverzekering');
+  await autoVerzekeringMethods.selectCarAcc('autoAccTm5000');
+  await autoVerzekeringMethods.selectTotalPremie('annual');
+  await genericMethods.clickOnNextButton();
+});
+
 Then(/^Verify step two page of autoverzekering automatically prefilled with collective (.*)$/, async (collective: string) => {
   await genericMethods.verifyValueTextInElement(autoVerzekeringElements.collectiveResultTextElement, collective);
 });
@@ -87,6 +96,15 @@ When(/^Customer enters step three page of autoverzekering for (.*)$/, async (lic
     analyticsAutoverzekeringElements.thirthPagePaginaId);  //ANALYTICS
 
   await genericMethods.clickOnNextButton();
+});
+
+Then(/^Verify meldcode is mandatory when you dont fill in$/, async () => {
+  //INSERT DATE INFORMATION
+  await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
+  await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
+  await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar('ownerCarYes');
+  await genericMethods.clickOnNextButton();
+  await genericMethods.verifyTextInElement('[class="message error"]', 'Dit veld is verplicht.');
 });
 
 When(/^Customer enters step four page of autoverzekering for (.*)$/, async (persona: string) => {
