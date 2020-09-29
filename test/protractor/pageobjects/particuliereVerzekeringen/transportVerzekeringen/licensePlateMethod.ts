@@ -14,47 +14,47 @@ export class LicensePlateMethod {
     switch (input) {
       case licensePlateHmPageEnum.LICENSE_PLATE: {
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
-        await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+        await genericMethods.typeTextShadowRoot(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetButtonElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_PP: {
-        await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
+        await genericMethods.typeTextShadowRoot(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetButtonElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE: {
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetButtonElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_PP: {
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetButtonProductPageElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetButtonElement);
         break;
       }
       case genericEnum.DONT_KNOW: {
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetDontKnowElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_PP: {
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowProductPageElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetDontKnowElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_BUS: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
-        await genericMethods.typeText(hmPageElements.licensePlateWidgetInputElement, licensePlate);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetBusinessButtonElement);
+        await genericMethods.typeTextShadowRoot(hmPageElements.licensePlateWidgetInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetButtonElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_BUS: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetBusinessButtonElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetButtonElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
-        await genericMethods.clickOnElement(hmPageElements.licensePlateWidgetDontKnowElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.licensePlateWidgetDontKnowElement);
         break;
       }
       default: {
@@ -92,7 +92,7 @@ export class LicensePlateMethod {
         break;
       }
       case genericEnum.DONT: {
-        await genericMethods.verifyTextNotInElement(autoVerzekeringElements.brandElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), autoVerzekeringElements.licensePlateElement);
+        await genericMethods.verifyValueTextInElement('#_Form_IF20009_3611', '');
         break;
       }
       default: {

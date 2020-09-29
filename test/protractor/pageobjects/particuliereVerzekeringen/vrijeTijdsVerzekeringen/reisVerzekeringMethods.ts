@@ -1,5 +1,5 @@
 import {browser} from 'protractor';
-import {genericElements, genericMethods, hmPageElements, reisVerzekeringElements} from "@support";
+import {genericMethods, hmPageElements, reisVerzekeringElements} from "@support";
 import {numbersEnum} from "@enum";
 
 export class ReisVerzekeringMethods {
@@ -59,48 +59,47 @@ export class ReisVerzekeringMethods {
   async selectFamilyMembers(input: string) {
     switch (input) {
       case 'Mijzelf, Mijn Partner en Mijn kinderen checked': {
-        // await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
-        await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
-        await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myPartnerWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myChildrenWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijzelf en Mijn Partner checked': {
-        await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myPartnerWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijzelf en Mijn kinderen checked': {
-        await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myChildrenWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijzelf checked': {
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijn Partner en Mijn kinderen checked': {
-        await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
-        await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
-        await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myselfWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myPartnerWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myChildrenWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijn Partner checked': {
-        await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
-        await genericMethods.clickOnElement(reisVerzekeringElements.myPartnerWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myselfWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myPartnerWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Mijn kinderen checked': {
-        await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
-        await genericMethods.clickOnElement(reisVerzekeringElements.myChildrenWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myselfWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myChildrenWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       case 'Nothing is checked': {
-        await genericMethods.clickOnElement(reisVerzekeringElements.myselfWidgetClickElement);
-        await genericMethods.clickOnElement(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
+        await genericMethods.clickOnElementShadowRoot(reisVerzekeringElements.myselfWidgetClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.doorlopendeReisverzekeringProductPageBerekenUwPremieButton);
         break;
       }
       default: {
@@ -118,40 +117,47 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf en Mijn Partner checked': {
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyself + '")]', browser.getPageTimeout);
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyPartner + '")]', browser.getPageTimeout);
+        await genericMethods.clickOnElement(reisVerzekeringElements.stepOnePageClickElement);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
         break;
       }
       case 'Mijzelf en Mijn kinderen checked': {
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxNotChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
         break;
       }
       case 'Mijzelf checked': {
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyself + '")]', browser.getPageTimeout);
+        await genericMethods.clickOnElement(reisVerzekeringElements.stepOnePageClickElement);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+
         break;
       }
       case 'Mijn Partner en Mijn kinderen checked': {
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxNotChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
         break;
       }
       case 'Mijn Partner checked': {
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + reisVerzekeringElements.summarySpaceMyPartner + '")]', browser.getPageTimeout);
+        await genericMethods.clickOnElement(reisVerzekeringElements.stepOnePageClickElement);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
         break;
       }
       case 'Mijn kinderen checked': {
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxNotChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxNotChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
         break;
       }
       case 'Nothing is checked': {
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxNotChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxNotChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxNotChecked, browser.getPageTimeout);
+        await genericMethods.verifyTextInElement(reisVerzekeringElements.chooseInsuredPopUpTextElement, 'Kies een verzekerde.');
         break;
       }
       default: {

@@ -8,7 +8,7 @@ export class StickyBalkMethods {
   async verifyStickyBalkAndOpbouwVanBerekening(input: string) {
     await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await genericMethods.waitForElementIsVisible(stickyBalkElements.stickyBalkElement, 10000);
-    await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieClickElement);
+    await genericMethods.clickOnElement(stickyBalkElements.stickyBalkElement);
 
     switch (input) {
       case homePageEnum.AUTOVERZEKERING: {

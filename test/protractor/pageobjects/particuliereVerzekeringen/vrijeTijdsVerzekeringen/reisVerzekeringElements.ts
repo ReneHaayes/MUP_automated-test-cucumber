@@ -30,24 +30,26 @@ export class ReisVerzekeringElements {
   totalValueOfTripInputElement: string = '#_Form_IF11808_16116';
 
   //DOORLOPENDE REISVERZEKERING WIDGET PRODUCTPAGE
-  myselfWidgetClickElement: string = '[for="verzekerenMijzelf"]';
-  myPartnerWidgetClickElement: string = '[for="verzekerenMijnPartner"]';
-  myChildrenWidgetClickElement: string = '[for="verzekerenMijnKinderen"]';
-  myselfCheckboxChecked: string = '[data-input-field-id="IF9207_19310"][class*="ng-not-empty"]';
-  myPartnerCheckboxChecked: string = '[data-input-field-id="IF9207_19311"][class*="ng-not-empty"]';
-  myChildrenCheckboxChecked: string = '[data-input-field-id="IF9207_19312"][class*="ng-not-empty"]';
-  myselfCheckboxNotChecked: string = '[data-input-field-id="IF9207_19310"][class*="ng-empty"]';
-  myPartnerCheckboxNotChecked: string = '[data-input-field-id="IF9207_19311"][class*="ng-empty"]';
-  myChildrenCheckboxNotChecked: string = '[data-input-field-id="IF9207_19312"][class*="ng-empty"]';
+  myselfWidgetClickElement: string = 'travel-widget ::sr checkbox-group ::sr #checkbox-verzekerenMijzelf';
+  myPartnerWidgetClickElement: string = 'travel-widget ::sr checkbox-group ::sr #checkbox-verzekerenMijnPartner';
+  myChildrenWidgetClickElement: string = 'travel-widget ::sr checkbox-group ::sr #checkbox-verzekerenMijnKinderen';
+  myselfCheckboxChecked: string = '[class="checkbox value checked"][data-label-id="LA_IF9207_19310"]';
+  myPartnerCheckboxChecked: string = '[class="checkbox value checked"][data-label-id="LA_IF9207_19311"]';
+  myChildrenCheckboxChecked: string = '[class="checkbox value checked"][data-label-id="LA_IF9207_19312"]';
+  chooseInsuredPopUpTextElement: string = '#_Form_lightboxMessageLT';
+  // myselfCheckboxNotChecked: string = '[data-input-field-id="IF9207_19310"][class*="ng-empty"]';
+  // myPartnerCheckboxNotChecked: string = '[data-input-field-id="IF9207_19311"][class*="ng-empty"]';
+  // myChildrenCheckboxNotChecked: string = '[data-input-field-id="IF9207_19312"][class*="ng-empty"]';
   summarySpaceMyself: string = 'Uzelf';
   summarySpaceMyPartner: string = 'Uw partner';
   summarySpaceMychildren: string = 'Uw kinderen';
+  stepOnePageClickElement: string = '[class="formSequenceMenu"] [class="ng-scope performed"]';
 
   //EMAIL MIJ DEZE PREMIEBEREKENING
   emailMijDezePremieBerekeningButtonClickElement = '#_Form_IF2523_3671';
   emailMijDezePremieBerekeningEmailAddressInputElement = '#_EmailPremiumCalculation__1';
   emailMijDezePremieBerekeningSendButtonClickElement = '#_EmailPremiumCalculation_send';
-  emailMijDezePremieBerekeningSendSuccesfullMessageTextElement = '[ng-if="determineShowThankYouMessage()"] > p';
+  emailMijDezePremieBerekeningSendSuccesfullMessageTextElement = '[class="message info ng-scope"] p';
   emailMijDezePremieBerekeningSendSuccesfullMessageText = 'De premieberekening is verzonden naar het door u ingevoerde e-mailadres.'
 
 

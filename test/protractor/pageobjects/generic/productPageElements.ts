@@ -1,7 +1,7 @@
 export class ProductPageElements {
 
   //AUTOVERZEKERING
-  autoverzekeringBerekenUwPremieButtonClickElement: string = '[class*="simpleWidget_submit"]';
+  autoverzekeringBerekenUwPremieButtonClickElement: string = 'car-widget ::sr custom-button ::sr button';
   autoVerzekeringBreadcrumTextElement: string = '[class*= "breadcrumb_link"][title*="Autoverzekering"]';
 
 

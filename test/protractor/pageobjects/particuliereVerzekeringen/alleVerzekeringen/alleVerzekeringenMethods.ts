@@ -1,5 +1,5 @@
 import {browser} from "protractor";
-import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements} from "@support";
+import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements, productPageElements} from "@support";
 import {breadCrumbEnum, selectAlleVerzekeringEnum, verzekeringPaginasEnum} from "@enum";
 
 export class AlleVerzekeringenMethods {
@@ -149,7 +149,7 @@ export class AlleVerzekeringenMethods {
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.AUTOVERZEKERING_PAT);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.AUTOVERZEKERING_PAT, 2);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.autoVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisibleShadowRoot(productPageElements.autoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.BROMFIETSVERZEKERING_PAT: {

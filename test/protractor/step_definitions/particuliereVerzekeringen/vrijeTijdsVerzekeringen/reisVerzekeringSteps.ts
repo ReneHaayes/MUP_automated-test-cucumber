@@ -13,6 +13,7 @@ import {homePageEnum} from "@enum";
 When(/^I enter step one and step two page of doorlopende verzekeringen for myself$/, async () => {
   await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);
   await genericMethods.clickOnNextButton();
+  await genericMethods.scrollDown();
   await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.REISVERZEKERING);
   await genericMethods.clickOnNextButton();
 });
@@ -45,6 +46,7 @@ When(/^I enter details of (.*) in your data page of reis verzekeringen$/, async 
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);
@@ -80,7 +82,6 @@ When(/^I enter step one and step two page of kortlopende annuleringsverzekering 
 
 When(/^I click on the (.*) to insure$/, async (familyMembers: string) => {
   await reisVerzekeringMethods.selectFamilyMembers(familyMembers);
-
 });
 
 Then(/^the (.*) I have checked are present on the page$/, async (familyMembers: string) => {

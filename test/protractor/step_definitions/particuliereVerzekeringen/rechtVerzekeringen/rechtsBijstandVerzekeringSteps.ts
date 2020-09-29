@@ -17,6 +17,7 @@ When(/^I enter step one page of rechtsbijstandverzekering for family composition
   //Click on Next at step two page
   await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.verkeerEnvoertuigen);
   await genericMethods.clickOnElement('[data-label-id="LA_IF32509_40517"] > label');
+  await genericMethods.scrollTilTop();
   await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.RECHTSBIJSTAND);
   await genericMethods.clickOnNextButton();
 });
