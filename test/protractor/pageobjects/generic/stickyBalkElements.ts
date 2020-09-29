@@ -1,7 +1,7 @@
 export class StickyBalkElements {
 
   //STICKYBALK GENERIC
-  stickyBalkElement = '[class*="totaalPremie--sticky"]';
+  stickyBalkElement = '[class="matrix"] div:nth-child(3)[class*="totaalPremie"]';
   bekijkOpbouwPremieClickElement = '[class*="infoText--summary"] > span';
   bekijkOpbouwPremieSamenvattingCloseClickElement = '[class="qisZone_sidebarclose"]';
   controleerGegevensClickElement = '[class*="infoText--overlay"] > span';
@@ -15,7 +15,7 @@ export class StickyBalkElements {
   bekijkOpbouwPremieSamenvattingKeuzeTextElement = '#SIDEBAR-ID > div > span.qisZone_sidebarPremium > div > dl > div > dd > div > div:nth-child(1) > div.label';
 
   //STICKY DOORLOPENDE VERZEKERING
-  bekijkOpbouwPremieSamenvattingVerzekerdenTextElement = '#element1 > div > span.qisZone_sidebarData > div > dl > div > dd > div > div:nth-child(2)'
+  bekijkOpbouwPremieSamenvattingVerzekerdenTextElement = '[class="rbcontainer"] div:nth-child(2)[class="line"]'
 
 
 }

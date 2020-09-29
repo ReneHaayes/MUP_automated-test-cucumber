@@ -193,7 +193,7 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGBASISSELECTPARAMETER = 'zorgVerzekeringBasisSelectParameter',
   ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
   ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter',
-  ONDERNEMERSSCAN_TITLE = 'Ondernemersscan van Univé',
+  ONDERNEMERSSCAN_TITLE = 'Ondernemers-scan van Univé',
   CALAMITEITEIN = 'calamiteiten',
   ZORGVERZEKERINGCROSSSELLINWIZARDPARAMETER = 'zorgVerzekeringCrossSellInWizardParameter',
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
@@ -292,7 +292,9 @@ export enum breadCrumbEnum {
   BEROEPSAANSPRAKELIJKHEIDSVERZEKERING = 'Beroepsaansprakelijkheidsverzekering',
   BESTUURDERSAANSPRAKELIJKHEIDSVERZEKERING = 'Bestuurdersaansprakelijkheidsverzekering',
   CONSTRUCTIE_ALLRISK_VERZEKERING = 'Constructie all-riskverzekering',
-  PERSONENAUTOVERZEKERING = 'Personenautoverzekering'
+  PERSONENAUTOVERZEKERING = 'Personenautoverzekering',
+  GEBOUWENVERZEKERING = 'Gebouwenverzekering',
+  ALARMCENTRALE = 'Alarmcentrale'
 }
 
 export enum selectorEnum {

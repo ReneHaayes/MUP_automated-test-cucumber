@@ -316,9 +316,12 @@ export class GenericMethods {
     await browser.executeScript('window.scrollTo(0,0);');
   }
 
-  async scrollToElement(selector: selectorEnum, input: string) {
-    let test123 = this.returnSelector(selector);
-    const elementToClick: ElementFinder = element(test123(input));
+  async scrollDown() {
+    await browser.executeScript('window.scrollTo(0,5);');
+  }
+
+  async scrollToElement(input: string) {
+    const elementToClick: ElementFinder = element(input);
     await browser.controlFlow().execute(() => {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
     });

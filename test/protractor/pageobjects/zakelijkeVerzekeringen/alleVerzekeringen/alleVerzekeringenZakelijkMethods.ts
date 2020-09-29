@@ -95,7 +95,6 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MILIEUSCHADEVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
         break;
       }
       case breadCrumbEnum.PERSONENAUTOVERZEKERING: {

@@ -11,7 +11,7 @@ import {
   situatieGewijzigdElements,
   zakelijkRechtsBijstandVerzekeringElements
 } from '@support';
-import {homePageEnum, verzekeringPaginasEnum, zakelijkHomePageEnum} from "@enum";
+import {breadCrumbEnum, homePageEnum, verzekeringPaginasEnum, zakelijkHomePageEnum} from "@enum";
 
 export class HmPageMethods {
 
@@ -43,19 +43,17 @@ export class HmPageMethods {
   }
 
   async clickMenuButtonAndGoToProductPage(input: string) {
+    await genericMethods.clickOnElement(hmPageElements.menuPageVerzekeringenButtonClickElement);
     switch (input) {
       case homePageEnum.AUTOVERZEKERING: {
-        await genericMethods.clickOnElement(hmPageElements.menuPageVerzekeringenButtonClickElement);
         await genericMethods.clickOnElement(hmPageElements.menuPageAutoverzekeringClickElement);
         break;
       }
       case homePageEnum.WOONVERZEKERING: {
-        await genericMethods.clickOnElement(hmPageElements.menuPageVerzekeringenButtonClickElement);
         await genericMethods.clickOnElement(hmPageElements.menuPageWoonverzekeringClickElement);
         break;
       }
       case homePageEnum.CARAVANVERZEKERING: {
-        await genericMethods.clickOnElement(hmPageElements.menuPageVerzekeringenButtonClickElement);
         await genericMethods.clickOnElement(hmPageElements.menuPageCaravanverzekeringClickElement);
         break;
       }
@@ -164,12 +162,12 @@ export class HmPageMethods {
     switch (input) {
       case homePageEnum.BEDRIJFSAUTO: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoPremieBerekenenClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.homePageBusinessBedrijfsautoPremieBerekenenClickElement);
         break;
       }
       case homePageEnum.ZAKELIJKE_PERSONENAUTO: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessPersonenautoZakelijkClickElement);
-        await genericMethods.clickOnElement(hmPageElements.homePageBusinessPersonenautoZakelijkPremieBerekenenClickElement);
+        await genericMethods.clickOnElementShadowRoot(hmPageElements.homePageBusinessPersonenautoZakelijkPremieBerekenenClickElement);
         break;
       }
       case homePageEnum.ARBEIDSONGESCHIKTHEID: {
@@ -295,7 +293,9 @@ export class HmPageMethods {
       case homePageEnum.GEBOUWEN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.GEBOUWEN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.gebouwenBreadcrumbElement, browser.getPageTimeout);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.GEBOUWENVERZEKERING, 3);
         await genericMethods.verifyTextInElement(hmPageElements.gebouwH2TextElement, hmPageElements.gebouwH2Text);
         break;
       }
@@ -345,7 +345,8 @@ export class HmPageMethods {
       case homePageEnum.ZORGNOTA_DECLAREREN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZORGNOTA_DECLAREREN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.zorgNotaDeclarerenBreadcrumbElement, browser.getPageTimeout);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ZORGVERZEKERING, 2);
         await genericMethods.verifyTextInElement(hmPageElements.zorgNotaDeclarerenTitleTextElement, hmPageElements.zorgNotaDeclarerenTitleText);
         break;
       }
@@ -359,8 +360,8 @@ export class HmPageMethods {
       case homePageEnum.ZIPCODE_PLACE: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZIPCODE_PLACE);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.verifyTextInElement(hmPageElements.zipcodePlaceTitleTextElement, hmPageElements.zipcodePlaceTitleText);
-        await genericMethods.verifyTextInElement(hmPageElements.zipcodePlaceTableZwolleTextElement, 'Zwolle (Univé Noord-Holland)');
+        await genericMethods.verifyTextInElementShadowRoot(hmPageElements.zipcodePlaceTitleTextElement, hmPageElements.zipcodePlaceTitleText);
+        await genericMethods.verifyTextInElementShadowRoot(hmPageElements.zipcodePlaceTableZwolleTextElement, 'Univé Zwolle');
         break;
       }
       case homePageEnum.KLANTENSERVICE: {
@@ -368,7 +369,7 @@ export class HmPageMethods {
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KLANTENSERVICE, 2);
-        await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, verzekeringPaginasEnum.KLANTENSERVICE);
+        await genericMethods.verifyTextInElement(hmPageElements.klantenServiceTitleTextElement, 'Waar kunnen we u mee helpen?');
         break;
       }
       case homePageEnum.ONDERNEMERSSCAN: {
@@ -446,8 +447,9 @@ export class HmPageMethods {
       case homePageEnum.AUTOVERZEKERING: {
         const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.AUTOVERZEKERING_PRODUCT_PAGE_PAT);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(productPageElements.autoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(productPageElements.autoVerzekeringBreadcrumTextElement, homePageEnum.AUTOVERZEKERING);
+        await genericMethods.waitForElementIsVisibleShadowRoot(productPageElements.autoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.AUTOVERZEKERING_PAT, 2);
 
         break;
       }
@@ -455,7 +457,8 @@ export class HmPageMethods {
         const url: string = await getUrlUnive.getUrlUnive(verzekeringPaginasEnum.WOONVERZEKERING_PRODUCT_PAGE_PAT);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(productPageElements.woonverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(productPageElements.woonVerzekeringBreadcrumTextElement, homePageEnum.WOONVERZEKERING);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.WOONVERZEKERING_PAT, 2);
         break;
       }
       case homePageEnum.CARAVANVERZEKERING: {
@@ -476,14 +479,17 @@ export class HmPageMethods {
       case homePageEnum.ZORGNOTA_DECLAREREN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZORGNOTA_DECLAREREN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.zorgNotaDeclarerenBreadcrumbElement, browser.getPageTimeout);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ZORGVERZEKERING, 2);
         await genericMethods.verifyTextInElement(hmPageElements.zorgNotaDeclarerenTitleTextElement, hmPageElements.zorgNotaDeclarerenTitleText);
         break;
       }
       case homePageEnum.UNIVE_ALARMCENTRALE: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.UNIVE_ALARMCENTRALE);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.alarmCentraleBreadcrumbElement, browser.getPageTimeout);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KLANTENSERVICE, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ALARMCENTRALE, 3);
         await genericMethods.verifyTextInElement(hmPageElements.alarmCentraleTitleTextElement, hmPageElements.alarmCentraleTitleText);
         break;
       }

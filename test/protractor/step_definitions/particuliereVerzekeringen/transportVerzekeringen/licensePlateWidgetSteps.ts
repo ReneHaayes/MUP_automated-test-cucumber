@@ -1,8 +1,5 @@
 import {Then, When} from "cucumber";
 import {
-  autoVerzekeringElements,
-  businessCarWithLicensePlate,
-  genericMethods,
   licensePlateMethod
 } from "@support";
 
@@ -16,8 +13,4 @@ Then(/^The (.*) data (.*) appears for autoverzekering$/, async (licensePlate: st
 
 Then(/^The (.*) data (.*) appears for bedrijfs autoverzekering$/, async (licensePlate: string, dodont: string) => {
   await licensePlateMethod.checkBedrijfsAutoverzekeringPage(dodont, licensePlate);
-});
-
-Then(/^The (.*) data dont appears for business personenautoverzekering$/, async (licensePlate: string) => {
-  await genericMethods.verifyTextNotInElement(autoVerzekeringElements.brandElement, businessCarWithLicensePlate.getCarBrandName(licensePlate), autoVerzekeringElements.licensePlateElement);
 });
