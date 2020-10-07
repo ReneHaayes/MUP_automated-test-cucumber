@@ -49,6 +49,9 @@ When(/^I enter step three page of bedrijfs autoverzekering with (.*)$/, async (c
 When(/^I enter step four page of bedrijfs autoverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
+  await genericMethods.typeText(nawElements.companyDataEmailAddressConfirmInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressConfirmInputElement);
   await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
@@ -77,6 +80,9 @@ When(/^I enter step three page of bedrijfsautoverzekering with different owner w
 When(/^I enter step four page of bedrijfsautoverzekering for (.*) with (.*) different owner (.*)$/, async (company: string, persona: string, natural_person: string) => {
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
+  await genericMethods.typeText(nawElements.companyDataEmailAddressConfirmInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressConfirmInputElement);
   await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
