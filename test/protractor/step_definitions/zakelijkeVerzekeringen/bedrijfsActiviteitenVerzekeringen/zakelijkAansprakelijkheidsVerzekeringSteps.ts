@@ -36,6 +36,9 @@ When(/^I enter step three page and click next on step four for zakelijk aansprak
 When(/^I enter step five page of zakelijk aansprakelijkheidsverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
+  await genericMethods.typeText(nawElements.companyDataEmailAddressConfirmInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressConfirmInputElement);
   await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
