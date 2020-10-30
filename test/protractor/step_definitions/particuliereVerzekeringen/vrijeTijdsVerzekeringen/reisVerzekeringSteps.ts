@@ -8,13 +8,15 @@ import {
   reisVerzekeringMethods, stickyBalkElements,
   stickyBalkMethods
 } from "@support";
-import {homePageEnum} from "@enum";
 
 When(/^I enter step one and step two page of doorlopende verzekeringen for myself$/, async () => {
   await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);
   await genericMethods.clickOnNextButton();
-  await genericMethods.scrollDown();
-  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.REISVERZEKERING);
+  // await genericMethods.clickOnElement('[data-label-id="LA_IF9228_17411"]');
+  // await genericMethods.scrollToElement('[class="collectiveSearch_query"]');
+  // await genericMethods.scrollDown();
+  // await genericMethods.scrollTilTop();
+  // await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.REISVERZEKERING);
   await genericMethods.clickOnNextButton();
 });
 

@@ -248,14 +248,14 @@ export class HmPageMethods {
       case homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.afspraakMakenBreadcrumbElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(hmPageElements.afspraakMakenBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.afspraakMakenH1TitleTextElement, hmPageElements.afspraakMakenTitleText);
         break;
       }
       case homePageEnum.KLACHT_INDIENEN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.KLACHT_INDIENEN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.klachtIndienenBreadcrumbElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(hmPageElements.klachtIndienenBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.klachtIndienenH1TitleTextElement, hmPageElements.klachtIndienenH1TitleText);
         break;
       }
@@ -279,14 +279,14 @@ export class HmPageMethods {
       case homePageEnum.ZZP_ER: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZZP_ER);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.zzpBreadcrumbElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(hmPageElements.zzpBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.zzpH2TextElement, hmPageElements.zzpH2Text);
         break;
       }
       case homePageEnum.AGRARIER: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.AGRARIER);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageElements.agrariersBreadcrumbElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(hmPageElements.agrariersBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.agrarierH1TextElement, hmPageElements.agrarierH1Text);
         break;
       }
@@ -425,6 +425,7 @@ export class HmPageMethods {
         break;
       }
       case homePageEnum.ZORGVERZEKERING: {
+        await browser.sleep(500);
         const url: string = getUrlUnive.getUrlUnive(verzekeringPaginasEnum.ZORGVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(hmPageElements.zorgPremieBerekenPageCheckElement, browser.getPageTimeout);
