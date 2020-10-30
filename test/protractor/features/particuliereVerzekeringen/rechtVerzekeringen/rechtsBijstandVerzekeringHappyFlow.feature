@@ -6,7 +6,7 @@ Feature: Happy flow for 'rechtsbijstandverzekering'
     Given I am on the Rechtsbijstandverzekering page of the Unive website
     When I enter step one page of rechtsbijstandverzekering for family composition of: one person
     And I enter details of <persona> in your data page of rechtsbijstand verzekeringen
-    Then Customer can select bekijk controleer gegevens for rechtsbijstandverzekering in almost insured page with correct data
+#    Then Customer can select bekijk controleer gegevens for rechtsbijstandverzekering in almost insured page with correct data
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |

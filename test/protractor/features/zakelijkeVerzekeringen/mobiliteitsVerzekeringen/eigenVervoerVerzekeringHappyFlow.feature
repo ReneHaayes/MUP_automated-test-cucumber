@@ -8,7 +8,7 @@ Feature: Happy flow for 'zakelijk eigen vervoer verzekering'
       | activity | fotograaf     |
       | typeCar  | passenger car |
       | howMany  | 1             |
-    And I enter step four page of eigen vervoer verzekering for <company> with <persona>
+    And I enter step four page of eigen vervoer verzekering for <company> with <persona>C
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |

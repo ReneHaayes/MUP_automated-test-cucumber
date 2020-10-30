@@ -28,6 +28,7 @@ When(/^I choose the correct premie with:$/, async (data) => {
   await genericMethods.clickOnElement(woonVerzekeringElements.additionalOptionsGlassBreakageElement);
   await genericMethods.clickOnElement(woonVerzekeringElements.additionalOptionsVoluntaryRiskElement);
   await genericMethods.clickOnNextButton();
+  await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter details of (.*) in step four page of woonverzekering$/, async (persona: string) => {

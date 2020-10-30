@@ -43,6 +43,9 @@ When(/^I enter step four page of zakelijk tractorverzekering for (.*) with (.*)$
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
+  await genericMethods.typeText(nawElements.companyDataEmailAddressConfirmInputElement, companyData.getCompanyEmailAddress(company));
+  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressConfirmInputElement);
   await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));

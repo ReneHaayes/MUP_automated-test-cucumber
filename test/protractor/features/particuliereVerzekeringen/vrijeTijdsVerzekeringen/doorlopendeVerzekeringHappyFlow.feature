@@ -6,7 +6,7 @@ Feature: Happy flow for 'doorlopendeReisverzekering and doorlopendeAnnuleringsve
     Given I am on the <page> page of the Unive website
     When I enter step one and step two page of doorlopende verzekeringen for myself
     And I enter details of <persona> in your data page of reis verzekeringen
-    Then Customer can select bekijk controleer gegevens for reisverzekering in almost insured page with correct data
+#    Then Customer can select bekijk controleer gegevens for reisverzekering in almost insured page with correct data
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
