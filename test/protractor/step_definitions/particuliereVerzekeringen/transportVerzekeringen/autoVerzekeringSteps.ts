@@ -30,7 +30,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
   await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive('no');
   await autoVerzekeringMethods.selectYearlyMileage('20000tot25000');
-  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, '2');
+  // await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, '2');
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIRST, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
     analyticsAutoverzekeringElements.firstPagePaginaId);
@@ -137,7 +137,6 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverNoClickElement);
   await genericMethods.typeText(autoVerzekeringElements.sameDriverZipCodeCompanyElement, companyData.getCompanyZipcode(company));
-  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
   await genericMethods.clickOnNextButton();
 });
 
@@ -148,9 +147,9 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverYesClickElement);
   await genericMethods.typeText(nawElements.specificDriverZipCodeElement, companyData.getCompanyZipcode(company));
-
+  await genericMethods.clickOnTAB(nawElements.specificDriverZipCodeElement);
   await genericMethods.typeText(nawElements.afwijkendeBestuurderBirthdateStepOneElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
+  await genericMethods.clickOnTAB(nawElements.afwijkendeBestuurderBirthdateStepOneElement);
   await genericMethods.clickOnNextButton();
 });
 

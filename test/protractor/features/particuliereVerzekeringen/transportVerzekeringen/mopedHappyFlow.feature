@@ -6,10 +6,10 @@ Feature: Happy flow for 'Bromfietsverzekering' and 'Scooterverzekering'
     Given I am on the <page> page of the Unive website
     When I enter step one page of moped for persona <persona> with license plate <licensePlate> and 3 damage free years
     And I enter step two page of moped with
-      | basisDekking      | waPlus                 |
+      | basisDekking      | waPlus                |
       | aanvullendeOpties | Ongevallenverzekering |
-      | accessoires       | acc tm 500             |
-      | ownRisk           | ownRisk500             |
+      | accessoires       | acc tm 500            |
+      | ownRisk           | ownRisk500            |
     And I enter step three page of moped with
       | kindOfInsurance                 | new        |
       | dateOfName                      | 01-01-2019 |
