@@ -24,7 +24,6 @@ When(/^I enter step three page of zakelijk rechtsbijstand verzekering with:$/, a
 });
 
 When(/^I enter step four page of zakelijk rechtsbijstandverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
-  await genericMethods.clickOnTAB(nawElements.companyDataNameInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);

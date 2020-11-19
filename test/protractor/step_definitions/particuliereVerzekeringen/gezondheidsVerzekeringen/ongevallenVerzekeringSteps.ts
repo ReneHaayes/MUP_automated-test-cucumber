@@ -1,6 +1,6 @@
 import {When} from "cucumber";
 import {
-  genericElements, genericMethods, nawElements, ongevallenVerzekeringElements, ongevallenVerzekeringMethods, personaData
+  genericElements, genericMethods, nawElements, ongevallenVerzekeringMethods, personaData
 } from "@support";
 
 When(/^I enter step one page of ongevallenverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
@@ -30,6 +30,4 @@ When(/^I enter details of (.*) in your data page of ongevallen verzekeringen$/, 
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
-  //Click yes on all insured are healthy on step our page.
-  await genericMethods.clickOnElement(ongevallenVerzekeringElements.allInsuredHealthyYesClickElement);
 });
