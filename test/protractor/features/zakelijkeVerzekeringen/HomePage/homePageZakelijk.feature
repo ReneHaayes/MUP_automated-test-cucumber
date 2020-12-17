@@ -13,7 +13,7 @@ Feature: Check if the business homepage shows the buttons correctly.
       | Zakelijke personenauto        |
       | arbeidsongeschiktheid         |
       | rechtsbijstand                |
-#      | aansprakelijkheidsverzekering |
+      | aansprakelijkheidsverzekering |
 
 
   Scenario Outline: Click on the menu and check the elements and verify if the outcome is correct.
@@ -23,7 +23,7 @@ Feature: Check if the business homepage shows the buttons correctly.
 
     Examples:
       | button   |
-      | zzp er   |
+#      | zzp er   |            Pagina bestaat niet
       | agrarier |
       | gebouwen |
 

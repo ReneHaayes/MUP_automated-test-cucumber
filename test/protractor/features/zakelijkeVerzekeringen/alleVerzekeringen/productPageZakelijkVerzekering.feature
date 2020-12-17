@@ -17,7 +17,7 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown b
       | Constructie All Riskverzekering           | Constructie All Riskverzekering           |
       | Eigen vervoerverzekering                  | Eigen vervoerverzekering                  |
       | Gebouwenverzekering                       | Gebouwenverzekering                       |
-      | Handelaarskentekenverzekering             | Handelaarskentekenverzekering             |
+#      | Handelaarskentekenverzekering             | Handelaarskentekenverzekering             |      Pagina bestaat niet
       | Milieuschadeverzekering                   | Milieuschadeverzekering                   |
       | Personenautoverzekering                   | Personenautoverzekering                   |
       | Zakelijke motorverzekering                | Zakelijke motorverzekering                |

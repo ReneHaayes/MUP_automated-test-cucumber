@@ -4,19 +4,19 @@ import {browser} from "protractor";
 
 
 When(/^I press the button (.*) on the homepage$/, async (button: string) => {
-  await hmPageMethods.clickButtonHomePageAndGoToPremieBerekenen(button)
+  await hmPageMethods.clickButtonHomePageAndGoToPremieBerekenen(button);
 });
 
 When(/^I press the button (.*) on the business homepage$/, async (button: string) => {
-  await hmPageMethods.clickButtonBusinessHomePageAndGoToPremieBerekenen(button)
+  await hmPageMethods.clickButtonBusinessHomePageAndGoToPremieBerekenen(button);
 });
 
 When(/^I press the button (.*) on the menu page$/, async (button: string) => {
-  await hmPageMethods.clickMenuButtonAndGoToProductPage(button)
+  await hmPageMethods.clickMenuButtonAndGoToProductPage(button);
 });
 
 When(/^I press the button (.*) on the menu business page$/, async (button: string) => {
-  await hmPageMethods.clickBusinessMenuButtonAndGoToProductPage(button)
+  await hmPageMethods.clickBusinessMenuButtonAndGoToProductPage(button);
 });
 
 Then(/^Verify element on premie berekenen page for (.*) is shown$/, async (page: string) => {
