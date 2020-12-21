@@ -18,8 +18,8 @@ export class ZakelijkAansprakelijkheidsVerzekeringElements {
   outsideNetherlandsNoClickElement: string = '[data-label-id*="LA_IF19426_24998"] .radioList > label:nth-child(2)';
   clientsInFollowingSectorsYesElement: string = '[data-label-id*="IF19426_40845"] .radioList > label:nth-child(1)';
   clientsInFollowingSectorsNoElement: string = '[data-label-id*="IF19426_40845"] .radioList > label:nth-child(2)';
-  productsToFactorysYesClickElement: string = '[data-label-id*="LA_IF19426_25042"] .radioList > label:nth-child(1)';
-  productsToFactorysNoClickElement: string = '[data-label-id*="LA_IF19426_25042"] .radioList > label:nth-child(2)';
+  productsToFactoryYesClickElement: string = '[data-label-id*="LA_IF19426_25042"] .radioList > label:nth-child(1)';
+  productsToFactoryNoClickElement: string = '[data-label-id*="LA_IF19426_25042"] .radioList > label:nth-child(2)';
   demolishBuildingsYesClickElement: string = '[data-label-id*="LA_IF19427_24999"] .radioList > label:nth-child(1)';
   demolishBuildingsNoClickElement: string = '[data-label-id*="LA_IF19427_24999"] .radioList > label:nth-child(2)';
   outsourceToZzpYesClickElement: string = '[data-label-id*="LA_IF19427_38411"] .radioList > label:nth-child(1)';
@@ -30,6 +30,12 @@ export class ZakelijkAansprakelijkheidsVerzekeringElements {
   scaffoldingNoClickElement: string = '[data-label-id*="LA_IF19427_38410"] .radioList > label:nth-child(2)';
   useFollowingEquipmentDuringWorkYesClickElement: string = '[data-label-id*="LA_IF19427_40911"] .radioList > label:nth-child(1)';
   useFollowingEquipmentDuringWorkNoClickElement: string = '[data-label-id*="LA_IF19427_40911"] .radioList > label:nth-child(2)';
+  buildOnlyPrivateSectorYesElement: string = '[data-label-id="LA_IF36905_47009"] [class=radioList] > label:nth-child(1)';
+  buildOnlyPrivateSectorNoElement: string = '[data-label-id="LA_IF36905_47009"] [class=radioList] > label:nth-child(2)';
+  heavyConstructionWorkYesElement: string = '[data-label-id="LA_IF36905_47010"] [class=radioList] > label:nth-child(1)';
+  heavyConstructionWorkNoElement: string = '[data-label-id="LA_IF36905_47010"] [class=radioList] > label:nth-child(2)';
+  additionalRiskThreeYearsPriorYesElement: string = '[data-label-id="LA_IF19446_25037"] [class=radioList] > label:nth-child(1)';
+  additionalRiskThreeYearsPriorNoElement: string= '[data-label-id="LA_IF19446_25037"] [class=radioList] > label:nth-child(2)';
 
   //SELECT TOOLS
   toolsSelectElement: string = '#_Form_IF19427_25045';

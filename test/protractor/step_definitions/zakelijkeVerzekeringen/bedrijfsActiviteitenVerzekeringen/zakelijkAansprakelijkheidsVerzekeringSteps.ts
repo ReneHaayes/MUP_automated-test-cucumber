@@ -1,17 +1,25 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  companyData, genericElements, genericMethods, nawElements, personaData, zakelijkAansprakelijkheidsVerzekeringElements
-} from "@support";
+  companyData,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  zakelijkAansprakelijkheidsVerzekeringElements
+} from '@support';
+
 
 When(/^I enter step one page and click next on step two for zakelijk aansprakelijkheidsverzekering with company (.*)$/, async function (company: string) {
   await genericMethods.typeText(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnTAB(zakelijkAansprakelijkheidsVerzekeringElements.kvkNumberInputElement);
   await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.correctCompanyDataYesClickElement);
+  await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.otherActivitiesYesClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.otherActivitiesNoClickElement);
+  console.log('go to page 2');
   await genericMethods.clickOnNextButton();
-  await genericMethods.clickOnElement(genericElements.closeLightBoxClickElement);
-  //click next on step two page.
+  // await genericMethods.clickOnElement(genericElements.closeLightBoxClickElement);
+  console.log('go to page 3');
   await genericMethods.clickOnNextButton();
 });
 
@@ -19,14 +27,17 @@ When(/^I enter step three page and click next on step four for zakelijk aansprak
   // const dataTable = data.rowsHash();
   // await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.usualConditionsYesClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.outsideNetherlandsNoClickElement);
-  // await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.productsToFactorysNoClickElement);
+  // await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.productsToFactoryNoClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.clientsInFollowingSectorsNoElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.demolishBuildingsNoClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.outsourceToZzpNoClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.workingWithAsbestNoClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.scaffoldingNoClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.useFollowingEquipmentDuringWorkNoClickElement);
-  // await zakelijkAansprakelijkheidsVerzekeringMethods.selectTools(dataTable.tools);
+  await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.buildOnlyPrivateSectorNoElement);
+  await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.heavyConstructionWorkNoElement);
+  await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.additionalRiskThreeYearsPriorNoElement);
+    // await zakelijkAansprakelijkheidsVerzekeringMethods.selectTools(dataTable.tools);
   await genericMethods.clickOnNextButton();
   // click next on step four
   await genericMethods.clickOnNextButton();

@@ -44,10 +44,10 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw recht               | rechtsbijstandverzekering     |
       | alle verzekeringen     | aansprakelijkheidsverzekering |
       | uw financiele toekomst | pensioen                      |
-#      | alle verzekeringen     | lijfrenteverzekering          |
+#      | alle verzekeringen     | lijfrenteverzekering          |     Staat niet meer op de pagina
       | uw nabestaanden        | uitvaartverzekering           |
       | alle verzekeringen     | overlijdensrisicoverzekering  |
 
-    Scenario: Check if the calamiteiten page is available
-      Given I am on the calamiteiten page of the Unive website
-      Then Verify calamiteiten page is shown correctly
+  Scenario: Check if the calamiteiten page is available
+    Given I am on the calamiteiten page of the Unive website
+    Then Verify calamiteiten page is shown correctly

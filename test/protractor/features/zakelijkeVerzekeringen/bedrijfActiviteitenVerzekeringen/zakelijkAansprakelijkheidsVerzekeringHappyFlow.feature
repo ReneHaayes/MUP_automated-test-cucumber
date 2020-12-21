@@ -1,8 +1,9 @@
 @zakelijkAansprakelijkheidsVerzekering
 
-Feature: Happy flow for 'zakelijk aansprakelijkheids verzekering'
+Feature: Happy flow for 'zakelijk aansprakelijkheidsverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
+
     Given I am on the Bedrijfsaansprakelijkheidsverzekering page of the Unive website
     When I enter step one page and click next on step two for zakelijk aansprakelijkheidsverzekering with company <company>
     And I enter step three page and click next on step four for zakelijk aansprakelijkheidsverzekering:
@@ -17,4 +18,3 @@ Feature: Happy flow for 'zakelijk aansprakelijkheids verzekering'
     Examples:
       | persona | company         |
       | ronaldo | rg timmerwerken |
-

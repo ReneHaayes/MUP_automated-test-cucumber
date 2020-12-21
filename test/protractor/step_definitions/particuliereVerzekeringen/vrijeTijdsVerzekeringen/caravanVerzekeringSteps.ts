@@ -8,9 +8,9 @@ When(/^I enter step one and click next on step two of caravan verzekering$/, asy
   await genericMethods.clickOnElement(caravanVerzekeringElements.searchCaravanDataClickElement);
   //Different page
   await genericMethods.selectInDropdown(vehicleElements.constructionYearSelectElement, vehicleElements.constructionYearSelect2018Element);
-  await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectAceElement);
-  await genericMethods.selectInDropdown(vehicleElements.brandModelSelectElement, vehicleElements.brandModelSelectChampsElement);
-  await genericMethods.selectInDropdown(vehicleElements.brandTypeSelectElement, vehicleElements.brandTypeSelectChamps330DDBasicElement);
+  await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectCaravanElement);
+  await genericMethods.selectInDropdown(vehicleElements.brandModelSelectElement, vehicleElements.brandModelSelectCaravanElement);
+  await genericMethods.selectInDropdown(vehicleElements.brandTypeSelectElement, vehicleElements.brandTypeSelectCaravanElement);
   await genericMethods.clickOnElement(vehicleElements.confirmationButtonClickElement);
   //Back to step one page
   await genericMethods.clickOnElement(caravanVerzekeringElements.hailDamageNoClickElement);

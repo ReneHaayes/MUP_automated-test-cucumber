@@ -20,5 +20,6 @@ Then(/^Verify elements on (.*) product page is shown$/, async (buttonPage: strin
 });
 
 Then(/^Verify calamiteiten page is shown correctly$/, async () => {
-  await genericMethods.verifyTextInElementShadowRoot(alleVerzekeringenElements.calamiteitenFirstTileTitleTextElement, 'Aanslagen');
+    await genericMethods.verifyTextInElementShadowRoot(alleVerzekeringenElements.calamiteitenFirstTileTitleTextElement, 'Coronavirus');
+  // await genericMethods.verifyTextInElementShadowRoot(alleVerzekeringenElements.calamiteitenFirstTileTitleTextElement, 'Aanslagen');      Eerste tekstblok veranderd ivm corona. Was Aanslagen
 });

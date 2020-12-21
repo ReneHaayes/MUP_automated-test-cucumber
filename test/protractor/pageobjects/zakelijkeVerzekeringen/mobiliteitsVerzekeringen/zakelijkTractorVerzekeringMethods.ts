@@ -1,5 +1,5 @@
-import {genericMethods, zakelijkTractorVerzekeringElements} from "@support";
-import {maxSpeedEnum} from "@enum";
+import {genericMethods, zakelijkTractorVerzekeringElements} from '@support';
+import {maxSpeedEnum} from '@enum';
 
 export class ZakelijkTractorVerzekeringMethods {
 
@@ -30,5 +30,4 @@ export class ZakelijkTractorVerzekeringMethods {
       }
     }
   }
-
 }

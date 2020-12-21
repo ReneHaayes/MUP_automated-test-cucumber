@@ -1,4 +1,4 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
   companyData,
   genericElements,
@@ -12,6 +12,7 @@ import {
 
 When(/^I enter step one page and click next on step two of zakelijk tractorverzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
+  await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.licenceplateTractorNoElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.searchTractorDataClickElement);
   await genericMethods.selectInDropdown(vehicleElements.constructionYearSelectElement, vehicleElements.constructionYearSelect2018Element);
   await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectFerrariElement);
@@ -19,22 +20,21 @@ When(/^I enter step one page and click next on step two of zakelijk tractorverze
   await genericMethods.clickOnElement(vehicleElements.confirmationButtonClickElement);
   await genericMethods.typeText(zakelijkTractorVerzekeringElements.valueInputElement, dataTable.value);
   await genericMethods.selectInDropdown(zakelijkTractorVerzekeringElements.accessoiresSelectElement, zakelijkTractorVerzekeringElements.accessoiresTm1000SelectElement);
+  await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.trackAndTraceSystemYesClickElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.trackAndTraceSystemNoClickElement);
   await zakelijkTractorVerzekerinigMethods.selectMaximumSpeed(dataTable.maxSpeed);
   await genericMethods.selectInDropdown(zakelijkTractorVerzekeringElements.enginePowerSelectElement, zakelijkTractorVerzekeringElements.enginePower100PkSelectElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.usageOwnLawnClickElement);
   await genericMethods.clickOnNextButton();
-  //click next on step two
-  await genericMethods.clickOnNextButton()
+  // click next on step two
+  await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step three page of zakelijk tractorverzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
-  await genericMethods.typeText(zakelijkTractorVerzekeringElements.licensePlateInputElement, dataTable.licensePlate);
-  await genericMethods.clickOnTAB(zakelijkTractorVerzekeringElements.licensePlateInputElement);
   await genericMethods.typeText(zakelijkTractorVerzekeringElements.chassisNumberInputElement, dataTable.chassisNumber);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.ownerYesClickElement);
-  await genericMethods.clickOnNextButton()
+  await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step four page of zakelijk tractorverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
@@ -58,11 +58,9 @@ When(/^I enter step four page of zakelijk tractorverzekering for (.*) with (.*)$
 
 When(/^I enter step three page of zakelijk tractorverzekeringen with different owner:$/, async (data) => {
   const dataTable = data.rowsHash();
-  await genericMethods.typeText(zakelijkTractorVerzekeringElements.licensePlateInputElement, dataTable.licensePlate);
-  await genericMethods.clickOnTAB(zakelijkTractorVerzekeringElements.licensePlateInputElement);
   await genericMethods.typeText(zakelijkTractorVerzekeringElements.chassisNumberInputElement, dataTable.chassisNumber);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.ownerNoClickElement);
-  await genericMethods.clickOnNextButton()
+  await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step four page of zakelijke tractorverzekering for (.*) with (.*) different owner (.*)$/, async (company: string, persona: string, natural_person: string ) => {
@@ -82,7 +80,7 @@ When(/^I enter step four page of zakelijke tractorverzekering for (.*) with (.*)
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnElement(nawElements.differentOwnerNatuurlijkPersoonElement);
-  await genericMethods.typeText(nawElements.differentOwnerInitialsInputElement,personaData.getPersonaInitials(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerInitialsInputElement, personaData.getPersonaInitials(natural_person));
   await genericMethods.typeText(nawElements.differentOwnerPrefixInputElement, personaData.getPersonaPrefix(natural_person));
   await genericMethods.typeText(nawElements.differentOwnerLastNameInputElement, personaData.getPersonaLastName(natural_person));
   await genericMethods.clickDifferentOwnerDataGender(personaData.getPersonaGender(natural_person));
