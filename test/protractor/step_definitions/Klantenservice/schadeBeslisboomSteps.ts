@@ -140,9 +140,9 @@ Then(/^information text about Een aanrijding met mijn fiets is shown$/, async ()
 
 When(/^Customer selects lees meer button$/, async () => {
   await genericMethods.verifyBreadcrumbOnPosition('Home', 1);
-  await genericMethods.verifyBreadcrumbOnPosition('FAQ', 2);
-  await genericMethods.verifyBreadcrumbOnPosition('Autoverzekering', 3);
-  await genericMethods.verifyBreadcrumbOnPosition('Wat is een wa autoverzekering', 4);
+  await genericMethods.verifyBreadcrumbOnPosition('Autoverzekering', 2);
+  await genericMethods.verifyBreadcrumbOnPosition('WA autoverzekering', 3);
+  // await genericMethods.verifyBreadcrumbOnPosition('Wat is een wa autoverzekering', 4);
   await genericMethods.clickOnElement(schadeBeslisboomElements.leesMeerButtonWatIsEenWaAutoverzekeringClickElement);
 });
 

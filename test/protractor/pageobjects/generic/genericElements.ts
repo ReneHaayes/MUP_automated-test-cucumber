@@ -84,7 +84,7 @@ export class GenericElements {
   pensioen: string = 'pensioen/';
   prefillOmringPashoudersUrl: string = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
 
-  faqPageWatIsEenWaAutoVerzekering: string = 'faq/autoverzekering/wat-is-een-wa-autoverzekering';
+  faqPageWatIsEenWaAutoVerzekering: string = '/autoverzekering/wa';
 
   zorgchecktool: string = 'zorgverzekering/zorgcheck';
   zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';

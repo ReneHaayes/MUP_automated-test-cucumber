@@ -20,6 +20,13 @@ export class KlachtenFormulierElements {
   streetNameInputElement: string = '[name="personal_data__street"]';
   phoneNumberInputElement: string = '[name="personal_data__phonenumber"]';
 
+  lastNameZorgInputElement: string = '[name="name"]';
+  emailAddressZorgInputElement: string = '[name="email"]';
+  clientNumberZorgInputElement: string = '[name="Web_Klantnummer__c"]';
+  phoneNumberZorgInputElement: string = '[name="Primair_telefoonnr__c"]';
+  uwKlachtZorgInputElement: string = '[name="description"][class="required"]';
+  oplossingZorgInputElement: string = '[name="Web_Solution__c"]';
+
   //CONFIRMATION
   klachtFormConfirmationTextElement: string = '[class="eforms eforms-generiekEmail"] > div > p';
   klachtFormConfirmationText: string = 'Wij hebben uw klacht ontvangen en nemen zo spoedig mogelijk contact met u op. U ontvangt een kopie van uw klacht in uw mailbox.';

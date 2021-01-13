@@ -7,10 +7,13 @@ Feature: Making sure the 'vraag stellen beslisboom' is functioning by filling in
     When Customer fills in form for schadeverzekeringen vraag stellen
     Then Verify question is accepted with a confirmation text
 
-  Scenario: Verify form 'Zorgverzekeringen' on vraagstellen page
-    Given I am on the vraagStellen page of the Unive website
-    When Customer fills in form for zorgverzekeringen vraag stellen
-    Then Verify question is accepted with a confirmation text
+# Tijdens zorgcampagne wordt dit formulier blijkbaar niet gebruikt 15-12-2020
+# https://pat.unive.nl/afspraak/postcode?appointmentTypeFilter=zorgcheck werkt wel op PRD maar niet op PAT
+
+#  Scenario: Verify form 'Zorgverzekeringen' on vraagstellen page
+#    Given I am on the vraagStellen page of the Unive website
+#    When Customer fills in form for zorgverzekeringen vraag stellen
+#    Then Verify question is accepted with a confirmation text
 
   Scenario: Verify form 'Levensverzekeringen' on vraagstellen page
     Given I am on the vraagStellen page of the Unive website
