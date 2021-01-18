@@ -137,6 +137,8 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverNoClickElement);
   await genericMethods.typeText(autoVerzekeringElements.sameDriverZipCodeCompanyElement, companyData.getCompanyZipcode(company));
+  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
+  await genericMethods.clickOnTAB(autoVerzekeringElements.damageFreeYearsElement);
   await genericMethods.clickOnNextButton();
 });
 
@@ -150,6 +152,8 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
   await genericMethods.clickOnTAB(nawElements.specificDriverZipCodeElement);
   await genericMethods.typeText(nawElements.afwijkendeBestuurderBirthdateStepOneElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.clickOnTAB(nawElements.afwijkendeBestuurderBirthdateStepOneElement);
+  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
+  await genericMethods.clickOnTAB(autoVerzekeringElements.damageFreeYearsElement);
   await genericMethods.clickOnNextButton();
 });
 
