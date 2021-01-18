@@ -16,10 +16,8 @@ When(/^I enter step one page and click next on step two for zakelijk aansprakeli
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.correctCompanyDataYesClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.otherActivitiesYesClickElement);
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.otherActivitiesNoClickElement);
-  console.log('go to page 2');
   await genericMethods.clickOnNextButton();
   // await genericMethods.clickOnElement(genericElements.closeLightBoxClickElement);
-  console.log('go to page 3');
   await genericMethods.clickOnNextButton();
 });
 

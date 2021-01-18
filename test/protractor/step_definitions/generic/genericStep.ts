@@ -19,6 +19,10 @@ Then(/^Thank you page for zakelijk is shown$/, async function () {
   await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, 'Uw aanvraag is in behandeling');
 });
 
+Then(/^Thank you page for zakelijke (.*) is shown$/, async function (verzekering: string) {
+  await genericMethods.verifyTextInElement(genericElements.thankYouH1Element, verzekering);
+});
+
 
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
