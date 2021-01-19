@@ -48,8 +48,8 @@ export class HmPageElements {
 
   //ZORGVERZEKERING
   homePageZorgverzekeringElement: string = '[href*="/zorgverzekering"][class*="insurances_tabLinkAction"]';
-  berekenUwPremieZorgVerzekeringClickButton: string = '[class*="inlineAnchor_button"][href*="/zorgverzekering/premieberekenen-en-afsluiten"]';
-  zorgPremieBerekenPageCheckElement: string = '[class="unive-basic-insurances-coverage"]';
+  berekenUwPremieZorgVerzekeringClickButton: string = '[class="insurances_tabContent _is_active"] [href*="/zorgverzekering/premieberekenen-en-afsluiten"]';
+  zorgPremieBerekenPageCheckElement: string = 'unive-basic-insurances-coverage:nth-child(1) ';
 
   //REISVERZEKERING
   homePageReisverzekeringElement: string = '[href*="/doorlopende-reisverzekering"][class*="insurances_tabLinkAction"]';
@@ -82,8 +82,9 @@ export class HmPageElements {
   bekijkAlleContactMogelijkhedenButtonClickElement: string = '[class="mainHeader_subLevel _is_expanded"] [href="/klantenservice"][title="Bekijk alle contactmogelijkheden"]';
 
 
-  zorgNotaDeclarerenTitleTextElement: string = '[class="heroHeader_textContent"] > h1:nth-child(3)';
-  zorgNotaDeclarerenTitleText: string = "Uw zorgnota declareren";
+  zorgNotaDeclarerenTitleTextElement: string = '[class="component-content"] > h1';
+  zorgNotaDeclarerenTitleText: string = 'Declaratie indienen';
+  buttonNaarUniveZorg = '[class="button button-primary"]';
   zorgNotaDeclarerenBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Declareren"]';
   alarmCentraleTitleTextElement: string = '[class*="action_title"]';
   alarmCentraleTitleText: string = 'Alarmcentrale';
@@ -104,7 +105,7 @@ export class HmPageElements {
   headerMijnUniveZakelijkClickElement: string = '[class*="mainMijnUnive_block"] [title="Mijn Univé Zakelijk"]';
 
   //FOOTER
-  footerZorgNotaDeclarenClickElement: string = '[class="mainFooterContent_menuLink"][href*="zorgverzekering/declareren"]';
+  footerZorgNotaDeclarenClickElement: string = '[class="mainFooterContent_menuLink"][href*="/zorgkosten/declareren"]';
   footerOverUniveClickElement: string = '[class="mainFooterContent_menuLink"][href*="overunive"]';
   overUniveBreadcrumbElement: string = '[class*= "breadcrumb_link"][title="Over Univé"]';
   overUniveTitleTextElement: string = '[class="actionSidebar_title"]';

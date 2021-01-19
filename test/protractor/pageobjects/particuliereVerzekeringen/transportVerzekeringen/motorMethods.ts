@@ -1,10 +1,21 @@
-import {browser} from "protractor";
+import {browser} from 'protractor';
 import {
-  autoVerzekeringElements, genericElements, genericMethods, motorElements, motorWithLicensePlate, vehicleElements
-} from "@support";
+  autoVerzekeringElements,
+  genericElements,
+  genericMethods,
+  motorElements,
+  motorWithLicensePlate,
+  vehicleElements
+} from '@support';
 import {
-  aanvullendeOptiesEnum, alarmSystemEnum, basisDekkingEnum, genericEnum, licensePlates, vehicleAccEnum, vehicleKindEnum
-} from "@enum";
+  aanvullendeOptiesEnum,
+  alarmSystemEnum,
+  basisDekkingEnum,
+  genericEnum,
+  licensePlates,
+  vehicleAccEnum,
+  vehicleKindEnum
+} from '@enum';
 
 
 export class MotorMethods {
@@ -12,23 +23,22 @@ export class MotorMethods {
   async enterLicensePlate(input: string) {
     switch (input) {
       case licensePlates.MOTOR_MPTT99: {
+        await genericMethods.waitForElementClickable(motorElements.licensePlateMotorInputElement, browser.getPageTimeout);
         await genericMethods.typeText(motorElements.licensePlateMotorInputElement, input);
-        await browser.sleep(500);
         await genericMethods.clickOnTAB(motorElements.licensePlateMotorInputElement);
-        // await genericMethods.waitForElementIsVisibleWithXpath(vehicleElements.licensePlateBrandNameElementWithXpath + '[contains(text(),"' + mopedWithLicensePlate.getMopedBrandName(licensePlate) + '")]', browser.getPageTimeout);
         break;
       }
       case licensePlates.QUAD_97XFTK: {
+        await genericMethods.waitForElementClickable(motorElements.licensePlateQuadInputElement, browser.getPageTimeout);
         await genericMethods.typeText(motorElements.licensePlateQuadInputElement, input);
-        await browser.sleep(500);
         await genericMethods.clickOnTAB(motorElements.licensePlateQuadInputElement);
         await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
         await genericMethods.clickOnElement(motorElements.selectQuadElement);
         break;
       }
       case licensePlates.TRIKE_21PLN1: {
+        await genericMethods.waitForElementClickable(motorElements.licensePlateTrikeInputElement, browser.getPageTimeout);
         await genericMethods.typeText(motorElements.licensePlateTrikeInputElement, input);
-        await browser.sleep(500);
         await genericMethods.clickOnTAB(motorElements.licensePlateTrikeInputElement);
         await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
         await genericMethods.clickOnElement(motorElements.selectTrikeElement);

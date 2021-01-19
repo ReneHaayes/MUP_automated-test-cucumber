@@ -23,9 +23,11 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw vervoer         | Bromfietsverzekering         |
       | alle verzekeringen | Scooterverzekering           |
       | alle verzekeringen | Motorverzekering             |
-      | uw vervoer         | Fietsverzekering             |
-      | uw vervoer         | Elektrische fietsverzekering |
-      | uw vervoer         | Scootmobielverzekering       |
+     | uw vervoer         | Fietsverzekering             |
+     # Zodra Widgets is geimplementeerd: stap toevoegen aan de THEN
+     | uw vervoer         | Elektrische fietsverzekering |
+     # Zodra Widgets is geimplementeerd: stap toevoegen aan de THEN
+     | uw vervoer         | Scootmobielverzekering       |
       | uw vervoer         | Oldtimerverzekering          |
       | uw huis            | Woonpakket                   |
       | uw huis            | Inboedelverzekering          |

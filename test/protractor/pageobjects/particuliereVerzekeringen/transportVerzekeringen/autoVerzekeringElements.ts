@@ -14,7 +14,7 @@ export class AutoVerzekeringElements {
   fuelTypeElement: string = '[data-label-id="LA_IF2509_3618"]';
 
   // Who drives the car the most
-  mySelf: string = '[ng-repeat="option in applicationFormQuestions.IF28608_36322._list"]';
+  mySelf: string = '[ng-repeat="option in applicationFormQuestions.IF28608_36322._list"][class="ng-scope checked"]';
   myPartner: string = ''; // can be added later
   myChild: string = ''; // can be added later
   someOneElse: string = ''; // can be added later
@@ -93,7 +93,7 @@ export class AutoVerzekeringElements {
 
   //COLLECTIVE
   collectiveInputElement: string = '.collectiveSearch_query';
-  collectiveAutoCompleteClickElement: string = '[class="autocomplete-items"] > div';
+  collectiveAutoCompleteClickElement: string = '[class="autocomplete-items"] > div:nth-child(1)';
   collectiveResultTextElement: string = '#_Form_IF4105_6208';
 
 }

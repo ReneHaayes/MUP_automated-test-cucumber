@@ -49,7 +49,7 @@ export class GenericElements {
   zakelijkTractorVerzekering: string = 'zakelijk/tractorverzekering/premieberekenen-en-afsluiten';
   zakelijkTractorVerzekeringPp: string = 'zakelijk/tractorverzekering';
   zorgVerzekering: string = 'zorgverzekering/premieberekenen-en-afsluiten';
-  zorgNotaDeclareren: string = 'zorgverzekering/declareren';
+  zorgNotaDeclareren: string = 'zorgkosten/declareren';
   univeAlarmCentrale: string = 'klantenservice/alarmcentrale';
   wijzigingenDoorgeven: string = 'klantenservice/wijzigingen-doorgeven';
   mijnUnive: string = 'https://login.pat.unive.nl/login';

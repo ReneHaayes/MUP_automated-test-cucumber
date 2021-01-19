@@ -30,10 +30,10 @@ export class AlleVerzekeringenMethods {
         await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwNabestaandenSelectElement);
         break;
       }
-      case selectAlleVerzekeringEnum.UW_ONLINE_VEILIGHEID: {
-        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwOnlineVeiliigheidSelectElement);
-        break;
-      }
+      // case selectAlleVerzekeringEnum.UW_ONLINE_VEILIGHEID: {     Staat niet meer in het drop down menu op de pagina Alle verzekeringen
+      //   await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwOnlineVeiligheidSelectElement);
+      //   break;
+      // }
       case selectAlleVerzekeringEnum.UW_RECHT: {
         await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwRechtSelectElement);
         break;
@@ -64,6 +64,7 @@ export class AlleVerzekeringenMethods {
     switch (input) {
       case verzekeringPaginasEnum.ZORGVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.ZORGVERZEKERING);
+        console.log('test');
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.zorgVerzekeringPageH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ZORGVERZEKERING, 2);
@@ -182,6 +183,8 @@ export class AlleVerzekeringenMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.FIETSVERZEKERING, 2);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.fietsVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        // await genericMethods.selectInDropdownShadowRoot()
+        // await genericMethods.clickOnElementShadowRoot()
         break;
       }
       case verzekeringPaginasEnum.ELEKTRISCHE_FIETSVERZEKERING: {
@@ -190,6 +193,8 @@ export class AlleVerzekeringenMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ELEKTRISCHE_FIETSVERZEKERING, 2);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.elektrischeFietsVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        // await genericMethods.selectInDropdownShadowRoot()
+        // await genericMethods.clickOnElementShadowRoot()
         break;
       }
       case verzekeringPaginasEnum.SCOOTMOBIELVERZEKERING: {

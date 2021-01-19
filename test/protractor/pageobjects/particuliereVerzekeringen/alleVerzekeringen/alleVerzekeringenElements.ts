@@ -3,15 +3,15 @@ export class AlleVerzekeringenElements {
   //SELECT DROPDOWN
   selectVerzekeringenDropdownElement: string = '[class="eforms-dropdownBox"]';
   alleUniveVerzekeringenSelectElement: string = '0';
-  uwGezondheidSelectElement: string = '9';
-  uwVrijeTijdSelectElement: string = '8';
-  uwVervoerSelectElement: string = '1';
-  uwHuisSelectElement: string = '2';
+  uwGezondheidSelectElement: string = '1';
+  uwVrijeTijdSelectElement: string = '2';
   uwRechtSelectElement: string = '3';
   uwFinancieleToekomstSelectElement: string = '4';
   uwNabestaandenSelectElement: string = '5';
   uwCollectiefVoordeelSelectElement: string = '6';
-  uwOnlineVeiliigheidSelectElement: string = '7';
+  uwVervoerSelectElement: string = '7';
+  uwHuisSelectElement: string = '8';
+  // uwOnlineVeiligheidSelectElement: string = '7';   staat niet meer in het dropdown menu
 
   //TITLE
   hmPageTitleElement: string = '[class="detailContent_title"]';
@@ -50,16 +50,16 @@ export class AlleVerzekeringenElements {
   bromfietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/bromfietsverzekering/premieberekenen-en-afsluiten"]';
   scooterVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/scooterverzekering/premieberekenen-en-afsluiten"]';
   motorVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/motorverzekering/premieberekenen-en-afsluiten"]';
-  fietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/fietsverzekering/premieberekenen-en-afsluiten"]';
-  elektrischeFietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/fietsverzekering/premieberekenen-en-afsluiten?fietsSoortLs=elektrischeFiets"]';
-  scootmobielVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [href*="/scootmobielverzekering/premieberekenen-en-afsluiten"]';
+  fietsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_container productsMain_container--column-"] section:nth-child(3) a';
+  elektrischeFietsVerzekeringBerekenUwPremieButtonClickElement: string = '[href="/fietsverzekering/premieberekenen-en-afsluiten?fietsSoortLs=elektrischeFiets"][data-di-id="di-id-6b8f57c-116cd989"]';
+  scootmobielVerzekeringBerekenUwPremieButtonClickElement: string = '[class="heroHeader_textContent"] [href*="/scootmobielverzekering/premieberekenen-en-afsluiten"]';
   oldtimerVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/oldtimerverzekering/premieberekenen-en-afsluiten"]';
   woonVerzekeringBerekenUwPremieButtonClickElement: string = '[class="simpleWidget_submit"]';
   inboedelVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken nu uw premie"][href="/woonverzekering/premieberekenen-en-afsluiten"]';
   kostbaarhedenVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/kostbaarhedenverzekering/premieberekenen-en-afsluiten"]';
   rechtsbijstandVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/rechtsbijstandverzekering/premieberekenen-en-afsluiten"]';
   aansprakelijkheidsVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href*="/aansprakelijkheidsverzekering/premieberekenen-en-afsluiten"]';
-  uitvaartVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/uitvaartverzekering/afspraak"]';
+  uitvaartVerzekeringBerekenUwPremieButtonClickElement: string = '[data-di-id="di-id-fb8a01fc-37f372b9"]';
   mijngemakVerzekeringBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--secondary"][href="http://unive.mijngemak.nl/"]';
 
   //CALAMITEITEN

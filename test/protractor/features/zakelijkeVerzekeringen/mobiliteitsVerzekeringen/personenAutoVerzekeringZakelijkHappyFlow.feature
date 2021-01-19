@@ -21,12 +21,11 @@ Feature: Happy flow for 'personen auto verzekering zakelijk'
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    # Then Thank you page for zakelijk is shown
-    Then Thank you page for zakelijke <verzekering> is shown
+    Then The thank you page for <persona> is shown
 
     Examples:
-      | licensePlate | company         | persona | verzekering                       |
-      | 06-HN-DL     | rg timmerwerken | ronaldo | Zakelijke personenautoautoverzekering |
+      | licensePlate | company         | persona |
+      | 06-HN-DL     | rg timmerwerken | ronaldo |
     # op de bedankpagina staat 'Zakelijke personenautoAUTOverzekering' ipv personenautoverzekering
 
 
@@ -49,13 +48,13 @@ Feature: Happy flow for 'personen auto verzekering zakelijk'
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    # Then Thank you page for zakelijk is shown
-    Then Thank you page for zakelijke <verzekering> is shown
+    Then The thank you page for <persona> is shown
 
     Examples:
-      | licensePlate | company         | persona | verzekering                       |
-      | 06-HN-DL     | rg timmerwerken | ronaldo | Zakelijke Zakelijke personenautoautoverzekering |
+      | licensePlate | company         | persona |
+      | 06-HN-DL     | rg timmerwerken | ronaldo |
     # op de bedankpagina staat 'Zakelijke personenautoAUTOverzekering' ipv personenautoverzekering
+
 
 
 

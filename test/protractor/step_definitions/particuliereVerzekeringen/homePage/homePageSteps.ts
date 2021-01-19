@@ -36,7 +36,7 @@ Then(/^Verify element on business product page for (.*) is shown$/, async (page:
 });
 
 When(/^I press the button (.*) on the klantenservice page$/, async (button: string) => {
-  await hmPageMethods.clickMenuButtonAndGoToKlantservicePage(button)
+  await hmPageMethods.clickMenuButtonAndGoToKlantservicePage(button);
 });
 
 When(/^I press the button (.*) on the klantenservice business page$/, async (button: string) => {

@@ -28,9 +28,10 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderBirthdateAfterFixElement);
   await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeAfterFixElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderZipCodeAfterFixElement);
-  await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive('no');
   await autoVerzekeringMethods.selectYearlyMileage('20000tot25000');
-  // await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, '2');
+  await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, '2');
+  await genericMethods.clickOnTAB(autoVerzekeringElements.damageFreeYearsElement);
+  await autoVerzekeringMethods.selectIfYouAlreadyHaveACarAtUnive('no');
   //ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIRST, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
     analyticsAutoverzekeringElements.firstPagePaginaId);
@@ -47,7 +48,7 @@ When(/^Customer enters step two page of autoverzekering with collective (.*)$/, 
   await autoVerzekeringMethods.clickOnAanvullendeOpties('Inzittendenverzekering');
   await autoVerzekeringMethods.selectCarAcc('autoAccTm5000');
   await genericMethods.typeText(autoVerzekeringElements.collectiveInputElement, collective);
-  await genericMethods.clickOnElement(autoVerzekeringElements.collectiveAutoCompleteClickElement);
+   await genericMethods.clickOnElement(autoVerzekeringElements.collectiveAutoCompleteClickElement);
   await genericMethods.verifyTextContainsInElement(autoVerzekeringElements.collectiveResultTextElement, collective, browser.getPageTimeout);
   await autoVerzekeringMethods.selectTotalPremie('annual');
 
@@ -76,24 +77,24 @@ Then(/^Customer can select bekijk controleer gegevens for autoverzekering in alm
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
   await stickyBalkMethods.verifySummaryAutoVerzekering();
   await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
-  //ANALYTICS
+  // ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.FIFTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
     analyticsAutoverzekeringElements.fifthPagePaginaId);
-  //ANALYTICS
+  // ANALYTICS
 });
 
 When(/^Customer enters step three page of autoverzekering for (.*)$/, async (licensePlate: string) => {
-  //INSERT DATE INFORMATION
+  // INSERT DATE INFORMATION
   await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(licensePlate));
-  //INSERT USE OF THE CAR INFORMATION
-  // await autoVerzekeringMethodsStepThreeAndFour.clickOnMainDriver(dataTable.mainDriver); has been commented out because of a change, this rule can be deleted
+  // INSERT USE OF THE CAR INFORMATION
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar('ownerCarYes');
 
-  //ANALYTICS
+  // ANALYTICS
   await genericMethods.verifyText(await genericMethods.getAnalyticsText(analyticsGenericElements.advEventHistory(anaEnumLocation.THIRTH, anaEnumObjectName.QIS_PAGEVIEW, anaEnumSearchObject.PAGINA_ID)),
-    analyticsAutoverzekeringElements.thirthPagePaginaId);  //ANALYTICS
+    analyticsAutoverzekeringElements.thirthPagePaginaId);
+  // ANALYTICS
 
   await genericMethods.clickOnNextButton();
 });
@@ -112,7 +113,6 @@ When(/^Customer enters step four page of autoverzekering for (.*)$/, async (pers
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
-  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));

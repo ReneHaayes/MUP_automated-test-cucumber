@@ -15,7 +15,7 @@ Then(/^Verify the page is correctly loaded with url for tile (.*)$/, async (tile
       break;
     }
     case 'Zorgnota declareren': {
-      await genericMethods.verifyUrlContainsIgnoreCase('zorgverzekering/declareren');
+      await genericMethods.verifyUrlContainsIgnoreCase('zorgkosten/declareren');
       break;
     }
     case 'Persoonsgegevens wijzigen': {
