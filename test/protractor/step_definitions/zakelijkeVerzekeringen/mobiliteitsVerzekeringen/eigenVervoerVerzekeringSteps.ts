@@ -1,4 +1,4 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
   companyData,
   eigenVervoerVerzekeringElements,
@@ -7,7 +7,7 @@ import {
   genericMethods,
   nawElements,
   personaData
-} from "@support";
+} from '@support';
 
 When(/^I enter step one page and click next on step two of eigen vervoer verzekering with:$/, async function (data) {
   const dataTable = data.rowsHash();
@@ -15,7 +15,6 @@ When(/^I enter step one page and click next on step two of eigen vervoer verzeke
   await eigenVervoerVerzekeringMethods.selectVehicleInfo(dataTable.typeCar, dataTable.howMany);
   await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.openTrailerNoClickElement);
   await genericMethods.clickOnNextButton();
-  //click next on step two page.
   await genericMethods.clickOnNextButton();
 });
 

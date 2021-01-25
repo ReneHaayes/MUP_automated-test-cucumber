@@ -1,6 +1,6 @@
 @doorlopendeReisverzekeringWidget @hippo @particulierHippo @widget
 
-Feature: Check the doorlopende resiverzekering widget on the productpage.
+Feature: Check the doorlopende reisverzekering widget on the productpage.
 
   Scenario Outline: Enter the family members and check if the correct data appears on the correct step.
     Given I am on the doorlopendereisverzekeringpp page of the Unive website
@@ -9,12 +9,12 @@ Feature: Check the doorlopende resiverzekering widget on the productpage.
 
     Examples:
       | family members                                 |
-      | Mijzelf, Mijn Partner en Mijn kinderen checked |
+      | Nothing is checked                             |
+      | Mijzelf checked                                |
       | Mijzelf en Mijn Partner checked                |
       | Mijzelf en Mijn kinderen checked               |
-      | Mijzelf checked                                |
-      | Mijn Partner en Mijn kinderen checked          |
+      | Mijzelf, Mijn Partner en Mijn kinderen checked |
       | Mijn Partner checked                           |
       | Mijn kinderen checked                          |
-      | Nothing is checked                             |
+      | Mijn Partner en Mijn kinderen checked          |
 

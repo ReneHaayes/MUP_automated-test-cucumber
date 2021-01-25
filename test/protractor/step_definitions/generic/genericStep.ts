@@ -1,6 +1,6 @@
 import {Given, Then, When} from 'cucumber';
-import {genericElements, genericMethods} from "@support";
-import {genericEnum} from "@enum";
+import {genericElements, genericMethods} from '@support';
+import {genericEnum} from '@enum';
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);

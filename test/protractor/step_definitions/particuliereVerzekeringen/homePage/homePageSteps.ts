@@ -60,7 +60,7 @@ Then(/^Verify element on header page for (.*) is shown$/, async (page: string) =
 });
 
 When(/^I press the button (.*) on the footer$/, async (button: string) => {
-  await hmPageMethods.clickFooterAndGoToPage(button)
+  await hmPageMethods.clickFooterAndGoToPage(button);
 });
 
 Then(/^Verify element on footer page for (.*) is shown$/, async (page: string) => {

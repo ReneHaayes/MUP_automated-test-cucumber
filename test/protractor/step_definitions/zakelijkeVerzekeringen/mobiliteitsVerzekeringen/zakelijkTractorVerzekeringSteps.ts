@@ -9,11 +9,13 @@ import {
   zakelijkTractorVerzekeringElements,
   zakelijkTractorVerzekerinigMethods
 } from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one page and click next on step two of zakelijk tractorverzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
-  await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.licenceplateTractorNoElement);
+  await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.tractorNoLicencePlateElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.searchTractorDataClickElement);
+  await genericMethods.waitForElementIsPresent(vehicleElements.constructionYearSelectElement, browser.getPageTimeout);
   await genericMethods.selectInDropdown(vehicleElements.constructionYearSelectElement, vehicleElements.constructionYearSelect2018Element);
   await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectFerrariElement);
   await genericMethods.selectInDropdown(vehicleElements.brandModelSelectElement, vehicleElements.brandModelSelect304WElement);

@@ -1,12 +1,12 @@
 import {browser, by, element, ElementFinder, protractor} from 'protractor';
 import * as chai from 'chai';
 import * as chaistring from 'chai-string';
-import * as path from "path";
+import * as path from 'path';
 
-import {genericElements, getUrlUnive, nawElements, personaData} from "@support";
-import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from "@enum";
+import {genericElements, getUrlUnive, nawElements, personaData} from '@support';
+import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from '@enum';
 
-import {selectorEnum} from "../enum/genericEnum";
+import {selectorEnum} from '../enum/genericEnum';
 
 chai.use(chaistring);
 const expect = chai.expect;
@@ -65,7 +65,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
-    })
+    });
   }
 
   async clickOnElement(selector: string) {
@@ -78,7 +78,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
-    })
+    });
   }
 
   async clickOnElementShadowRoot(selector: string) {
@@ -115,7 +115,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       browser.actions().doubleClick(elementToClick).perform();
-    })
+    });
   }
 
   async clickOnElementWithXpath(selector: string) {
@@ -127,7 +127,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
-    })
+    });
   }
 
   async waitForElementAndClick(selector: string, waitFor: number) {
@@ -139,7 +139,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
-    })
+    });
   }
 
   async clickOnElementWithClassName(selector: string) {
@@ -151,7 +151,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(elementToClick)), browser.getPageTimeout).then(() => {
       elementToClick.click();
-    })
+    });
   }
 
   async goToPage(page: string) {
@@ -345,13 +345,13 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
     const text: ElementFinder = element(by.css(selector));
-    return text.getWebElement().getAttribute('value')
+    return text.getWebElement().getAttribute('value');
   }
 
   async getValueShadowRoot(selector: string): Promise<string> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     const text: ElementFinder = element(by.css_sr(selector));
-    return text.getWebElement().getAttribute('value')
+    return text.getWebElement().getAttribute('value');
   }
 
   async getNoText(selector: string, elementToWaitFor: string): Promise<string> {
@@ -386,8 +386,8 @@ export class GenericMethods {
     await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
       typeTextElement.clear().then(() => {
         typeTextElement.sendKeys(text);
-      })
-    })
+      });
+    });
   }
 
   async typeTextShadowRoot(selector: string, text: string) {
@@ -427,7 +427,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
       typeTextElement.sendKeys(text);
-    })
+    });
   }
 
   async clearText(selector: string, length: number) {
@@ -445,8 +445,8 @@ export class GenericMethods {
     await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
       typeTextElement.clear().then(() => {
         typeTextElement.sendKeys(backspaceSeries);
-      })
-    })
+      });
+    });
   }
 
   async clickOnTAB(selector: string) {
@@ -539,7 +539,7 @@ export class GenericMethods {
     if (await expect(selectorToString).to.have.string(assertionText)) {
       return true;
     } else {
-      return false
+      return false;
     }
 
   }
@@ -574,7 +574,7 @@ export class GenericMethods {
     });
     await browser.wait((ec.elementToBeClickable(dropdownElement)), browser.getPageTimeout).then(() => {
       dropdownElement
-        .element(by.css("[value='" + value + "']")).click();
+        .element(by.css('[value=\'' + value + '\']')).click();
     });
   }
 
@@ -588,9 +588,9 @@ export class GenericMethods {
 
   async verifyThankYouPageTitle(persona: string) {
     if (personaData.getPersonaGender(persona) === gender.MALE) {
-      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona), browser.getPageTimeout)
+      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
     } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
-      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona), browser.getPageTimeout)
+      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
     } else {
       throw new Error('The input: "" ' + persona + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
     }
@@ -873,13 +873,13 @@ export class GenericMethods {
   returnSelector(input: selectorEnum): any {
     switch (input) {
       case selectorEnum.XPATH: {
-        return by.xpath
+        return by.xpath;
       }
       case selectorEnum.CSS: {
-        return by.css
+        return by.css;
       }
       case selectorEnum.CSS_SR: {
-        return by.css_sr
+        return by.css_sr;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

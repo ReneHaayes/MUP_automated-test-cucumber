@@ -4,7 +4,7 @@ import {
   ondernemersScanElements,
   ondernemersScanMethods
 } from '@support';
-//import {HappyFlowNoStaff} from '../../../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanElements';
+// import {HappyFlowNoStaff} from '../../../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanElements';
 
 
 When(/^I enter step one page and click Doe de Ondernemersscan and start scan:$/, async () => {
