@@ -1,4 +1,4 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
   boatWithName,
   bootVerzekeringElements,
@@ -7,10 +7,11 @@ import {
   genericMethods,
   nawElements,
   personaData
-} from "@support";
+} from '@support';
 
 When(/^I enter step one and click next on step two of bootverzekering with:$/, async (data) => {
   const dataTable = data.rowsHash();
+  await genericMethods.clickOnTAB(bootVerzekeringElements.typeOfBootSelectElement);
   await bootVerzekeringMethods.selectTypeOfBoat(boatWithName.getBoatType(dataTable.boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatValueInputElement, boatWithName.getBoatValue(dataTable.boatName));
   await genericMethods.typeText(bootVerzekeringElements.purchaseDateInputElement, genericMethods.getDate('today'));
@@ -18,6 +19,11 @@ When(/^I enter step one and click next on step two of bootverzekering with:$/, a
   await genericMethods.clickOnElement(bootVerzekeringElements.boatIsNewClickElement);
   await genericMethods.clickOnElement(bootVerzekeringElements.followBoatNoClickElement);
   await genericMethods.clickOnElement(bootVerzekeringElements.trailerNoClickElement);
+  try {
+    genericMethods.clickOnElement(bootVerzekeringElements.noOtherInsurancesElement).then();
+  } catch (e) {
+    console.log('no element visible');
+  }
   await genericMethods.clickOnNextButton();
   await genericMethods.clickOnNextButton();
 });
@@ -27,6 +33,7 @@ When(/^I enter step three page of bootverzekering for boat (.*)$/, async (boatNa
   await genericMethods.typeText(bootVerzekeringElements.boatBrandNameInputElement, boatWithName.getBoatBrandName(boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatConstructionYearInputElement, boatWithName.getBoatConstructionYear(boatName));
   await bootVerzekeringMethods.selectMaterialBoat(boatWithName.getBoatMaterial(boatName));
+
   await genericMethods.clickOnElement(bootVerzekeringElements.engineTypeInsideClickElement);
   await genericMethods.typeText(bootVerzekeringElements.boatMotorBrandnameInputElement, boatWithName.getBoatMotorBrandName(boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatMotorNumberInputElement, boatWithName.getBoatMotorNumber(boatName));
