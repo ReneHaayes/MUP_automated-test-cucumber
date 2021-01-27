@@ -1,132 +1,132 @@
 export class NawElements {
 
-  //HOOFDBESTUURDER
-  hoofdbestuurderBirthdateElement: string = '#_Form_IF2511_3621';
-  hoofdbestuurderZipCodeElement: string = '#_Form_IF2511_3622';
+  // HOOFDBESTUURDER
+  hoofdbestuurderBirthdateElement = '#_Form_IF2511_3621';
+  hoofdbestuurderZipCodeElement = '#_Form_IF2511_3622';
 
   // HOOFDBESTUURDER NA FIX AUTOVERZEKERING (22-08-2019)
-  hoofdbestuurderBirthdateAfterFixElement: string = '#_Form_IF28608_3621';
-  hoofdbestuurderZipCodeAfterFixElement: string = '#_Form_IF28608_3622';
+  hoofdbestuurderBirthdateAfterFixElement = '#_Form_IF28608_3621';
+  hoofdbestuurderZipCodeAfterFixElement = '#_Form_IF28608_3622';
 
   // AFWIJKENDEBESTUURDER
-  afwijkendeBestuurderInitialsElement: string ='#_Form_IF25916_3688';
-  afwijkendeBestuurderPrefixElement: string = '#_Form_IF25916_3689';
-  afwijkendeBestuurderLastNameElement: string = '#_Form_IF25916_3690';
-  afwijkendeBestuurderBirthdateStepOneElement: string = '#_Form_IF31207_39216';
-  afwijkendeBestuurderHouseNumberElement: string = '#_Form_IF25916_3694';
-  afwijkendeBestuurderDataGenderMaleClickElement: string = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(1)';
-  afwijkendeBestuurderDataGenderFemaleClickElement: string = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(2)';
+  afwijkendeBestuurderInitialsElement = '#_Form_IF25916_3688';
+  afwijkendeBestuurderPrefixElement = '#_Form_IF25916_3689';
+  afwijkendeBestuurderLastNameElement = '#_Form_IF25916_3690';
+  afwijkendeBestuurderBirthdateStepOneElement = '#_Form_IF31207_39216';
+  afwijkendeBestuurderHouseNumberElement = '#_Form_IF25916_3694';
+  afwijkendeBestuurderDataGenderMaleClickElement = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(1)';
+  afwijkendeBestuurderDataGenderFemaleClickElement = '[data-label-id*="LA_IF25916_3691"] .radioList > label:nth-child(2)';
 
   // VASTEBESTUURDER
-  specificDriverZipCodeElement: string = '#_Form_IF31207_39215';
+  specificDriverZipCodeElement = '#_Form_IF31207_39215';
 
 
-  //YOUR DATA
-  yourDataInitialsElement: string = '#_Form_IF2530_3688';
-  yourDataPrefixElement: string = '#_Form_IF2530_3689';
-  yourDataLastNameElement: string = '#_Form_IF2530_3690';
+  // YOUR DATA
+  yourDataInitialsElement = '#_Form_IF2530_3688';
+  yourDataPrefixElement = '#_Form_IF2530_3689';
+  yourDataLastNameElement = '#_Form_IF2530_3690';
 
-  yourDataGenderMaleElement: string = '[data-label-id*="LA_IF2530_3691"] .radioList > label:nth-child(1)';
-  yourDataGenderFemaleElement: string = '[data-label-id*="LA_IF2530_3691"] .radioList > label:nth-child(2)';
+  yourDataGenderMaleElement = '[data-label-id*="LA_IF2530_3691"] .radioList > label:nth-child(1)';
+  yourDataGenderFemaleElement = '[data-label-id*="LA_IF2530_3691"] .radioList > label:nth-child(2)';
 
-  yourDataBirthdDayElement: string = '#_Form_IF2530_3692';
-  yourDataBirthPlaceElement: string = '#_Form_IF2530_19949';
-  yourDataHouseNumberElement: string = '#_Form_IF2530_3694';
-  yourDataHouseNumberAdditionElement: string = '#_Form_IF2530_3695';
+  yourDataBirthDayElement = '#_Form_IF2530_3692';
+  yourDataBirthPlaceElement = '#_Form_IF2530_19949';
+  yourDataHouseNumberElement = '#_Form_IF2530_3694';
+  yourDataHouseNumberAdditionElement = '#_Form_IF2530_3695';
 
-  yourDataSpecificIdentificationElement: string = '#_Form_IF2530_23917';
-  yourDataSpecificIdentificationDriverLicenseSelect: string = 'string:RijbewijsLw';
-  yourDataSpecificIdentificationDriverLicenseNumberElement: string = '#_Form_IF2530_24008';
-  yourDataSpecificIdentificationPassportSelect: string = 'string:PaspoortLw';
-  yourDataSpecificIdentificationPassportNumberElement: string = '#_Form_IF2530_24009';
-  yourDataSpecificIdentificationIdCardSelect: string = 'string:IdentiteitskaartLw';
-  yourDataSpecificIdentificationIdCardNumberElement: string = '#_Form_IF2530_7308';
-  yourDataSpecificIdentificationSomethingElseSelect: string = 'string:AndersLw';
-  yourDataZipCodeElement: string = '#_Form_IF2530_3693';
-  yourDataEmailAddressElement: string = '#_Form_IF2530_3701';
-  yourDataEmailAddressConfirmElement: string = '[data-input-field-id="IF2530_44414"]';
-  yourDataPhoneNumberElement: string = '#_Form_IF2530_3699';
+  yourDataSpecificIdentificationElement = '#_Form_IF2530_23917';
+  yourDataSpecificIdentificationDriverLicenseSelect = 'string:RijbewijsLw';
+  yourDataSpecificIdentificationDriverLicenseNumberElement = '#_Form_IF2530_24008';
+  yourDataSpecificIdentificationPassportSelect = 'string:PaspoortLw';
+  yourDataSpecificIdentificationPassportNumberElement = '#_Form_IF2530_24009';
+  yourDataSpecificIdentificationIdCardSelect = 'string:IdentiteitskaartLw';
+  yourDataSpecificIdentificationIdCardNumberElement = '#_Form_IF2530_7308';
+  yourDataSpecificIdentificationSomethingElseSelect = 'string:AndersLw';
+  yourDataZipCodeElement = '#_Form_IF2530_3693';
+  yourDataEmailAddressElement = '#_Form_IF2530_3701';
+  yourDataEmailAddressConfirmElement = '[data-input-field-id="IF2530_44414"]';
+  yourDataPhoneNumberElement = '#_Form_IF2530_3699';
 
-  //UW BETAAL GEGEVENS
-  uwBetaalGegevensBankAccountNumberElement: string = '#_Form_IF2533_3702';
+  // UW BETAAL GEGEVENS
+  uwBetaalGegevensBankAccountNumberElement = '#_Form_IF2533_3702';
 
-  //OWNER DATA
-  ownerDataInitalsElement: string = '#_Form_IF2532_3688';
-  ownerDataPrefixElement: string = '#_Form_IF2532_3689';
-  ownerDataLastNameElement: string = '#_Form_IF2532_3690';
+  // OWNER DATA
+  ownerDataInitalsElement = '#_Form_IF2532_3688';
+  ownerDataPrefixElement = '#_Form_IF2532_3689';
+  ownerDataLastNameElement = '#_Form_IF2532_3690';
 
-  ownerDataGenderMaleElement: string = '[data-label-id*="LA_IF2532_3691"] .radioList > label:nth-child(1)';
-  ownerDataGenderFemaleElement: string = '[data-label-id*="LA_IF2532_3691"] .radioList > label:nth-child(2)';
+  ownerDataGenderMaleElement = '[data-label-id*="LA_IF2532_3691"] .radioList > label:nth-child(1)';
+  ownerDataGenderFemaleElement = '[data-label-id*="LA_IF2532_3691"] .radioList > label:nth-child(2)';
 
-  ownerDataBirthdayElement: string = '#_Form_IF2532_3692';
-  ownerDataZipCodeElement: string = '#_Form_IF2532_3693';
-  ownerDataHouseNumberElement: string = '#_Form_IF2532_3694';
-  ownerDataHouseNumberAdditionElement: string = '#_Form_IF2532_3695';
+  ownerDataBirthdayElement = '#_Form_IF2532_3692';
+  ownerDataZipCodeElement = '#_Form_IF2532_3693';
+  ownerDataHouseNumberElement = '#_Form_IF2532_3694';
+  ownerDataHouseNumberAdditionElement = '#_Form_IF2532_3695';
 
-  //MAIN DRIVER
-  mainDriverInitialsElement: string = '#_Form_IF2531_3688';
-  mainDriverPrefixElement: string = '#_Form_IF2531_3689';
-  mainDriverLastNameElement: string = '#_Form_IF2531_3690';
-  mainDriverHouseNumberElement: string = '#_Form_IF2531_3694';
-  mainDriverHouseNumberAdditionElement: string = '#_Form_IF2531_3695';
+  // MAIN DRIVER
+  mainDriverInitialsElement = '#_Form_IF2531_3688';
+  mainDriverPrefixElement = '#_Form_IF2531_3689';
+  mainDriverLastNameElement = '#_Form_IF2531_3690';
+  mainDriverHouseNumberElement = '#_Form_IF2531_3694';
+  mainDriverHouseNumberAdditionElement = '#_Form_IF2531_3695';
 
-  mainDriverGenderMaleElement: string = '[data-label-id*="LA_IF2531_3691"] .radioList > label:nth-child(1)';
-  mainDriverGenderFemaleElement: string = '[data-label-id*="LA_IF2531_3691"] .radioList > label:nth-child(2)';
+  mainDriverGenderMaleElement = '[data-label-id*="LA_IF2531_3691"] .radioList > label:nth-child(1)';
+  mainDriverGenderFemaleElement = '[data-label-id*="LA_IF2531_3691"] .radioList > label:nth-child(2)';
 
-  //COMPANY DATA
-  companyDataKvkNumberInputElement: string = '#_Form_IF25914_33331';
-  companyDataNameInputElement: string = '#_Form_IF25914_33329';
-  companyDataEmployeesYesClickElement: string = '[data-label-id*="LA_IF25914_33332"] .radioList > label:nth-child(1)';
-  companyDataEmployeesNoClickElement: string = '[data-label-id*="LA_IF25914_33332"] .radioList > label:nth-child(2)';
-  companyDataHouseNumberInputElement: string = '#_Form_IF25914_3694';
-  companyDataHouseNumberAddingInputElement: string = '#_Form_IF25914_3695';
-  companyDataPhoneNumberInputElement: string = '#_Form_IF25914_3699';
-  companyDataEmailAddressInputElement: string = '#_Form_IF25914_3701';
-  companyDataEmailAddressConfirmInputElement: string = '#_Form_IF25914_44414';
-  companyDataZipCodeInputElement: string = '#_Form_IF25914_3693';
+  // COMPANY DATA
+  companyDataKvkNumberInputElement = '#_Form_IF25914_33331';
+  companyDataNameInputElement = '#_Form_IF25914_33329';
+  companyDataEmployeesYesClickElement = '[data-label-id*="LA_IF25914_33332"] .radioList > label:nth-child(1)';
+  companyDataEmployeesNoClickElement = '[data-label-id*="LA_IF25914_33332"] .radioList > label:nth-child(2)';
+  companyDataHouseNumberInputElement = '#_Form_IF25914_3694';
+  companyDataHouseNumberAddingInputElement = '#_Form_IF25914_3695';
+  companyDataPhoneNumberInputElement = '#_Form_IF25914_3699';
+  companyDataEmailAddressInputElement = '#_Form_IF25914_3701';
+  companyDataEmailAddressConfirmInputElement = '#_Form_IF25914_44414';
+  companyDataZipCodeInputElement = '#_Form_IF25914_3693';
 
-  companyDataLegalSelectElement: string = '#_Form_IF25914_33330';
-  companyDataLegalEenmanszaakSelectElement: string = 'string:eenmanszaak';
-  companyDataLegalVOFSelectElement: string = 'string:vof';
-  companyDataLegalCVSelectElement: string = 'string:cv';
-  companyDataLegalMaatschapSelectElement: string = 'string:maatschap';
-  companyDataLegalBVSelectElement: string = 'string:bv';
-  companyDataLegalNVSelectElement: string = 'string:nv';
-  companyDataLegalStichtingSelectElement: string = 'string:stichting';
-  companyDataLegalVMVRSelectElement: string = 'string:vmvr';
-  companyDataLegalVZVRSelectElement: string = 'string:vzvr';
-  companyDataLegalCOWSelectElement: string = 'string:cow';
-  companyDataLegalBuitenalandseRechtsvormSelectElement: string = 'string:buitenlandseRechtsvorm';
+  companyDataLegalSelectElement = '#_Form_IF25914_33330';
+  companyDataLegalEenmanszaakSelectElement = 'string:eenmanszaak';
+  companyDataLegalVOFSelectElement = 'string:vof';
+  companyDataLegalCVSelectElement = 'string:cv';
+  companyDataLegalMaatschapSelectElement = 'string:maatschap';
+  companyDataLegalBVSelectElement = 'string:bv';
+  companyDataLegalNVSelectElement = 'string:nv';
+  companyDataLegalStichtingSelectElement = 'string:stichting';
+  companyDataLegalVMVRSelectElement = 'string:vmvr';
+  companyDataLegalVZVRSelectElement = 'string:vzvr';
+  companyDataLegalCOWSelectElement = 'string:cow';
+  companyDataLegalBuitenalandseRechtsvormSelectElement = 'string:buitenlandseRechtsvorm';
 
-  //CONTACT DATA
-  contactDataInitialsInputElement: string = '#_Form_IF25915_3688';
-  contactDataPrefixInputElement: string = '#_Form_IF25915_3689';
-  contactDataLastNameInputElement: string = '#_Form_IF25915_3690';
-  contactDataGenderMaleClickElement: string = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(1)';
-  contactDataGenderFemaleClickElement: string = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(2)';
-  contactDataZorgeloosOnlineInitialsInputElement: string = '#_Form_IF30707_3688';
-  contactDataZorgeloosOnlinePrefixInputElement: string = '#_Form_IF30707_3689';
-  contactDataZorgeloosOnlineLastNameInputElement: string = '#_Form_IF30707_3690';
-  contactDataZorgeloosOnlineGenderMaleClickElement: string = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(1)';
-  contactDataZorgeloosOnlineGenderFemaleClickElement: string = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(2)';
-  contactDataZorgeloosOnlineBirthdateInputElement: string = '#_Form_IF30707_3692';
+  // CONTACT DATA
+  contactDataInitialsInputElement = '#_Form_IF25915_3688';
+  contactDataPrefixInputElement = '#_Form_IF25915_3689';
+  contactDataLastNameInputElement = '#_Form_IF25915_3690';
+  contactDataGenderMaleClickElement = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(1)';
+  contactDataGenderFemaleClickElement = '[data-label-id*="LA_IF25915_3691"] .radioList > label:nth-child(2)';
+  contactDataZorgeloosOnlineInitialsInputElement = '#_Form_IF30707_3688';
+  contactDataZorgeloosOnlinePrefixInputElement = '#_Form_IF30707_3689';
+  contactDataZorgeloosOnlineLastNameInputElement = '#_Form_IF30707_3690';
+  contactDataZorgeloosOnlineGenderMaleClickElement = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(1)';
+  contactDataZorgeloosOnlineGenderFemaleClickElement = '[data-label-id*="LA_IF30707_3691"] .radioList > label:nth-child(2)';
+  contactDataZorgeloosOnlineBirthdateInputElement = '#_Form_IF30707_3692';
 
-  //DIFFERENT OWNER
-  differentOwnerInitialsInputElement: string = '#_Form_IF25918_3688';
-  differentOwnerPrefixInputElement: string = '#_Form_IF25918_3689';
-  differentOwnerLastNameInputElement: string = '#_Form_IF25918_3690';
-  differentOwnerGenderMaleClickElement: string = '[data-label-id*="LA_IF25918_3691"] .radioList > label:nth-child(1)';
-  differentOwnerGenderFemaleClickElement: string = '[data-label-id*="LA_IF25918_3691"] .radioList > label:nth-child(2)';
-  differentOwnerBirthdateInputElement: string = '#_Form_IF25918_3692';
-  differentOwnerZipCodeInputElement: string = '#_Form_IF25918_3693';
-  differentOwnerHouseNumberElement: string = '#_Form_IF25918_3694';
-  differentOwnerHouseNumberAdditionElement: string = '#_Form_IF25918_3695';
-  differentOwnerNatuurlijkPersoonElement: string = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(1)';
-  differentOwnerBedrijfElement: string = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(2)';
+  // DIFFERENT OWNER
+  differentOwnerInitialsInputElement = '#_Form_IF25918_3688';
+  differentOwnerPrefixInputElement = '#_Form_IF25918_3689';
+  differentOwnerLastNameInputElement = '#_Form_IF25918_3690';
+  differentOwnerGenderMaleClickElement = '[data-label-id*="LA_IF25918_3691"] .radioList > label:nth-child(1)';
+  differentOwnerGenderFemaleClickElement = '[data-label-id*="LA_IF25918_3691"] .radioList > label:nth-child(2)';
+  differentOwnerBirthdateInputElement = '#_Form_IF25918_3692';
+  differentOwnerZipCodeInputElement = '#_Form_IF25918_3693';
+  differentOwnerHouseNumberElement = '#_Form_IF25918_3694';
+  differentOwnerHouseNumberAdditionElement = '#_Form_IF25918_3695';
+  differentOwnerNatuurlijkPersoonElement = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(1)';
+  differentOwnerBedrijfElement = '[data-label-id*="LA_IF25917_33333"] .radioList > label:nth-child(2)';
 
-  //RISC ADDRESS
-  riscAddressZipcodeInputElement: string = '#_Form_IF17707_3693';
-  riscAddressHouseNumberInputElement: string = '#_Form_IF17707_3694';
-  riscAddressHouseNumberAddingInputElement: string = '#_Form_IF17707_3695';
+  // RISC ADDRESS
+  riscAddressZipcodeInputElement = '#_Form_IF17707_3693';
+  riscAddressHouseNumberInputElement = '#_Form_IF17707_3694';
+  riscAddressHouseNumberAddingInputElement = '#_Form_IF17707_3695';
 
 }

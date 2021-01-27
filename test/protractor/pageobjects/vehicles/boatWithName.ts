@@ -1,4 +1,4 @@
-import {boatNamesEnum, fuelTypEnum, materialEnum, typeBoatEnum} from "@enum";
+import {boatNamesEnum, fuelTypEnum, materialEnum, typeBoatEnum} from '@enum';
 
 export class Boat {
 
@@ -37,11 +37,15 @@ export class Boat {
 export class BoatWithName {
 
   azzam: Boat = new Boat(boatNamesEnum.AZZAM, boatNamesEnum.AZZAM, typeBoatEnum.SLOEP, '2018', materialEnum.KUNSTSTOF_POLYESTER, 'Kawasaki', '12345', '2018', '2018', fuelTypEnum.DIESEL, '100', '15000', '15');
+  koegelwieck: Boat = new Boat(boatNamesEnum.KOEGELWIECK, boatNamesEnum.KOEGELWIECK, typeBoatEnum.CATAMARAN, '1992',  materialEnum.KUNSTSTOF_POLYESTER, 'Deutz', '12345', '1992', '1992', fuelTypEnum.DIESEL, '999', '45000' , '35');
 
   getBoatName(input: string): string {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.name;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.name;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -54,6 +58,9 @@ export class BoatWithName {
       case boatNamesEnum.AZZAM: {
         return this.azzam.brandName;
       }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.brandName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -64,6 +71,9 @@ export class BoatWithName {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.type;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.type;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -76,6 +86,9 @@ export class BoatWithName {
       case boatNamesEnum.AZZAM: {
         return this.azzam.constructionYear;
       }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.constructionYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -86,6 +99,9 @@ export class BoatWithName {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.material;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.material;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -98,6 +114,9 @@ export class BoatWithName {
       case boatNamesEnum.AZZAM: {
         return this.azzam.motorBrandName;
       }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.motorBrandName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -108,6 +127,9 @@ export class BoatWithName {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.motorNumber;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.motorNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -120,6 +142,9 @@ export class BoatWithName {
       case boatNamesEnum.AZZAM: {
         return this.azzam.constructionYear;
       }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.constructionYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -130,6 +155,9 @@ export class BoatWithName {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.motorPurchaseYear;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.motorPurchaseYear;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -142,6 +170,9 @@ export class BoatWithName {
       case boatNamesEnum.AZZAM: {
         return this.azzam.fuelType;
       }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.fuelType;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -152,6 +183,9 @@ export class BoatWithName {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.power;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.power;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -164,6 +198,9 @@ export class BoatWithName {
       case boatNamesEnum.AZZAM: {
         return this.azzam.value;
       }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.value;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -174,6 +211,9 @@ export class BoatWithName {
     switch (input) {
       case boatNamesEnum.AZZAM: {
         return this.azzam.length;
+      }
+      case boatNamesEnum.KOEGELWIECK: {
+        return this.koegelwieck.length;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

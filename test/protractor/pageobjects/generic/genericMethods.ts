@@ -4,7 +4,7 @@ import * as chaistring from 'chai-string';
 import * as path from 'path';
 
 import {genericElements, getUrlUnive, nawElements, personaData} from '@support';
-import {dateEnum, gender, genericEnum, legalEnum, specificIdentification} from '@enum';
+import {dateEnum, gender, genericEnum, legalEnum, prefix, specificIdentification} from '@enum';
 
 import {selectorEnum} from '../enum/genericEnum';
 
@@ -402,8 +402,8 @@ export class GenericMethods {
     await browser.wait((ec.elementToBeClickable(typeTextElement)), browser.getPageTimeout).then(() => {
       typeTextElement.clear().then(() => {
         typeTextElement.sendKeys(text);
-      })
-    })
+      });
+    });
   }
 
   async typeTextShadowRootHideElement(selector: string, text: string) {
@@ -582,15 +582,23 @@ export class GenericMethods {
     await this.clickOnElement(genericElements.nextButton);
   }
 
-  async clickOnFinishButton() {
-    await this.clickOnElement(genericElements.finishButton);
+  async clickOnTakeOutInsuranceNowButton() {
+    await this.clickOnElement(genericElements.takeOutInsuranceNowButton);
   }
 
   async verifyThankYouPageTitle(persona: string) {
-    if (personaData.getPersonaGender(persona) === gender.MALE) {
-      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
-    } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
-      await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
+    if (personaData.getPersonaPrefix(persona) === prefix.NO_PREFIX) {
+        if (personaData.getPersonaGender(persona) === gender.MALE) {
+          await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
+        } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
+          await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
+        }
+    } else if (personaData.getPersonaPrefix(persona)) {
+        if (personaData.getPersonaGender(persona) === gender.MALE) {
+          await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste meneer ' + personaData.getPersonaPrefix(persona) + ' ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
+        } else if (personaData.getPersonaGender(persona) === gender.FEMALE) {
+          await this.verifyTextContainsInElement(genericElements.thankYouH2Element, 'Beste mevrouw ' + personaData.getPersonaPrefix(persona) + ' ' + personaData.getPersonaLastName(persona), browser.getPageTimeout);
+        }
     } else {
       throw new Error('The input: "" ' + persona + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
     }

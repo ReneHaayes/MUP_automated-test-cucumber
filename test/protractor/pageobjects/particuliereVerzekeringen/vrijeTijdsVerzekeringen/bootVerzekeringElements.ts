@@ -10,6 +10,10 @@ export class BootVerzekeringElements {
   typeOfBootSpeedbootSelectElement = 'string:speedboot';
   typeOfBootCatamaranSelectElement = 'string:catamaran';
 
+  // OPEN_OR_CABIN
+  boatIsOpen = '[data-label-id="LA_IF11836_16154"] > div[class="radioList"] > label:nth-child(1)';
+  boatHasCabin = '[data-label-id="LA_IF11836_16154"] > div[class="radioList"] > label:nth-child(2)';
+
   // VALUE BOAT
   boatValueInputElement = '#_Form_IF11837_16155';
 
@@ -51,6 +55,11 @@ export class BootVerzekeringElements {
   boatMaterialRubberSelectElement = 'string:rubber';
   boatMaterialFerrocementSelectElement = 'string:ferrocement';
 
+
+  engineYesSelectElement = '[data-label-id="LA_IF11865_16214"] > div[class="radioList"] > label:nth-child(1)';
+  engineNoSelectElement = '[data-label-id="LA_IF11865_16214"] > div[class="radioList"] > label:nth-child(2)';
+  oneEngineSelectElement = '[data-label-id="LA_IF11866_39622"] > div[class="radioList"] > label:nth-child(1)';
+  twoEnginesSelectElement = '[data-label-id="LA_IF11866_39622"] > div[class="radioList"] > label:nth-child(2)';
   engineTypeInsideClickElement = '[data-label-id*="LA_IF11866_16215"] .radioList > label:nth-child(1)';
   engineTypeOutsideClickElement = '[data-label-id*="LA_IF11866_16215"] .radioList > label:nth-child(2)';
 

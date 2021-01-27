@@ -28,8 +28,8 @@ export class ZakelijkTractorVerzekeringElements {
 
   // LICENSEPLATE
   licensePlateInputElement = '#_Form_IF37106_28618';
-  tractorYesLicencePlateElement = '#_Form_IF37106_47317_true';
-  tractorNoLicencePlateElement = '[data-label-id="LA_IF37106_47317"] [class="radioList"] > label:nth-child(2)';
+  tractorYesLicensePlateElement = '#_Form_IF37106_47317_true';
+  tractorNoLicensePlateElement = '[data-label-id="LA_IF37106_47317"] [class="radioList"] > label:nth-child(2)';
 
   // OWNER
   ownerYesClickElement = '[data-label-id*="LA_IF21863_28621"] .radioList > label:nth-child(1)';

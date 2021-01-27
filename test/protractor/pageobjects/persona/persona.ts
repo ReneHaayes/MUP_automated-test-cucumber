@@ -5,7 +5,7 @@ import {
   phoneNumber,
   prefix,
   specificIdentification
-} from "@enum";
+} from '@enum';
 
 export class Persona {
 
@@ -77,11 +77,11 @@ export class PersonaData {
   salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15', '06', '1992', 'Enschede', '7412XW', '31',
     'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'onjuisteemailadres@test.nl',
     '5088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
-  neymar: Persona = new Persona('Neymar', 'N', 'da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
-    'ABC', gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
+  neymar: Persona = new Persona('Neymar', 'N', 'Da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
+    'ABC', gender.FEMALE, '0612345678' , specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
     'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98', 'Welkom01!');
   pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15', '03', '1993', 'Zwolle', '7412TV', '69',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '1234567890', specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, phoneNumber.NO_PHONENUMBER, specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
     'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110', 'Welkom01!');
   illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing-van Bruggen', '28', '10', '1962', 'Deventer', '7412XW', '91',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
@@ -113,16 +113,15 @@ export class PersonaData {
   testkindCustomerRecognition: Persona = new Persona('Zulu', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1900', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'actieve@polis.nl',
     'NL02ABNA0123456789', '559488944', 'plintenplakker', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  testkindOnder18Een: Persona = new Persona('Dennis', 'D.', 'het', 'Kind onder achttien een', '04', '03', '2012', 'Amsterdam', '1012NX', '3',
+  testkindOnder18Een: Persona = new Persona('Dennis', 'D.', 'Het', 'Kind onder achttien een', '04', '03', '2012', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'kindonder18@een.nl',
     'NL02ABNA0123456789', '586265594', 'student', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  testkindBoven18Een: Persona = new Persona('Berend', 'B.', 'het', 'Kind boven achttien een', '11', '05', '1999', 'Amsterdam', '1012NX', '3',
+  testkindBoven18Een: Persona = new Persona('Berend', 'B.', 'Het', 'Kind boven achttien een', '11', '05', '1999', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'kindboven18@een.nl',
     'NL02ABNA0123456789', '670020916', 'student', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  testPartner: Persona = new Persona('Arie', 'A.', 'de', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
+  testPartner: Persona = new Persona('Arie', 'A.', 'De', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-
 
   getPersonaZipcode(input: string): string {
     switch (input) {

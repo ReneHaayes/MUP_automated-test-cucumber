@@ -1,4 +1,4 @@
-import {licensePlates, vehicleKindEnum} from "@enum";
+import {licensePlates, vehicleKindEnum} from '@enum';
 
 export class Moped {
 
@@ -7,21 +7,24 @@ export class Moped {
   model: string;
   version: string;
   constructionYear: string;
+  vehicleType: string;
 
-  constructor(licensePlate: string, brandName: string, model: string, constructionYear: string, version: string) {
+  constructor(licensePlate: string, brandName: string, model: string, constructionYear: string, version: string, vehicleType: string) {
     this.licensePlate = licensePlate;
     this.brandName = brandName;
     this.model = model;
     this.version = version;
     this.constructionYear = constructionYear;
+    this.vehicleType = vehicleType;
   }
 
 }
 
 export class MopedWithLicensePlate {
 
-  MOPED_12FRP3: Moped = new Moped(licensePlates.MOPED_12FRP3, 'RIEJU', vehicleKindEnum.BROMFIETS, '2005', 'RR', );  // versie veranderd van RR X/SPORT naar RR
-  MOPED_F169NS: Moped = new Moped(licensePlates.MOPED_F169NS, 'VESPA', vehicleKindEnum.SNORSCOOTER, '2013', 'SPRINT S 4T', );  // versie veranderd van S naar SPRINT S 4T
+  MOPED_12FRP3: Moped = new Moped(licensePlates.MOPED_12FRP3, 'RIEJU', vehicleKindEnum.BROMFIETS, '2005', 'RR', vehicleKindEnum.BROMFIETS);  // versie veranderd van RR X/SPORT naar RR
+  MOPED_F169NS: Moped = new Moped(licensePlates.MOPED_F169NS, 'VESPA', vehicleKindEnum.SNORSCOOTER, '2013', 'SPRINT S 4T', vehicleKindEnum.SNORSCOOTER);  // versie veranderd van S naar SPRINT S 4T
+  MOPED_DKR97R: Moped = new Moped(licensePlates.MOPED_DKR97R, 'RIESE & MULLER', vehicleKindEnum.SNORFIETS, '2017', 'CRUISER NUVINCI HS', vehicleKindEnum.HIGH_SPEED_BIKE);
 
   getMopedBrandName(input: string): string {
     switch (input) {
@@ -30,6 +33,9 @@ export class MopedWithLicensePlate {
       }
       case licensePlates.MOPED_F169NS: {
         return this.MOPED_F169NS.brandName;
+      }
+      case licensePlates.MOPED_DKR97R: {
+        return this.MOPED_DKR97R.brandName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -45,6 +51,9 @@ export class MopedWithLicensePlate {
       case licensePlates.MOPED_F169NS: {
         return this.MOPED_F169NS.model;
       }
+      case licensePlates.MOPED_DKR97R: {
+        return this.MOPED_DKR97R.model;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -59,6 +68,9 @@ export class MopedWithLicensePlate {
       case licensePlates.MOPED_F169NS: {
         return this.MOPED_F169NS.constructionYear;
       }
+      case licensePlates.MOPED_DKR97R: {
+        return this.MOPED_DKR97R.constructionYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -72,6 +84,26 @@ export class MopedWithLicensePlate {
       }
       case licensePlates.MOPED_F169NS: {
         return this.MOPED_F169NS.version;
+      }
+      case licensePlates.MOPED_DKR97R: {
+        return this.MOPED_DKR97R.version;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  getMopedVehicleType(input: string): string {
+    switch (input) {
+      case licensePlates.MOPED_12FRP3: {
+        return this.MOPED_12FRP3.vehicleType;
+      }
+      case licensePlates.MOPED_F169NS: {
+        return this.MOPED_F169NS.vehicleType;
+      }
+      case licensePlates.MOPED_DKR97R: {
+        return this.MOPED_DKR97R.vehicleType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

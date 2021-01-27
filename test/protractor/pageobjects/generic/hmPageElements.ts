@@ -91,7 +91,7 @@ export class HmPageElements {
   alarmCentraleBreadcrumbElement = '[class*= "breadcrumb_link"][title="Alarmcentrale"]';
   mijnUniveLoginTitleTextElement = '[id="loginForm"] [class="login-headline"]';
   mijnUniveLoginTitleText = 'Inloggen met uw account';
-  mijnUniveEmailInputElement = '#emailphone';
+    mijnUniveEmailInputElement = '#emailphone';
   mijnUnivePasswordInputElement = '#password';
 
   // HEADER

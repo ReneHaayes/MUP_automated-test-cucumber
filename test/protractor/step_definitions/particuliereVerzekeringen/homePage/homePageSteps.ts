@@ -40,7 +40,7 @@ When(/^I press the button (.*) on the klantenservice page$/, async (button: stri
 });
 
 When(/^I press the button (.*) on the klantenservice business page$/, async (button: string) => {
-  await hmPageMethods.clickMenuButtonAndGoToBusinessKlantservicePage(button)
+  await hmPageMethods.clickMenuButtonAndGoToBusinessKlantservicePage(button);
 });
 
 Then(/^Verify element on klantenservice page for (.*) is shown$/, async (page: string) => {
@@ -52,7 +52,7 @@ Then(/^Verify element on klantenservice business page for (.*) is shown$/, async
 });
 
 When(/^I press the button (.*) on the header$/, async (button: string) => {
-  await hmPageMethods.clickHeaderAndGoToPage(button)
+  await hmPageMethods.clickHeaderAndGoToPage(button);
 });
 
 Then(/^Verify element on header page for (.*) is shown$/, async (page: string) => {

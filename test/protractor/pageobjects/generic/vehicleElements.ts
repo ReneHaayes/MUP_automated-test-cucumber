@@ -3,28 +3,8 @@ export class VehicleElements {
   // START DATE
   startDateElement = '#_Form_IF2512_3623';
 
-  // STEP ONE
-  licensePlateInputElement = '#_Form_IF9707_9934';
-  licensePlateInfoBrandNameElement = '[data-label-id*="LA_IF9733_13978"] span';
-  licensePlateInfoModelElement = '[data-label-id*="LA_IF9733_13980"] span';
-  licensePlateInfoConstructionYearElement = '[data-label-id*="LA_IF9733_13974"] span';
-  licensePlateInfoVersionElement = '[data-label-id*="LA_IF9733_13979"] span';
-
   // XPATH is necessarry to get the text out of this element.
   licensePlateBrandNameElementWithXpath = '//*[@class="entry bromfiets_db"]/descendant::*';
-
-  vehicleKindSelectElement = '#_Form_IF9706_13915';
-  vehicleKindBromfietsSelectElement = 'string:bromfiets';
-  vehicleKindBromscooterSelectElement = 'string:bromscooter';
-  vehicleKindHighSpeedEbikeSelectElement = 'string:highSpeedEbike';
-  vehicleKindBakfietsSelectElement = 'string:bakfiets';
-  vehicleKindTrikeSelectElement = 'string:trike';
-  vehicleKindQuadSelectElement = 'string:quad';
-  vehicleKindBromMobielSelectElement = 'string:brommobiel';
-  vehicleKindOverigSelectElement = 'string:overig';
-  vehicleKindSnorfietsElement = 'string:snorfiets';
-  vehicleKindSnorscooterElement = 'string:snorscooter';
-  vehicleKindFietsMetHulpmotorElement = 'string:fietsMetHulpmotor';
 
   zipCodeElement = '#_Form_IF29510_3622';
   birthDateElement = '#_Form_IF29510_37527';
@@ -99,6 +79,9 @@ export class VehicleElements {
   brandTypeSelectElement = '#_VehicleBrandModelType__6';
   brandTypeSelectCaravanElement = 'string:38634';
   confirmationButtonClickElement = '#_VehicleBrandModelType_confirm';
+
+
+
 
 
 }

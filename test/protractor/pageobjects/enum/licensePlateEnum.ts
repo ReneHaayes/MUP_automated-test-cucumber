@@ -15,6 +15,7 @@ export enum licensePlates {
   OLDTIMER_RG81HX = 'RG-81-HX',
   MOPED_12FRP3 = '12-FRP-3',
   MOPED_F169NS = 'F-169-NS',
+  MOPED_DKR97R = 'DKR-97-R',
   MOTOR_MPTT99 = 'MP-TT-99',
   QUAD_97XFTK = '97-XF-TK',
   TRIKE_21PLN1 = '21-PLN-1',

@@ -126,7 +126,7 @@ export class GenericElements {
 
   // BUTTONS
   nextButton = '#_Form_next';
-  finishButton = '#_Form_finishSave>span';
+  takeOutInsuranceNowButton = '#_Form_finishSave>span';
 
   // LOADER
   loader = 'body > div.blockUI.blockMsg.blockPage';
@@ -137,6 +137,9 @@ export class GenericElements {
 
   // AUTHORIZATION
   authorizationUniveElement = '[ng-class*="IF2533_10213"] > label';
+
+  // VERIFY
+  bannerPageElement = '.banner_title';
 
   // THANK YOU
   thankYouH2Element = '.thanks_content > h2';

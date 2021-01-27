@@ -26,7 +26,7 @@ Then(/^Customer can select bekijk controleer gegevens for rechtsbijstandverzeker
   await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
   await stickyBalkMethods.verifySummaryRechtsbijstandVerzekering();
   await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
-  await genericMethods.clickOnFinishButton();
+  await genericMethods.clickOnTakeOutInsuranceNowButton();
 });
 
 When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen$/, async (persona: string) => {
@@ -34,7 +34,7 @@ When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(nawElements.yourDataBirthdDayElement, personaData.getPersonaBirthDate(persona));
+  await genericMethods.typeText(nawElements.yourDataBirthDayElement, personaData.getPersonaBirthDate(persona));
   // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);

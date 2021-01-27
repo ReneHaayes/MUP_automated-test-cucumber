@@ -16,8 +16,8 @@ exports.config = {
   ],
   capabilities: {
     browserName: 'chrome',
-     // shardTestFiles: true,
-     // maxInstances: 3,
+      // shardTestFiles: true,
+      // maxInstances: 3,
 
     loggingPrefs: {
       'driver': 'INFO',
@@ -27,7 +27,7 @@ exports.config = {
       'args': [
         // "--headless",
         // "--disable-gpu",
-        // "--window-size=1920,1080",
+        "--window-size=1920,1080",
         "disable-extensions"]
     }
   },

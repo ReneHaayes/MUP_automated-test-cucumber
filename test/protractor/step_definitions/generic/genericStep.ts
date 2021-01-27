@@ -1,6 +1,7 @@
 import {Given, Then, When} from 'cucumber';
-import {genericElements, genericMethods} from '@support';
-import {genericEnum} from '@enum';
+import {genericElements, genericMethods, mopedWithLicensePlate} from '@support';
+import {genericEnum, vehicleKindEnum} from '@enum';
+import {browser} from 'protractor';
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);
@@ -26,10 +27,18 @@ Then(/^Thank you page for zakelijke (.*) is shown$/, async function (verzekering
 
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
+  await genericMethods.waitForElementIsPresent(genericElements.bannerPageElement, browser.getPageTimeout);
   await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
-  await genericMethods.clickOnFinishButton();
+  if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.BROMFIETS) {
+    genericMethods.clickOnNextButton().then();
+  } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORSCOOTER) {
+    genericMethods.clickOnNextButton().then();
+  } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORFIETS) {
+    genericMethods.clickOnNextButton().then();
+  } else { }
+  await genericMethods.clickOnTakeOutInsuranceNowButton();
 });
 
 

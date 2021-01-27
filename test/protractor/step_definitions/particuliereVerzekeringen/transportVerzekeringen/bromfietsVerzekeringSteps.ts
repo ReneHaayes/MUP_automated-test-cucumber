@@ -1,19 +1,33 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  genericElements, genericMethods, mopedMethods, mopedWithLicensePlate, nawElements, personaData, vehicleElements
-} from "@support";
+  genericElements,
+  genericMethods,
+  mopedElements,
+  mopedMethods,
+  mopedWithLicensePlate,
+  nawElements,
+  personaData,
+  vehicleElements
+} from '@support';
+import {browser} from 'protractor';
+import {vehicleKindEnum} from '@enum';
 
 When(/^I enter step one page of moped for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string, licensePlate: string, damageFreeYears: string) => {
   await mopedMethods.enterLicensePlate(licensePlate);
-  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoBrandNameElement, mopedWithLicensePlate.getMopedBrandName(licensePlate));
-  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoModelElement, mopedWithLicensePlate.getMopedModel(licensePlate));
-  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoConstructionYearElement, mopedWithLicensePlate.getMopedConstructionYear(licensePlate));
-  await genericMethods.verifyTextInElement(vehicleElements.licensePlateInfoVersionElement, mopedWithLicensePlate.getMopedVersion(licensePlate));
-  await mopedMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedModel(licensePlate));
+  await genericMethods.verifyTextInElement(mopedElements.mopedInfoBrandNameElement, mopedWithLicensePlate.getMopedBrandName(licensePlate));
+  await genericMethods.verifyTextInElement(mopedElements.mopedInfoModelElement, mopedWithLicensePlate.getMopedModel(licensePlate));
+  await genericMethods.verifyTextInElement(mopedElements.mopedInfoConstructionYearElement, mopedWithLicensePlate.getMopedConstructionYear(licensePlate));
+  await genericMethods.verifyTextInElement(mopedElements.mopedInfoVersionElement, mopedWithLicensePlate.getMopedVersion(licensePlate));
+  await genericMethods.waitForElementClickable(mopedElements.vehicleKindSelectElement, browser.getPageTimeout);
+  await mopedMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedVehicleType(licensePlate));
+  if (mopedWithLicensePlate.getMopedVehicleType(licensePlate) === vehicleKindEnum.HIGH_SPEED_BIKE) {
+    genericMethods.clickOnElement(mopedElements.yesOtherInsurancesElement).then();
+  } else {}
   await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(vehicleElements.zipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(vehicleElements.damageFreeYearsElement, damageFreeYears);
   await genericMethods.clickOnNextButton();
+
 });
 
 When(/^I enter step two page of moped with$/, async (data) => {
@@ -30,6 +44,7 @@ When(/^I enter step three page of moped with$/, async (data) => {
   await mopedMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
   await genericMethods.typeText(vehicleElements.dateOfNameMopedElement, dataTable.dateOfName);
   await genericMethods.clickOnTAB(vehicleElements.dateOfNameMopedElement);
+  await genericMethods.waitForElementIsPresent(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.typeText(vehicleElements.meldCodeElement, dataTable.meldCode);
   await genericMethods.typeText(vehicleElements.purchasePriceElement, dataTable.purchasePrice);
   await mopedMethods.clickOnDamageFreeYearsOfDifferentCompany(dataTable.damageFreeYearsDifferentCompany);

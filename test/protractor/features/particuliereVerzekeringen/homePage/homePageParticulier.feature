@@ -11,7 +11,7 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
       | button                        |
       | Zorgverzekering               |
 #      | Reisverzekering               |    Staat niet meer op home page
-  #      | Aansprakelijkheidsverzekering |    Staat niet meer op homepage
+#      | Aansprakelijkheidsverzekering |    Staat niet meer op homepage
 
   Scenario Outline: Click on the menu and check the elements and verify if the outcome is correct.
     Given I am on the <page> page of the Unive website
@@ -36,7 +36,7 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
       | Home               | zorgnota declareren  |
       | Home               | verzekering wijzigen |
       | Home               | unive alarmcentrale  |
-     | alle verzekeringen | zorgnota declareren  |
+      | alle verzekeringen | zorgnota declareren  |
       | alle verzekeringen | verzekering wijzigen |
       | alle verzekeringen | unive alarmcentrale  |
 

@@ -9,5 +9,6 @@ export enum typeBoatEnum {
 }
 
 export enum boatNamesEnum {
-  AZZAM = 'azzam'
+  AZZAM = 'azzam',
+  KOEGELWIECK = 'koegelwieck'
 }

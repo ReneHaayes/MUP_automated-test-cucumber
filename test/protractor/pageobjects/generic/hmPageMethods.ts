@@ -399,6 +399,7 @@ export class HmPageMethods {
       }
       case homePageEnum.MIJN_UNIVE: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE);
+        await genericMethods.waitForElementIsPresent(hmPageElements.mijnUniveLoginTitleTextElement, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveEmailInputElement, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(hmPageElements.mijnUnivePasswordInputElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.mijnUniveLoginTitleTextElement, hmPageElements.mijnUniveLoginTitleText);
