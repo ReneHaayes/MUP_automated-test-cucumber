@@ -31,6 +31,7 @@ When(/^I fill in almost insured page with:$/, async (data) => {
   await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
+  // Bromfiets/scooter heeft een extra scherm voordat de klant uitkomt bij de 'Sluit nu uw verzekering af'
   if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.BROMFIETS) {
     genericMethods.clickOnNextButton().then();
   } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORSCOOTER) {

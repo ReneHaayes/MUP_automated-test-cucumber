@@ -42,7 +42,7 @@ export class VehicleElements {
   ownRiskElement = '#_Form_IF29509_37521';
 
   // KIND OF INSURANCE
-  newMopedElement = '[data-label-id*="LA_IF10373_14814"]';
+  newMopedElement = '[data-label-id*="LA_IF10373_14814"] label';
   replacementMopedElement = '[data-label-id*="LA_IF10373_14815"]';
   extraMopedElement = '[data-label-id*="LA_IF10373_14816"]';
 
