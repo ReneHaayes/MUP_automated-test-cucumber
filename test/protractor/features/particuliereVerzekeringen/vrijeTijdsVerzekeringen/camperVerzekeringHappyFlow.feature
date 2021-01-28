@@ -16,4 +16,3 @@ Feature: Happy flow for 'Camperverzekering'
     Examples:
       | licensePlate | persona |
       | BL-JL-41     | ronaldo |
-      | BL-JL-41     | ronaldo |
