@@ -10,7 +10,7 @@ export class GenericElements {
   bromfietsVerzekeringPat = 'bromfietsverzekering/premieberekenen-en-afsluiten';
   scooterVerzekeringPat = 'scooterverzekering/premieberekenen-en-afsluiten';
   motorVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten';
-  quadVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-quad';
+  quadVerzekeringPat = 'motorverzeFkering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-trike';
   zorgeloosOnlineVerzekeringPat = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
@@ -123,6 +123,9 @@ export class GenericElements {
 
   // COOKIE
   cookieClickElement = '#consent-popup-close-modal';
+
+  // VIRTUALTOUR
+  closeVirtualTour = '[id="close-virtual-tour"]';
 
   // BUTTONS
   nextButton = '#_Form_next';
