@@ -32,13 +32,16 @@ When(/^I fill in almost insured page with:$/, async (data) => {
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   // Bromfiets/scooter heeft een extra scherm voordat de klant uitkomt bij de 'Sluit nu uw verzekering af'
-  if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.BROMFIETS) {
-    genericMethods.clickOnNextButton().then();
-  } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORSCOOTER) {
-    genericMethods.clickOnNextButton().then();
-  } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORFIETS) {
-    genericMethods.clickOnNextButton().then();
-  } else { }
+  if (dataTable.licensePlate) {
+    if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.BROMFIETS) {
+      genericMethods.clickOnNextButton().then();
+    } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORSCOOTER) {
+      genericMethods.clickOnNextButton().then();
+    } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORFIETS) {
+      genericMethods.clickOnNextButton().then();
+    } else {
+    }
+  }
   await genericMethods.clickOnTakeOutInsuranceNowButton();
 });
 

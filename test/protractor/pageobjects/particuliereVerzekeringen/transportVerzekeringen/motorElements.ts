@@ -15,6 +15,9 @@ export class MotorElements {
   selectQuadElement = '[data-label-id*="LA_IF7208_14225"] .radioList > label:nth-child(1)';
   selectTrikeElement = '[data-label-id*="LA_IF7208_14225"] .radioList > label:nth-child(2)';
 
+  // Uitvoering
+  trikeVersionElement = '#_Form_IF7207_10912';
+
   // NEW OR SECONDHAND MOTOR
   clickNewElement = '[data-label-id*="LA_IF7208_10950"] .radioList > label:nth-child(1)';
   clickSecondHandElement = '[data-label-id*="LA_IF7208_10950"] .radioList > label:nth-child(2)';

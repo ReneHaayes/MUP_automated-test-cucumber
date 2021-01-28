@@ -40,6 +40,7 @@ export class MotorMethods {
         await genericMethods.waitForElementClickable(motorElements.licensePlateTrikeInputElement, browser.getPageTimeout);
         await genericMethods.typeText(motorElements.licensePlateTrikeInputElement, input);
         await genericMethods.clickOnTAB(motorElements.licensePlateTrikeInputElement);
+        await genericMethods.typeText(motorElements.trikeVersionElement, motorWithLicensePlate.getMotorVersion(input));
         await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
         await genericMethods.clickOnElement(motorElements.selectTrikeElement);
         break;

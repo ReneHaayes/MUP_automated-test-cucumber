@@ -16,19 +16,23 @@ exports.config = {
   ],
   capabilities: {
     browserName: 'chrome',
-      // shardTestFiles: true,
-      // maxInstances: 3,
+        // shardTestFiles: true,
+        // maxInstances: 2,
 
     loggingPrefs: {
       'driver': 'INFO',
       'browser': 'INFO'
     },
+
     'chromeOptions': {
       'args': [
         // "--headless",
         // "--disable-gpu",
-        "--window-size=1920,1080",
-        "disable-extensions"]
+        //"--window-size=1920,1080",
+        // '--start-maximized',
+        // '--start-minimized',
+        // "disable-extensions"
+      ]
     }
   },
 
@@ -38,7 +42,7 @@ exports.config = {
     particuliereVerzekeringen: './protractor/features/particuliereVerzekeringen/**/*.feature',
     mijnUniveParticulier: './protractor/features/mijnUniveParticulier/**/*.feature',
     service: './protractor/features/service/**/*.feature',
-    visual: './protractor/features/visual/**/*.feature'
+    visual: './protractor/features/visual/**/*.feature',
   },
 
   params: {

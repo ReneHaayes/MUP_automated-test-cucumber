@@ -10,7 +10,7 @@ export class GenericElements {
   bromfietsVerzekeringPat = 'bromfietsverzekering/premieberekenen-en-afsluiten';
   scooterVerzekeringPat = 'scooterverzekering/premieberekenen-en-afsluiten';
   motorVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten';
-  quadVerzekeringPat = 'motorverzeFkering/premieberekenen-en-afsluiten-quad';
+  quadVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-trike';
   zorgeloosOnlineVerzekeringPat = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
