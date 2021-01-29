@@ -1,5 +1,10 @@
 import {browser} from "protractor";
-import {genericElements, genericMethods, hmPageElements, personaData, woonVerzekeringElements} from "@support";
+import {genericElements,
+  genericMethods,
+  hmPageElements,
+  personaData,
+  woonVerzekeringElements
+} from "@support";
 import {
   additionalOption,
   genericEnum,
