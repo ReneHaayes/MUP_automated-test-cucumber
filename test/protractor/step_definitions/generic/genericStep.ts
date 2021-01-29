@@ -31,6 +31,7 @@ Then(/^Thank you page for zakelijke (.*) is shown$/, async function (verzekering
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.waitForElementIsPresent(genericElements.bannerPageElement, browser.getPageTimeout);
+  browser.sleep(500);
   await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
