@@ -715,7 +715,7 @@ export class GenericMethods {
     }
   }
 
-    async selectInsuranceHistory(input: string) {
+    async selectInsuranceHistory(input: string) {  // aangepast
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
       browser.sleep(500);
     switch (input) {
