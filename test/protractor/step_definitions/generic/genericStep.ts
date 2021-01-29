@@ -1,6 +1,9 @@
 import {Given, Then, When} from 'cucumber';
-import {genericElements, genericMethods, mopedWithLicensePlate} from '@support';
-import {genericEnum, mopedTypeEnum} from '@enum';
+import {genericElements,
+  genericMethods,
+  mopedWithLicensePlate
+} from '@support';
+import {mopedTypeEnum} from '@enum';
 import {browser} from 'protractor';
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
@@ -28,7 +31,8 @@ Then(/^Thank you page for zakelijke (.*) is shown$/, async function (verzekering
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.waitForElementIsPresent(genericElements.bannerPageElement, browser.getPageTimeout);
-  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory, genericEnum.EMPTY);
+  browser.sleep(500);
+  await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   // Bromfiets/scooter heeft een extra scherm voordat de klant uitkomt bij de 'Sluit nu uw verzekering af'
