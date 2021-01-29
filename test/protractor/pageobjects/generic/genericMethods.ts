@@ -715,12 +715,13 @@ export class GenericMethods {
     }
   }
 
-  async selectInsuranceHistory(input: string, explanation: string) {
+  // async selectInsuranceHistory(input: string, explanation: string) {
+    async selectInsuranceHistory(input: string) {  // aangepast
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, explanation);
+        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');  // genericEnum.empty veranderd naar TEST
         break;
       }
       case genericEnum.NO: {
@@ -744,6 +745,24 @@ export class GenericMethods {
       }
       case genericEnum.NO: {
         await this.clickOnElement(genericElements.criminalHistoryNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectDamageHistory(input: string) {
+    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await this.clickOnElement(genericElements.damageHistoryYesElement);
+        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await this.clickOnElement(genericElements.damageHistoryNoElement);
         break;
       }
       default: {
@@ -780,22 +799,6 @@ export class GenericMethods {
     }
   }
 
-  async selectDamageHistory(input: string) {
-    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.YES: {
-        await this.clickOnElement(genericElements.damageHistoryYesElement);
-        break;
-      }
-      case genericEnum.NO: {
-        await this.clickOnElement(genericElements.damageHistoryNoElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
 
   async selectLegal(input: string) {
     switch (input) {

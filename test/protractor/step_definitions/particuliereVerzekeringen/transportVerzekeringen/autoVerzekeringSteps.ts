@@ -16,8 +16,8 @@ import {
   stickyBalkMethods,
   vehicleElements
 } from "@support";
-import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";
-import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject} from "@enum";
+ // import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";   // verify sticky
+import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject} from '@enum';
 
 
 When(/^Customer enters step one page of autoverzekeringen for (.*) with license plate (.*)$/, async (persona: string, licensePlate: string) => {
@@ -43,7 +43,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
 
 When(/^Customer enters step two page of autoverzekering with collective (.*)$/, async (collective: string) => {
   await autoVerzekeringMethods.clickOnBasisDekking('waPlus');
-  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
+  //  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
   await autoVerzekeringMethods.selectOwnRisk('ownRisk500');
   await autoVerzekeringMethods.clickOnAanvullendeOpties('Inzittendenverzekering');
   await autoVerzekeringMethods.selectCarAcc('autoAccTm5000');
@@ -166,11 +166,11 @@ When(/^I enter step two page of personen autoverzekering zakelijk with$/, async 
 
 When(/^I enter step three page of personen autoverzekering zakelijk with$/, async (data) => {
   const dataTable = data.rowsHash();
-  //INSERT DATE INFORMATION
+  // INSERT DATE INFORMATION
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourCompanyElement, genericMethods.getDate(dataTable.startDateOnYourName));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
   await genericMethods.clickOnTAB(autoVerzekeringElementsStepThree.reportingCode);
-  //INSERT USE OF THE CAR INFORMATION
+  // INSERT USE OF THE CAR INFORMATION
   await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.ownerCarCompanyYesClickElement);
   await genericMethods.clickOnNextButton();
 });

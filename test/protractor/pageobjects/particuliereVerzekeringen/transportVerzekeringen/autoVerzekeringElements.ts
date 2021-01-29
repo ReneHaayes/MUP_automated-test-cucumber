@@ -86,12 +86,12 @@ export class AutoVerzekeringElements {
   sideBarTotalPremieAnnual: string = 'Totaalpremie per jaar';
   sideBarTotalPremieMonthly: string = 'Totaalpremie per maand';
 
-  //PERSONENEN AUTO VERZEKERING ZAKELIJK ELEMENTS
+  // PERSONENEN AUTO VERZEKERING ZAKELIJK ELEMENTS
   sameDriverYesClickElement: string = '[data-label-id*="LA_IF31207_39218"] .radioList > label:nth-child(1)';
   sameDriverNoClickElement: string = '[data-label-id*="LA_IF31207_39218"] .radioList > label:nth-child(2)';
   sameDriverZipCodeCompanyElement: string = '#_Form_IF31207_39214';
 
-  //COLLECTIVE
+  // COLLECTIVE
   collectiveInputElement: string = '.collectiveSearch_query';
   collectiveAutoCompleteClickElement: string = '[class="autocomplete-items"] > div:nth-child(1)';
   collectiveResultTextElement: string = '#_Form_IF4105_6208';
