@@ -1,9 +1,13 @@
-export class MotorElements {
+export class MotorcycleElements {
   // LICENSEPLATE
   licensePlateMotorInputElement = '#_Form_IF9914_9934';
   licensePlateTrikeInputElement = '#_Form_IF9913_9934';
   licensePlateQuadInputElement = '#_Form_IF9913_9934';
 
+  motorcycleBrandElement = '[id="_Form_IF7231_10959"]';
+  // motorcycleModelElement = '[id="_Form_IF7231_10960"]';
+  motorcycleYearElement = '[data-label-id="LA_IF7231_10964"] > span';
+  motorcycleVersionElement = '[id="_Form_IF7231_10961"]';
 
   // PRICE
   consumerPriceInputElement = '#_Form_IF7207_10914';

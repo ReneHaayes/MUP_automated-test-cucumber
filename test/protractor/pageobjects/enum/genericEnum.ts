@@ -57,7 +57,8 @@ export enum personaName {
 export enum companyNameEnum {
   FACEBOOK = 'facebook',
   RG_TIMMERWERKEN = 'rg timmerwerken',
-  GRONDVERZET_MACHINE_VERHUUR_SPRINGER = 'Grondverzet_machine_verhuur_Springer'
+  GRONDVERZET_MACHINE_VERHUUR_SPRINGER = 'Grondverzet_machine_verhuur_Springer',
+  PEEJ = 'peej'
 }
 
 export enum genericEnum {
@@ -65,8 +66,8 @@ export enum genericEnum {
   NO = 'no',
   EMPTY = '',
   DONT_KNOW = 'dont know',
-  DO = 'do',
-  DONT = 'dont',
+  WILL = 'will',
+  WONT = 'wont',
   UNKNOWN = 'unknown',
   TEMP = 'temp',
   TOTAL = 'total',
@@ -202,7 +203,8 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
   ZORGPREMIEALERT = 'zorgPremieAlert',
   PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders',
-  ZZP_PAKKET = 'zzp pakket'
+  SALESWIDGETS = 'salesWidgets',
+  ZZP_PAKKET = 'zzp pakket',
 }
 
 export enum faqPage {

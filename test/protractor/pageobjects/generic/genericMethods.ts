@@ -577,6 +577,18 @@ export class GenericMethods {
         .element(by.css('[value=\'' + value + '\']')).click();
     });
   }
+  async selectInDropdownShadowroot(selector: string, value: string) {
+    await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
+    await this.waitForElementIsVisibleShadowRoot(selector, browser.getPageTimeout);
+    const dropdownElement: ElementFinder = element(by.css_sr(selector));
+    await browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', dropdownElement);
+    });
+    await browser.wait((ec.elementToBeClickable(dropdownElement)), browser.getPageTimeout).then(() => {
+      dropdownElement
+        .element(by.css_sr('[value=\'' + value + '\']')).click();
+    });
+  }
 
   async clickOnNextButton() {
     await this.clickOnElement(genericElements.nextButton);

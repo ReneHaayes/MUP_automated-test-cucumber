@@ -1,6 +1,6 @@
 import {browser} from 'protractor';
-import {autoVerzekeringElementsStepThree, genericElements, genericMethods, nawElements} from "@support";
-import {gender} from "@enum";
+import {autoVerzekeringElementsStepThree, genericElements, genericMethods, nawElements} from '@support';
+import {gender} from '@enum';
 
 
 export class AutoVerzekeringMethodsStepThreeAndFour {

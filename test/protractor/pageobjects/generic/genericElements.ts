@@ -84,6 +84,8 @@ export class GenericElements {
   pensioen = 'pensioen/';
   prefillOmringPashoudersUrl = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
   zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
+  salesWidgets = 'ppwidgets';
+
   faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
 
   zorgchecktool = 'zorgverzekering/zorgcheck';

@@ -2,15 +2,15 @@
 
 Feature: Check the woonverzekering widget on the homepage.
 
-  Scenario Outline: Enter a zipcode and housenumber and check if the correct data appears.
+  Scenario Outline: Enter a zipcode and house number and check if the correct data appears.
     Given I am on the <pageName> page of the Unive website
     When I press the button <button> for the following persona <persona> on the page for woonverzekering
-    Then House data for woonverzekering <dodont> appears
+    Then House data for woonverzekering <willWont> appears
 
     Examples:
-      | pageName          | button                                     | dodont | persona |
-      | Home              | postcode en huisnummer homepage filled     | do     | ronaldo |
-      | Home              | homepage not filled                        | dont   | ronaldo |
-      | woonVerzekeringPp | postcode en huisnummer product page filled | do     | ronaldo |
-      | woonVerzekeringPp | product page not filled                    | dont   | ronaldo |
+      | pageName          | button                                     | willWont | persona |
+      | Home              | postcode en huisnummer homepage filled     | will     | ronaldo |
+      | Home              | homepage not filled                        | wont     | ronaldo |
+      | woonVerzekeringPp | postcode en huisnummer product page filled | will     | ronaldo |
+      | woonVerzekeringPp | product page not filled                    | wont     | ronaldo |
 

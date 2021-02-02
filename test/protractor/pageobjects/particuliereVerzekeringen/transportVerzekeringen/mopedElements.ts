@@ -6,10 +6,10 @@ export class MopedElements {
 
   // STEP ONE
   mopedLicensePlateInputElement = '#_Form_IF9707_9934';
-  mopedInfoBrandNameElement = '[data-label-id="LA_IF9733_13978"] [class*="textValue"]';
-  mopedInfoModelElement = '[data-label-id="LA_IF9733_13980"] [class*="textValue"]';
-  mopedInfoConstructionYearElement = '[data-label-id="LA_IF9733_13974"] [class*="textValue"]';
-  mopedInfoVersionElement = '[data-label-id="LA_IF9733_13979"] [class*="textValue"]';
+  mopedInfoBrandNameElement = '[data-label-id="LA_IF9733_13978"]';
+  mopedInfoModelElement = '[data-label-id="LA_IF9733_13980"]';
+  mopedInfoConstructionYearElement = '[data-label-id="LA_IF9733_13974"]';
+  mopedInfoVersionElement = '[data-label-id="LA_IF9733_13979"]';
 
   vehicleKindSelectElement = '#_Form_IF9706_13915';
   vehicleKindBromfietsSelectElement = 'string:bromfiets';

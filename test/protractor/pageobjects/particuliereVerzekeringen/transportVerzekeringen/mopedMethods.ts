@@ -1,10 +1,20 @@
 import {browser} from 'protractor';
 
 import {
-  autoVerzekeringElements, genericElements, genericMethods, mopedElements, mopedWithLicensePlate, vehicleElements
+  autoVerzekeringElements,
+  genericElements,
+  genericMethods,
+  mopedElements,
+  mopedWithLicensePlate,
+  vehicleElements
 } from '@support';
 import {
-  aanvullendeOptiesEnum, basisDekkingEnum, genericEnum, ownRiskEnum, vehicleAccEnum, vehicleKindEnum
+  aanvullendeOptiesEnum,
+  basisDekkingEnum,
+  genericEnum,
+  ownRiskEnum,
+  vehicleAccEnum,
+  mopedTypeEnum
 } from '@enum';
 
 export class MopedMethods {
@@ -18,47 +28,47 @@ export class MopedMethods {
 
   async selectKindOfVehicle(input: string) {
     switch (input) {
-      case vehicleKindEnum.BROMFIETS: {
+      case mopedTypeEnum.BROMFIETS: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindBromfietsSelectElement);
         break;
       }
-      case vehicleKindEnum.BAKFIETS: {
+      case mopedTypeEnum.BAKFIETS: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindBakfietsSelectElement);
         break;
       }
-      case vehicleKindEnum.BROMMOBIEL: {
+      case mopedTypeEnum.BROMMOBIEL: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindBromMobielSelectElement);
         break;
       }
-      case vehicleKindEnum.BROMSCOOTER: {
+      case mopedTypeEnum.BROMSCOOTER: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindBromscooterSelectElement);
         break;
       }
-      case vehicleKindEnum.HIGH_SPEED_BIKE: {
+      case mopedTypeEnum.HIGH_SPEED_BIKE: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindHighSpeedEbikeSelectElement);
         break;
       }
-      case vehicleKindEnum.OVERIG: {
+      case mopedTypeEnum.OVERIG: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindOverigSelectElement);
         break;
       }
-      case vehicleKindEnum.QUAD: {
+      case mopedTypeEnum.QUAD: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindQuadSelectElement);
         break;
       }
-      case vehicleKindEnum.TRIKE: {
+      case mopedTypeEnum.TRIKE: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindTrikeSelectElement);
         break;
       }
-      case vehicleKindEnum.SNORFIETS: {
+      case mopedTypeEnum.SNORFIETS: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindSnorfietsElement);
         break;
       }
-      case vehicleKindEnum.SNORSCOOTER: {
+      case mopedTypeEnum.SNORSCOOTER: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindSnorscooterElement);
         break;
       }
-      case vehicleKindEnum.FIETS_MET_HULPMOTOR: {
+      case mopedTypeEnum.FIETS_MET_HULPMOTOR: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindFietsMetHulpmotorElement);
         break;
       }

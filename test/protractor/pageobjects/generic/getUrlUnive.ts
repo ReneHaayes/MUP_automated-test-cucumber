@@ -1,7 +1,8 @@
 import {browser} from 'protractor';
 import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
-import {apiElements, genericElements} from "@support";
-import {faqPage} from "../enum/genericEnum";
+import {apiElements,
+  genericElements} from '@support';
+import {faqPage} from '../enum/genericEnum';
 
 export class GetUrlUnive {
 
@@ -315,6 +316,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.ZORGPREMIEALERT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;
+      }
+      case verzekeringPaginasEnum.SALESWIDGETS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.salesWidgets;
       }
       case verzekeringPaginasEnum.ZZP_PAKKET: {
         return this.getEnv(browser.params.env.environment) + genericElements.zzpPakket;

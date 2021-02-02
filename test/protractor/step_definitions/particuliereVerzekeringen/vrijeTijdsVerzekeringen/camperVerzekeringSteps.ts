@@ -1,36 +1,36 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  camperVerzekeringElements,
-  camperVerzekeringMethods,
-  camperWithLicensePlate,
+  mobileHomeVerzekeringElements,
+  mobileHomeVerzekeringMethods,
+  mobileHomeWithLicensePlate,
   genericElements,
   genericMethods,
   nawElements,
   personaData
-} from "@support";
+} from '@support';
 import {browser} from 'protractor';
 
 
 When(/^I enter step one and click next on step two of camperverzekering for (.*) with$/, async (licensePlate: string) => {
-  await camperVerzekeringMethods.enterLicensePlate(licensePlate);
-  await genericMethods.clickOnElement(camperVerzekeringElements.camperBoughtUsedClickElement);
-  await genericMethods.typeText(camperVerzekeringElements.newPriceInputElement, camperWithLicensePlate.getCamperNewPrice(licensePlate));
-  await genericMethods.typeText(camperVerzekeringElements.boughtDateInputElement, genericMethods.getDate('today'));
-  await genericMethods.typeText(camperVerzekeringElements.structureBrandNameInputElement, camperWithLicensePlate.getCamperBrandName(licensePlate));
-  await genericMethods.typeText(camperVerzekeringElements.structureBrandModelInputElement, camperWithLicensePlate.getCamperBrandModel(licensePlate));
-  await genericMethods.clickOnElement(camperVerzekeringElements.recreativeUseClickElement);
-  await genericMethods.waitForElementClickable(camperVerzekeringElements.between10000and20000kmClickElement, browser.getPageTimeout);
-  await genericMethods.clickOnElement(camperVerzekeringElements.between10000and20000kmClickElement);
-  await genericMethods.clickOnElement(camperVerzekeringElements.waPlusClickElement);
+  await mobileHomeVerzekeringMethods.enterLicensePlate(licensePlate);
+  await genericMethods.clickOnElement(mobileHomeVerzekeringElements.mobileHomeBoughtUsedClickElement);
+  await genericMethods.typeText(mobileHomeVerzekeringElements.newPriceInputElement, mobileHomeWithLicensePlate.getMobileHomeModel(licensePlate));
+  await genericMethods.typeText(mobileHomeVerzekeringElements.boughtDateInputElement, genericMethods.getDate('today'));
+  await genericMethods.typeText(mobileHomeVerzekeringElements.structureBrandNameInputElement, mobileHomeWithLicensePlate.getMobileHomeBrandName(licensePlate));
+  await genericMethods.typeText(mobileHomeVerzekeringElements.structureBrandModelInputElement, mobileHomeWithLicensePlate.getMobileHomeBrandName(licensePlate));
+  await genericMethods.clickOnElement(mobileHomeVerzekeringElements.recreativeUseClickElement);
+  await genericMethods.waitForElementClickable(mobileHomeVerzekeringElements.between10000and20000kmClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(mobileHomeVerzekeringElements.between10000and20000kmClickElement);
+  await genericMethods.clickOnElement(mobileHomeVerzekeringElements.waPlusClickElement);
   await genericMethods.clickOnNextButton();
   await genericMethods.waitForElementIsVisible(genericElements.bannerPageElement, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step three page of camperverzekering for (.*) with$/, async (licensePlate: string) => {
-  await genericMethods.typeText(camperVerzekeringElements.nameDateInputElement, genericMethods.getDate('today'));
-  await genericMethods.clickOnTAB(camperVerzekeringElements.nameDateInputElement);
-  await genericMethods.typeText(camperVerzekeringElements.meldCodeInputElement, camperWithLicensePlate.getCamperMeldCode(licensePlate));
+  await genericMethods.typeText(mobileHomeVerzekeringElements.nameDateInputElement, genericMethods.getDate('today'));
+  await genericMethods.clickOnTAB(mobileHomeVerzekeringElements.nameDateInputElement);
+  await genericMethods.typeText(mobileHomeVerzekeringElements.meldCodeInputElement, mobileHomeWithLicensePlate.getMobileHomeMeldCode(licensePlate));
   await genericMethods.clickOnNextButton();
 });
 

@@ -1,12 +1,12 @@
-export class CamperVerzekeringElements {
+export class MobileHomeVerzekeringElements {
 
   // LICENSEPLATE
   licensePlateInputElement = '#_Form_IF6606_9934';
   brandNameElementXpath = '//*[@class="entry camper_db"]/descendant::*';
 
   // NEW OR USED
-  camperBoughtNewClickElement = '[data-label-id*="LA_IF6609_9920"] .radioList > label:nth-child(1)';
-  camperBoughtUsedClickElement = '[data-label-id*="LA_IF6609_9920"] .radioList > label:nth-child(2)';
+  mobileHomeBoughtNewClickElement = '[data-label-id*="LA_IF6609_9920"] .radioList > label:nth-child(1)';
+  mobileHomeBoughtUsedClickElement = '[data-label-id*="LA_IF6609_9920"] .radioList > label:nth-child(2)';
   newPriceInputElement = '#_Form_IF6609_9921';
 
   // DATE

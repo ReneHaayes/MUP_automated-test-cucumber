@@ -14,10 +14,10 @@ import {AutoVerzekeringMethods} from '../pageobjects/particuliereVerzekeringen/t
 import {AutoVerzekeringMethodsStepThreeAndFour} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/autoVerzekeringMethodsStepThreeAndFour';
 import {MopedMethods} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/mopedMethods';
 import {LicensePlateMethod} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/licensePlateMethod';
-import {MotorMethods} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorMethods';
+import {MotorcycleMethods} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorcycleMethods';
 import {OldtimerVerzekeringMethods} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/oldtimerVerzekeringMethods';
 import {BootVerzekeringMethods} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/bootVerzekeringMethods';
-import {CamperVerzekeringMethods} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/camperVerzekeringMethods';
+import {MobileHomeVerzekeringMethods} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/mobileHomeVerzekeringMethods';
 import {ReisVerzekeringMethods} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/reisVerzekeringMethods';
 import {AlleVerzekeringenZakelijkMethods} from '../pageobjects/zakelijkeVerzekeringen/alleVerzekeringen/alleVerzekeringenZakelijkMethods';
 import {AovZzpMethods} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpMethods';
@@ -31,6 +31,8 @@ import {OndernemersScanMethods} from '../pageobjects/zakelijkeVerzekeringen/onde
 import {ZorgCheckToolMethods} from '../pageobjects/zorg/zorgCheckToolMethods';
 import {ZorgWizardMethods} from '../pageobjects/zorg/zorgWizardMethods';
 import {VisualMethods} from '../pageobjects/visual/visualMethods';
+import {WidgetsParticulierMethods} from '../pageobjects/particuliereVerzekeringen/widgets/widgetsParticulierMethods';
+import {WidgetsZakelijkMethods} from '../pageobjects/zakelijkeVerzekeringen/widgets/widgetsZakelijkMethods';
 import {ZzpGoedBeterBestMethods} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpGoedBeterBestMethods';
 
 export const situatieGewijzigdMethods: SituatieGewijzigdMethods = new SituatieGewijzigdMethods();
@@ -49,10 +51,10 @@ export const autoVerzekeringMethods: AutoVerzekeringMethods = new AutoVerzekerin
 export const autoVerzekeringMethodsStepThreeAndFour: AutoVerzekeringMethodsStepThreeAndFour = new AutoVerzekeringMethodsStepThreeAndFour();
 export const mopedMethods: MopedMethods = new MopedMethods();
 export const licensePlateMethod: LicensePlateMethod = new LicensePlateMethod();
-export const motorMethods: MotorMethods = new MotorMethods();
+export const motorcycleMethods: MotorcycleMethods = new MotorcycleMethods();
 export const oldtimerVerzekeringMethods: OldtimerVerzekeringMethods = new OldtimerVerzekeringMethods();
 export const bootVerzekeringMethods: BootVerzekeringMethods = new BootVerzekeringMethods();
-export const camperVerzekeringMethods: CamperVerzekeringMethods = new CamperVerzekeringMethods();
+export const mobileHomeVerzekeringMethods: MobileHomeVerzekeringMethods = new MobileHomeVerzekeringMethods();
 export const reisVerzekeringMethods: ReisVerzekeringMethods = new ReisVerzekeringMethods();
 export const alleVerzekeringenZakelijkMethods: AlleVerzekeringenZakelijkMethods = new AlleVerzekeringenZakelijkMethods();
 export const aovZzpMethods: AovZzpMethods = new AovZzpMethods();
@@ -66,5 +68,6 @@ export const ondernemersScanMethods: OndernemersScanMethods = new OndernemersSca
 export const zorgCheckToolMethods: ZorgCheckToolMethods = new ZorgCheckToolMethods();
 export const zorgWizardMethods: ZorgWizardMethods = new ZorgWizardMethods();
 export const visualMethods: VisualMethods = new VisualMethods();
+export const widgetsParticulierMethods: WidgetsParticulierMethods = new WidgetsParticulierMethods();
+export const widgetZakelijkMethods: WidgetsZakelijkMethods = new WidgetsZakelijkMethods();
 export const zzpGoedBeterBestMethods: ZzpGoedBeterBestMethods = new ZzpGoedBeterBestMethods();
-

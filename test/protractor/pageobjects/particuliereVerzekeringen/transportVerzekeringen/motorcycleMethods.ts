@@ -3,8 +3,8 @@ import {
   autoVerzekeringElements,
   genericElements,
   genericMethods,
-  motorElements,
-  motorWithLicensePlate,
+  motorcycleElements,
+  motorcycleWithLicensePlate,
   vehicleElements
 } from '@support';
 import {
@@ -14,35 +14,35 @@ import {
   genericEnum,
   licensePlates,
   vehicleAccEnum,
-  vehicleKindEnum
+  mopedTypeEnum
 } from '@enum';
 
 
-export class MotorMethods {
+export class MotorcycleMethods {
 
   async enterLicensePlate(input: string) {
     switch (input) {
-      case licensePlates.MOTOR_MPTT99: {
-        await genericMethods.waitForElementClickable(motorElements.licensePlateMotorInputElement, browser.getPageTimeout);
-        await genericMethods.typeText(motorElements.licensePlateMotorInputElement, input);
-        await genericMethods.clickOnTAB(motorElements.licensePlateMotorInputElement);
+      case licensePlates.MOTORCYCLE_MPTT99: {
+        await genericMethods.waitForElementClickable(motorcycleElements.licensePlateMotorInputElement, browser.getPageTimeout);
+        await genericMethods.typeText(motorcycleElements.licensePlateMotorInputElement, input);
+        await genericMethods.clickOnTAB(motorcycleElements.licensePlateMotorInputElement);
         break;
       }
       case licensePlates.QUAD_97XFTK: {
-        await genericMethods.waitForElementClickable(motorElements.licensePlateQuadInputElement, browser.getPageTimeout);
-        await genericMethods.typeText(motorElements.licensePlateQuadInputElement, input);
-        await genericMethods.clickOnTAB(motorElements.licensePlateQuadInputElement);
-        await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
-        await genericMethods.clickOnElement(motorElements.selectQuadElement);
+        await genericMethods.waitForElementClickable(motorcycleElements.licensePlateQuadInputElement, browser.getPageTimeout);
+        await genericMethods.typeText(motorcycleElements.licensePlateQuadInputElement, input);
+        await genericMethods.clickOnTAB(motorcycleElements.licensePlateQuadInputElement);
+        await genericMethods.typeText(motorcycleElements.consumerPriceInputElement, motorcycleWithLicensePlate.getMotorcyclePrice(input));
+        await genericMethods.clickOnElement(motorcycleElements.selectQuadElement);
         break;
       }
       case licensePlates.TRIKE_21PLN1: {
-        await genericMethods.waitForElementClickable(motorElements.licensePlateTrikeInputElement, browser.getPageTimeout);
-        await genericMethods.typeText(motorElements.licensePlateTrikeInputElement, input);
-        await genericMethods.clickOnTAB(motorElements.licensePlateTrikeInputElement);
-        await genericMethods.typeText(motorElements.trikeVersionElement, motorWithLicensePlate.getMotorVersion(input));
-        await genericMethods.typeText(motorElements.consumerPriceInputElement, motorWithLicensePlate.getMotorPrice(input));
-        await genericMethods.clickOnElement(motorElements.selectTrikeElement);
+        await genericMethods.waitForElementClickable(motorcycleElements.licensePlateTrikeInputElement, browser.getPageTimeout);
+        await genericMethods.typeText(motorcycleElements.licensePlateTrikeInputElement, input);
+        await genericMethods.clickOnTAB(motorcycleElements.licensePlateTrikeInputElement);
+        await genericMethods.typeText(motorcycleElements.trikeVersionElement, motorcycleWithLicensePlate.getMotorcycleVersion(input));
+        await genericMethods.typeText(motorcycleElements.consumerPriceInputElement, motorcycleWithLicensePlate.getMotorcyclePrice(input));
+        await genericMethods.clickOnElement(motorcycleElements.selectTrikeElement);
         break;
       }
       default: {
@@ -54,11 +54,11 @@ export class MotorMethods {
   async clickNewOrSecondHandMotor(input: string) {
     switch (input) {
       case genericEnum.NEW: {
-        await genericMethods.clickOnElement(motorElements.clickNewElement);
+        await genericMethods.clickOnElement(motorcycleElements.clickNewElement);
         break;
       }
       case genericEnum.SECONDHAND: {
-        await genericMethods.clickOnElement(motorElements.clickSecondHandElement);
+        await genericMethods.clickOnElement(motorcycleElements.clickSecondHandElement);
         break;
       }
       default: {
@@ -70,15 +70,15 @@ export class MotorMethods {
   async clickAlarmSystem(input: string) {
     switch (input) {
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(motorElements.noAlarmSystemElement);
+        await genericMethods.clickOnElement(motorcycleElements.noAlarmSystemElement);
         break;
       }
       case alarmSystemEnum.STARTONDERBREKER: {
-        await genericMethods.clickOnElement(motorElements.startOnderbrekerAlarmSystemElement);
+        await genericMethods.clickOnElement(motorcycleElements.startOnderbrekerAlarmSystemElement);
         break;
       }
       case alarmSystemEnum.SCM_CERTIFIED: {
-        await genericMethods.clickOnElement(motorElements.scmCertifiedAlarmSystemElement);
+        await genericMethods.clickOnElement(motorcycleElements.scmCertifiedAlarmSystemElement);
         break;
       }
       default: {
@@ -90,19 +90,19 @@ export class MotorMethods {
   async clickOnBasisDekking(input: string) {
     switch (input) {
       case basisDekkingEnum.WA: {
-        await genericMethods.clickOnElement(motorElements.waElement);
+        await genericMethods.clickOnElement(motorcycleElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
-        await genericMethods.clickOnElement(motorElements.waPlusElement);
+        await genericMethods.clickOnElement(motorcycleElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
-        await genericMethods.clickOnElement(motorElements.allRiskElement);
+        await genericMethods.clickOnElement(motorcycleElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
         break;
@@ -117,19 +117,19 @@ export class MotorMethods {
     switch (input) {
       case aanvullendeOptiesEnum.PECH_HULP_NL: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.pechHulpNlElement);
+        await genericMethods.clickOnElement(motorcycleElements.pechHulpNlElement);
         await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.RECHTSHULP_VERKEER: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.rechtsHulpVerkeerElement);
+        await genericMethods.clickOnElement(motorcycleElements.rechtsHulpVerkeerElement);
         await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.ONGEVALLEN_VERZEKERING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.ongevallenVerzekeringElement);
+        await genericMethods.clickOnElement(motorcycleElements.ongevallenVerzekeringElement);
         await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
@@ -142,18 +142,18 @@ export class MotorMethods {
   async selectAcc(input: string) {
     switch (input) {
       case vehicleAccEnum.ACC_TM_500: {
-        await genericMethods.selectInDropdown(motorElements.expandAccElement, motorElements.expandAccTm500Element);
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc500 + '")]', browser.getPageTimeout);
+        await genericMethods.selectInDropdown(motorcycleElements.expandAccElement, motorcycleElements.expandAccTm500Element);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorcycleElements.sideBarAcc500 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_1500: {
-        await genericMethods.selectInDropdown(motorElements.expandAccElement, motorElements.expandAccTm1500Element);
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc1500 + '")]', browser.getPageTimeout);
+        await genericMethods.selectInDropdown(motorcycleElements.expandAccElement, motorcycleElements.expandAccTm1500Element);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorcycleElements.sideBarAcc1500 + '")]', browser.getPageTimeout);
         break;
       }
       case vehicleAccEnum.ACC_TM_2500: {
-        await genericMethods.selectInDropdown(motorElements.expandAccElement, motorElements.expandAccTm2500Element);
-        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorElements.sideBarAcc2500 + '")]', browser.getPageTimeout);
+        await genericMethods.selectInDropdown(motorcycleElements.expandAccElement, motorcycleElements.expandAccTm2500Element);
+        await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + motorcycleElements.sideBarAcc2500 + '")]', browser.getPageTimeout);
         break;
       }
       default: {
@@ -166,17 +166,17 @@ export class MotorMethods {
     switch (input) {
       case genericEnum.NEW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.newMopedElement);
+        await genericMethods.clickOnElement(motorcycleElements.newMopedElement);
         break;
       }
       case genericEnum.REPLACEMENT: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.replacementMopedElement);
+        await genericMethods.clickOnElement(motorcycleElements.replacementMopedElement);
         break;
       }
       case genericEnum.EXTRA: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.extraMopedElement);
+        await genericMethods.clickOnElement(motorcycleElements.extraMopedElement);
         break;
       }
       default: {
@@ -189,12 +189,12 @@ export class MotorMethods {
     switch (input) {
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.mainDriverYesElement);
+        await genericMethods.clickOnElement(motorcycleElements.mainDriverYesElement);
         break;
       }
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.mainDriverNoElement);
+        await genericMethods.clickOnElement(motorcycleElements.mainDriverNoElement);
         break;
       }
       default: {
@@ -207,12 +207,12 @@ export class MotorMethods {
     switch (input) {
       case genericEnum.YES: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.ownerYesElement);
+        await genericMethods.clickOnElement(motorcycleElements.ownerYesElement);
         break;
       }
       case genericEnum.NO: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorElements.ownerNoElement);
+        await genericMethods.clickOnElement(motorcycleElements.ownerNoElement);
         break;
       }
       default: {
@@ -222,8 +222,8 @@ export class MotorMethods {
   }
 
   async additionalDataVehicle(licensePlate: string) {
-    if (motorWithLicensePlate.getMotorModel(licensePlate) === vehicleKindEnum.TRIKE) {
-      await genericMethods.clickOnElement(motorElements.rebuildTrikeNoElement);
+    if (motorcycleWithLicensePlate.getMotorcycleModel(licensePlate) === mopedTypeEnum.TRIKE) {
+      await genericMethods.clickOnElement(motorcycleElements.rebuildTrikeNoElement);
     }
   }
 
