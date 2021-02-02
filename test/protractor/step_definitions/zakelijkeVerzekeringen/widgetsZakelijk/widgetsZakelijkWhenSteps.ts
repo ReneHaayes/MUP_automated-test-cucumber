@@ -6,7 +6,8 @@ import {
   widgetsParticulierMethods,
   widgetZakelijkElements,
 } from '@support';
-import {browser} from 'protractor';
+import {browser
+} from 'protractor';
 
 // WHEN
 

@@ -15,9 +15,9 @@ exports.config = {
     './protractor/features/**/*.feature'
   ],
   capabilities: {
-     browserName: 'chrome',
-    //      shardTestFiles: true,
-    //      maxInstances: 2,
+    browserName: 'chrome',
+        // shardTestFiles: true,
+        // maxInstances: 2,
 
     loggingPrefs: {
       'driver': 'INFO',
@@ -26,10 +26,10 @@ exports.config = {
 
     'chromeOptions': {
       'args': [
-        "--headless",
-        "--disable-gpu",
-        "--window-size=1920,1080",
-        "disable-extensions"
+        // "--headless",
+        // "--disable-gpu",
+        //"--window-size=1920,1080",
+        // "disable-extensions"
       ]
     }
   },

@@ -8,7 +8,8 @@ import {
   woonVerzekeringElements,
   woonVerzekeringMethods
 } from '@support';
-import {browser} from 'protractor';
+import {browser
+} from 'protractor';
 
 When(/^I enter step one page of woonverzekering for persona (.*)$/, async (persona: string) => {
   await genericMethods.typeText(woonVerzekeringElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));

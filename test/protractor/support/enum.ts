@@ -1,41 +1,41 @@
-export {veelgesteldeVragenEnum}
-from '../pageobjects/enum/veelgesteldeVragenEnum';
+export {veelgesteldeVragenEnum
+}from '../pageobjects/enum/veelgesteldeVragenEnum';
 
-export {legalEnum}
-from '../pageobjects/enum/autoVerzekeringEnum';
+export {legalEnum
+}from '../pageobjects/enum/autoVerzekeringEnum';
 
-export {homePageEnum}
-from '../pageobjects/enum/woonVerzekeringEnum';
+export {homePageEnum
+}from '../pageobjects/enum/woonVerzekeringEnum';
 
-export {zakelijkHomePageEnum}
-from '../pageobjects/enum/woonVerzekeringEnum';
+export {zakelijkHomePageEnum
+}from '../pageobjects/enum/woonVerzekeringEnum';
 
-export {familyCompositionEnum}
-from '../pageobjects/enum/familyCompositionEnum';
+export {familyCompositionEnum
+}from '../pageobjects/enum/familyCompositionEnum';
 
-export {PaymentData}
-from '../pageobjects/enum/MijnUniveParticulierEnum';
+export {PaymentData
+}from '../pageobjects/enum/MijnUniveParticulierEnum';
 
-export {selectAlleVerzekeringEnum}
-from '../pageobjects/enum/alleVerzekeringEnum';
+export {selectAlleVerzekeringEnum
+}from '../pageobjects/enum/alleVerzekeringEnum';
 
-export {toolsEnum }
-  from '../pageobjects/enum/zakelijkAansprakelijkheidsVerzekeringEnum';
+export {toolsEnum
+}  from '../pageobjects/enum/zakelijkAansprakelijkheidsVerzekeringEnum';
 
-export {licensePlateHmPageEnum}
-from '../pageobjects/enum/licensePlateEnum';
+export {licensePlateHmPageEnum
+} from '../pageobjects/enum/licensePlateEnum';
 
-export {licensePlates }
-  from '../pageobjects/enum/licensePlateEnum';
+export {licensePlates
+}  from '../pageobjects/enum/licensePlateEnum';
 
-export {fietsEnum }
-  from '../pageobjects/enum/vehicleTypeWidgetEnum';
+export {fietsEnum
+}  from '../pageobjects/enum/vehicleTypeWidgetEnum';
 
-export {CaravanEnum }
-  from '../pageobjects/enum/vehicleTypeWidgetEnum';
+export {CaravanEnum
+}  from '../pageobjects/enum/vehicleTypeWidgetEnum';
 
-export {mobilityScooterEnum }
-  from '../pageobjects/enum/vehicleTypeWidgetEnum';
+export {mobilityScooterEnum
+}   from '../pageobjects/enum/vehicleTypeWidgetEnum';
 
 export {
   mopedTypeEnum,
@@ -101,5 +101,5 @@ export {
   houseNumberAddition,
   personaName,
   phoneNumber,
-  prefix }
-  from '../pageobjects/enum/genericEnum';
+  prefix
+}  from '../pageobjects/enum/genericEnum';

@@ -1,5 +1,6 @@
 import {licensePlates,
-  motorcycleTypeEnum} from '@enum';
+  motorcycleTypeEnum
+} from '@enum';
 
 export class Motorcycle {
 
