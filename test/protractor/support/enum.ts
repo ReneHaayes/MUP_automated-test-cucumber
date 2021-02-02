@@ -43,7 +43,7 @@ export {
 }  from '../pageobjects/enum/mopedEnum';
 
 export {typeBoatEnum,
-  boatNamesEnum,
+  boatNamesEnum ,
 } from '../pageobjects/enum/bootEnum';
 
 export {alarmSystemEnum,
@@ -51,7 +51,7 @@ export {alarmSystemEnum,
 }   from '../pageobjects/enum/motorcycleEnum';
 
 export {incapacitation,
-  AovZzpUwpremie,
+  AovZzpUwpremie ,
 } from '../pageobjects/enum/aovZzpEnum';
 
 export {
@@ -80,8 +80,8 @@ export {
   yearlyMileageEnum,
   whoDrivesCarMost,
   vehicleInfoEnum,
-  maxSpeedEnum,
-  }  from '../pageobjects/enum/autoVerzekeringEnum';
+  maxSpeedEnum }
+   from '../pageobjects/enum/autoVerzekeringEnum';
 
 export {
   activityEnum,
