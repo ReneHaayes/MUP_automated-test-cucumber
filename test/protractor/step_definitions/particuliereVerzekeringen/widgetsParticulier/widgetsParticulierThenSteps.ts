@@ -3,6 +3,7 @@
 import {Then} from 'cucumber';
 import {reisVerzekeringMethods, widgetsParticulierMethods} from '@support';
 
+
 // Annuleringsverzekering
 Then(/^I check if the gezinssamenstelling (.*) is selected on the next page$/, async (household: string) => {
   await widgetsParticulierMethods.checkHouseholdSelectedOnStepOne(household);
@@ -18,7 +19,7 @@ Then(/^The bromfiets (.*) data (.*) appear$/, async (licensePlate: string,  will
   await widgetsParticulierMethods.checkMopedSelectedOnStepOne(willWont, licensePlate);
 });
 
-// camper
+// camper/Mobile Home
 Then(/^The camper (.*) data (.*) appear$/, async (licensePlate: string,  willWont: string) => {
   await widgetsParticulierMethods.checkMobileHomeSelectedOnStepOne(willWont, licensePlate);
 });

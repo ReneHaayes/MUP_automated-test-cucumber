@@ -13,8 +13,8 @@ import {
   basisDekkingEnum,
   genericEnum,
   licensePlates,
+  motorcycleTypeEnum,
   vehicleAccEnum,
-  mopedTypeEnum
 } from '@enum';
 
 
@@ -32,6 +32,7 @@ export class MotorcycleMethods {
         await genericMethods.waitForElementClickable(motorcycleElements.licensePlateQuadInputElement, browser.getPageTimeout);
         await genericMethods.typeText(motorcycleElements.licensePlateQuadInputElement, input);
         await genericMethods.clickOnTAB(motorcycleElements.licensePlateQuadInputElement);
+        await genericMethods.typeText(motorcycleElements.quadVersionElement, motorcycleWithLicensePlate.getMotorcycleVersion(input));
         await genericMethods.typeText(motorcycleElements.consumerPriceInputElement, motorcycleWithLicensePlate.getMotorcyclePrice(input));
         await genericMethods.clickOnElement(motorcycleElements.selectQuadElement);
         break;
@@ -166,17 +167,17 @@ export class MotorcycleMethods {
     switch (input) {
       case genericEnum.NEW: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorcycleElements.newMopedElement);
+        await genericMethods.clickOnElement(motorcycleElements.newElement);
         break;
       }
       case genericEnum.REPLACEMENT: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorcycleElements.replacementMopedElement);
+        await genericMethods.clickOnElement(motorcycleElements.replacementElement);
         break;
       }
       case genericEnum.EXTRA: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        await genericMethods.clickOnElement(motorcycleElements.extraMopedElement);
+        await genericMethods.clickOnElement(motorcycleElements.extraElement);
         break;
       }
       default: {
@@ -222,7 +223,7 @@ export class MotorcycleMethods {
   }
 
   async additionalDataVehicle(licensePlate: string) {
-    if (motorcycleWithLicensePlate.getMotorcycleModel(licensePlate) === mopedTypeEnum.TRIKE) {
+    if (motorcycleWithLicensePlate.getMotorcycleModel(licensePlate) === motorcycleTypeEnum.TRIKE) {
       await genericMethods.clickOnElement(motorcycleElements.rebuildTrikeNoElement);
     }
   }

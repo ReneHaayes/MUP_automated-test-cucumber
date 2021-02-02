@@ -1,10 +1,17 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  autoVerzekeringElements, genericElements, genericMethods, motorcycleElements, motorcycleMethods, nawElements, personaData
-} from "@support";
+  autoVerzekeringElements,
+  genericElements,
+  genericMethods,
+  motorcycleElements,
+  motorcycleMethods,
+  nawElements,
+  personaData
+} from '@support';
 
 
-When(/^I enter step one page for motor with license plate (.*) with:$/, async (licensePlate: string, data) => {
+
+When(/^I enter step one page for motorcycle with license plate (.*) with:$/, async (licensePlate: string, data) => {
   const dataTable = data.rowsHash();
   await motorcycleMethods.enterLicensePlate(licensePlate);
   await motorcycleMethods.clickNewOrSecondHandMotor('secondhand');
@@ -19,7 +26,7 @@ When(/^I enter step one page for motor with license plate (.*) with:$/, async (l
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter step two page of motor with$/, async (data) => {
+When(/^I enter step two page of motorcycle with$/, async (data) => {
   const dataTable = data.rowsHash();
   await motorcycleMethods.clickOnBasisDekking(dataTable.basisDekking);
   await motorcycleMethods.selectAcc(dataTable.accessoires);
@@ -27,7 +34,7 @@ When(/^I enter step two page of motor with$/, async (data) => {
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter step three page of motor with$/, async (data) => {
+When(/^I enter step three page of motorcycle with$/, async (data) => {
   const dataTable = data.rowsHash();
   await motorcycleMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
   await motorcycleMethods.additionalDataVehicle(dataTable.licensePlate);
@@ -39,12 +46,11 @@ When(/^I enter step three page of motor with$/, async (data) => {
   await genericMethods.clickOnNextButton();
 });
 
-When(/^I enter details of (.*) in step four page of motor$/, async (persona: string) => {
+When(/^I enter details of (.*) in step four page of motorcycle$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
   await genericMethods.typeText(nawElements.yourDataPrefixElement, personaData.getPersonaPrefix(persona));
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
-  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));

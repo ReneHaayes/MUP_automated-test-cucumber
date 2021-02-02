@@ -97,19 +97,19 @@ export class AlleVerzekeringenMethods {
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.reisVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
-      case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING: {
-        await genericMethods.verifyUrlContains(verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING_PP);
+      case verzekeringPaginasEnum.DOORLOPENDE_REISVERZEKERING: {
+        await genericMethods.verifyUrlContains(verzekeringPaginasEnum.DOORLOPENDE_REISVERZEKERING_PP);
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.doorlopendeReisVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.DOORLOPENDE_REISVERZEKERING, 2);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.verzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
-      case verzekeringPaginasEnum.KORTLOPENDEREISVERZEKERING: {
-        await genericMethods.verifyUrlContains(verzekeringPaginasEnum.KORTLOPENDEREISVERZEKERING_PP);
+      case verzekeringPaginasEnum.KORTLOPENDE_REISVERZEKERING: {
+        await genericMethods.verifyUrlContains(verzekeringPaginasEnum.KORTLOPENDE_REISVERZEKERING_PP);
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.kortlopendeReisVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KORTLOPENDEREISVERZEKERING, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.KORTLOPENDE_REISVERZEKERING, 2);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.reisVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
@@ -169,11 +169,11 @@ export class AlleVerzekeringenMethods {
         // await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.scooterVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
-      case verzekeringPaginasEnum.MOTORVERZEKERING_PAT: {
-        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
+      case verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT: {
+        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT);
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, 'Motor verzekering');
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORVERZEKERING_PAT, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT, 2);
         // await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.motorVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
@@ -214,18 +214,18 @@ export class AlleVerzekeringenMethods {
         break;
       }
       case verzekeringPaginasEnum.TRIKEVERZEKERING_PAT: {
-        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
-        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
+        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORVERZEKERING_PAT, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT, 2);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.motorVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.QUADVERZEKERING_PAT: {
-        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
-        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.MOTORVERZEKERING_PAT);
+        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORVERZEKERING_PAT, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT, 2);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.motorVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }

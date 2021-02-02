@@ -1,4 +1,4 @@
-import {licensePlates, mopedTypeEnum} from '@enum';
+import {licensePlates, motorcycleTypeEnum} from '@enum';
 
 export class Motorcycle {
 
@@ -24,8 +24,8 @@ export class MotorcycleWithLicensePlate {
 
   MOTORCYCLE_MPTT99: Motorcycle = new Motorcycle(licensePlates.MOTORCYCLE_MPTT99, 'SUZUKI', 'SPORT', '2004', 'GSX R 750', '2999');
   MOTORCYCLE_MFPV49: Motorcycle = new Motorcycle(licensePlates.MOTORCYCLE_MFPV49, 'HARLEY DAVIDSON', 'CHOPPER', '2002', '88 FLSTF FAT BOY', 'priceless' );
-  QUAD_97XFTK: Motorcycle = new Motorcycle(licensePlates.QUAD_97XFTK, 'hsun', mopedTypeEnum.QUAD, '2007', 'HS150S', '3999');
-  TRIKE_21PLN1: Motorcycle = new Motorcycle(licensePlates.TRIKE_21PLN1, 'courage trike', mopedTypeEnum.TRIKE, '2011', 'CT100TDI TIP', '4960');
+  QUAD_97XFTK: Motorcycle = new Motorcycle(licensePlates.QUAD_97XFTK, 'hsun', motorcycleTypeEnum.QUAD, '2007', 'HS150S', '3999');
+  TRIKE_21PLN1: Motorcycle = new Motorcycle(licensePlates.TRIKE_21PLN1, 'courage trike', motorcycleTypeEnum.TRIKE, '2011', 'CT100TDI TIP', '4960');
 
 
   getMotorcycleBrandName(input: string): string {

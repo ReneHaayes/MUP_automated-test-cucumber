@@ -1,11 +1,11 @@
 export class MotorcycleElements {
-  // LICENSEPLATE
+  // LICENSE PLATE
   licensePlateMotorInputElement = '#_Form_IF9914_9934';
   licensePlateTrikeInputElement = '#_Form_IF9913_9934';
   licensePlateQuadInputElement = '#_Form_IF9913_9934';
 
   motorcycleBrandElement = '[id="_Form_IF7231_10959"]';
-  // motorcycleModelElement = '[id="_Form_IF7231_10960"]';
+  motorcycleModelElement = '[id="_Form_IF7231_10960"]';
   motorcycleYearElement = '[data-label-id="LA_IF7231_10964"] > span';
   motorcycleVersionElement = '[id="_Form_IF7231_10961"]';
 
@@ -21,12 +21,13 @@ export class MotorcycleElements {
 
   // Uitvoering
   trikeVersionElement = '#_Form_IF7207_10912';
+  quadVersionElement = '#_Form_IF7207_10912';
 
   // NEW OR SECONDHAND MOTOR
   clickNewElement = '[data-label-id*="LA_IF7208_10950"] .radioList > label:nth-child(1)';
   clickSecondHandElement = '[data-label-id*="LA_IF7208_10950"] .radioList > label:nth-child(2)';
 
-  // ALARMSYSTEM
+  // ALARM SYSTEM
   noAlarmSystemElement = '[data-label-id*="LA_IF7208_10916"] .radioList > label:nth-child(1)';
   startOnderbrekerAlarmSystemElement = '[data-label-id*="LA_IF7208_10916"] .radioList > label:nth-child(2)';
   scmCertifiedAlarmSystemElement = '[data-label-id*="LA_IF7208_10916"] .radioList > label:nth-child(3)';
@@ -52,9 +53,9 @@ export class MotorcycleElements {
   sideBarAcc2500 = 'Accessoires verzekerd t/m €2.500,-';
 
   // KIND OF INSURANCE
-  newMopedElement = '[data-label-id*="LA_IF10206_14612"]';
-  replacementMopedElement = '[data-label-id*="LA_IF10206_14613"]';
-  extraMopedElement = '[data-label-id*="LA_IF10206_14614"]';
+  newElement = '[data-label-id*="LA_IF10206_14612"]';
+  replacementElement = '[data-label-id*="LA_IF10206_14613"]';
+  extraElement = '[data-label-id*="LA_IF10206_14614"]';
 
   // DATE ELEMENTS
   dateOfNameMopedElement = '#_Form_IF7221_10944';

@@ -434,7 +434,7 @@ export class HmPageMethods {
         break;
       }
       case homePageEnum.REISVERZEKERING: {
-        const url: string = getUrlUnive.getUrlUnive(verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING);
+        const url: string = getUrlUnive.getUrlUnive(verzekeringPaginasEnum.DOORLOPENDE_REISVERZEKERING);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.whoToInsureMySelfClickElement, browser.getPageTimeout);
         break;

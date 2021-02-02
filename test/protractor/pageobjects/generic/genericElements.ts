@@ -12,6 +12,7 @@ export class GenericElements {
   motorVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten';
   quadVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-trike';
+  zakelijkMotorfietsVerzekering = 'zakelijk/motorverzekering';
   zorgeloosOnlineVerzekeringPat = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekeringPp = 'zakelijk/bedrijfsautoverzekering';
@@ -68,8 +69,7 @@ export class GenericElements {
   ondernemersScan = 'zakelijk/ondernemersscan';
   collectieveZorgVerzekering = 'zorgverzekering/collectief';
   handelaarsKentekenVerzekering = 'zakelijk/handelaarskentekenverzekering';
-  milieSchadeVerzekering = 'zakelijk/milieuschadeverzekering';
-  zakelijkMotorVerzekering = 'zakelijk/motorverzekering';
+  milieuSchadeVerzekering = 'zakelijk/milieuschadeverzekering';
   vrachtAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering = 'zakelijk/werkmaterieelverzekering';
   loginMijnUniveParticulierURL = 'mijnunive/inloggen';
