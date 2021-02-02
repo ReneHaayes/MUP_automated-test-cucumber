@@ -26,4 +26,3 @@ export const ondernemersScanElements: OndernemersScanElements = new OndernemersS
 export const zzpGoedBeterBestElements: ZzpGoedBeterBestElements = new ZzpGoedBeterBestElements();
 export const widgetZakelijkElements: WidgetsZakelijkElements = new WidgetsZakelijkElements();
 export const zzpGoedBeterBestElements: ZzpGoedBeterBestElements = new ZzpGoedBeterBestElements();
-
