@@ -43,7 +43,7 @@ export {
 }  from '../pageobjects/enum/mopedEnum';
 
 export {typeBoatEnum,
-  boatNamesEnum ,
+  boatNamesEnum,
 } from '../pageobjects/enum/bootEnum';
 
 export {alarmSystemEnum,
@@ -51,7 +51,7 @@ export {alarmSystemEnum,
 }   from '../pageobjects/enum/motorcycleEnum';
 
 export {incapacitation,
-  AovZzpUwpremie ,
+  AovZzpUwpremie,
 } from '../pageobjects/enum/aovZzpEnum';
 
 export {
@@ -101,5 +101,5 @@ export {
   houseNumberAddition,
   personaName,
   phoneNumber,
-  prefix }
-  from '../pageobjects/enum/genericEnum';
+  prefix,
+}from '../pageobjects/enum/genericEnum';
