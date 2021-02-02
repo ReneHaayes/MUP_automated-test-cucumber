@@ -19,12 +19,23 @@ export class LicensePlateMethod {
   async clickOnAutoVerzekeringButton(input: string, licensePlate: string) {
     switch (input) {
       case licensePlateHmPageEnum.LICENSE_PLATE: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_BUSINESS: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateButton);
@@ -32,6 +43,12 @@ export class LicensePlateMethod {
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_COMPANY_CAR: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageCompanyCarClickElement);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
@@ -44,16 +61,29 @@ export class LicensePlateMethod {
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_BUSINESS: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_COMPANY_CAR: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
@@ -64,16 +94,28 @@ export class LicensePlateMethod {
         break;
       }
       case genericEnum.DONT_KNOW: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessDontKnowElement);
         break;
       }
-      case licensePlateHmPageEnum.DONT_KNOW_COMPANY_CAR: {
+     case licensePlateHmPageEnum.DONT_KNOW_COMPANY_CAR: {
+        if (urlIs('https://pat.unive.nl/ppwidgets')) {
+          await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
+          break;
+        }
         await genericMethods.clickOnElement(hmPageElements.homePageCompanyCarClickElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
