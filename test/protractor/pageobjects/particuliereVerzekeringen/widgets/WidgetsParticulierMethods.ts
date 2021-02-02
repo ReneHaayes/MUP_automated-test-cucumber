@@ -628,14 +628,17 @@ export class WidgetsParticulierMethods {
   async checkMobilityScooterSelectedOnStepOne(input: string) {
     switch (input) {
       case mobilityScooterEnum.SCOOTMOBIEL: {
+        await genericMethods.verifyUrlContainsIgnoreCase('scootmobielSoortScootmobiel=YES');
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.scootmobielChecked, browser.getPageTimeout);
         await genericMethods.waitForElementNotVisible(widgetsParticulierElements.invalidenVoertuigChecked, browser.getPageTimeout);
-
+        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.hasLicenseplateElementNotVisible, browser.getPageTimeout);
         break;
       }
       case mobilityScooterEnum.INVALIDENVOERTUIG: {
+        await genericMethods.verifyUrlContainsIgnoreCase('scootmobielSoortInvalidevoertu=YES');
         await genericMethods.waitForElementNotVisible(widgetsParticulierElements.scootmobielChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.invalidenVoertuigChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(widgetsParticulierElements.hasLicenseplateElementPresent, browser.getPageTimeout);
 
         break;
       }

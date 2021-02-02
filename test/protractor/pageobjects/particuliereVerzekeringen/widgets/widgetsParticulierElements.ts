@@ -1,6 +1,6 @@
 export class WidgetsParticulierElements {
 
-// AANSPRAKELIJKHEIDSVERZEKERING WIDGET
+  // AANSPRAKELIJKHEIDSVERZEKERING WIDGET
   // Select in widget
   singleWithoutChildrenSelectElement = 'singleWithoutChildren';
   singleWithChildrenSelectElement = 'singleWithChildren';
@@ -31,14 +31,6 @@ export class WidgetsParticulierElements {
   catamaranChecked = '[value="string:catamaran"][selected="selected"]';
 
 
-  // BROMFIETSVERZEKERING
-  // select in widget
-
-
-
-  // CAMPERVERZEKERING
-
-
   // CARAVANVERZEKERING
   // Select in widget
   toercaravanSelectElement = 'toercaravan';
@@ -48,8 +40,7 @@ export class WidgetsParticulierElements {
   toercaravanChecked = '[class="ng-scope checked"] input[id="_Form_IF7914_12028_toercaravan"]';
   vouwwagenChecked = '[class="ng-scope checked"] input[id="_Form_IF7914_12028_vouwwagen"]';
   stacaravanChecked = '[class="ng-scope checked focus"] input[id="_Form_IF7914_12028_stacaravan"]';
-  // als je op pagina 2 bent is de volgende knop zichtbaar:
-  ZoekCaravangegevensIsPresent = 'button[class="ng-scope"][data-button-id="IF7914_12033"]';
+
 
   // FIETSVERZEKERING
   // Select in widget
@@ -67,10 +58,6 @@ export class WidgetsParticulierElements {
   ligFietsChecked = '[class="ng-scope checked"] input[id="_Form_IF6915_10449_LIG"]';
   aangepasteFietsChecked = '[class="ng-scope checked"] input[id="_Form_IF6915_10449_AANGEPAST"]';
 
-  // AUTOVERZEKERING
-  // Zie personenAutoLicensePlateWidget.feature
-
-  // MOTORVERZEKERING
 
   // RECHTSBIJSTANDVERZEKERING
   // Select in widget
@@ -79,22 +66,21 @@ export class WidgetsParticulierElements {
   MijzelfEnKindSelectElement = 'singleWithChildren';
   MijzelfPartnerEnKindSelectElement = 'coupleWithChildren';
   // Controle op volgende pagina
-  //  AlleenMijzelfChecked = '[class="ng-scope checked"] input[id="_Form_IF9940_14226_mijzelf"]';
   AlleenMijzelfChecked = '[class="ng-scope checked focus"] input[id="_Form_IF9940_14226_mijzelf"]';
   MijzelfEnPartnerChecked = '[class="ng-scope checked"] input[id="_Form_IF9940_14226_mijzelfPartner"]';
   MijzelfEnKindChecked = '[class="ng-scope checked"] input[id="_Form_IF9940_14226_mijzelfKind"]';
   MijzelfPartnerEnKindChecked = '[class="ng-scope checked"] input[id="_Form_IF9940_14226_mijzelfPartnerKind"]';
-
-  // DOORLOPENDE_REISVERZEKERING
-  // zie doorlopendeReisVerzekeringWidget.feature
 
   // SCOOTMOBIELVERZEKERING
   // Select in widget
   scootmobielSelectElement = 'scootmobielSoortScootmobiel';
   invalidenVoertuigSelectElement = 'scootmobielSoortInvalidevoertu';
   // Controle op volgende pagina
-  scootmobielChecked = '[class="single scootMobiel value radio checked"] [class="checked"] [data-input-field-id="IF11481_15841"]';
-  invalidenVoertuigChecked = '[class="single scootInvalide value radio checked"] [class="checked"] [data-input-field-id="IF11481_15842"]';
+  // scootmobielChecked = '[class="single scootMobiel value radio checked"] [class="checked"] [data-input-field-id="IF11481_15841"]';
+  // invalidenVoertuigChecked = '[class="single scootInvalide value radio checked"] [class="checked"] [data-input-field-id="IF11481_15842"]';
+  scootmobielChecked = '[class*="focus"] [data-input-field-id="IF11481_15841"]';
+  invalidenVoertuigChecked = '[class="checked"] [data-input-field-id="IF11481_15842"]';
 
-
+  hasLicenseplateElementNotVisible = '[class="entry scoot_mobielinternet nonApplicable"]';
+  hasLicenseplateElementPresent = '[data-label-id="LA_IF11481_14921"]';
 }
