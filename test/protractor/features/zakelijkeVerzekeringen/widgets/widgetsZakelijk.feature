@@ -2,6 +2,7 @@
 
 Feature: Check if the zakelijke widgets and product pages are correctly shown.
 
+  @aovZzpWidget
   # Bedrijfsaansprakelijkheidsverzekering (voor ZZP'ers)
   Scenario Outline: Check if the Bedrijfsaansprakelijkheidsverzekering (voor ZZP'ers) on the salesWidget and product pages are correctly shown
     Given I am on the salesWidgets page of the Unive website
@@ -13,7 +14,7 @@ Feature: Check if the zakelijke widgets and product pages are correctly shown.
       | peej            |
       | rg timmerwerken |
 
-
+  @rbZzpWidget
   # rechtsbijstandverzekering ZZP
   Scenario Outline: Check if the rechtsbijstandverzekering Zakelijk on the salesWidget and product pages are correctly shown
     Given I am on the salesWidgets page of the Unive website
@@ -25,7 +26,7 @@ Feature: Check if the zakelijke widgets and product pages are correctly shown.
       | peej            |
       | rg timmerwerken |
 
-
+  @autoZakelijkWidget
   # personenautoverzekering zakelijk
   Scenario Outline: Enter a license plate number for autoverzekering particulier and check if the correct data appears.
     Given I am on the salesWidgets page of the Unive website

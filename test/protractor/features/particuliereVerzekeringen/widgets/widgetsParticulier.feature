@@ -1,7 +1,8 @@
- @widgetsParticulier
+@widgetsParticulier
 
-  Feature: Check if the particuliere widgets and product pages are correctly shown.
+Feature: Check if the particuliere widgets and product pages are correctly shown.
 
+  @aansprakelijkheidsverzekeringWidget
   # Aansprakelijkheidsverzekering
   Scenario Outline: Check if the aansprakelijkheidsverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website
@@ -14,6 +15,8 @@
       | Samenwonend           |
       | Gezin met kind(eren)  |
 
+
+  @bootverzekeringWidget
   # bootverzekering
   Scenario Outline: Check if the bootverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website
@@ -30,6 +33,7 @@
       | Catamaran    |
 
 
+  @bromfietsverzekeringWidget @moped
   # bromfietsverzekering particulier
   Scenario Outline: Enter a license plate number for bromfiets widget and check if the correct data appears.
     Given I am on the salesWidgets page of the Unive website
@@ -45,6 +49,8 @@
     # extra test case(s)
       | F-169-NS     | will     | 1234 ab | license plate    |
 
+
+  @camperverzekeringWidget @mobilehome
    # camperverzekering
   Scenario Outline: Enter a license plate number for camperverzekering widget  and check if the correct data appears.
     Given I am on the salesWidgets page of the Unive website
@@ -59,6 +65,8 @@
     # extra test case(s)
       | license plate    | 1-VPR-20     | will     |
 
+
+  @caravanverzekeringWidget
   # caravanverzekering
   Scenario Outline: Check if the caravanverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website
@@ -71,6 +79,7 @@
       | Stacaravan  |
 
 
+  @fietsverzekeringWidget
   # fietsverzekering
   Scenario Outline: Check if the fietsverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website
@@ -86,6 +95,7 @@
       | Aangepaste fiets  |
 
 
+  @personenautoverzekeringParticulierWidget
   # autoverzekering particulier
   Scenario Outline: Enter a license plate number for autoverzekering widget particulier and check if the correct data appears.
     Given I am on the salesWidgets page of the Unive website
@@ -99,8 +109,9 @@
       | dont know        | 06-HN-DL     | wont     |
 
 
-  # motorverzekering
-  Scenario Outline: Check if the motorverzekering on the salesWidget and product pages are correctly shown.
+  @motorfietsverzekeringWidget @motorcycle
+  # motorfietsverzekering
+  Scenario Outline: Check if the motorfietsverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website
     When I enter the motorcycle <licensePlate> and <zipCode> in the widget for motorcycle and press <button>
     Then The motorcycle <licensePlate> data <willWont> appear
@@ -114,6 +125,8 @@
  # extra test case(s)
       | MF-PV-49     | 1234 ab | will     | license plate    |
 
+
+  @rechtsbijstandverzekeringWidget
   # rechtsbijstandverzekering
   Scenario Outline: Check if the rechtsbijstandsverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website
@@ -127,6 +140,7 @@
       | Mijzelf mijn partner en mijn kind |
 
 
+  @doorlopendeReisverzekeringWidget
   # Doorlopende reisverzekering
   Scenario Outline: Check if the doorlopende reisverzekering on the salesWidget and product pages are correctly shown
     Given I am on the salesWidgets page of the Unive website
@@ -144,6 +158,7 @@
       | Mijn Partner en Mijn kinderen checked          |
 
 
+  @scootmobielWidget
   # scootmobielverzekering
   Scenario Outline: Check if the scootmobielverzekering on the salesWidget and product pages are correctly shown.
     Given I am on the salesWidgets page of the Unive website

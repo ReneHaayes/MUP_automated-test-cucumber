@@ -32,9 +32,8 @@ Feature: Check if the business products and 'alle verzekeringen zakelijk' pages 
 # Uw Inkomen
 #      | Uw inkomen              | Arbeidsongeschiktheidsverzekering ZZP     | Arbeidsongeschiktheidsverzekering ZZP |          [class="allInsurances_listItemLink"][title="Arbeidsongeschiktheidsverzekering ZZP"]     ASSERTION : Arbeidsongeschiktheidsverzekering voor ZZP'ers
 #      | Uw inkomen              | Arbeidsongeschiktheidsverzekering         | Arbeidsongeschiktheidsverzekering   |                + expected - actual
- #                                                                                                                             -Arbeidsongeschiktheidsverzekering
- #                                                                                                                             -(AOV)
- #                                                                                                                             +Arbeidsongeschiktheidsverzekering (AOV)
+#                                                                                                                             -Arbeidsongeschiktheidsverzekering
+#                                                                                                                             -(AOV)#                                                                                                                             +Arbeidsongeschiktheidsverzekering (AOV)
 #      | Uw inkomen              | Pensioen voor ondernemers                 | Pensioen voor ondernemers             |        [class="allInsurances_listItemLink"][title="Pensioen voor ondernemers"]                   ASSERTION: UW pensioen
 
 # Uw Bedrijfsmiddelen
