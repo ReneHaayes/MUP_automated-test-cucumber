@@ -101,5 +101,5 @@ export {
   houseNumberAddition,
   personaName,
   phoneNumber,
-  prefix,
-}from '../pageobjects/enum/genericEnum';
+  prefix }
+  from '../pageobjects/enum/genericEnum';

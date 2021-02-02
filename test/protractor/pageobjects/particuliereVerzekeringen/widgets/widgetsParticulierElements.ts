@@ -1,6 +1,6 @@
 export class WidgetsParticulierElements {
 
-  // AANSPRAKELIJKHEIDSVERZEKERING WIDGET
+// AANSPRAKELIJKHEIDSVERZEKERING WIDGET
   // Select in widget
   singleWithoutChildrenSelectElement = 'singleWithoutChildren';
   singleWithChildrenSelectElement = 'singleWithChildren';
