@@ -3,7 +3,6 @@ import {genericElements,
   genericMethods,
   mopedWithLicensePlate
 } from '@support';
-import {mopedTypeEnum} from '@enum';
 import {browser} from 'protractor';
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
