@@ -8,8 +8,9 @@ import {ProductPageElements} from '../pageobjects/generic/productPageElements';
 import {AovZzpElements} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/aovZzpElements';
 import {ZakelijkRechtsBijstandVerzekeringElements} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkRechtsBijstandVerzekeringElements';
 import {OndernemersScanElements} from '../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanElements';
-import {ZzpGoedBeterBestElements} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpGoedBeterBestElements';
 import {WidgetsZakelijkElements} from '../pageobjects/zakelijkeVerzekeringen/widgets/widgetsZakelijkElements';
+import {ZzpGoedBeterBestElements} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpGoedBeterBestElements';
+
 
 export const alleVerzekeringenZakelijkElements: AlleVerzekeringenZakelijkElements = new AlleVerzekeringenZakelijkElements();
 export const zakelijkAansprakelijkheidsVerzekeringElements: ZakelijkAansprakelijkheidsVerzekeringElements = new ZakelijkAansprakelijkheidsVerzekeringElements();
@@ -21,5 +22,5 @@ export const productPageElements: ProductPageElements = new ProductPageElements(
 export const aovZzpElements: AovZzpElements = new AovZzpElements();
 export const zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVerzekeringElements = new ZakelijkRechtsBijstandVerzekeringElements;
 export const ondernemersScanElements: OndernemersScanElements = new OndernemersScanElements();
-export const zzpGoedBeterBestElements: ZzpGoedBeterBestElements = new ZzpGoedBeterBestElements();
 export const widgetZakelijkElements: WidgetsZakelijkElements = new WidgetsZakelijkElements();
+export const zzpGoedBeterBestElements: ZzpGoedBeterBestElements = new ZzpGoedBeterBestElements();

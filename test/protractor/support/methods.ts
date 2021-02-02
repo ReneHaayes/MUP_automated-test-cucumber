@@ -71,4 +71,3 @@ export const visualMethods: VisualMethods = new VisualMethods();
 export const widgetsParticulierMethods: WidgetsParticulierMethods = new WidgetsParticulierMethods();
 export const widgetZakelijkMethods: WidgetsZakelijkMethods = new WidgetsZakelijkMethods();
 export const zzpGoedBeterBestMethods: ZzpGoedBeterBestMethods = new ZzpGoedBeterBestMethods();
-
