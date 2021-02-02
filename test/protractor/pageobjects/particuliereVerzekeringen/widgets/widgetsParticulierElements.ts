@@ -1,6 +1,6 @@
 export class WidgetsParticulierElements {
 
-  // AANSPRAKELIJKHEIDSVERZEKERING WIDGET
+// AANSPRAKELIJKHEIDSVERZEKERING WIDGET
   // Select in widget
   singleWithoutChildrenSelectElement = 'singleWithoutChildren';
   singleWithChildrenSelectElement = 'singleWithChildren';
@@ -76,7 +76,7 @@ export class WidgetsParticulierElements {
   scootmobielSelectElement = 'scootmobielSoortScootmobiel';
   invalidenVoertuigSelectElement = 'scootmobielSoortInvalidevoertu';
   // Controle op volgende pagina
-    scootmobielChecked = '[class*="focus"] [data-input-field-id="IF11481_15841"]';
+  scootmobielChecked = '[class*="focus"] [data-input-field-id="IF11481_15841"]';
   invalidenVoertuigChecked = '[class="checked"] [data-input-field-id="IF11481_15842"]';
 
   hasLicenseplateElementNotVisible = '[class="entry scoot_mobielinternet nonApplicable"]';
