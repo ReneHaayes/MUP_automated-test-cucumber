@@ -33,6 +33,4 @@ export enum licensePlates {
   MOBILE_HOME_BLJL41 = 'BL-JL-41',
   MOBILE_HOME_1VPR20 = '1-VPR-20',
   COMPANY_CAR_KH801P = 'KH-801-P',
-
-
 }
