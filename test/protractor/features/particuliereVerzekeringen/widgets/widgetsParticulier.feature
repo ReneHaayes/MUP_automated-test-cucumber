@@ -1,6 +1,5 @@
  @widgetsParticulier
 
-
   Feature: Check if the particuliere widgets and product pages are correctly shown.
 
   # Aansprakelijkheidsverzekering
