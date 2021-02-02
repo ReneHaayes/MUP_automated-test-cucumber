@@ -1,8 +1,7 @@
-# Created by Peter van der Woude at 8-12-2020
-
+@widgetsZakelijk
 
 Feature: Check if the zakelijke widgets and product pages are correctly shown.
-  @widgetsZakelijk
+
   # Bedrijfsaansprakelijkheidsverzekering (voor ZZP'ers)
   Scenario Outline: Check if the Bedrijfsaansprakelijkheidsverzekering (voor ZZP'ers) on the salesWidget and product pages are correctly shown
     Given I am on the salesWidgets page of the Unive website
