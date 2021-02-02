@@ -47,17 +47,21 @@ export enum totalPremieEnum {
 }
 
 export enum legalEnum {
-  EENMANSZAAK = 'eenmanszaak',
-  VOF = 'vof',
-  CV = 'cv',
-  MAATSCHAP = 'maatschap',
-  BV = 'bv',
-  NV = 'nv',
-  VMVR = 'vmvr',
-  VZVR = 'vzvr',
-  COW = 'cow',
-  STICHTING = 'stichting',
-  BUITENLANDS_RECHTSVORM = 'buitenlands rechtsvorm'
+  EENMANSZAAK = 'Eenmanszaak',
+  VOF = 'Vennootschap onder Firma (VOF)',
+  CV = 'Commanditaire Vennootschap (CV)',
+  MAATSCHAP = 'Maatschap',
+  BV = 'Besloten Vennootschap',
+  NV = 'Naamloze vennootschap',
+  VMVR = 'Vereniging met volledige rechtsbevoegdheid',
+  VZVR = 'Vereniging met Beperkte Rechtsbevoegdheid',
+  COW = 'Coöperatie/ Onderlinge Waarborgmaatschappij',
+  STICHTING = 'Stichting',
+  GEEN_RECHTSVORM = 'Geen rechtsvorm',
+  BUITENLANDS_RECHTSVORM = 'Buitenlandse Rechtsvorm',
+  KERKGENOOTSCHAP = 'Kerkgenootschap',
+  VVE = 'Vereniging van Eigenaren',
+  PR = 'Publiekrechtelijk rechtspersoon'
 }
 
 export enum vehicleInfoEnum {

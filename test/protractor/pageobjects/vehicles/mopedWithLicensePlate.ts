@@ -1,4 +1,4 @@
-import {licensePlates, vehicleKindEnum} from '@enum';
+import {licensePlates, mopedTypeEnum} from '@enum';
 
 export class Moped {
 
@@ -22,9 +22,9 @@ export class Moped {
 
 export class MopedWithLicensePlate {
 
-  MOPED_12FRP3: Moped = new Moped(licensePlates.MOPED_12FRP3, 'RIEJU', vehicleKindEnum.BROMFIETS, '2005', 'RR', vehicleKindEnum.BROMFIETS);  // versie veranderd van RR X/SPORT naar RR
-  MOPED_F169NS: Moped = new Moped(licensePlates.MOPED_F169NS, 'VESPA', vehicleKindEnum.SNORSCOOTER, '2013', 'SPRINT S 4T', vehicleKindEnum.SNORSCOOTER);  // versie veranderd van S naar SPRINT S 4T
-  MOPED_DKR97R: Moped = new Moped(licensePlates.MOPED_DKR97R, 'RIESE & MULLER', vehicleKindEnum.SNORFIETS, '2017', 'CRUISER NUVINCI HS', vehicleKindEnum.HIGH_SPEED_BIKE);
+  MOPED_12FRP3: Moped = new Moped(licensePlates.MOPED_12FRP3, 'RIEJU', mopedTypeEnum.BROMFIETS, '2005', 'RR', mopedTypeEnum.BROMFIETS);  // versie veranderd van RR X/SPORT naar RR
+  MOPED_F169NS: Moped = new Moped(licensePlates.MOPED_F169NS, 'VESPA', mopedTypeEnum.SNORSCOOTER, '2013', 'SPRINT S 4T', mopedTypeEnum.SNORSCOOTER);  // versie veranderd van S naar SPRINT S 4T
+  MOPED_DKR97R: Moped = new Moped(licensePlates.MOPED_DKR97R, 'RIESE & MULLER', mopedTypeEnum.SNORFIETS, '2017', 'CRUISER NUVINCI HS', mopedTypeEnum.HIGH_SPEED_BIKE);
 
   getMopedBrandName(input: string): string {
     switch (input) {

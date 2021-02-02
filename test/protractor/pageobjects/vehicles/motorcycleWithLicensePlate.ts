@@ -1,6 +1,6 @@
-import {licensePlates, vehicleKindEnum} from "@enum";
+import {licensePlates, mopedTypeEnum} from '@enum';
 
-export class Motor {
+export class Motorcycle {
 
   licensePlate: string;
   brandName: string;
@@ -20,16 +20,18 @@ export class Motor {
 
 }
 
-export class MotorWithLicensePlate {
+export class MotorcycleWithLicensePlate {
 
-  MOTOR_MPTT99: Motor = new Motor(licensePlates.MOTOR_MPTT99, 'SUZUKI', vehicleKindEnum.MOTOR, '2004', 'GSX R 750', '2999');
-  QUAD_97XFTK: Motor = new Motor(licensePlates.QUAD_97XFTK, 'hsun', vehicleKindEnum.QUAD, '2007', 'HS150S', '3999');
-  TRIKE_21PLN1: Motor = new Motor(licensePlates.TRIKE_21PLN1, 'courage trike', vehicleKindEnum.TRIKE, '2011', 'CT100TDI TIP', '4960');
+  MOTORCYCLE_MPTT99: Motorcycle = new Motorcycle(licensePlates.MOTORCYCLE_MPTT99, 'SUZUKI', 'SPORT', '2004', 'GSX R 750', '2999');
+  MOTORCYCLE_MFPV49: Motorcycle = new Motorcycle(licensePlates.MOTORCYCLE_MFPV49, 'HARLEY DAVIDSON', 'CHOPPER', '2002', '88 FLSTF FAT BOY', 'priceless' );
+  QUAD_97XFTK: Motorcycle = new Motorcycle(licensePlates.QUAD_97XFTK, 'hsun', mopedTypeEnum.QUAD, '2007', 'HS150S', '3999');
+  TRIKE_21PLN1: Motorcycle = new Motorcycle(licensePlates.TRIKE_21PLN1, 'courage trike', mopedTypeEnum.TRIKE, '2011', 'CT100TDI TIP', '4960');
 
-  getMotorBrandName(input: string): string {
+
+  getMotorcycleBrandName(input: string): string {
     switch (input) {
-      case licensePlates.MOTOR_MPTT99: {
-        return this.MOTOR_MPTT99.brandName;
+      case licensePlates.MOTORCYCLE_MPTT99: {
+        return this.MOTORCYCLE_MPTT99.brandName;
       }
       case licensePlates.QUAD_97XFTK: {
         return this.QUAD_97XFTK.brandName;
@@ -37,16 +39,19 @@ export class MotorWithLicensePlate {
       case licensePlates.TRIKE_21PLN1: {
         return this.TRIKE_21PLN1.brandName;
       }
+      case licensePlates.MOTORCYCLE_MFPV49: {
+        return this.MOTORCYCLE_MFPV49.brandName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
 
-  getMotorModel(input: string): string {
+  getMotorcycleModel(input: string): string {
     switch (input) {
-      case licensePlates.MOTOR_MPTT99: {
-        return this.MOTOR_MPTT99.model;
+      case licensePlates.MOTORCYCLE_MPTT99: {
+        return this.MOTORCYCLE_MPTT99.model;
       }
       case licensePlates.QUAD_97XFTK: {
         return this.QUAD_97XFTK.model;
@@ -54,16 +59,19 @@ export class MotorWithLicensePlate {
       case licensePlates.TRIKE_21PLN1: {
         return this.TRIKE_21PLN1.model;
       }
+      case licensePlates.MOTORCYCLE_MFPV49: {
+        return this.MOTORCYCLE_MFPV49.model;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
 
-  getMotorConstructionYear(input: string): string {
+  getMotorcycleConstructionYear(input: string): string {
     switch (input) {
-      case licensePlates.MOPED_12FRP3: {
-        return this.MOTOR_MPTT99.constructionYear;
+      case licensePlates.MOTORCYCLE_MPTT99: {
+        return this.MOTORCYCLE_MPTT99.constructionYear;
       }
       case licensePlates.QUAD_97XFTK: {
         return this.QUAD_97XFTK.constructionYear;
@@ -71,16 +79,19 @@ export class MotorWithLicensePlate {
       case licensePlates.TRIKE_21PLN1: {
         return this.TRIKE_21PLN1.constructionYear;
       }
+      case licensePlates.MOTORCYCLE_MFPV49: {
+        return this.MOTORCYCLE_MFPV49.constructionYear;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
 
-  getMotorVersion(input: string): string {
+  getMotorcycleVersion(input: string): string {
     switch (input) {
-      case licensePlates.MOTOR_MPTT99: {
-        return this.MOTOR_MPTT99.version;
+      case licensePlates.MOTORCYCLE_MPTT99: {
+        return this.MOTORCYCLE_MPTT99.version;
       }
       case licensePlates.QUAD_97XFTK: {
         return this.QUAD_97XFTK.version;
@@ -88,22 +99,28 @@ export class MotorWithLicensePlate {
       case licensePlates.TRIKE_21PLN1: {
         return this.TRIKE_21PLN1.version;
       }
+      case licensePlates.MOTORCYCLE_MFPV49: {
+        return this.MOTORCYCLE_MFPV49.version;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
 
-  getMotorPrice(input: string): string {
+  getMotorcyclePrice(input: string): string {
     switch (input) {
-      case licensePlates.MOTOR_MPTT99: {
-        return this.MOTOR_MPTT99.price;
+      case licensePlates.MOTORCYCLE_MPTT99: {
+        return this.MOTORCYCLE_MPTT99.price;
       }
       case licensePlates.QUAD_97XFTK: {
         return this.QUAD_97XFTK.price;
       }
       case licensePlates.TRIKE_21PLN1: {
         return this.TRIKE_21PLN1.price;
+      }
+      case licensePlates.MOTORCYCLE_MFPV49: {
+        return this.MOTORCYCLE_MFPV49.price;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

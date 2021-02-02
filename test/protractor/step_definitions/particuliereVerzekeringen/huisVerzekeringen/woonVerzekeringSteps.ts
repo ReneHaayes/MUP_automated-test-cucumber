@@ -1,7 +1,7 @@
-import {Then, When} from "cucumber";
+import {Then, When} from 'cucumber';
 import {
   genericElements, genericMethods, nawElements, personaData, woonVerzekeringElements, woonVerzekeringMethods
-} from "@support";
+} from '@support';
 
 When(/^I enter step one page of woonverzekering for persona (.*)$/, async (persona: string) => {
   await genericMethods.typeText(woonVerzekeringElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));
@@ -58,6 +58,6 @@ When(/^I press the button (.*) for the following persona (.*) on the page for wo
   await woonVerzekeringMethods.clickOnWoonverzekering(button, persona);
 });
 
-Then(/^House data for woonverzekering (.*) appears$/, async (dodont: string) => {
-  await woonVerzekeringMethods.checkWoonVerzekeringPage(dodont);
+Then(/^House data for woonverzekering (.*) appears$/, async (willWont: string) => {
+  await woonVerzekeringMethods.checkWoonVerzekeringPage(willWont);
 });

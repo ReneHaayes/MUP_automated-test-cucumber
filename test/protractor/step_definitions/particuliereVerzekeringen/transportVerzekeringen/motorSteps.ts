@@ -1,15 +1,15 @@
 import {When} from "cucumber";
 import {
-  autoVerzekeringElements, genericElements, genericMethods, motorElements, motorMethods, nawElements, personaData
+  autoVerzekeringElements, genericElements, genericMethods, motorcycleElements, motorcycleMethods, nawElements, personaData
 } from "@support";
 
 
 When(/^I enter step one page for motor with license plate (.*) with:$/, async (licensePlate: string, data) => {
   const dataTable = data.rowsHash();
-  await motorMethods.enterLicensePlate(licensePlate);
-  await motorMethods.clickNewOrSecondHandMotor('secondhand');
-  await genericMethods.typeText(motorElements.purchaseDateElement, dataTable.purchaseDate);
-  await motorMethods.clickAlarmSystem(dataTable.alarmSystem);
+  await motorcycleMethods.enterLicensePlate(licensePlate);
+  await motorcycleMethods.clickNewOrSecondHandMotor('secondhand');
+  await genericMethods.typeText(motorcycleElements.purchaseDateElement, dataTable.purchaseDate);
+  await motorcycleMethods.clickAlarmSystem(dataTable.alarmSystem);
   await genericMethods.typeText(nawElements.hoofdbestuurderBirthdateElement, personaData.getPersonaBirthDate(dataTable.persona));
   await genericMethods.clickOnTAB(nawElements.hoofdbestuurderBirthdateElement);
   await genericMethods.typeText(nawElements.hoofdbestuurderZipCodeElement, personaData.getPersonaZipcode(dataTable.persona));
@@ -21,21 +21,21 @@ When(/^I enter step one page for motor with license plate (.*) with:$/, async (l
 
 When(/^I enter step two page of motor with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await motorMethods.clickOnBasisDekking(dataTable.basisDekking);
-  await motorMethods.selectAcc(dataTable.accessoires);
-  await motorMethods.clickOnAanvullendeOpties(dataTable.aanvullendeOpties);
+  await motorcycleMethods.clickOnBasisDekking(dataTable.basisDekking);
+  await motorcycleMethods.selectAcc(dataTable.accessoires);
+  await motorcycleMethods.clickOnAanvullendeOpties(dataTable.aanvullendeOpties);
   await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step three page of motor with$/, async (data) => {
   const dataTable = data.rowsHash();
-  await motorMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
-  await motorMethods.additionalDataVehicle(dataTable.licensePlate);
-  await genericMethods.typeText(motorElements.dateOfNameMopedElement, dataTable.dateOfName);
-  await genericMethods.clickOnTAB(motorElements.dateOfNameMopedElement);
-  await genericMethods.typeText(motorElements.meldCodeElement, dataTable.meldCode);
-  await motorMethods.clickMainDriver(dataTable.mainDriver);
-  await motorMethods.clickOwner(dataTable.owner);
+  await motorcycleMethods.clickKindOfInsurance(dataTable.kindOfInsurance);
+  await motorcycleMethods.additionalDataVehicle(dataTable.licensePlate);
+  await genericMethods.typeText(motorcycleElements.dateOfNameMopedElement, dataTable.dateOfName);
+  await genericMethods.clickOnTAB(motorcycleElements.dateOfNameMopedElement);
+  await genericMethods.typeText(motorcycleElements.meldCodeElement, dataTable.meldCode);
+  await motorcycleMethods.clickMainDriver(dataTable.mainDriver);
+  await motorcycleMethods.clickOwner(dataTable.owner);
   await genericMethods.clickOnNextButton();
 });
 

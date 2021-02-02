@@ -4,11 +4,10 @@ export class HmPageElements {
   menuPageVerzekeringenButtonClickElement = '[class*="mainMenu_link"][title*="Verzekeringen"]';
   menuPageKlantenserviceButtonClickElement = '[class*="mainMenu_link"][title*="Klantenservice"]';
 
-
   // INSURANCE BUTTONS HOMEPAGE
   homePageAutoverzekeringElement = '[href*="/autoverzekering"][class*="insurances_tabLinkAction"]';
   homePageWoonverzekeringElement = '[href*="/woonverzekering"][class*="insurances_tabLinkAction"]';
-  homePageAlleverzekeringElement = '[href*="/verzekeringen"][class*="insurances_tabButtonAction"]';
+  homePageAlleVerzekeringElement = '[href*="/verzekeringen"][class*="insurances_tabButtonAction"]';
 
   homePageBusinessArbeidsongeschiktheidClickElement = '[href*="/zakelijk/arbeidsongeschiktheidsverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessArbeidsongeschiktheidPremieBerekenenClickElement = '[class*="inlineAnchor_button"][href*="/zakelijk/arbeidsongeschiktheidsverzekering-zzp/premieberekenen-en-afsluiten"]';
@@ -22,6 +21,8 @@ export class HmPageElements {
   homePageBusinessPersonenautoZakelijkPremieBerekenenClickElement = '[car-insurance-type="zakelijke personenautoverzekering"] ::sr [textofbutton="Bereken uw premie"] ::sr button';
   homePageBusinessEigenVervoerClickElement = '[href*="/zakelijk/eigenvervoerverzekering"][class*="insurances_tabLinkAction"]';
   homePageBusinessEigenVervoerPremieBerekenenClickElement = '[class*="inlineAnchor_button"][href*="/zakelijk/eigenvervoerverzekering/premieberekenen-en-afsluiten"]';
+
+  homePageCompanyCarClickElement = '[href="/zakelijk/personenautoverzekering"][title="Personenautoverzekering"]';
 
   // LICENSE PLATE
   licensePlateWidgetInputElement = 'car-widget ::sr licence-plate ::sr #kenteken';
@@ -80,7 +81,6 @@ export class HmPageElements {
   gaNaarMijnUniveButtonClickElement = '[class="mainHeader_subLevel _is_expanded"] [href="/mijnunive"][title="Ga naar Mijn Univé"]';
   gaNaarMijnUniveZakelijkButtonClickElement = '[class="mainHeader_subLevel _is_expanded"] [href="/zakelijk/mijnunive/inloggen"][title="Naar Mijn Univé Zakelijk"]';
   bekijkAlleContactMogelijkhedenButtonClickElement = '[class="mainHeader_subLevel _is_expanded"] [href="/klantenservice"][title="Bekijk alle contactmogelijkheden"]';
-
 
   zorgNotaDeclarerenTitleTextElement = '[class="component-content"] > h1';
   zorgNotaDeclarerenTitleText = 'Declaratie indienen';

@@ -10,7 +10,8 @@ import {
   vehicleElements
 } from '@support';
 import {browser} from 'protractor';
-import {basisDekkingEnum, vehicleKindEnum} from '@enum';
+import {basisDekkingEnum,
+  mopedTypeEnum} from '@enum';
 
 When(/^I enter step one page of moped for persona (.*) with license plate (.*) and (.*) damage free years$/, async (persona: string, licensePlate: string, damageFreeYears: string) => {
   await genericMethods.waitForElementIsVisible(genericElements.bannerPageElement, browser.getPageTimeout);
@@ -21,7 +22,7 @@ When(/^I enter step one page of moped for persona (.*) with license plate (.*) a
   await genericMethods.verifyTextInElement(mopedElements.mopedInfoConstructionYearElement, mopedWithLicensePlate.getMopedConstructionYear(licensePlate));
   await genericMethods.verifyTextInElement(mopedElements.mopedInfoVersionElement, mopedWithLicensePlate.getMopedVersion(licensePlate));
   await mopedMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedVehicleType(licensePlate));
-  if (mopedWithLicensePlate.getMopedVehicleType(licensePlate) === vehicleKindEnum.HIGH_SPEED_BIKE) {
+  if (mopedWithLicensePlate.getMopedVehicleType(licensePlate) === mopedTypeEnum.HIGH_SPEED_BIKE) {
     genericMethods.clickOnElement(mopedElements.yesOtherInsurancesElement).then();
   } else {}
   await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthDate(persona));
