@@ -7,7 +7,6 @@ import {
   zzpGoedBeterBestElements,
   zzpGoedBeterBestMethods
 } from '@support';
-
 import {browser} from 'protractor';
 
 When(/^I enter step one of zzp-pakket with (.*)$/, async (company: string, data) => {
@@ -102,11 +101,9 @@ When(/^I fill in almost insured page for zzp-pakket with:$/, async (data) => {
   await zzpGoedBeterBestMethods.selectInsuranceHistoryZZP(dataTable.insuranceHistory);
   await zzpGoedBeterBestMethods.selectCriminalHistoryZZP(dataTable.criminalHistory);
   await zzpGoedBeterBestMethods.selectDamageHistoryZZP(dataTable.damageHistory);
-   // if (){} else {}   // MAAK DATATABLE ELEMENT <LEGAL COUNCIL> YES (voor goed / beter)
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.checkDataElement);
   browser.sleep(3000);
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.getInsuranceNowButton);
-
 });
 
 Then(/^Thank you page for zzp-pakket is shown for (.*)$/, async (persona: string) => {
