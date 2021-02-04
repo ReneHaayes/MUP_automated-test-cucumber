@@ -70,6 +70,7 @@ export class GenericElements {
   collectieveZorgVerzekering = 'zorgverzekering/collectief';
   handelaarsKentekenVerzekering = 'zakelijk/handelaarskentekenverzekering';
   milieuSchadeVerzekering = 'zakelijk/milieuschadeverzekering';
+  zakelijkMotorVerzekering = 'zakelijk/motorverzekering';
   vrachtAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering = 'zakelijk/werkmaterieelverzekering';
   aanhangwagenVerzekeringPp = 'zakelijk/aanhangwagenverzekering';
@@ -94,8 +95,6 @@ export class GenericElements {
   pensioen = 'pensioen/';
   prefillOmringPashoudersUrl = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
   salesWidgets = 'ppwidgets';
-  zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
-
   zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
   faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
 

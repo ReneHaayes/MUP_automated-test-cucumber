@@ -6,7 +6,6 @@ import {
   zzpGoedBeterBestElements,
   zzpGoedBeterBestMethods
 } from '@support';
-
 import {browser} from 'protractor';
 
 When(/^I enter step one of zzp-pakket with (.*)$/, async (company: string, data) => {
@@ -69,7 +68,9 @@ When(/^I enter step four of zzp-pakket with$/, async (data) => {
 });
 
 When(/^I enter step five of zzp-pakket for (.*) with (.*)$/, async (company: string, persona: string) => {
-    // Bedrijfsgegevens
+  await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.bannerElement, browser.getPageTimeout);
+  await genericMethods.waitForElementClickable(zzpGoedBeterBestElements.nextButton, browser.getPageTimeout);
+  // Bedrijfsgegevens
   await genericMethods.typeText(zzpGoedBeterBestElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(zzpGoedBeterBestElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(zzpGoedBeterBestElements.companyDataEmailAddressInputElement);
