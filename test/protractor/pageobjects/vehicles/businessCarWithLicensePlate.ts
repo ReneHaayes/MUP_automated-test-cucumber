@@ -39,7 +39,7 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.brandName;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.brandName;
+        return this.BUSINESS_CAR_3VXN23.brandName;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
         return this.BUSINESS_CAR_VDV37X.brandName;
