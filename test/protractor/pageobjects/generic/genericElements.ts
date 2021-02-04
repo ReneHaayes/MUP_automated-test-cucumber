@@ -96,6 +96,7 @@ export class GenericElements {
   zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
   salesWidgets = 'ppwidgets';
 
+  zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
   faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
 
   zorgchecktool = 'zorgverzekering/zorgcheck';
