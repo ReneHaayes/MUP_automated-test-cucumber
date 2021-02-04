@@ -7,7 +7,7 @@ import {
   personaData,
   vehicleElements,
   zakelijkTractorVerzekeringElements,
-  zakelijkTractorVerzekerinigMethods
+  zakelijkTractorVerzekeringMethods
 } from '@support';
 import {browser} from 'protractor';
 
@@ -24,7 +24,7 @@ When(/^I enter step one page and click next on step two of zakelijk tractorverze
   await genericMethods.selectInDropdown(zakelijkTractorVerzekeringElements.accessoiresSelectElement, zakelijkTractorVerzekeringElements.accessoiresTm1000SelectElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.trackAndTraceSystemYesClickElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.trackAndTraceSystemNoClickElement);
-  await zakelijkTractorVerzekerinigMethods.selectMaximumSpeed(dataTable.maxSpeed);
+  await zakelijkTractorVerzekeringMethods.selectMaximumSpeed(dataTable.maxSpeed);
   await genericMethods.selectInDropdown(zakelijkTractorVerzekeringElements.enginePowerSelectElement, zakelijkTractorVerzekeringElements.enginePower100PkSelectElement);
   await genericMethods.clickOnElement(zakelijkTractorVerzekeringElements.usageOwnLawnClickElement);
   await genericMethods.clickOnNextButton();

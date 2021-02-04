@@ -198,7 +198,8 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGCROSSSELLINWIZARDPARAMETER = 'zorgVerzekeringCrossSellInWizardParameter',
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
   ZORGPREMIEALERT = 'zorgPremieAlert',
-  PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders'
+  PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders',
+  ZZP_PAKKET = 'zzp pakket'
 }
 
 export enum faqPage {

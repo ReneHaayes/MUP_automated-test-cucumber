@@ -83,7 +83,7 @@ export class GenericElements {
   winkelDetails = 'mijnunive/winkel-details';
   pensioen = 'pensioen/';
   prefillOmringPashoudersUrl = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
-
+  zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
   faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
 
   zorgchecktool = 'zorgverzekering/zorgcheck';

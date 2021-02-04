@@ -316,6 +316,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGPREMIEALERT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;
       }
+      case verzekeringPaginasEnum.ZZP_PAKKET: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zzpPakket;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
