@@ -1,7 +1,8 @@
 import {Then, When} from 'cucumber';
 import {
   companyData,
-  genericMethods, personaData,
+  genericMethods,
+  personaData,
   zzpGoedBeterBestElements,
   zzpGoedBeterBestMethods
 } from '@support';
