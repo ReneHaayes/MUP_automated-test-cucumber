@@ -21,8 +21,7 @@ export class ZzpGoedBeterBestMethods {
     await genericMethods.typeText(zzpGoedBeterBestElements.kvkNumberElement, companyData.getCompanyKvkNumber(company));
     await browser.sleep(500);
     await genericMethods.clickOnTAB(zzpGoedBeterBestElements.kvkNumberElement);
-    // await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(licensePlate) + '")]', browser.getPageTimeout);
-  }
+    }
 
   async selectCompanyActivity(input: string) {
     await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.companyActivityCorrectYesElement, browser.getPageTimeout);
