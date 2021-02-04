@@ -320,6 +320,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGPREMIEALERT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;
       }
+      case verzekeringPaginasEnum.ZZP_PAKKET: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zzpPakket;
+      }
       case verzekeringPaginasEnum.SALESWIDGETS: {
         return this.getEnv(browser.params.env.environment) + genericElements.salesWidgets;
       }
