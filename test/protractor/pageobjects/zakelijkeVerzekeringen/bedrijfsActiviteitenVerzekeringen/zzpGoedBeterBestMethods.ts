@@ -409,6 +409,25 @@ export class ZzpGoedBeterBestMethods {
     }
   }
 
+  async selectPersonnelOnPayroll(input: string) {
+    await genericMethods.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(genericElements.criminalHistoryYesElement);
+        await genericMethods.waitForElementIsVisible(genericElements.lightBoxClickElement, browser.getPageTimeout);
+        await genericMethods.clickOnElement(genericElements.lightBoxClickElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(genericElements.criminalHistoryNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
   async selectDamageHistoryZZP(input: string) {
     await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.damageHistoryNoElement, browser.getPageTimeout);
     browser.sleep(500);

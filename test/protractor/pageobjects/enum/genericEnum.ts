@@ -203,7 +203,8 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
   ZORGPREMIEALERT = 'zorgPremieAlert',
   PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders',
-  SALESWIDGETS = 'salesWidgets'
+  SALESWIDGETS = 'salesWidgets',
+  ZZP_PAKKET = 'zzp pakket',
 }
 
 export enum faqPage {

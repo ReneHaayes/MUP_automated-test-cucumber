@@ -22,12 +22,10 @@ Feature: Happy flow for ZZP Pakket (nieuw Goed Beter Best)
       | hasCompanyCar            | <hasCompanyCar> |
       | ownerOfCar               | no              |
       | fireHazardousWork        | no              |
-      #tot en met firehazard werkt
       | workMainlyAbroad         | <hasExplanationIfYes>              |
       | workInSpecificSector     | yes              |
       | demolitionWork           | <hasExplanationIfYes>              |
       | takeOnContractsForZZPer  | yes              |
-      #tot en met Asbestos werkt if yes
       | workWithAsbestos         | <hasExplanationIfYes>              |
       | buildScaffolding         | <hasExplanationIfYes>              |
       | useHeavyMaterials        | <hasExplanationIfYes>             |
