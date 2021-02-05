@@ -36,7 +36,7 @@ export class CompanyData {
   facebook: Company = new Company('Facebook', '7412XW', '37131558', legalEnum.BV, 'Werkzaamheden in de bouw', '91', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
   rg_timmerwerken: Company = new Company('R.G. Timmerwerken', '1851LX', '37131558', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '33', 'c', '0612345678', 'Timmerwerkje@unive.nl');
   Grondverzet_machine_verhuur_Springer: Company = new Company('Grondverzet & machine verhuur J. Springer', '2642CD', '27277486', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '21', genericEnum.EMPTY, '0612345678', 'GRONDVERZET@unive.nl');
-  peej_advies_en_control: Company = new Company('Peej Advies en Control', '9731PB', '77948378', legalEnum.EENMANSZAAK, 'Zakelijk advies', '141', genericEnum.EMPTY, '0651537139', 'Patrick@peejadviesencontrol.nl');
+  peej_advies_en_control: Company = new Company('Peej Advies en Control', '9731PB', '77948378', legalEnum.EENMANSZAAK, 'Zakelijk Advies', '141', genericEnum.EMPTY, '0651537139', 'Patrick@peejadviesencontrol.nl');
 
   getCompanyName(input: string): string {
     switch (input) {
