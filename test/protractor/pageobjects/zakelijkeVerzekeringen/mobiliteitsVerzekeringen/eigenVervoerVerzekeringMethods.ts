@@ -1,10 +1,11 @@
 import {
   eigenVervoerVerzekeringElements,
-  // genericElements,
+
   genericMethods
 } from '@support';
 import {
-  activityEnum, genericEnum,
+  activityEnum,
+  genericEnum,
   vehicleInfoEnum
 } from '@enum';
 import {browser} from 'protractor';

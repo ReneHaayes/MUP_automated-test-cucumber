@@ -20,7 +20,6 @@ Feature: Happy flow for 'zakelijk eigen vervoer verzekering'
       | ronaldo | facebook |
 
 
-
   # Nieuwe inrichting
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Eigen vervoerverzekering page of the Unive website
