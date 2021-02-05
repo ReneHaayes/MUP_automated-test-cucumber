@@ -49,3 +49,27 @@ When(/^I enter the third step of eigen vervoer verzekering for (.*) with (.*)$/,
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
 });
+
+
+
+// Nieuw
+When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click next$/, async function (company: string) {
+  await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.kvkNumberInputElement, browser.getPageTimeout);
+  await genericMethods.typeText(eigenVervoerVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
+  await genericMethods.clickOnTAB(eigenVervoerVerzekeringElements.kvkNumberInputElement);
+  await genericMethods.verifyTextInElement(eigenVervoerVerzekeringElements.kvkNameCheckElement, companyData.getCompanyName(company));
+  await genericMethods.verifyTextInElement(eigenVervoerVerzekeringElements.kvkActivityCheckElement, companyData.getCompanyMainActivity(company));
+});
+
+
+  When(/^I answer the questions on step one with:$/, async function (data) {
+    const dataTable = data.rowsHash();
+   //  await eigenVervoerVerzekeringMethods.selectCorrectCompanyActivity(dataTable.correctCompanyActivity);
+   // await eigenVervoerVerzekeringMethods.selectHasEmployees(dataTable.hasEmployee);
+    await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityYesElement);
+    await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeNoElement);
+    await eigenVervoerVerzekeringMethods.selectVehicleInfo(dataTable.typeCar, dataTable.howMany);
+    await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.openTrailerNoClickElement);
+    await genericMethods.clickOnNextButton();
+    await genericMethods.clickOnNextButton();
+  });
