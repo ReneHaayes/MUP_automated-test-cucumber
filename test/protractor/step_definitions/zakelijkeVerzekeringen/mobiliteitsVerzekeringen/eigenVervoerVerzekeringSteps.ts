@@ -44,7 +44,7 @@ When(/^I enter step four page of eigen vervoer verzekering for (.*) with (.*)$/,
 
 
 
-// Nieuw
+// sinds sprint 21-02
 When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click next$/, async function (company: string) {
   await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.kvkNumberInputElement, browser.getPageTimeout);
   await genericMethods.typeText(eigenVervoerVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
@@ -56,9 +56,6 @@ When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click n
 
   When(/^I answer the questions on step one with:$/, async function (data) {
     const dataTable = data.rowsHash();
-     // await eigenVervoerVerzekeringMethods.selectCorrectCompanyActivity(dataTable.correctCompanyActivity);
-     // await eigenVervoerVerzekeringMethods.selectHasEmployees(dataTable.hasEmployee);
-
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityYesElement);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeYesElement);
 
