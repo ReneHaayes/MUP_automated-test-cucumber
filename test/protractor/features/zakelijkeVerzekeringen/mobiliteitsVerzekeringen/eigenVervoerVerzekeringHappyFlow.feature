@@ -9,12 +9,13 @@ Feature: Happy flow for 'zakelijk eigen vervoer verzekering'
     And I answer the questions on step one with:
       | typeCar                | passenger car |
       | howMany                | 1             |
-    And I enter the third step of eigen vervoer verzekering for <company> with <persona>
+    And I enter step four page of eigen vervoer verzekering for <company> with <persona>
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |
       | damageHistory    | no |
-    Then Thank you page for zakelijk is shown
+
+    Then The thank you page for <persona> is shown
 
     Examples:
       | persona | company         |
