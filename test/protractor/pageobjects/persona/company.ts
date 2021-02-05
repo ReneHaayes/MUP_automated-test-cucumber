@@ -7,18 +7,20 @@ export class Company {
   zipCode: string;
   kvkNumber: string;
   legal: string;
+  companyMainActivity: string;
   houseNumber: string;
   houseNumberAdding: string;
   phoneNumber: string;
   emailAddress: string;
 
 
-  constructor(companyName: string, zipcode: string, kvkNumber: string, legal: string, houseNumber: string, houseNumberAdding: string, phoneNumber: string, emailAddress: string) {
+  constructor(companyName: string, zipcode: string, kvkNumber: string, legal: string, companyMainActivity: string, houseNumber: string, houseNumberAdding: string, phoneNumber: string, emailAddress: string) {
 
     this.companyName = companyName;
     this.zipCode = zipcode;
     this.kvkNumber = kvkNumber;
     this.legal = legal;
+    this.companyMainActivity = companyMainActivity;
     this.houseNumber = houseNumber;
     this.houseNumberAdding = houseNumberAdding;
     this.phoneNumber = phoneNumber;
@@ -106,6 +108,23 @@ export class CompanyData {
       }
       case companyNameEnum.PEEJ: {
         return this.peej_advies_en_control.legal;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  getCompanyMainActivity(input: string): string {
+    switch (input) {
+      case companyNameEnum.FACEBOOK: {
+        return this.facebook.companyMainActivity;
+      }
+      case companyNameEnum.RG_TIMMERWERKEN: {
+        return this.rg_timmerwerken.companyMainActivity;
+      }
+      case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
+        return this.Grondverzet_machine_verhuur_Springer.companyMainActivity;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

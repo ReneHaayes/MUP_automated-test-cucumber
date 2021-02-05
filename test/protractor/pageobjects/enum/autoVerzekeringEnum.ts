@@ -66,8 +66,8 @@ export enum legalEnum {
 
 export enum vehicleInfoEnum {
   PASSENGER_CAR = 'passenger car',
-  VANS = 'vans',
-  TRUCKS = 'trucks',
+  DELIVERY_VAN = 'delivery van',
+  LORRY = 'lorry',
   TRAILER = 'trailer'
 }
 
