@@ -38,11 +38,10 @@ export class EigenVervoerVerzekeringElements {
   activitySelectWebdesignElement = 'string:webdesign';
   activitySelectOverigElement = 'string:overig';
 
-  correctActivityYesElement = '[data-label-id="LA_IF31406_39608"] > div > label:nth-child(1)' ;     // '#_Form_IF31406_39608_true"';
-  correctActivityNoElement = '[data-label-id="LA_IF31406_39608"] > div > label:nth-child(2)' ;      // '#_Form_IF31406_39608_false';
-  hasEmployeeYesElement = '[data-label-id="LA_IF31406_37329"] > div > label:nth-child(1)';          // '#_Form_IF31406_37329_true';
-  hasEmployeeNoElement =  '[data-label-id="LA_IF31406_37329"] > div > label:nth-child(2)' ;         // '#_Form_IF31406_37329_false';
-
+  correctActivityYesElement = '[data-label-id="LA_IF31406_39608"] div label:nth-child(1)';
+  correctActivityNoElement = '[data-label-id="LA_IF31406_39608"] div label:nth-child(2)';
+  hasEmployeeYesElement = 'div[data-label-id="LA_IF31406_37329"] > div > label:nth-child(1)';
+  hasEmployeeNoElement = 'div[data-label-id="LA_IF31406_37329"] > div > label:nth-child(2)';
 
   // VEHICLE INFO
   vehicleInfoPassengerCarClickElement = '[data-label-id*="LA_IF21624_28332"] label';
