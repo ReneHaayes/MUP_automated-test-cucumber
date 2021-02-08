@@ -58,7 +58,6 @@ When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click n
     const dataTable = data.rowsHash();
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityYesElement);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeYesElement);
-
     await eigenVervoerVerzekeringMethods.selectVehicleInfo(dataTable.typeCar, dataTable.howMany);
     await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.openTrailerNoClickElement, browser.getPageTimeout);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.openTrailerNoClickElement);
