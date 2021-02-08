@@ -112,21 +112,25 @@ export class EigenVervoerVerzekeringMethods {
     switch (input) {
       case vehicleInfoEnum.PASSENGER_CAR: {
         await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarTypeElement, browser.getPageTimeout);
         await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarTypeElement, howMany);
         break;
       }
       case vehicleInfoEnum.DELIVERY_VAN: {
         await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoDeliveryVanClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoDeliveryVanClickElement, browser.getPageTimeout);
         await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoDeliveryVanTypeElement, howMany);
         break;
       }
       case vehicleInfoEnum.LORRY: {
         await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoLorryClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoLorryClickElement, browser.getPageTimeout);
         await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoLorryTypeElement, howMany);
         break;
       }
       case vehicleInfoEnum.TRAILER: {
         await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoTrailersClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoTrailersClickElement, browser.getPageTimeout);
         await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoTrailersTypeElement, howMany);
         break;
       }

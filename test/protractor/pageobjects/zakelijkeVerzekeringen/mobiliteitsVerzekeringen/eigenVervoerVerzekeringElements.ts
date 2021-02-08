@@ -8,6 +8,10 @@ export class EigenVervoerVerzekeringElements {
   activityZakelijkeDienstverlening = 'Zakelijke dienstverlening';
   activityWerkzaamhedenBouw = 'Werkzaamheden in de bouw';
 
+  // COMPANY DATA
+  kvkNumberPrefilledElement = '[data-label-id="LA_IF25914_33331"] span';
+  companyNamePrefilledElement = '[data-label-id="LA_IF25914_33329"] span';
+  companyLegalPrefilledElement = '[data-label-id="LA_IF25914_33330"] span';
 
   // ACTIVITY
   activityEigenVervoerSelectElement = '#_Form_IF26031_33425';
@@ -34,11 +38,10 @@ export class EigenVervoerVerzekeringElements {
   activitySelectWebdesignElement = 'string:webdesign';
   activitySelectOverigElement = 'string:overig';
 
-  correctActivityYesElement = '#_Form_IF31406_39608_true"';
-  correctActivityNoElement = '#_Form_IF31406_39608_false';
-  hasEmployeeYesElement = '#_Form_IF31406_37329_true';
-  hasEmployeeNoElement = '#_Form_IF31406_37329_false';
-
+  correctActivityYesElement = '[data-label-id="LA_IF31406_39608"] div label:nth-child(1)';
+  correctActivityNoElement = '[data-label-id="LA_IF31406_39608"] div label:nth-child(2)';
+  hasEmployeeYesElement = 'div[data-label-id="LA_IF31406_37329"] > div > label:nth-child(1)';
+  hasEmployeeNoElement = 'div[data-label-id="LA_IF31406_37329"] > div > label:nth-child(2)';
 
   // VEHICLE INFO
   vehicleInfoPassengerCarClickElement = '[data-label-id*="LA_IF21624_28332"] label';
