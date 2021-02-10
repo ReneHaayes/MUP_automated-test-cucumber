@@ -42,7 +42,7 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.brandName;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.brandName;
+        return this.BUSINESS_CAR_VDV37X.brandName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -56,10 +56,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.brandType;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.brandType;
+        return this.BUSINESS_CAR_3VXN23.brandType;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.brandType;
+        return this.BUSINESS_CAR_VDV37X.brandType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -73,10 +73,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.constructionYear;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.constructionYear;
+        return this.BUSINESS_CAR_3VXN23.constructionYear;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.constructionYear;
+        return this.BUSINESS_CAR_VDV37X.constructionYear;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -90,10 +90,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.model;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.model;
+        return this.BUSINESS_CAR_3VXN23.model;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.model;
+        return this.BUSINESS_CAR_VDV37X.model;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -107,10 +107,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.bodyType;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.bodyType;
+        return this.BUSINESS_CAR_3VXN23.bodyType;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.bodyType;
+        return this.BUSINESS_CAR_VDV37X.bodyType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -124,10 +124,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.fuelType;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.fuelType;
+        return this.BUSINESS_CAR_3VXN23.fuelType;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.fuelType;
+        return this.BUSINESS_CAR_VDV37X.fuelType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -141,10 +141,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.firstAdmission;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.firstAdmission;
+        return this.BUSINESS_CAR_3VXN23.firstAdmission;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.firstAdmission;
+        return this.BUSINESS_CAR_VDV37X.firstAdmission;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -158,10 +158,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.reportingCode;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.reportingCode;
+        return this.BUSINESS_CAR_3VXN23.reportingCode;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.reportingCode;
+        return this.BUSINESS_CAR_VDV37X.reportingCode;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -175,10 +175,10 @@ export class BusinessCarWithLicensePlate {
         return this.BUSINESS_CAR_48VDS3.weight;
       }
       case licensePlates.BUSINESS_CAR_3VXN23: {
-        return this.BUSINESS_CAR_48VDS3.weight;
+        return this.BUSINESS_CAR_3VXN23.weight;
       }
       case licensePlates.BUSINESS_CAR_VDV37X: {
-        return this.BUSINESS_CAR_48VDS3.weight;
+        return this.BUSINESS_CAR_VDV37X.weight;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
