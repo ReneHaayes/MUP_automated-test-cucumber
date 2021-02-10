@@ -1,6 +1,6 @@
 import {Given, Then, When} from 'cucumber';
 import {genericElements, genericMethods, mopedWithLicensePlate} from '@support';
-import {genericEnum, vehicleKindEnum} from '@enum';
+import {genericEnum, mopedTypeEnum} from '@enum';
 import {browser} from 'protractor';
 
 Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
@@ -33,11 +33,11 @@ When(/^I fill in almost insured page with:$/, async (data) => {
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
   // Bromfiets/scooter heeft een extra scherm voordat de klant uitkomt bij de 'Sluit nu uw verzekering af'
   if (dataTable.licensePlate) {
-    if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.BROMFIETS) {
+    if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === mopedTypeEnum.BROMFIETS) {
       genericMethods.clickOnNextButton().then();
-    } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORSCOOTER) {
+    } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === mopedTypeEnum.SNORSCOOTER) {
       genericMethods.clickOnNextButton().then();
-    } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === vehicleKindEnum.SNORFIETS) {
+    } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === mopedTypeEnum.SNORFIETS) {
       genericMethods.clickOnNextButton().then();
     } else {
     }

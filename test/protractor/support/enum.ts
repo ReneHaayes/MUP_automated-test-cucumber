@@ -1,24 +1,72 @@
-export {veelgesteldeVragenEnum} from "../pageobjects/enum/veelgesteldeVragenEnum";
-export {legalEnum} from "../pageobjects/enum/autoVerzekeringEnum";
-export {homePageEnum} from '../pageobjects/enum/woonVerzekeringEnum';
-export {zakelijkHomePageEnum} from '../pageobjects/enum/woonVerzekeringEnum';
-export {familyCompositionEnum} from "../pageobjects/enum/aansprakelijkheidsVerzekeringEnum";
-export {PaymentData} from "../pageobjects/enum/MijnUniveParticulierEnum";
-export {selectAlleVerzekeringEnum} from "../pageobjects/enum/alleVerzekeringEnum";
-export {licensePlateHmPageEnum} from "../pageobjects/enum/licensePlateEnum";
-export {vehicleKindEnum} from "../pageobjects/enum/bromfietsVerzekeringEnum";
-export {alarmSystemEnum} from "../pageobjects/enum/motorEnum";
-export {licensePlates} from "../pageobjects/enum/licensePlateEnum";
-export {typeBoatEnum, boatNamesEnum} from "../pageobjects/enum/bootEnum";
-export {incapacitation, AovZzpUwpremie} from "../pageobjects/enum/aovZzpEnum";
-export {toolsEnum} from "../pageobjects/enum/zakelijkAansprakelijkheidsVerzekeringEnum";
-export {
-  anaEnumLocation, anaEnumObjectName, anaEnumSearchObject
-}from "../pageobjects/analytics/analyticsGenericElements";
+export {veelgesteldeVragenEnum}
+from '../pageobjects/enum/veelgesteldeVragenEnum';
+
+export {legalEnum}
+from '../pageobjects/enum/autoVerzekeringEnum';
+
+export {homePageEnum}
+from '../pageobjects/enum/woonVerzekeringEnum';
+
+export {zakelijkHomePageEnum}
+from '../pageobjects/enum/woonVerzekeringEnum';
+
+export {familyCompositionEnum}
+from '../pageobjects/enum/familyCompositionEnum';
+
+export {PaymentData}
+from '../pageobjects/enum/MijnUniveParticulierEnum';
+
+export {selectAlleVerzekeringEnum}
+from '../pageobjects/enum/alleVerzekeringEnum';
+
+export {toolsEnum }
+  from '../pageobjects/enum/zakelijkAansprakelijkheidsVerzekeringEnum';
+
+export {licensePlateHmPageEnum}
+from '../pageobjects/enum/licensePlateEnum';
+
+export {licensePlates }
+  from '../pageobjects/enum/licensePlateEnum';
+
+export {fietsEnum }
+  from '../pageobjects/enum/vehicleTypeWidgetEnum';
+
+export {CaravanEnum }
+  from '../pageobjects/enum/vehicleTypeWidgetEnum';
+
+export {mobilityScooterEnum }
+  from '../pageobjects/enum/vehicleTypeWidgetEnum';
 
 export {
-  additionalOption, hmPageWoonVerzekeringEnum, inhabited, kindStraw, superficiesAndContents, totalSurface, materialEnum
-} from "../pageobjects/enum/woonVerzekeringEnum";
+  mopedTypeEnum,
+  zipcodeEnum }
+  from '../pageobjects/enum/mopedEnum';
+
+export {typeBoatEnum,
+  boatNamesEnum } from '../pageobjects/enum/bootEnum';
+
+export {alarmSystemEnum,
+  motorcycleTypeEnum }
+  from '../pageobjects/enum/motorcycleEnum';
+
+export {incapacitation,
+  AovZzpUwpremie } from '../pageobjects/enum/aovZzpEnum';
+
+export {
+  anaEnumLocation,
+  anaEnumObjectName,
+  anaEnumSearchObject }
+  from '../pageobjects/analytics/analyticsGenericElements';
+
+export {
+  additionalOption,
+  hmPageWoonVerzekeringEnum,
+  inhabited,
+  kindStraw,
+  superficiesAndContents,
+  totalSurface,
+  materialEnum }
+  from '../pageobjects/enum/woonVerzekeringEnum';
 
 
 export {
@@ -30,8 +78,8 @@ export {
   yearlyMileageEnum,
   whoDrivesCarMost,
   vehicleInfoEnum,
-  maxSpeedEnum,
-} from "../pageobjects/enum/autoVerzekeringEnum";
+  maxSpeedEnum }
+  from '../pageobjects/enum/autoVerzekeringEnum';
 
 export {
   activityEnum,
@@ -50,5 +98,5 @@ export {
   houseNumberAddition,
   personaName,
   phoneNumber,
-  prefix,
-}from "../pageobjects/enum/genericEnum";
+  prefix }
+  from '../pageobjects/enum/genericEnum';

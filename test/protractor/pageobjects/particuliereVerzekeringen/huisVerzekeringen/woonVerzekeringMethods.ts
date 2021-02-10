@@ -319,12 +319,12 @@ export class WoonVerzekeringMethods {
 
   async checkWoonVerzekeringPage(input: string) {
     switch (input) {
-      case genericEnum.DO: {
+      case genericEnum.WILL: {
         const assertionTekstDo: string = 'Uw woning betreft een Tussenwoning aan Zandweerdsweg 91 in DEVENTER';
         await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepTwoElement, assertionTekstDo);
         break;
       }
-      case genericEnum.DONT: {
+      case genericEnum.WONT: {
         const assertionTekstDont: string = 'Te verzekeren woning';
         await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepOneElement, assertionTekstDont);
         break;

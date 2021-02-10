@@ -43,6 +43,7 @@ exports.config = {
     mijnUniveParticulier: './protractor/features/mijnUniveParticulier/**/*.feature',
     service: './protractor/features/service/**/*.feature',
     visual: './protractor/features/visual/**/*.feature',
+    widgets: './protractor/features/**/**/widgets*.feature',
   },
 
   params: {

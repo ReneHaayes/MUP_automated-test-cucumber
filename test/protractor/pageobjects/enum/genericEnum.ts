@@ -57,7 +57,8 @@ export enum personaName {
 export enum companyNameEnum {
   FACEBOOK = 'facebook',
   RG_TIMMERWERKEN = 'rg timmerwerken',
-  GRONDVERZET_MACHINE_VERHUUR_SPRINGER = 'Grondverzet_machine_verhuur_Springer'
+  GRONDVERZET_MACHINE_VERHUUR_SPRINGER = 'Grondverzet_machine_verhuur_Springer',
+  PEEJ = 'peej'
 }
 
 export enum genericEnum {
@@ -65,8 +66,8 @@ export enum genericEnum {
   NO = 'no',
   EMPTY = '',
   DONT_KNOW = 'dont know',
-  DO = 'do',
-  DONT = 'dont',
+  WILL = 'will',
+  WONT = 'wont',
   UNKNOWN = 'unknown',
   TEMP = 'temp',
   TOTAL = 'total',
@@ -103,24 +104,24 @@ export enum verzekeringPaginasEnum {
   WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPp',
   BROMFIETSVERZEKERING_PAT = 'Bromfietsverzekering',
   SCOOTERVERZEKERING_PAT = 'Scooterverzekering',
-  MOTORVERZEKERING_PAT = 'Motorverzekering',
-  ZAKELIJK_MOTOVERZEKERING = 'Zakelijke motorverzekering',
+  MOTORFIETSVERZEKERING_PAT = 'Motorfietsverzekering',
+  ZAKELIJK_MOTORFIETSVERZEKERING = 'Zakelijke motorfietsverzekering',
   QUADVERZEKERING_PAT = 'Quadverzekering',
   TRIKEVERZEKERING_PAT = 'Trikeverzekering',
-  ZORGELOOSONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
+  ZORGELOOS_ONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
   BEDRIJFSAUTOVERZEKERING = 'Bedrijfsautoverzekering',
   BEDRIJFSSCHADEVERZEKERING = 'Bedrijfsschadeverzekering',
   BEROEPSAANSPRAKELIJKHEID = 'Beroepsaansprakelijkheid',
   BESTUURDERSAANSPRAKELIJKHEID = 'Bestuurdersaansprakelijkheid',
   REISVERZEKERING = 'Reisverzekering',
-  DOORLOPENDEREISVERZEKERING_PP = 'doorlopende-reisverzekering',
-  DOORLOPENDEREISVERZEKERINGPRODUCTPAGE = 'doorlopendereisverzekeringpp',
-  DOORLOPENDEREISVERZEKERING = 'Doorlopende reisverzekering',
-  KORTLOPENDEREISVERZEKERING = 'Kortlopende reisverzekering',
-  KORTLOPENDEREISVERZEKERING_PP = 'kortlopende-reisverzekering',
+  DOORLOPENDE_REISVERZEKERING_PP = 'doorlopende-reisverzekering',
+  DOORLOPENDE_REISVERZEKERING_PRODUCTPAGE = 'doorlopendereisverzekeringpp',
+  DOORLOPENDE_REISVERZEKERING = 'Doorlopende reisverzekering',
+  KORTLOPENDE_REISVERZEKERING = 'Kortlopende reisverzekering',
+  KORTLOPENDE_REISVERZEKERING_PP = 'kortlopende-reisverzekering',
   PERSONENAUTOVERZEKERING_ZAKELIJK = 'personen autoverzekering zakelijk',
   ROERENDEZAKENVERZEKERING_ZAKELIJK = 'roerende zakenverzekering',
-  KORTLOPENDEANNULERINGSVERZEKERING = 'kortlopende annuleringsverzekering',
+  KORTLOPENDE_ANNULERINGSVERZEKERING = 'kortlopende annuleringsverzekering',
   ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk',
   BOOTVERZEKERING = 'Bootverzekering',
   CAMPERVERZEKERING = 'Camperverzekering',
@@ -148,7 +149,7 @@ export enum verzekeringPaginasEnum {
   AMP_AUTOVERZEKERING = 'amp autoverzekering',
   AMP_WOONVERZEKERING = 'amp woonverzekering',
   AMP_BROMFIETSVERZEKERING = 'amp bromfietsverzekering',
-  AMP_DOORLOPENDEREISVERZEKERING = 'amp doorlopende reisverzekering',
+  AMP_DOORLOPENDE_REISVERZEKERING = 'amp doorlopende reisverzekering',
   HIGH_SPEED_E_BIKE_VERZEKERING = 'High speed e-bikeverzekering',
   INBOEDELVERZEKERING = 'Inboedelverzekering',
   OPSTALVERZEKERING = 'Opstalverzekering',
@@ -194,11 +195,12 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGBASISGEREGELDPARAMETER = 'zorgVerzekeringBasisGeregeldParameter',
   ZORGVERZEKERINGBASISVRIJPARAMETER = 'zorgVerzekeringBasisVrijParameter',
   ONDERNEMERSSCAN_TITLE = 'Ondernemers-scan van Univé',
-  CALAMITEITEIN = 'calamiteiten',
+  CALAMITEITEN = 'calamiteiten',
   ZORGVERZEKERINGCROSSSELLINWIZARDPARAMETER = 'zorgVerzekeringCrossSellInWizardParameter',
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
   ZORGPREMIEALERT = 'zorgPremieAlert',
-  PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders'
+  PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders',
+  SALESWIDGETS = 'salesWidgets'
 }
 
 export enum faqPage {

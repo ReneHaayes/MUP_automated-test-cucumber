@@ -1,12 +1,12 @@
-import {BikeElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/bikeElements';
+import {BicycleElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/bicycleElements';
 import {ScootMobielVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/scootMobielVerzekeringElements';
 import {CaravanVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/caravanVerzekeringElements';
 import {KostbaarhedenVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/huisVerzekeringen/kostbaarhedenVerzekeringElements';
 import {VehicleElements} from '../pageobjects/generic/vehicleElements';
-import {MotorElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorElements';
+import {MotorcycleElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/motorcycleElements';
 import {OldtimerVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/oldtimerVerzekeringElements';
 import {BootVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/bootVerzekeringElements';
-import {CamperVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/camperVerzekeringElements';
+import {MobileHomeVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/vrijeTijdsVerzekeringen/mobileHomeVerzekeringElements';
 import {AlleVerzekeringenElements} from '../pageobjects/particuliereVerzekeringen/alleVerzekeringen/alleVerzekeringenElements';
 import {OngevallenVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/gezondheidsVerzekeringen/ongevallenVerzekeringElements';
 import {ZorgeloosOnlineVerzekeringElements} from '../pageobjects/particuliereVerzekeringen/onlineVeiligheidVerzekeringen/zorgeloosOnlineVerzekeringElements';
@@ -24,17 +24,20 @@ import {ZorgWizardCrossSellElements} from '../pageobjects/zorg/zorgWizardCrossSe
 import {KlantenserviceDirectOnlineRegelenElements} from '../pageobjects/Klantenservice/klantenserviceDirectOnlineRegelenElements';
 import {VisualElements} from '../pageobjects/visual/visualElements';
 import {KlantenserviceNeemContactOpElements} from '../pageobjects/Klantenservice/klantenserviceNeemContactOpElements';
+import {WidgetsParticulierElements} from '../pageobjects/particuliereVerzekeringen/widgets/widgetsParticulierElements';
 import {MopedElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/mopedElements';
+import {MobileHomeElements} from '../pageobjects/particuliereVerzekeringen/transportVerzekeringen/MobileHomeElements';
 
-export const bikeElements: BikeElements = new BikeElements();
+
+export const bikeElements: BicycleElements = new BicycleElements();
 export const scootMobielVerzekeringElements: ScootMobielVerzekeringElements = new ScootMobielVerzekeringElements();
 export const caravanVerzekeringElements: CaravanVerzekeringElements = new CaravanVerzekeringElements();
 export const kostbaarhedenVerzekeringElements: KostbaarhedenVerzekeringElements = new KostbaarhedenVerzekeringElements();
 export const vehicleElements: VehicleElements = new VehicleElements();
-export const motorElements: MotorElements = new MotorElements();
+export const motorcycleElements: MotorcycleElements = new MotorcycleElements();
 export const oldtimerVerzekeringElements: OldtimerVerzekeringElements = new OldtimerVerzekeringElements();
 export const bootVerzekeringElements: BootVerzekeringElements = new BootVerzekeringElements();
-export const camperVerzekeringElements: CamperVerzekeringElements = new CamperVerzekeringElements();
+export const mobileHomeVerzekeringElements: MobileHomeVerzekeringElements = new MobileHomeVerzekeringElements();
 export const alleVerzekeringenElements: AlleVerzekeringenElements = new AlleVerzekeringenElements();
 export const ongevallenVerzekeringElements: OngevallenVerzekeringElements = new OngevallenVerzekeringElements();
 export const zorgeloosOnlineVerzekeringElements: ZorgeloosOnlineVerzekeringElements = new ZorgeloosOnlineVerzekeringElements();
@@ -53,4 +56,6 @@ export const zorgWizardCrossSellElements: ZorgWizardCrossSellElements = new Zorg
 export const visualElements: VisualElements = new VisualElements();
 export const klantenserviceDirectOnlineRegelenElements: KlantenserviceDirectOnlineRegelenElements = new KlantenserviceDirectOnlineRegelenElements();
 export const klantenserviceNeemContactOpElements: KlantenserviceNeemContactOpElements = new KlantenserviceNeemContactOpElements();
+export const widgetsParticulierElements: WidgetsParticulierElements = new WidgetsParticulierElements();
 export const mopedElements: MopedElements = new MopedElements();
+export const mobileHomeElements: MobileHomeElements = new MobileHomeElements();

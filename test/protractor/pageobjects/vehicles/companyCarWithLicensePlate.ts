@@ -1,6 +1,6 @@
 import {licensePlates} from '@enum';
 
-export class BusinessCar {
+export class CompanyCar {
 
   licensePlate: string;
   brandName: string;
@@ -27,14 +27,14 @@ export class BusinessCar {
   }
 }
 
-export class BusinessCarWithLicensePlate {
+export class CompanyCarWithLicensePlate {
 
-  BUSINESS_CAR_48VDS3: BusinessCar = new BusinessCar(licensePlates.BUSINESS_CAR_48VDS3, 'Fiat', 'DUCATO', '2007', '35L 3.0 MJ MH2 GV', 'Bestelauto', 'Diesel', '12-09-2001', '0000', '1496');
+  COMPANY_CAR_KH801P: CompanyCar = new CompanyCar(licensePlates.COMPANY_CAR_KH801P, 'Ford', 'MUSTANG', '2016', '2.3 ECOBOOST', 'Coupe', 'Benzine', '16-09-2016', '0000', '1595');
 
   getCarFuelType(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.fuelType;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.fuelType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -44,8 +44,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarBodyType(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.bodyType;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.bodyType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -55,8 +55,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarModel(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.model;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.model;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -66,8 +66,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarConstructionYear(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.constructionYear;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.constructionYear;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -77,8 +77,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarBrandType(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.brandType;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.brandType;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -88,8 +88,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarBrandName(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.brandName;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.brandName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -99,8 +99,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarFirstAdmission(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.firstAdmission;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.firstAdmission;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -110,8 +110,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarReportingCode(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.reportingCode;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.reportingCode;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -121,8 +121,8 @@ export class BusinessCarWithLicensePlate {
 
   getCarWeight(input: string): string {
     switch (input) {
-      case licensePlates.BUSINESS_CAR_48VDS3: {
-        return this.BUSINESS_CAR_48VDS3.weight;
+      case licensePlates.COMPANY_CAR_KH801P: {
+        return this.COMPANY_CAR_KH801P.weight;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

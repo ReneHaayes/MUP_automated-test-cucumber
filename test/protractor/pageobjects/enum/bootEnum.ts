@@ -1,11 +1,11 @@
 export enum typeBoatEnum {
-  MOTORBOOT = 'motorboot',
-  ZEILBOOT = 'zeilboot',
-  SLOEP = 'sloep',
-  RUBBERBOOT = 'rubberboot',
-  ROEIBOOT_KANO = 'roeiboot kano',
-  SPEEDBOOT = 'speedboot',
-  CATAMARAN = 'catamaran'
+  MOTORBOOT = 'Motorboot',
+  ZEILBOOT = 'Zeilboot',
+  SLOEP = 'Sloep',
+  RUBBERBOOT = 'Rubberboot',
+  ROEIBOOT_KANO = 'RoeibootKano',
+  SPEEDBOOT = 'Speedboot',
+  CATAMARAN = 'Catamaran'
 }
 
 export enum boatNamesEnum {

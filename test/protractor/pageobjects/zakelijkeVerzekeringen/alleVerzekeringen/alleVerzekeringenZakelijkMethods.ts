@@ -90,7 +90,7 @@ export class AlleVerzekeringenZakelijkMethods {
         break;
       }
       case verzekeringPaginasEnum.MILIEUSCHADEVERZEKERING: {
-        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.milieSchadeVerzekering);
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.milieuSchadeVerzekering);
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.milieSchadeVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
@@ -106,12 +106,12 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.zakelijkePersonenAutoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
-      case verzekeringPaginasEnum.ZAKELIJK_MOTOVERZEKERING: {
-        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkMotorVerzekering);
+      case verzekeringPaginasEnum.ZAKELIJK_MOTORFIETSVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkMotorfietsVerzekering);
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.zakelijkMotorVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORVERZEKERING_PAT, 3);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT, 3);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
         break;
       }

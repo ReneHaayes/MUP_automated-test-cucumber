@@ -1,7 +1,7 @@
 import {browser} from 'protractor';
 import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
-import {apiElements, genericElements} from "@support";
-import {faqPage} from "../enum/genericEnum";
+import {apiElements, genericElements} from '@support';
+import {faqPage} from '../enum/genericEnum';
 
 export class GetUrlUnive {
 
@@ -43,7 +43,7 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.SCOOTERVERZEKERING_PAT: {
         return this.getEnv(browser.params.env.environment) + genericElements.scooterVerzekeringPat;
       }
-      case verzekeringPaginasEnum.MOTORVERZEKERING_PAT: {
+      case verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT: {
         return this.getEnv(browser.params.env.environment) + genericElements.motorVerzekeringPat;
       }
       case verzekeringPaginasEnum.QUADVERZEKERING_PAT: {
@@ -52,19 +52,19 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.TRIKEVERZEKERING_PAT: {
         return this.getEnv(browser.params.env.environment) + genericElements.trikeVerzekeringPat;
       }
-      case verzekeringPaginasEnum.ZORGELOOSONLINEVERZEKERING_PAT: {
+      case verzekeringPaginasEnum.ZORGELOOS_ONLINEVERZEKERING_PAT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgeloosOnlineVerzekeringPat;
       }
       case verzekeringPaginasEnum.BEDRIJFSAUTOVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.bedrijfsAutoVerzekering;
       }
-      case verzekeringPaginasEnum.KORTLOPENDEREISVERZEKERING: {
+      case verzekeringPaginasEnum.KORTLOPENDE_REISVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.kortlopendeReisVerzekering;
       }
-      case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERING: {
+      case verzekeringPaginasEnum.DOORLOPENDE_REISVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.doorlopendeReisVerzekering;
       }
-      case verzekeringPaginasEnum.DOORLOPENDEREISVERZEKERINGPRODUCTPAGE: {
+      case verzekeringPaginasEnum.DOORLOPENDE_REISVERZEKERING_PRODUCTPAGE: {
         return this.getEnv(browser.params.env.environment) + genericElements.doorlopendeReisVerzekeringPp;
       }
       case verzekeringPaginasEnum.ROERENDEZAKENVERZEKERING_ZAKELIJK: {
@@ -73,7 +73,7 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.PERSONENAUTOVERZEKERING_ZAKELIJK: {
         return this.getEnv(browser.params.env.environment) + genericElements.personenAutoVerzekeringZakelijk;
       }
-      case verzekeringPaginasEnum.KORTLOPENDEANNULERINGSVERZEKERING: {
+      case verzekeringPaginasEnum.KORTLOPENDE_ANNULERINGSVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.kortlopendeAnnuleringsVerzekering;
       }
       case verzekeringPaginasEnum.ZORGELOOSONLINE_ZAKELIJK: {
@@ -118,8 +118,8 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekering;
       }
-      case verzekeringPaginasEnum.CALAMITEITEIN: {
-        return this.getEnv(browser.params.env.environment) + verzekeringPaginasEnum.CALAMITEITEIN;
+      case verzekeringPaginasEnum.CALAMITEITEN: {
+        return this.getEnv(browser.params.env.environment) + verzekeringPaginasEnum.CALAMITEITEN;
       }
       case verzekeringPaginasEnum.ZAKELIJK_RECHTSBIJSTANDVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.zakelijkRechtsBijstandVerzekering;
@@ -315,6 +315,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.ZORGPREMIEALERT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;
+      }
+      case verzekeringPaginasEnum.SALESWIDGETS: {
+        return this.getEnv(browser.params.env.environment) + genericElements.salesWidgets;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

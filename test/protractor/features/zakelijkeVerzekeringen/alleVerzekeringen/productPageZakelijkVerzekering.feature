@@ -20,7 +20,8 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown b
 #      | Handelaarskentekenverzekering             | Handelaarskentekenverzekering             |      Pagina bestaat niet
       | Milieuschadeverzekering                   | Milieuschadeverzekering                   |
       | Personenautoverzekering                   | Personenautoverzekering                   |
-      | Zakelijke motorverzekering                | Zakelijke motorverzekering                |
+#NIEUW toegevoegd
+      | Zakelijke motorfietsverzekering                | Zakelijke motorfietsverzekering                |
       | Zakelijke rechtsbijstandverzekering       | Zakelijke rechtsbijstandverzekering       |
       | Tractorverzekering                        | Tractorverzekering                        |
       | Vrachtautoverzekering                     | Vrachtwagenverzekering                    |
