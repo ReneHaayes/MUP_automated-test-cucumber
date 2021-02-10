@@ -7,6 +7,7 @@ import {
   zzpGoedBeterBestElements,
   zzpGoedBeterBestMethods
 } from '@support';
+
 import {browser} from 'protractor';
 
 When(/^I enter step one of zzp-pakket with (.*)$/, async (company: string, data) => {
