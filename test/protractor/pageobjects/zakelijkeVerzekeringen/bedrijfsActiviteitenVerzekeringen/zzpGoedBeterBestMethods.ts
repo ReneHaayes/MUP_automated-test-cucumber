@@ -62,6 +62,7 @@ export class ZzpGoedBeterBestMethods {
     await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.hasCompanyCarYesElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.companyActivityCorrectYesElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.hasCompanyCarYesElement);
         break;
       }
