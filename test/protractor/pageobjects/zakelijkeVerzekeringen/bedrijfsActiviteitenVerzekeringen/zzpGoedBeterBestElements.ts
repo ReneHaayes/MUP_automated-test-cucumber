@@ -141,8 +141,6 @@ export class ZzpGoedBeterBestElements {
   legalMoreThanTenReceivablesNoElement = ' ui-radio-group:nth-child(9) > div > ui-radio-button:nth-child(1) ';
   legalMoreThanTenReceivablesYesElement = ' ui-radio-group:nth-child(9) > div > ui-radio-button:nth-child(2) ';
 
-
-
   // THANK YOU
   thankYouElement1 = 'ui-card > div > div > div > p:nth-child(2)';
   thankYouElement2 = 'ui-card > div > div > div > p:nth-child(3)';
