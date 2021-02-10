@@ -400,7 +400,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(zzpGoedBeterBestElements.criminalHistoryNoElement);
+        await genericMethods.clickOnElement(genericElements.insuranceHistoryNoElement);
         break;
       }
       default: {
@@ -409,24 +409,6 @@ export class ZzpGoedBeterBestMethods {
     }
   }
 
-  async selectPersonnelOnPayroll(input: string) {
-    await genericMethods.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.YES: {
-        await genericMethods.clickOnElement(genericElements.criminalHistoryYesElement);
-        await genericMethods.waitForElementIsVisible(genericElements.lightBoxClickElement, browser.getPageTimeout);
-        await genericMethods.clickOnElement(genericElements.lightBoxClickElement);
-        break;
-      }
-      case genericEnum.NO: {
-        await genericMethods.clickOnElement(genericElements.criminalHistoryNoElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-      }
-    }
-  }
 
   async selectDamageHistoryZZP(input: string) {
     await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.damageHistoryNoElement, browser.getPageTimeout);
@@ -449,8 +431,8 @@ export class ZzpGoedBeterBestMethods {
     }
   }
 
+  // PAGE 4
 
-  // Last page
   async verifyThankYouPageText(input: string) {
     switch (personaData.getPersonaGender(input)) {
       case gender.MALE: {

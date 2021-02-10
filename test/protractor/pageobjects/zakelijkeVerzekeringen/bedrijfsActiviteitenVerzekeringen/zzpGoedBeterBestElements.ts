@@ -129,6 +129,6 @@ export class ZzpGoedBeterBestElements {
   // Legal Council
 
   // THANK YOU
-  thankYouElement1 = 'ui-card > div > div > div > p:nth-child(2)';
+  thankYouElement1 = 'ui-card > div > div > div > p:nth-child(1)';
   thankYouElement2 = 'ui-card > div > div > div > p:nth-child(2)';
 }
