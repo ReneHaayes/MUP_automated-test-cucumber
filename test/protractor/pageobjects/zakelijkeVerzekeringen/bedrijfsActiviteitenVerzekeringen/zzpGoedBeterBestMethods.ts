@@ -453,6 +453,7 @@ export class ZzpGoedBeterBestMethods {
     }
   }
 
+  // PAGE 4
 
   async selectLegalQuestionsZZP(input: string) {
     await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.legalDamagesPastFiveYearsNoElement, browser.getPageTimeout);
