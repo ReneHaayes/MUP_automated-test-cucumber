@@ -49,6 +49,6 @@ Feature: Happy flow for ZZP Pakket (nieuw Goed Beter Best)
 #      | rg timmerwerken | 3-VXN-23     | 25000tot35000 | neymar  | best        | no            | yes                  | no                  |
 #      | rg timmerwerken | VDV-37-X     | meerDan35000  | ronaldo | best        | yes           | yes                  | yes                 |
 
-#  ALLES NEE WERKT
+
 
 
