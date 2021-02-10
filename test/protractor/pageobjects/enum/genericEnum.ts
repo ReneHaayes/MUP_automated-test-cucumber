@@ -75,7 +75,10 @@ export enum genericEnum {
   SECONDHAND = 'secondhand',
   REPLACEMENT = 'replacement',
   EXTRA = 'EXTRA',
-  GEEN = 'Geen'
+  GEEN = 'Geen',
+  GOED = 'goed',
+  BETER = 'beter',
+  BEST = 'best'
 }
 
 export enum verzekeringPaginasEnum {
