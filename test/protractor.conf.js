@@ -26,12 +26,10 @@ exports.config = {
 
     'chromeOptions': {
       'args': [
-        // "--headless",
-        // "--disable-gpu",
-        //"--window-size=1920,1080",
-        // '--start-maximized',
-        // '--start-minimized',
-        // "disable-extensions"
+        "--headless",
+        "--disable-gpu",
+        "--window-size=1920,1080",
+        "disable-extensions"
       ]
     }
   },

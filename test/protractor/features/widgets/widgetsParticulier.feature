@@ -99,7 +99,7 @@ Feature: Check if the particuliere widgets and product pages are correctly shown
   # autoverzekering particulier
   Scenario Outline: Enter a license plate number for autoverzekering widget particulier and check if the correct data appears.
     Given I am on the salesWidgets page of the Unive website
-    When I press the button <button> for the following license plate <licensePlate> on the page for autoverzekering
+    When I enter the personenauto <licensePlate> and press <button>
     Then The <licensePlate> data <willWont> appears for Particuliere autoverzekering
 
     Examples:

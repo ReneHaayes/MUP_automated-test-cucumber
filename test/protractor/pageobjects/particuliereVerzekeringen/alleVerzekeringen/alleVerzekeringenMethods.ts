@@ -53,7 +53,7 @@ export class AlleVerzekeringenMethods {
   }
 
   async clickAlleVerzekeringBottomInput(input: string) {
-    await genericMethods.clickOnElement('[href="/'+input+'"][class="allInsurances_listItemLink"]');
+    await genericMethods.clickOnElement('[href="/' + input + '"][class="allInsurances_listItemLink"]');
   }
 
   async verifyAlleVerzekeringInput(input: string) {
