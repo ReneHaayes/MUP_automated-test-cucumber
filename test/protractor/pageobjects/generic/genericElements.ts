@@ -64,7 +64,7 @@ export class GenericElements {
   afspraakMaken = 'klantenservice/afspraak';
   klachtIndienen = 'zakelijk/klachtindienen';
   schadeBeslisboom = 'schade';
-  mijnUniveZakelijk = 'https://zakelijk.unive.nl/QIS_Customer/';
+  mijnUniveZakelijk = 'https://login-zakelijk.pat.unive.nl/login';
   mijnUniveZakelijkHomePage = 'zakelijk/mijnunive/inloggen';
   ondernemersScan = 'zakelijk/ondernemersscan';
   collectieveZorgVerzekering = 'zorgverzekering/collectief';
