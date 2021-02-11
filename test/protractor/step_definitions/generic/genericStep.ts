@@ -10,7 +10,9 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);
   try {
     await genericMethods.clickOnCookie(genericElements.cookieClickElement);
-  } catch (e) {}
+  } catch (e) {
+
+  }
 });
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
