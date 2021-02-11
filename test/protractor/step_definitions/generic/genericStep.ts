@@ -11,7 +11,6 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   try {
     await genericMethods.clickOnCookie(genericElements.cookieClickElement);
   } catch (e) {
-
   }
 });
 
