@@ -8,10 +8,13 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
     Then Verify element on premie berekenen page for <button> is shown
 
     Examples:
-      | button                        |
-      | Zorgverzekering               |
-#      | Reisverzekering               |    Staat niet meer op home page
-#      | Aansprakelijkheidsverzekering |    Staat niet meer op homepage
+      | button                    |
+      | Zorgverzekering           |
+#      | Woonverzekering           |      Nog geen bestaande test voor
+#      | Autoverzekering           |      Nog geen bestaande test voor
+#      | Bromfietsverzekering      |      Nog geen bestaande test voor
+#      | Rechtsbijstandverzekering |       Nog geen bestaande test voor
+
 
   Scenario Outline: Click on the menu and check the elements and verify if the outcome is correct.
     Given I am on the <page> page of the Unive website
@@ -63,7 +66,7 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
       | Home               | zorgnota declareren |
       | Home               | klantenservice      |
       | Home               | over ons            |
-     | alle verzekeringen | zorgnota declareren |
+      | alle verzekeringen | zorgnota declareren |
       | alle verzekeringen | klantenservice      |
       | alle verzekeringen | over ons            |
 

@@ -30,7 +30,7 @@ Feature: Check if the zakelijke widgets and product pages are correctly shown.
   # personenautoverzekering zakelijk
   Scenario Outline: Enter a license plate number for autoverzekering particulier and check if the correct data appears.
     Given I am on the salesWidgets page of the Unive website
-    When I press the button <button> for the following license plate <licensePlate> on the page for autoverzekering
+    When I enter the zakelijke personenauto <licensePlate> and press <button>
     Then The <licensePlate> data <willWont> appears for Zakelijke autoverzekering
 
     Examples:
@@ -38,6 +38,6 @@ Feature: Check if the zakelijke widgets and product pages are correctly shown.
       | license plate company car    | KH-801-P     | will     |
       | no license plate company car | KH-801-P     | wont     |
       | dont know company car        | KH-801-P     | wont     |
-      | dont know business           | 48-VDS-3     | wont     |
+      | dont know company car           | KH-801-P     | wont     |
 
 

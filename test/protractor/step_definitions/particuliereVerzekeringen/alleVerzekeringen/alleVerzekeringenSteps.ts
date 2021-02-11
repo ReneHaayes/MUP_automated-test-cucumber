@@ -12,10 +12,6 @@ When(/^I select (.*) and click on (.*) at the alle verzekeringen bottom page$/, 
 });
 
 Then(/^Verify elements on (.*) product page is shown$/, async (buttonPage: string) => {
-  // try {
-  //   await genericMethods.clickOnCookie(genericElements.cookieClickElement);
-  // } catch (e) {
-  // }
   await alleVerzekeringenMethods.verifyAlleVerzekeringInput(buttonPage);
 });
 

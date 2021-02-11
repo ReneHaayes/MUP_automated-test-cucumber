@@ -3,6 +3,7 @@ import {
   companyData,
   genericMethods,
   widgetPageElements,
+  widgetsParticulierMethods,
   widgetZakelijkElements,
 } from '@support';
 import {browser} from 'protractor';
@@ -23,5 +24,7 @@ When(/^I apply for rechtsbijstandverzekering and fill in the KVK number for (.*)
 });
 
 // personenautoverzekering zakelijk
-
+When(/^I enter the zakelijke personenauto (.*) and press (.*)$/, async (licensePlate: string, button: string) => {
+  await widgetsParticulierMethods.clickOnPersonenautoLicensePlateButton(licensePlate, button);
+});
 
