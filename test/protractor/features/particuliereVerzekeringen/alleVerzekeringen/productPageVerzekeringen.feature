@@ -22,10 +22,10 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw vervoer         | Autoverzekering              |
       | uw vervoer         | Bromfietsverzekering         |
       | alle verzekeringen | Scooterverzekering           |
-      | alle verzekeringen | Motorfietsverzekering             |
-     | uw vervoer         | Fietsverzekering             |
-     | uw vervoer         | Elektrische fietsverzekering |
-     | uw vervoer         | Scootmobielverzekering       |
+      | alle verzekeringen | Motorfietsverzekering        |
+      | uw vervoer         | Fietsverzekering             |
+      | uw vervoer         | Elektrische fietsverzekering |
+      | uw vervoer         | Scootmobielverzekering       |
       | uw vervoer         | Oldtimerverzekering          |
       | uw huis            | Woonpakket                   |
       | uw huis            | Inboedelverzekering          |
