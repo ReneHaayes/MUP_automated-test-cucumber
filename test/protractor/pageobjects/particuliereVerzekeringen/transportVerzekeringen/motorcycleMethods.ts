@@ -15,6 +15,7 @@ import {
   licensePlates,
   motorcycleTypeEnum,
   vehicleAccEnum,
+  vehicleKindEnum
 } from '@enum';
 
 

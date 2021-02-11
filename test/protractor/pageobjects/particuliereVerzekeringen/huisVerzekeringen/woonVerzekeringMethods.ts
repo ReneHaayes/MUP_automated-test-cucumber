@@ -1,5 +1,10 @@
 import {browser} from "protractor";
-import {genericElements, genericMethods, hmPageElements, personaData, woonVerzekeringElements} from "@support";
+import {genericElements,
+  genericMethods,
+  hmPageElements,
+  personaData,
+  woonVerzekeringElements
+} from "@support";
 import {
   additionalOption,
   genericEnum,
@@ -307,7 +312,6 @@ export class WoonVerzekeringMethods {
       case hmPageWoonVerzekeringEnum.PPAGE_WOONVERZ_FILLED: {
         await genericMethods.typeText(hmPageElements.woonVerzekeringZipCodeElement, personaData.getPersonaZipcode(persona));
         await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
-        // await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
         await genericMethods.clickOnElement(hmPageElements.woonWidgetButtonProductPageElement);
         break;
       }
@@ -320,12 +324,12 @@ export class WoonVerzekeringMethods {
   async checkWoonVerzekeringPage(input: string) {
     switch (input) {
       case genericEnum.WILL: {
-        const assertionTekstDo: string = 'Uw woning betreft een Tussenwoning aan Zandweerdsweg 91 in DEVENTER';
+        const assertionTekstDo = 'Uw woning betreft een Tussenwoning aan Zandweerdsweg 91 in DEVENTER';
         await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepTwoElement, assertionTekstDo);
         break;
       }
       case genericEnum.WONT: {
-        const assertionTekstDont: string = 'Te verzekeren woning';
+        const assertionTekstDont = 'Te verzekeren woning';
         await genericMethods.verifyTextInElement(hmPageElements.woonVerzekeringCheckTekstStepOneElement, assertionTekstDont);
         break;
       }

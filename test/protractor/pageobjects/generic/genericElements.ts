@@ -64,7 +64,7 @@ export class GenericElements {
   afspraakMaken = 'klantenservice/afspraak';
   klachtIndienen = 'zakelijk/klachtindienen';
   schadeBeslisboom = 'schade';
-  mijnUniveZakelijk = 'https://zakelijk.unive.nl/QIS_Customer/';
+  mijnUniveZakelijk = 'https://login-zakelijk.pat.unive.nl/login';
   mijnUniveZakelijkHomePage = 'zakelijk/mijnunive/inloggen';
   ondernemersScan = 'zakelijk/ondernemersscan';
   collectieveZorgVerzekering = 'zorgverzekering/collectief';
@@ -161,6 +161,7 @@ export class GenericElements {
   criminalHistoryNoElement = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(1)';
 
   damageHistoryYesElement = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(2)';
+  damageHistoryYesExplanationElement = '#_Form_IF2535_45811';
   damageHistoryNoElement = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(1)';
 
   // SIDEBAR

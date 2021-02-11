@@ -639,7 +639,6 @@ export class WidgetsParticulierMethods {
         await genericMethods.waitForElementNotVisible(widgetsParticulierElements.scootmobielChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.invalidenVoertuigChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.hasLicenseplateElementPresent, browser.getPageTimeout);
-
         break;
       }
       default: {

@@ -37,6 +37,7 @@ export class StickyBalkMethods {
   }
 
   async verifySummaryAutoVerzekering() {
+    await genericMethods.waitForElementIsVisible(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement, browser.getPageTimeout);
     await genericMethods.verifyTextInElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingKentekenTextElement, '06-HN-DL');
     await genericMethods.verifyTextInElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingGeselecteerdeBasisDekkingTextElement, 'WA+');
   }

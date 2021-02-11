@@ -1,42 +1,61 @@
 export class EigenVervoerVerzekeringElements {
 
-  //ACTIVITY
-  activityEigenVervoerSelectElement: string = '#_Form_IF26031_33425';
-  activitySelectAdviesbureauElement: string = 'string:adviesbureau';
-  activitySelectAdviesbureauIctElement: string = 'string:adviesbureauICT';
-  activitySelectBedrijfsOpleidingEnTrainingElement: string = 'string:bedrijfsopleidingentraining';
-  activitySelectBemiddelingElement: string = 'string:bemiddeling';
-  activitySelectFotograafElement: string = 'string:fotograaf';
-  activitySelectGlazenwasserElement: string = 'string:glazenwasser';
-  activitySelectHovenierElement: string = 'string:hovenier';
-  activitySelectKapperElement: string = 'string:kapper';
-  activitySelectKlussenbedrijfElement: string = 'string:klussenbedrijf';
-  activitySelectOrganisatieAdviesbureauElement: string = 'string:organisatieadviesbureau';
-  activitySelectPedicureElement: string = 'string:pedicure';
-  activitySelectReclamebureauElement: string = 'string:reclamebureau';
-  activitySelectSchilderElement: string = 'string:schilder';
-  activitySelectSchoonheidsSpecialistElement: string = 'string:schoonheidsspec';
-  activitySelectSchoonmakerElement: string = 'string:schoonmaker';
-  activitySelectSoftwarebedrijfElement: string = 'string:softwarebedrijf';
-  activitySelectStratenmakerElement: string = 'string:stratenmaker';
-  activitySelectStukadoorElement: string = 'string:stukadoor';
-  activitySelectTimmermanElement: string = 'string:timmerman';
-  activitySelectTegelzetterElement: string = 'string:tegelzetter';
-  activitySelectWebdesignElement: string = 'string:webdesign';
-  activitySelectOverigElement: string = 'string:overig';
+  // KVK NUMBER
+  kvkNumberInputElement = '#_Form_IF31406_34108';       // nieuw op zakelijktest, vervangt huidige flow
+  kvkNameCheckElement = '[class="entryGroupContent"] div:nth-child(3) > span > strong';
+  kvkActivityCheckElement = '[class="entryGroupContent"] div:nth-child(4) > span > strong:nth-child(3)';
 
-  //VEHICLE INFO
-  vehicleInfoPassengerCarClickElement: string = '[data-label-id*="LA_IF21624_28332"] label';
-  vehicleInfoPassengerCarTypeElement: string = '#_Form_IF21624_28322';
-  vehicleInfoVansClickElement: string = '[data-label-id*="LA_IF21624_28318"] label';
-  vehicleInfoVansTypeElement: string = '#_Form_IF21624_28323';
-  vehicleInfoTrucksClickElement: string = '[data-label-id*="LA_IF21624_28319"] label';
-  vehicleInfoTrucksTypeElement: string = '#_Form_IF21624_28324';
-  vehicleInfoTrailersClickElement: string = '[data-label-id*="LA_IF21624_28320"] label';
-  vehicleInfoTrailersTypeElement: string = '#_Form_IF21624_28325';
+  activityZakelijkeDienstverlening = 'Zakelijke dienstverlening';
+  activityWerkzaamhedenBouw = 'Werkzaamheden in de bouw';
 
-  //TRAILER WICH IS OPEN
-  openTrailerYesClickElement: string = '[data-label-id*="LA_IF21624_34916"] .radioList > label:nth-child(1)';
-  openTrailerNoClickElement: string = '[data-label-id*="LA_IF21624_34916"] .radioList > label:nth-child(2)';
+  // COMPANY DATA
+  kvkNumberPrefilledElement = '[data-label-id="LA_IF25914_33331"] span';
+  companyNamePrefilledElement = '[data-label-id="LA_IF25914_33329"] span';
+  companyLegalPrefilledElement = '[data-label-id="LA_IF25914_33330"] span';
+
+  // ACTIVITY
+  activityEigenVervoerSelectElement = '#_Form_IF26031_33425';
+  activitySelectAdviesbureauElement = 'string:adviesbureau';
+  activitySelectAdviesbureauIctElement = 'string:adviesbureauICT';
+  activitySelectBedrijfsOpleidingEnTrainingElement = 'string:bedrijfsopleidingentraining';
+  activitySelectBemiddelingElement = 'string:bemiddeling';
+  activitySelectFotograafElement = 'string:fotograaf';
+  activitySelectGlazenwasserElement = 'string:glazenwasser';
+  activitySelectHovenierElement = 'string:hovenier';
+  activitySelectKapperElement = 'string:kapper';
+  activitySelectKlussenbedrijfElement = 'string:klussenbedrijf';
+  activitySelectOrganisatieAdviesbureauElement = 'string:organisatieadviesbureau';
+  activitySelectPedicureElement = 'string:pedicure';
+  activitySelectReclamebureauElement = 'string:reclamebureau';
+  activitySelectSchilderElement = 'string:schilder';
+  activitySelectSchoonheidsSpecialistElement = 'string:schoonheidsspec';
+  activitySelectSchoonmakerElement = 'string:schoonmaker';
+  activitySelectSoftwarebedrijfElement = 'string:softwarebedrijf';
+  activitySelectStratenmakerElement = 'string:stratenmaker';
+  activitySelectStukadoorElement = 'string:stukadoor';
+  activitySelectTimmermanElement = 'string:timmerman';
+  activitySelectTegelzetterElement = 'string:tegelzetter';
+  activitySelectWebdesignElement = 'string:webdesign';
+  activitySelectOverigElement = 'string:overig';
+
+  correctActivityYesElement = '#_Form_IF31406_39608_true"';
+  correctActivityNoElement = '#_Form_IF31406_39608_false';
+  hasEmployeeYesElement = '#_Form_IF31406_37329_true';
+  hasEmployeeNoElement = '#_Form_IF31406_37329_false';
+
+
+  // VEHICLE INFO
+  vehicleInfoPassengerCarClickElement = '[data-label-id*="LA_IF21624_28332"] label';
+  vehicleInfoPassengerCarTypeElement = '#_Form_IF21624_28322';
+  vehicleInfoDeliveryVanClickElement = '[data-label-id*="LA_IF21624_28318"] label';
+  vehicleInfoDeliveryVanTypeElement = '#_Form_IF21624_28323';
+  vehicleInfoLorryClickElement = '[data-label-id*="LA_IF21624_28319"] label';
+  vehicleInfoLorryTypeElement = '#_Form_IF21624_28324';
+  vehicleInfoTrailersClickElement = '[data-label-id*="LA_IF21624_28320"] label';
+  vehicleInfoTrailersTypeElement = '#_Form_IF21624_28325';
+
+  // TRAILER WICH IS OPEN
+  openTrailerYesClickElement = '[data-label-id*="LA_IF21624_34916"] .radioList > label:nth-child(1)';
+  openTrailerNoClickElement = '[data-label-id*="LA_IF21624_34916"] .radioList > label:nth-child(2)';
 
 }

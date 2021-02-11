@@ -18,9 +18,9 @@ export class AlleVerzekeringenZakelijkElements {
   werkmateriaalVerzekeringH1TitleText: string = 'Werkmaterieelverzekering';
 
 
-  //BEREKEN UW PREMIE BUTTONS
-  aansprakelijkheidsVerzekeringZakelijkBerekenUwPremieButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten"]';
-  bedrijfsautoVerzekeringBerekenUwPremieButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten"]';
+  // BEREKEN UW PREMIE BUTTONS
+  aansprakelijkheidsVerzekeringZakelijkBerekenUwPremieButtonClickElement = '[class="inlineAnchor_button--primary"][href="/zakelijk/aansprakelijkheidsverzekeringbedrijven/premieberekenen-en-afsluiten"]';
+  bedrijfsautoVerzekeringBerekenUwPremieButtonClickElement = 'section:nth-child(2) > div.productsMain_productNavigation > a.productsMain_productAction'     // '[class="productsMain_productNavigation"] [title="Bereken uw premie"][href="/zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten"]';
   maakAfspraakProductsMainButtonClickElement: string = '[class="productsMain_productNavigation"] [title="Maak een afspraak"][href="/zakelijk/afspraak"]';
   // maakAfspraakInlineButtonClickElement: string = '[class="inlineAnchor_button--primary"][href="/zakelijk/klantenservice/afspraak"]';
   maakAfspraakInlineButtonClickElement: string = '[href="/zakelijk/klantenservice/afspraak"]';

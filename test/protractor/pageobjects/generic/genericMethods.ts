@@ -715,12 +715,12 @@ export class GenericMethods {
     }
   }
 
-  async selectInsuranceHistory(input: string, explanation: string) {
+    async selectInsuranceHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, explanation);
+        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
         break;
       }
       case genericEnum.NO: {
@@ -744,6 +744,24 @@ export class GenericMethods {
       }
       case genericEnum.NO: {
         await this.clickOnElement(genericElements.criminalHistoryNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectDamageHistory(input: string) {
+    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await this.clickOnElement(genericElements.damageHistoryYesElement);
+        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await this.clickOnElement(genericElements.damageHistoryNoElement);
         break;
       }
       default: {
@@ -776,23 +794,6 @@ export class GenericMethods {
         const priorDate = new Date().setDate(today.getDate() + 7);
         const sevenDaysDate = new Date(priorDate);
         return String(sevenDaysDate.getDate()) + '-' + String(sevenDaysDate.getMonth() + 1) + '-' + String(sevenDaysDate.getFullYear());
-      }
-    }
-  }
-
-  async selectDamageHistory(input: string) {
-    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
-    switch (input) {
-      case genericEnum.YES: {
-        await this.clickOnElement(genericElements.damageHistoryYesElement);
-        break;
-      }
-      case genericEnum.NO: {
-        await this.clickOnElement(genericElements.damageHistoryNoElement);
-        break;
-      }
-      default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
     }
   }

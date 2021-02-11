@@ -1,5 +1,14 @@
-import {eigenVervoerVerzekeringElements, genericMethods} from "@support";
-import {activityEnum, vehicleInfoEnum} from "@enum";
+import {
+  eigenVervoerVerzekeringElements,
+
+  genericMethods
+} from '@support';
+import {
+  activityEnum,
+  genericEnum,
+  vehicleInfoEnum
+} from '@enum';
+import {browser} from 'protractor';
 
 
 export class EigenVervoerVerzekeringMethods {
@@ -104,21 +113,25 @@ export class EigenVervoerVerzekeringMethods {
     switch (input) {
       case vehicleInfoEnum.PASSENGER_CAR: {
         await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarTypeElement, browser.getPageTimeout);
         await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarTypeElement, howMany);
         break;
       }
-      case vehicleInfoEnum.VANS: {
-        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoVansClickElement);
-        await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoVansTypeElement, howMany);
+      case vehicleInfoEnum.DELIVERY_VAN: {
+        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoDeliveryVanClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoDeliveryVanClickElement, browser.getPageTimeout);
+        await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoDeliveryVanTypeElement, howMany);
         break;
       }
-      case vehicleInfoEnum.TRUCKS: {
-        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoTrucksClickElement);
-        await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoTrucksTypeElement, howMany);
+      case vehicleInfoEnum.LORRY: {
+        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoLorryClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoLorryClickElement, browser.getPageTimeout);
+        await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoLorryTypeElement, howMany);
         break;
       }
       case vehicleInfoEnum.TRAILER: {
         await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.vehicleInfoTrailersClickElement);
+        await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoTrailersClickElement, browser.getPageTimeout);
         await genericMethods.typeText(eigenVervoerVerzekeringElements.vehicleInfoTrailersTypeElement, howMany);
         break;
       }
@@ -127,5 +140,41 @@ export class EigenVervoerVerzekeringMethods {
       }
     }
   }
+
+
+  async selectCorrectCompanyActivity(input: string) {  // aangepast
+    await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.kvkActivityCheckElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectHasEmployees(input: string) {
+    await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.kvkActivityCheckElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
 
 }
