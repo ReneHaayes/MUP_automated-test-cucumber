@@ -715,12 +715,12 @@ export class GenericMethods {
     }
   }
 
-  async selectInsuranceHistory(input: string, explanation: string) {
+  async selectInsuranceHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, explanation);
+        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
         break;
       }
       case genericEnum.NO: {

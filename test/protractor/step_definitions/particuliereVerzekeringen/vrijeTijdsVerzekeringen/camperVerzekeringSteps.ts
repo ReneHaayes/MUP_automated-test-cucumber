@@ -14,7 +14,7 @@ import {browser} from 'protractor';
 When(/^I enter step one and click next on step two of camperverzekering for (.*) with$/, async (licensePlate: string) => {
   await mobileHomeVerzekeringMethods.enterLicensePlate(licensePlate);
   await genericMethods.clickOnElement(mobileHomeVerzekeringElements.mobileHomeBoughtUsedClickElement);
-  await genericMethods.typeText(mobileHomeVerzekeringElements.newPriceInputElement, mobileHomeWithLicensePlate.getMobileHomeModel(licensePlate));
+  await genericMethods.typeText(mobileHomeVerzekeringElements.newPriceInputElement, mobileHomeWithLicensePlate.getMobileHomeNewPrice(licensePlate));
   await genericMethods.typeText(mobileHomeVerzekeringElements.boughtDateInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(mobileHomeVerzekeringElements.structureBrandNameInputElement, mobileHomeWithLicensePlate.getMobileHomeBrandName(licensePlate));
   await genericMethods.typeText(mobileHomeVerzekeringElements.structureBrandModelInputElement, mobileHomeWithLicensePlate.getMobileHomeBrandName(licensePlate));
