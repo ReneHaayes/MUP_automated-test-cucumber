@@ -8,6 +8,7 @@ import {
   woonVerzekeringElements,
   woonVerzekeringMethods
 } from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one page of woonverzekering for persona (.*)$/, async (persona: string) => {
   await genericMethods.typeText(woonVerzekeringElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));
@@ -34,6 +35,7 @@ When(/^I choose the correct premie with:$/, async (data) => {
   await genericMethods.clickOnElement(woonVerzekeringElements.additionalOptionsGlassBreakageElement);
   await genericMethods.clickOnElement(woonVerzekeringElements.additionalOptionsVoluntaryRiskElement);
   await genericMethods.clickOnNextButton();
+  browser.sleep(500);
   await genericMethods.clickOnNextButton();
 });
 
