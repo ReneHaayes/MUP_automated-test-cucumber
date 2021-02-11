@@ -720,7 +720,7 @@ export class GenericMethods {
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');  // genericEnum.empty veranderd naar TEST
+        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
         break;
       }
       case genericEnum.NO: {
