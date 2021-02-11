@@ -34,6 +34,11 @@ When(/^I choose the type of bicycle: (.*) to insure$/, async (bicycle: string) =
   await widgetsParticulierMethods.selectBicycle(bicycle);
 });
 
+// auto
+When(/^I enter the personenauto (.*) and press (.*)$/, async (licensePlate: string, button: string) => {
+  await widgetsParticulierMethods.clickOnPersonenautoLicensePlateButton(licensePlate, button);
+});
+
 // motor
 When(/^I enter the motorcycle (.*) and (.*) in the widget for motorcycle and press (.*)$/, async (licensePlate: string,  zipCode: string,  button: string) => {
   await widgetsParticulierMethods.clickOnMotorcycleButton(button, licensePlate, zipCode);

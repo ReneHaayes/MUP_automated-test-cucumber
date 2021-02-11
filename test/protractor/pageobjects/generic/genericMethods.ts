@@ -715,7 +715,7 @@ export class GenericMethods {
     }
   }
 
-    async selectInsuranceHistory(input: string) {
+  async selectInsuranceHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
     switch (input) {
       case genericEnum.YES: {
