@@ -17,7 +17,10 @@ import {
   vehicleElements
 } from '@support';
 import {homePageEnum} from '../../../pageobjects/enum/woonVerzekeringEnum';
-import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject} from '@enum';
+import {anaEnumLocation,
+  anaEnumObjectName,
+  anaEnumSearchObject
+} from '@enum';
 
 
 When(/^Customer enters step one page of autoverzekeringen for (.*) with license plate (.*)$/, async (persona: string, licensePlate: string) => {
@@ -43,7 +46,7 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
 
 When(/^Customer enters step two page of autoverzekering with collective (.*)$/, async (collective: string) => {
   await autoVerzekeringMethods.clickOnBasisDekking('waPlus');
-  //  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
+  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
   await autoVerzekeringMethods.selectOwnRisk('ownRisk500');
   await autoVerzekeringMethods.clickOnAanvullendeOpties('Inzittendenverzekering');
   await autoVerzekeringMethods.selectCarAcc('autoAccTm5000');

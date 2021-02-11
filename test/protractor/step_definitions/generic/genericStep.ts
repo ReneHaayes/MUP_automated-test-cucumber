@@ -2,7 +2,7 @@ import {Given, Then, When} from 'cucumber';
 import {genericElements,
   genericMethods,
   mopedWithLicensePlate
-} from '@support';
+  } from '@support';
 import {mopedTypeEnum} from '@enum';
 import {browser} from 'protractor';
 
