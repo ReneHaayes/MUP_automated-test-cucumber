@@ -31,6 +31,7 @@ When(/^I enter details of (.*) in your data page of kostbaarheden verzekeringen$
   await genericMethods.typeText(nawElements.yourDataBirthDayElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

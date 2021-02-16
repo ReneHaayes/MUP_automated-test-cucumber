@@ -30,10 +30,6 @@ export class AlleVerzekeringenMethods {
         await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwNabestaandenSelectElement);
         break;
       }
-      // case selectAlleVerzekeringEnum.UW_ONLINE_VEILIGHEID: {     Staat niet meer in het drop down menu op de pagina Alle verzekeringen
-      //   await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwOnlineVeiligheidSelectElement);
-      //   break;
-      // }
       case selectAlleVerzekeringEnum.UW_RECHT: {
         await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwRechtSelectElement);
         break;
