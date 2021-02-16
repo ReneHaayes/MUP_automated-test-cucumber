@@ -10,7 +10,6 @@ import {ZakelijkRechtsBijstandVerzekeringElements} from '../pageobjects/zakelijk
 import {OndernemersScanElements} from '../pageobjects/zakelijkeVerzekeringen/ondernemersScan/ondernemersScanElements';
 import {ZzpGoedBeterBestElements} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpGoedBeterBestElements';
 import {WidgetsZakelijkElements} from '../pageobjects/zakelijkeVerzekeringen/widgets/widgetsZakelijkElements';
-import {ZzpGoedBeterBestElements} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpGoedBeterBestElements';
 
 export const alleVerzekeringenZakelijkElements: AlleVerzekeringenZakelijkElements = new AlleVerzekeringenZakelijkElements();
 export const zakelijkAansprakelijkheidsVerzekeringElements: ZakelijkAansprakelijkheidsVerzekeringElements = new ZakelijkAansprakelijkheidsVerzekeringElements();
@@ -24,4 +23,3 @@ export const zakelijkRechtsBijstandVerzekeringElements: ZakelijkRechtsBijstandVe
 export const ondernemersScanElements: OndernemersScanElements = new OndernemersScanElements();
 export const zzpGoedBeterBestElements: ZzpGoedBeterBestElements = new ZzpGoedBeterBestElements();
 export const widgetZakelijkElements: WidgetsZakelijkElements = new WidgetsZakelijkElements();
-export const zzpGoedBeterBestElements: ZzpGoedBeterBestElements = new ZzpGoedBeterBestElements();
