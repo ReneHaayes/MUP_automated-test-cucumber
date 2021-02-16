@@ -52,14 +52,6 @@ export class MopedMethods {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindOverigSelectElement);
         break;
       }
-      case mopedTypeEnum.QUAD: {
-        await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindQuadSelectElement);
-        break;
-      }
-      case mopedTypeEnum.TRIKE: {
-        await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindTrikeSelectElement);
-        break;
-      }
       case mopedTypeEnum.SNORFIETS: {
         await genericMethods.selectInDropdown(mopedElements.vehicleKindSelectElement, mopedElements.vehicleKindSnorfietsElement);
         break;
