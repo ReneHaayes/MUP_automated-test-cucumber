@@ -1,10 +1,52 @@
-import {browser} from "protractor";
+import {browser} from 'protractor';
 import {
-  alleVerzekeringenElements, alleVerzekeringenZakelijkElements, genericElements, genericMethods
-} from "@support";
-import {breadCrumbEnum, verzekeringPaginasEnum} from "@enum";
+  alleVerzekeringenElements,
+  alleVerzekeringenZakelijkElements,
+  genericElements,
+  genericMethods
+} from '@support';
+import {
+  breadCrumbEnum, selectAlleVerzekeringEnum,
+  verzekeringPaginasEnum
+} from '@enum';
 
 export class AlleVerzekeringenZakelijkMethods {
+
+  async clickAlleVerzekeringInput(input: string) {
+    await genericMethods.clickOnElement('[class="allInsurances_listItemLink"][title="' + input + '"]');
+  }
+
+  async selectAlleVerzekeringDropdown(input: string) {
+    switch (input) {
+      case selectAlleVerzekeringEnum.ALLE_VERZEKERING: {
+        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.alleUniveVerzekeringenSelectElement);
+        break;
+      }
+      case selectAlleVerzekeringEnum.UW_BEDRIJFSACTIVITEITEN: {
+        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwBedrijfsactiviteiten);
+        break;
+      }
+      case selectAlleVerzekeringEnum.UW_MOBILITEIT: {
+        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwMobiliteit);
+        break;
+      }
+      case selectAlleVerzekeringEnum.UW_INKOMEN: {
+        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwInkomen);
+        break;
+      }
+      case selectAlleVerzekeringEnum.UW_BEDRIJFSMIDDELEN: {
+        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwBedrijfsmiddelen);
+        break;
+      }
+      case selectAlleVerzekeringEnum.UW_PERSONEEL: {
+        await genericMethods.selectInDropdown(alleVerzekeringenElements.selectVerzekeringenDropdownElement, alleVerzekeringenElements.uwPersoneel);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + '"" is not recognized as a command');
+      }
+    }
+  }
 
   async verifyAlleVerzekeringInput(input: string) {
     switch (input) {
@@ -23,7 +65,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.BEDRIJFSAUTOVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.bedrijfsautoVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.BEDRIJFSSCHADEVERZEKERING: {
@@ -91,7 +133,7 @@ export class AlleVerzekeringenZakelijkMethods {
       }
       case verzekeringPaginasEnum.MILIEUSCHADEVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(genericElements.milieuSchadeVerzekering);
-        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.milieSchadeVerzekeringH1TitleText);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.milieuSchadeVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MILIEUSCHADEVERZEKERING, 3);
@@ -103,7 +145,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.PERSONENAUTOVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.zakelijkePersonenAutoverzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.ZAKELIJK_MOTORFIETSVERZEKERING: {
@@ -112,7 +154,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MOTORFIETSVERZEKERING_PAT, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.ZAKELIJK_RECHTSBIJSTANDVERZEKERING: {
@@ -121,7 +163,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.zakelijkRechtsbijstandVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.ZAKELIJK_TRACTORVERZEKERING: {
@@ -130,7 +172,7 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ZAKELIJK_TRACTORVERZEKERING, 3);
-        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.tractorVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       case verzekeringPaginasEnum.VRACHTAUTOVERZEKERING: {
@@ -149,7 +191,87 @@ export class AlleVerzekeringenZakelijkMethods {
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.WERKMATERIAALVERZEKERING, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.AANHANGWAGENVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.aanhangwagenVerzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.hmPageTitleElement, verzekeringPaginasEnum.AANHANGWAGENVERZEKERING);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.AANHANGWAGENVERZEKERING, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.ZAKELIJKE_BROMFIETSVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkeBromfietsverzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ZAKELIJKE_BROMFIETSVERZEKERING);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.BESTELAUTOVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.bestelautoVerzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.BESTELAUTOVERZEKERING);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.BESTELAUTOVERZEKERING, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.bestelautoVerzekeringVerifyElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING_ZZP: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.arbeidsOngeschiktheidsVerzekeringZzpPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING_ZZP);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.aovZZPBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.arbeidsOngeschiktheidsVerzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING_AOV);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING, 3);
         await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.PENSIOEN_VOOR_ONDERNEMERS: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.pensioenVoorOndernemersPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.UW_PENSIOEN);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.PENSIOEN_VOOR_ONDERNEMERS, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.ROERENDEZAKENVERZEKERING_ZAKELIJK: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.roerendeZakenVerzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ROERENDE_ZAKEN_VERZEKERING);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ROERENDEZAKENVERZEKERING_ZAKELIJK, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.WERKNEMERSSCHADEVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.werknemersSchadeVerzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.WERKNEMERS_SCHADE_VERZEKERING_WSV);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.WERKNEMERSSCHADEVERZEKERING, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.maakAfspraakProductsMainButtonClickElement, browser.getPageTimeout);
+        break;
+      }
+      case verzekeringPaginasEnum.WERKNEMERSPENSIOEN: {
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.werknemersPensioenVerzekeringPp);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.PENSIOEN_VOOR_UW_PERSONEEL);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.WERKNEMERSPENSIOEN, 3);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenZakelijkElements.berekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
       default: {
@@ -157,10 +279,4 @@ export class AlleVerzekeringenZakelijkMethods {
       }
     }
   }
-
-
-  async clickAlleVerzekeringInput(input: string) {
-    await genericMethods.clickOnElement('[class="allInsurances_listItemLink"][title="' + input + '"]');
-  }
-
 }
