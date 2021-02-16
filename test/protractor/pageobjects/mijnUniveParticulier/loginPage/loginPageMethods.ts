@@ -37,6 +37,7 @@ export class LoginPageMethods {
     await genericMethods.typeText(loginPageElements.loginEmailInputElement, emailAddress);
     await genericMethods.typeText(loginPageElements.loginPasswordInputElement, password);
     await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
+    await genericMethods.waitForElementAndClick(genericElements.closeVirtualTour, 10000);
   }
 
 

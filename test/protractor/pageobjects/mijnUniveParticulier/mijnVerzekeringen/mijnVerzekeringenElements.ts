@@ -7,7 +7,7 @@ export class MijnVerzekeringenElements {
 
   //VERZEKERINGSOVERZICHT
   polisDetailsClickElement(polisNumber: string): string {
-    return "[data-accordion='insurances-overview'] [class='tile__link media'][href*='" + polisNumber + "']"
+    return "[class='tile__link media'][href*='" + polisNumber + "']"
   }
 
   //VERZEKERINGSKAARTEN

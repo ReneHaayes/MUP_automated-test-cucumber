@@ -9,5 +9,5 @@ Feature: Going to damage and claim page and checking the different details on pa
 
     Examples:
       | damage number | persona     |
-      | 2848709       | woestenburg |
-      | 2848708       | woestenburg |
+      | 3147332       | woestenburg |
+      | 3147294       | woestenburg |
