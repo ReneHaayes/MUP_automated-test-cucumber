@@ -6,7 +6,10 @@ import {
   companyData,
   zzpGoedBeterBestElements,
 } from '@support';
-import {gender, genericEnum, yearlyMileageEnum} from '@enum';
+import {gender,
+  genericEnum,
+  yearlyMileageEnum
+} from '@enum';
 
 export class ZzpGoedBeterBestMethods {
 

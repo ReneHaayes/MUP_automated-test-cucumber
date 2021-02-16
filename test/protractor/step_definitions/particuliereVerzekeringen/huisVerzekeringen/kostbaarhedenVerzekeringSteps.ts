@@ -1,12 +1,17 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  genericElements, genericMethods, kostbaarhedenVerzekeringElements, nawElements, personaData
-} from "@support";
+  genericElements,
+  genericMethods,
+  kostbaarhedenVerzekeringElements,
+  nawElements,
+  personaData
+} from '@support';
 
 When(/^I enter step one and step two page of kostbaarheden verzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.typeText(kostbaarhedenVerzekeringElements.yourZipcodeInputElement, personaData.getPersonaZipcode(dataTable.persona));
-  await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.jewelryValuableClickElement);
+  await genericMethods.clickOnTAB(kostbaarhedenVerzekeringElements.yourZipcodeInputElement);
+  await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.valuableIsJewelryClickElement);
   await genericMethods.clickOnElement(kostbaarhedenVerzekeringElements.noteOrTaxationReportNeither);
   await genericMethods.typeText(kostbaarhedenVerzekeringElements.estimateValueInputElement, dataTable.estimateValue);
   await genericMethods.clickOnNextButton();
