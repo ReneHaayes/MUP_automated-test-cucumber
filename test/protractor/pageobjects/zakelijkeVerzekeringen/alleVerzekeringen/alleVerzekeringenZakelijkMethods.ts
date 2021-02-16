@@ -133,7 +133,7 @@ export class AlleVerzekeringenZakelijkMethods {
       }
       case verzekeringPaginasEnum.MILIEUSCHADEVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(genericElements.milieuSchadeVerzekering);
-        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.milieSchadeVerzekeringH1TitleText);
+        await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.milieuSchadeVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.MILIEUSCHADEVERZEKERING, 3);
