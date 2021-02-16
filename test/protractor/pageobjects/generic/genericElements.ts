@@ -125,6 +125,9 @@ export class GenericElements {
   // COOKIE
   cookieClickElement = '#consent-popup-close-modal';
 
+  // VIRTUALTOUR
+  closeVirtualTour = '[id="close-virtual-tour"]';
+
   // BUTTONS
   nextButton = '#_Form_next';
   takeOutInsuranceNowButton = '#_Form_finishSave>span';
