@@ -43,11 +43,6 @@ export class EigenVervoerVerzekeringElements {
   hasEmployeeYesElement = '[data-label-id="LA_IF31406_37329"] > div > label:nth-child(1)';
   hasEmployeeNoElement =  '[data-label-id="LA_IF31406_37329"] > div > label:nth-child(2)' ;
 
-  // correctActivityYesElement = '[data-label-id="LA_IF31406_39608"] div label:nth-child(1)';
-  // correctActivityNoElement = '[data-label-id="LA_IF31406_39608"] div label:nth-child(2)';
-  // hasEmployeeYesElement = 'div[data-label-id="LA_IF31406_37329"] > div > label:nth-child(1)';
-  // hasEmployeeNoElement = 'div[data-label-id="LA_IF31406_37329"] > div > label:nth-child(2)';
-
   // VEHICLE INFO
   vehicleInfoPassengerCarClickElement = '[data-label-id*="LA_IF21624_28332"] label';
   vehicleInfoPassengerCarTypeElement = '#_Form_IF21624_28322';
