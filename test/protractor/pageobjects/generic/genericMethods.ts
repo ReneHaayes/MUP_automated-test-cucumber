@@ -717,6 +717,7 @@ export class GenericMethods {
 
     async selectInsuranceHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
+      browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
@@ -735,6 +736,7 @@ export class GenericMethods {
 
   async selectCriminalHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.criminalHistoryYesElement);
@@ -754,6 +756,7 @@ export class GenericMethods {
 
   async selectDamageHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.damageHistoryYesElement);

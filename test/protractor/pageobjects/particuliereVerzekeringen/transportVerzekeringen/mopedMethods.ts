@@ -101,25 +101,21 @@ export class MopedMethods {
       case aanvullendeOptiesEnum.PECH_HULP_NL: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.pechHulpNlElement);
-        // await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarPechHulp + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.RECHTSHULP_VERKEER: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.rechtsHulpVerkeerElement);
-        // await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarRechtsHulpVerkeer + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.ONGEVALLEN_VERZEKERING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.ongevallenVerzekeringElement);
-        // await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarOngevallenVerzekering + '")]', browser.getPageTimeout);
         break;
       }
       case aanvullendeOptiesEnum.AANSCHAFWAARDE_REGELING: {
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         await genericMethods.clickOnElement(vehicleElements.aanschafWaardeRegelingElement);
-        // await genericMethods.waitForElementIsPresentWithXpath(genericElements.sideBarElement + '[contains(text(),"' + vehicleElements.sideBarAanschafWaardeRegeling + '")]', browser.getPageTimeout);
         break;
       }
       default: {
