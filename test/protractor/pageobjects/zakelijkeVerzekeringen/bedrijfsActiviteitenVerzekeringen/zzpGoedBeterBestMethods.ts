@@ -5,6 +5,8 @@ import {
   personaData,
   companyData,
   zzpGoedBeterBestElements,
+  zzpGoedBeterBestMethods,
+   genericElements,
 } from '@support';
 import {gender,
   genericEnum,
@@ -51,7 +53,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
@@ -68,7 +70,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
@@ -85,7 +87,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
@@ -113,7 +115,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
@@ -125,65 +127,325 @@ export class ZzpGoedBeterBestMethods {
       case genericEnum.GOED: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.goedElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
+        browser.sleep(5000);  // lange laadtijd voor prijsberekening
+        await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.selectRechtsbijstandElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.selectRechtsbijstandElement);
                 break;
       }
       case genericEnum.BETER: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.beterElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
+        browser.sleep(5000); // lange laadtijd voor prijsberekening
+        await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.selectRechtsbijstandElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.selectRechtsbijstandElement);
         break;
       }
       case genericEnum.BEST: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.bestElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
+        browser.sleep(5000); // lange laadtijd voor prijsberekening
         break;
       }
       default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
 
 
   // PAGE 3
-  // MAAK ENUM VOOR ZZP PAKKET
-  // MAAK VAN DEZE SWITCH EENTJE MET ALLE OPTIES OP STAP 3
-  // async selectAdditionalInsurances(input: string) {
-  //   await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.bannerElement, browser.getPageTimeout);
-  //   switch (input) {
-  //     case genericEnum.GOED: {      // maak ENUM voor ZZP PAKKET
-  //       await genericMethods.clickOnElement(zzpGoedBeterBestElements.goedElement);
-  //       break;
-  //     }
-  //     case genericEnum.BETER: {
-  //       await genericMethods.clickOnElement(zzpGoedBeterBestElements.beterElement);
-  //       break;
-  //     }
-  //     case genericEnum.BEST: {
-  //       await genericMethods.clickOnElement(zzpGoedBeterBestElements.bestElement);
-  //       break;
-  //     }
-  //     default: {
-  //       throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
-  //     }
-  //   }
-  // }
+  // zit in STEP 2
 
   // PAGE 4
-
-  async verifyThankYouPageText(input: string) {
-    switch (personaData.getPersonaGender(input)) {
-      case gender.MALE: {
-        await genericMethods.verifyTextInElement(zzpGoedBeterBestElements.thankYouElement, 'Beste meneer ' + personaData.getPersonaLastName(input) + ', bedankt voor het afsluiten van deze verzekering. U ontvangt binnen enkele minuten een bevestigingsmail op het volgende e-mail adres: ' + personaData.getPersonaEmailAddress(input) + '.');
+  async selectCompanyCar(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.transferDate, browser.getPageTimeout);
+    await genericMethods.typeText(zzpGoedBeterBestElements.transferDate, genericMethods.getDate('today'));
+    await genericMethods.typeText(zzpGoedBeterBestElements.reportingCode, '0000');
+    await zzpGoedBeterBestMethods.selectOwnerOfCar(input);
+  }
+        async selectOwnerOfCar(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.ownerNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.ownerYesElement);
         break;
       }
-      case gender.FEMALE: {
-        await genericMethods.verifyTextInElement(zzpGoedBeterBestElements.thankYouElement, 'Beste mevrouw ' + personaData.getPersonaLastName(input) + ', bedankt voor het afsluiten van deze verzekering. U ontvangt binnen enkele minuten een bevestigingsmail op het volgende e-mail adres:' + personaData.getPersonaEmailAddress(input) + '.');
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.ownerNoElement);
         break;
       }
       default: {
-        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectFireHazardousWork(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.fireHazardousWorkNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.fireHazardousWorkYesElement);
+        await genericMethods.clickOnTAB(zzpGoedBeterBestElements.fireHazardousWorkYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.fireHazardousWorkNoElement);
+        await genericMethods.clickOnTAB(zzpGoedBeterBestElements.fireHazardousWorkNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectWorkMainlyAbroad(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.workMainlyAbroadNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.workMainlyAbroadYesElement, browser.getPageTimeout);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.workMainlyAbroadYesElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.countriesBeLuxDuElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.countriesOtherInEuropeElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.countriesOutsideEuropeElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationWorkAbroadElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+       await genericMethods.clickOnElement(zzpGoedBeterBestElements.workMainlyAbroadNoElement);
+
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectWorkInSpecificSector(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.workInSpecificSectorNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.workInSpecificSectorYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.workInSpecificSectorNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectDemolitionWork(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.demolitionWorkNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.demolitionWorkYesElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationDemolitionWorkElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.demolitionWorkNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectTakeOnContractsForZZPer(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.takeOnContractsForZZPerNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.takeOnContractsForZZPerYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.takeOnContractsForZZPerNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectWorkWithAsbestos(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.workWithAsbestosNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.workWithAsbestosYesElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationAsbestosElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.demolitionWorkNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectBuildScaffolding(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.buildScaffoldingNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.buildScaffoldingYesElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationScaffoldingElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.buildScaffoldingNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectUseHeavyMaterials(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.useHeavyMaterialsNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.useHeavyMaterialsYesElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationHeavyMaterialsElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.useHeavyMaterialsNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectConflictsThreeYearsPrior(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.conflictsThreeYearsPriorNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.conflictsThreeYearsPriorYesElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationConflictsElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.conflictsThreeYearsPriorNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  // LEGAL COUNCIL INSURANCE QUESTIONS
+  async selectHasOtherActivities(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.hasOtherActivitiesNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.hasOtherActivitiesYesElement);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationOtherActivitiesElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.hasOtherActivitiesNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+
+// ALMOST INSURED PAGE
+  async selectInsuranceHistoryZZP(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.insuranceHistoryNoElement, browser.getPageTimeout);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.insuranceHistoryYesElement);
+        browser.sleep(2000); // tijd om te laden
+        await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.explanationInsuranceHistoryElement, browser.getPageTimeout);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationInsuranceHistoryElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.insuranceHistoryNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectCriminalHistoryZZP(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.criminalHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.criminalHistoryYesElement);
+        await genericMethods.waitForElementIsVisible(genericElements.lightBoxClickElement, browser.getPageTimeout);
+        await genericMethods.clickOnElement(genericElements.lightBoxClickElement);
+        browser.sleep(2000); // tijd om te laden
+        await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.criminalHistoryYesElement, browser.getPageTimeout);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.criminalHistoryNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  async selectDamageHistoryZZP(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.damageHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.damageHistoryYesElement);
+        browser.sleep(2000); // tijd om te laden
+        await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.explanationInsuranceHistoryElement, browser.getPageTimeout);
+        await genericMethods.typeText(zzpGoedBeterBestElements.explanationDamageHistoryElement, 'test');
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.damageHistoryNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+
+  // Last page
+  async verifyThankYouPageText(input: string) {
+    switch (personaData.getPersonaGender(input)) {
+      case gender.MALE: {
+        await genericMethods.verifyTextInElement(zzpGoedBeterBestElements.thankYouElement1, 'Beste heer ' + personaData.getPersonaLastName(input) + ',');
+        await genericMethods.verifyTextInElement(zzpGoedBeterBestElements.thankYouElement2, 'Hartelijk dank voor het aanvragen van uw Pakket voor zzp’ers in de bouw bij Univé. Wij zullen uw aanvraag nader beoordelen om te zien of wij u deze verzekering kunnen aanbieden.');
+        break;
+      }
+      case gender.FEMALE: {
+        await genericMethods.verifyTextInElement(zzpGoedBeterBestElements.thankYouElement1, 'Beste mevrouw ' + personaData.getPersonaLastName(input) + ',');
+        await genericMethods.verifyTextInElement(zzpGoedBeterBestElements.thankYouElement2, 'Hartelijk dank voor het aanvragen van uw Pakket voor zzp’ers in de bouw bij Univé. Wij zullen uw aanvraag nader beoordelen om te zien of wij u deze verzekering kunnen aanbieden.');
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
       }
     }
   }
