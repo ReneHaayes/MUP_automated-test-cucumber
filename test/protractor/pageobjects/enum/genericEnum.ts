@@ -51,7 +51,9 @@ export enum personaName {
   AKO = 'ako',
   AVONK = 'avonk',
   ERICHTERS = 'erichters',
-  KNOPPERS = 'knoppers'
+  KNOPPERS = 'knoppers',
+  DARTHVADER = 'darthvader',
+  SKYWALKER = 'skywalker'
 }
 
 export enum companyNameEnum {
