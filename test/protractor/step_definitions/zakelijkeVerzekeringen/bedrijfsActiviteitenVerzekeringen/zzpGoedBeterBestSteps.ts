@@ -1,7 +1,6 @@
 import {Then, When} from 'cucumber';
 import {
   companyData,
-  genericElements,
   genericMethods,
   personaData,
   zzpGoedBeterBestElements,
@@ -63,15 +62,14 @@ When(/^I enter step four of zzp-pakket with$/, async (data) => {
   await zzpGoedBeterBestMethods.selectConflictsThreeYearsPrior(dataTable.conflictsThreeYearsPrior);
   // Rechtsbijstandverzekering
   browser.sleep(500);
-  await zzpGoedBeterBestMethods.selectHasOtherActivities(dataTable.hasOtherActivities);
-
+  if (zzpGoedBeterBestElements.legalCouncilQuestionHeader === 'Rechtsbijstandverzekering') {
+    await zzpGoedBeterBestMethods.selectHasOtherActivities(dataTable.hasOtherActivities);
+  } else {}
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
 });
 
 When(/^I enter step five of zzp-pakket for (.*) with (.*)$/, async (company: string, persona: string) => {
-  await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.bannerElement, browser.getPageTimeout);
-  await genericMethods.waitForElementClickable(zzpGoedBeterBestElements.nextButton, browser.getPageTimeout);
-  // Bedrijfsgegevens
+    // Bedrijfsgegevens
   await genericMethods.typeText(zzpGoedBeterBestElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(zzpGoedBeterBestElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(zzpGoedBeterBestElements.companyDataEmailAddressInputElement);
@@ -95,15 +93,14 @@ When(/^I enter step five of zzp-pakket for (.*) with (.*)$/, async (company: str
 });
 
 When(/^I fill in almost insured page for zzp-pakket with:$/, async (data) => {
-  await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.bannerElement, browser.getPageTimeout);
-  await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.getInsuranceNowButton, browser.getPageTimeout);
   const dataTable = data.rowsHash();
-  await genericMethods.waitForElementIsVisible(genericElements.bannerPageElement, browser.getPageTimeout);
   await zzpGoedBeterBestMethods.selectInsuranceHistoryZZP(dataTable.insuranceHistory);
   await zzpGoedBeterBestMethods.selectCriminalHistoryZZP(dataTable.criminalHistory);
   await zzpGoedBeterBestMethods.selectDamageHistoryZZP(dataTable.damageHistory);
-  await genericMethods.clickOnElement(zzpGoedBeterBestElements.checkDataElement);
-  browser.sleep(3000);
+  if (zzpGoedBeterBestElements.legalCouncilQuestionHeader === 'Rechtsbijstandverzekering') {
+    await zzpGoedBeterBestMethods.selectLegalQuestionsZZP(dataTable.legalQuestions);
+    browser.sleep(1000);
+  } else {}
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.getInsuranceNowButton);
 });
 
