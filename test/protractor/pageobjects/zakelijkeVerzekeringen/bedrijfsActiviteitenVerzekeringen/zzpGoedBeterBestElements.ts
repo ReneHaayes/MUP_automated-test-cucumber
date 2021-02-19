@@ -96,7 +96,7 @@ export class ZzpGoedBeterBestElements {
   // GENERIC BUTTONS
   bannerElement = '[class="page__title"]';
   authorizationUniveElement = 'div.personal-information__fields-other > div > ui-checkbox';
-  checkDataElement = 'ui-button > button';
+  checkDataElement = 'ui-fieldset:nth-child(6) > fieldset > div.almost-insured__bottom-section-check > ui-button > button';
   nextButton = 'ui-button > button';
   getInsuranceNowButton = 'form > div > ui-button > button';
   legalCouncilQuestionHeader = 'div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid > ui-fieldset > fieldset > legend';
