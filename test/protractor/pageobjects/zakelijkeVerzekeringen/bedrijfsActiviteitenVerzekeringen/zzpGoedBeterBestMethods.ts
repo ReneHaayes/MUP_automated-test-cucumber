@@ -127,23 +127,29 @@ export class ZzpGoedBeterBestMethods {
       case genericEnum.GOED: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.goedElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
-        browser.sleep(5000);  // lange laadtijd voor prijsberekening
+        browser.sleep(5000);  // wachten op API voor prijsberekening
+        // zet rechtsbijstand aan als aanvullend
         await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.selectRechtsbijstandElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.selectRechtsbijstandElement);
-                break;
+        // zet rechtsbijstand terug uit als aanvullend
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.selectRechtsbijstandElement);
+        break;
       }
       case genericEnum.BETER: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.beterElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
-        browser.sleep(5000); // lange laadtijd voor prijsberekening
+        browser.sleep(5000); // wachten op API voor prijsberekening
+        // zet rechtsbijstand aan als aanvullend
         await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.selectRechtsbijstandElement, browser.getPageTimeout);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.selectRechtsbijstandElement);
+        // zet rechtsbijstand terug uit als aanvullend
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.selectRechtsbijstandElement);
         break;
       }
       case genericEnum.BEST: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.bestElement);
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
-        browser.sleep(5000); // lange laadtijd voor prijsberekening
+        browser.sleep(5000); // wachten op API voor prijsberekening
         break;
       }
       default: {
@@ -190,7 +196,6 @@ export class ZzpGoedBeterBestMethods {
       }
       case genericEnum.NO: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.fireHazardousWorkNoElement);
-        await genericMethods.clickOnTAB(zzpGoedBeterBestElements.fireHazardousWorkNoElement);
         break;
       }
       default: {
@@ -213,7 +218,6 @@ export class ZzpGoedBeterBestMethods {
       }
       case genericEnum.NO: {
        await genericMethods.clickOnElement(zzpGoedBeterBestElements.workMainlyAbroadNoElement);
-
         break;
       }
       default: {
@@ -283,7 +287,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(zzpGoedBeterBestElements.demolitionWorkNoElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.workWithAsbestosNoElement);
         break;
       }
       default: {
@@ -400,7 +404,7 @@ export class ZzpGoedBeterBestMethods {
         break;
       }
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(genericElements.insuranceHistoryNoElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.criminalHistoryNoElement);
         break;
       }
       default: {
@@ -408,7 +412,6 @@ export class ZzpGoedBeterBestMethods {
       }
     }
   }
-
 
   async selectDamageHistoryZZP(input: string) {
     await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.damageHistoryNoElement, browser.getPageTimeout);
@@ -431,8 +434,32 @@ export class ZzpGoedBeterBestMethods {
     }
   }
 
-  // PAGE 4
 
+  async selectLegalQuestionsZZP(input: string) {
+    await genericMethods.waitForElementIsVisible(zzpGoedBeterBestElements.legalDamagesPastFiveYearsNoElement, browser.getPageTimeout);
+    browser.sleep(500);
+    switch (input) {
+      case genericEnum.YES: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalDamagesPastFiveYearsYesElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalAnticipateAppealYesElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalChangeInDestinationPlanYesElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalMoreThanTenReceivablesYesElement);
+        break;
+      }
+      case genericEnum.NO: {
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalDamagesPastFiveYearsNoElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalAnticipateAppealNoElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalChangeInDestinationPlanNoElement);
+        await genericMethods.clickOnElement(zzpGoedBeterBestElements.legalMoreThanTenReceivablesNoElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + genericMethods.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
+
+  // Last page
   async verifyThankYouPageText(input: string) {
     switch (personaData.getPersonaGender(input)) {
       case gender.MALE: {

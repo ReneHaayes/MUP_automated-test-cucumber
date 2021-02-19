@@ -221,7 +221,7 @@ export class AlleVerzekeringenZakelijkMethods {
         break;
       }
       case verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING_ZZP: {
-        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.arbeidsOngeschiktheidsVerzekeringZzpPp);
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.arbeidsOngeschiktheidVerzekeringZzpPp);
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING_ZZP);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);
@@ -230,7 +230,7 @@ export class AlleVerzekeringenZakelijkMethods {
         break;
       }
       case verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING: {
-        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.arbeidsOngeschiktheidsVerzekeringPp);
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.arbeidsOngeschiktheidVerzekeringPp);
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, verzekeringPaginasEnum.ARBEIDSONGESCHIKTHEIDSVERZEKERING_AOV);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);

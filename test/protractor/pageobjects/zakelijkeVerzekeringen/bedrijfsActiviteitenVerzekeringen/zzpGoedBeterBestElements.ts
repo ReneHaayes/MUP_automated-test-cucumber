@@ -60,35 +60,35 @@ export class ZzpGoedBeterBestElements {
   countriesOutsideEuropeElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > zp-checkbox-group > div > div:nth-child(3) > ui-checkbox';
   explanationWorkAbroadElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div.additional-information__input-wrapper.ng-star-inserted > ui-textarea > label > textarea';
 
-  workInSpecificSectorNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(4) > ui-radio-group > div > ui-radio-button:nth-child(1)'; // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(9) > ui-radio-group > div > ui-radio-button:nth-child(1)';
+  workInSpecificSectorNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(4) > ui-radio-group > div > ui-radio-button:nth-child(1)';                                         // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(9) > ui-radio-group > div > ui-radio-button:nth-child(1)';
   workInSpecificSectorYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(9) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
 
-  demolitionWorkNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(10) > ui-radio-group > div > ui-radio-button:nth-child(2)';
+  demolitionWorkNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(5) > ui-radio-group > div > ui-radio-button:nth-child(2)';                                              // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(10) > ui-radio-group > div > ui-radio-button:nth-child(2)';
   demolitionWorkYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(10) > ui-radio-group > div > ui-radio-button:nth-child(3) > label';
   explanationDemolitionWorkElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(12) > ui-textarea > label > textarea';
 
-  takeOnContractsForZZPerNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(13) > ui-radio-group > div > ui-radio-button:nth-child(2)';
+  takeOnContractsForZZPerNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(6) > ui-radio-group > div > ui-radio-button:nth-child(2)';                                    // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(13) > ui-radio-group > div > ui-radio-button:nth-child(2)';
   takeOnContractsForZZPerYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(13) > ui-radio-group > div > ui-radio-button:nth-child(3) > label';
 
 
-  workWithAsbestosNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(12) > ui-radio-group > div > ui-radio-button:nth-child(2)';
+  workWithAsbestosNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(7) > ui-radio-group > div > ui-radio-button:nth-child(2)';                                          // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(12) > ui-radio-group > div > ui-radio-button:nth-child(2)';
   workWithAsbestosYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(12) > ui-radio-group > div > ui-radio-button:nth-child(3) > label';
   explanationAsbestosElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(14) > ui-textarea > label > textarea';
 
-  buildScaffoldingNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(15) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
+  buildScaffoldingNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(8) > ui-radio-group > div > ui-radio-button:nth-child(2) ';                                         // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(15) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
   buildScaffoldingYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(15) > ui-radio-group > div > ui-radio-button:nth-child(3) > label';
   explanationScaffoldingElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(17) > ui-textarea > label > textarea';
 
-  useHeavyMaterialsNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(20) > ui-radio-group > div > ui-radio-button:nth-child(1) > label';
+  useHeavyMaterialsNoElement = '  div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(11) > ui-radio-group > div > ui-radio-button:nth-child(1)';                                        // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(20) > ui-radio-group > div > ui-radio-button:nth-child(1) > label';
   useHeavyMaterialsYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(20) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
   explanationHeavyMaterialsElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(22) > ui-textarea > label > textarea';
 
-  conflictsThreeYearsPriorNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(23) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
+  conflictsThreeYearsPriorNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability > ui-fieldset > fieldset > div:nth-child(12) > ui-radio-group > div > ui-radio-button:nth-child(2)';                                    // 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(23) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
   conflictsThreeYearsPriorYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(23) > ui-radio-group > div > ui-radio-button:nth-child(3) > label';
   explanationConflictsElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--liability.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(25) > ui-textarea > label > textarea';
 
   // LEGAL COUNCIL INSURANCE QUESTIONS
-  hasOtherActivitiesNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(2) > ui-radio-group > div > ui-radio-button:nth-child(1) > label';
+  hasOtherActivitiesNoElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid > ui-fieldset > fieldset > div.additional-information__group-question > ui-radio-group > div > ui-radio-button:nth-child(1) > label';                  // 'div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(2) > ui-radio-group > div > ui-radio-button:nth-child(1) > label';
   hasOtherActivitiesYesElement = 'div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid.ng-star-inserted > ui-fieldset > fieldset > div:nth-child(2) > ui-radio-group > div > ui-radio-button:nth-child(2) > label';
   explanationOtherActivitiesElement = 'form > div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid.ng-star-inserted > ui-fieldset > fieldset > div.additional-information__input-wrapper.ng-star-inserted > ui-textarea > label > textarea';
 
@@ -96,9 +96,11 @@ export class ZzpGoedBeterBestElements {
   // GENERIC BUTTONS
   bannerElement = '[class="page__title"]';
   authorizationUniveElement = 'div.personal-information__fields-other > div > ui-checkbox';
-  checkDataElement = 'ui-fieldset:nth-child(6) > fieldset > div.almost-insured__bottom-section-check > ui-button > button';
+  checkDataElement = 'ui-button > button';
   nextButton = 'ui-button > button';
   getInsuranceNowButton = 'form > div > ui-button > button';
+  legalCouncilQuestionHeader = 'div.additional-information__fieldset-container.additional-information__fieldset-container--legal-aid > ui-fieldset > fieldset > legend';
+  almostInsuredLegalQuestionHeader = 'ui-fieldset:nth-child(5) > fieldset > legend';
 
   // COMPANY INFO
   companyDataPhoneNumberInputElement = 'ui-fieldset:nth-child(1) > fieldset > div.personal-information__fields-input > div:nth-child(2) > ui-input > div > label > input';
@@ -127,8 +129,21 @@ export class ZzpGoedBeterBestElements {
   explanationDamageHistoryElement = 'ui-fieldset:nth-child(4) > fieldset > div.almost-insured__input-wrapper.ng-star-inserted > div > ui-textarea > label > textarea';
 
   // Legal Council
+  legalDamagesPastFiveYearsNoElement = 'ui-radio-group:nth-child(3) > div > ui-radio-button:nth-child(1)';
+  legalDamagesPastFiveYearsYesElement = 'ui-radio-group:nth-child(3) > div > ui-radio-button:nth-child(2)';
+
+  legalAnticipateAppealNoElement = 'ui-radio-group:nth-child(5) > div > ui-radio-button:nth-child(1)';
+  legalAnticipateAppealYesElement = 'ui-radio-group:nth-child(5) > div > ui-radio-button:nth-child(2)';
+
+  legalChangeInDestinationPlanNoElement = 'ui-radio-group:nth-child(7) > div > ui-radio-button:nth-child(1)';
+  legalChangeInDestinationPlanYesElement = 'ui-radio-group:nth-child(7) > div > ui-radio-button:nth-child(2)';
+
+  legalMoreThanTenReceivablesNoElement = ' ui-radio-group:nth-child(9) > div > ui-radio-button:nth-child(1) ';
+  legalMoreThanTenReceivablesYesElement = ' ui-radio-group:nth-child(9) > div > ui-radio-button:nth-child(2) ';
+
+
 
   // THANK YOU
-  thankYouElement1 = 'ui-card > div > div > div > p:nth-child(1)';
-  thankYouElement2 = 'ui-card > div > div > div > p:nth-child(2)';
+  thankYouElement1 = 'ui-card > div > div > div > p:nth-child(2)';
+  thankYouElement2 = 'ui-card > div > div > div > p:nth-child(3)';
 }

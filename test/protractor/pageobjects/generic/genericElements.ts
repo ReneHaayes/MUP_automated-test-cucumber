@@ -73,6 +73,16 @@ export class GenericElements {
   zakelijkMotorVerzekering = 'zakelijk/motorverzekering';
   vrachtAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering = 'zakelijk/werkmaterieelverzekering';
+  aanhangwagenVerzekeringPp = 'zakelijk/aanhangwagenverzekering';
+  zakelijkeBromfietsverzekeringPp = 'zakelijk/bromfietsverzekering';
+  bestelautoVerzekeringPp = 'zakelijk/bedrijfsautoverzekering/bestelautoverzekering';
+  arbeidsOngeschiktheidVerzekeringZzpPp = 'zakelijk/arbeidsongeschiktheidsverzekering/aov-zzp';
+  arbeidsOngeschiktheidVerzekeringPp = 'zakelijk/arbeidsongeschiktheidsverzekering/aov';
+  pensioenVoorOndernemersPp = 'zakelijk/pensioen';
+  roerendeZakenVerzekeringPp = 'zakelijk/roerendezakenverzekering';
+  werknemersSchadeVerzekeringPp = 'zakelijk/werknemersschadeverzekering';
+  werknemersPensioenVerzekeringPp = 'zakelijk/werknemerspensioen';
+
   loginMijnUniveParticulierURL = 'mijnunive/inloggen';
   veelgesteldevragenURL = 'klantenservice/veelgesteldevragen';
   mailhogPatURL = 'https://mailhog.pat.unive.nl';
@@ -86,7 +96,6 @@ export class GenericElements {
   prefillOmringPashoudersUrl = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
   salesWidgets = 'ppwidgets';
   zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
-
   faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
 
   zorgchecktool = 'zorgverzekering/zorgcheck';
