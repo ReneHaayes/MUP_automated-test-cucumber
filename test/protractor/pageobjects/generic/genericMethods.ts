@@ -755,12 +755,12 @@ export class GenericMethods {
   }
 
   async selectDamageHistory(input: string) {
-    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    await this.waitForElementIsVisible(genericElements.damageHistoryNoElement, browser.getPageTimeout);
     browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.damageHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
+        await this.typeText(genericElements.damageHistoryYesExplanationElement, 'test');
         break;
       }
       case genericEnum.NO: {
