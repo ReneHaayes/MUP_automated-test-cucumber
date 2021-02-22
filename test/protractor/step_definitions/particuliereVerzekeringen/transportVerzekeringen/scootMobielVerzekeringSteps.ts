@@ -1,14 +1,17 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
   genericElements, genericMethods, nawElements, personaData, scootMobielVerzekeringElements
-} from "@support";
+} from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one page and click next on step two of scootmobiel verzekering with:$/, async function (data) {
   const dataTable = data.rowsHash();
   await genericMethods.clickOnElement(scootMobielVerzekeringElements.scootMobielClickElement);
+  await genericMethods.waitForElementIsVisible(scootMobielVerzekeringElements.purchasePriceInputElement, browser.getPageTimeout);
   await genericMethods.typeText(scootMobielVerzekeringElements.purchasePriceInputElement, dataTable.purchasePrice);
   await genericMethods.clickOnNextButton();
-  //click next on step two page.
+  // click next on step two page.
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
 });
 

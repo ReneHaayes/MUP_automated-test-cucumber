@@ -167,16 +167,16 @@ export class GenericElements {
 
 
   // HISTORY
-  insuranceHistoryNoElement = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(1)';
-  insuranceHistoryYesElement = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(2)';
+  insuranceHistoryNoElement = '[data-label-id="LA_IF2535_3710"] .radioList > label:nth-child(1)';
+  insuranceHistoryYesElement = '[data-label-id="LA_IF2535_3710"] .radioList > label:nth-child(2)';
   insuranceHistoryYesExplanationElement = '#_Form_IF2535_33524';
 
-  criminalHistoryYesElement = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(2)';
-  criminalHistoryNoElement = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(1)';
+  criminalHistoryYesElement = '[data-label-id="LA_IF2535_3711"] .radioList > label:nth-child(2)';
+  criminalHistoryNoElement = '[data-label-id="LA_IF2535_3711"] .radioList > label:nth-child(1)';
 
-  damageHistoryYesElement = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(2)';
+  damageHistoryYesElement = '[data-label-id="LA_IF2535_33953"] .radioList > label:nth-child(2)';
   damageHistoryYesExplanationElement = '#_Form_IF2535_45811';
-  damageHistoryNoElement = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(1)';
+  damageHistoryNoElement = '[data-label-id="LA_IF2535_33953"] .radioList > label:nth-child(1)';
 
   // SIDEBAR
   sideBarElement = '//*[@class="rbcontainer"]//*';
