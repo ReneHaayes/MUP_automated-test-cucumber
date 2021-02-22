@@ -595,6 +595,7 @@ export class GenericMethods {
   }
 
   async clickOnTakeOutInsuranceNowButton() {
+    await this.waitForElementIsVisible(genericElements.takeOutInsuranceNowButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.takeOutInsuranceNowButton);
   }
 

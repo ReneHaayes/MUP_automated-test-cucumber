@@ -15,9 +15,9 @@ exports.config = {
     './protractor/features/**/*.feature'
   ],
   capabilities: {
-    browserName: 'chrome',
-         shardTestFiles: true,
-         maxInstances: 2,
+     browserName: 'chrome',
+    //      shardTestFiles: true,
+    //      maxInstances: 2,
 
     loggingPrefs: {
       'driver': 'INFO',

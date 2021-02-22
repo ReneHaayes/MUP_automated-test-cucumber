@@ -1,31 +1,6 @@
 @productPageZakelijkAlleVerzekeringen
 
-Feature: Check if the product and alle verzekeringen pages are correctly shown business.
-
-#  Scenario Outline: Check the elements and dropdowns on the alle verzekeringen page.
-#    Given I am on the alle verzekeringen zakelijk page of the Unive website
-#    When I click on <buttonPage> at the alle verzekeringen zakelijk page
-#    Then Verify elements on <buttonPage2> product page zakelijk is shown
-#
-#    Examples:
-#      | buttonPage                                | buttonPage2                           |
-#      | Bedrijfs-aansprakelijkheidsverzekering    | Bedrijfsaansprakelijkheidsverzekering |
-#      | Beroeps-aansprakelijkheidsverzekering     | Beroepsaansprakelijkheid              |
-#      | Bestuurders-aansprakelijkheidsverzekering | Bestuurdersaansprakelijkheid          |
-#      | Zakelijke rechtsbijstandverzekering       | Zakelijke rechtsbijstandverzekering   |
-#      | Constructie All Riskverzekering           | Constructie All Riskverzekering       |
-#      | Bedrijfsautoverzekering                   | Bedrijfsautoverzekering               |
-#      | Eigen vervoerverzekering                  | Eigen vervoerverzekering              |
-#      | Zakelijke motorverzekering                | Zakelijke motorverzekering            |
-#      | Personenautoverzekering                   | Personenautoverzekering               |
-#      | Tractorverzekering                        | Tractorverzekering                    |
-#      | Vrachtautoverzekering                     | Vrachtwagenverzekering                |
-#      | Werkmaterieelverzekering                  | Werkmaterieelverzekering              |
-#      | Bedrijfsschadeverzekering                 | Bedrijfsschadeverzekering             |
-#      | Gebouwenverzekering                       | Gebouwenverzekering                   |
-#      | Milieuschadeverzekering                   | Milieuschadeverzekering               |
-#
-
+Feature: Check if the business products and 'alle verzekeringen zakelijk' pages are correctly shown .
 
 #Toegevoegd op 15-02-2021 - uitbreiding van huidige ProductPageZakelijkeVerzekering
   Scenario Outline: Check if the elements and dropdowns on the alle verzekeringen page are shown.

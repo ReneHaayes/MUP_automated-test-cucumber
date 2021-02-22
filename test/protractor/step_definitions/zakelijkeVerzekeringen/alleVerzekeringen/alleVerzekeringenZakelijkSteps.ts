@@ -1,5 +1,5 @@
-import {Then, When} from "cucumber";
-import {alleVerzekeringenZakelijkMethods} from "@support";
+import {Then, When} from 'cucumber';
+import {alleVerzekeringenZakelijkMethods} from '@support';
 
 
 When(/^I am on the alle verzekeringen zakelijk page and select (.*) from dropdown$/, async (buttonPage: string) => {

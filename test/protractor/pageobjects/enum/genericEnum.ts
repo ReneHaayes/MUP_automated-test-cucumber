@@ -108,7 +108,7 @@ export enum verzekeringPaginasEnum {
   BROMFIETSVERZEKERING_PAT = 'Bromfietsverzekering',
   SCOOTERVERZEKERING_PAT = 'Scooterverzekering',
   MOTORFIETSVERZEKERING_PAT = 'Motorverzekering',
-  ZAKELIJK_MOTORFIETSVERZEKERING = 'Zakelijke motorfietsverzekering',
+  ZAKELIJK_MOTORFIETSVERZEKERING = 'Zakelijke motorverzekering',
   QUADVERZEKERING_PAT = 'Quadverzekering',
   TRIKEVERZEKERING_PAT = 'Trikeverzekering',
   ZORGELOOS_ONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
