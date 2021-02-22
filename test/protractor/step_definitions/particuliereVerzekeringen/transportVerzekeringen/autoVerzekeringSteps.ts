@@ -1,7 +1,8 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
 import {
-  analyticsAutoverzekeringElements, analyticsGenericElements,
+  analyticsAutoverzekeringElements,
+  analyticsGenericElements,
   autoVerzekeringElements,
   autoVerzekeringElementsStepThree,
   autoVerzekeringMethods,
@@ -16,7 +17,6 @@ import {
   stickyBalkMethods,
   vehicleElements
 } from '@support';
-import {homePageEnum} from '../../../pageobjects/enum/woonVerzekeringEnum';
 import {anaEnumLocation,
   anaEnumObjectName,
   anaEnumSearchObject
@@ -46,12 +46,11 @@ When(/^Customer enters step one page of autoverzekeringen for (.*) with license 
 
 When(/^Customer enters step two page of autoverzekering with collective (.*)$/, async (collective: string) => {
   await autoVerzekeringMethods.clickOnBasisDekking('waPlus');
-  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.AUTOVERZEKERING);
   await autoVerzekeringMethods.selectOwnRisk('ownRisk500');
   await autoVerzekeringMethods.clickOnAanvullendeOpties('Inzittendenverzekering');
   await autoVerzekeringMethods.selectCarAcc('autoAccTm5000');
   await genericMethods.typeText(autoVerzekeringElements.collectiveInputElement, collective);
-   await genericMethods.clickOnElement(autoVerzekeringElements.collectiveAutoCompleteClickElement);
+  await genericMethods.clickOnElement(autoVerzekeringElements.collectiveAutoCompleteClickElement);
   await genericMethods.verifyTextContainsInElement(autoVerzekeringElements.collectiveResultTextElement, collective, browser.getPageTimeout);
   await autoVerzekeringMethods.selectTotalPremie('annual');
 

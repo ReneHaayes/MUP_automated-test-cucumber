@@ -19,7 +19,7 @@ export enum anaEnumSearchObject {
 
 export class AnalyticsGenericElements {
 
-  //GENERIC
+  // GENERIC
   advEventHistory(location: string, objectName: string, searchObject: string): string {
     return 'window.adv_event.history.filter(historyItem => {return historyItem[0] == "' + objectName + '"})[' + location + '][1].' + searchObject;
   }
@@ -31,6 +31,6 @@ export class AnalyticsGenericElements {
   anaWinkelZoekerFirstPaginaNaam = 'Home:Contact:Zoek winkel:Stap 10';
   anaWinkelZoekerSecondPaginaNaam = 'Home:Contact:Zoek winkel:Stap laatste';
   anaWinkelZoekerKnopInteractieType = 'winkel';
-  anaWinkelZoekerKnopInteractieNaam = 'Univé Zwolle'
+  anaWinkelZoekerKnopInteractieNaam = 'Univé Zwolle';
 
 }
