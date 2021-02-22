@@ -83,7 +83,7 @@ export class PersonaData {
   pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15', '03', '1993', 'Zwolle', '7412TV', '69',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, phoneNumber.NO_PHONENUMBER, specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
     'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110', 'Welkom01!');
-  illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing-van Bruggen', '28', '10', '1962', 'Deventer', '7412XW', '91',
+  illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing - van Bruggen', '28', '10', '1962', 'Deventer', '9939 PA', '27',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
     '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   woestenburg: Persona = new Persona('Annie', 'AF', prefix.NO_PREFIX, 'Woestenburg', '19', '10', '1956', 'Venhuizen', '1606XA', '11',

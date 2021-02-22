@@ -9,8 +9,8 @@ When(/^Customer fills in afspraak maken form correctly with already customer (ye
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
   await genericMethods.typeText(klachtenFormulierElements.omschrijvingInputElement, 'omschrijving');
   await genericMethods.clickOnElement(afspraakMakenElements.selectAlreadyCustomerClickElement(alreadyCustomer));
-  //verification if No is selected that client number is not shown.
-  if (alreadyCustomer == genericEnum.NO) {
+  // verification if No is selected that client number is not shown.
+  if (alreadyCustomer === genericEnum.NO) {
     await genericMethods.waitForElementIsPresent(afspraakMakenElements.selectAlreadyCustomerNoHiddenElement, browser.getPageTimeout);
   }
   await genericMethods.typeText(klachtenFormulierElements.initialsInputElement, 'tt');
@@ -32,12 +32,15 @@ When(/^Logged in customer fills in afspraak maken form correctly and prefill is 
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.initialsInputElement, personaData.getPersonaInitials(persona) + '.');
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.lastNameInputElement, personaData.getPersonaLastName(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.birthDateInputElement, personaData.getPersonaBirthDate(persona));
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.zipCodeInputElement, '9939 PA');
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, '27');
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.streetNameInputElement, 'Hoofdweg');
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.emailAddressInputElement, 'illing@kpnplanet.nl');
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, '+31651077356');
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.clientNumberInputElement, '1763239');
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, personaData.getPersonaHouseNumber(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, personaData.getPersonaHouseNumberAddition(persona));
+  /*
+   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.streetNameInputElement, personaData.get(persona));
+  */
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.emailAddressInputElement, personaData.getPersonaEmailAddress(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, personaData.getPersonaPhoneNumber(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.clientNumberInputElement, personaData.getPersonaSpecificIdentificationNumber(persona));
   await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
 });
 

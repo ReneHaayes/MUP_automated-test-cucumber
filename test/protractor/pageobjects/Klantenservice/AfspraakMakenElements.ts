@@ -2,17 +2,17 @@ import {genericEnum} from "../enum/genericEnum";
 
 export class AfspraakMakenElements {
 
-  selectVerzekeringenAsSubjectClickElement: string = '#field_0 > div:nth-child(2) > div > label:nth-child(1)';
-  selectGenderMaleClickElement: string = '#field_4 > div:nth-child(7) > div > label:nth-child(1)';
+  selectVerzekeringenAsSubjectClickElement: string = '.eforms-radio-container > [value="verzekeringen"]~span';
+  selectGenderMaleClickElement: string = '.eforms-radio-container > [value="Man"]~span';
   selectAlreadyCustomerClickElementFor: string = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
 
   selectAlreadyCustomerClickElement(input: string){
     switch (input) {
       case genericEnum.YES: {
-        return '#field_4 > div:nth-child(2) > div > label:nth-child(1)';
+        return '.eforms-radio-container > [value="true"]~span';
       }
       case genericEnum.NO: {
-        return '#field_4 > div:nth-child(2) > div > label:nth-child(2)';
+        return '.eforms-radio-container > [value="false"]~span';
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -20,7 +20,7 @@ export class AfspraakMakenElements {
     }
   }
 
-  selectAlreadyCustomerNoHiddenElement: string = '#field_4 > [class="eforms-field hidden"]';
+  selectAlreadyCustomerNoHiddenElement: string = '.eforms-radio-container > [value="false"]~span';
 
   confirmationTextElement: string = '[class="eforms-container"] > p';
   confirmationText: string = 'Hartelijk dank';

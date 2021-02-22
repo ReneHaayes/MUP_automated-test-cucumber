@@ -12,7 +12,6 @@ Feature: Check for Afspraak maken page is correctly handled
     When Customer fills in afspraak maken form correctly with already customer no
     Then Verify afspraak maken form thank you text
 
-
   Scenario Outline: Verify afspraak maken form is prefilled with customer information when logged in
     Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website
     When Logged in customer fills in afspraak maken form correctly and prefill is filled in for persona <persona>
