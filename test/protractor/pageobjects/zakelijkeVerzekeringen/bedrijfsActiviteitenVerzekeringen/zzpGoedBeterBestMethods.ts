@@ -98,19 +98,19 @@ export class ZzpGoedBeterBestMethods {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.mileageBelow12000Element);
         break;
       }
-      case yearlyMileageEnum._12000_TOT_20000: {
+      case yearlyMileageEnum.TUSSEN_12000_EN_20000: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.mileage12000To20000Element);
         break;
       }
-      case yearlyMileageEnum._20000_TOT_25000: {
+      case yearlyMileageEnum.TUSSEN_20000_EN_25000: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.mileage20000To25000Element);
         break;
       }
-      case yearlyMileageEnum._25000_TOT_35000: {
+      case yearlyMileageEnum.TUSSEN_25000_EN_35000: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.mileage25000To35000Element);
         break;
       }
-      case yearlyMileageEnum.MORE_THEN_35000: {
+      case yearlyMileageEnum.MORE_THAN_35000: {
         await genericMethods.clickOnElement(zzpGoedBeterBestElements.mileageAbove35000Element);
         break;
       }

@@ -80,8 +80,9 @@ export {
   yearlyMileageEnum,
   whoDrivesCarMost,
   vehicleInfoEnum,
-  maxSpeedEnum }
-   from '../pageobjects/enum/autoVerzekeringEnum';
+  vehicleUsage,
+  maxSpeedEnum,
+}    from '../pageobjects/enum/autoVerzekeringEnum';
 
 export {
   activityEnum,

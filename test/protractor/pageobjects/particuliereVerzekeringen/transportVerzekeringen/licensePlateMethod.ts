@@ -12,7 +12,8 @@ import {
   genericEnum,
   licensePlateHmPageEnum
 } from '@enum';
-import {browser} from 'protractor';
+import {browser, until} from 'protractor';
+import urlIs = until.urlIs;
 
 export class LicensePlateMethod {
 

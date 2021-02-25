@@ -300,7 +300,7 @@ export class WidgetsParticulierMethods {
     switch (input) {
       case genericEnum.WILL: {
         await genericMethods.waitForElementIsPresent('[class="mainHeader_channelsLink _is_active"][href="https://pat.unive.nl/"]', browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeBrandElement, mobileHomeWithLicensePlate.getMobileHomeBrandName(licensePlate));
+        await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeBrandElement, mobileHomeWithLicensePlate.getMobileHomeBrand(licensePlate));
         await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeModelElement, mobileHomeWithLicensePlate.getMobileHomeModel(licensePlate));
         await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeYearElement, mobileHomeWithLicensePlate.getMobileHomeConstructionYear(licensePlate));
         break;
