@@ -1,14 +1,14 @@
-import {genericMethods, mijnSchadeEnClaimElements} from "@support";
+import {genericMethods, mijnSchadeEnClaimElements} from '@support';
 
 export class MijnSchadeEnClaimMethods {
 
-  async damageClaimFillInSchadeGegevens(polisNumber: string){
+  async damageClaimFillInSchadeGegevens(polisNumber: string) {
     await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimClickElement);
-    //STEP ONE
+    // STEP ONE
     await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
     await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
     await genericMethods.acceptAlertWhenAvailable();
-    //STEP TWO
+    // STEP TWO
     await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimElements.damageClaimSelectPolisClickElement(polisNumber));
     await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepTwoNextButtonClickElement);
   }
