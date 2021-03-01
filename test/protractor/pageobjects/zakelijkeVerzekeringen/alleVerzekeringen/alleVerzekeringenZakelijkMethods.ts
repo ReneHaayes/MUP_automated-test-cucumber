@@ -149,7 +149,7 @@ export class AlleVerzekeringenZakelijkMethods {
         break;
       }
       case verzekeringPaginasEnum.ZAKELIJK_MOTORFIETSVERZEKERING: {
-        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkMotorfietsVerzekering);
+        await genericMethods.verifyUrlContainsIgnoreCase(genericElements.zakelijkeMotorVerzekering);
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenZakelijkElements.zakelijkMotorVerzekeringH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.ZAKELIJK, 2);

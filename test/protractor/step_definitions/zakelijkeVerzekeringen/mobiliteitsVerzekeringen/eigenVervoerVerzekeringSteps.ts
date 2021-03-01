@@ -24,6 +24,7 @@ When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click n
     const dataTable = data.rowsHash();
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityYesElement);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeYesElement);
+    await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarClickElement, browser.getPageTimeout);
     await eigenVervoerVerzekeringMethods.selectVehicleInfo(dataTable.typeCar, dataTable.howMany);
     await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.openTrailerNoClickElement, browser.getPageTimeout);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.openTrailerNoClickElement);
@@ -47,4 +48,12 @@ When(/^I enter the third step of eigen vervoer verzekering for (.*) with (.*)$/,
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
+});
+
+When(/^I fill in eigen vervoersverzekering widget with (.*) and click Bereken uw Premie$/, async function (company: string) {
+  await genericMethods.verifyBreadcrumbOnPosition('Eigen vervoerverzekering', 3);
+  await genericMethods.typeTextShadowRoot(eigenVervoerVerzekeringElements.kvkWidgetInputElement, companyData.getCompanyKvkNumber(company));
+  await genericMethods.clickOnElementShadowRoot(eigenVervoerVerzekeringElements.kvkWidgetClickBerekenPremieElement);
+
+browser.sleep(5000);
 });
