@@ -122,6 +122,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekering;
       }
+      case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING_PP: {
+        return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekeringPp;
+      }
       case verzekeringPaginasEnum.CALAMITEITEN: {
         return this.getEnv(browser.params.env.environment) + verzekeringPaginasEnum.CALAMITEITEN;
       }

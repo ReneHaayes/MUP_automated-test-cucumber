@@ -1,7 +1,7 @@
 export class EigenVervoerVerzekeringElements {
 
   // KVK NUMBER
-  kvkNumberInputElement = '#_Form_IF31406_34108';       // nieuw op zakelijktest, vervangt huidige flow
+  kvkNumberInputElement = '#_Form_IF31406_34108';       // nieuw op zakelijktest sinds sprint 21-02, vervangt huidige flow
   kvkNameCheckElement = '[class="entryGroupContent"] div:nth-child(3) > span > strong';
   kvkActivityCheckElement = '[class="entryGroupContent"] div:nth-child(4) > span > strong:nth-child(3)';
 
@@ -56,5 +56,10 @@ export class EigenVervoerVerzekeringElements {
   // TRAILER WICH IS OPEN
   openTrailerYesClickElement = '[data-label-id*="LA_IF21624_34916"] .radioList > label:nth-child(1)';
   openTrailerNoClickElement = '[data-label-id*="LA_IF21624_34916"] .radioList > label:nth-child(2)';
+
+
+  // Widget elements
+  kvkWidgetInputElement = 'kvk-widget ::sr kvk-nummer ::sr #kvk-nummer';
+  kvkWidgetClickBerekenPremieElement = 'kvk-widget ::sr custom-button ::sr button';
 
 }

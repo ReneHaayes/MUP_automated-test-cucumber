@@ -143,6 +143,7 @@ export enum verzekeringPaginasEnum {
   RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',
   SCOOTMOBIELVERZEKERING = 'Scootmobielverzekering',
   EIGENVERVOERVERZEKERING = 'Eigen vervoerverzekering',
+  EIGENVERVOERVERZEKERING_PP = 'Eigen vervoerverzekering PP',
   ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'Zakelijke rechtsbijstandverzekering',
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'Bedrijfsaansprakelijkheidsverzekering',
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP = 'BedrijfsaansprakelijkheidsverzekeringPp',
