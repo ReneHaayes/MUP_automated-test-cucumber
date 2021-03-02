@@ -13,7 +13,6 @@ export class GenericElements {
   zakelijkeMotorVerzekering = 'zakelijk/motorverzekering';
   quadVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-trike';
-  zakelijkMotorfietsVerzekering = 'zakelijk/motorverzekering';
   zorgeloosOnlineVerzekeringPat = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekeringPp = 'zakelijk/bedrijfsautoverzekering';

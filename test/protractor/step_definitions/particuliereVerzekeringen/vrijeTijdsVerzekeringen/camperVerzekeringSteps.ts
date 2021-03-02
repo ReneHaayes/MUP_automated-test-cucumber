@@ -7,7 +7,7 @@ import {
   genericMethods,
   nawElements,
   personaData,
-  autoVerzekeringElements
+  autoVerzekeringElements,
 } from '@support';
 import {browser} from 'protractor';
 
