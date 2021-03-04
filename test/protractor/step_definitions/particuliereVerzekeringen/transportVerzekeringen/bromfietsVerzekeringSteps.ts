@@ -28,6 +28,7 @@ When(/^I enter step one page of moped for persona (.*) with license plate (.*) a
   await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(vehicleElements.zipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(vehicleElements.damageFreeYearsElement, damageFreeYears);
+  await genericMethods.clickOnTAB(vehicleElements.damageFreeYearsElement);
   await genericMethods.clickOnNextButton();
 
 });

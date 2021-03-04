@@ -8,6 +8,7 @@ import {
   oldtimerVerzekeringMethods,
   personaData
 } from "@support";
+import {browser} from 'protractor';
 
 When(/^I enter step one and click next on step three of oldtimerverzekering with:$/, async (data) => {
   const dataTable = data.rowsHash();
@@ -32,11 +33,14 @@ When(/^I enter step four page of oldtimerverzekering for (.*)$/, async (persona:
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthDayElement, personaData.getPersonaBirthDate(persona));
-  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  // om te voorkomen dat de regressietest er uit klapt op mobiel telnr
+  await genericMethods.waitForElementIsVisible(nawElements.yourDataPhoneNumberElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
+  // regressie valt uit op mobiel telnr niet ingevuld
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

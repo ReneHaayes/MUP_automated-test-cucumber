@@ -1,10 +1,14 @@
 import {Then, When} from 'cucumber';
 import {
-  licensePlateMethod
+  licensePlateMethod, widgetsParticulierMethods,
 } from '@support';
 
 When(/^I press the button (.*) for the following license plate (.*) on the page for autoverzekering$/, async (button: string, licensePlate: string) => {
   await licensePlateMethod.clickOnAutoVerzekeringButton(button, licensePlate);
+});
+
+When(/^I press the button (.*) for license plate (.*) on the salesWidget page$/, async (button: string, licensePlate: string) => {
+  await widgetsParticulierMethods.clickOnAutoVerzekeringButton(button, licensePlate);
 });
 
 Then(/^The (.*) data (.*) appears for Particuliere autoverzekering$/, async (licensePlate: string, willWont: string) => {
