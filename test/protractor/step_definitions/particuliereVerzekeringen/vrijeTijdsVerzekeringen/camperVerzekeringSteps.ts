@@ -38,9 +38,9 @@ When(/^I enter step two of camperverzekering$/, async () => {
 
 
 When(/^I enter step three page of camperverzekering for (.*) with$/, async (licensePlate: string) => {
-  await genericMethods.waitForElementIsVisible(mobileHomeVerzekeringElements.dateRegisteredToNameInputElement, browser.getPageTimeout);
-  await genericMethods.typeText(mobileHomeVerzekeringElements.dateRegisteredToNameInputElement, genericMethods.getDate('today'));
-  await genericMethods.clickOnTAB(mobileHomeVerzekeringElements.dateRegisteredToNameInputElement);
+  await genericMethods.waitForElementIsVisible(mobileHomeVerzekeringElements.dateToNameInputElement, browser.getPageTimeout);
+  await genericMethods.typeText(mobileHomeVerzekeringElements.dateToNameInputElement, genericMethods.getDate('today'));
+  await genericMethods.clickOnTAB(mobileHomeVerzekeringElements.dateToNameInputElement);
   await genericMethods.typeText(mobileHomeVerzekeringElements.meldCodeInputElement, mobileHomeWithLicensePlate.getMobileHomeReportingCode(licensePlate));
   await genericMethods.clickOnNextButton();
 });
@@ -57,8 +57,7 @@ When(/^I enter step four page of camperverzekering for (.*)$/, async (persona: s
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
-  browser.sleep(500);
-  await genericMethods.waitForElementClickable(nawElements.yourDataPhoneNumberElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

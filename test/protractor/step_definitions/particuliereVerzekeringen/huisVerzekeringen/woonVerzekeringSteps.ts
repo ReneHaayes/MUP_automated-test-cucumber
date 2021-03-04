@@ -53,10 +53,6 @@ When(/^I enter details of (.*) in step four page of woonverzekering$/, async (pe
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
-  // om te voorkomen dat de regressietest er uit klapt op mobiel telnr
-  // await genericMethods.waitForElementIsVisible(nawElements.yourDataPhoneNumberElement, browser.getPageTimeout);
-  // await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
-  // // regressie valt uit op mobiel telnr niet ingevuld
   await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));

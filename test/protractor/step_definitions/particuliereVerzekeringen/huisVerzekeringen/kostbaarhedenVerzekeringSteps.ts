@@ -6,7 +6,6 @@ import {
   nawElements,
   personaData
 } from '@support';
-import {browser} from 'protractor';
 
 When(/^I enter step one and step two page of kostbaarheden verzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
@@ -37,10 +36,6 @@ When(/^I enter details of (.*) in your data page of kostbaarheden verzekeringen$
   await genericMethods.typeText(nawElements.yourDataBirthDayElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
-  // om te voorkomen dat de regressietest er uit klapt op mobielnr
-  // await genericMethods.waitForElementIsVisible(nawElements.yourDataPhoneNumberElement, browser.getPageTimeout);
-  // await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
-  // // regressie valt uit op mobiel telnr niet ingevuld
   await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));

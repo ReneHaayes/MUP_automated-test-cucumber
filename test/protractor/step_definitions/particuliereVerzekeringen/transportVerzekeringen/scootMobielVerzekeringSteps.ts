@@ -41,10 +41,6 @@ When(/^I enter details of (.*) in your data page of scootmobiel verzekeringen$/,
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
-  // om te voorkomen dat de regressietest er uit klapt op mobiel telnr
-  // await genericMethods.waitForElementIsVisible(nawElements.yourDataPhoneNumberElement, browser.getPageTimeout);
-  // await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
-  // // regressie valt uit op mobiel telnr niet ingevuld
   await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));

@@ -10,22 +10,22 @@ export class MobileHomeVerzekeringElements {
   newPriceInputElement = '#_Form_IF6609_9921';
 
   // DATE
-  boughtDateInputElement = '#_Form_IF6609_9924';
-  nameDateInputElement = '#_Form_IF6625_9983';
+  dateBoughtInputElement = '#_Form_IF6609_9924';
+  dateToNameInputElement = '#_Form_IF6625_9983';
 
   // STRUCTURE
   structureBrandNameInputElement = '#_Form_IF29512_9913';
   structureBrandModelInputElement = '#_Form_IF29512_9914';
 
   // USE
-  recreativeUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(1)';
-  dailyRecreativeUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(2)';
+  recreationalUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(1)';
+  dailyRecreationalUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(2)';
   businessUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(3)';
-  rentUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(4)';
+  rentalUseClickElement = '[data-label-id*="LA_IF6632_9991"] .radioList > label:nth-child(4)';
 
-  tot10000kmClickElement = '[data-label-id*="LA_IF6634_9993"] .radioList > label:nth-child(1)';
+  upTo10000kmClickElement = '[data-label-id*="LA_IF6634_9993"] .radioList > label:nth-child(1)';
   between10000and20000kmClickElement = '[data-label-id*="LA_IF6634_9993"] .radioList > label:nth-child(2)';
-  moreThen20000kmClickElement = '[data-label-id*="LA_IF6634_9993"] .radioList > label:nth-child(3)';
+  moreThan20000kmClickElement = '[data-label-id*="LA_IF6634_9993"] .radioList > label:nth-child(3)';
 
   // INSURANCE TYPE
   waClickElement = '[data-label-id*="LA_IF6607_9910"]  label';

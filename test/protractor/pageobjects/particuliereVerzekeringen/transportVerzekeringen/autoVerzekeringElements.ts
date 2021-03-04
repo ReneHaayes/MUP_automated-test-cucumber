@@ -88,7 +88,7 @@ export class AutoVerzekeringElements {
   sideBarTotalPremieAnnual = 'Totaalpremie per jaar';
   sideBarTotalPremieMonthly = 'Totaalpremie per maand';
 
-  // PERSONENEN AUTO VERZEKERING ZAKELIJK ELEMENTS
+  // PERSONEN AUTO VERZEKERING ZAKELIJK ELEMENTS
   sameDriverYesClickElement = '[data-label-id*="LA_IF31207_39218"] .radioList > label:nth-child(1)';
   sameDriverNoClickElement = '[data-label-id*="LA_IF31207_39218"] .radioList > label:nth-child(2)';
   sameDriverZipCodeCompanyElement = '#_Form_IF31207_39214';
