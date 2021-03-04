@@ -35,6 +35,8 @@ export class MijnSchadeEnClaimElements {
   damageClaimCityInputElement = '#_Form_IF28905_36811';
   damageClaimInfluenceOfAlcoholFalseClickElement = '#_Form_IF3623_33280_false';
   damageClaimOtherPartyDamageTrueClickElement = '#_Form_IF7257_5228_true';
+  damageClaimReedAchteruitTrueClickElement = '#_Form_IF3623_39320_true';
+  damageClaimOtherPartyVoetgangerFietserFalseClickElement = '#_IF3623_39008_false';
   damageClaimInboedelStolenFalseClickElement = '#_Form_IF27715_19620_false';
   damageClaimDamageToHouseTrueClickElement = '#_Form_IF27715_26133_true';
   damageClaimPermanentLivingTrueClickElement = '#_Form_IF27716_19473_true';
@@ -87,7 +89,8 @@ export class MijnSchadeEnClaimElements {
 
   // DAMAGE CLAIM SUMMARY
   damageClaimSuccesMessageTextElement = '[class="success message"] >p';
-  damageClaimSuccesMessageText = 'Melden schade is voltooid';
+  damageClaimSuccesMessageText = 'Wij gaan voor u aan de slag';
+  // damageClaimSuccesMessageText = 'Melden schade is voltooid';
 
   // PREMIEGEVOLGEN BEREKENEN PAGE
   polisForPremiegevolgenPageWithPolisNumber(polisNumber: string): string {
