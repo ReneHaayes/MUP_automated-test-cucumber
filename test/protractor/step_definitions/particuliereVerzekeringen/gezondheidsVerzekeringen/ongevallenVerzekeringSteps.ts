@@ -1,12 +1,19 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  genericElements, genericMethods, nawElements, ongevallenVerzekeringMethods, personaData
-} from "@support";
+  genericElements,
+  genericMethods,
+  nawElements,
+  ongevallenVerzekeringMethods,
+  personaData
+} from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one page of ongevallenverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await ongevallenVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
-  //Click on Next at step two page
+  // Click on Next at step two page
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
 });
 

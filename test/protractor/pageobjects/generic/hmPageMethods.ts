@@ -98,6 +98,7 @@ export class HmPageMethods {
   async clickHeaderAndGoToPage(input: string) {
     switch (input) {
       case homePageEnum.ZOEKEN: {
+        await genericMethods.waitForElementIsVisible(hmPageElements.headerZoekenInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(hmPageElements.headerZoekenInputElement);
         await genericMethods.typeText(hmPageElements.headerZoekenInputElement, homePageEnum.ZOEKEN);
         await genericMethods.clickOnElement(hmPageElements.zoekenPageButtonClickElement);

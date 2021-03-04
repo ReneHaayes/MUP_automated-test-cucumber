@@ -3,8 +3,18 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import * as path from 'path';
 
-import {genericElements, getUrlUnive, nawElements, personaData} from '@support';
-import {dateEnum, gender, genericEnum, legalEnum, prefix, specificIdentification} from '@enum';
+import {genericElements,
+  getUrlUnive,
+  nawElements,
+  personaData
+} from '@support';
+import {dateEnum,
+  gender,
+  genericEnum,
+  legalEnum,
+  prefix,
+  specificIdentification
+} from '@enum';
 
 import {selectorEnum} from '../enum/genericEnum';
 
@@ -595,6 +605,7 @@ export class GenericMethods {
   }
 
   async clickOnTakeOutInsuranceNowButton() {
+    await this.waitForElementIsVisible(genericElements.takeOutInsuranceNowButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.takeOutInsuranceNowButton);
   }
 

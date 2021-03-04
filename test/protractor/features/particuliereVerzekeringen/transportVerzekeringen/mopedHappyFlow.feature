@@ -7,8 +7,8 @@ Feature: Happy flow for 'Bromfietsverzekering' and 'Scooterverzekering'
     When I enter step one page of moped for persona <persona> with license plate <licensePlate> and 3 damage free years
     And I enter step two page of moped with <coverage>
 #      | basisDekking | <coverage> |
-      | accessoires  | acc tm 500 |
-      | ownRisk      | ownRisk500 |
+      | accessoires | acc tm 500 |
+      | ownRisk     | ownRisk500 |
     And I enter step three page of moped with <coverage>
       | kindOfInsurance                 | new   |
       | dateOfName                      | today |
@@ -28,9 +28,9 @@ Feature: Happy flow for 'Bromfietsverzekering' and 'Scooterverzekering'
 
     Examples:
       | page                 | persona | licensePlate | coverage |
-      | Bromfietsverzekering | ronaldo | 12-FRP-3     | waPlus   |
-      | Scooterverzekering   | ronaldo | F-169-NS     | wa       |
-      | Scooterverzekering   | ronaldo | F-169-NS     | waPlus    |
+      | Bromfietsverzekering | ronaldo | 12-FRP-3     | wa       |
+      | Scooterverzekering   | ronaldo | F-169-NS     | wa   |
+      | Scooterverzekering   | ronaldo | F-169-NS     | waPlus   |
       | Bromfietsverzekering | neymar  | DKR-97-R     | allRisk  |
 
 

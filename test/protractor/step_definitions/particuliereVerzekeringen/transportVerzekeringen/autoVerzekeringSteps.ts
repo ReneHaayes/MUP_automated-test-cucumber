@@ -100,12 +100,13 @@ When(/^Customer enters step three page of autoverzekering for (.*)$/, async (lic
 });
 
 Then(/^Verify meldcode is mandatory when you dont fill in$/, async () => {
-  //INSERT DATE INFORMATION
+  // INSERT DATE INFORMATION
   await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar('ownerCarYes');
   await genericMethods.clickOnNextButton();
-  await genericMethods.verifyTextInElement('[class="message error"]', 'Dit veld is verplicht.');
+  await genericMethods.verifyTextInElement(autoVerzekeringElements.meldCodeErrorElement, 'Dit veld is verplicht.');
+  // await genericMethods.verifyTextInElement('[class="message error"]', 'Dit veld is verplicht.');
 });
 
 When(/^Customer enters step four page of autoverzekering for (.*)$/, async (persona: string) => {

@@ -115,6 +115,7 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf checked': {
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.backToStepOneClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
@@ -122,6 +123,7 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf en Mijn Partner checked': {
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.backToStepOneClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
@@ -129,7 +131,6 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf en Mijn kinderen checked': {
-        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
@@ -137,7 +138,6 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijzelf, Mijn Partner en Mijn kinderen checked': {
-        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
@@ -145,6 +145,7 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijn Partner checked': {
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.backToStepOneClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
@@ -152,7 +153,6 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijn kinderen checked': {
-        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
@@ -160,7 +160,6 @@ export class ReisVerzekeringMethods {
         break;
       }
       case 'Mijn Partner en Mijn kinderen checked': {
-        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
         await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);

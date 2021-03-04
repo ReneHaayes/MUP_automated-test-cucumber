@@ -15,7 +15,7 @@ export class StickyBalkElements {
   bekijkOpbouwPremieSamenvattingKeuzeTextElement = '#SIDEBAR-ID > div > span.qisZone_sidebarPremium > div > dl > div > dd > div > div:nth-child(1) > div.label';
 
   //STICKY DOORLOPENDE VERZEKERING
-  bekijkOpbouwPremieSamenvattingVerzekerdenTextElement = '[class="rbcontainer"] div:nth-child(2)[class="line"]'
+  bekijkOpbouwPremieSamenvattingVerzekerdenTextElement = '[class="rbcontainer"] div:nth-child(2)[class="line"]';
 
 
 }

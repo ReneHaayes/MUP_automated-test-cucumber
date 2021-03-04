@@ -1,18 +1,27 @@
-import {When} from "cucumber";
-import {bikeElements, genericElements, genericMethods, nawElements, personaData} from "@support";
+import {When} from 'cucumber';
+import {bikeElements,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+} from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one and step two page of fiets verzekeringen for persona (.*) with:$/, async (persona: string, data) => {
   const dataTable = data.rowsHash();
   await genericMethods.clickOnElement(bikeElements.normalBikeClickElement);
   await genericMethods.typeText(bikeElements.purchasePriceInputElement, dataTable.purchasePrice);
   await genericMethods.typeText(bikeElements.zipCodeUserInputElement, personaData.getPersonaZipcode(persona));
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
-  //click next on step two page
+  // click next on step two page
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step three page of fiets verzekeringen with:$/, async (data) => {
   const dataTable = data.rowsHash();
+  await genericMethods.waitForElementIsVisible(bikeElements.rentedBikeNoElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(bikeElements.rentedBikeNoElement);
   await genericMethods.typeText(bikeElements.purchaseDateInputElement, genericMethods.getDate('today'));
   await genericMethods.clickOnElement(bikeElements.boughtNewClickElement);

@@ -8,21 +8,20 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown b
     Then Verify elements on <buttonPage2> product page zakelijk is shown
 
     Examples:
-      | buttonPage                                | buttonPage2                               |
-      | Bedrijfs-aansprakelijkheidsverzekering    | Bedrijfsaansprakelijkheidsverzekering     |
-      | Bedrijfsautoverzekering                   | Bedrijfsautoverzekering                   |
-      | Bedrijfsschadeverzekering                 | Bedrijfsschadeverzekering                 |
-      | Beroeps-aansprakelijkheidsverzekering     | Beroepsaansprakelijkheid                  |
-      | Bestuurders-aansprakelijkheidsverzekering | Bestuurdersaansprakelijkheid              |
-      | Constructie All Riskverzekering           | Constructie All Riskverzekering           |
-      | Eigen vervoerverzekering                  | Eigen vervoerverzekering                  |
-      | Gebouwenverzekering                       | Gebouwenverzekering                       |
-#      | Handelaarskentekenverzekering             | Handelaarskentekenverzekering             |      Pagina bestaat niet
-      | Milieuschadeverzekering                   | Milieuschadeverzekering                   |
-      | Personenautoverzekering                   | Personenautoverzekering                   |
+      | buttonPage                                | buttonPage2                           |
+      | Bedrijfs-aansprakelijkheidsverzekering    | Bedrijfsaansprakelijkheidsverzekering |
+      | Bedrijfsautoverzekering                   | Bedrijfsautoverzekering               |
+      | Bedrijfsschadeverzekering                 | Bedrijfsschadeverzekering             |
+      | Beroeps-aansprakelijkheidsverzekering     | Beroepsaansprakelijkheid              |
+      | Bestuurders-aansprakelijkheidsverzekering | Bestuurdersaansprakelijkheid          |
+      | Constructie All Riskverzekering           | Constructie All Riskverzekering       |
+      | Eigen vervoerverzekering                  | Eigen vervoerverzekering              |
+      | Gebouwenverzekering                       | Gebouwenverzekering                   |
+      | Milieuschadeverzekering                   | Milieuschadeverzekering               |
+      | Personenautoverzekering                   | Personenautoverzekering               |
 #NIEUW toegevoegd
-      | Zakelijke motorfietsverzekering                | Zakelijke motorfietsverzekering                |
-      | Zakelijke rechtsbijstandverzekering       | Zakelijke rechtsbijstandverzekering       |
-      | Tractorverzekering                        | Tractorverzekering                        |
-      | Vrachtautoverzekering                     | Vrachtwagenverzekering                    |
-      | Werkmaterieelverzekering                  | Werkmaterieelverzekering                  |
+      | Zakelijke motorverzekering                | Zakelijke motorverzekering            |
+      | Zakelijke rechtsbijstandverzekering       | Zakelijke rechtsbijstandverzekering   |
+      | Tractorverzekering                        | Tractorverzekering                    |
+      | Vrachtautoverzekering                     | Vrachtwagenverzekering                |
+      | Werkmaterieelverzekering                  | Werkmaterieelverzekering              |
