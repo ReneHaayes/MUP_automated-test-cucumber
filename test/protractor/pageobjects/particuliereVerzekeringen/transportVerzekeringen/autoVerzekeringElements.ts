@@ -12,6 +12,8 @@ export class AutoVerzekeringElements {
   modelElement = '[data-label-id="LA_IF2509_3616"]';
   bodyTypeElement = '[data-label-id="LA_IF2509_3617"]';
   fuelTypeElement = '[data-label-id="LA_IF2509_3618"]';
+  meldCodeErrorElement = 'div:nth-child(4) > div.values > div > span';
+
 
   // Who drives the car the most
   mySelf = '[ng-repeat="option in applicationFormQuestions.IF28608_36322._list"][class="ng-scope checked"]';

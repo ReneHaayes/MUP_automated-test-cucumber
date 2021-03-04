@@ -10,8 +10,11 @@ import {browser} from 'protractor';
 
 When(/^I enter step one page of ongevallenverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await ongevallenVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
   // Click on Next at page two
+  // Click on Next at step two page
+  await genericMethods.waitForElementIsVisible(genericElements.nextButton, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
 });
 
@@ -26,6 +29,7 @@ When(/^I enter details of (.*) in your data page of ongevallen verzekeringen$/, 
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.waitForElementIsVisible(nawElements.yourDataPhoneNumberElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

@@ -8,8 +8,7 @@ import {
   hmPageElements,
   widgetPageElements
 } from '@support';
-import {
-  genericEnum,
+import {genericEnum,
   licensePlateHmPageEnum
 } from '@enum';
 import {browser} from 'protractor';
@@ -20,12 +19,14 @@ export class LicensePlateMethod {
     switch (input) {
       case licensePlateHmPageEnum.LICENSE_PLATE: {
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_BUSINESS: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessBerekenUwPremieButtonClickElement);
@@ -33,6 +34,7 @@ export class LicensePlateMethod {
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_COMPANY_CAR: {
         await genericMethods.clickOnElement(hmPageElements.homePageCompanyCarClickElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
@@ -45,6 +47,7 @@ export class LicensePlateMethod {
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE: {
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
@@ -55,6 +58,7 @@ export class LicensePlateMethod {
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_COMPANY_CAR: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
@@ -65,16 +69,19 @@ export class LicensePlateMethod {
       }
       case genericEnum.DONT_KNOW: {
         await genericMethods.clickOnElement(hmPageElements.homePageAutoverzekeringElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
         await genericMethods.clickOnElement(hmPageElements.homePageBusinessBedrijfsautoClickElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessDontKnowElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_COMPANY_CAR: {
         await genericMethods.clickOnElement(hmPageElements.homePageCompanyCarClickElement);
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
       }
