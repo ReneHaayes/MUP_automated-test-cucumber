@@ -95,9 +95,6 @@ export class PersonaData {
   ako: Persona = new Persona('Ako', 'AJC', prefix.NO_PREFIX, 'Koek', '09', '04', '1962', 'Kudelstaart', '1433DC', '4',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'ako62@live.nl', '8582', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
-  avonk: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Vonk', '19', '10', '1968', 'Apeldoorn', '7323MG', '4',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'antonie.vonk@live.nl', '1322', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
   erichters: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Evers', '01', '01', '1937', 'Delfzijl', '9934LP',
     '6', houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'eversrichters@ziggo.nl', '7671', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
@@ -160,9 +157,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.zipCode;
-      }
-      case personaName.AVONK: {
-        return this.avonk.zipCode;
       }
       case personaName.ERICHTERS: {
         return this.erichters.zipCode;
@@ -247,9 +241,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthDay;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthDay;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthDay;
       }
@@ -316,9 +307,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthMonth;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthMonth;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthMonth;
       }
@@ -370,10 +358,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthYear;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthYear;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.birthYear;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
@@ -457,9 +442,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthDay + '-' + this.ako.birthMonth + '-' + this.ako.birthYear;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthDay + '-' + this.avonk.birthMonth + '-' + this.avonk.birthYear;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthDay + '-' + this.erichters.birthMonth + '-' + this.erichters.birthYear;
       }
@@ -526,10 +508,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.lastName;
       }
-      case personaName.AVONK: {
-        return this.avonk.lastName;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.lastName;
       }
       case personaName.DARTHVADER: {
@@ -594,9 +573,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.firstName;
       }
-      case personaName.AVONK: {
-        return this.avonk.firstName;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.firstName;
       }
@@ -644,9 +620,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.gender;
-      }
-      case personaName.AVONK: {
-        return this.avonk.gender;
       }
       case personaName.ERICHTERS: {
         return this.erichters.gender;
@@ -714,9 +687,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.initials;
       }
-      case personaName.AVONK: {
-        return this.avonk.initials;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.initials;
       }
@@ -781,9 +751,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.prefix;
-      }
-      case personaName.AVONK: {
-        return this.avonk.prefix;
       }
       case personaName.ERICHTERS: {
         return this.erichters.prefix;
@@ -850,9 +817,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthPlace;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthPlace;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthPlace;
       }
@@ -917,9 +881,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.houseNumber;
-      }
-      case personaName.AVONK: {
-        return this.avonk.houseNumber;
       }
       case personaName.ERICHTERS: {
         return this.erichters.houseNumber;
@@ -986,9 +947,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.houseNumberAddition;
       }
-      case personaName.AVONK: {
-        return this.avonk.houseNumberAddition;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.houseNumberAddition;
       }
@@ -1053,9 +1011,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.phoneNumber;
-      }
-      case personaName.AVONK: {
-        return this.avonk.phoneNumber;
       }
       case personaName.ERICHTERS: {
         return this.erichters.phoneNumber;
@@ -1122,9 +1077,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.specificIdentification;
       }
-      case personaName.AVONK: {
-        return this.avonk.specificIdentification;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.specificIdentification;
       }
@@ -1189,9 +1141,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.specificIdentificationNumber;
-      }
-      case personaName.AVONK: {
-        return this.avonk.specificIdentificationNumber;
       }
       case personaName.ERICHTERS: {
         return this.erichters.specificIdentificationNumber;
@@ -1258,9 +1207,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.eMailAddress;
       }
-      case personaName.AVONK: {
-        return this.avonk.eMailAddress;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.eMailAddress;
       }
@@ -1325,9 +1271,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.accountNumber;
-      }
-      case personaName.AVONK: {
-        return this.avonk.accountNumber;
       }
       case personaName.ERICHTERS: {
         return this.erichters.accountNumber;
@@ -1394,9 +1337,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.bsn;
       }
-      case personaName.AVONK: {
-        return this.avonk.bsn;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.bsn;
       }
@@ -1461,9 +1401,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.profession;
-      }
-      case personaName.AVONK: {
-        return this.avonk.profession;
       }
       case personaName.ERICHTERS: {
         return this.erichters.profession;
@@ -1530,10 +1467,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.kvkNumber;
       }
-      case personaName.AVONK: {
-        return this.avonk.kvkNumber;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.kvkNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
@@ -1598,10 +1532,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.durationEntrepreneur;
       }
-      case personaName.AVONK: {
-        return this.avonk.durationEntrepreneur;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.durationEntrepreneur;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
@@ -1665,9 +1596,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.height;
-      }
-      case personaName.AVONK: {
-        return this.avonk.height;
       }
       case personaName.ERICHTERS: {
         return this.erichters.height;
@@ -1734,9 +1662,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.weight;
       }
-      case personaName.AVONK: {
-        return this.avonk.weight;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.weight;
       }
@@ -1801,9 +1726,6 @@ export class PersonaData {
       }
       case personaName.AKO: {
         return this.ako.password;
-      }
-      case personaName.AVONK: {
-        return this.avonk.password;
       }
       case personaName.ERICHTERS: {
         return this.erichters.password;
