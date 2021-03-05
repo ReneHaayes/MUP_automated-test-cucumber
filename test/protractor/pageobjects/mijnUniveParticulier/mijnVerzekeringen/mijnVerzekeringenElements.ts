@@ -1,16 +1,16 @@
 export class MijnVerzekeringenElements {
 
-  //ALGEMENE VOORWAARDEN
+  // ALGEMENE VOORWAARDEN
   algemeneVoorwaardenClickElement: string = '[href="/binaries/content/assets/pdfs/algemeen/algemene_voorwaarden.pdf"]';
   algemeneVoorwaardenPdfElement: string = '[type="application/pdf"]';
   algemeneVoorwaardenUrlCheckText: string = 'algemene_voorwaarden.pdf';
 
-  //VERZEKERINGSOVERZICHT
+  // VERZEKERINGSOVERZICHT
   polisDetailsClickElement(polisNumber: string): string {
-    return "[class='tile__link media'][href*='" + polisNumber + "']"
+    return '[class=\'tile__link media\'][href*=\'' + polisNumber + ']';
   }
 
-  //VERZEKERINGSKAARTEN
+  // VERZEKERINGSKAARTEN
   verzekeringsKaartenUrlClickElement: string = '[class="page-links"] [href*="verzekeringskaarten"]';
   verzekeringsKaartenWaitElement: string = '[src*="verzekeringskaarten"]';
 
