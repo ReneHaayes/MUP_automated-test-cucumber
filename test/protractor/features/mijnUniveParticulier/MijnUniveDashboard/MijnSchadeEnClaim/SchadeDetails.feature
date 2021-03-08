@@ -9,5 +9,5 @@ Feature: Going to damage and claim page and checking the different details on pa
 
     Examples:
       | damage number | persona    |
-      | 3151749       | darthvader |
+      | 3151796       | darthvader |
       | 1325373       | darthvader |
