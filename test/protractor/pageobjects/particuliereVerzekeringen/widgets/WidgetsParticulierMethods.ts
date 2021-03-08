@@ -481,7 +481,7 @@ export class WidgetsParticulierMethods {
 
 
   // auto
-  async clickOnAutoVerzekeringButton(input: string, licensePlate: string) {
+  async clickOnAutoVerzekeringButton(licensePlate: string, input: string) {
     switch (input) {
       case licensePlateHmPageEnum.LICENSE_PLATE: {
         await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
