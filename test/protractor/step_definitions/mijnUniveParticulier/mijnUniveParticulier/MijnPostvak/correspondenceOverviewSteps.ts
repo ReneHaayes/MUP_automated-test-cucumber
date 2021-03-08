@@ -1,5 +1,5 @@
-import {Then, When} from "cucumber";
-import {correspondentieOverzichtElements, genericMethods} from "@support";
+import {Then, When} from 'cucumber';
+import {correspondentieOverzichtElements, genericMethods} from '@support';
 
 When(/^Customer selects first correspondence for package$/, async () => {
   await genericMethods.clickOnElement(correspondentieOverzichtElements.correspondentieButtonClickElement);
