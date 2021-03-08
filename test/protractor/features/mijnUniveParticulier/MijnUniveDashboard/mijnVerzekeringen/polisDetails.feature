@@ -21,12 +21,13 @@ Feature: Going to polis details through mijn verzekeringen
       | polis number | insurance company | persona |
       | 1600478601   | Reaal             | illing  |
 
-  Scenario Outline: Change polis data from external companies
-    Given Customer <persona> is logged in on the <polisdetails url> page of the Unive website
-    When Customer changes the external polis
-    Then Verify thank you message for creating a change is correctly shown
-
-    Examples:
-      | persona | polisdetails url        |
-      | illing  | polisdetails 1600478601 |
+# not possible to change an external polis. This action will be activated when external polissen can be changed
+#  Scenario Outline: Change polis data from external companies
+#    Given Customer <persona> is logged in on the <polisdetails url> page of the Unive website
+#    When Customer changes the external polis
+#    Then Verify thank you message for creating a change is correctly shown
+#
+#    Examples:
+#      | persona | polisdetails url        |
+#      | illing  | polisdetails 1600478601 |
 
