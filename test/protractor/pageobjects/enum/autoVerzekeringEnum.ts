@@ -1,9 +1,15 @@
 export enum yearlyMileageEnum {
+
   TOT_12000 = 'tot12000',
-  _12000_TOT_20000 = '12000tot20000',
-  _20000_TOT_25000 = '20000tot25000',
-  _25000_TOT_35000 = '25000tot35000',
-  MORE_THEN_35000 = 'meerDan35000'
+  TUSSEN_12000_EN_20000 = '12000tot20000',
+  TUSSEN_20000_EN_25000 = '20000tot25000',
+  TUSSEN_25000_EN_35000 = '25000tot35000',
+  MORE_THAN_35000 = 'meerDan35000',
+
+  // camper
+  TOT_10000 = 'tot10000',
+  TUSSEN_10000_EN_20000 = '10000tot20000',
+  MORE_THAN_20000 = 'meerDan20000',
 }
 
 export enum vehicleAccEnum {
@@ -69,6 +75,13 @@ export enum vehicleInfoEnum {
   DELIVERY_VAN = 'delivery van',
   LORRY = 'lorry',
   TRAILER = 'trailer'
+}
+
+export enum vehicleUsage {
+  RECREATIONAL_USEAGE = 'recreational',
+  DAILY_RECREATIONAL_USEAGE = 'daily recreational',
+  BUSINESS_USEAGE = 'business',
+  RENTAL_USAGE = 'rental',
 }
 
 export enum maxSpeedEnum {

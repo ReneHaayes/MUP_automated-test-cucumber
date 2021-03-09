@@ -22,7 +22,7 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw vervoer         | Autoverzekering              |
       | uw vervoer         | Bromfietsverzekering         |
       | alle verzekeringen | Scooterverzekering           |
-      | alle verzekeringen | Motorfietsverzekering        |
+      | alle verzekeringen | Motorverzekering             |
       | uw vervoer         | Fietsverzekering             |
       | uw vervoer         | Elektrische fietsverzekering |
       | uw vervoer         | Scootmobielverzekering       |

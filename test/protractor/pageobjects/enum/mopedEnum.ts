@@ -5,7 +5,7 @@ export enum mopedTypeEnum {
   BAKFIETS = 'bakfiets',
   BROMMOBIEL = 'brommobiel',
   OVERIG = 'overig',
-  SNORFIETS = 'snorfiets',
+  SNORFIETS = 'SNORFIETS',
   SNORSCOOTER = 'SNORSCOOTER',
   FIETS_MET_HULPMOTOR = 'fiets met hulpmotor',
 

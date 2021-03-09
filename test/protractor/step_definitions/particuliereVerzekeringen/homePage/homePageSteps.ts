@@ -1,6 +1,6 @@
-import {Then, When} from "cucumber";
-import {genericMethods, getUrlUnive, hmPageMethods, schadeServiceElements} from "@support";
-import {browser} from "protractor";
+import {Then, When} from 'cucumber';
+import {genericMethods, getUrlUnive, hmPageMethods, schadeServiceElements} from '@support';
+import {browser} from 'protractor';
 
 
 When(/^I press the button (.*) on the homepage$/, async (button: string) => {

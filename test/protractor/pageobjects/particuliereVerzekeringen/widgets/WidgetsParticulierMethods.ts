@@ -300,7 +300,7 @@ export class WidgetsParticulierMethods {
     switch (input) {
       case genericEnum.WILL: {
         await genericMethods.waitForElementIsPresent('[class="mainHeader_channelsLink _is_active"][href="https://pat.unive.nl/"]', browser.getPageTimeout);
-        await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeBrandElement, mobileHomeWithLicensePlate.getMobileHomeBrandName(licensePlate));
+        await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeBrandElement, mobileHomeWithLicensePlate.getMobileHomeBrand(licensePlate));
         await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeModelElement, mobileHomeWithLicensePlate.getMobileHomeModel(licensePlate));
         await genericMethods.verifyTextInElement(mobileHomeElements.mobileHomeYearElement, mobileHomeWithLicensePlate.getMobileHomeConstructionYear(licensePlate));
         break;
@@ -479,7 +479,68 @@ export class WidgetsParticulierMethods {
 
 
   // auto
-  // Zie test/protractor/features/particuliereVerzekeringen/transportVerzekeringen/personenAutoLicensePlateWidget.feature
+  async clickOnPersonenautoLicensePlateButton(licensePlate: string, input: string) {
+    switch (input) {
+      case licensePlateHmPageEnum.LICENSE_PLATE: {
+        await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.LICENSE_PLATE_BUSINESS: {
+        await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateButton);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.LICENSE_PLATE_COMPANY_CAR: {
+        await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.LICENSE_PLATE_PP: {
+        await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE_BUSINESS: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE_COMPANY_CAR: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case licensePlateHmPageEnum.NO_LICENSE_PLATE_PP: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
+        break;
+      }
+      case genericEnum.DONT_KNOW: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
+        break;
+      }
+      case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessDontKnowElement);
+        break;
+      }
+      case licensePlateHmPageEnum.DONT_KNOW_COMPANY_CAR: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
+        break;
+      }
+      case licensePlateHmPageEnum.DONT_KNOW_PP: {
+        await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
 
 
   // motor

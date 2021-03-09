@@ -75,7 +75,10 @@ export enum genericEnum {
   SECONDHAND = 'secondhand',
   REPLACEMENT = 'replacement',
   EXTRA = 'EXTRA',
-  GEEN = 'Geen'
+  GEEN = 'Geen',
+  GOED = 'goed',
+  BETER = 'beter',
+  BEST = 'best'
 }
 
 export enum verzekeringPaginasEnum {
@@ -104,8 +107,8 @@ export enum verzekeringPaginasEnum {
   WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPp',
   BROMFIETSVERZEKERING_PAT = 'Bromfietsverzekering',
   SCOOTERVERZEKERING_PAT = 'Scooterverzekering',
-  MOTORFIETSVERZEKERING_PAT = 'Motorfietsverzekering',
-  ZAKELIJK_MOTORFIETSVERZEKERING = 'Zakelijke motorfietsverzekering',
+  MOTORFIETSVERZEKERING_PAT = 'Motorverzekering',
+  ZAKELIJK_MOTORFIETSVERZEKERING = 'Zakelijke motorverzekering',
   QUADVERZEKERING_PAT = 'Quadverzekering',
   TRIKEVERZEKERING_PAT = 'Trikeverzekering',
   ZORGELOOS_ONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',
@@ -140,6 +143,7 @@ export enum verzekeringPaginasEnum {
   RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',
   SCOOTMOBIELVERZEKERING = 'Scootmobielverzekering',
   EIGENVERVOERVERZEKERING = 'Eigen vervoerverzekering',
+  EIGENVERVOERVERZEKERING_PP = 'Eigen vervoerverzekering PP',
   ZAKELIJK_RECHTSBIJSTANDVERZEKERING = 'Zakelijke rechtsbijstandverzekering',
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING = 'Bedrijfsaansprakelijkheidsverzekering',
   ZAKELIJK_AANSPRAKELIJKHEIDSVERZEKERING_PP = 'BedrijfsaansprakelijkheidsverzekeringPp',
@@ -165,6 +169,21 @@ export enum verzekeringPaginasEnum {
   MILIEUSCHADEVERZEKERING = 'Milieuschadeverzekering',
   VRACHTAUTOVERZEKERING = 'Vrachtwagenverzekering',
   WERKMATERIAALVERZEKERING = 'Werkmaterieelverzekering',
+
+  AANHANGWAGENVERZEKERING = 'Aanhangwagenverzekering',
+  ZAKELIJKE_BROMFIETSVERZEKERING = 'Zakelijke bromfietsverzekering',
+  BESTELAUTOVERZEKERING = 'Bestelautoverzekering',
+  ARBEIDSONGESCHIKTHEIDSVERZEKERING_ZZP = 'Arbeidsongeschiktheidsverzekering voor Zzp\'ers',
+  ARBEIDSONGESCHIKTHEIDSVERZEKERING = 'Arbeidsongeschiktheidsverzekering',
+  PENSIOEN_VOOR_ONDERNEMERS = 'Pensioen voor ondernemers',
+  WERKNEMERSSCHADEVERZEKERING = 'Werknemersschadeverzekering',
+  WERKNEMERSPENSIOEN = 'Werknemerspensioen',
+  ARBEIDSONGESCHIKTHEIDSVERZEKERING_AOV = 'Arbeidsongeschiktheidsverzekering (AOV)',
+  UW_PENSIOEN = 'Uw Pensioen',
+  ROERENDE_ZAKEN_VERZEKERING = 'Roerende zakenverzekering',
+  WERKNEMERS_SCHADE_VERZEKERING_WSV = 'Werknemersschadeverzekering (WSV)',
+  PENSIOEN_VOOR_UW_PERSONEEL = 'Pensioen voor uw personeel',
+
   MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
   MIJN_UNIVE_BETAALGEGEVENS_WIJZIGEN = 'mijn unive betaalgegevens wijzigen',
   MIJN_UNIVE_CONTACTVOORKEUREN_DOORGEVEN = 'mijn unive contactvoorkeuren doorgeven',
@@ -200,7 +219,8 @@ export enum verzekeringPaginasEnum {
   ZORGVERZEKERINGCROSSELLBEDANKPAGINAPARAMETER = 'zorgVerzekeringCrossSellBedankpaginaParameter',
   ZORGPREMIEALERT = 'zorgPremieAlert',
   PREFILL_OMRING_PASHOUDERS = 'prefill omring pashouders',
-  SALESWIDGETS = 'salesWidgets'
+  SALESWIDGETS = 'salesWidgets',
+  ZZP_PAKKET = 'zzp pakket',
 }
 
 export enum faqPage {

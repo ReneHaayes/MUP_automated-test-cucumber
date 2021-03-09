@@ -595,6 +595,7 @@ export class GenericMethods {
   }
 
   async clickOnTakeOutInsuranceNowButton() {
+    await this.waitForElementIsVisible(genericElements.takeOutInsuranceNowButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.takeOutInsuranceNowButton);
   }
 
@@ -715,8 +716,9 @@ export class GenericMethods {
     }
   }
 
-    async selectInsuranceHistory(input: string) {
+  async selectInsuranceHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
+      browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
@@ -735,6 +737,7 @@ export class GenericMethods {
 
   async selectCriminalHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.criminalHistoryYesElement);
@@ -753,11 +756,12 @@ export class GenericMethods {
   }
 
   async selectDamageHistory(input: string) {
-    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    await this.waitForElementIsVisible(genericElements.damageHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.damageHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
+        await this.typeText(genericElements.damageHistoryYesExplanationElement, 'test');
         break;
       }
       case genericEnum.NO: {

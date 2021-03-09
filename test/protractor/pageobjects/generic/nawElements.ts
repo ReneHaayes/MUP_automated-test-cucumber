@@ -26,8 +26,8 @@ export class NawElements {
   yourDataPrefixElement = '#_Form_IF2530_3689';
   yourDataLastNameElement = '#_Form_IF2530_3690';
 
-  yourDataGenderMaleElement = '[data-label-id*="LA_IF2530_3691"] .radioList > label:nth-child(1)';
-  yourDataGenderFemaleElement = '[data-label-id*="LA_IF2530_3691"] .radioList > label:nth-child(2)';
+  yourDataGenderMaleElement = '[data-label-id*="LA_IF2530_3691"] div > label:nth-child(1)';
+  yourDataGenderFemaleElement = '[data-label-id*="LA_IF2530_3691"] div > label:nth-child(2)';
 
   yourDataBirthDayElement = '#_Form_IF2530_3692';
   yourDataBirthPlaceElement = '#_Form_IF2530_19949';

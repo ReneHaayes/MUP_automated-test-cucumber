@@ -6,45 +6,12 @@ import {
   genericElements,
   genericMethods,
   nawElements,
-  personaData
+  personaData,
 } from '@support';
 import {browser} from 'protractor';
 
-When(/^I enter step one page and click next on step two of eigen vervoer verzekering with:$/, async function (data) {
-  const dataTable = data.rowsHash();
-  await eigenVervoerVerzekeringMethods.selectActivity(dataTable.activity);
-  await eigenVervoerVerzekeringMethods.selectVehicleInfo(dataTable.typeCar, dataTable.howMany);
-  await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.openTrailerNoClickElement);
-  await genericMethods.clickOnNextButton();
-  await genericMethods.clickOnNextButton();
-});
 
-When(/^I enter step four page of eigen vervoer verzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
-  await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
-  await genericMethods.typeText(nawElements.companyDataNameInputElement, companyData.getCompanyName(company));
-  await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
-  await genericMethods.typeText(nawElements.companyDataZipCodeInputElement, companyData.getCompanyZipcode(company));
-  await genericMethods.clickOnTAB(nawElements.companyDataZipCodeInputElement);
-  await genericMethods.typeText(nawElements.companyDataHouseNumberInputElement, companyData.getCompanyHouseNumber(company));
-  await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
-  await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
-  await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
-  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
-  await genericMethods.typeText(nawElements.companyDataEmailAddressConfirmInputElement, companyData.getCompanyEmailAddress(company));
-  await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressConfirmInputElement);
-  await genericMethods.typeText(nawElements.contactDataInitialsInputElement, personaData.getPersonaInitials(persona));
-  await genericMethods.typeText(nawElements.contactDataPrefixInputElement, personaData.getPersonaPrefix(persona));
-  await genericMethods.typeText(nawElements.contactDataLastNameInputElement, personaData.getPersonaLastName(persona));
-  await genericMethods.clickContactDataGender(personaData.getPersonaGender(persona));
-  await genericMethods.typeText(genericElements.accountNumberElement, personaData.getPersonaAccountNumber(persona));
-  await genericMethods.clickOnTAB(genericElements.accountNumberElement);
-  await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
-  await genericMethods.clickOnNextButton();
-});
-
-
-
-// Nieuw
+// sinds sprint 21-02
 When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click next$/, async function (company: string) {
   await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.kvkNumberInputElement, browser.getPageTimeout);
   await genericMethods.typeText(eigenVervoerVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
@@ -53,15 +20,11 @@ When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click n
   await genericMethods.verifyTextInElement(eigenVervoerVerzekeringElements.kvkActivityCheckElement, companyData.getCompanyMainActivity(company));
 });
 
-
   When(/^I answer the questions on step one with:$/, async function (data) {
     const dataTable = data.rowsHash();
-     // await eigenVervoerVerzekeringMethods.selectCorrectCompanyActivity(dataTable.correctCompanyActivity);
-     // await eigenVervoerVerzekeringMethods.selectHasEmployees(dataTable.hasEmployee);
-
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.correctActivityYesElement);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.hasEmployeeYesElement);
-
+    await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.vehicleInfoPassengerCarClickElement, browser.getPageTimeout);
     await eigenVervoerVerzekeringMethods.selectVehicleInfo(dataTable.typeCar, dataTable.howMany);
     await genericMethods.waitForElementIsVisible(eigenVervoerVerzekeringElements.openTrailerNoClickElement, browser.getPageTimeout);
     await genericMethods.clickOnElement(eigenVervoerVerzekeringElements.openTrailerNoClickElement);
@@ -85,4 +48,12 @@ When(/^I enter the third step of eigen vervoer verzekering for (.*) with (.*)$/,
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
+});
+
+When(/^I fill in eigen vervoersverzekering widget with (.*) and click Bereken uw Premie$/, async function (company: string) {
+  await genericMethods.verifyBreadcrumbOnPosition('Eigen vervoerverzekering', 3);
+  await genericMethods.typeTextShadowRoot(eigenVervoerVerzekeringElements.kvkWidgetInputElement, companyData.getCompanyKvkNumber(company));
+  await genericMethods.clickOnElementShadowRoot(eigenVervoerVerzekeringElements.kvkWidgetClickBerekenPremieElement);
+
+browser.sleep(5000);
 });

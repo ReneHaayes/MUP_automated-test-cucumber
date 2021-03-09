@@ -296,7 +296,6 @@ export class WoonVerzekeringMethods {
         await genericMethods.clickOnElement(hmPageElements.homePageWoonverzekeringElement);
         await genericMethods.typeText(hmPageElements.woonVerzekeringZipCodeElement, personaData.getPersonaZipcode(persona));
         await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberElement, personaData.getPersonaHouseNumber(persona));
-        // await genericMethods.typeText(hmPageElements.woonVerzekeringHouseNumberAddingElement, personaData.getPersonaHouseNumberAddition(persona));
         await genericMethods.clickOnElement(hmPageElements.woonVerzekeringButtonElement);
         break;
       }

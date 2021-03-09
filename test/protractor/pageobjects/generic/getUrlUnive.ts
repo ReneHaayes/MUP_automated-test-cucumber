@@ -1,6 +1,10 @@
 import {browser} from 'protractor';
-import {breadCrumbEnum, homePageEnum, polisDetailsUrlEnum, verzekeringPaginasEnum} from '@enum';
-import {apiElements, genericElements} from '@support';
+import {breadCrumbEnum,
+  homePageEnum,
+  polisDetailsUrlEnum,
+  verzekeringPaginasEnum} from '@enum';
+import {apiElements,
+  genericElements} from '@support';
 import {faqPage} from '../enum/genericEnum';
 
 export class GetUrlUnive {
@@ -117,6 +121,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING: {
         return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekering;
+      }
+      case verzekeringPaginasEnum.EIGENVERVOERVERZEKERING_PP: {
+        return this.getEnv(browser.params.env.environment) + genericElements.eigenVervoerVerzekeringPp;
       }
       case verzekeringPaginasEnum.CALAMITEITEN: {
         return this.getEnv(browser.params.env.environment) + verzekeringPaginasEnum.CALAMITEITEN;
@@ -316,8 +323,14 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.ZORGPREMIEALERT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;
       }
+      case verzekeringPaginasEnum.ZZP_PAKKET: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zzpPakket;
+      }
       case verzekeringPaginasEnum.SALESWIDGETS: {
         return this.getEnv(browser.params.env.environment) + genericElements.salesWidgets;
+      }
+      case verzekeringPaginasEnum.ZZP_PAKKET: {
+        return this.getEnv(browser.params.env.environment) + genericElements.zzpPakket;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

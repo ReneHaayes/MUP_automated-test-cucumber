@@ -25,7 +25,7 @@ export class MobileHomeWithLicensePlate {
   MobileHome_BLJL41: MobileHome = new MobileHome(licensePlates.MOBILE_HOME_BLJL41, 'SPARTAN', 'CRUISE-MASTER' , '1995', '15000', '0000' );
   MobileHome_1VPR20: MobileHome = new MobileHome(licensePlates.MOBILE_HOME_1VPR20, 'PEUGEOT', 'BOXER' , '2011', '15000', '0000' );
 
-  getMobileHomeBrandName(input: string): string {
+  getMobileHomeBrand(input: string): string {
     switch (input) {
       case licensePlates.MOBILE_HOME_BLJL41: {
         return this.MobileHome_BLJL41.brandName;
@@ -83,7 +83,7 @@ export class MobileHomeWithLicensePlate {
     }
   }
 
-  getMobileHomeMeldCode(input: string): string {
+  getMobileHomeReportingCode(input: string): string {
     switch (input) {
       case licensePlates.MOBILE_HOME_BLJL41: {
         return this.MobileHome_BLJL41.meldCode;
