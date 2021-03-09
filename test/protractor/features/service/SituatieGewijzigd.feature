@@ -8,9 +8,9 @@ Feature: Testing klantenservice page for situatie gewijzigd
     Then Verify header with text <situation> of situation is correcly shown
 
     Examples:
-      | situation         |
-      | trouwen           |
-      | verhuizing        |
-      | scheiding         |
-      | gezinsuitbreiding |
+      | situation                 |
+      | trouwen                   |
+      | verhuizing doorgeven      |
+      | scheiding                 |
+      | gezinsuitbreiding         |
 
