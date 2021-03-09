@@ -8,10 +8,10 @@ Feature: Verify the direct online section on klantenservice directs correctly.
     Then Verify the page is correctly loaded with url for tile <tile>
 
     Examples:
-      | tile                      |
-      | Schade melden             |
-      | Zorgnota declareren       |
-      | Persoonsgegevens wijzigen |
-      | Verzekering wijzigen      |
-      | Verzekering inzien        |
-      | Mijn Univé                |
+      | tile                             |
+      | Schade melden                    |
+      | Zorgverzekering declareren       |
+      | Persoonsgegevens wijzigen        |
+      | Verzekering inzien of wijzigen   |
+      | Verzekering inzien               |
+      | Mijn Univé                       |
