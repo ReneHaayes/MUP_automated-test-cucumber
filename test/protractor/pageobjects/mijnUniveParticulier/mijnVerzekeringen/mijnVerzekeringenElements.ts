@@ -1,53 +1,53 @@
 export class MijnVerzekeringenElements {
 
-  //ALGEMENE VOORWAARDEN
-  algemeneVoorwaardenClickElement: string = '[href="/binaries/content/assets/pdfs/algemeen/algemene_voorwaarden.pdf"]';
-  algemeneVoorwaardenPdfElement: string = '[type="application/pdf"]';
-  algemeneVoorwaardenUrlCheckText: string = 'algemene_voorwaarden.pdf';
+  // ALGEMENE VOORWAARDEN
+  algemeneVoorwaardenClickElement = '[href="/binaries/content/assets/pdfs/algemeen/algemene_voorwaarden.pdf"]';
+  algemeneVoorwaardenPdfElement = '[type="application/pdf"]';
+  algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
-  //VERZEKERINGSOVERZICHT
+  // VERZEKERINGSOVERZICHT
   polisDetailsClickElement(polisNumber: string): string {
-    return "[class='tile__link media'][href*='" + polisNumber + "']"
+    return '[class=\'tile__link media\'][href*=\'' + polisNumber + ']';
   }
 
-  //VERZEKERINGSKAARTEN
-  verzekeringsKaartenUrlClickElement: string = '[class="page-links"] [href*="verzekeringskaarten"]';
-  verzekeringsKaartenWaitElement: string = '[src*="verzekeringskaarten"]';
+  // VERZEKERINGSKAARTEN
+  verzekeringsKaartenUrlClickElement = '[class="page-links"] [href*="verzekeringskaarten"]';
+  verzekeringsKaartenWaitElement = '[src*="verzekeringskaarten"]';
 
-  //POLIS DETAILS
-  polisNumberTextElement: string = '//*[contains(text(),"Polisnummer")]/following-sibling::div';
-  damageNumberTextElement: string = '//*[contains(text(),"Schadenummer")]/following::span[1]';
-  statusPolisTextElement: string = '//*[contains(text(),"Status polis")]/following-sibling::div';
-  insuranceCompanyExternTextElement: string = '//*[contains(text(),"Verzekeraar")]/following-sibling::div';
-  statusEndedText: string = 'Beëindigd';
-  showEndedAndActiveInsurancesClickElement: string = '[class="is-visible-desktop-only"]';
+  // POLIS DETAILS
+  polisNumberTextElement = '//*[contains(text(),"Polisnummer")]/following-sibling::div';
+  damageNumberTextElement = '//*[contains(text(),"Schadenummer")]/following::span[1]';
+  statusPolisTextElement = '//*[contains(text(),"Status polis")]/following-sibling::div';
+  insuranceCompanyExternTextElement = '//*[contains(text(),"Verzekeraar")]/following-sibling::div';
+  statusEndedText = 'Beëindigd';
+  showEndedAndActiveInsurancesClickElement = '[class="is-visible-desktop-only"]';
 
-  changeInsuranceClickElement: string = '[href*="poliswijzigen"]';
-  changeInsuranceDescriptionAreaInputElement: string = '[title="Beschrijving van de wijziging"]';
-  changeInsuranceSubmitButtonClickElement: string = '[class="button form-buttons__button"]';
-  changeInsuranceThankYouTextElement: string = '[class="form-container"] > p';
-  changeInsuranceThankYouText: string = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
+  changeInsuranceClickElement = '[href*="poliswijzigen"]';
+  changeInsuranceDescriptionAreaInputElement = '[title="Beschrijving van de wijziging"]';
+  changeInsuranceSubmitButtonClickElement = '[class="button form-buttons__button"]';
+  changeInsuranceThankYouTextElement = '[class="form-container"] > p';
+  changeInsuranceThankYouText = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
 
-  //LOADER
-  blockingLoaderSpinningElement: string = '[class*="blockUI"]';
+  // LOADER
+  blockingLoaderSpinningElement = '[class*="blockUI"]';
 
-  //VOERTUIG WIJZIGEN
-  voertuigWijzigenClickElement: string = '[href*="changeVehicle"]';
-  verzekeringWijzigenClickElement: string = '[href*="changeCoverageDetails"]';
-  perEersteMogelijkheidClickElement: string = '#_AddMyPolicyChangeStepDetails_dateStart_minDate';
-  nextButtonClickElement: string = '[id="_AddMyPolicyChangeStepDetails_null"]';
+  // VOERTUIG WIJZIGEN
+  voertuigWijzigenClickElement = '[href*="changeVehicle"]';
+  verzekeringWijzigenClickElement = '[href*="changeCoverageDetails"]';
+  perEersteMogelijkheidClickElement = '#_AddMyPolicyChangeStepDetails_dateStart_minDate';
+  nextButtonClickElement = '[id="_AddMyPolicyChangeStepDetails_null"]';
 
-  //VOERTUIG WIJZIGEN UW AUTO
-  licensePlateInputElement: string = '#_Form_IF2506_3611';
+  // VOERTUIG WIJZIGEN UW AUTO
+  licensePlateInputElement = '#_Form_IF2506_3611';
 
-  //AANVULLENDE GEGEVENS
-  meldCodeInputElement: string = '#_Form_IF2526_3682';
-  correctEmailAdresTrueClickElement: string = '#_Form_IF28234_35678_true';
-  finishAndSaveButtonClickElement: string = '#_Form_finishSaveAndSend';
+  // AANVULLENDE GEGEVENS
+  meldCodeInputElement = '#_Form_IF2526_3682';
+  correctEmailAdresTrueClickElement = '#_Form_IF28234_35678_true';
+  finishAndSaveButtonClickElement = '#_Form_finishSaveAndSend';
 
-  //SUCCESS
-  succesMessageTextElement: string = '[class="success message"] > p > span';
-  succesMessageText: string = 'Wij hebben de wijziging doorgevoerd op de polis.';
+  // SUCCESS
+  succesMessageTextElement = '[class="success message"] > p > span';
+  succesMessageText = 'Wij hebben de wijziging doorgevoerd op de polis.';
 
 
 }

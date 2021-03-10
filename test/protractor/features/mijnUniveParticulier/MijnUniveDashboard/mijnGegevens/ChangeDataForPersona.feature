@@ -9,7 +9,7 @@ Feature: Changing data for persona when logged in.
 
     Examples:
       | persona | newPassword    |
-      | avonk   | Wachtwoord123! |
+      | erichters   | Wachtwoord123! |
 
   Scenario Outline: Change emailadres for login.
     Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website

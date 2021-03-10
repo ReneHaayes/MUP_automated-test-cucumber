@@ -83,7 +83,7 @@ export class PersonaData {
   pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15', '03', '1993', 'Zwolle', '7412TV', '69',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, phoneNumber.NO_PHONENUMBER, specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
     'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110', 'Welkom01!');
-  illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing-van Bruggen', '28', '10', '1962', 'Deventer', '7412XW', '91',
+  illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing - van Bruggen', '28', '10', '1962', 'Deventer', '9939 PA', '27',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
     '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   woestenburg: Persona = new Persona('Annie', 'AF', prefix.NO_PREFIX, 'Woestenburg', '19', '10', '1956', 'Venhuizen', '1606XA', '11',
@@ -95,9 +95,6 @@ export class PersonaData {
   ako: Persona = new Persona('Ako', 'AJC', prefix.NO_PREFIX, 'Koek', '09', '04', '1962', 'Kudelstaart', '1433DC', '4',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'ako62@live.nl', '8582', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
-  avonk: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Vonk', '19', '10', '1968', 'Apeldoorn', '7323MG', '4',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'antonie.vonk@live.nl', '1322', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
   erichters: Persona = new Persona('Antonie', 'A', prefix.NO_PREFIX, 'Evers', '01', '01', '1937', 'Delfzijl', '9934LP',
     '6', houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'eversrichters@ziggo.nl', '7671', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
@@ -122,6 +119,15 @@ export class PersonaData {
   testPartner: Persona = new Persona('Arie', 'A.', 'De', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+
+  darthvader: Persona = new Persona('Anakin', 'A.', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '8011TS', '126',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0612345678', specificIdentification.PASSPORT, 'ACP26N', 'darthvader@univetest.nl',
+    'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
+
+  skywalker: Persona = new Persona('Luke', 'L.', prefix.NO_PREFIX, 'Partner', '16', '06', '1973', 'Kampen', '8261CA', '222',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0612345679', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
+    'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
+
 
   getPersonaZipcode(input: string): string {
     switch (input) {
@@ -152,9 +158,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.zipCode;
       }
-      case personaName.AVONK: {
-        return this.avonk.zipCode;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.zipCode;
       }
@@ -178,6 +181,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.zipCode;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.zipCode;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.zipCode;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -232,14 +241,17 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthDay;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthDay;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthDay;
       }
       case personaName.KNOPPERS: {
         return this.knoppers.birthDay;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.birthDay;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.birthDay;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -295,14 +307,17 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthMonth;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthMonth;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthMonth;
       }
       case personaName.KNOPPERS: {
         return this.knoppers.birthMonth;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.birthMonth;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.birthMonth;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -343,10 +358,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthYear;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthYear;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.birthYear;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
@@ -366,6 +378,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.birthYear;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.birthYear;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.birthYear;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -424,11 +442,14 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthDay + '-' + this.ako.birthMonth + '-' + this.ako.birthYear;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthDay + '-' + this.avonk.birthMonth + '-' + this.avonk.birthYear;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthDay + '-' + this.erichters.birthMonth + '-' + this.erichters.birthYear;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.birthDay + '-' + this.darthvader.birthMonth + '-' + this.darthvader.birthYear;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.birthDay + '-' + this.skywalker.birthMonth + '-' + this.skywalker.birthYear;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -487,11 +508,14 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.lastName;
       }
-      case personaName.AVONK: {
-        return this.avonk.lastName;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.lastName;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.lastName;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.lastName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -549,11 +573,14 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.firstName;
       }
-      case personaName.AVONK: {
-        return this.avonk.firstName;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.firstName;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.firstName;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.firstName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -594,9 +621,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.gender;
       }
-      case personaName.AVONK: {
-        return this.avonk.gender;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.gender;
       }
@@ -617,6 +641,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.gender;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.gender;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.gender;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -657,9 +687,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.initials;
       }
-      case personaName.AVONK: {
-        return this.avonk.initials;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.initials;
       }
@@ -680,6 +707,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.initials;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.initials;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.initials;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -719,9 +752,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.prefix;
       }
-      case personaName.AVONK: {
-        return this.avonk.prefix;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.prefix;
       }
@@ -742,6 +772,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.prefix;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.prefix;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.prefix;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -781,9 +817,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.birthPlace;
       }
-      case personaName.AVONK: {
-        return this.avonk.birthPlace;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.birthPlace;
       }
@@ -804,6 +837,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.birthPlace;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.birthPlace;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.birthPlace;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -843,9 +882,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.houseNumber;
       }
-      case personaName.AVONK: {
-        return this.avonk.houseNumber;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.houseNumber;
       }
@@ -866,6 +902,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.houseNumber;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.houseNumber;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.houseNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -905,9 +947,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.houseNumberAddition;
       }
-      case personaName.AVONK: {
-        return this.avonk.houseNumberAddition;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.houseNumberAddition;
       }
@@ -928,6 +967,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.houseNumberAddition;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.houseNumberAddition;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.houseNumberAddition;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -967,9 +1012,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.phoneNumber;
       }
-      case personaName.AVONK: {
-        return this.avonk.phoneNumber;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.phoneNumber;
       }
@@ -990,6 +1032,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.phoneNumber;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.phoneNumber;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.phoneNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1029,9 +1077,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.specificIdentification;
       }
-      case personaName.AVONK: {
-        return this.avonk.specificIdentification;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.specificIdentification;
       }
@@ -1052,6 +1097,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.specificIdentification;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.specificIdentification;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.specificIdentification;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1091,9 +1142,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.specificIdentificationNumber;
       }
-      case personaName.AVONK: {
-        return this.avonk.specificIdentificationNumber;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.specificIdentificationNumber;
       }
@@ -1114,6 +1162,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.specificIdentificationNumber;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.specificIdentificationNumber;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.specificIdentificationNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1153,9 +1207,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.eMailAddress;
       }
-      case personaName.AVONK: {
-        return this.avonk.eMailAddress;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.eMailAddress;
       }
@@ -1176,6 +1227,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.eMailAddress;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.eMailAddress;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.eMailAddress;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1215,9 +1272,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.accountNumber;
       }
-      case personaName.AVONK: {
-        return this.avonk.accountNumber;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.accountNumber;
       }
@@ -1238,6 +1292,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.accountNumber;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.accountNumber;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.accountNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1277,9 +1337,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.bsn;
       }
-      case personaName.AVONK: {
-        return this.avonk.bsn;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.bsn;
       }
@@ -1300,6 +1357,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.bsn;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.bsn;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.bsn;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1339,9 +1402,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.profession;
       }
-      case personaName.AVONK: {
-        return this.avonk.profession;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.profession;
       }
@@ -1362,6 +1422,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.profession;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.profession;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.profession;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1401,10 +1467,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.kvkNumber;
       }
-      case personaName.AVONK: {
-        return this.avonk.kvkNumber;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.kvkNumber;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
@@ -1424,6 +1487,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.kvkNumber;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.kvkNumber;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.kvkNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1463,10 +1532,7 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.durationEntrepreneur;
       }
-      case personaName.AVONK: {
-        return this.avonk.durationEntrepreneur;
-      }
-      case personaName.ERICHTERS: {
+       case personaName.ERICHTERS: {
         return this.erichters.durationEntrepreneur;
       }
       case personaName.TESTVROUWCUSTOMERRECOGNITION: {
@@ -1486,6 +1552,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.durationEntrepreneur;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.durationEntrepreneur;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.durationEntrepreneur;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1525,9 +1597,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.height;
       }
-      case personaName.AVONK: {
-        return this.avonk.height;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.height;
       }
@@ -1548,6 +1617,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.height;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.height;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.height;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1587,9 +1662,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.weight;
       }
-      case personaName.AVONK: {
-        return this.avonk.weight;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.weight;
       }
@@ -1610,6 +1682,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.weight;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.weight;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.weight;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1649,9 +1727,6 @@ export class PersonaData {
       case personaName.AKO: {
         return this.ako.password;
       }
-      case personaName.AVONK: {
-        return this.avonk.password;
-      }
       case personaName.ERICHTERS: {
         return this.erichters.password;
       }
@@ -1672,6 +1747,12 @@ export class PersonaData {
       }
       case personaName.TESTPARTNER: {
         return this.testPartner.password;
+      }
+      case personaName.DARTHVADER: {
+        return this.darthvader.password;
+      }
+      case personaName.SKYWALKER: {
+        return this.skywalker.password;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
