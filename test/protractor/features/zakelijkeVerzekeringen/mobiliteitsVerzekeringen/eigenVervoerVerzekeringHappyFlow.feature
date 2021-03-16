@@ -38,6 +38,3 @@ Feature: Happy flow for 'zakelijk eigen vervoer verzekering'
     Examples:
       | persona | company         |
       | ronaldo | rg timmerwerken |
-
-
-

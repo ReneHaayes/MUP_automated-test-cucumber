@@ -40,9 +40,7 @@ When(/^I fill in almost insured page with:$/, async (data) => {
       genericMethods.clickOnNextButton().then();
     } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === mopedTypeEnum.SNORFIETS) {
       genericMethods.clickOnNextButton().then();
-    } else {
-      return;
-    }
+    } else { }
   }
   await genericMethods.clickOnTakeOutInsuranceNowButton();
 });
