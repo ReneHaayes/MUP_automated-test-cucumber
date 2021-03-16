@@ -8,7 +8,6 @@ Feature: Happy flow for 'personenautoverzekering'
     And Customer enters step two page of autoverzekering with collective aut
     And Customer enters step three page of autoverzekering for <licensePlate>
     And Customer enters step four page of autoverzekering for <persona>
-#    Then Customer can select bekijk controleer gegevens for autoverzekering in almost insured page with correct data
     And I fill in almost insured page with:
       | insuranceHistory | no |
       | criminalHistory  | no |

@@ -3,8 +3,18 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import * as path from 'path';
 
-import {genericElements, getUrlUnive, nawElements, personaData} from '@support';
-import {dateEnum, gender, genericEnum, legalEnum, prefix, specificIdentification} from '@enum';
+import {genericElements,
+  getUrlUnive,
+  nawElements,
+  personaData
+} from '@support';
+import {dateEnum,
+  gender,
+  genericEnum,
+  legalEnum,
+  prefix,
+  specificIdentification
+} from '@enum';
 
 import {selectorEnum} from '../enum/genericEnum';
 

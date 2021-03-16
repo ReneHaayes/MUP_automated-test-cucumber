@@ -9,13 +9,13 @@ Feature: Check the license plate widget on the homepage.
     Then The <licensePlate> data <willWont> appears for Particuliere autoverzekering
 
     Examples:
-      | pageName                   | licensePlate | button                        | willWont |
-      | Home                       | 06-HN-DL     | license plate                 | will     |
-      | Home                       | 06-HN-DL     | no license plate              | wont     |
-      | Home                       | 06-HN-DL     | dont know                     | wont     |
-      | autoverzekeringProductPage | 06-HN-DL     | license plate product page    | will     |
-      | autoverzekeringProductPage | 06-HN-DL     | no license plate product page | wont     |
-      | autoverzekeringProductPage | 06-HN-DL     | dont know product page        | wont     |
+      | pageName                    | button                        | licensePlate| willWont |
+      | Home                        | license plate                 | 06-HN-DL    | will     |
+      | Home                        | no license plate              | 06-HN-DL    | wont     |
+      | Home                        | dont know                     | 06-HN-DL    | wont     |
+      | autoverzekeringProductPage  | license plate product page    | 06-HN-DL    | will     |
+      | autoverzekeringProductPage  | no license plate product page | 06-HN-DL    | wont     |
+      | autoverzekeringProductPage  | dont know product page        | 06-HN-DL    | wont     |
 
   @licensePlateBusinessPageWidget
   Scenario Outline: Enter a license plate number for the business page and check if the correct data appears.

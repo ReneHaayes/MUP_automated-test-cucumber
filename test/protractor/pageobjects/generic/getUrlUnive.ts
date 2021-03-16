@@ -329,9 +329,6 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.SALESWIDGETS: {
         return this.getEnv(browser.params.env.environment) + genericElements.salesWidgets;
       }
-      case verzekeringPaginasEnum.ZZP_PAKKET: {
-        return this.getEnv(browser.params.env.environment) + genericElements.zzpPakket;
-      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -369,6 +366,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.HOME_ATE: {
         return 'https://qis-ate.unive.nl/';
+      }
+      case verzekeringPaginasEnum.HOME_DAAS: {
+        return 'https://sales.ot.daas.unive.nl/';
       }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

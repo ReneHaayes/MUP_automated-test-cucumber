@@ -89,8 +89,8 @@ When(/^Customer enters step three page of autoverzekering for (.*)$/, async (lic
   // INSERT DATE INFORMATION
   await genericMethods.typeText(vehicleElements.startDateElement, genericMethods.getDate('today'));
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
+  await genericMethods.clickOnElement(autoVerzekeringElementsStepThree.reportingCode);
   await genericMethods.typeText(autoVerzekeringElementsStepThree.reportingCode, carWithLicensePlate.getCarReportingCode(licensePlate));
-  // INSERT USE OF THE CAR INFORMATION
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar('ownerCarYes');
 
   // ANALYTICS
@@ -107,6 +107,7 @@ Then(/^Verify meldcode is mandatory when you dont fill in$/, async () => {
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar('ownerCarYes');
   await genericMethods.clickOnNextButton();
+  // await genericMethods.verifyTextInElement(autoVerzekeringElements.meldCodeErrorElement, 'Dit veld is verplicht.');   // betere selector maken voor meldcodeError
   await genericMethods.verifyTextInElement('[class="message error"]', 'Dit veld is verplicht.');
 });
 
@@ -117,6 +118,7 @@ When(/^Customer enters step four page of autoverzekering for (.*)$/, async (pers
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

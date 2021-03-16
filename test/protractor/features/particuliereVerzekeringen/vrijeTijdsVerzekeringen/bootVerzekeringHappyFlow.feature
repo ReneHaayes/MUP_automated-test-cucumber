@@ -16,5 +16,4 @@ Feature: Happy flow for 'bootverzekering'
     Examples:
       | boatName    | persona     |
       | azzam       | ronaldo     |
-      | azzam       | testPartner |
       | koegelwieck | neymar      |

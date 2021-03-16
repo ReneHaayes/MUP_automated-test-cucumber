@@ -52,7 +52,7 @@ export class MobileHomeVerzekeringMethods {
         break;
       }
       case vehicleUsage.DAILY_RECREATIONAL_USEAGE: {
-        await genericMethods.clickOnElement(mobileHomeVerzekeringElements.dailyRecreativeUseClickElement);
+        await genericMethods.clickOnElement(mobileHomeVerzekeringElements.dailyRecreationalUseClickElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         break;
       }
@@ -62,7 +62,7 @@ export class MobileHomeVerzekeringMethods {
         break;
       }
       case vehicleUsage.RENTAL_USAGE: {
-        await genericMethods.clickOnElement(mobileHomeVerzekeringElements.rentUseClickElement);
+        await genericMethods.clickOnElement(mobileHomeVerzekeringElements.rentalUseClickElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
         break;
       }

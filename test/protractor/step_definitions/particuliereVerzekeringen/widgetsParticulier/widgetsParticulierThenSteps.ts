@@ -1,7 +1,5 @@
-
-
 import {Then} from 'cucumber';
-import {reisVerzekeringMethods, widgetsParticulierMethods} from '@support';
+import {widgetsParticulierMethods} from '@support';
 
 
 // Annuleringsverzekering
@@ -51,7 +49,7 @@ Then(/^I check if the rechtsbijstandverzekering shows the correct (.*) on the ne
 
 // Doorlopende Reisverzekering
 Then(/^I check if the (.*) I have selected are present on the next page$/, async (familyMembers: string) => {
-  await reisVerzekeringMethods.checkFamilyMemberCheckedOnStepOne(familyMembers);
+  await widgetsParticulierMethods.checkFamilyMemberCheckedOnStepOne(familyMembers);
 });
 
 

@@ -1,5 +1,9 @@
 import {browser} from 'protractor';
-import {autoVerzekeringElements, carWithLicensePlate, genericElements, genericMethods} from "@support";
+import {autoVerzekeringElements,
+  carWithLicensePlate,
+  genericElements,
+  genericMethods
+} from '@support';
 import {
   aanvullendeOptiesEnum,
   basisDekkingEnum, genericEnum,
@@ -7,7 +11,7 @@ import {
   totalPremieEnum, vehicleAccEnum,
   whoDrivesCarMost,
   yearlyMileageEnum
-} from "@enum";
+} from '@enum';
 
 export class AutoVerzekeringMethods {
 
@@ -74,11 +78,11 @@ export class AutoVerzekeringMethods {
   async selectIfYouAlreadyHaveACarAtUnive(input: string) {
     switch (input) {
       case genericEnum.YES: {
-        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarTrue)
+        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarTrue);
         break;
       }
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarFalse)
+        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarFalse);
         break;
       }
       default: {

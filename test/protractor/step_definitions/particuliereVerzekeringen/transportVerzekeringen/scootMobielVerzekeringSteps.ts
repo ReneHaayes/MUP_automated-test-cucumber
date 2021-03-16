@@ -1,6 +1,10 @@
 import {When} from 'cucumber';
 import {
-  genericElements, genericMethods, nawElements, personaData, scootMobielVerzekeringElements
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  scootMobielVerzekeringElements
 } from '@support';
 import {browser} from 'protractor';
 
@@ -37,6 +41,7 @@ When(/^I enter details of (.*) in your data page of scootmobiel verzekeringen$/,
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

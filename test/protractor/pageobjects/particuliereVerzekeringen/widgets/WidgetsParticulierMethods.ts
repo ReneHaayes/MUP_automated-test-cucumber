@@ -9,6 +9,8 @@ import {
   mopedWithLicensePlate,
   widgetPageElements,
   widgetsParticulierElements,
+  reisVerzekeringElements,
+  genericElements,
 } from '@support';
 import {
   familyCompositionEnum,
@@ -479,39 +481,46 @@ export class WidgetsParticulierMethods {
 
 
   // auto
-  async clickOnPersonenautoLicensePlateButton(licensePlate: string, input: string) {
+  async clickOnAutoVerzekeringButton(licensePlate: string, input: string) {
     switch (input) {
       case licensePlateHmPageEnum.LICENSE_PLATE: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_BUSINESS: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessLicensePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_COMPANY_CAR: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.LICENSE_PLATE_PP: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.typeTextShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, licensePlate);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_BUSINESS: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessBerekenUwPremieButtonClickElement);
         break;
       }
       case licensePlateHmPageEnum.NO_LICENSE_PLATE_COMPANY_CAR: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetLicencePlateButton);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBerekenUwPremieButtonClickElement);
         break;
@@ -521,18 +530,22 @@ export class WidgetsParticulierMethods {
         break;
       }
       case genericEnum.DONT_KNOW: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_BUSINESS: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetBusinessDontKnowElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_COMPANY_CAR: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
       }
       case licensePlateHmPageEnum.DONT_KNOW_PP: {
+        await genericMethods.waitForElementIsVisibleShadowRoot(widgetPageElements.carWidgetLicensePlateInputElement, browser.getPageTimeout);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.carWidgetDontKnowLicensePlateElement);
         break;
       }
@@ -662,7 +675,70 @@ export class WidgetsParticulierMethods {
   }
 
   // Doorlopende Reisverzekering
-  // zie test/protractor/features/particuliereVerzekeringen/vrijeTijdsVerzekeringen/doorlopendeReisVerzekeringWidget.feature
+  async checkFamilyMemberCheckedOnStepOne(input: string) {
+    switch (input) {
+      case 'Nothing is checked': {
+        await genericMethods.verifyTextInElement(reisVerzekeringElements.chooseInsuredPopUpTextElement, 'Kies een verzekerde.');
+        break;
+      }
+      case 'Mijzelf checked': {
+        await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        break;
+      }
+      case 'Mijzelf en Mijn Partner checked': {
+        await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        break;
+      }
+      case 'Mijzelf en Mijn kinderen checked': {
+        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.clickOnTAB(genericElements.nextButton);
+        break;
+      }
+      case 'Mijzelf, Mijn Partner en Mijn kinderen checked': {
+        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.clickOnTAB(genericElements.nextButton);
+        break;
+      }
+      case 'Mijn Partner checked': {
+        await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        break;
+      }
+      case 'Mijn kinderen checked': {
+        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.clickOnTAB(genericElements.nextButton);
+        break;
+      }
+      case 'Mijn Partner en Mijn kinderen checked': {
+        // await genericMethods.clickOnElement(reisVerzekeringElements.backToStepOneClickElement);
+        await genericMethods.waitForElementNotVisible(reisVerzekeringElements.myselfCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myPartnerCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(reisVerzekeringElements.myChildrenCheckboxChecked, browser.getPageTimeout);
+        await genericMethods.clickOnTAB(genericElements.nextButton);
+        break;
+      }
+      default: {
+        throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+      }
+    }
+  }
 
 
   // Scootmobiel
