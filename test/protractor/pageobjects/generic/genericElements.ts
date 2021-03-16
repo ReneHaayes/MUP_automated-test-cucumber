@@ -166,7 +166,7 @@ export class GenericElements {
 
 
   // HISTORY
-  insuranceHistoryNoElement = '[data-label-id="LA_IF2535_3710"] .radioList > label:nth-child(1)';
+  insuranceHistoryNoElement = '[data-label-id="LA_IF2535_3710"] > div > label:nth-child(1)';
   insuranceHistoryYesElement = '[data-label-id="LA_IF2535_3710"] .radioList > label:nth-child(2)';
   insuranceHistoryYesExplanationElement = '#_Form_IF2535_33524';
 

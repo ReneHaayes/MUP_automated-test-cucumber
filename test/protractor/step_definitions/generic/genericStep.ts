@@ -41,6 +41,7 @@ When(/^I fill in almost insured page with:$/, async (data) => {
     } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === mopedTypeEnum.SNORFIETS) {
       genericMethods.clickOnNextButton().then();
     } else {
+      return;
     }
   }
   await genericMethods.clickOnTakeOutInsuranceNowButton();

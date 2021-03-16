@@ -24,7 +24,9 @@ When(/^I enter step one page of moped for persona (.*) with license plate (.*) a
   await mopedMethods.selectKindOfVehicle(mopedWithLicensePlate.getMopedVehicleType(licensePlate));
   if (mopedWithLicensePlate.getMopedVehicleType(licensePlate) === mopedTypeEnum.HIGH_SPEED_BIKE) {
     genericMethods.clickOnElement(mopedElements.yesOtherInsurancesElement).then();
-  } else {}
+  } else {
+    return;
+  }
   await genericMethods.typeText(vehicleElements.birthDateElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.typeText(vehicleElements.zipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.typeText(vehicleElements.damageFreeYearsElement, damageFreeYears);
@@ -55,7 +57,9 @@ When(/^I enter step two page of moped with (.*)$/, async (coverage: string, data
     await mopedMethods.selectAcc(dataTable.accessoires);
     await genericMethods.waitForElementClickable(vehicleElements.ownRiskElement, browser.getPageTimeout);
     await mopedMethods.selectOwnRisk(dataTable.ownRisk);
-  } else {}
+  } else {
+    return;
+  }
   await genericMethods.clickOnNextButton();
 });
 
