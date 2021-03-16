@@ -18,7 +18,9 @@ When(/^I enter step one and click next on step two of bootverzekering with (.*)$
       genericMethods.clickOnElement(bootVerzekeringElements.boatHasCabin).then();
     } else if (boatWithName.getBoatType(boatName) === typeBoatEnum.ZEILBOOT) {
       genericMethods.clickOnElement(bootVerzekeringElements.boatHasCabin).then();
-    } else {}
+    } else {
+      return;
+    }
   await genericMethods.typeText(bootVerzekeringElements.boatValueInputElement, boatWithName.getBoatValue(boatName));
   await genericMethods.typeText(bootVerzekeringElements.purchaseDateInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(bootVerzekeringElements.lengthBoatInputElement, boatWithName.getBoatLength(boatName));
