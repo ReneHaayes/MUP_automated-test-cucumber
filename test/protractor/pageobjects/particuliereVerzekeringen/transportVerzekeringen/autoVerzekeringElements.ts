@@ -12,7 +12,8 @@ export class AutoVerzekeringElements {
   modelElement = '[data-label-id="LA_IF2509_3616"]';
   bodyTypeElement = '[data-label-id="LA_IF2509_3617"]';
   fuelTypeElement = '[data-label-id="LA_IF2509_3618"]';
-  meldCodeErrorElement = 'div:nth-child(4) > div.values > div > span';
+  // meldCodeErrorElement = 'div:nth-child(4) > div.values > div > span';
+  meldCodeErrorElement = '[data-label-id="LA_IF2526_3682"] span svg';
 
 
   // Who drives the car the most

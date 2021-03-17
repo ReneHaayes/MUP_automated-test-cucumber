@@ -18,16 +18,18 @@ Feature: Happy flow for 'personenautoverzekering'
       | licensePlate | persona |
       | 06-HN-DL     | ronaldo |
 
+    @collectieveAutoverzekering
   Scenario: Checking if the prefill for collectives are working correctly
     Given I am on the prefill omring pashouders page of the Unive website
     When Customer enters step one page of autoverzekeringen for ronaldo with license plate 06-HN-DL
     Then Verify step two page of autoverzekering automatically prefilled with collective string:16427
 
+    @autoMeldcode
   Scenario: Checking the meldcode is mandatory
     Given I am on the Autoverzekering page of the Unive website
     When Customer enters step one page of autoverzekeringen for ronaldo with license plate 06-HN-DL
     And Customer enters step two page of autoverzekering without collective
-    Then Verify meldcode is mandatory when you dont fill in
+    Then Verify registrationCode is mandatory. An errormessage is displayed when you leave meldcode empty
 
 
 

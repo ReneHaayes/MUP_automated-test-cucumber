@@ -35,8 +35,38 @@ When(/^I enter step one and click next on step two of bootverzekering with (.*)$
   await genericMethods.clickOnNextButton();
 });
 
+When(/^I enter step one of bootverzekering for boat (.*)$/, async (boatName: string) => {
+  await genericMethods.clickOnTAB(bootVerzekeringElements.typeOfBootSelectElement);
+  await bootVerzekeringMethods.selectTypeOfBoat(boatWithName.getBoatType(boatName));
+  if (boatWithName.getBoatType(boatName) === typeBoatEnum.MOTORBOOT) {
+    genericMethods.clickOnElement(bootVerzekeringElements.boatHasCabin).then();
+  } else if (boatWithName.getBoatType(boatName) === typeBoatEnum.ZEILBOOT) {
+    genericMethods.clickOnElement(bootVerzekeringElements.boatHasCabin).then();
+  } else { }
+  await genericMethods.waitForElementIsVisible(bootVerzekeringElements.boatValueInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(bootVerzekeringElements.boatValueInputElement);
+  await genericMethods.typeText(bootVerzekeringElements.boatValueInputElement, boatWithName.getBoatValue(boatName));
+  await genericMethods.typeText(bootVerzekeringElements.purchaseDateInputElement, genericMethods.getDate('today'));
+  await genericMethods.typeText(bootVerzekeringElements.lengthBoatInputElement, boatWithName.getBoatLength(boatName));
+  await genericMethods.clickOnElement(bootVerzekeringElements.boatIsNewClickElement);
+  if (boatWithName.getBoatType(boatName) === typeBoatEnum.SPEEDBOOT) {
+    genericMethods.clickOnElement(bootVerzekeringElements.yesOtherInsurancesElement).then();
+  } else if (boatWithName.getBoatType(boatName) === typeBoatEnum.CATAMARAN) {
+    genericMethods.clickOnElement(bootVerzekeringElements.yesOtherInsurancesElement).then();
+  } else {}
+  await genericMethods.clickOnElement(bootVerzekeringElements.followBoatNoClickElement);
+  await genericMethods.clickOnElement(bootVerzekeringElements.trailerNoClickElement);
+  await genericMethods.clickOnNextButton();
+});
+
+When(/^I enter step two of bootverzekering$/, async () => {
+  await genericMethods.waitForElementIsPresent(genericElements.bannerPageElement, browser.getPageTimeout);
+  await genericMethods.clickOnNextButton();
+});
+
 When(/^I enter step three page of bootverzekering for boat (.*)$/, async (boatName: string) => {
   await genericMethods.waitForElementIsPresent(genericElements.bannerPageElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(bootVerzekeringElements.boatNameInputElement);
   await genericMethods.typeText(bootVerzekeringElements.boatNameInputElement, boatWithName.getBoatName(boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatBrandNameInputElement, boatWithName.getBoatBrandName(boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatConstructionYearInputElement, boatWithName.getBoatConstructionYear(boatName));
@@ -51,6 +81,7 @@ When(/^I enter step three page of bootverzekering for boat (.*)$/, async (boatNa
         genericMethods.clickOnElement(bootVerzekeringElements.engineTypeOutsideClickElement).then();
         await genericMethods.clickOnElement(bootVerzekeringElements.oneEngineSelectElement);
       } else { }
+  await genericMethods.clickOnElement(bootVerzekeringElements.boatMotorBrandnameInputElement);
   await genericMethods.typeText(bootVerzekeringElements.boatMotorBrandnameInputElement, boatWithName.getBoatMotorBrandName(boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatMotorNumberInputElement, boatWithName.getBoatMotorNumber(boatName));
   await genericMethods.typeText(bootVerzekeringElements.boatMotorConstructionYearInputElement, boatWithName.getBoatMotorConstructionYear(boatName));

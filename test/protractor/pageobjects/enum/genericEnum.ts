@@ -146,14 +146,13 @@ export enum verzekeringPaginasEnum {
   OLDTIMERVERZEKERING = 'Oldtimerverzekering',
   ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
   RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
-  RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekeringPP',
+  RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',             // Is Rechtsbijstand PP wel nodig?  - > uitzoeken komt later
   SCOOTMOBIELVERZEKERING = 'Scootmobielverzekering',
   HIGH_SPEED_E_BIKE_VERZEKERING = 'High speed e-bikeverzekering',
   INBOEDELVERZEKERING = 'Inboedelverzekering',
   OPSTALVERZEKERING = 'Opstalverzekering',
   HYPOTHEEK = 'Hypotheek',
   PENSIOEN = 'pensioen',
-  //  LIJFRENTEVERZEKERING = 'lijfrenteverzekering',     // twijfels of deze pagina nog wel bestaat, daarom tijdelijk uitgezet op 16-03
   UITVAARTVERZEKERING = 'uitvaartverzekering',
   OVERLIJDENSRISICOVERZEKERING = 'overlijdensrisicoverzekering',
   MIJNGEMAK = 'MijnGemak',
@@ -324,7 +323,6 @@ export enum breadCrumbEnum {
   COLLECTIEF = 'Collectief',
   AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
   PENSIOEN = 'Pensioen',
-  LIJFRENTEVERZEKERING = 'Lijfrenteverzekering',
   UITVAARTVERZEKERING = 'Uitvaartverzekering',
   OVERLIJDENSRISICOVERZEKERING = 'Overlijdensrisicoverzekering',
   MIJN_GEMAK = 'Mijn gemak',

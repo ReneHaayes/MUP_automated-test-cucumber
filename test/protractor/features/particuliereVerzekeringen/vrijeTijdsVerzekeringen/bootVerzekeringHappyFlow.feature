@@ -4,7 +4,9 @@ Feature: Happy flow for 'bootverzekering'
 
   Scenario Outline: Filling in the quickest happy flow to get to the "Thank you" page.
     Given I am on the Bootverzekering page of the Unive website
-    When I enter step one and click next on step two of bootverzekering with <boatName>
+#    When I enter step one and click next on step two of bootverzekering with <boatName>
+    When I enter step one of bootverzekering for boat <boatName>
+    And I enter step two of bootverzekering
     And I enter step three page of bootverzekering for boat <boatName>
     And I enter details of <persona> in step four page of boot verzekering
     And I fill in almost insured page with:
