@@ -1,5 +1,5 @@
-import {When} from "cucumber";
-import {browser} from "protractor";
+import {When} from 'cucumber';
+import {browser} from 'protractor';
 import {
   aansprakelijkheidsVerzekeringMethods,
   companyData,
@@ -9,7 +9,7 @@ import {
   personaData,
   zorgeloosOnlineVerzekeringElements,
   zorgeloosOnlineVerzekeringMethod
-} from "@support";
+} from '@support';
 
 When(/^I enter step one page of zorgeloos onlineverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await aansprakelijkheidsVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
@@ -17,7 +17,7 @@ When(/^I enter step one page of zorgeloos onlineverzekering for family compositi
 });
 
 When(/^I check step two page with premie for zorgeloos onlineverzekering is shown$/, async () => {
-  await genericMethods.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.premieZorgeloosOnlineVerzekeringTextElement, browser.getPageTimeout)
+  await genericMethods.waitForElementIsVisible(zorgeloosOnlineVerzekeringElements.premieZorgeloosOnlineVerzekeringTextElement, browser.getPageTimeout);
   await genericMethods.clickOnNextButton();
 });
 
@@ -66,6 +66,8 @@ When(/^I enter step three page of zorgeloosonlineverzekering zakelijk for (.*) w
   await genericMethods.clickOnTAB(nawElements.companyDataZipCodeInputElement);
   await genericMethods.typeText(nawElements.companyDataHouseNumberInputElement, companyData.getCompanyHouseNumber(company));
   await genericMethods.typeText(nawElements.companyDataHouseNumberAddingInputElement, companyData.getCompanyHouseNumberAdding(company));
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.typeText(nawElements.contactDataZorgeloosOnlineInitialsInputElement, personaData.getPersonaInitials(persona));

@@ -376,38 +376,32 @@ export class WidgetsParticulierMethods {
   async selectBicycle(input: string) {
     switch (input) {
       case fietsEnum.ELEKTRISCHE_FIETS: {
-        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement,
-          widgetsParticulierElements.elektrischeFietsSelectElement);
+        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement, widgetsParticulierElements.elektrischeFietsSelectElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.bicycleWidgetBerekenUwPremieButton);
         break;
       }
       case fietsEnum.GEWONE_FIETS: {
-        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement,
-          widgetsParticulierElements.gewoneFietsSelectElement);
+        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement, widgetsParticulierElements.gewoneFietsSelectElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.bicycleWidgetBerekenUwPremieButton);
         break;
       }
       case fietsEnum.RACEFIETS: {
-        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement,
-          widgetsParticulierElements.raceFietsSelectElement);
+        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement, widgetsParticulierElements.raceFietsSelectElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.bicycleWidgetBerekenUwPremieButton);
         break;
       }
       case fietsEnum.MOUNTAINBIKE: {
-        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement,
-          widgetsParticulierElements.mountainbikeSelectElement);
+        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement, widgetsParticulierElements.mountainbikeSelectElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.bicycleWidgetBerekenUwPremieButton);
         break;
       }
       case fietsEnum.LIGFIETS: {
-        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement,
-          widgetsParticulierElements.ligFietsSelectElement);
+        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement, widgetsParticulierElements.ligFietsSelectElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.bicycleWidgetBerekenUwPremieButton);
         break;
       }
       case fietsEnum.AANGEPASTE_FIETS: {
-        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement,
-          widgetsParticulierElements.aangepasteFietsSelectElement);
+        await genericMethods.selectInDropdownShadowroot(widgetPageElements.bicycleTypeSelectElement, widgetsParticulierElements.aangepasteFietsSelectElement);
         await genericMethods.clickOnElementShadowRoot(widgetPageElements.bicycleWidgetBerekenUwPremieButton);
         break;
       }
@@ -421,55 +415,55 @@ export class WidgetsParticulierMethods {
     switch (input) {
       case fietsEnum.ELEKTRISCHE_FIETS: {
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
         break;
       }
       case fietsEnum.GEWONE_FIETS: {
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
         break;
       }
       case fietsEnum.RACEFIETS: {
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
-        break;
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
+         break;
       }
       case fietsEnum.MOUNTAINBIKE: {
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
         break;
       }
       case fietsEnum.LIGFIETS: {
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
         break;
       }
       case fietsEnum.AANGEPASTE_FIETS: {
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
-        await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.elektrischeFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.gewoneFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.raceFietsChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.mountainbikeChecked, browser.getPageTimeout);
+        // await genericMethods.waitForElementNotVisible(widgetsParticulierElements.ligFietsChecked, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(widgetsParticulierElements.aangepasteFietsChecked, browser.getPageTimeout);
         break;
       }

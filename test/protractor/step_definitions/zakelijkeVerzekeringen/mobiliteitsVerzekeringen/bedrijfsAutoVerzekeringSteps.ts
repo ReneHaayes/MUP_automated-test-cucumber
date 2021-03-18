@@ -10,7 +10,8 @@ import {
   nawElements,
   personaData,
   zakelijkAansprakelijkheidsVerzekeringElements
-} from "@support";
+} from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one page of bedrijfs autoverzekeringen for (.*) with$/, async (company: string, data) => {
   const dataTable = data.rowsHash();
@@ -38,15 +39,17 @@ When(/^I enter step three page of bedrijfs autoverzekering with (.*)$/, async (c
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.getCompanyDataButtonClickElement);
   await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElementB, companyData.getCompanyName(company));
 
-  //INSERT DATE INFORMATION
+  // INSERT DATE INFORMATION
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
-  //INSERT USE OF THE CAR INFORMATION
+  // INSERT USE OF THE CAR INFORMATION
   await genericMethods.clickOnTAB(bedrijfsAutoVerzekeringElements.differentUserYesElement);
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentUserYesElement);
   await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step four page of bedrijfs autoverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
@@ -69,15 +72,17 @@ When(/^I enter step three page of bedrijfsautoverzekering with different owner w
   await genericMethods.clickOnElement(zakelijkAansprakelijkheidsVerzekeringElements.getCompanyDataButtonClickElement);
   await genericMethods.verifyTextInElement(zakelijkAansprakelijkheidsVerzekeringElements.companyNameTextElementB, companyData.getCompanyName(company));
 
-  //INSERT DATE INFORMATION
+  // INSERT DATE INFORMATION
   await genericMethods.typeText(bedrijfsAutoVerzekeringElements.reportingCode, businessCarWithLicensePlate.getCarReportingCode(dataTable.licensePlate));
-  //INSERT USE OF THE CAR INFORMATION
+  // INSERT USE OF THE CAR INFORMATION
   await genericMethods.clickOnTAB(bedrijfsAutoVerzekeringElements.differentUserYesElement);
   await genericMethods.clickOnElement(bedrijfsAutoVerzekeringElements.differentUserNoElement);
   await genericMethods.clickOnNextButton();
 });
 
 When(/^I enter step four page of bedrijfsautoverzekering for (.*) with (.*) different owner (.*)$/, async (company: string, persona: string, natural_person: string) => {
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
@@ -91,7 +96,7 @@ When(/^I enter step four page of bedrijfsautoverzekering for (.*) with (.*) diff
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnElement(nawElements.differentOwnerNatuurlijkPersoonElement);
-  await genericMethods.typeText(nawElements.differentOwnerInitialsInputElement,personaData.getPersonaInitials(natural_person));
+  await genericMethods.typeText(nawElements.differentOwnerInitialsInputElement, personaData.getPersonaInitials(natural_person));
   await genericMethods.typeText(nawElements.differentOwnerPrefixInputElement, personaData.getPersonaPrefix(natural_person));
   await genericMethods.typeText(nawElements.differentOwnerLastNameInputElement, personaData.getPersonaLastName(natural_person));
   await genericMethods.clickDifferentOwnerDataGender(personaData.getPersonaGender(natural_person));

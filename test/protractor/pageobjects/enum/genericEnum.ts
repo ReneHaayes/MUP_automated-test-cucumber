@@ -100,6 +100,7 @@ export enum verzekeringPaginasEnum {
   HOME_ATE = 'ate',
   HOME_SALES_OT_DAAS = 'salesDaas',
   HOME_SERVICE_OT_DAAS = 'serviceDaas',
+  HOME_ACC = 'acc',
 
   // Algemene pagina's
   KLANTENSERVICE = 'Klantenservice',
@@ -146,7 +147,7 @@ export enum verzekeringPaginasEnum {
   OLDTIMERVERZEKERING = 'Oldtimerverzekering',
   ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
   RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
-  RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',             // Is Rechtsbijstand PP wel nodig?  - > uitzoeken komt later
+  RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',
   SCOOTMOBIELVERZEKERING = 'Scootmobielverzekering',
   HIGH_SPEED_E_BIKE_VERZEKERING = 'High speed e-bikeverzekering',
   INBOEDELVERZEKERING = 'Inboedelverzekering',

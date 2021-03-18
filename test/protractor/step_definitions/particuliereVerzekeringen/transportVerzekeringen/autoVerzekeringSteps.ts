@@ -144,7 +144,9 @@ When(/^I enter step one page of personen autoverzekeringen zakelijk for (.*) wit
   await genericMethods.waitForElementIsVisibleWithXpath(autoVerzekeringElements.brandElementXpath + '[contains(text(),"' + carWithLicensePlate.getCarBrandName(dataTable.licensePlate) + '")]', browser.getPageTimeout);
   await autoVerzekeringMethods.selectYearlyMileage(dataTable.yearlyMileage);
   await genericMethods.clickOnElement(autoVerzekeringElements.sameDriverNoClickElement);
-  await genericMethods.typeText(autoVerzekeringElements.sameDriverZipCodeCompanyElement, companyData.getCompanyZipcode(company));
+  await genericMethods.waitForElementIsVisible(autoVerzekeringElements.companyZipCodeElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(autoVerzekeringElements.companyZipCodeElement);
+  await genericMethods.typeText(autoVerzekeringElements.companyZipCodeElement, companyData.getCompanyZipcode(company));
   await genericMethods.typeText(autoVerzekeringElements.damageFreeYearsElement, dataTable.damageFreeYears);
   await genericMethods.clickOnTAB(autoVerzekeringElements.damageFreeYearsElement);
   await genericMethods.clickOnNextButton();
@@ -187,6 +189,8 @@ When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with 
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
@@ -207,6 +211,8 @@ When(/^I enter step four page of personenautoverzekering zakelijk for (.*) with 
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);

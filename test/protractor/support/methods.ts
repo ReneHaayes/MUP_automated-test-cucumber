@@ -34,6 +34,8 @@ import {VisualMethods} from '../pageobjects/visual/visualMethods';
 import {WidgetsParticulierMethods} from '../pageobjects/particuliereVerzekeringen/widgets/widgetsParticulierMethods';
 import {WidgetsZakelijkMethods} from '../pageobjects/zakelijkeVerzekeringen/widgets/widgetsZakelijkMethods';
 import {ZzpGoedBeterBestMethods} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zzpGoedBeterBestMethods';
+import {ZakelijkAansprakelijkheidsVerzekeringMethods} from '../pageobjects/zakelijkeVerzekeringen/bedrijfsActiviteitenVerzekeringen/zakelijkAansprakelijkheidsVerzekeringMethods';
+
 
 export const situatieGewijzigdMethods: SituatieGewijzigdMethods = new SituatieGewijzigdMethods();
 export const hmPageMijnUniveMethods: HmPageMijnUniveMethods = new HmPageMijnUniveMethods();
@@ -71,3 +73,4 @@ export const visualMethods: VisualMethods = new VisualMethods();
 export const widgetsParticulierMethods: WidgetsParticulierMethods = new WidgetsParticulierMethods();
 export const widgetZakelijkMethods: WidgetsZakelijkMethods = new WidgetsZakelijkMethods();
 export const zzpGoedBeterBestMethods: ZzpGoedBeterBestMethods = new ZzpGoedBeterBestMethods();
+export const zakelijkAansprakelijkheidsVerzekeringMethods: ZakelijkAansprakelijkheidsVerzekeringMethods = new ZakelijkAansprakelijkheidsVerzekeringMethods();

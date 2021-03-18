@@ -1,4 +1,4 @@
-@autoverzekering @qis @qisParticulier @qRelease
+@personenautoverzekering @qis @qisParticulier @qRelease
 
 Feature: Happy flow for 'personenautoverzekering'
 
