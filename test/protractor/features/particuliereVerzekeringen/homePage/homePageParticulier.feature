@@ -13,7 +13,7 @@ Feature: Check if the home and alle verzekeringen page shows the buttons correct
 #      | Woonverzekering           |      Nog geen bestaande test voor
 #      | Autoverzekering           |      Nog geen bestaande test voor
 #      | Bromfietsverzekering      |      Nog geen bestaande test voor
-#      | Rechtsbijstandverzekering |       Nog geen bestaande test voor
+#      | rechtsbijstandverzekering |       Nog geen bestaande test voor
 
 
   Scenario Outline: Click on the menu and check the elements and verify if the outcome is correct.

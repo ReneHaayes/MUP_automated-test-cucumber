@@ -1,4 +1,4 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
   companyData,
   genericElements,
@@ -7,6 +7,7 @@ import {
   personaData,
   zakelijkRechtsBijstandVerzekeringElements
 } from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one page and click next on step two of zakelijk rechtsbijstand verzekering with:(.*)$/, async (company: string) => {
   await genericMethods.typeText(zakelijkRechtsBijstandVerzekeringElements.kvkNumberInputElement, companyData.getCompanyKvkNumber(company));
@@ -14,7 +15,7 @@ When(/^I enter step one page and click next on step two of zakelijk rechtsbijsta
   await genericMethods.verifyTextInElement(zakelijkRechtsBijstandVerzekeringElements.companyNameTextElement, companyData.getCompanyName(company));
   await genericMethods.clickOnElement(zakelijkRechtsBijstandVerzekeringElements.correctCompanyDataYesClickElement);
   await genericMethods.clickOnNextButton();
-  //click on next at step two
+  // click on next at step two
   await genericMethods.clickOnNextButton();
 });
 
@@ -24,6 +25,8 @@ When(/^I enter step three page of zakelijk rechtsbijstand verzekering with:$/, a
 });
 
 When(/^I enter step four page of zakelijk rechtsbijstandverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);

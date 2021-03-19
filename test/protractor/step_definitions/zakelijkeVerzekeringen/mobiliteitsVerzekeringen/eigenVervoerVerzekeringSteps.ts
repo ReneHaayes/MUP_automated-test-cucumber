@@ -35,6 +35,8 @@ When(/^I enter the first step of Eigen vervoersverzekering with (.*) and click n
 When(/^I enter the third step of eigen vervoer verzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.verifyTextInElement(eigenVervoerVerzekeringElements.kvkNumberPrefilledElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.verifyTextInElement(eigenVervoerVerzekeringElements.companyNamePrefilledElement, companyData.getCompanyName(company));
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
