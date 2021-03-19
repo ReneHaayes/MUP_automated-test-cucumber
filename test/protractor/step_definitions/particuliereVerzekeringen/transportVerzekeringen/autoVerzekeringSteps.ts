@@ -107,12 +107,9 @@ Then(/^Verify registrationCode is mandatory. An errormessage is displayed when y
   await genericMethods.typeText(autoVerzekeringElementsStepThree.startDateOnYourNameElement, genericMethods.getDate('today'));
   await autoVerzekeringMethodsStepThreeAndFour.clickOnOwnerCar('ownerCarYes');
   await genericMethods.clickOnNextButton();
-  // await genericMethods.verifyTextContainsInElement(autoVerzekeringElements.meldCodeErrorElement, 'Dit veld is verplicht.', browser.getPageTimeout);
-  // await genericMethods.verifyTextInElement('[class="message error"]', 'Dit veld is verplicht.');
-
+  // vinden van veld 'foutmelding meldcode' moet nog steeds beter opgelost worden  --> zie autoVerzekeringElements.meldcodeErrorElement
   await genericMethods.verifyUrlContains('https://pat.unive.nl/autoverzekering/premieberekenen-en-afsluiten/add-single-application/form/fill-form/screen/S3');
   browser.sleep(500);
-  console.log('still on step 3');
 });
 
 When(/^Customer enters step four page of autoverzekering for (.*)$/, async (persona: string) => {

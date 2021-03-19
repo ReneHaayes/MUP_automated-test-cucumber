@@ -3,9 +3,11 @@ import {
   zakelijkAansprakelijkheidsVerzekeringElements,
   zzpGoedBeterBestElements,
 } from '@support';
-import {genericEnum, toolsEnum} from '@enum';
-import {browser} from 'protractor';
-
+import {genericEnum,
+  toolsEnum
+} from '@enum';
+import {browser
+} from 'protractor';
 
 export class ZakelijkAansprakelijkheidsVerzekeringMethods {
 
@@ -243,5 +245,4 @@ export class ZakelijkAansprakelijkheidsVerzekeringMethods {
       }
     }
   }
-
 }

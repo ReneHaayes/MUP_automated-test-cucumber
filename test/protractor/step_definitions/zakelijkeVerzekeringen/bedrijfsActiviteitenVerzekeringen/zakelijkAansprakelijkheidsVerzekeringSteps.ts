@@ -79,8 +79,8 @@ When(/^I enter step five page of zakelijk aansprakelijkheidsverzekering for (.*)
   });
 
 When(/^I enter page two for zakelijk aansprakelijkheidsverzekering$/, async () => {
-  await genericMethods.clickOnElement(genericElements.nextButton);
-  // await genericMethods.clickOnNextButton();
+  // await genericMethods.clickOnElement(genericElements.nextButton);
+  await genericMethods.clickOnNextButton();
 });
 
 
@@ -122,4 +122,3 @@ When(/^I enter page five of zakelijk aansprakelijkheidsverzekering for (.*) with
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
 });
-
