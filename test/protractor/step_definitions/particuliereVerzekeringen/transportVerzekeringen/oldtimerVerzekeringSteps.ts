@@ -15,7 +15,7 @@ When(/^I enter step one and click next on step three of oldtimerverzekering with
   await genericMethods.clickOnElement(oldtimerVerzekeringElements.yearlyMileage7500tot15000ClickElement);
   await genericMethods.clickOnElement(oldtimerVerzekeringElements.waClickElement);
   await genericMethods.clickOnNextButton();
-  //Click next on step three
+  // Click next on step three
   await genericMethods.clickOnNextButton();
 });
 
@@ -32,11 +32,11 @@ When(/^I enter step four page of oldtimerverzekering for (.*)$/, async (persona:
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthDayElement, personaData.getPersonaBirthDate(persona));
-  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

@@ -33,10 +33,15 @@ export class Company {
 }
 
 export class CompanyData {
-  facebook: Company = new Company('Facebook', '7412XW', '37131558', legalEnum.BV, 'Werkzaamheden in de bouw', '91', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
-  rg_timmerwerken: Company = new Company('R.G. Timmerwerken', '1851LX', '37131558', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '33', 'c', '0612345678', 'Timmerwerkje@unive.nl');
-  Grondverzet_machine_verhuur_Springer: Company = new Company('Grondverzet & machine verhuur J. Springer', '2642CD', '27277486', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '21', genericEnum.EMPTY, '0612345678', 'GRONDVERZET@unive.nl');
-  peej_advies_en_control: Company = new Company('Peej Advies en Control', '9731PB', '77948378', legalEnum.EENMANSZAAK, 'Zakelijk advies', '141', genericEnum.EMPTY, '0651537139', 'Patrick@peejadviesencontrol.nl');
+// Deze gegevensset gebruikt KVK-nummers van productie omgeving
+   facebook: Company = new Company('Facebook', '7412XW', '37131558', legalEnum.BV, 'Werkzaamheden in de bouw', '91', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
+   rg_timmerwerken: Company = new Company('R.G. Timmerwerken', '1851LX', '37131558', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '33', 'c', '0612345678', 'Timmerwerkje@unive.nl');
+   Grondverzet_machine_verhuur_Springer: Company = new Company('Grondverzet & machine verhuur J. Springer', '2642CD', '27277486', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '21', genericEnum.EMPTY, '0612345678', 'GRONDVERZET@unive.nl');
+
+  // Deze gegevensset gebruikt KVK-nummers van mock server. Echte KVK-nummers willen we niet meer gebruiken om te voorkomen dat het fout gaat bij echte klanten
+  // facebook: Company = new Company('Facebook', '7412XW', '99000002', legalEnum.BV, 'Werkzaamheden in de bouw', '91', genericEnum.EMPTY, '0612345678', 'facebook@unive.nl');
+  // rg_timmerwerken: Company = new Company('R.G. Timmerwerken', '1851LX', '99000002', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '33', 'c', '0612345678', 'Timmerwerkje@unive.nl');
+  // Grondverzet_machine_verhuur_Springer: Company = new Company('Grondverzet & machine verhuur J. Springer', '2642CD', '99000002', legalEnum.EENMANSZAAK, 'Werkzaamheden in de bouw', '21', genericEnum.EMPTY, '0612345678', 'GRONDVERZET@unive.nl');
 
   getCompanyName(input: string): string {
     switch (input) {
@@ -48,9 +53,6 @@ export class CompanyData {
       }
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.companyName;
-      }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.companyName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -69,9 +71,6 @@ export class CompanyData {
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.zipCode;
       }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.zipCode;
-      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -88,9 +87,6 @@ export class CompanyData {
       }
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.kvkNumber;
-      }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.kvkNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -109,9 +105,6 @@ export class CompanyData {
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.legal;
       }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.legal;
-      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -128,9 +121,6 @@ export class CompanyData {
       }
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.companyMainActivity;
-      }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.companyMainActivity;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -149,9 +139,6 @@ export class CompanyData {
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.houseNumber;
       }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.houseNumber;
-      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -168,9 +155,6 @@ export class CompanyData {
       }
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.houseNumberAdding;
-      }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.houseNumberAdding;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -189,9 +173,6 @@ export class CompanyData {
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.emailAddress;
       }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.phoneNumber;
-      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -208,9 +189,6 @@ export class CompanyData {
       }
       case companyNameEnum.GRONDVERZET_MACHINE_VERHUUR_SPRINGER: {
         return this.Grondverzet_machine_verhuur_Springer.phoneNumber;
-      }
-      case companyNameEnum.PEEJ: {
-        return this.peej_advies_en_control.emailAddress;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

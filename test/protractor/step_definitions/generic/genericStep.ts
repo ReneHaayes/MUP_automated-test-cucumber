@@ -2,7 +2,7 @@ import {Given, Then, When} from 'cucumber';
 import {genericElements,
   genericMethods,
   mopedWithLicensePlate
-} from '@support';
+  } from '@support';
 import {mopedTypeEnum} from '@enum';
 import {browser} from 'protractor';
 
@@ -10,9 +10,7 @@ Given(/^I am on the (.*) page of the Unive website$/, async (page: string) => {
   await genericMethods.goToPage(page);
   try {
     await genericMethods.clickOnCookie(genericElements.cookieClickElement);
-  } catch (e) {
-
-  }
+  } catch (e) {}
 });
 
 Then(/^The thank you page for (.*) is shown$/, async function (persona: string) {
@@ -31,7 +29,6 @@ Then(/^Thank you page for zakelijke (.*) is shown$/, async function (verzekering
 When(/^I fill in almost insured page with:$/, async (data) => {
   const dataTable = data.rowsHash();
   await genericMethods.waitForElementIsPresent(genericElements.bannerPageElement, browser.getPageTimeout);
-  browser.sleep(500);
   await genericMethods.selectInsuranceHistory(dataTable.insuranceHistory);
   await genericMethods.selectCriminalHistory(dataTable.criminalHistory);
   await genericMethods.selectDamageHistory(dataTable.damageHistory);
@@ -44,6 +41,7 @@ When(/^I fill in almost insured page with:$/, async (data) => {
     } else if (mopedWithLicensePlate.getMopedModel(dataTable.licensePlate) === mopedTypeEnum.SNORFIETS) {
       genericMethods.clickOnNextButton().then();
     } else {
+      return;
     }
   }
   await genericMethods.clickOnTakeOutInsuranceNowButton();

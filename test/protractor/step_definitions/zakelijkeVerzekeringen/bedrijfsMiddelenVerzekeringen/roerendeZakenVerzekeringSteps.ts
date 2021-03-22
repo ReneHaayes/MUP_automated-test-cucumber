@@ -24,7 +24,7 @@ When(/^I enter step one and step two page of roerende zakenverzekering for (.*) 
 When(/^I enter your data page of roerende zakenverzekering for (.*) with (.*)$/, async (company: string, persona: string) => {
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
  // await genericMethods.typeText(nawElements.companyDataNameInputElement, companyData.getCompanyName(company));  // veld is prefilled
-  await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company)); // veld word 1e x overgeslagen
+  await genericMethods.clickOnElement(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);

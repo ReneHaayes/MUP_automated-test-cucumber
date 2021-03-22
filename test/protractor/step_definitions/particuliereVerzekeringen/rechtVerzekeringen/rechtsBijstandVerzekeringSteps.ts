@@ -1,4 +1,4 @@
-import {Then, When} from "cucumber";
+import {Then, When} from 'cucumber';
 import {
   genericElements,
   genericMethods,
@@ -8,26 +8,22 @@ import {
   rechtsBijstandVerzekeringMethods,
   stickyBalkElements,
   stickyBalkMethods
-} from "@support";
-import {homePageEnum} from "../../../pageobjects/enum/woonVerzekeringEnum";
+} from '@support';
+import {browser} from 'protractor';
 
-When(/^I enter step one page of rechtsbijstandverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
+When(/^I enter step one of rechtsbijstandverzekering for family composition of: (.*)$/, async (familyCompositionInput: string) => {
   await rechtsBijstandVerzekeringMethods.clickFamilyComposition(familyCompositionInput);
   await genericMethods.clickOnNextButton();
-  //Click on Next at step two page
-  await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.verkeerEnvoertuigen);
-  await genericMethods.clickOnElement('[data-label-id="LA_IF32509_40517"] > label');
-  await genericMethods.scrollTilTop();
-  await stickyBalkMethods.verifyStickyBalkAndOpbouwVanBerekening(homePageEnum.RECHTSBIJSTAND);
+});
+
+When(/^I enter step two of rechtsbijstandverzekering$/, async () => {
+  await genericMethods.waitForElementIsVisible(rechtsBijstandVerzekeringElements.verkeerEnVoertuigen, browser.getPageTimeout);
+  await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.verkeerEnVoertuigen);
+  await genericMethods.waitForElementIsVisible(rechtsBijstandVerzekeringElements.WerkEnInkomen, browser.getPageTimeout);
+  await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.WerkEnInkomen);
   await genericMethods.clickOnNextButton();
 });
 
-Then(/^Customer can select bekijk controleer gegevens for rechtsbijstandverzekering in almost insured page with correct data$/, async () => {
-  await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
-  await stickyBalkMethods.verifySummaryRechtsbijstandVerzekering();
-  await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
-  await genericMethods.clickOnTakeOutInsuranceNowButton();
-});
 
 When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen$/, async (persona: string) => {
   await genericMethods.typeText(nawElements.yourDataInitialsElement, personaData.getPersonaInitials(persona));
@@ -41,6 +37,7 @@ When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataHouseNumberAdditionElement);
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);
@@ -50,6 +47,13 @@ When(/^I enter details of (.*) in your data page of rechtsbijstand verzekeringen
   await genericMethods.clickOnTAB(genericElements.accountNumberElement);
   await genericMethods.clickOnElement(genericElements.authorizationUniveElement);
   await genericMethods.clickOnNextButton();
-  //Click no on are there special facts and circumstances, at next page.
+  // Click no on are there special facts and circumstances, at next page.
   await genericMethods.clickOnElement(rechtsBijstandVerzekeringElements.specialFactsNoClickElement);
+});
+
+Then(/^Customer can select bekijk controleer gegevens for rechtsbijstandverzekering in almost insured page with correct data$/, async () => {
+  await genericMethods.clickOnElement(stickyBalkElements.controleerGegevensClickElement);
+  await stickyBalkMethods.verifySummaryRechtsbijstandVerzekering();
+  await genericMethods.clickOnElement(stickyBalkElements.bekijkOpbouwPremieSamenvattingCloseClickElement);
+  await genericMethods.clickOnTakeOutInsuranceNowButton();
 });

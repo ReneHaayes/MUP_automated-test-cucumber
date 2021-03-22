@@ -10,9 +10,9 @@ export class GenericElements {
   bromfietsVerzekeringPat = 'bromfietsverzekering/premieberekenen-en-afsluiten';
   scooterVerzekeringPat = 'scooterverzekering/premieberekenen-en-afsluiten';
   motorVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten';
+  zakelijkeMotorVerzekering = 'zakelijk/motorverzekering';
   quadVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-quad';
   trikeVerzekeringPat = 'motorverzekering/premieberekenen-en-afsluiten-trike';
-  zakelijkMotorfietsVerzekering = 'zakelijk/motorverzekering';
   zorgeloosOnlineVerzekeringPat = 'zorgeloosonline/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/premieberekenen-en-afsluiten';
   bedrijfsAutoVerzekeringPp = 'zakelijk/bedrijfsautoverzekering';
@@ -72,6 +72,16 @@ export class GenericElements {
   milieuSchadeVerzekering = 'zakelijk/milieuschadeverzekering';
   vrachtAutoVerzekering = 'zakelijk/bedrijfsautoverzekering/vrachtwagenverzekering';
   werkmateriaalVerzekering = 'zakelijk/werkmaterieelverzekering';
+  aanhangwagenVerzekeringPp = 'zakelijk/aanhangwagenverzekering';
+  zakelijkeBromfietsverzekeringPp = 'zakelijk/bromfietsverzekering';
+  bestelautoVerzekeringPp = 'zakelijk/bedrijfsautoverzekering/bestelautoverzekering';
+  arbeidsOngeschiktheidVerzekeringZzpPp = 'zakelijk/arbeidsongeschiktheidsverzekering/aov-zzp';
+  arbeidsOngeschiktheidVerzekeringPp = 'zakelijk/arbeidsongeschiktheidsverzekering/aov';
+  pensioenVoorOndernemersPp = 'zakelijk/pensioen';
+  roerendeZakenVerzekeringPp = 'zakelijk/roerendezakenverzekering';
+  werknemersSchadeVerzekeringPp = 'zakelijk/werknemersschadeverzekering';
+  werknemersPensioenVerzekeringPp = 'zakelijk/werknemerspensioen';
+
   loginMijnUniveParticulierURL = 'mijnunive/inloggen';
   veelgesteldevragenURL = 'klantenservice/veelgesteldevragen';
   mailhogPatURL = 'https://mailhog.pat.unive.nl';
@@ -84,7 +94,7 @@ export class GenericElements {
   pensioen = 'pensioen/';
   prefillOmringPashoudersUrl = 'autoverzekering/premieberekenen-en-afsluiten?internetcode=vG71jD90&collectiefSoort=internetCode';
   salesWidgets = 'ppwidgets';
-
+  zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
   faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
 
   zorgchecktool = 'zorgverzekering/zorgcheck';
@@ -129,8 +139,8 @@ export class GenericElements {
   closeVirtualTour = '[id="close-virtual-tour"]';
 
   // BUTTONS
-  nextButton = '#_Form_next';
-  takeOutInsuranceNowButton = '#_Form_finishSave>span';
+  nextButton = 'div > #_Form_next';   // controle:      > div toegevoegd
+  takeOutInsuranceNowButton = '#_Form_finishSave > span';
 
   // LOADER
   loader = 'body > div.blockUI.blockMsg.blockPage';
@@ -156,16 +166,16 @@ export class GenericElements {
 
 
   // HISTORY
-  insuranceHistoryNoElement = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(1)';
-  insuranceHistoryYesElement = '[data-label-id*="LA_IF2535_3710"] .radioList > label:nth-child(2)';
+  insuranceHistoryNoElement = '[data-label-id="LA_IF2535_3710"] > div > label:nth-child(1)';
+  insuranceHistoryYesElement = '[data-label-id="LA_IF2535_3710"] .radioList > label:nth-child(2)';
   insuranceHistoryYesExplanationElement = '#_Form_IF2535_33524';
 
-  criminalHistoryYesElement = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(2)';
-  criminalHistoryNoElement = '[data-label-id*="LA_IF2535_3711"] .radioList > label:nth-child(1)';
+  criminalHistoryYesElement = '[data-label-id="LA_IF2535_3711"] .radioList > label:nth-child(2)';
+  criminalHistoryNoElement = '[data-label-id="LA_IF2535_3711"] .radioList > label:nth-child(1)';
 
-  damageHistoryYesElement = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(2)';
+  damageHistoryYesElement = '[data-label-id="LA_IF2535_33953"] .radioList > label:nth-child(2)';
   damageHistoryYesExplanationElement = '#_Form_IF2535_45811';
-  damageHistoryNoElement = '[data-label-id*="LA_IF2535_33953"] .radioList > label:nth-child(1)';
+  damageHistoryNoElement = '[data-label-id="LA_IF2535_33953"] .radioList > label:nth-child(1)';
 
   // SIDEBAR
   sideBarElement = '//*[@class="rbcontainer"]//*';

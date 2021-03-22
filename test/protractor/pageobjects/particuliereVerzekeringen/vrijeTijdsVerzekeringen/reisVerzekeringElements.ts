@@ -37,9 +37,7 @@ export class ReisVerzekeringElements {
   myPartnerCheckboxChecked = '[class="checkbox value checked"][data-label-id="LA_IF9207_19311"]';
   myChildrenCheckboxChecked = '[class="checkbox value checked"][data-label-id="LA_IF9207_19312"]';
   chooseInsuredPopUpTextElement = '#_Form_lightboxMessageLT';
-  // myselfCheckboxNotChecked: string = '[data-input-field-id="IF9207_19310"][class*="ng-empty"]';
-  // myPartnerCheckboxNotChecked: string = '[data-input-field-id="IF9207_19311"][class*="ng-empty"]';
-  // myChildrenCheckboxNotChecked: string = '[data-input-field-id="IF9207_19312"][class*="ng-empty"]';
+
   summarySpaceMyself = 'Uzelf';
   summarySpaceMyPartner = 'Uw partner';
   summarySpaceMychildren = 'Uw kinderen';

@@ -9,6 +9,7 @@ export class WidgetPageElements {
   avpZakelijkWidgetBerekenUwPremieButton = 'corporate-liability-widget ::sr custom-button ::sr button';
 
 
+
   // BOOTVERZEKERING
   boatTypeSelectElement = 'boat-widget ::sr #kind ::sr .form-select';
   boatWidgetBerekenUwPremieButton = 'boat-widget ::sr custom-button ::sr button';
@@ -47,7 +48,6 @@ export class WidgetPageElements {
   carWidgetBusinessLicensePlateButton = 'car-widget[car-insurance-type="bedrijfsautoverzekering"] ::sr radio-button:nth-child(2) ::sr #radio';
   carWidgetBusinessDontKnowElement = 'car-widget[car-insurance-type="bedrijfsautoverzekering"] ::sr licence-plate.w-40 ::sr a';
   carWidgetBusinessBerekenUwPremieButtonClickElement = 'car-widget ::sr custom-button ::sr button';
-
 
 
   // MOTORVERZEKERING

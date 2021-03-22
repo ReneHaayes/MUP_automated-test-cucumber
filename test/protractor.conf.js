@@ -4,8 +4,8 @@ require('tsconfig-paths/register');
 exports.config = {
   SELENIUM_PROMISE_MANAGER: false,
   // seleniumAddress: 'https://selenium.do.unive.nl/wd/hub',
-  // ignoreUncaughtExceptions: true,
-  allScriptsTimeout: 60000,
+  ignoreUncaughtExceptions: true,
+  allScriptsTimeout: 70000,
   getPageTimeout: 60000,
   directConnect: true,
   restartBrowserBetweenTests: true,
@@ -15,9 +15,9 @@ exports.config = {
     './protractor/features/**/*.feature'
   ],
   capabilities: {
-    browserName: 'chrome',
-        // shardTestFiles: true,
-        // maxInstances: 2,
+     browserName: 'chrome',
+    //      shardTestFiles: true,
+    //      maxInstances: 2,
 
     loggingPrefs: {
       'driver': 'INFO',
@@ -26,12 +26,10 @@ exports.config = {
 
     'chromeOptions': {
       'args': [
-        // "--headless",
-        // "--disable-gpu",
-        //"--window-size=1920,1080",
-        // '--start-maximized',
-        // '--start-minimized',
-        // "disable-extensions"
+        //  "--headless",
+        //  "--disable-gpu",
+        // "disable-extensions",
+        "--window-size=1920,1080",
       ]
     }
   },
@@ -43,7 +41,7 @@ exports.config = {
     mijnUniveParticulier: './protractor/features/mijnUniveParticulier/**/*.feature',
     service: './protractor/features/service/**/*.feature',
     visual: './protractor/features/visual/**/*.feature',
-    widgets: './protractor/features/**/**/widgets*.feature',
+    widgets: './protractor/features/widgets/**/*.feature',
   },
 
   params: {

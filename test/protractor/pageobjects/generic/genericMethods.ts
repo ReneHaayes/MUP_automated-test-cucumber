@@ -3,8 +3,18 @@ import * as chai from 'chai';
 import * as chaistring from 'chai-string';
 import * as path from 'path';
 
-import {genericElements, getUrlUnive, nawElements, personaData} from '@support';
-import {dateEnum, gender, genericEnum, legalEnum, prefix, specificIdentification} from '@enum';
+import {genericElements,
+  getUrlUnive,
+  nawElements,
+  personaData
+} from '@support';
+import {dateEnum,
+  gender,
+  genericEnum,
+  legalEnum,
+  prefix,
+  specificIdentification
+} from '@enum';
 
 import {selectorEnum} from '../enum/genericEnum';
 
@@ -595,6 +605,7 @@ export class GenericMethods {
   }
 
   async clickOnTakeOutInsuranceNowButton() {
+    await this.waitForElementIsVisible(genericElements.takeOutInsuranceNowButton, browser.getPageTimeout);
     await this.clickOnElement(genericElements.takeOutInsuranceNowButton);
   }
 
@@ -715,8 +726,9 @@ export class GenericMethods {
     }
   }
 
-    async selectInsuranceHistory(input: string) {
+  async selectInsuranceHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.insuranceHistoryNoElement, browser.getPageTimeout);
+      browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.insuranceHistoryYesElement);
@@ -735,6 +747,7 @@ export class GenericMethods {
 
   async selectCriminalHistory(input: string) {
     await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.criminalHistoryYesElement);
@@ -753,11 +766,12 @@ export class GenericMethods {
   }
 
   async selectDamageHistory(input: string) {
-    await this.waitForElementIsVisible(genericElements.criminalHistoryNoElement, browser.getPageTimeout);
+    await this.waitForElementIsVisible(genericElements.damageHistoryNoElement, browser.getPageTimeout);
+    browser.sleep(500);
     switch (input) {
       case genericEnum.YES: {
         await this.clickOnElement(genericElements.damageHistoryYesElement);
-        await this.typeText(genericElements.insuranceHistoryYesExplanationElement, 'test');
+        await this.typeText(genericElements.damageHistoryYesExplanationElement, 'test');
         break;
       }
       case genericEnum.NO: {

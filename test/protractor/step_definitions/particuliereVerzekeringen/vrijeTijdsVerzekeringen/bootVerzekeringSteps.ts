@@ -18,7 +18,9 @@ When(/^I enter step one and click next on step two of bootverzekering with (.*)$
       genericMethods.clickOnElement(bootVerzekeringElements.boatHasCabin).then();
     } else if (boatWithName.getBoatType(boatName) === typeBoatEnum.ZEILBOOT) {
       genericMethods.clickOnElement(bootVerzekeringElements.boatHasCabin).then();
-    } else {}
+    } else {
+      return;
+    }
   await genericMethods.typeText(bootVerzekeringElements.boatValueInputElement, boatWithName.getBoatValue(boatName));
   await genericMethods.typeText(bootVerzekeringElements.purchaseDateInputElement, genericMethods.getDate('today'));
   await genericMethods.typeText(bootVerzekeringElements.lengthBoatInputElement, boatWithName.getBoatLength(boatName));
@@ -68,11 +70,11 @@ When(/^I enter details of (.*) in step four page of boot verzekering$/, async (p
   await genericMethods.typeText(nawElements.yourDataLastNameElement, personaData.getPersonaLastName(persona));
   await genericMethods.clickYourDataGender(personaData.getPersonaGender(persona));
   await genericMethods.typeText(nawElements.yourDataBirthDayElement, personaData.getPersonaBirthDate(persona));
-  // await genericMethods.typeText(nawElements.yourDataBirthPlaceElement, personaData.getPersonaBirthPlace(persona));
   await genericMethods.typeText(nawElements.yourDataZipCodeElement, personaData.getPersonaZipcode(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);

@@ -1,5 +1,9 @@
 import {browser} from 'protractor';
-import {autoVerzekeringElements, carWithLicensePlate, genericElements, genericMethods} from "@support";
+import {autoVerzekeringElements,
+  carWithLicensePlate,
+  genericElements,
+  genericMethods
+} from '@support';
 import {
   aanvullendeOptiesEnum,
   basisDekkingEnum, genericEnum,
@@ -7,7 +11,7 @@ import {
   totalPremieEnum, vehicleAccEnum,
   whoDrivesCarMost,
   yearlyMileageEnum
-} from "@enum";
+} from '@enum';
 
 export class AutoVerzekeringMethods {
 
@@ -49,19 +53,19 @@ export class AutoVerzekeringMethods {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYearTot12000km);
         break;
       }
-      case yearlyMileageEnum._12000_TOT_20000: {
+      case yearlyMileageEnum.TUSSEN_12000_EN_20000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYear12000tot20000);
         break;
       }
-      case yearlyMileageEnum._20000_TOT_25000: {
+      case yearlyMileageEnum.TUSSEN_20000_EN_25000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYear20000tot25000);
         break;
       }
-      case yearlyMileageEnum._25000_TOT_35000: {
+      case yearlyMileageEnum.TUSSEN_25000_EN_35000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYear25000tot35000);
         break;
       }
-      case yearlyMileageEnum.MORE_THEN_35000: {
+      case yearlyMileageEnum.MORE_THAN_35000: {
         await genericMethods.selectInDropdown(autoVerzekeringElements.driveInYearElement, autoVerzekeringElements.driveInYearMeerDan25000);
         break;
       }
@@ -74,11 +78,11 @@ export class AutoVerzekeringMethods {
   async selectIfYouAlreadyHaveACarAtUnive(input: string) {
     switch (input) {
       case genericEnum.YES: {
-        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarTrue)
+        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarTrue);
         break;
       }
       case genericEnum.NO: {
-        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarFalse)
+        await genericMethods.clickOnElement(autoVerzekeringElements.alreadyInsuredCarFalse);
         break;
       }
       default: {
@@ -150,22 +154,16 @@ export class AutoVerzekeringMethods {
       case basisDekkingEnum.WA: {
         await genericMethods.clickOnElement(autoVerzekeringElements.waElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        // await genericMethods.waitForElementIsPresentWithXpath(
-        //   genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWa + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.WA_PLUS: {
         await genericMethods.clickOnElement(autoVerzekeringElements.waPlusElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        // await genericMethods.waitForElementIsPresentWithXpath(
-        //   genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarWaPlus + '")]', browser.getPageTimeout);
         break;
       }
       case basisDekkingEnum.ALL_RISK: {
         await genericMethods.clickOnElement(autoVerzekeringElements.allRiskElement);
         await genericMethods.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-        // await genericMethods.waitForElementIsPresentWithXpath(
-        //   genericElements.sideBarElement + '[contains(text(),"' + autoVerzekeringElements.sideBarAllRisk + '")]', browser.getPageTimeout);
         break;
       }
       default: {

@@ -1,25 +1,33 @@
-import {When} from "cucumber";
+import {When} from 'cucumber';
 import {
-  caravanVerzekeringElements, genericElements, genericMethods, nawElements, personaData, vehicleElements
-} from "@support";
+  caravanVerzekeringElements,
+  genericElements,
+  genericMethods,
+  nawElements,
+  personaData,
+  vehicleElements
+} from '@support';
+import {browser} from 'protractor';
 
 When(/^I enter step one and click next on step two of caravan verzekering$/, async () => {
   await genericMethods.clickOnElement(caravanVerzekeringElements.tourCaravanClickElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.searchCaravanDataClickElement);
-  //Different page
+  // In step one page go to search caravan data (subpage)
+  await genericMethods.waitForElementIsVisible(vehicleElements.constructionYearSelectElement, browser.getPageTimeout);
   await genericMethods.selectInDropdown(vehicleElements.constructionYearSelectElement, vehicleElements.constructionYearSelect2018Element);
   await genericMethods.selectInDropdown(vehicleElements.brandNameSelectElement, vehicleElements.brandNameSelectCaravanElement);
   await genericMethods.selectInDropdown(vehicleElements.brandModelSelectElement, vehicleElements.brandModelSelectCaravanElement);
   await genericMethods.selectInDropdown(vehicleElements.brandTypeSelectElement, vehicleElements.brandTypeSelectCaravanElement);
   await genericMethods.clickOnElement(vehicleElements.confirmationButtonClickElement);
-  //Back to step one page
+  // Back to step one page
+  await genericMethods.waitForElementIsVisible(caravanVerzekeringElements.hailDamageNoClickElement, browser.getPageTimeout)
   await genericMethods.clickOnElement(caravanVerzekeringElements.hailDamageNoClickElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.purchaseInfoClickNewElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.houseHouldEffectNoClickElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.moverNoClickElement);
   await genericMethods.clickOnElement(caravanVerzekeringElements.berforeTentNoClickElement);
   await genericMethods.clickOnNextButton();
-  //Click Next on page two
+  // Click Next on page two
   await genericMethods.clickOnNextButton();
 });
 
@@ -38,6 +46,7 @@ When(/^I enter step three page of caravanverzekering for (.*) with:$/, async (pe
   await genericMethods.clickOnTAB(nawElements.yourDataZipCodeElement);
   await genericMethods.typeText(nawElements.yourDataHouseNumberElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.typeText(nawElements.yourDataHouseNumberAdditionElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.clickOnElement(nawElements.yourDataPhoneNumberElement);
   await genericMethods.typeText(nawElements.yourDataPhoneNumberElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.typeText(nawElements.yourDataEmailAddressElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(nawElements.yourDataEmailAddressElement);
