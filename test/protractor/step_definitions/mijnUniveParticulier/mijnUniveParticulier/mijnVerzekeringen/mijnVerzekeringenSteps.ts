@@ -162,7 +162,10 @@ Then(/^Verify thank you message for creating a change is correctly shown$/, asyn
 });
 
 Then(/^Verify algemene voorwaarden is available on screen as a pdf$/, async () => {
-  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.algemeneVoorwaardenPdfElement, browser.getPageTimeout);
+  const handles_3 = await browser.getAllWindowHandles();
+  await browser.switchTo().window(handles_3[handles_3.length - 1]);
+  const handles_4 = await browser.getAllWindowHandles();
+  await browser.switchTo().window(handles_4[handles_4.length - 1]);
   await genericMethods.verifyUrlContains(mijnVerzekeringElements.algemeneVoorwaardenUrlCheckText);
 });
 

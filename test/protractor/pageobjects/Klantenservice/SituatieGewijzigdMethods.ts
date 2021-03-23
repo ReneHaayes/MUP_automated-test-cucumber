@@ -1,9 +1,9 @@
 import {browser} from 'protractor';
-import {genericMethods, situatieGewijzigdElements} from "@support";
+import {genericMethods, situatieGewijzigdElements} from '@support';
 
 export class SituatieGewijzigdMethods {
 
-  //TODO: make enums!
+  // TODO: make enums!
   async checkSituatieGewijzigdPage(input: string) {
     switch (input) {
       case 'verhuizing': {

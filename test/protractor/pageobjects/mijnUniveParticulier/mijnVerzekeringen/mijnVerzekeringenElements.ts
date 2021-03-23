@@ -2,7 +2,6 @@ export class MijnVerzekeringenElements {
 
   // ALGEMENE VOORWAARDEN
   algemeneVoorwaardenClickElement = '[href="/binaries/content/assets/pdfs/algemeen/algemene_voorwaarden.pdf"]';
-  algemeneVoorwaardenPdfElement = '[type="application/pdf"]';
   algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
   // VERZEKERINGSOVERZICHT

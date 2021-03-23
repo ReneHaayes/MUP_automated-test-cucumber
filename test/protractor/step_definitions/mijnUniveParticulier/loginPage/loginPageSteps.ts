@@ -1,5 +1,5 @@
 import {Given, Then, When} from 'cucumber';
-import {browser} from "protractor";
+import {browser} from 'protractor';
 import {
   analyticsGenericElements,
   genericElements,
@@ -7,8 +7,8 @@ import {
   loginPageElements,
   loginPageMethods,
   personaData
-} from "@support";
-import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject, verzekeringPaginasEnum} from "@enum";
+} from '@support';
+import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject, verzekeringPaginasEnum} from '@enum';
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);
@@ -44,13 +44,13 @@ When(/^verify the answer to (.*)$/, async (veelgesteldeVraag: string) => {
 
 When(/^persona (.*) forgot his password and resets it with new password (.*)$/, async (persona: string, newPassword: string) => {
   await genericMethods.clickOnElement(genericElements.cookieClickElement);
-  //Forgot password flow till send email:
+  // Forgot password flow till send email:
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordClickElement);
   await genericMethods.typeText(loginPageElements.forgotPasswordEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordSubmitButtonClickElement);
   await genericMethods.verifyTextInElement(loginPageElements.forgotPasswordMessageWhenEnteredEmailAddressTextElement,
     'We hebben uw aanvraag ontvangen');
-  //Handling the email with new password:
+  // Handling the email with new password:
   await genericMethods.goToPage(verzekeringPaginasEnum.MAILHOG);
   await genericMethods.verifyTextInElement(loginPageElements.mailtoHeaderTextElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnElement(loginPageElements.firstMessageClickElement);

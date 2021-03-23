@@ -1,8 +1,8 @@
-import {browser} from "protractor";
+import {browser} from 'protractor';
 import {
   bedrijfsAutoVerzekeringElements, businessCarWithLicensePlate, genericElements, genericMethods
-} from "@support";
-import {basisDekkingEnum, yearlyMileageEnum} from "@enum";
+} from '@support';
+import {basisDekkingEnum, yearlyMileageEnum} from '@enum';
 
 export class BedrijfsAutoVerzekeringMethods {
 
@@ -41,8 +41,6 @@ export class BedrijfsAutoVerzekeringMethods {
       }
     }
   }
-
-  //TODO: The sidebar in the premie page is not working correctly, when the sidebar is working again the commented rules can be uncommented. This is checked again with Jaap-Jan on 19-06-2017 still not working
 
   async clickOnBasisDekking(input: string) {
     switch (input) {
