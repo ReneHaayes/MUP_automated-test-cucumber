@@ -121,7 +121,7 @@ export class GenericElements {
   mijnUniveContactVoorkeurenDoorgeven: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'contactvoorkeuren';
   mijnUniveVerhuisGegevensDoorgeven: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'verhuizingdoorgeven';
   mijnUniveMijnGegevens: string = this.mijnUnivePage + '/' + this.mijnGegevens;
-  mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'gezinssituatiewijzigen';
+  mijnUniveGezinssituatieWijzigen: string = this.mijnUnivePage + '/' + this.mijnGegevens + '/' + 'gezinssamenstelling';
   mijnUniveMijnVerzekeringen: string = this.mijnUnivePage + '/' + 'polisoverzicht';
   mijnUniveMijnSchadeEnClaim: string = this.mijnUnivePage + '/' + 'schade';
   mijnUnivePremiegevolgenBerekenen: string = this.mijnUniveMijnSchadeEnClaim + '/premiegevolgen-berekenen';
