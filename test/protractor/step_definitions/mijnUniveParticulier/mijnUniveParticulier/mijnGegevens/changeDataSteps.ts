@@ -1,6 +1,6 @@
-import {Then, When} from "cucumber";
-import {ResponsePromise} from "protractor-http-client/dist/promisewrappers";
-import {browser} from "protractor";
+import {Then, When} from 'cucumber';
+import {ResponsePromise} from 'protractor-http-client/dist/promisewrappers';
+import {browser} from 'protractor';
 import {
   apiElements,
   apiMethods,
@@ -12,7 +12,7 @@ import {
   personaData,
   persoonlijkeGegevensElements,
   persoonlijkeGegevensMethods
-} from "@support";
+} from '@support';
 
 
 When(/^Customer changes password for (.*) with (.*)$/, async (persona: string, newPassword: string) => {
@@ -37,34 +37,34 @@ Then(/^Verify (.*) is logged in with (.*) for new password$/, async (persona: st
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(loginPageElements.loginPasswordInputElement, newPassword);
   await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
-  await genericMethods.goToPage("mijn unive particulier");
+  await genericMethods.goToPage('mijn unive particulier');
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
-  let createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody(newPassword, persona));
+  const createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody(newPassword, persona));
   await genericMethods.verifyNumber(await createAccount.statusCode, 200);
 });
 
 Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (persona: string, newEmailAddress: string) => {
-  //FOCUS ON NEW TAB
+  // FOCUS ON NEW TAB
   await browser.getAllWindowHandles().then(function (handles) {
     browser.switchTo().window(handles[1]);
   });
-  //GO TO MIJN UNIVE AND LOG OFF
+  // GO TO MIJN UNIVE AND LOG OFF
   await browser.sleep(5000);
   // await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
   // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
   await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
-  //LOGIN WITH NEW EMAIL ADDRESS AND VERIFY
+  // LOGIN WITH NEW EMAIL ADDRESS AND VERIFY
   await loginPageMethods.login(newEmailAddress, personaData.getPersonaPassword(persona));
   await genericMethods.clickOnElement(mijnUniveAccountElements.mijnGegevensMenuClickElement);
   await genericMethods.verifyTextInElement(persoonlijkeGegevensElements.emailAddressTextElement, newEmailAddress);
-  //SET BACK THE NORMAL EMAIL ADDRESS
+  // SET BACK THE NORMAL EMAIL ADDRESS
   await genericMethods.clickOnElement(mijnUniveAccountElements.editEmailAddressClickElement);
   await genericMethods.typeText(mijnUniveAccountElements.newEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.typeText(mijnUniveAccountElements.confirmNewEmailAddressInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
   await mailhogMethods.verifyEmailHandling(personaData.getPersonaEmailAddress(persona));
-  //FOCUS ON NEW TAB
+  // FOCUS ON NEW TAB
   // await browser.getAllWindowHandles().then(function (handles) {
   //   browser.switchTo().window(handles[2]);
   // });
