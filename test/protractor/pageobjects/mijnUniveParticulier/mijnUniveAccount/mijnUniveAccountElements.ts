@@ -99,18 +99,19 @@ export class MijnUniveAccountElements {
   buttonSaveContactPreferencesClickElement = '#_communicationPreferences_changeMyCustomer';
   contactPreferencesH1TitleTextElement = '#viewPartcommunicationPreferences > h1';
   contactPreferencesH1TitleText = 'Mijn contactvoorkeuren';
-  contactPreferencesSuccesMessageTextElement = '[class="mainMessage"] > p';
+  contactPreferencesSuccessMessageTextElement = '[class="mainMessage"] > p';
   contactPreferencesSuccesMessageText = 'Het bijwerken van de contactvoorkeuren is gelukt.';
 
   // FAMILY COMPOSITION
+  familyCompositionChangePageClickElement = '[href="/mijnunive/mijn-gegevens/gezinssamenstelling/wijzigen"]';
   familyCompositionOnePersonNoChildrenClickElement = '[For="wat-is-uw-gezinssituatie_0"]';
   familyCompositionLiveTogetherNoChildrenClickElement = '[For="wat-is-uw-gezinssituatie_1"]';
   familyCompositionOneParentWithChildrenClickElement = '[For="wat-is-uw-gezinssituatie_2"]';
   familyCompositionFamilyWithChildrenClickElement = '[For="wat-is-uw-gezinssituatie_3"]';
-  familyCompositionIunderstandClickElement = '[for="akkoord-RBV-OVP_0"]';
-  familyCompositionSuccesThankYouText = 'Bedankt voor het invullen van uw gegevens. U ontvangt ter bevestiging een e-mail met uw gegevens.';
+  familyCompositionIUnderstandClickElement = '[for="akkoord-RBV-OVP_0"]';
+  familyCompositionSuccessThankYouText = 'Bedankt voor het invullen van uw gegevens. U ontvangt ter bevestiging een e-mail met uw gegevens.';
   familyCompositionPartnerLivingTogetherInitialsInputElement = '[name="partner-samenwonend__voorletters"]';
-  familyCompositionPartnerLivingTogetehrLastnameInputElement = '[name="partner-samenwonend__achternaam"]';
+  familyCompositionPartnerLivingTogetherLastnameInputElement = '[name="partner-samenwonend__achternaam"]';
   familyCompositionSelectGenderLivingTogetherMaleClickElement = '[for="partner-samenwonend__geslacht_0"]';
   familyCompositionSelectGenderLivingTogetherFemaleClickElement = '[for="partner-samenwonend__geslacht_1"]';
   familyCompositionBirthdateLivingTogetherInputElement = '[name="partner-samenwonend__geboortedatum"]';

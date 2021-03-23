@@ -92,6 +92,8 @@ When(/^Customer changes contact preferences$/, async () => {
 });
 
 When(/^Customer changes family composition preferences with (.*)$/, async (familyCompositionInput: string) => {
+  await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionChangePageClickElement);
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.familyCompositionOnePersonNoChildrenClickElement, browser.getPageTimeout);
   await persoonlijkeGegevensMethods.changeFamilyComposition(familyCompositionInput);
 });
 
@@ -100,9 +102,9 @@ Then(/^Verify thank you page for payment data changed$/, async () => {
 });
 
 Then(/^Verify thank you message is shown for changing contact preferences$/, async () => {
-  await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesSuccesMessageTextElement, mijnUniveAccountElements.contactPreferencesSuccesMessageText);
+  await genericMethods.verifyTextInElement(mijnUniveAccountElements.contactPreferencesSuccessMessageTextElement, mijnUniveAccountElements.contactPreferencesSuccesMessageText);
 });
 
 Then(/^Verify thank you message is shown for family composition preferences$/, async () => {
-  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.familyCompositionSuccesThankYouText, browser.getPageTimeout);
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.familyCompositionSuccessThankYouText, browser.getPageTimeout);
 });
