@@ -100,6 +100,7 @@ export enum verzekeringPaginasEnum {
   HOME_ATE = 'ate',
   HOME_SALES_OT_DAAS = 'salesDaas',
   HOME_SERVICE_OT_DAAS = 'serviceDaas',
+  HOME_ACC = 'acc',
 
   // Algemene pagina's
   KLANTENSERVICE = 'Klantenservice',
@@ -146,14 +147,13 @@ export enum verzekeringPaginasEnum {
   OLDTIMERVERZEKERING = 'Oldtimerverzekering',
   ONGEVALLENVERZEKERING = 'Ongevallenverzekering',
   RECHTSBIJSTANDVERZEKERING = 'Rechtsbijstandverzekering',
-  RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekeringPP',
+  RECHTSBIJSTANDVERZEKERING_PP = 'rechtsbijstandverzekering',
   SCOOTMOBIELVERZEKERING = 'Scootmobielverzekering',
   HIGH_SPEED_E_BIKE_VERZEKERING = 'High speed e-bikeverzekering',
   INBOEDELVERZEKERING = 'Inboedelverzekering',
   OPSTALVERZEKERING = 'Opstalverzekering',
   HYPOTHEEK = 'Hypotheek',
   PENSIOEN = 'pensioen',
-  //  LIJFRENTEVERZEKERING = 'lijfrenteverzekering',     // twijfels of deze pagina nog wel bestaat, daarom tijdelijk uitgezet op 16-03
   UITVAARTVERZEKERING = 'uitvaartverzekering',
   OVERLIJDENSRISICOVERZEKERING = 'overlijdensrisicoverzekering',
   MIJNGEMAK = 'MijnGemak',
@@ -324,7 +324,6 @@ export enum breadCrumbEnum {
   COLLECTIEF = 'Collectief',
   AANSPRAKELIJKHEIDSVERZEKERING = 'Aansprakelijkheidsverzekering',
   PENSIOEN = 'Pensioen',
-  LIJFRENTEVERZEKERING = 'Lijfrenteverzekering',
   UITVAARTVERZEKERING = 'Uitvaartverzekering',
   OVERLIJDENSRISICOVERZEKERING = 'Overlijdensrisicoverzekering',
   MIJN_GEMAK = 'Mijn gemak',

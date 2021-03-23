@@ -44,7 +44,6 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
       | uw recht               | rechtsbijstandverzekering     |
       | alle verzekeringen     | aansprakelijkheidsverzekering |
       | uw financiele toekomst | pensioen                      |
-#      | alle verzekeringen     | lijfrenteverzekering          |     Staat niet meer op de pagina
       | uw nabestaanden        | uitvaartverzekering           |
       | alle verzekeringen     | overlijdensrisicoverzekering  |
 

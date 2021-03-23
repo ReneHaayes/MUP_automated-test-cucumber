@@ -25,7 +25,6 @@ When(/^I enter step one of zzp-pakket with (.*)$/, async (company: string, data)
     await zzpGoedBeterBestMethods.selectMileage(dataTable.mileage);
     await genericMethods.typeText(zzpGoedBeterBestElements.damageFreeYearsElement, '2');
   } else {
-    return;
   }
   await zzpGoedBeterBestMethods.selectHasInventoryOnOtherAdress(dataTable.otherInventoryAdress);
   if (dataTable.otherInventoryAdress === 'yes') {
@@ -34,7 +33,6 @@ When(/^I enter step one of zzp-pakket with (.*)$/, async (company: string, data)
     await genericMethods.typeText(zzpGoedBeterBestElements.otherAdressAdditionInputElement, personaData.getPersonaHouseNumberAddition(dataTable.persona));
     await genericMethods.clickOnTAB(zzpGoedBeterBestElements.otherAdressAdditionInputElement);
   } else {
-    return;
   }
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
 });
@@ -54,7 +52,6 @@ When(/^I enter step four of zzp-pakket with$/, async (data) => {
   if (dataTable.hasCompanyCar === 'yes') {
   await zzpGoedBeterBestMethods.selectCompanyCar(dataTable.ownerOfCar);
   } else {
-    return;
   }
   // Bedrijfsaansprakelijkheidsverzekering
   await zzpGoedBeterBestMethods.selectFireHazardousWork(dataTable.fireHazardousWork);
@@ -71,7 +68,6 @@ When(/^I enter step four of zzp-pakket with$/, async (data) => {
   if (zzpGoedBeterBestElements.legalCouncilQuestionHeader === 'Rechtsbijstandverzekering') {
     await zzpGoedBeterBestMethods.selectHasOtherActivities(dataTable.hasOtherActivities);
   } else {
-    return;
   }
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.nextButton);
 });
@@ -108,7 +104,6 @@ When(/^I fill in almost insured page for zzp-pakket with:$/, async (data) => {
     await zzpGoedBeterBestMethods.selectLegalQuestionsZZP(dataTable.legalQuestions);
     browser.sleep(1000);
   } else {
-    return;
   }
   await genericMethods.clickOnElement(zzpGoedBeterBestElements.getInsuranceNowButton);
 });

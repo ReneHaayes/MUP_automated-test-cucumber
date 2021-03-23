@@ -1,6 +1,6 @@
-import {browser} from "protractor";
-import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements, productPageElements} from "@support";
-import {breadCrumbEnum, selectAlleVerzekeringEnum, verzekeringPaginasEnum} from "@enum";
+import {browser} from 'protractor';
+import {alleVerzekeringenElements, genericMethods, getUrlUnive, hmPageElements, productPageElements} from '@support';
+import {breadCrumbEnum, selectAlleVerzekeringEnum, verzekeringPaginasEnum} from '@enum';
 
 export class AlleVerzekeringenMethods {
 
@@ -60,7 +60,6 @@ export class AlleVerzekeringenMethods {
     switch (input) {
       case verzekeringPaginasEnum.ZORGVERZEKERING: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.ZORGVERZEKERING);
-        console.log('test');
         await genericMethods.verifyTextInElement(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.zorgVerzekeringPageH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.ZORGVERZEKERING, 2);
@@ -273,6 +272,14 @@ export class AlleVerzekeringenMethods {
         await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.kostbaarhedenVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
         break;
       }
+      case verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING: {
+        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING);
+        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.rechtsbijstandVerzekeringH1TitleText);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
+        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING, 2);
+        await genericMethods.waitForElementIsVisible(alleVerzekeringenElements.rechtsbijstandVerzekeringBerekenUwPremieButtonClickElement, browser.getPageTimeout);
+        break;
+      }
       case verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING_PP: {
         await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.RECHTSBIJSTANDVERZEKERING);
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.rechtsbijstandVerzekeringH1TitleText);
@@ -294,13 +301,6 @@ export class AlleVerzekeringenMethods {
         await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.productPageH1TitleTextElement, alleVerzekeringenElements.pensioenH1TitleText);
         await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
         await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.PENSIOEN, 2);
-        break;
-      }
-      case verzekeringPaginasEnum.LIJFRENTEVERZEKERING: {
-        await genericMethods.verifyUrlContainsIgnoreCase(verzekeringPaginasEnum.LIJFRENTEVERZEKERING);
-        await genericMethods.verifyTextInElementIgnoreCase(alleVerzekeringenElements.lijfrenteVerzekeringH1TitleTextElement, alleVerzekeringenElements.lijfrenteVerzekeringH1TitleText);
-        await genericMethods.verifyBreadcrumbOnPosition(verzekeringPaginasEnum.HOME, 1);
-        await genericMethods.verifyBreadcrumbOnPosition(breadCrumbEnum.LIJFRENTEVERZEKERING, 2);
         break;
       }
       case verzekeringPaginasEnum.UITVAARTVERZEKERING: {

@@ -29,7 +29,7 @@ Feature: Happy flow for 'Bromfietsverzekering' and 'Scooterverzekering'
     Examples:
       | page                 | persona | licensePlate | coverage |
       | Bromfietsverzekering | ronaldo | 12-FRP-3     | wa       |
-      | Scooterverzekering   | ronaldo | F-169-NS     | wa   |
+      | Scooterverzekering   | ronaldo | F-169-NS     | wa       |
       | Scooterverzekering   | ronaldo | F-169-NS     | waPlus   |
       | Bromfietsverzekering | neymar  | DKR-97-R     | allRisk  |
 

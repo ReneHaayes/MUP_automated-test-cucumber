@@ -43,6 +43,8 @@ When(/^I enter step four page of zakelijk tractorverzekering for (.*) with (.*)$
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
@@ -69,6 +71,8 @@ When(/^I enter step four page of zakelijke tractorverzekering for (.*) with (.*)
   await genericMethods.typeText(nawElements.companyDataKvkNumberInputElement, companyData.getCompanyKvkNumber(company));
   await genericMethods.clickOnTAB(nawElements.companyDataKvkNumberInputElement);
   await genericMethods.clickOnElement(nawElements.companyDataEmployeesNoClickElement);
+  await genericMethods.waitForElementIsVisible(nawElements.companyDataPhoneNumberInputElement, browser.getPageTimeout);
+  await genericMethods.clickOnTAB(nawElements.companyDataPhoneNumberInputElement);
   await genericMethods.typeText(nawElements.companyDataPhoneNumberInputElement, companyData.getCompanyPhoneNumber(company));
   await genericMethods.typeText(nawElements.companyDataEmailAddressInputElement, companyData.getCompanyEmailAddress(company));
   await genericMethods.clickOnTAB(nawElements.companyDataEmailAddressInputElement);
