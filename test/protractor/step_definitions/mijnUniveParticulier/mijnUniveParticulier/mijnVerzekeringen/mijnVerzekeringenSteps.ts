@@ -49,7 +49,7 @@ Then(/^Verify url for verzekeringskaarten contains the following (.*)$/, async (
 });
 
 When(/^Customer selects damage claim with damage number: (.*)$/, async (damageNumber: string) => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(damageNumber));
+  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeDetailsClickElement(damageNumber));
 });
 
 When(/^Customer uploads (.*) for claim with damage number: (.*)$/, async (filename: string, damageNumber: string) => {

@@ -9,6 +9,11 @@ export class MijnVerzekeringenElements {
     return '[class=\'tile__link media\'][href*=\'' + polisNumber + ']';
   }
 
+  // SCHADEDETAILS
+  schadeDetailsClickElement(polisNumber: string): string {
+    return 'class="tile__description-damage__item--visible-desktop"\'][href*=\'' + polisNumber + ']';
+  }
+
   // VERZEKERINGSKAARTEN
   verzekeringsKaartenUrlClickElement = '[class="page-links"] [href*="verzekeringskaarten"]';
   verzekeringsKaartenWaitElement = '[src*="verzekeringskaarten"]';
