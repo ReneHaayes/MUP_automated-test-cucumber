@@ -2,8 +2,8 @@ import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
 import {
   afspraakMakenElements, genericMethods, klachtenFormulierElements, loginPageElements, personaData
-} from "@support";
-import {genericEnum, homePageEnum} from "@enum";
+} from '@support';
+import {genericEnum, homePageEnum} from '@enum';
 
 When(/^Customer fills in afspraak maken form correctly with already customer (yes|no)$/, async (alreadyCustomer: string) => {
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
@@ -35,9 +35,6 @@ When(/^Logged in customer fills in afspraak maken form correctly and prefill is 
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, personaData.getPersonaHouseNumber(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, personaData.getPersonaHouseNumberAddition(persona));
-  /*
-   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.streetNameInputElement, personaData.get(persona));
-  */
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.emailAddressInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.clientNumberInputElement, personaData.getPersonaSpecificIdentificationNumber(persona));

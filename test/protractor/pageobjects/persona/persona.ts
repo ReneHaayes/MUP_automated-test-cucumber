@@ -1,3 +1,4 @@
+/* tslint:disable:no-shadowed-variable */
 import {
   durationEntrepreneur,
   gender,
@@ -34,6 +35,7 @@ export class Persona {
   weight: string;
   password: string;
 
+  // tslint:disable-next-line:no-shadowed-variable
   constructor(firstName: string, initials: string, prefix: string, lastName: string, birthday: string, birthMonth: string, birthYear: string, birthplace: string, zipcode: string, houseNumber: string, houseNumberAddition: string,
               gender: string, phoneNumber: string, specificIdentification: string, specificIdentificationNumber: string, eMailAddress: string, accountNumber: string, bsn: string,
               profession: string, kvkNumber: string, durationEntrepreneur: string, height: string, weight: string, password: string) {
