@@ -5,10 +5,10 @@ export {legalEnum
 }from '../pageobjects/enum/autoVerzekeringEnum';
 
 export {homePageEnum
-}from '../pageobjects/enum/woonVerzekeringEnum';
+}from '../pageobjects/enum/verzekeringenEnum';
 
 export {zakelijkHomePageEnum
-}from '../pageobjects/enum/woonVerzekeringEnum';
+}from '../pageobjects/enum/verzekeringenEnum';
 
 export {familyCompositionEnum
 }from '../pageobjects/enum/familyCompositionEnum';
@@ -68,7 +68,7 @@ export {
   superficiesAndContents,
   totalSurface,
   materialEnum,
-} from '../pageobjects/enum/woonVerzekeringEnum';
+} from '../pageobjects/enum/verzekeringenEnum';
 
 
 export {

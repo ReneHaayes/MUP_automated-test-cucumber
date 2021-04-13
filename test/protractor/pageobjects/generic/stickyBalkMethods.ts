@@ -1,6 +1,6 @@
-import {genericElements, genericMethods, stickyBalkElements} from "@support";
-import {browser} from "protractor";
-import {homePageEnum} from "../enum/woonVerzekeringEnum";
+import {genericElements, genericMethods, stickyBalkElements} from '@support';
+import {browser} from 'protractor';
+import {homePageEnum} from '../enum/verzekeringenEnum';
 
 
 export class StickyBalkMethods {

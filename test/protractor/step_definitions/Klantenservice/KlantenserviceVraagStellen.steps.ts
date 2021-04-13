@@ -3,7 +3,7 @@ import {
   genericMethods, klantenserviceVraagStellenElements, klantenserviceVraagstellenMethods, loginPageElements
 } from "@support";
 import {browser} from "protractor";
-import {homePageEnum} from "../../pageobjects/enum/woonVerzekeringEnum";
+import {homePageEnum} from "../../pageobjects/enum/verzekeringenEnum";
 
 When(/^Customer fills in form for schadeverzekeringen vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.schadeverzekeringenButtonClickElement);
