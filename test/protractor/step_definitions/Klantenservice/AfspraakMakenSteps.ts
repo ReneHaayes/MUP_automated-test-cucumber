@@ -29,12 +29,13 @@ When(/^Logged in customer fills in afspraak maken form correctly and prefill is 
   await genericMethods.goToPage(homePageEnum.AFSPRAAK_MAKEN);
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
   await genericMethods.typeText(klachtenFormulierElements.omschrijvingInputElement, 'omschrijving');
+  await genericMethods.clickOnTAB(klachtenFormulierElements.omschrijvingInputElement);
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.initialsInputElement, personaData.getPersonaInitials(persona) + '.');
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.lastNameInputElement, personaData.getPersonaLastName(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.birthDateInputElement, personaData.getPersonaBirthDate(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.zipCodeInputElement, personaData.getPersonaZipcode(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, personaData.getPersonaHouseNumber(persona));
-  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberInputElement, personaData.getPersonaHouseNumberAddition(persona));
+  await genericMethods.verifyValueTextInElement(klachtenFormulierElements.houseNumberAdditionInputElement, personaData.getPersonaHouseNumberAddition(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.emailAddressInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.phoneNumberInputElement, personaData.getPersonaPhoneNumber(persona));
   await genericMethods.verifyValueTextInElement(klachtenFormulierElements.clientNumberInputElement, personaData.getPersonaSpecificIdentificationNumber(persona));

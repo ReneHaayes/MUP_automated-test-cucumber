@@ -118,16 +118,16 @@ export class PersonaData {
   testkindBoven18Een: Persona = new Persona('Berend', 'B.', 'Het', 'Kind boven achttien een', '11', '05', '1999', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'kindboven18@een.nl',
     'NL02ABNA0123456789', '670020916', 'student', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  testPartner: Persona = new Persona('Arie', 'A.', 'De', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
+  testPartner: Persona = new Persona('Arie', 'A', 'De', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
 
-  darthvader: Persona = new Persona('Anakin', 'A.', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '8011TS', '126',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0612345678', specificIdentification.PASSPORT, 'ACP26N', 'darthvader@univetest.nl',
+  darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '8011 TS', '126',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
     'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
 
-  skywalker: Persona = new Persona('Luke', 'L.', prefix.NO_PREFIX, 'Partner', '16', '06', '1973', 'Kampen', '8261CA', '222',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0612345679', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
+  skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Partner', '16', '06', '1973', 'Kampen', '8261 CA', '222',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
     'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
 
 

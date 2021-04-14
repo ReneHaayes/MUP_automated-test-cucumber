@@ -18,8 +18,8 @@ Feature: Check for Afspraak maken page is correctly handled
     Then Verify afspraak maken form thank you text
 
     Examples:
-      | persona |
-      | illing  |
+      | persona     |
+      | darthvader  |
 
   Scenario: Verify afspraak maken button is available when logged in
     Given Customer illing is logged in on the mijn unive particulier page of the Unive website

@@ -15,6 +15,7 @@ export class KlachtenFormulierElements {
   lastNameInputElement = '[title="Achternaam"]';
   zipCodeInputElement = '[title="Postcode"]';
   houseNumberInputElement = '[title="Huisnummer"]';
+  houseNumberAdditionInputElement = '[title="Huisnummer toevoeging"]';
   birthDateInputElement = '[title="Geboortedatum"]';
   emailAddressInputElement = '[title="E-mailadres"]';
   streetNameInputElement = '[name="personal_data__street"]';

@@ -1,12 +1,12 @@
-import {genericEnum} from "../enum/genericEnum";
+import {genericEnum} from '../enum/genericEnum';
 
 export class AfspraakMakenElements {
 
-  selectVerzekeringenAsSubjectClickElement: string = '.eforms-radio-container > [value="verzekeringen"]~span';
-  selectGenderMaleClickElement: string = '.eforms-radio-container > [value="Man"]~span';
-  selectAlreadyCustomerClickElementFor: string = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
+  selectVerzekeringenAsSubjectClickElement = '.eforms-radio-container > [value="verzekeringen"]~span';
+  selectGenderMaleClickElement = '.eforms-radio-container > [value="Man"]~span';
+  selectAlreadyCustomerClickElementFor = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
 
-  selectAlreadyCustomerClickElement(input: string){
+  selectAlreadyCustomerClickElement(input: string) {
     switch (input) {
       case genericEnum.YES: {
         return '.eforms-radio-container > [value="true"]~span';
@@ -20,12 +20,12 @@ export class AfspraakMakenElements {
     }
   }
 
-  selectAlreadyCustomerNoHiddenElement: string = '.eforms-radio-container > [value="false"]~span';
+  selectAlreadyCustomerNoHiddenElement = '.eforms-radio-container > [value="false"]~span';
 
-  confirmationTextElement: string = '[class="eforms-container"] > p';
-  confirmationText: string = 'Hartelijk dank';
+  confirmationTextElement = '[class="eforms-container"] > p';
+  confirmationText = 'Hartelijk dank';
 
-  //AFSPRAAK MAKEN MIJN UNIVE
+  // AFSPRAAK MAKEN MIJN UNIVE
   afspraakMakenWinkelDetailClickElement = '[class="page-content__block"] [class="button"]';
 
 }
