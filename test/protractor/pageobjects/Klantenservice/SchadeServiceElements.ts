@@ -14,7 +14,7 @@ export class SchadeServiceElements {
   selectedSchadeServiceAddresTextElement = 'map-search ::sr map-search-result-list ::sr map-search-result-item ::sr [id="address"]';
 
   getTitleForLocationTextElement(input: string): string {
-    return 'map-search ::sr map-search-result-list ::sr map-search-result-item:nth-child(' + input + ') ::sr #title'
+    return 'map-search ::sr map-search-result-list ::sr map-search-result-item:nth-child(' + input + ') ::sr #title';
   }
 
   getLocationFinderClickElement(input: string): string {
