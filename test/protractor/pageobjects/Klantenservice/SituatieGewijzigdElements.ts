@@ -5,4 +5,9 @@ export class SituatieGewijzigdElements {
   }
 
   situatieGewijzigdHeaderElement =  '[class="detailContent_title"]';
+  klantenservice = 'Klantenservice';
+  trouwenClickElement = '[href="/klantenservice/trouwen"]';
+  verhuizingClickElement = '[href="/klantenservice/verhuizing"]';
+  scheidingClickElement = '[href="/klantenservice/scheiding"]';
+  gezinsuitbreidingClickElement = '[href="/klantenservice/gezinsuitbreiding"]';
 }

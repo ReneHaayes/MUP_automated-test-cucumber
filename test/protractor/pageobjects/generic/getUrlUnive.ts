@@ -164,6 +164,9 @@ export class GetUrlUnive {
       case homePageEnum.KLANTENSERVICE: {
         return this.getEnv(browser.params.env.environment) + homePageEnum.KLANTENSERVICE;
       }
+      case homePageEnum.KLANTENSERVICE_WIJZIGEN: {
+        return this.getEnv(browser.params.env.environment) + genericElements.wijzigingenDoorgeven;
+      }
       case homePageEnum.KLACHTENFORMULIER: {
         return this.getEnv(browser.params.env.environment) + genericElements.klachtenFormulier;
       }

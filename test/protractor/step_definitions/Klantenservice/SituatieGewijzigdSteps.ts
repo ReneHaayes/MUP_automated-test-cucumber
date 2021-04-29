@@ -1,10 +1,10 @@
 import {Given, Then} from 'cucumber';
-import {genericMethods, situatieGewijzigdElements, situatieGewijzigdMethods} from '@support';
+import {situatieGewijzigdMethods} from '@support';
 
 Given(/^Customer clicks on situation (.*) to be changed$/, async (situatie: string) => {
-  await genericMethods.clickOnElement(situatieGewijzigdElements.situatieGewijzigdClickElement(situatie));
+  await situatieGewijzigdMethods.selectSituatieGewijzigd(situatie);
 });
 
-Then(/^Verify header with text (.*) of situation is correcly shown$/, async (headerText: string) => {
+Then(/^Verify header with text (.*) of situation is correctly shown$/, async (headerText: string) => {
   await situatieGewijzigdMethods.checkSituatieGewijzigdPage(headerText);
 });
