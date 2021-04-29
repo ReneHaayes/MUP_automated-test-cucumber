@@ -29,7 +29,7 @@ export class KlantenserviceVraagStellenElements {
   // Radiobuttons Schadeverzekeringen
   stichtingWinstoogmerkJaClickElement = '[class="eforms-input-group"] > label:nth-child(1)';
   bentUKlantBijUniveJaPrive = '#field_3 > div:nth-child(2) > div > label:nth-child(1)';
-  //geslachtContactpersoonMan = '#field_3 > div:nth-child(7) > div.eforms-input-group > label:nth-child(1)';
+  // geslachtContactpersoonMan = '#field_3 > div:nth-child(7) > div.eforms-input-group > label:nth-child(1)';
   geslachtContactpersoonMan = '.eforms-radio-container > [value="Man"] ~span';
   stichtingEerderGesponsordJa = '#page0 > div:nth-child(21) > div > label:nth-child(1)';
 
