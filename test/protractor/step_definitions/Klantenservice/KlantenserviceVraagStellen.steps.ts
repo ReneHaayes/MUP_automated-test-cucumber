@@ -123,7 +123,7 @@ When(/^Customer fills in form for wijziging vraag stellen$/, async () => {
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.wijzigingAdresWijzigenGeslachtMan);
   await genericMethods.typeText(klantenserviceVraagStellenElements.wijzigingAdresWijzigenGeboortedatumInputElement, '01-01-1980');
   await genericMethods.typeText(klantenserviceVraagStellenElements.wijzigingAdresWijzigenEMailAdresInputElement, 'infoo@univee.nl');
-  await genericMethods.typeText(klantenserviceVraagStellenElements.wijzigingAdresWijzigenVerhuisDatumInputElement, '01-01-2021');
+  await genericMethods.typeText(klantenserviceVraagStellenElements.wijzigingAdresWijzigenVerhuisDatumInputElement, '01-01-2022');
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.wijzigingAdresWijzigenMeeverzekerdenJa);
   await genericMethods.clickOnElement(klantenserviceVraagStellenElements.buttonSendClickElement);
 });
