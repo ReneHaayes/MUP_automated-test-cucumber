@@ -1,14 +1,14 @@
 export class KlantenserviceNeemContactOpElements {
 
   neemContactOpClickElement(input: string): string {
-    return '[text="'+input+'"]';
+    return '[text="' + input + '"]';
   }
 
   tileUitgeklaptElement(input: string): string {
-    return '[text="'+input+'"] ::sr div > div[class*="duration-500"]';
+    return '[text="' + input + '"] ::sr div > div[class*="duration-500"]';
   }
 
   tileIngeklaptElement(input: string): string {
-    return '[text="'+input+'"] ::sr div > div[class*="duration-75"]';
+    return '[text="' + input + '"] ::sr div > div[class*="duration-75"]';
   }
 }
