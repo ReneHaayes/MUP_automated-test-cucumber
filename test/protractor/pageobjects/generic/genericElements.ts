@@ -61,7 +61,7 @@ export class GenericElements {
   zakelijkAgrarier = 'zakelijk/agrariers';
   zakelijkGebouwen = 'zakelijk/gebouwenverzekering';
   afspraakMakenZakelijk = 'zakelijk/klantenservice/afspraak';
-  afspraakMaken = 'klantenservice/afspraak';
+  afspraakMaken = 'afspraak';
   klachtIndienen = 'zakelijk/klachtindienen';
   schadeBeslisboom = 'schade';
   mijnUniveZakelijk = 'https://login-zakelijk.pat.unive.nl/login';

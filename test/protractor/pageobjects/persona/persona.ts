@@ -122,7 +122,7 @@ export class PersonaData {
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
 
-  darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '8011 TS', '126',
+  darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '7541 WH', '22',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
     'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
 
