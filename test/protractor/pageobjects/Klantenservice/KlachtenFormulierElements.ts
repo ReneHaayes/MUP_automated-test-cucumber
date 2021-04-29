@@ -1,8 +1,8 @@
 export class KlachtenFormulierElements {
 
   // BUTTONS
-  zorgVerzekeringButtonClickElement = '[data-show-id="dt_0"]';
-  schadeVerzekeringButtonClickElement = '[data-show-id="dt_1"]';
+  zorgVerzekeringButtonClickElement = '[href*="/klantenservice/klacht-zorgverzekering"]';
+  schadeVerzekeringButtonClickElement = '[href*="/klantenservice/klacht-schadeverzekering"]';
   buttonSendClickElement = '[name="btnSubmit"]';
 
   // INPUT
