@@ -91,7 +91,7 @@ export class MijnUniveAccountElements {
 
   // THANK YOU PAGE
   formThankYouTextElement = '[class*=form-container] > p';
-  formThankYouText = 'Hartelijk dank voor het doorgeven van uw wijziging(en).';
+  formThankYouText = 'Gezinssamenstelling wijzigen';
 
   // CONTACT PREFERENCES
   damageInsurancesClickElement = '[class="h-block-title"]';
@@ -109,7 +109,7 @@ export class MijnUniveAccountElements {
   familyCompositionOneParentWithChildrenClickElement = '[For="wat-is-uw-gezinssituatie_2"]';
   familyCompositionFamilyWithChildrenClickElement = '[For="wat-is-uw-gezinssituatie_3"]';
   familyCompositionIUnderstandClickElement = '[for="akkoord-RBV-OVP_0"]';
-  familyCompositionSuccessThankYouText = 'Bedankt voor het invullen van uw gegevens. U ontvangt ter bevestiging een e-mail met uw gegevens.';
+  familyCompositionSuccessThankYouText = 'Gezinssamenstelling wijzigen';
   familyCompositionPartnerLivingTogetherInitialsInputElement = '[name="partner-samenwonend__voorletters"]';
   familyCompositionPartnerLivingTogetherLastnameInputElement = '[name="partner-samenwonend__achternaam"]';
   familyCompositionSelectGenderLivingTogetherMaleClickElement = '[for="partner-samenwonend__geslacht_0"]';
