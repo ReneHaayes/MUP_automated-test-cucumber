@@ -91,7 +91,7 @@ export class MijnUniveAccountElements {
 
   // THANK YOU PAGE
   formThankYouTextElement = '[class*=form-container] > p';
-  formThankYouText = 'Gezinssamenstelling wijzigen';
+  formThankYouText = 'Hartelijk dank voor het doorgeven van uw wijziging(en).';
 
   // CONTACT PREFERENCES
   damageInsurancesClickElement = '[class="h-block-title"]';
