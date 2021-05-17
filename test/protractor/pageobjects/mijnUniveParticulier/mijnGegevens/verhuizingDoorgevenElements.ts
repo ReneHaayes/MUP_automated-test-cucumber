@@ -2,6 +2,7 @@ export class VerhuizingDoorgevenElements {
 
   // MIJN GEGEVENS
   verhuizingDoorgevenClickElement = '[class="page-links-item__link media link"][href="/mijnunive/verhuizingdoorgeven"]';
+  verhuizingWijzigUwGegevensClickElement = 'div.button_flex > a > div.button__text';
 
   // NIEUWE ADRESGEGEVENS
   movingDateInputElement = '#date';
@@ -13,7 +14,7 @@ export class VerhuizingDoorgevenElements {
   coInsuredAppliesNoClickElement = '[for="coInsured__applies_1"]';
 
   // SUCCES TEXT
-  succesTextMessageElement = '[class="form-container"] > p';
-  succesTextMessage = 'Hartelijk dank voor het doorgeven van uw wijzigingen.';
+  succesTextMessageElement = 'div.flex > h2';
+  succesTextMessage = 'Uw adres wordt per';
 
 }
