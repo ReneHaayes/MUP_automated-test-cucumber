@@ -18,7 +18,9 @@ export class MijnSchadeEnClaimElements {
   damageClaimStepOneNextButtonClickElement = '#_AddClaimStepGeneralClaimData_Next';
 
   // DAMAGE CLAIM STEP TWO
-  damageClaimStepTwoNextButtonClickElement = '#_AddClaimStepSelectPoliciesView_Next';
+  // damageClaimStepTwoNextButtonClickElement = '#_AddClaimStepSelectPoliciesView_Next';
+  damageClaimAutoInsuranceClickElement = 'div.modal-content__block > div > div:nth-child(3) > div > a';
+  damageClaimWoonInsuranceClickElement = 'div.modal-content__block > div > div:nth-child(6) > div > a';
 
   // DAMAGE CLAIM STEP THREE
   damageClaimCityInputElement = '#_Form_IF28905_36811';
@@ -39,6 +41,8 @@ export class MijnSchadeEnClaimElements {
   damageClaimCloseLightBoxClickElement = '[class="closeLightbox"] > a';
   // DAMAGE CLAIM STEP FOUR
   damageClaimLicensePlateInputElement = '#_Form_IF7263_35019';
+  damageClaimOtherPartyPhoneNumber = '#_Form_IF7263_39009';
+  damageClaimOtherPartyEmailAdress = '#_Form_IF7263_8535';
   damageClaimResponsibilityOtherPartyClickElement = '#_Form_IF27613_35018_tegenpartij';
   damageClaimDamageToOwnVehicleTrueClickElement = '#_Form_IF7264_5240_true';
   damageClaimTravelDocumentsStolenClickElement = '#_Form_IF12550_16854_reispapieren';
@@ -60,7 +64,7 @@ export class MijnSchadeEnClaimElements {
   damageClaimSaveAndCommitButtonClickElement = '#_AddClaimStepConfirmation_Save';
   damageClaimOtherCompanyInvolvementFalseClickElement = '#_Form_IF14830_19688_false';
   // DAMAGE CLAIM SUMMARY
-  damageClaimSuccesMessageTextElement = '[class="success message"] >p';
+  damageClaimSuccesMessageTextElement = '[div > p:nth-child(1) > b]';
   damageClaimSuccesMessageText = 'Wij gaan voor u aan de slag';
   // damageClaimSuccesMessageText = 'Melden schade is voltooid';
 

@@ -2,10 +2,15 @@
 
 Feature: Claiming damages
 
-  Scenario: Verify customer can claim a damage for autoverzekering
+  Scenario Outline: Verify customer can claim a damage for autoverzekering
     Given Customer darthvader is logged in on the mijn unive mijn schade en claim page of the Unive website
-    When Customer claims a autoverzekering damage by filling in the form for polis 70462892
+    When Customer claims a <polis> damage by filling in the form for polis <polisnumber>
     Then Verify damage claim succes message is shown
+
+    Examples:
+      | polis           | polisnumber |
+      | autoverzekering | 70462892    |
+
 
   Scenario: Verify customer can claim a damage for woonverzekering
     Given Customer darthvader is logged in on the mijn unive mijn schade en claim page of the Unive website

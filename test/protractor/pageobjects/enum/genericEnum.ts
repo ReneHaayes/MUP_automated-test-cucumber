@@ -121,6 +121,7 @@ export enum verzekeringPaginasEnum {
   AANSPRAKELIJKHEIDSVERZEKERING_PAT = 'aansprakelijkheidsverzekering',
   AUTOVERZEKERING_PRODUCT_PAGE_PAT = 'autoverzekeringProductPage',
   WOONVERZEKERING_PAT = 'Woonverzekering',
+  PARTICULIERE_WOONVERZEKERING = 'Particuliere Woonverzekering',
   WOONVERZEKERING_PRODUCT_PAGE_PAT = 'woonVerzekeringPp',
   BROMFIETSVERZEKERING_PAT = 'Bromfietsverzekering',
   SCOOTERVERZEKERING_PAT = 'Scooterverzekering',
