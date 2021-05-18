@@ -14,6 +14,11 @@ export class LoginPageElements {
   loggedInHeaderH1Text2Element = '[class="h-page-title is-visible-desktop-only"]';
   loggedInHeaderH1Text = 'Mijn overzicht';
 
+  // als bevestigingspagina weer werkt even het element pakken, liefst via Developer.
+  // MIJN UNIVE CHANGED PASSWORD
+  loginChangedPasswordThankYouTextElement = 'LET OP NOG GEEN ELEMENT';
+  loginChangedPasswordThankYouText = 'Er is bevestigingsmail naar u onderweg';
+
   // ERRORS
   passwordErrorFieldTextElement = '[data-messagetype="fielderror"]';
   emailAdresErrorFieldTextElement = '[for="emailphone"]';

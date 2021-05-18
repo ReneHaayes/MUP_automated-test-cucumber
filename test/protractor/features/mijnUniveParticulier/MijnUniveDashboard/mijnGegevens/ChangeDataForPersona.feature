@@ -2,14 +2,15 @@
 
 Feature: Changing data for persona when logged in.
 
+  @testscenario
   Scenario Outline: Change password after logged in.
     Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website
     When Customer changes password for <persona> with <newPassword>
-    Then Verify <persona> is logged in with <newPassword> for new password
+    Then Verify if the bevestigingspagina is shown
 
     Examples:
       | persona | newPassword    |
-      | erichters   | Wachtwoord123! |
+      | ako     | Wachtwoord123! |
 
   Scenario Outline: Change emailadres for login.
     Given Customer <persona> is logged in on the mijn unive particulier page of the Unive website
@@ -17,8 +18,8 @@ Feature: Changing data for persona when logged in.
     Then Verify <persona> is logged in with <newEmailAddress> for new email address
 
     Examples:
-      | persona   | newEmailAddress    |
-      | erichters | test123@test123.nl |
+      | persona | newEmailAddress    |
+      | ako     | test123@test123.nl |
 
   Scenario Outline: Change payment data for persona when logged in
     Given Customer woestenburg is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website

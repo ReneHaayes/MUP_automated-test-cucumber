@@ -1,9 +1,6 @@
 import {Then, When} from 'cucumber';
-import {ResponsePromise} from 'protractor-http-client/dist/promisewrappers';
 import {browser} from 'protractor';
 import {
-  apiElements,
-  apiMethods,
   genericMethods,
   loginPageElements,
   loginPageMethods,
@@ -33,14 +30,10 @@ When(/^Customer changes email address with (.*)$/, async (newEmailAddress: strin
   await mailhogMethods.verifyEmailHandling(newEmailAddress);
 });
 
-Then(/^Verify (.*) is logged in with (.*) for new password$/, async (persona: string, newPassword: string) => {
-  await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
-  await genericMethods.typeText(loginPageElements.loginPasswordInputElement, newPassword);
-  await genericMethods.clickOnElement(loginPageElements.loginSubmitButtonClickElement);
-  await genericMethods.goToPage('mijn unive particulier');
-  await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1TextElement, loginPageElements.loggedInHeaderH1Text);
-  const createAccount: ResponsePromise = await apiMethods.postWithAlreadyLoggedInToken(apiElements.changePasswordEndpoint, apiMethods.createChangePasswordBody(newPassword, persona));
-  await genericMethods.verifyNumber(await createAccount.statusCode, 200);
+// als bevestigingspagina weer werkt even de tekst checken
+Then(/^Verify if the bevestigingspagina is shown$/, async () => {
+  await genericMethods.waitForElementIsVisible(loginPageElements.loginChangedPasswordThankYouTextElement, browser.getPageTimeout);
+  await genericMethods.verifyTextContainsInElement(loginPageElements.loginChangedPasswordThankYouTextElement, loginPageElements.loginChangedPasswordThankYouText, browser.getPageTimeout);
 });
 
 Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (persona: string, newEmailAddress: string) => {
