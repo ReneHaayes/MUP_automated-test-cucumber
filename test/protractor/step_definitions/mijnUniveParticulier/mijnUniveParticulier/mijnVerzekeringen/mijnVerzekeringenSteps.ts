@@ -61,10 +61,9 @@ When(/^Customer uploads (.*) for claim with damage number: (.*)$/, async (filena
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.uploadingDocumentUploadButtonClickElement);
 });
 
-When(/^Customer claims a (.*) damage by filling in the form for polis (.*)$/, async (polis: string) => {
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimClickElement);
+When(/^Customer claims a (.*) damage by filling in the form for polis$/, async (polis: string) => {
   // STEP ONE
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
+  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimClickElement);
   await genericMethods.acceptAlertWhenAvailable();
   // STEP TWO t/m FIVE
   await mijnSchadeEnClaimMethods.chooseInsuranceTypeForDamage(polis);
@@ -72,7 +71,8 @@ When(/^Customer claims a (.*) damage by filling in the form for polis (.*)$/, as
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
   // STEP SEVEN
-  await genericMethods.verifyTextContainsInElement(mijnSchadeEnClaimElements.damageClaimSuccesMessageTextElement, mijnSchadeEnClaimElements.damageClaimSuccesMessageText, browser.getPageTimeout);
+  await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimSuccesMessageTextElement, browser.getPageTimeout);
+  // await genericMethods.verifyTextContainsInElement(mijnSchadeEnClaimElements.damageClaimSuccesMessageTextElement, mijnSchadeEnClaimElements.damageClaimSuccesMessageText, browser.getPageTimeout);
 });
 //
 // When(/^Customer claims a autoverzekering damage by filling in the form for polis (.*)$/, async (polisNumber: string) => {

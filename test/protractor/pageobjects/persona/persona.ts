@@ -93,7 +93,7 @@ export class PersonaData {
     'a.woestenburg@quicknet.nl', '3872', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
   aakoek: Persona = new Persona('Annie', 'AA', prefix.NO_PREFIX, 'Koek', '07', '07', '1976', 'Enschede', '7546ET', '59',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'aakoek@hotmail.com', '2487', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
+    'aakoek@hotmail.com', '2487', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
   ako: Persona = new Persona('Ako', 'AJC', prefix.NO_PREFIX, 'Koek', '09', '04', '1962', 'Kudelstaart', '1433DC', '4',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'ako62@live.nl', '8582', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');

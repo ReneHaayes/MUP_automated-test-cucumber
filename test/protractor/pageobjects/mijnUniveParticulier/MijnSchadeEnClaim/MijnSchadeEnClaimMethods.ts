@@ -27,13 +27,15 @@ export class MijnSchadeEnClaimMethods {
         await genericMethods.clickOnElement('div.l-content > div > div > div > div:nth-child(2) > div > a > div.button__text');
         // STEP THREE
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
+        // STEP FOUR
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimCityInputElement, 'Zwolle');
-        await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectCauseClickElement('Wat is er gebeurd?', 'Parkeerschade'));
-        await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectSituationClickElement('Welke situatie is voor u van toepassing?', 'De andere partij stond geparkeerd'));
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimTypeParkeerschade);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageSituationParkeerschadeOtherPartyParked);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimInfluenceOfAlcoholFalseClickElement);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOtherPartyDamageTrueClickElement);
         await genericMethods.clickOnNextButton();
-// STEP FOUR
+        // STEP FOUR
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimLicensePlateInputElement, '06-HN-DL');
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimOtherPartyPhoneNumber, '0612345678');
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimOtherPartyEmailAdress, 'mail@adres.nl');
@@ -44,6 +46,8 @@ export class MijnSchadeEnClaimMethods {
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneInputElement, '0612345678');
         await genericMethods.clickOnTakeOutInsuranceNowButton();
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement, browser.getPageTimeout);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
         break;
       }
       case verzekeringPaginasEnum.PARTICULIERE_WOONVERZEKERING: {

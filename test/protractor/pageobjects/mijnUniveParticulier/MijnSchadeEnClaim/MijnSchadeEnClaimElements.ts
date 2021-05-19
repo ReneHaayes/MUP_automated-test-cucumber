@@ -13,19 +13,20 @@ export class MijnSchadeEnClaimElements {
   wijzigenVerzekeringSnelLinkClickElement = '[class="page-links"] > li:nth-child(2) > [class*="link"]';
 
   // DAMAGE CLAIM STEP ONE
-  damageClaimClickElement = '[href*="add-my-claim-by-policies"]';
+  damageClaimClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
   damageClaimDateInputElement = '#_AddClaimStepGeneralClaimData_dateDamageField';
-  damageClaimStepOneNextButtonClickElement = '#_AddClaimStepGeneralClaimData_Next';
+  damageClaimStepOneNextButtonClickElement = '[id="_AddClaimStepGeneralClaimData_Next"]';
 
   // DAMAGE CLAIM STEP TWO
   // damageClaimStepTwoNextButtonClickElement = '#_AddClaimStepSelectPoliciesView_Next';
-  damageClaimAutoInsuranceClickElement = 'div.modal-content__block > div > div:nth-child(3) > div > a';
-  damageClaimWoonInsuranceClickElement = 'div.modal-content__block > div > div:nth-child(6) > div > a';
+  damageClaimAutoInsuranceClickElement = '[href*="product=auto"]';
+  damageClaimWoonInsuranceClickElement = '[href*="product=woon"]';
 
   // DAMAGE CLAIM STEP THREE
   damageClaimCityInputElement = '#_Form_IF28905_36811';
-  damageClaimInfluenceOfAlcoholFalseClickElement = '#_Form_IF3623_33280_false';
-  damageClaimOtherPartyDamageTrueClickElement = '#_Form_IF7257_5228_true';
+  // fixen klikken alcohol en eigen schade
+  damageClaimInfluenceOfAlcoholFalseClickElement = 'fieldset.hasHeader.entryGroup.active-group > div > div:nth-child(1) > div.values > div > div > label:nth-child(2)';
+  damageClaimOtherPartyDamageTrueClickElement = 'fieldset.hasHeader.entryGroup.active-group > div > div:nth-child(2) > div.values > div > div > label:nth-child(1)';
   damageClaimReedAchteruitTrueClickElement = '#_Form_IF3623_39320_true';
   damageClaimOtherPartyVoetgangerFietserFalseClickElement = '#_IF3623_39008_false';
   damageClaimInboedelStolenFalseClickElement = '#_Form_IF27715_19620_false';
@@ -46,6 +47,15 @@ export class MijnSchadeEnClaimElements {
   damageClaimResponsibilityOtherPartyClickElement = '#_Form_IF27613_35018_tegenpartij';
   damageClaimDamageToOwnVehicleTrueClickElement = '#_Form_IF7264_5240_true';
   damageClaimTravelDocumentsStolenClickElement = '#_Form_IF12550_16854_reispapieren';
+  // DAMAGE TYPES
+  damageClaimTypeRuitschade = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(1)';
+  damageClaimTypeParkeerschade = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(2)';
+  damageClaimTypeAanrijdingZonderAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(3)';
+  damageClaimTypeAanrijdingMetAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(4)';
+  damageClaimTypeSchadeStormHagelBrandDier = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(5)';
+  damageClaimTypeInbraakVandalismeDiefstal = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(6)';
+  // DAMAGE SITUATION PARKEERSCHADE
+  damageSituationParkeerschadeOtherPartyParked = 'fieldset.hasHeader.entryGroup.active-group > div > div:nth-child(3) > div.values > div > div > label:nth-child(1)';
   // DAMAGE CLAIM STEP FIVE
   damageClaimContactThroughPhoneClickElement = '#_Form_IF31405_39308_telefoon';
   damageClaimContactThroughPhoneInputElement = '#_Form_IF31405_39309';

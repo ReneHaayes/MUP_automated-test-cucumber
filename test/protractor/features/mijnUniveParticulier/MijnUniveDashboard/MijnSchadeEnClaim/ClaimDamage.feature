@@ -2,20 +2,22 @@
 
 Feature: Claiming damages
 
+  @testscenario
   Scenario Outline: Verify customer can claim a damage for autoverzekering
-    Given Customer darthvader is logged in on the mijn unive mijn schade en claim page of the Unive website
-    When Customer claims a <polis> damage by filling in the form for polis <polisnumber>
+    Given Customer <persona> is logged in on the mijn unive mijn schade en claim page of the Unive website
+    When Customer claims a <polis> damage by filling in the form for polis
     Then Verify damage claim succes message is shown
 
     Examples:
-      | polis           | polisnumber |
-      | autoverzekering | 70462892    |
+      | polis           | persona |
+      | Autoverzekering | aakoek  |
 
 
   Scenario: Verify customer can claim a damage for woonverzekering
     Given Customer darthvader is logged in on the mijn unive mijn schade en claim page of the Unive website
     When Customer claims a woonverzekering damage by filling in the form for polis 71727735
     Then Verify damage claim succes message is shown
+  # gebruik Skywalker voor WOON
 
 #  Scenario: Verify customer can claim a damage for doorlopende verzekering
 #    Given Customer darthvader is logged in on the mijn unive mijn schade en claim page of the Unive website
