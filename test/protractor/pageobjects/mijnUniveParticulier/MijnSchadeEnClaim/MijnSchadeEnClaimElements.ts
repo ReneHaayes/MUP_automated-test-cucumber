@@ -9,7 +9,7 @@ export class MijnSchadeEnClaimElements {
 
   // WIJZIGEN VERZEKERING
   polisDetailsTitleTextElement = '[class="page-content__block__title"] > h1';
-  polisDetailsTitleText = 'Polisdetails';
+  polisDetailsTitleText = 'Polis';
   wijzigenVerzekeringSnelLinkClickElement = '[class="page-links"] > li:nth-child(2) > [class*="link"]';
 
   // DAMAGE CLAIM STEP ONE

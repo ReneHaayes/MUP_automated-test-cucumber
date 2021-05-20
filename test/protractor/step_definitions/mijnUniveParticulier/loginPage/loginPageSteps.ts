@@ -12,6 +12,9 @@ import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject, verzekeringPagi
 
 Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
   await genericMethods.goToPage(page);
+  try {
+    await genericMethods.clickOnCookie(genericElements.cookieClickElement);
+  } catch (e) {}
   await genericMethods.waitForElementIsVisible(loginPageElements.loginEmailInputElement, browser.getPageTimeout);
   await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
 });

@@ -8,7 +8,7 @@ Feature: Verzekeringskaarten
     Then Verify url for verzekeringskaarten contains the following <urlToVerify>
 
     Examples:
-      | persona | polis number | urlToVerify                    |
-      | illing  | 70173314     | unive/autoverzekering-all-risk |
+      | persona    | polis number | urlToVerify                    |
+      | darthvader | 70462892     | unive/autoverzekering-all-risk |
 
     # TODO add: new scenario's for a user with polises who dont change.
