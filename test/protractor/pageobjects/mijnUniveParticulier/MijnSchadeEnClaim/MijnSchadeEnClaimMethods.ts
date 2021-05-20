@@ -35,14 +35,14 @@ export class MijnSchadeEnClaimMethods {
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimInfluenceOfAlcoholFalseClickElement);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOtherPartyDamageTrueClickElement);
         await genericMethods.clickOnNextButton();
-        // STEP FOUR
+        // STEP FIVE
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimLicensePlateInputElement, '06-HN-DL');
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimOtherPartyPhoneNumber, '0612345678');
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimOtherPartyEmailAdress, 'mail@adres.nl');
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimResponsibilityOtherPartyClickElement);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimDamageToOwnVehicleTrueClickElement);
         await genericMethods.clickOnNextButton();
-        // STEP FIVE
+        // STEP SIX
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneInputElement, '0612345678');
         await genericMethods.clickOnTakeOutInsuranceNowButton();
