@@ -1,6 +1,6 @@
-import {When} from "cucumber";
-import {genericMethods, populaireProductenElements} from "@support";
-import {numbersEnum} from "@enum";
+import {When} from 'cucumber';
+import {genericMethods, populaireProductenElements} from '@support';
+import {numbersEnum} from '@enum';
 
 When(/^Customer clicks on (.*) tile of the popular product on verzekering bijsluiten page$/, async (wichtTile: string) => {
   await genericMethods.verifyTextInElement(populaireProductenElements.titleTextElement, populaireProductenElements.titleText);
@@ -30,15 +30,15 @@ When(/^Customer clicks on (.*) tile of the popular product on verzekering bijslu
 When(/^Verify the tile correctly redirects url for the (.*) tile$/, async (wichtTile: string) => {
   switch (wichtTile) {
     case numbersEnum.FIRST: {
-      await genericMethods.verifyUrlContainsIgnoreCase('woonverzekering');
+      await genericMethods.verifyUrlContainsIgnoreCase('Zorgverzekering');
       break;
     }
     case numbersEnum.SECOND: {
-      await genericMethods.verifyUrlContainsIgnoreCase('autoverzekering');
+      await genericMethods.verifyUrlContainsIgnoreCase('Rechtsbijstandverzekering');
       break;
     }
     case numbersEnum.THIRTH: {
-      await genericMethods.verifyUrlContainsIgnoreCase('aansprakelijkheidsverzekering');
+      await genericMethods.verifyUrlContainsIgnoreCase('Autoverzekering');
       break;
     }
     default: {

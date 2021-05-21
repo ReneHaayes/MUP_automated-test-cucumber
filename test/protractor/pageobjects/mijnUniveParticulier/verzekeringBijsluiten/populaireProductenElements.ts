@@ -3,12 +3,12 @@ export class PopulaireProductenElements {
   titleTextElement = '[class*="tiles-dashboard--popular"] [class="h-block-title"]';
   titleText = 'Populaire producten';
 
-  firstTileTitleTextElement = '[class*="tiles-dashboard--popular"] [class="tiles-dashboard__column"]:nth-child(2) [class="tile__title"]';
-  firstTileTitleText = 'Woon';
-  secondTileTitleTextElement = '[class*="tiles-dashboard--popular"] [class="tiles-dashboard__column"]:nth-child(3) [class="tile__title"]';
-  secondTileTitleText = 'Auto';
-  thirthTileTitleTextElement = '[class*="tiles-dashboard--popular"] [class="tiles-dashboard__column"]:nth-child(4) [class="tile__title"]';
-  thirthTileTitleText = 'Aansprakelijkheidsverzekering';
+  firstTileTitleTextElement = 'div:nth-child(2) > div > div:nth-child(2) > div > a > div.tile__body > div';
+  firstTileTitleText = 'Zorgverzekering';
+  secondTileTitleTextElement = 'div:nth-child(2) > div > div:nth-child(3) > div > a > div.tile__body > div';
+  secondTileTitleText = 'Rechtsbijstandverzekering';
+  thirthTileTitleTextElement = 'div:nth-child(2) > div > div:nth-child(4) > div > a > div.tile__body > div';
+  thirthTileTitleText = 'Autoverzekering';
 
 
 }
