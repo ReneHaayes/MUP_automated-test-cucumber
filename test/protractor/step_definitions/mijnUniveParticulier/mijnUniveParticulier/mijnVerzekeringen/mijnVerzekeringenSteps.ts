@@ -65,77 +65,15 @@ When(/^Customer claims a (.*) damage by filling in the form for polis$/, async (
   // STEP ONE
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimClickElement);
   await genericMethods.acceptAlertWhenAvailable();
-  // STEP TWO t/m SIX
+  // STEP TWO to SIX
   await mijnSchadeEnClaimMethods.chooseInsuranceTypeForDamage(polis);
   // STEP SEVEN-SLOTVRAGEN
+  await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimAgreementClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
   // STEP EIGHT-BEVESTIGEN
   await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimSuccesMessageTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextContainsInElement(mijnSchadeEnClaimElements.damageClaimSuccesMessageTextElement, mijnSchadeEnClaimElements.damageClaimSuccesMessageText, browser.getPageTimeout);
-});
-
-When(/^Customer claims a woonverzekering damage by filling in the form for polis (.*)$/, async (polisNumber: string) => {
-  await mijnSchadeEnClaimMethods.damageClaimFillInSchadeGegevens(polisNumber);
-  // STEP THREE
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimCityInputElement, 'Zwolle');
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectCauseClickElement('Wat is de oorzaak van de schade?', 'Water'));
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectSituationClickElement('Waardoor is de waterschade ontstaan?', 'Leidinglekkage'));
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectSituationClickElement('Waar is de lekkage ontstaan?', 'Ik weet het niet'));
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimInboedelStolenFalseClickElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimDamageToHouseTrueClickElement);
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectSituationClickElement('Waar is de schade ontstaan?', 'In of aan de woning'));
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimPermanentLivingTrueClickElement);
-  await genericMethods.clickOnNextButton();
-  // STEP FOUR
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimWhatIsDamaged('Muur'));
-  await genericMethods.clickOnNextButton();
-  // STEP FIVE
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimTotalDamageAmountInputElement, '100');
-  await genericMethods.clickOnNextButton();
-  // STEP SIX
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDescriptionOfDamageInputElement, 'test123');
-  await genericMethods.clickOnNextButton();
-  // STEP SEVEN
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOtherCompanyInvolvementFalseClickElement);
-  await genericMethods.clickOnNextButton();
-  await genericMethods.clickOnTakeOutInsuranceNowButton();
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
-  // STEP EIGHT
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
-});
-
-When(/^Customer claims a doorlopende reisverzekering damage by filling in the form for polis (.*)$/, async (polisNumber: string) => {
-  await mijnSchadeEnClaimMethods.damageClaimFillInSchadeGegevens(polisNumber);
-  // STEP THREE
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectCauseClickElement('Wat is er gebeurd?', 'Spullen verloren, gestolen of beschadigd'));
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectCauseClickElement('Wat is er gebeurd met uw  spullen?', 'Spullen gestolen'));
-  await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectCauseClickElement('Welke situatie is van toepassing?', 'Diefstal'));
-  await genericMethods.selectInDropdown(mijnSchadeEnClaimElements.damageClaimSelectCountrySelectElement, mijnSchadeEnClaimElements.damageClaimSelectEspanaSelectElement);
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimGoingDateInputElement, genericMethods.getDate('today'));
-  await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimGoingDateInputElement);
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimReturnDateInputElement, genericMethods.getDate('seven days'));
-  await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimReturnDateInputElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimPrivateTripClickElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimInsuredIllingWasOnTheTripClickElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimHappenedBeforeTripClickElement);
-  await genericMethods.clickOnNextButton();
-  // STEP FOUR
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimTravelDocumentsStolenClickElement);
-  await genericMethods.clickOnNextButton();
-  // STEP FIVE
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimCancelDateInputElement, genericMethods.getDate('today'));
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimBookingDateInputElement, genericMethods.getDate('today'));
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOneNotaClickElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOmboekingFalseClickElement);
-  await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimTotalPriceInputElement, '15000');
-  await genericMethods.clickOnNextButton();
-  // STEP SIX
-  await genericMethods.clickOnTakeOutInsuranceNowButton();
-  // STEP SEVEN
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
-  await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSaveAndCommitButtonClickElement);
 });
 
 Then(/^Verify uploaded (.*) is show in the list beneath$/, async (filename: string) => {

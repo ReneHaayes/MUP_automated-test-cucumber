@@ -139,7 +139,7 @@ export class GenericElements {
   closeVirtualTour = '[id="close-virtual-tour"]';
 
   // BUTTONS
-  nextButton = 'div > #_Form_next';   // controle:      > div toegevoegd
+  nextButton = 'div > #_Form_next';
   takeOutInsuranceNowButton = '#_Form_finishSave > span';
 
   // LOADER

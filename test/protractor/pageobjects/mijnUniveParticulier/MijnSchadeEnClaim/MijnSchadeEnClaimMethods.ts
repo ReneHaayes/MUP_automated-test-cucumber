@@ -1,4 +1,5 @@
 import {
+  genericElements,
   genericMethods,
   mijnSchadeEnClaimElements,
   mijnSchadeEnClaimMethods,
@@ -24,7 +25,7 @@ export class MijnSchadeEnClaimMethods {
       case verzekeringPaginasEnum.AUTOVERZEKERING_PAT: {
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAutoInsuranceClickElement);
         await genericMethods.verifyTextContainsInElement('div:nth-child(2) > div > div > h2', 'Autoverzekering', browser.getPageTimeout);
-        await genericMethods.clickOnElement('div.l-content > div > div > div > div:nth-child(2) > div > a > div.button__text');
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAutoInsuranceClickElement);
         // STEP THREE
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
@@ -51,8 +52,31 @@ export class MijnSchadeEnClaimMethods {
         break;
       }
       case verzekeringPaginasEnum.PARTICULIERE_WOONVERZEKERING: {
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimWoonInsuranceClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimWoonInsuranceClickElement);
-        await genericMethods.verifyTextContainsInElement('div:nth-child(2) > div > div > h2', 'Autoverzekering', browser.getPageTimeout);
+        await genericMethods.verifyUrlContainsIgnoreCase('product=woon');
+        // STEP THREE
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimDateInputElement, browser.getPageTimeout);
+        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement, browser.getPageTimeout);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
+        // STEP FOUR
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimCityInputElement, browser.getPageTimeout);
+        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimCityInputElement, 'Zwolle');
+        await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimCityInputElement);
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimSoortWoonSchade, browser.getPageTimeout);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSoortWoonSchade);
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimOorzaakWoonSchade, browser.getPageTimeout);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOorzaakWoonSchade);
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimDesriptionWoonSchade, browser.getPageTimeout);
+        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDesriptionWoonSchade, 'Die rotkat gooit weer een vaas om.');
+        await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimDesriptionWoonSchade);
+        await genericMethods.clickOnNextButton();
+        // STEP FIVE
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimSlotvragenWoonSlotvraagNee, browser.getPageTimeout);
+        await genericMethods.verifyTextContainsInElement(mijnSchadeEnClaimElements.damageClaimSlotvragenVerifyText, 'Gemelde schade', browser.getPageTimeout);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSlotvragenWoonSlotvraagNee);
+        await genericMethods.clickOnElement(genericElements.takeOutInsuranceNowButton);
         break;
       }
       default: {
@@ -74,17 +98,17 @@ export class MijnSchadeEnClaimMethods {
     return '//*[contains(text(),\'' + polisNumber + '\')]/preceding::td[1]/descendant::input';
   }
 
-  damageClaimSelectCauseClickElement(question: string, cause: string): string {
-    return '//*[contains(text(),\'' + question + '\')]/following::*[contains(text(),\'' + cause + '\')]/preceding::span[1]/descendant::input';
-  }
-
-  damageClaimSelectSituationClickElement(question: string, situation: string): string {
-    return '//*[contains(text(),\'' + question + '\')]/following::*[contains(text(),\'' + situation + '\')]/preceding::span[1]/descendant::input';
-  }
-
-  damageClaimWhatIsDamaged(option: string) {
-    return '//*[contains(text(),\'' + option + '\')]/preceding::span[1]/input';
-  }
+  // damageClaimSelectCauseClickElement(question: string, cause: string): string {
+  //   return '//*[contains(text(),\'' + question + '\')]/following::*[contains(text(),\'' + cause + '\')]/preceding::span[1]/descendant::input';
+  // }
+  //
+  // damageClaimSelectSituationClickElement(question: string, situation: string): string {
+  //   return '//*[contains(text(),\'' + question + '\')]/following::*[contains(text(),\'' + situation + '\')]/preceding::span[1]/descendant::input';
+  // }
+  //
+  // damageClaimWhatIsDamaged(option: string) {
+  //   return '//*[contains(text(),\'' + option + '\')]/preceding::span[1]/input';
+  // }
 
   polisForPremiegevolgenPageWithPolisNumber(polisNumber: string): string {
     return '[href="/mumq/QIS_Customer/my-ncbm-prognosis/' + polisNumber + '"]';
