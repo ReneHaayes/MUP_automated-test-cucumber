@@ -45,8 +45,6 @@ export class MijnSchadeEnClaimElements {
   damageClaimTypeParkeerschade = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(2)';
   damageClaimTypeAanrijdingZonderAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(3)';
   damageClaimTypeAanrijdingMetAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(4)';
-  // damageClaimTypeSchadeStormHagelBrandDier = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(5)';
-  // damageClaimTypeInbraakVandalismeDiefstal = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(6)';
   // DAMAGE SITUATION PARKEERSCHADE
   damageSituationParkeerschadeOtherPartyParked = 'fieldset.hasHeader.entryGroup.active-group > div > div:nth-child(3) > div.values > div > div > label:nth-child(1)';
   // DAMAGE CLAIM STEP FIVE AUTO/WOON
