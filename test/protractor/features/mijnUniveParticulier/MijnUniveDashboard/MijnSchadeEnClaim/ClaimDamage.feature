@@ -2,7 +2,7 @@
 
 Feature: Claiming damages
 
-  Scenario Outline: Verify customer can claim a damage for autoverzekering
+  Scenario Outline: Verify customer can claim a damage for auto- en woonverzekering
     Given Customer <persona> is logged in on the mijn unive mijn schade en claim page of the Unive website
     When Customer claims a <polis> damage by filling in the form for polis
     Then Verify damage claim succes message is shown
