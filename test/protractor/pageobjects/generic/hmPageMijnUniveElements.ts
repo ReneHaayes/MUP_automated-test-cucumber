@@ -1,38 +1,38 @@
 export class HmPageMijnUniveElements {
 
-  //MENUPAGE
-  menuPageVerzekeringenButtonClickElement: string = '[class*="mainMenu_link"][title*="Verzekeringen"]';
-  menuPageKlantenserviceButtonClickElement: string = '[class*="mainMenu_link"][title*="Klantenservice"]';
+  // MENUPAGE
+  menuPageVerzekeringenButtonClickElement = '[class*="mainMenu_link"][title*="Verzekeringen"]';
+  menuPageKlantenserviceButtonClickElement = '[class*="mainMenu_link"][title*="Klantenservice"]';
 
-  //HEADER
-  headerZoekenClickElement: string = '[class*="site-header-desktop-header__button site-header-desktop-header__button--search"]';
-  headerZoekenInputElement: string = '[class="site-header-search__input"]';
-  zoekenPageButtonInputElement: string = '[class="banner_searchBarSubmit"]';
-  zoekenPageButtonClickElement: string = '[class="svg-icon svg-icon--m-or-s svg-icon--white"]';
+  // HEADER
+  headerZoekenClickElement = '[class*="site-header-desktop-header__button site-header-desktop-header__button--search"]';
+  headerZoekenInputElement = '[class="site-header-search__input"]';
+  zoekenPageButtonInputElement = '[class="banner_searchBarSubmit"]';
+  zoekenPageButtonClickElement = '[class="svg-icon svg-icon--m-or-s svg-icon--white"]';
 
   // headerMijnUniveClickElement: string = '[data-toggle-menu="mijnunive"]';
 
-  headerKlantenserviceClickElement: string = '[data-menu-trigger="site-nav+accordion:customerservice"]';
-  headerVerzekeringenClickElement: string = '[data-menu-trigger="site-nav+accordion:insurances"]';
+  headerKlantenserviceClickElement = '[data-menu-trigger="site-nav+accordion:customerservice"]';
+  headerVerzekeringenClickElement = '[data-menu-trigger="site-nav+accordion:insurances"]';
 
-  headerMijnUniveClickElement: string = '[class="button-icon-text site-header-desktop-header__button"]';
-  headerMijnUniveZorgTitleTextElement: string = '[class="site-header-mu-nav-block__title"][href="https://pat.unive.nl/mijnunivezorg/inloggen"]';
-  headerMijnUniveZorgTitleText: string = 'Mijn Univé Zorg';
-  headerMijnUniveParticulierTitleTextElement: string = '[class="site-header-mu-nav-block__title"][href="/mijnunive/inloggen"]';
-  headerMijnUniveParticulierTitleText: string = 'Mijn Univé Particulier';
-  headerMijnUniveZakelijkTitleTextElement: string = '[class="site-header-mu-nav-block__title"][href="https://pat.unive.nl/zakelijk/mijnunive/inloggen"]';
-  headerMijnUniveZakelijkTitleText: string = 'Mijn Univé Zakelijk';
+  headerMijnUniveClickElement = '[class="button-icon-text site-header-desktop-header__button"]';
+  headerMijnUniveZorgTitleTextElement = '[class="button site-header-mu-nav-block__button"][href="https://services.mijnunivezorg.nl/inloggen"]';
+  headerMijnUniveZorgTitleText = 'Mijn Univé Zorg';
+  headerMijnUniveParticulierTitleTextElement = '[class="site-header-mu-nav-block__title"][href="/mijnunive/inloggen"]';
+  headerMijnUniveParticulierTitleText = 'Mijn Univé Particulier';
+  headerMijnUniveZakelijkTitleTextElement = '[class="button site-header-mu-nav-block__button"][href="/mijnunivezakelijk/inloggen"]';
+  headerMijnUniveZakelijkTitleText = 'Mijn Univé Zakelijk';
 
-  headerMijnUniveVerzekeringenTitleTextElement: string = '[data-menu-trigger="site-nav+accordion:insurances"]';
-  headerMijnUniveVerzekeringenTitleText: string = 'Verzekeringen';
+  headerMijnUniveVerzekeringenTitleTextElement = '[data-menu-trigger="site-nav+accordion:insurances"]';
+  headerMijnUniveVerzekeringenTitleText = 'Verzekeringen';
 
-  headerMijnUniveKlantenserviceTitleTextElement: string = '[data-menu-trigger="site-nav+accordion:customerservice"]';
-  headerMijnUniveKlantenserviceTitleText: string = 'Klantenservice';
+  headerMijnUniveKlantenserviceTitleTextElement = '[data-menu-trigger="site-nav+accordion:customerservice"]';
+  headerMijnUniveKlantenserviceTitleText = 'Klantenservice';
 
 
-  footerBekijkDeVeelGesteldeVragenClickElement: string ='[class="footer__help"] [href="/klantenservice/veelgesteldevragen"]';
+  footerBekijkDeVeelGesteldeVragenClickElement = '[class="footer__help"] [href="/klantenservice/veelgesteldevragen"]';
 
-  footerBekijkDeVeelGesteldeVragenTextElement: string = '[class="decisiontree_title"]';
-  footerBekijkDeVeelGesteldeVragenTitleText: string = 'Veelgestelde vragen overzicht';
+  footerBekijkDeVeelGesteldeVragenTextElement = '[class="decisiontree_title"]';
+  footerBekijkDeVeelGesteldeVragenTitleText = 'Veelgestelde vragen overzicht';
 
 }
