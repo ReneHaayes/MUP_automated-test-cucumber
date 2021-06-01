@@ -43,8 +43,6 @@ Then(/^Verify (.*) is logged in with (.*) for new email address$/, async (person
   });
   // GO TO MIJN UNIVE AND LOG OFF
   await browser.sleep(5000);
-  // await genericMethods.clickOnElement(hmPageElements.mijnUniveLoggedInUserClickElement);
-  // await genericMethods.clickOnElement(hmPageElements.headerMijnUniveParticulierClickElement);
   await genericMethods.verifyTextInElement(loginPageElements.loggedInHeaderH1Text2Element, loginPageElements.loggedInHeaderH1Text);
   await genericMethods.clickOnElement(loginPageElements.logOffClickElement);
   // LOGIN WITH NEW EMAIL ADDRESS AND VERIFY
@@ -85,9 +83,10 @@ When(/^Customer changes contact preferences$/, async () => {
 });
 
 When(/^Customer changes family composition preferences with (.*)$/, async (familyCompositionInput: string) => {
-  await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionChangePageClickElement);
+  await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionChangePageClickElementNext);
   await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.familyCompositionOnePersonNoChildrenClickElement, browser.getPageTimeout);
   await persoonlijkeGegevensMethods.changeFamilyComposition(familyCompositionInput);
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.familyCompositionSuccessThankYouTextElement, browser.getPageTimeout);
 });
 
 Then(/^Verify thank you page for payment data changed$/, async () => {
@@ -99,5 +98,6 @@ Then(/^Verify thank you message is shown for changing contact preferences$/, asy
 });
 
 Then(/^Verify thank you message is shown for family composition preferences$/, async () => {
-  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.formThankYouTextElement, mijnUniveAccountElements.familyCompositionSuccessThankYouText, browser.getPageTimeout);
+  await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.familyCompositionSuccessThankYouTextElement, mijnUniveAccountElements.familyCompositionSuccessThankYouText, browser.getPageTimeout);
+  // await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.mijnUniveAccountElements, mijnUniveAccountElements.familyCompositionSuccessThankYouText, browser.getPageTimeout);
 });

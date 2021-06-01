@@ -103,13 +103,15 @@ export class MijnUniveAccountElements {
   contactPreferencesSuccesMessageText = 'Het bijwerken van de contactvoorkeuren is gelukt.';
 
   // FAMILY COMPOSITION
-  familyCompositionChangePageClickElement = '[href="/mijnunive/mijn-gegevens/gezinssamenstelling/wijzigen"]';
+  familyCompositionChangePageClickElement = '[href="/mijnunive/mijn-gegevens/gezinssamenstelling"]';
+  familyCompositionChangePageClickElementNext = 'div.button_flex > a';
   familyCompositionOnePersonNoChildrenClickElement = '[For="wat-is-uw-gezinssituatie_0"]';
   familyCompositionLiveTogetherNoChildrenClickElement = '[For="wat-is-uw-gezinssituatie_1"]';
   familyCompositionOneParentWithChildrenClickElement = '[For="wat-is-uw-gezinssituatie_2"]';
   familyCompositionFamilyWithChildrenClickElement = '[For="wat-is-uw-gezinssituatie_3"]';
   familyCompositionIUnderstandClickElement = '[for="akkoord-RBV-OVP_0"]';
-  familyCompositionSuccessThankYouText = 'Gezinssamenstelling wijzigen';
+  familyCompositionSuccessThankYouTextElement = '[class="h-block-title h-block-title__with-icon"]';
+  familyCompositionSuccessThankYouText = 'Uw gezinssamenstelling wordt gewijzigd';
   familyCompositionPartnerLivingTogetherInitialsInputElement = '[name="partner-samenwonend__voorletters"]';
   familyCompositionPartnerLivingTogetherLastnameInputElement = '[name="partner-samenwonend__achternaam"]';
   familyCompositionSelectGenderLivingTogetherMaleClickElement = '[for="partner-samenwonend__geslacht_0"]';
@@ -119,5 +121,5 @@ export class MijnUniveAccountElements {
   familyCompositionPartnerFamilyLastnameInputElement = '[name="partner-gezin__achternaam"]';
   familyCompositionSelectGenderFamilyMaleClickElement = '[for="partner-gezin__geslacht_0"]';
   familyCompositionSelectGenderFamilyFemaleClickElement = '[for="partner-gezin__geslacht_1"]';
-  familyCompositionBirthdateFamilyInputElement = '[name="partner-gezin__geboortedatum"]';
+  familyCompositionBirthdateFamilyInputElement = '[name="partner-geboortedatum"]';
 }
