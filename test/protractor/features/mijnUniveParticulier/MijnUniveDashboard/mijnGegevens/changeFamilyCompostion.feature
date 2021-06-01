@@ -10,6 +10,6 @@ Feature: Changing family composition for persona when logged in.
     Examples:
       | family composition   |
       | one person           |
-#      | living together      |
-#      | one parent           |
-#      | family with children |
+      | living together      |
+      | one parent           |
+      | family with children |
