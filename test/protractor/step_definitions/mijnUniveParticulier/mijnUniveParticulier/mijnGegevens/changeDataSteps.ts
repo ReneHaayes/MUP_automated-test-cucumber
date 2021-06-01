@@ -99,5 +99,4 @@ Then(/^Verify thank you message is shown for changing contact preferences$/, asy
 
 Then(/^Verify thank you message is shown for family composition preferences$/, async () => {
   await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.familyCompositionSuccessThankYouTextElement, mijnUniveAccountElements.familyCompositionSuccessThankYouText, browser.getPageTimeout);
-  // await genericMethods.verifyTextContainsInElement(mijnUniveAccountElements.mijnUniveAccountElements, mijnUniveAccountElements.familyCompositionSuccessThankYouText, browser.getPageTimeout);
 });
