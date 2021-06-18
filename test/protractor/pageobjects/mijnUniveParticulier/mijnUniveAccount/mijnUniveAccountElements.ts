@@ -94,8 +94,8 @@ export class MijnUniveAccountElements {
   formThankYouText = 'Hartelijk dank voor het doorgeven van uw wijziging(en).';
 
   // CONTACT PREFERENCES
-  damageInsurancesClickElement = '[class="h-block-title"]';
-  buttonGoThroughContactPreferencesClickElement = '[class="button button--default"]';
+  damageInsurancesClickElement = '[href="/mumq/QIS_Customer/change-my-customer-communicationpreferences"]';
+  buttonGoThroughContactPreferencesClickElement = 'fieldset:nth-child(2) > div > div > div.values > div > div > label:nth-child(1) > span:nth-child(2)';
   buttonSaveContactPreferencesClickElement = '#_communicationPreferences_changeMyCustomer';
   contactPreferencesH1TitleTextElement = '#viewPartcommunicationPreferences > h1';
   contactPreferencesH1TitleText = 'Mijn contactvoorkeuren';
