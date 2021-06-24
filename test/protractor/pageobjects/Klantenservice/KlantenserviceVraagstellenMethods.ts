@@ -1,4 +1,4 @@
-import {genericMethods, klantenserviceVraagStellenElements} from "@support";
+import {genericMethods, klantenserviceVraagStellenElements} from '@support';
 
 export class KlantenserviceVraagstellenMethods {
 
