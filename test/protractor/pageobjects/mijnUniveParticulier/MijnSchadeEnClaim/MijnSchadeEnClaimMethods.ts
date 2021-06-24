@@ -23,9 +23,9 @@ export class MijnSchadeEnClaimMethods {
   async chooseInsuranceTypeForDamage(input: string) {
     switch (input) {
       case verzekeringPaginasEnum.AUTOVERZEKERING_PAT: {
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimAutoInsuranceClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAutoInsuranceClickElement);
-        await genericMethods.verifyTextContainsInElement('div:nth-child(2) > div > div > h2', 'Autoverzekering', browser.getPageTimeout);
-        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAutoInsuranceClickElement);
+        await genericMethods.verifyUrlContainsIgnoreCase('product=auto');
         // STEP THREE
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
