@@ -111,6 +111,6 @@ export class MijnSchadeEnClaimMethods {
   // }
 
   polisForPremiegevolgenPageWithPolisNumber(polisNumber: string): string {
-    return '[/mijnunive/schade/premiegevolgen-berekenen/ncbm-prognosis' + polisNumber + '&type=prognosis]';
+    return '[href="/mijnunive/schade/premiegevolgen-berekenen/ncbm-prognosis?pnr=' + polisNumber + '&type=prognosis"]';
   }
 }

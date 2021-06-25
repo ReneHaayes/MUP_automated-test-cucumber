@@ -1,9 +1,10 @@
 @MijnSchadeEnClaimPremiegevolgenBerekenen
 
-Feature: Going to premigevolgen page and verifying the NCBM prognose.
-
+Feature: Going to premiegevolgen page and verifying the NCBM prognose.
+@Testscenario
   Scenario: Verify ncbm prognose page.
-    Given Customer woestenburg is logged in on the mijn unive premigevolgen berekenen page of the Unive website
-    When Customer selects premiegevolgen berekenen for polis with number: 78899401
-    Then Verify ncbm prognose page is shown with correct title and table
+    Given Customer aakoek is logged in on the mijn unive mijn schade en claim page of the Unive website
+    When Customer clicks on button Premiegevolgen berekenen
+    And Customer selects premiegevolgen berekenen for polis with number: 78919195
+    Then Verify ncbm prognose page is shown with correct title
 
