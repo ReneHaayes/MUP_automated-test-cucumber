@@ -1,7 +1,7 @@
 @MijnSchadeEnClaimPremiegevolgenBerekenen
 
 Feature: Going to premiegevolgen page and verifying the NCBM prognose.
-@Testscenario
+
   Scenario: Verify ncbm prognose page.
     Given Customer aakoek is logged in on the mijn unive mijn schade en claim page of the Unive website
     When Customer clicks on button Premiegevolgen berekenen
