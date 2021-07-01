@@ -1,5 +1,6 @@
 import {Then, When} from 'cucumber';
 import {correspondentieOverzichtElements, genericMethods} from '@support';
+import {browser} from 'protractor';
 
 When(/^Customer selects first correspondence for package$/, async () => {
   await genericMethods.clickOnElement(correspondentieOverzichtElements.correspondentieButtonClickElement);
@@ -16,6 +17,6 @@ Then(/^Verify the clicked correspondence is shown$/, async () => {
 });
 
 Then(/^Verify the customer is on the page persoonlijk advies$/, async () => {
-  await genericMethods.verifyTextInElement(correspondentieOverzichtElements.persoonlijkAdviesBreadCrumbElement, correspondentieOverzichtElements.PERSOONLIJK_ADVIES);
+  await genericMethods.waitForElementIsVisible(correspondentieOverzichtElements.persoonlijkAdviesH1HeaderTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextInElement(correspondentieOverzichtElements.persoonlijkAdviesH1HeaderTextElement, correspondentieOverzichtElements.PERSOONLIJK_ADVIES);
 });
