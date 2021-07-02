@@ -1,27 +1,40 @@
 import {Then, When} from 'cucumber';
-import {browser} from 'protractor';
+import {browser, by, element} from 'protractor';
 import {
   afspraakMakenElements, genericMethods, klachtenFormulierElements, loginPageElements, personaData
 } from '@support';
 import {genericEnum, homePageEnum} from '@enum';
 
 When(/^Customer fills in afspraak maken form correctly with already customer (yes|no)$/, async (alreadyCustomer: string) => {
+  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectPostcodeElement, browser.getPageTimeout);
+  await genericMethods.typeText(afspraakMakenElements.selectPostcodeElement, '7541 WH');
+  await genericMethods.clickOnElement(afspraakMakenElements.selectKiesAfspraakNaPostcodeElement);
+  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
-  await genericMethods.typeText(klachtenFormulierElements.omschrijvingInputElement, 'omschrijving');
-  await genericMethods.clickOnElement(afspraakMakenElements.selectAlreadyCustomerClickElement(alreadyCustomer));
+  await genericMethods.clickOnElement(afspraakMakenElements.selectKiesUwWinkelButtonElement);
+  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectUwHiglightedWinkelElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectUwHiglightedWinkelElement);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectKiesUwDatumButtonElement);
+  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectNextMonthButtonElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectNextMonthButtonElement);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectNextMonthButtonElement);
+  await genericMethods.clickOnElement(afspraakMakenElements.select15thDayButtonElement);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectTimeButtonElement);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectVulUwGegevensInButtonElement);
+  await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectGenderMaleClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectGenderMaleClickElement);
   // verification if No is selected that client number is not shown.
   if (alreadyCustomer === genericEnum.NO) {
     await genericMethods.waitForElementIsPresent(afspraakMakenElements.selectAlreadyCustomerNoHiddenElement, browser.getPageTimeout);
   }
-  await genericMethods.typeText(klachtenFormulierElements.initialsInputElement, 'tt');
-  await genericMethods.typeText(klachtenFormulierElements.lastNameInputElement, 'test');
-  await genericMethods.clickOnElement(afspraakMakenElements.selectGenderMaleClickElement);
-  await genericMethods.typeText(klachtenFormulierElements.birthDateInputElement, '01012000');
-  await genericMethods.typeText(klachtenFormulierElements.zipCodeInputElement, '8017JC');
-  await genericMethods.typeText(klachtenFormulierElements.houseNumberInputElement, '1');
-  await genericMethods.clickOnTAB(klachtenFormulierElements.houseNumberInputElement);
-  await genericMethods.typeText(klachtenFormulierElements.emailAddressInputElement, 'test@test.nl');
-  await genericMethods.clickOnElement(klachtenFormulierElements.buttonSendClickElement);
+  await element(by.xpath('//ui-input[1]/div/label/input')).sendKeys('T.'); // voorletter
+  await element(by.xpath('//ui-input[3]/div/label/input')).sendKeys('Test'); // achternaam
+  await element(by.xpath('//ui-input[4]/div/label/input')).sendKeys('01-01-2000'); // geboortedatum
+  await element(by.xpath('//div/ui-input/div/label/input')).sendKeys('22'); // huisnummer
+  await element(by.xpath('//ui-input[6]/div/label/input')).sendKeys('mail@adres.nl'); // emailadres
+  await element(by.xpath('//div[2]/ui-input/div/label/input')).sendKeys('0612345678'); // telefoonnummer
+  await element(by.xpath('//textarea')).sendKeys('Veld toelichting');
+  await genericMethods.clickOnElement(afspraakMakenElements.selectAfspraakBevestigenButtonElement); // Afspraak bevestigen
 });
 
 When(/^Logged in customer fills in afspraak maken form correctly and prefill is filled in for persona (.*)$/, async (persona: string) => {
@@ -43,6 +56,7 @@ When(/^Logged in customer fills in afspraak maken form correctly and prefill is 
 });
 
 Then(/^Verify afspraak maken form thank you text$/, async () => {
+  await browser.sleep(5000);
   await genericMethods.verifyTextContainsInElement(afspraakMakenElements.confirmationTextElement, afspraakMakenElements.confirmationText, browser.getPageTimeout);
 });
 
