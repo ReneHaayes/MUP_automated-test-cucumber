@@ -1,27 +1,27 @@
-import {Then, When} from "cucumber";
-import {genericMethods, schadeServiceElements} from "@support";
-import {browser} from "protractor";
+import {Then, When} from 'cucumber';
+import {genericMethods, schadeServiceElements} from '@support';
+import {browser} from 'protractor';
 
 When(/^Customer selects (.*) for schade service (.*)$/, async (city: string, carCaravanCamper: string) => {
   switch (carCaravanCamper) {
-    case "auto": {
+    case 'auto': {
       await genericMethods.typeTextShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, city);
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.submitButtonClickElement);
       break;
     }
-    case "autoruit": {
+    case 'autoruit': {
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.selectRuitschadeClickElement);
       await genericMethods.typeTextShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, city);
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.submitButtonClickElement);
       break;
     }
-    case "caravan": {
+    case 'caravan': {
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.selectCaravanClickElement);
       await genericMethods.typeTextShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, city);
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.submitButtonClickElement);
       break;
     }
-    case "camper": {
+    case 'camper': {
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.selectCamperClickElement);
       await genericMethods.clickOnElementShadowRoot(schadeServiceElements.selectAutoClickElement);
       await genericMethods.typeTextShadowRoot(schadeServiceElements.placeOrZipcodeInputElement, city);
