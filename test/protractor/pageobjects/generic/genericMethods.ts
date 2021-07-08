@@ -37,13 +37,14 @@ export class GenericMethods {
      *   O  parentElement.all(by.css_sr('::sr .inner-element'))         <=> parentElement.shadowRoot.$$('.inner-element')
      */
     by.addLocator('css_sr', (cssSelector: string, opt_parentElement: any) => {
-      let selectors = cssSelector.split('::sr');
+      const selectors = cssSelector.split('::sr');
       if (selectors.length === 0) {
         return [];
       }
-      let shadowDomInUse = (document.head.attachShadow);
-      let getShadowRoot = (el: any) => ((el && shadowDomInUse) ? el.shadowRoot : el);
-      let findAllMatches = (selector: string, targets: any[], firstTry: boolean) => {
+      const shadowDomInUse = (document.head.attachShadow);
+      const getShadowRoot = (el: any) => ((el && shadowDomInUse) ? el.shadowRoot : el);
+      const findAllMatches = (selector: string, targets: any[], firstTry: boolean) => {
+        // tslint:disable-next-line:no-shadowed-variable prefer-const
         let using, i, matches = [];
         for (i = 0; i < targets.length; ++i) {
           using = (firstTry) ? targets[i] : getShadowRoot(targets[i]);
@@ -380,8 +381,8 @@ export class GenericMethods {
   async uploadFile(selector: string, file: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, browser.getPageTimeout);
-    var absolutePath = path.resolve(__dirname, file);
-    var fileElem = element(by.css(selector));
+    const absolutePath = path.resolve(__dirname, file);
+    const fileElem = element(by.css(selector));
     await fileElem.sendKeys(absolutePath);
   }
 
@@ -404,7 +405,7 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
     await this.waitForElementIsVisibleShadowRoot(selector, browser.getPageTimeout);
-    let test123: any = by.css_sr;
+    const test123: any = by.css_sr;
     const typeTextElement: ElementFinder = element(test123(selector));
     await browser.controlFlow().execute(() => {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
@@ -419,7 +420,7 @@ export class GenericMethods {
   async typeTextShadowRootHideElement(selector: string, text: string) {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementNotVisible(genericElements.loaderQis, browser.getPageTimeout);
-    let test123: any = by.css_sr;
+    const test123: any = by.css_sr;
     const typeTextElement: ElementFinder = element(test123(selector));
     await browser.controlFlow().execute(() => {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', typeTextElement);
@@ -546,12 +547,7 @@ export class GenericMethods {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
     await this.waitForElementIsVisible(selector, waitFor);
     const selectorToString: string = await this.getText(selector);
-    if (await expect(selectorToString).to.have.string(assertionText)) {
-      return true;
-    } else {
-      return false;
-    }
-
+    return !!(await expect(selectorToString).to.have.string(assertionText));
   }
 
   async verifyTextNotInElement(selector: string, assertionText: string, elementToWaitFor: string) {
@@ -795,7 +791,7 @@ export class GenericMethods {
         } else {
           dd = date.getDate().toString();
         }
-        let monthPlusOne = date.getMonth() + 1;
+        const monthPlusOne = date.getMonth() + 1;
         if (monthPlusOne < 10) {
           mm = '0' + monthPlusOne.toString();
         } else {
@@ -898,7 +894,7 @@ export class GenericMethods {
   async getAnalyticsText(input: string): Promise<string> {
     try {
       await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);
-      let test = await browser.executeScript('return ' + input + ';');
+      const test = await browser.executeScript('return ' + input + ';');
       return test.toString();
     } catch (e) {
       throw new Error('Analytics for: ' + input + ' cant be found');
