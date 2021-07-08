@@ -11,6 +11,7 @@ When(/^Customer fills in afspraak maken form correctly$/, async () => {
   await genericMethods.clickOnElement(afspraakMakenElements.selectKiesAfspraakNaPostcodeElement);
   await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(afspraakMakenElements.selectVerzekeringenAsSubjectClickElement);
+  await genericMethods.clickOnElement(afspraakMakenElements.selectKiesUwLocatieClickElement);
   await genericMethods.clickOnElement(afspraakMakenElements.selectKiesUwWinkelButtonElement);
   await genericMethods.waitForElementIsVisible(afspraakMakenElements.selectUwHiglightedWinkelElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(afspraakMakenElements.selectUwHiglightedWinkelElement);
