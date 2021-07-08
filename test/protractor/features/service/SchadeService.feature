@@ -21,9 +21,9 @@ Feature: Check if schade service is functioning correctly
     Then Verify <address> and <openingHours> are shown correctly when schadeservice is selected
 
     Examples:
-      | page           | servicePoint    | city   | address         | openingHours |
-      | schade service | UAS Pouw Zwolle | Zwolle | Lippestraat 5   | 08:00-17:15  |
-      | winkelzoeker   | Univé Zwolle    | Zwolle | Nieuwstraat 126 | 09:00-17:30  |
+      | page           | servicePoint    | city   | address                       | openingHours |
+      | schade service | UAS Pouw Zwolle | Zwolle | Lippestraat 5                 | 08:00-17:15  |
+      | winkelzoeker   | Univé Zwolle    | Zwolle | Burgemeester Drijbersingel 15 | 09:00-17:30  |
 
     #ANALYTICS
 
