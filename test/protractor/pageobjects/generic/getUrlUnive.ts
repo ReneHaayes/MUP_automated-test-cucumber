@@ -379,7 +379,7 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_SERVICE_OT_DAAS: {
         return 'https://service.ot.daas.unive.nl/';
       }
-      case verzekeringPaginasEnum.DRIVE_SERVICE_OT_DAAS: {
+      case verzekeringPaginasEnum.HOME_DRIVE_OT_DAAS: {
         return 'https://drive.ot.daas.unive.nl/';
       }
       default: {
