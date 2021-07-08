@@ -379,6 +379,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_SERVICE_OT_DAAS: {
         return 'https://service.ot.daas.unive.nl/';
       }
+      case verzekeringPaginasEnum.DRIVE_SERVICE_OT_DAAS: {
+        return 'https://drive.ot.daas.unive.nl/';
+      }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }

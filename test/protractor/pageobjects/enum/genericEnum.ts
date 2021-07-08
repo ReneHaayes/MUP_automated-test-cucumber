@@ -100,6 +100,7 @@ export enum verzekeringPaginasEnum {
   HOME_ATE = 'ate',
   HOME_SALES_OT_DAAS = 'salesDaas',
   HOME_SERVICE_OT_DAAS = 'serviceDaas',
+  DRIVE_SERVICE_OT_DAAS = 'driveOtDaas',
   HOME_ACC = 'acc',
 
   // Algemene pagina's
