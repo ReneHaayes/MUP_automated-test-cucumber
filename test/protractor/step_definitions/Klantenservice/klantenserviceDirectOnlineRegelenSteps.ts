@@ -1,5 +1,5 @@
-import {Then, When} from "cucumber";
-import {genericMethods, klantenserviceDirectOnlineRegelenElements, loginPageElements} from "@support";
+import {Then, When} from 'cucumber';
+import {genericMethods, klantenserviceDirectOnlineRegelenElements, loginPageElements} from '@support';
 
 
 When(/^Customer navigates to klantenservice and clicks on tile (.*) for direct online regelen$/, async (tile: string) => {
@@ -18,7 +18,7 @@ Then(/^Verify the page is correctly loaded with url for tile (.*)$/, async (tile
       await genericMethods.verifyUrlContainsIgnoreCase('zorgverzekering/declareren');
       break;
     }
-    case 'Persoonsgegevens wijzigen': {
+    case 'Persoonlijke gegevens wijzigen': {
       await genericMethods.verifyUrlContainsIgnoreCase('mijnunive/mijn-gegevens');
       break;
     }
@@ -27,8 +27,12 @@ Then(/^Verify the page is correctly loaded with url for tile (.*)$/, async (tile
       await genericMethods.verifyUrlContainsIgnoreCase('mijnunive/polisoverzicht');
       break;
     }
-    case 'Mijn Univé': {
-      await genericMethods.verifyUrlContainsIgnoreCase('mijnunive');
+    case 'Verhuizing doorgeven': {
+      await genericMethods.verifyUrlContainsIgnoreCase('verhuizingdoorgeven');
+      break;
+    }
+    case 'Verzekering opzeggen': {
+      await genericMethods.verifyUrlContainsIgnoreCase('opzeggen');
       break;
     }
     default: {

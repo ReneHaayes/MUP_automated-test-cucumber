@@ -10,8 +10,8 @@ Feature: Verify the direct online section on klantenservice directs correctly.
     Examples:
       | tile                             |
       | Schade melden                    |
-      | Zorgverzekering declareren       |
-      | Persoonsgegevens wijzigen        |
-      | Verzekering inzien of wijzigen   |
-      | Verzekering inzien               |
-      | Mijn Univé                       |
+      | Zorgnota declareren              |
+      | Persoonlijke gegevens wijzigen   |
+      | Verzekeringen inzien of wijzigen |
+      | Verzekering opzeggen             |
+      | Verhuizing doorgeven             |
