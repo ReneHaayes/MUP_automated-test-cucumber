@@ -11,6 +11,7 @@ export class MijnSchadeEnClaimElements {
   polisDetailsTitleTextElement = '[class="page-content__block__title"] > h1';
   polisDetailsTitleText = 'Polis';
   wijzigenVerzekeringSnelLinkClickElement = '[class="page-links"] > li:nth-child(2) > [class*="link"]';
+  slotvragenNextButton = '[id="_Form_finishSave"]';
 
   // DAMAGE CLAIM STEP ONE
   damageClaimClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
@@ -55,11 +56,11 @@ export class MijnSchadeEnClaimElements {
   damageClaimCancelDateInputElement = '#_Form_IF12805_16943';
   // DAMAGE CLAIM STEP SIX
   damageClaimDescriptionOfDamageInputElement = '#_Form_IF27824_35250';
-  damageClaimStepSixNextButtonClickElement = '#_AddClaimStepAssessmentCar_Next';
+  damageClaimNextButtonAfterExpertiseOpdrachtClickElement = '#_AddClaimStepAssessmentCar_Next';
   // DAMAGE CLAIM STEP SEVEN
   damageClaimAgreementClickElement = '#_AddClaimStepConfirmation_agreementCheckbox > fieldset > div > div > div.values > div';
   damageClaimSaveAndCommitButtonClickElement = '#_AddClaimStepConfirmation_Save';
-  damageClaimOtherCompanyInvolvementFalseClickElement = '#_Form_IF14830_19688_false';
+  // damageClaimOtherCompanyInvolvementFalseClickElement = '#_Form_IF14830_19688_false';
   // DAMAGE CLAIM SUMMARY
   damageClaimSuccesMessageTextElement = '[id="_AddClaimStepThankYouGeneral_thankYouScreenContents"] p:nth-child(1)';
   damageClaimSuccesMessageText = 'Wij gaan voor u aan de slag';

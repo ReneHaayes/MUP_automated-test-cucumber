@@ -17,7 +17,6 @@ export class MijnSchadeEnClaimMethods {
     await genericMethods.acceptAlertWhenAvailable();
     // STEP TWO
     await genericMethods.clickOnElementWithXpath(mijnSchadeEnClaimMethods.damageClaimSelectPolisClickElement(polisNumber));
-    // await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepTwoNextButtonClickElement);
   }
 
   async chooseInsuranceTypeForDamage(input: string) {
@@ -37,18 +36,17 @@ export class MijnSchadeEnClaimMethods {
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOtherPartyDamageTrueClickElement);
         await genericMethods.clickOnNextButton();
         // STEP FIVE
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimResponsibilityOtherPartyClickElement);
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimLicensePlateInputElement, '06-HN-DL');
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimOtherPartyPhoneNumber, '0612345678');
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimOtherPartyEmailAdress, 'mail@adres.nl');
-        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimResponsibilityOtherPartyClickElement);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimDamageToOwnVehicleTrueClickElement);
         await genericMethods.clickOnNextButton();
         // STEP SIX
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
+        await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneClickElement);
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimContactThroughPhoneInputElement, '0612345678');
-        await genericMethods.clickOnTakeOutInsuranceNowButton();
-        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement, browser.getPageTimeout);
-        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepSixNextButtonClickElement);
+        await genericMethods.clickOnElement(mijnSchadeEnClaimElements.slotvragenNextButton);
         break;
       }
       case verzekeringPaginasEnum.PARTICULIERE_WOONVERZEKERING: {
