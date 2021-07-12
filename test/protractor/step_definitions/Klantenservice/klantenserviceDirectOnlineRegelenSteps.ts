@@ -15,7 +15,7 @@ Then(/^Verify the page is correctly loaded with url for tile (.*)$/, async (tile
       break;
     }
     case 'Zorgnota declareren': {
-      await genericMethods.verifyUrlContainsIgnoreCase('zorgverzekering/declareren');
+      await genericMethods.verifyUrlContainsIgnoreCase('zorgkosten/declareren');
       break;
     }
     case 'Persoonlijke gegevens wijzigen': {
@@ -27,12 +27,12 @@ Then(/^Verify the page is correctly loaded with url for tile (.*)$/, async (tile
       await genericMethods.verifyUrlContainsIgnoreCase('mijnunive/polisoverzicht');
       break;
     }
-    case 'Verhuizing doorgeven': {
-      await genericMethods.verifyUrlContainsIgnoreCase('verhuizingdoorgeven');
-      break;
-    }
     case 'Verzekering opzeggen': {
       await genericMethods.verifyUrlContainsIgnoreCase('opzeggen');
+      break;
+    }
+    case 'Verhuizing doorgeven': {
+      await genericMethods.verifyUrlContainsIgnoreCase('verhuizingdoorgeven');
       break;
     }
     default: {
