@@ -5,9 +5,11 @@ export class MijnVerzekeringenElements {
   algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
   // VERZEKERINGSOVERZICHT
-  polisDetailsClickElement(polisNumber: string): string {
-    return '[class=\'tile__link media\'][href*=\'' + polisNumber + ']';
+  polisDetailsClickElement(polis: string): string {
+    return '[class=\'tile__link media\'][href*=\'' + polis + ']';
   }
+
+  verzekeringKiesAutoInsuranceClickElement = '[href*="product=auto"]';
 
   // SCHADEDETAILS
   schadeDetailsClickElement(polisNumber: string): string {

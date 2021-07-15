@@ -33,10 +33,10 @@ When(/^Customer selects (.*) polis with polis number: (.*)$/, async (polisStatus
   }
 });
 
-When(/^Customer goest to verzekeringskaarten for polis with polisnumber (.*)$/, async (polisNumber: string) => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
+When(/^Customer goes to verzekeringskaarten for polis with polisnumber (.*)$/, async (polis: string) => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polis));
+  await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringKiesAutoInsuranceClickElement);
   await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringsKaartenUrlClickElement);
-  // await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.verzekeringsKaartenWaitElement, 10000);
 });
 
 Then(/^Verify url for verzekeringskaarten contains the following (.*)$/, async (urlToVerify: string) => {
