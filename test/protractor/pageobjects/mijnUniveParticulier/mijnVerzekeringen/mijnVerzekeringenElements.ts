@@ -9,7 +9,8 @@ export class MijnVerzekeringenElements {
     return '[class=\'tile__link media\'][href*=\'' + polis + ']';
   }
 
-  verzekeringKiesAutoInsuranceClickElement = '[href*="product=auto"]';
+  // verzekeringKiesAutoInsuranceClickElement = '[href*="product=auto"]';
+  verzekeringKiesAutoClickElement = 'div.package__list > div:nth-child(3) > a > div.tile__body > div.tile__title';
 
   // SCHADEDETAILS
   schadeDetailsClickElement(polisNumber: string): string {
