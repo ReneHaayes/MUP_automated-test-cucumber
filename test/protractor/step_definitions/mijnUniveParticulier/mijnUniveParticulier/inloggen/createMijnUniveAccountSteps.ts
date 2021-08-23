@@ -1,5 +1,5 @@
-import {Then, When} from "cucumber";
-import {browser} from "protractor";
+import {Then, When} from 'cucumber';
+import {browser} from 'protractor';
 import {
   apiMethods,
   genericElements,
@@ -8,7 +8,7 @@ import {
   loginPageMethods,
   mijnUniveAccountElements,
   personaData
-} from "@support";
+} from '@support';
 
 When(/^Check if (.*) already exists$/, async (persona: string) => {
   await apiMethods.checkIfAccountExistsWhenDoesntExistCreateAccount(persona);
