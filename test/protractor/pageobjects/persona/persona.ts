@@ -126,10 +126,13 @@ export class PersonaData {
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
     'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
 
-  skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Partner', '16', '06', '1973', 'Kampen', '8261 CA', '222',
+  skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Skywalker', '16', '06', '1973', 'Kampen', '8261 CA', '18',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
     'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
 
+  UniPAT_Corp_9: Persona = new Persona('', '', prefix.NO_PREFIX, 'Bouwbedrijf Ansing', '', '', '', 'Amsterdam', '1051 CN', '222',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31611775679', specificIdentification.PASSPORT, 'ACP26N', 'unipat_corp_9@unive.nl',
+    'NL44RABO0123456789', '', 'bouwbedrijf', '04049465', durationEntrepreneur._5, '', '', 'Welkom01!');
 
   getPersonaZipcode(input: string): string {
     switch (input) {

@@ -3,8 +3,8 @@
 Feature: Login page for Mijn Unive Particulier
 
   Scenario: Filling in the login data for mijn unive particulier
-    Given Customer is on the mijn unive particulier page of the Unive website
-    When Persona illing logs in
+    Given Customer is on the mijn unive zakelijk page of the Unive website
+    When Persona UniPAT_Corp_9 logs in
     Then the title Mijn overzicht appears on screen
 
   Scenario Outline: Filling in the wrong password with a correct email adress for mijn unive particulier
