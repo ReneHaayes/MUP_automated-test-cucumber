@@ -35,6 +35,7 @@ export enum specificIdentification {
 
 export enum personaName {
   ILLING = 'illing',
+  BOEKWIJT = 'boekwijt',
   WOESTENBURG = 'woestenburg',
   RONALDO = 'ronaldo',
   MESSI = 'messi',
