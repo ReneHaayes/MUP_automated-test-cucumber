@@ -321,7 +321,7 @@ export class GetUrlUnive {
         return this.getEnv(browser.params.env.environment) + genericElements.prefillOmringPashoudersUrl;
       }
       case faqPage.WAT_IS_EEN_WA_AUTOVERZEKERING: {
-        return this.getEnv(browser.params.env.environment) + genericElements.faqPageWatIsEenWaAutoVerzekering;
+        return this.getEnv(browser.params.env.environment) + genericElements.pageWatIsEenWaAutoVerzekering;
       }
       case verzekeringPaginasEnum.ZORGPREMIEALERT: {
         return this.getEnv(browser.params.env.environment) + genericElements.zorgPremieAlert;

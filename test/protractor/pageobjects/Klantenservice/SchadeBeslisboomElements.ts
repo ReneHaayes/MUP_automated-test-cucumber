@@ -56,6 +56,7 @@ export class SchadeBeslisboomElements {
   // Fiets/E-bike Text Elements
   eenAanrijdingMetMijnFietsText = '#dt_3_0 > article > h5';
 
-  leesMeerButtonWatIsEenWaAutoverzekeringClickElement = '[href*="autoverzekering"][class="inlineAnchor_button--primary"]';
-
+  veelgesteldeVragenOverEenAutoverzekeringClickElement = '[class="faqSection_viewMore"';
+  veelgesteldeVragenPageURL = 'https://acc.unive.nl/autoverzekering/veelgesteldevragen'
+;
 }

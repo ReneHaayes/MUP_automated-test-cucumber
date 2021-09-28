@@ -1,6 +1,5 @@
 import {When, Then} from 'cucumber';
-import {alleVerzekeringenMethods, genericMethods, schadeBeslisboomElements, schadeServiceElements} from "@support";
-import {verzekeringPaginasEnum} from "@enum";
+import {genericMethods, schadeBeslisboomElements, schadeServiceElements} from '@support';
 
 // Auto Oldtimer Steps:
 
@@ -138,15 +137,14 @@ Then(/^information text about Een aanrijding met mijn fiets is shown$/, async ()
   await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.eenAanrijdingMetMijnFietsText, 'Een aanrijding met uw fiets', 9);
 });
 
-When(/^Customer selects lees meer button$/, async () => {
+When(/^Customer selects veelgestelde vragen button$/, async () => {
   await genericMethods.verifyBreadcrumbOnPosition('Home', 1);
   await genericMethods.verifyBreadcrumbOnPosition('Autoverzekering', 2);
   await genericMethods.verifyBreadcrumbOnPosition('WA autoverzekering', 3);
-  // await genericMethods.verifyBreadcrumbOnPosition('Wat is een wa autoverzekering', 4);
-  await genericMethods.clickOnElement(schadeBeslisboomElements.leesMeerButtonWatIsEenWaAutoverzekeringClickElement);
+  await genericMethods.clickOnElement(schadeBeslisboomElements.veelgesteldeVragenOverEenAutoverzekeringClickElement);
 });
 
-Then(/^verify the autoverzekering page is shown$/, async () => {
-  await alleVerzekeringenMethods.verifyAlleVerzekeringInput(verzekeringPaginasEnum.AUTOVERZEKERING_PAT);
+Then(/^verify the veelgestelde vragen page is shown$/, async () => {
+  await genericMethods.verifyUrlContains('https://acc.unive.nl/autoverzekering/veelgesteldevragen');
 });
 
