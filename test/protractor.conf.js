@@ -15,7 +15,7 @@ exports.config = {
     './protractor/features/**/*.feature'
   ],
   capabilities: {
-     browserName: 'chrome',
+     browserName: 'chrome', // alleen browsernaam wijzigen naar FF of Edge voor testen andere browser. Edge werkt nu nog niet.
     //      shardTestFiles: true,
     //      maxInstances: 2,
 
