@@ -15,10 +15,10 @@ exports.config = {
     './protractor/features/**/*.feature'
   ],
   capabilities: {
-     browserName: 'edge', // alleen browsernaam wijzigen naar FF of MicrosoftEdge voor testen andere browser. Edge werkt nu nog niet. Let op: directConnect op regel 10 uitzetten voor gebruik Edge
-
+     browserName: 'chrome', // alleen browsernaam wijzigen naar firefox of MicrosoftEdge voor testen andere browser.
+                            // Edge werkt nu nog niet. Let op: directConnect op regel 10 uitzetten voor gebruik Edge
     //      shardTestFiles: true,
-    //      maxInstances: 2,
+          maxInstances: 2,
 
     loggingPrefs: {
       'driver': 'INFO',
