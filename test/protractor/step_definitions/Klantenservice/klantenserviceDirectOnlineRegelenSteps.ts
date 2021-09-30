@@ -15,15 +15,14 @@ Then(/^Verify the page is correctly loaded with url for tile (.*)$/, async (tile
       break;
     }
     case 'Zorgnota declareren': {
-      await genericMethods.verifyUrlContainsIgnoreCase('zorgkosten/declareren');
+      await genericMethods.verifyUrlContainsIgnoreCase('zorgverzekering/declareren');
       break;
     }
     case 'Persoonlijke gegevens wijzigen': {
       await genericMethods.verifyUrlContainsIgnoreCase('mijnunive/mijn-gegevens');
       break;
     }
-    case 'Verzekering wijzigen':
-    case 'Verzekering inzien': {
+    case 'Verzekeringen inzien of wijzigen': {
       await genericMethods.verifyUrlContainsIgnoreCase('mijnunive/polisoverzicht');
       break;
     }

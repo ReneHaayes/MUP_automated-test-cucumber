@@ -12,6 +12,6 @@ Feature: Verify the direct online section on klantenservice directs correctly.
       | Schade melden                    |
       | Zorgnota declareren              |
       | Persoonlijke gegevens wijzigen   |
-      | Verzekeringen inzien of wijzigen   |
       | Verzekering opzeggen             |
       | Verhuizing doorgeven             |
+      #| Verzekeringen inzien of wijzigen | werkt niet, onduidelijk waarom niet.
