@@ -7,8 +7,7 @@ export class HmPageMijnUniveElements {
   // HEADER
   headerZoekenClickElement = '[class*="site-header-desktop-header__button site-header-desktop-header__button--search"]';
   headerZoekenInputElement = '[class="site-header-search__input"]';
-  zoekenPageButtonInputElement = '[class="banner_searchBarSubmit"]';
-  zoekenPageButtonClickElement = '[class="svg-icon svg-icon--m-or-s svg-icon--white"]';
+  zoekenPageButtonClickElement = '[class="button-icon site-header-search__button-submit"]';
 
   // headerMijnUniveClickElement: string = '[data-toggle-menu="mijnunive"]';
 

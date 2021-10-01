@@ -1,6 +1,5 @@
-import {browser} from "protractor";
 import {genericMethods, getUrlUnive, hmPageMijnUniveElements} from '@support';
-import {homePageEnum, verzekeringPaginasEnum} from "@enum";
+import {homePageEnum, verzekeringPaginasEnum} from '@enum';
 
 export class HmPageMijnUniveMethods {
 
@@ -8,7 +7,7 @@ export class HmPageMijnUniveMethods {
     switch (input) {
       case homePageEnum.ZOEKEN: {
         await genericMethods.clickOnElement(hmPageMijnUniveElements.headerZoekenClickElement);
-        await genericMethods.typeText(hmPageMijnUniveElements.headerZoekenInputElement, homePageEnum.ZOEKEN);
+        await genericMethods.typeText(hmPageMijnUniveElements.headerZoekenInputElement, 'auto');
         await genericMethods.clickOnElement(hmPageMijnUniveElements.zoekenPageButtonClickElement);
         break;
       }
@@ -35,7 +34,7 @@ export class HmPageMijnUniveMethods {
       case homePageEnum.ZOEKEN: {
         const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZOEKEN);
         await genericMethods.verifyUrlContains(url);
-        await genericMethods.waitForElementIsVisible(hmPageMijnUniveElements.zoekenPageButtonInputElement, browser.getPageTimeout);
+        // await genericMethods.waitForElementIsVisible(hmPageMijnUniveElements.zoekenPageButtonInputElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.MIJN_UNIVE: {
