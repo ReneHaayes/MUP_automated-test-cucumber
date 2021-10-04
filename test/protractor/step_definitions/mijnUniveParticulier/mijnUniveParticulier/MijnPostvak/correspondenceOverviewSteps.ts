@@ -12,6 +12,12 @@ Then(/^Verify the Correspondentie page is shown$/, async () => {
   await genericMethods.verifyTextInElement(correspondentieOverzichtElements.correspondenceHeaderTextElement, correspondentieOverzichtElements.correspondenceHeaderText);
 });
 
+Then (/^Verify the Dropdown section is present$/, async () => {
+  await genericMethods.waitForElementIsVisible(correspondentieOverzichtElements.correspondenceHeaderTextElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(correspondentieOverzichtElements.dropdownSectionClickElement);
+  await genericMethods.verifyTextInElement(correspondentieOverzichtElements.correspondenceHeaderTextElement, correspondentieOverzichtElements.correspondenceHeaderText);
+});
+
 When(/^Customer selects the quicklink for groene kaart downloaden$/, async () => {
   await genericMethods.waitForElementIsVisible(correspondentieOverzichtElements.correspondentieOverzichtElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(correspondentieOverzichtElements.correspondentieOverzichtElement);

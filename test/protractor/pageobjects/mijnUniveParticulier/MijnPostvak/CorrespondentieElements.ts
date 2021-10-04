@@ -5,6 +5,11 @@ export class CorrespondentieElements {
   correspondenceHeaderTextElement = '[class="h-page-title is-visible-desktop-only"]';
   correspondenceHeaderText = 'Correspondentie';
 
+  // Dropdown section is present
+  dropdownSectionClickElement = '[class="dropdown-list"]';
+  dropdownSectionTextElement = 'class="dropdown-item"';
+  dropdownSectionText = 'Alle Correspondentie';
+
   // open lightbox Groene Kaart
   groeneKaartClickElement = 'a > div.page-links-item__body.media__body > div'; // lightbox groene kaart downloaden
   groeneKaartHeaderTextElement = '[class="modal-content__title"]';
