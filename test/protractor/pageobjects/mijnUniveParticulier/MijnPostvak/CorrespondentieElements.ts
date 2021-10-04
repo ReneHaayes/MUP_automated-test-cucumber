@@ -1,10 +1,12 @@
 export class CorrespondentieElements {
 
   // MIJN POSTVAK
-  correspondentieButtonClickElement = '[href="/mumq/mijnunive/mijn-postvak/postvak"]';
-  firstCorrespondenceClickElement = 'div:nth-child(2) > div > table > tbody:nth-child(3) > tr:nth-child(1) > td.colDateSent.locked > div > a > span > span';
-  correspondenceHeaderH3TextElement = '[class="hasHeader entryGroup"] > h3 > span';
-  correspondenceHeaderH3Text = 'Gegevens correspondentie';
+  correspondenceHeaderH3TextElement = '[class="h-page-title is-visible-desktop-only"]';
+  correspondenceHeaderH3Text = 'Correspondentie';
+  // downloaden Groene Kaart
+  correspondentieOverzichtElement = 'href="/mumq/mijnunive/mijn-postvak/postvak"';
+  groeneKaartElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
+  firstGroeneKaartClickElement = 'li:nth-child(1) > div > div > div.modal-content__block > div > div:nth-child(1) > div > a > div.tile__body > div.tile__title';
 
   // PERSOONLIJK ADVIES
   persoonlijkAdviesButtonClickElement = '[href="/mijnunive/mijn-postvak/persoonlijk-advies"]';
