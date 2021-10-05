@@ -15,8 +15,6 @@ export class CorrespondentieElements {
   groeneKaartHeaderTextElement = '[class="modal-content__title"]';
   groeneKaartHeaderText = 'Voor welk voertuig wilt u de meest recente groene kaart inzien?';
 
-  // let op: op dit moment (4 oktober) zit er nog een auto-refresh op de lightbox pagina.
-
   // PERSOONLIJK ADVIES
   persoonlijkAdviesButtonClickElement = '[href="/mijnunive/mijn-postvak/persoonlijk-advies"]';
   persoonlijkAdviesH1HeaderTextElement = '[class="h-page-title"]';

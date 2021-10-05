@@ -24,6 +24,7 @@ When(/^Customer selects the quicklink for groene kaart downloaden$/, async () =>
   await genericMethods.waitForElementIsVisible(correspondentieOverzichtElements.groeneKaartClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(correspondentieOverzichtElements.groeneKaartClickElement);
   // 2e keer klikken is nodig omdat er nu nog een ongewenste auto-refresh op de pagina plaatsvindt. De 2e x klikken verwijderen als de refresh is opgelost.
+  // 5-10-2021 - gefikst op OT, na doorvoer naar ACC de 2 regels hieronder verwijderen.
   await genericMethods.waitForElementIsVisible(correspondentieOverzichtElements.groeneKaartClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(correspondentieOverzichtElements.groeneKaartClickElement);
 });
