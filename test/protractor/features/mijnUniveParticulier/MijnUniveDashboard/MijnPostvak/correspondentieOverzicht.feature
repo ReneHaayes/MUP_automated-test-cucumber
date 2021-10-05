@@ -6,7 +6,7 @@ Feature: Inbox and correspondence
     Given Customer woestenburg is logged in on the mijn unive mijn postvak page of the Unive website
     When Customer selects the Correspondenties page
     Then Verify the Correspondentie page is shown
-    Then Verify the Dropdown section is present
+    And Verify the Dropdown section is present
 
   Scenario: Verify groene kaart download page in my inbox.
     Given Customer woestenburg is logged in on the mijn unive mijn postvak page of the Unive website
