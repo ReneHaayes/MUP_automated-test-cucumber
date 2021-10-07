@@ -102,6 +102,7 @@ export enum verzekeringPaginasEnum {
   HOME_SALES_OT_DAAS = 'salesDaas',
   HOME_SERVICE_OT_DAAS = 'serviceDaas',
   HOME_DRIVE_OT_DAAS = 'driveDaas',
+  HOME_HIPPO_SAAS_ACC = 'hippoAccSaaS',
   HOME_ACC = 'acc',
 
   // Algemene pagina's

@@ -382,6 +382,9 @@ export class GetUrlUnive {
       case verzekeringPaginasEnum.HOME_DRIVE_OT_DAAS: {
         return 'https://drive.ot.daas.unive.nl/';
       }
+      case verzekeringPaginasEnum.HOME_HIPPO_SAAS_ACC: {
+        return 'https://hippo-saas.acc.daas.unive.nl/';
+      }
       default: {
         throw new Error('The input: "" ' + browser.params.env.environment + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
