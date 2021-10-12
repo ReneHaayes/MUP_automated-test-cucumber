@@ -9,17 +9,17 @@ export class MijnVerzekeringenElements {
     return '[class=\'tile__link media\'][href*=\'' + polis + ']';
   }
 
-  // verzekeringKiesAutoInsuranceClickElement = '[href*="product=auto"]';
-  verzekeringKiesAutoClickElement = 'div.package__list > div:nth-child(3) > a > div.tile__body > div.tile__title';
-
   // SCHADEDETAILS
   schadeDetailsClickElement(polisNumber: string): string {
     return 'class="tile__description-damage__item--visible-desktop"\'][href*=\'' + polisNumber + ']';
   }
 
   // VERZEKERINGSKAARTEN
-  verzekeringsKaartenUrlClickElement = '[class="page-links"] [href*="verzekeringskaarten"]';
-  verzekeringsKaartenWaitElement = '[src*="verzekeringskaarten"]';
+  verzekeringKiesAutoInsuranceClickElement = '[href*="product=auto"]';
+  verzekeringKiesAutoClickElement = 'div:nth-child(3) > a > div.tile__body > div.tile__description';
+
+  verzekeringsKaartenUrlClickElement = 'li:nth-child(4) > a > div.page-links-item__body.media__body > div';   // '[class="page-links"] [href*="verzekeringskaarten"]';
+  // verzekeringsKaartenWaitElement = '[src*="verzekeringskaarten"]';
 
   // POLIS DETAILS
   polisNumberTextElement = '//*[contains(text(),"Polisnummer")]/following-sibling::div';

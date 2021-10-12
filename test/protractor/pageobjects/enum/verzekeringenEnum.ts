@@ -73,6 +73,7 @@ export enum homePageEnum {
   VERZEKERING_WIJZIGEN = 'verzekering wijzigen',
   UNIVE_ALARMCENTRALE = 'unive alarmcentrale',
   ZOEKEN = 'zoeken',
+  ZOEKENHEADER = 'zoeken?k=auto',
   MIJN_UNIVE = 'mijn unive',
   MIJN_UNIVE_ZAKELIJK = 'mijn unive zakelijk',
   MIJN_UNIVE_ZAKELIJK_HOMEPAGE = 'mijn unive zakelijk homepage',

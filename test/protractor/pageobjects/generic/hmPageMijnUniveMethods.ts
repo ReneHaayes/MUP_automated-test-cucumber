@@ -31,10 +31,9 @@ export class HmPageMijnUniveMethods {
 
   async verifyElementIsShownWhenClickedOnHeader(input: string) {
     switch (input) {
-      case homePageEnum.ZOEKEN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZOEKEN);
+      case homePageEnum.ZOEKENHEADER: {
+        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZOEKENHEADER);
         await genericMethods.verifyUrlContains(url);
-        // await genericMethods.waitForElementIsVisible(hmPageMijnUniveElements.zoekenPageButtonInputElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.MIJN_UNIVE: {
