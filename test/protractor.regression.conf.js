@@ -15,8 +15,8 @@ exports.config = {
   ],
   capabilities: {
     browserName: 'chrome',
-    shardTestFiles: true,
-    maxInstances: 6,
+    // shardTestFiles: true,
+    // maxInstances: 6,
 
     loggingPrefs: {
       'driver': 'INFO',
