@@ -9,7 +9,7 @@ Feature: Going to polis details through mijn verzekeringen
 
     Examples:
       | polis number | polis status | persona     |
-      | 77041599     | ended        | illing      |
+      | 70703037     | ended        | illing      |
       | 78294359     | active       | woestenburg |
 
   Scenario Outline: Verify polises from external companies
@@ -19,7 +19,7 @@ Feature: Going to polis details through mijn verzekeringen
 
     Examples:
       | polis number | insurance company | persona |
-      | 1600478601   | Reaal             | illing  |
+      | 1605710201   | SRLEV N.V.        | illing  |
 
 # not possible to change an external polis. This action will be activated when external polissen can be changed
 #  Scenario Outline: Change polis data from external companies
