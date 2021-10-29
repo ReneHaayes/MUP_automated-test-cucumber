@@ -12,6 +12,6 @@ When( /^Customer clicks on button Premiegevolgen berekenen$/, async () => {
 });
 
 Then(/^Verify ncbm prognose page is shown with correct title$/, async () => {
-  await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.ncbmPrognoseH1TextElement, browser.getPageTimeout);
+  await genericMethods.waitForElementIsPresent(mijnSchadeEnClaimElements.ncbmPrognoseH1TextElement, browser.getPageTimeout);
   await genericMethods.verifyTextInElement(mijnSchadeEnClaimElements.ncbmPrognoseH1TextElement, mijnSchadeEnClaimElements.ncbmPrognoseH1Text);
 });
