@@ -2,17 +2,18 @@
 
 Feature: Changing data for persona when logged in.
 
-  Scenario Outline: Change payment data for persona when logged in
-    Given Customer woestenburg is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website
-    When Customer changes payment data with form for <payment data>
-    Then Verify thank you page for payment data changed
+  #Scenario Outline: Change payment data for persona when logged in
+  #  Given Customer woestenburg is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website
+  #  When Customer changes payment data with form for <payment data>
+  #  Then Verify thank you page for payment data changed
 
-    Examples:
-      | payment data       |
-      | payment period     |
-      | payment way        |
-      | iban accountnumber |
+  #  Examples:
+  #    | payment data       |
+  #    | payment period     |
+  #    | payment way        |
+  #    | iban accountnumber |
 
+@Testscenario
   Scenario: Change contact preferences for persona when logged in
     Given Customer woestenburg is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
     When Customer changes contact preferences
