@@ -9,8 +9,8 @@ Feature: Going to polis details through mijn verzekeringen
 
     Examples:
       | polis number | polis status | persona     |
-      | 70703037     | ended        | illing      |
-      | 78294359     | active       | woestenburg |
+      | 77753251     | ended        | illing      |
+      | 79364507     | active       | illing      |
 
   Scenario Outline: Verify polises from external companies
     Given Customer <persona> is logged in on the mijn unive mijn verzekeringen page of the Unive website
