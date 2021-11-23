@@ -6,6 +6,10 @@ npm install
 ```
 ```
 node node_modules/protractor/bin/webdriver-manager update
+
+mocht dit niet werken, gebruik dan onderstaane commando's:
+node_modules/.bin/webdriver-manager clean // removes all older versions
+node_modules/.bin/webdriver-manager update // get the latest
 ```
 
 Running protractor:
