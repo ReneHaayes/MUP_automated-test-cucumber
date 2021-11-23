@@ -103,7 +103,7 @@ export class MijnUniveAccountElements {
   contactPreferencesSuccesMessageText = 'Het bijwerken van de contactvoorkeuren is gelukt.';
 
   // FAMILY COMPOSITION
-  familyCompositionChangePageClickElement = '[href="/mijnunive/mijn-gegevens/gezinssamenstelling"]';
+  // familyCompositionChangePageClickElement = '[href="/mijnunive/mijn-gegevens/gezinssamenstelling"]';
   familyCompositionChangePageClickElementNext = 'div.button_flex > a';
   familyCompositionOnePersonNoChildrenClickElement = '[For="wat-is-uw-gezinssituatie_0"]';
   familyCompositionLiveTogetherNoChildrenClickElement = '[For="wat-is-uw-gezinssituatie_1"]';
@@ -122,4 +122,7 @@ export class MijnUniveAccountElements {
   familyCompositionSelectGenderFamilyMaleClickElement = '[for="partner-gezin__geslacht_0"]';
   familyCompositionSelectGenderFamilyFemaleClickElement = '[for="partner-gezin__geslacht_1"]';
   familyCompositionBirthdateFamilyInputElement = '[name="partner-geboortedatum"]';
+  familyCompositionVerzekeringsverledenElement = '[for="verzekeringsverleden__v1_0"]';
+  familyCompositionStrafrechtelijkverledenElement = '[for="verzekeringsverleden__v2_0"]';
+  familyCompositionSchadeverledenElement = '[for="verzekeringsverleden__v3_0"]';
 }

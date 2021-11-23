@@ -1,4 +1,4 @@
-import {When, Then} from "cucumber";
+import {When, Then} from 'cucumber';
 import {
   genericElements,
   genericMethods,
@@ -7,7 +7,7 @@ import {
   reisVerzekeringElements,
   reisVerzekeringMethods, stickyBalkElements,
   stickyBalkMethods
-} from "@support";
+} from '@support';
 
 When(/^I enter step one and step two page of doorlopende verzekeringen for myself$/, async () => {
   await genericMethods.clickOnElement(reisVerzekeringElements.whoToInsureMySelfClickElement);

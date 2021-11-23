@@ -331,12 +331,12 @@ export class GenericMethods {
     await browser.executeScript('window.scrollTo(0,5);');
   }
 
-  async scrollToElement(input: string) {
+  /*async scrollToElement(input: string) {
     const elementToClick: ElementFinder = element(input);
     await browser.controlFlow().execute(() => {
       browser.executeScript('arguments[0].scrollIntoView({block: \'center\'})', elementToClick);
     });
-  }
+  }*/
 
   async getText(selector: string): Promise<string> {
     await this.waitForElementNotVisible(genericElements.loader, browser.getPageTimeout);

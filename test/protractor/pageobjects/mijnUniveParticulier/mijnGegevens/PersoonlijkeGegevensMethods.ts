@@ -38,24 +38,36 @@ export class PersoonlijkeGegevensMethods {
     switch (input) {
       case familyCompositionEnum.ONE_PERSON: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionOnePersonNoChildrenClickElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionVerzekeringsverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionStrafrechtelijkverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionSchadeverledenElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionIUnderstandClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
       case familyCompositionEnum.LIVING_TOGETHER: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionLiveTogetherNoChildrenClickElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionVerzekeringsverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionStrafrechtelijkverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionSchadeverledenElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionIUnderstandClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
       case familyCompositionEnum.ONE_PARENT: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionOneParentWithChildrenClickElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionVerzekeringsverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionStrafrechtelijkverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionSchadeverledenElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionIUnderstandClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
       case familyCompositionEnum.FAMILY_WITH_CHILDREN: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionFamilyWithChildrenClickElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionVerzekeringsverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionStrafrechtelijkverledenElement);
+        await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionSchadeverledenElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.familyCompositionIUnderstandClickElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
