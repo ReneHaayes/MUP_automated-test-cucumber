@@ -31,7 +31,7 @@ export class MijnSchadeEnClaimElements {
     // DAMAGE CLAIM STEP THREE WOON
   damageClaimSoortWoonSchade = 'div:nth-child(1) > div.values > div > div > label:nth-child(1)';
   damageClaimOorzaakWoonSchade = 'div:nth-child(3) > div.values > div > div > label:nth-child(2)';
-  damageClaimDesriptionWoonSchade = '[id="_Form_IF14617_19466"]';
+  damageClaimDescriptionWoonSchade = '[id="_Form_IF14617_19466"]';
   // DAMAGE CLAIM STEP FOUR WOON
   damageClaimSlotvragenWoonSlotvraagNee = 'div.values > div > div > label:nth-child(2)';
   damageClaimSlotvragenVerifyText = 'fieldset.hasHeader.entryGroup.active-group > legend > span';

@@ -55,7 +55,7 @@ export class MijnSchadeEnClaimMethods {
         await genericMethods.verifyUrlContainsIgnoreCase('product=woon');
         // STEP THREE
         await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimDateInputElement, browser.getPageTimeout);
-        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('today'));
+        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDateInputElement, genericMethods.getDate('yesterday'));
         await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimStepOneNextButtonClickElement);
         // STEP FOUR
@@ -66,9 +66,9 @@ export class MijnSchadeEnClaimMethods {
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimSoortWoonSchade);
         await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimOorzaakWoonSchade, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimOorzaakWoonSchade);
-        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimDesriptionWoonSchade, browser.getPageTimeout);
-        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDesriptionWoonSchade, 'Die rotkat gooit weer een vaas om.');
-        await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimDesriptionWoonSchade);
+        await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimDescriptionWoonSchade, browser.getPageTimeout);
+        await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimDescriptionWoonSchade, 'Die rotkat gooit weer een vaas om.');
+        await genericMethods.clickOnTAB(mijnSchadeEnClaimElements.damageClaimDescriptionWoonSchade);
         await genericMethods.clickOnNextButton();
         // STEP FIVE
         await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimSlotvragenWoonSlotvraagNee, browser.getPageTimeout);

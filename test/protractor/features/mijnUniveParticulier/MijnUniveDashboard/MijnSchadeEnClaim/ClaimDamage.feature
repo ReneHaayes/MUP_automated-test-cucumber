@@ -9,5 +9,5 @@ Feature: Claiming damages
 
     Examples:
       | polis                        | persona   |
-      | Autoverzekering              | illing    |
+      #| Autoverzekering              | illing    |
       | Particuliere Woonverzekering | illing    |

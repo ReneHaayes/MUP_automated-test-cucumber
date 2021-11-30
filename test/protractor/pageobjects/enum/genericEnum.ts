@@ -10,6 +10,7 @@ export enum gender {
 
 export enum dateEnum {
   TODAY = 'today',
+  YESTERDAY = 'yesterday',
   SEVEN_DAY_TRIP = 'seven days'
 }
 

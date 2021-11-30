@@ -805,6 +805,12 @@ export class GenericMethods {
         const sevenDaysDate = new Date(priorDate);
         return String(sevenDaysDate.getDate()) + '-' + String(sevenDaysDate.getMonth() + 1) + '-' + String(sevenDaysDate.getFullYear());
       }
+      case dateEnum.YESTERDAY: {
+        const today = new Date();
+        const priorDate = new Date().setDate(today.getDate() - 1);
+        const yesterday = new Date(priorDate);
+        return String(yesterday.getDate()) + '-' + String(yesterday.getMonth() + 1) + '-' + String(yesterday.getFullYear());
+      }
     }
   }
 
