@@ -1,11 +1,13 @@
 import {genericMethods, getUrlUnive, hmPageMijnUniveElements} from '@support';
 import {homePageEnum, verzekeringPaginasEnum} from '@enum';
+import {browser} from 'protractor';
 
 export class HmPageMijnUniveMethods {
 
   async clickHeaderAndGoToPage(input: string) {
     switch (input) {
       case homePageEnum.ZOEKEN: {
+        await genericMethods.waitForElementIsPresent(hmPageMijnUniveElements.headerZoekenClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(hmPageMijnUniveElements.headerZoekenClickElement);
         await genericMethods.typeText(hmPageMijnUniveElements.headerZoekenInputElement, 'auto');
         await genericMethods.clickOnElement(hmPageMijnUniveElements.zoekenPageButtonClickElement);
