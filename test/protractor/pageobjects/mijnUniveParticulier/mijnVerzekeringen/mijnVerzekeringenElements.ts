@@ -4,6 +4,12 @@ export class MijnVerzekeringenElements {
   algemeneVoorwaardenClickElement = '[href="/binaries/content/assets/pdfs/algemeen/algemene_voorwaarden.pdf"]';
   algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
+  // SchadeEnNuFlowAuto
+  kiesVerzekeringAutoClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(4) > a > div.tile__body > div.tile__title'; // auto_product css';
+  schadeEnNUClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
+  schadeEnNuTextElement = '[class="h-page-title"]';
+  schadeEnNuText = 'Schade en nu?';
+
   // VERZEKERINGSOVERZICHT
   polisDetailsClickElement(polis: string): string {
     return '[class=\'tile__link media\'][href*=\'' + polis + ']';

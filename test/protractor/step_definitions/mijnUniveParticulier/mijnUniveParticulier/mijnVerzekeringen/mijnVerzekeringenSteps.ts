@@ -13,6 +13,11 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
   await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
 });
 
+When(/^Customer selects autoverzekering voor schade en nu flow$/, async () => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringAutoClickElement);
+});
+
+
 When(/^Customer changes the external polis$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.changeInsuranceClickElement);
   await genericMethods.typeText(mijnVerzekeringElements.changeInsuranceDescriptionAreaInputElement, 'test123');
@@ -83,6 +88,11 @@ Then(/^Verify uploaded (.*) is show in the list beneath$/, async (filename: stri
 Then(/^Verify thank you message for creating a change is correctly shown$/, async () => {
   await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.changeInsuranceThankYouTextElement, mijnVerzekeringElements.changeInsuranceThankYouText, browser.getPageTimeout);
 });
+
+Then(/^Verify text for SchadeEnNu is correctly shown$/, async () => {
+  await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.schadeEnNuTextElement, mijnVerzekeringElements.schadeEnNuText, browser.getPageTimeout);
+});
+
 
 Then(/^Verify algemene voorwaarden is available on screen as a pdf$/, async () => {
   const handles_3 = await browser.getAllWindowHandles();
