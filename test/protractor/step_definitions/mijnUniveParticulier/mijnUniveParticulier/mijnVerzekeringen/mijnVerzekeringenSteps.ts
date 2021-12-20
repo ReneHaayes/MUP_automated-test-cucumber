@@ -15,8 +15,8 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
 
 When(/^Customer selects autoverzekering voor schade en nu flow$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringAutoClickElement);
-  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNUClickElement, browser.getPageTimeout);
-  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNUClickElement);
+  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
 });
 
 

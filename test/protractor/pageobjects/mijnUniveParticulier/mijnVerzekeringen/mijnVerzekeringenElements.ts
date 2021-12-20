@@ -6,7 +6,7 @@ export class MijnVerzekeringenElements {
 
   // SchadeEnNuFlowAuto
   kiesVerzekeringAutoClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(4) > a > div.tile__body > div.tile__title'; // auto_product css';
-  schadeEnNUClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
+  schadeEnNuClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
 
   // Schade-en-nu pagina
   schadeEnNuTextElement = '[class="h-page-title"]';
