@@ -15,6 +15,8 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
 
 When(/^Customer selects autoverzekering voor schade en nu flow$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringAutoClickElement);
+  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNUClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNUClickElement);
 });
 
 
@@ -90,9 +92,9 @@ Then(/^Verify thank you message for creating a change is correctly shown$/, asyn
 });
 
 Then(/^Verify text for SchadeEnNu is correctly shown$/, async () => {
+  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.schadeEnNuTextElement, mijnVerzekeringElements.schadeEnNuText, browser.getPageTimeout);
 });
-
 
 Then(/^Verify algemene voorwaarden is available on screen as a pdf$/, async () => {
   const handles_3 = await browser.getAllWindowHandles();
