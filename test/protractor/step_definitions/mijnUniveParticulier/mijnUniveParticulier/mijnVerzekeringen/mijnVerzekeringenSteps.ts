@@ -1,7 +1,10 @@
 import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
 import {
-  genericMethods, mijnSchadeEnClaimElements, mijnSchadeEnClaimMethods, mijnVerzekeringElements
+  genericMethods,
+  mijnSchadeEnClaimElements,
+  mijnSchadeEnClaimMethods,
+  mijnVerzekeringElements
 } from '@support';
 import {statusEnum} from '@enum';
 
@@ -19,6 +22,17 @@ When(/^Customer selects autoverzekering voor schade en nu flow$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
 });
 
+When(/^Customer selects bootverzekering voor schade en nu flow$/, async () => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringBootClickElement);
+  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
+});
+
+When(/^Customer selects camperverzekering voor schade en nu flow$/, async () => {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringCamperClickElement);
+  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
+});
 
 When(/^Customer changes the external polis$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.changeInsuranceClickElement);
