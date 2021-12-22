@@ -12,3 +12,5 @@ Feature: SchadeEnNuFlow for mijn verzekeringen
       | Autoverzekering   |
       | Bootverzekering   |
       | Camperverzekering |
+
+    # bij uitbreiden verzekeringen ook toevoegen aan de switchcase van mijnVerzekeringSteps en element toevoegen aan mijnVerzekeringenElements
