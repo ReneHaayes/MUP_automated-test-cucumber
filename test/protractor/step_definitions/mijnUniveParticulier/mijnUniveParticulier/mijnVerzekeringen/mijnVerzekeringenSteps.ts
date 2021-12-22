@@ -6,7 +6,8 @@ import {
   mijnSchadeEnClaimMethods,
   mijnVerzekeringElements
 } from '@support';
-import {statusEnum} from '@enum';
+import {selectSchadeEnNuEnum, statusEnum} from '@enum';
+// import {selectSchadeEnNuEnum} from '../../../../pageobjects/enum/schadeEnNuEnum';
 
 When(/^Customer selects algemene voorwaarden$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.algemeneVoorwaardenClickElement);
@@ -16,22 +17,31 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
   await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polisNumber));
 });
 
-When(/^Customer selects autoverzekering voor schade en nu flow$/, async () => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringAutoClickElement);
-  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
-  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
-});
+When(/^Customer clicks on (.*) on Polisdetailpage to show Schade en nu flow$/, async (verzekeringSchadeEnNu: string) => {
 
-When(/^Customer selects bootverzekering voor schade en nu flow$/, async () => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringBootClickElement);
-  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
-  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
-});
-
-When(/^Customer selects camperverzekering voor schade en nu flow$/, async () => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringCamperClickElement);
-  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
-  await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
+  switch (verzekeringSchadeEnNu) {
+    case selectSchadeEnNuEnum.AUTOVERZEKERING: {
+      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringAutoClickElement);
+      await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
+      await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
+      break;
+    }
+    case selectSchadeEnNuEnum.BOOTVERZEKERING: {
+      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringBootClickElement);
+      await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
+      await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
+      break;
+    }
+    case selectSchadeEnNuEnum.CAMPERVERZEKERING: {
+      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringCamperClickElement);
+      await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
+      await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
+      break;
+    }
+    default: {
+      throw new Error('The input: "" ' + verzekeringSchadeEnNu + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
+    }
+  }
 });
 
 When(/^Customer changes the external polis$/, async () => {
@@ -58,15 +68,6 @@ When(/^Customer goes to verzekeringskaarten for (.*)$/, async (polis: string) =>
   await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polis));
   await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringKiesAutoClickElement);
   await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringsKaartenUrlClickElement);
-});
-
-Then(/^Verify url for verzekeringskaarten contains the following (.*)$/, async (urlToVerify: string) => {
-  await browser.sleep(2500);
-  await browser.getAllWindowHandles().then(function (handles) {
-    browser.switchTo().window(handles[1]);
-  });
-  await genericMethods.verifyUrlContainsIgnoreCase('verzekeringskaarten');
-  await genericMethods.verifyUrlContainsIgnoreCase(urlToVerify);
 });
 
 When(/^Customer selects damage claim with damage number: (.*)$/, async (damageNumber: string) => {
@@ -108,6 +109,15 @@ Then(/^Verify thank you message for creating a change is correctly shown$/, asyn
 Then(/^Verify text for SchadeEnNu is correctly shown$/, async () => {
   await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.schadeEnNuTextElement, mijnVerzekeringElements.schadeEnNuText, browser.getPageTimeout);
+});
+
+Then(/^Verify url for verzekeringskaarten contains the following (.*)$/, async (urlToVerify: string) => {
+  await browser.sleep(2500);
+  await browser.getAllWindowHandles().then(function (handles) {
+    browser.switchTo().window(handles[1]);
+  });
+  await genericMethods.verifyUrlContainsIgnoreCase('verzekeringskaarten');
+  await genericMethods.verifyUrlContainsIgnoreCase(urlToVerify);
 });
 
 Then(/^Verify algemene voorwaarden is available on screen as a pdf$/, async () => {

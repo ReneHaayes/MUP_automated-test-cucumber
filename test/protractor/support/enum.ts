@@ -1,6 +1,9 @@
 export {veelgesteldeVragenEnum
 }from '../pageobjects/enum/veelgesteldeVragenEnum';
 
+export {selectSchadeEnNuEnum
+}from '../pageobjects/enum/schadeEnNuEnum';
+
 export {legalEnum
 }from '../pageobjects/enum/autoVerzekeringEnum';
 
