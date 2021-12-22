@@ -7,7 +7,6 @@ import {
   mijnVerzekeringElements
 } from '@support';
 import {selectSchadeEnNuEnum, statusEnum} from '@enum';
-// import {selectSchadeEnNuEnum} from '../../../../pageobjects/enum/schadeEnNuEnum';
 
 When(/^Customer selects algemene voorwaarden$/, async () => {
   await genericMethods.clickOnElement(mijnVerzekeringElements.algemeneVoorwaardenClickElement);
