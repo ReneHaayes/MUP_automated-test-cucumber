@@ -108,6 +108,7 @@ Then(/^Verify thank you message for creating a change is correctly shown$/, asyn
 Then(/^Verify text for SchadeEnNu is correctly shown$/, async () => {
   await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextContainsInElement(mijnVerzekeringElements.schadeEnNuTextElement, mijnVerzekeringElements.schadeEnNuText, browser.getPageTimeout);
+  // LET OP: FIETS heeft de tekst Schade & Nu? - dus met een &-teken
 });
 
 Then(/^Verify url for verzekeringskaarten contains the following (.*)$/, async (urlToVerify: string) => {
