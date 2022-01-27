@@ -5,7 +5,7 @@ export class MijnVerzekeringenElements {
   algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
   // SCHADE_EN_NU_FLOW_AUTO
-  kiesVerzekeringAutoClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(4) > a > div.tile__body > div.tile__title'; // auto_product css';
+  kiesVerzekeringAutoClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(5) > a > div.tile__body > div.tile__title'; // auto_product css';
 
   // SCHADE_EN_NU_FLOW_BOOT
   kiesVerzekeringBootClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(3) > a > div.tile__body > div.tile__title'; // boot_product css';
