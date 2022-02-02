@@ -67,6 +67,6 @@ export class MijnSchadeEnClaimElements {
 
   // PREMIEGEVOLGEN BEREKENEN PAGE
   ncbmPrognoseH1TextElement = '[id="viewPartMyNcbmPrognosis"] > h1';
-  ncbmPrognoseH1Text = 'NCBM prognose';
+  ncbmPrognoseH1Text = 'NCBM-prognose';
   ncbmTableClassElement = '[class="ncbmTable"]';
 }
