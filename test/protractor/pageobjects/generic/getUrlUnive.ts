@@ -212,9 +212,9 @@ export class GetUrlUnive {
       case homePageEnum.SCHADE_BESLISBOOM: {
         return this.getEnv(browser.params.env.environment) + genericElements.schadeBeslisboom;
       }
-      case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
-        return genericElements.mijnUniveZakelijk;
-      }
+      // case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
+      //   return genericElements.mijnUniveZakelijk;
+      // }
       case homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE: {
         return this.getEnv(browser.params.env.environment) + genericElements.mijnUniveZakelijkHomePage;
       }
@@ -226,6 +226,9 @@ export class GetUrlUnive {
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_PARTICULIER: {
         return this.getEnv(browser.params.env.environment) + genericElements.loginMijnUniveParticulierURL;
+      }
+      case verzekeringPaginasEnum.MIJN_UNIVE_ZAKELIJK: {
+        return this.getEnv(browser.params.env.environment) + genericElements.loginMijnUniveZakelijkURL;
       }
       case verzekeringPaginasEnum.MIJN_UNIVE_MIJN_GEGEVENS: {
         return this.getEnv((browser.params.env.environment) + genericElements.mijnUniveMijnGegevens);

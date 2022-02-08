@@ -1,4 +1,4 @@
-import {browser} from "protractor";
+import {browser} from 'protractor';
 import {
   aansprakelijkheidsVerzekerElements,
   aovZzpElements, autoVerzekeringElements, bedrijfsAutoVerzekeringElements,
@@ -11,7 +11,7 @@ import {
   situatieGewijzigdElements,
   zakelijkRechtsBijstandVerzekeringElements
 } from '@support';
-import {breadCrumbEnum, homePageEnum, verzekeringPaginasEnum, zakelijkHomePageEnum} from "@enum";
+import {breadCrumbEnum, homePageEnum, verzekeringPaginasEnum, zakelijkHomePageEnum} from '@enum';
 
 export class HmPageMethods {
 
@@ -247,21 +247,21 @@ export class HmPageMethods {
   async verifyElementIsShownOnBusinessKlantenservicePage(input: string) {
     switch (input) {
       case homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK);
+        const url: string = getUrlUnive.getUrlUnive(homePageEnum.AFSPRAAK_MAKEN_ZAKELIJK);
         await genericMethods.verifyUrlContains(url);
         // await genericMethods.waitForElementIsVisible(hmPageElements.afspraakMakenBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.afspraakMakenH1TitleTextElement, hmPageElements.afspraakMakenTitleText);
         break;
       }
       case homePageEnum.KLACHT_INDIENEN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.KLACHT_INDIENEN);
+        const url: string = getUrlUnive.getUrlUnive(homePageEnum.KLACHT_INDIENEN);
         await genericMethods.verifyUrlContains(url);
         // await genericMethods.waitForElementIsVisible(hmPageElements.klachtIndienenBreadcrumbElement, browser.getPageTimeout);
         await genericMethods.verifyTextInElement(hmPageElements.klachtIndienenH1TitleTextElement, hmPageElements.klachtIndienenH1TitleText);
         break;
       }
       case homePageEnum.INLOGGEN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE_ZAKELIJK);
+        const url: string = getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE_ZAKELIJK);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveZakelijkUsernameInputElement, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveZakelijkPasswordInputElement, browser.getPageTimeout);
@@ -393,13 +393,13 @@ export class HmPageMethods {
   async verifyElementIsShownWhenClickedOnHeader(input: string) {
     switch (input) {
       case homePageEnum.ZOEKEN: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.ZOEKEN);
+        const url: string = getUrlUnive.getUrlUnive(homePageEnum.ZOEKEN);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.waitForElementIsVisible(hmPageElements.zoekenPageButtonInputElement, browser.getPageTimeout);
         break;
       }
       case homePageEnum.MIJN_UNIVE: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE);
+        const url: string = getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE);
         await genericMethods.waitForElementIsPresent(hmPageElements.mijnUniveLoginTitleTextElement, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveEmailInputElement, browser.getPageTimeout);
         await genericMethods.waitForElementIsVisible(hmPageElements.mijnUnivePasswordInputElement, browser.getPageTimeout);
@@ -407,8 +407,13 @@ export class HmPageMethods {
         await genericMethods.verifyUrlContains(url);
         break;
       }
-      case homePageEnum.MIJN_UNIVE_ZAKELIJK: {
-        const url: string = await getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE);
+      case homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE: {
+        const url: string = getUrlUnive.getUrlUnive(homePageEnum.MIJN_UNIVE_ZAKELIJK_HOMEPAGE);
+        await genericMethods.waitForElementIsPresent(hmPageElements.mijnUniveZakelijkHomePageH4Text, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveZakelijkUsernameInputElement, browser.getPageTimeout);
+        await genericMethods.waitForElementIsVisible(hmPageElements.mijnUniveZakelijkPasswordInputElement, browser.getPageTimeout);
+        await genericMethods.verifyTextInElement(hmPageElements.mijnUniveLoginTitleTextElement, hmPageElements.mijnUniveLoginTitleText);
+        await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyUrlContains(url);
         await genericMethods.verifyTextInElement(hmPageElements.mijnUniveZakelijkHomePageH3TextElement, hmPageElements.mijnUniveZakelijkHomePageH4Text);
         break;

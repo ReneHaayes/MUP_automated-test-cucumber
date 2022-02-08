@@ -9,10 +9,20 @@ export class LoginPageElements {
   loginPasswordInputElement = '#password';
   loginSubmitButtonClickElement = '[id="loginForm"] button';
 
+  // MIJN UNIVE ZAKELIJK LOGIN
+  mijnUniveZakelijkUsernameInputElement = '#emailphone';
+  mijnUniveZakelijkPasswordInputElement = '#password';
+  mijnUniveZakelijkSubmitButtonClickElement = '[id="loginForm"] button';
+
   // MIJN UNIVE LOGGED IN
   loggedInHeaderH1TextElement = '[class="page-content__block__title"] h1';
   loggedInHeaderH1Text2Element = '[class="h-page-title is-visible-desktop-only"]';
   loggedInHeaderH1Text = 'Mijn overzicht';
+
+  // MIJN UNIVE ZAKELIJK LOGGED IN
+  loggedInHeaderH1TextZakelijkElement = '[class="page-content__block__title"] h1';
+  loggedInHeaderH1TextZakelijk2Element = '[class="h-page-title is-visible-desktop-only"]';
+  loggedInHeaderH1ZakelijkText = 'Overzicht';
 
   // als bevestigingspagina weer werkt even het element pakken, liefst via Developer.
   // MIJN UNIVE CHANGED PASSWORD

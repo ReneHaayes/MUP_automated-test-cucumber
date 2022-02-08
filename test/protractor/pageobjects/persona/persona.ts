@@ -124,17 +124,15 @@ export class PersonaData {
   testPartner: Persona = new Persona('Arie', 'A', 'De', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-
   darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '7541 WH', '22',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
     'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
-
   skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Skywalker', '16', '06', '1973', 'Kampen', '8261 CA', '18',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
     'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
-
-  UniPAT_Corp_9: Persona = new Persona('', '', prefix.NO_PREFIX, 'Bouwbedrijf Ansing', '', '', '', 'Amsterdam', '1051 CN', '222',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31611775679', specificIdentification.PASSPORT, 'ACP26N', 'unipat_corp_9@unive.nl',
+  // zakelijke accounts
+  UniPAT_Corp_9: Persona = new Persona('BV', '', prefix.NO_PREFIX, 'Bouwbedrijf_Ansing', '', '', '', 'Amsterdam', '1051 CN', '222',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31611775679', specificIdentification.PASSPORT, 'ACP26N', 'UniPAT_Corp_9@unive.nl',
     'NL44RABO0123456789', '', 'bouwbedrijf', '04049465', durationEntrepreneur._5, '', '', 'Welkom01!');
 
   getPersonaZipcode(input: string): string {
@@ -198,6 +196,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.zipCode;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.zipCode;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -543,6 +544,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.lastName;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.lastName;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -610,6 +614,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.firstName;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.firstName;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -679,6 +686,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.gender;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.gender;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -817,6 +827,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.prefix;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.prefix;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -884,6 +897,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.birthPlace;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.birthPlace;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -953,6 +969,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.houseNumber;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.houseNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1020,6 +1039,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.houseNumberAddition;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.houseNumberAddition;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1089,6 +1111,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.phoneNumber;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.phoneNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1156,6 +1181,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.specificIdentification;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.specificIdentification;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1225,6 +1253,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.specificIdentificationNumber;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.specificIdentificationNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1293,6 +1324,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.eMailAddress;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.eMailAddress;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1360,6 +1394,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.accountNumber;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.accountNumber;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1497,6 +1534,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.profession;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.profession;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1565,6 +1605,9 @@ export class PersonaData {
       case personaName.SKYWALKER: {
         return this.skywalker.kvkNumber;
       }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.kvkNumber;
+      }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
       }
@@ -1632,6 +1675,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.durationEntrepreneur;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.durationEntrepreneur;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');
@@ -1836,6 +1882,9 @@ export class PersonaData {
       }
       case personaName.SKYWALKER: {
         return this.skywalker.password;
+      }
+      case personaName.UniPAT_Corp_9: {
+        return this.UniPAT_Corp_9.password;
       }
       default: {
         throw new Error('The input: "" ' + input + ' ""  you have entered for "" ' + this.constructor.name + ' "" is not recognized as a command');

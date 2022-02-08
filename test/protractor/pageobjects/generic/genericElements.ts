@@ -83,6 +83,7 @@ export class GenericElements {
   werknemersPensioenVerzekeringPp = 'zakelijk/werknemerspensioen';
 
   loginMijnUniveParticulierURL = 'mijnunive/inloggen';
+  loginMijnUniveZakelijkURL = 'mijnunivezakelijk/inloggen';
   veelgesteldevragenURL = 'klantenservice/veelgesteldevragen';
   mailhogPatURL = 'https://mailhog.pat.unive.nl';
   klachtenFormulier = 'klantenservice/klacht';

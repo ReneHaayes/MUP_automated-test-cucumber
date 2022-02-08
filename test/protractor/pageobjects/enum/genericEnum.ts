@@ -55,7 +55,8 @@ export enum personaName {
   ERICHTERS = 'erichters',
   KNOPPERS = 'knoppers',
   DARTHVADER = 'darthvader',
-  SKYWALKER = 'skywalker'
+  SKYWALKER = 'skywalker',
+  UniPAT_Corp_9 = 'UniPAT_Corp_9'
 }
 
 export enum companyNameEnum {
@@ -224,10 +225,6 @@ export enum verzekeringPaginasEnum {
   ZZP_PAKKET = 'zzp pakket',
   WOONPAKKET = 'Woonpakket',
 
-
-  // Mijn Unive Algemeen
-
-
   // Mijn Unive Particulier
   ZORGELOOS_ONLINEVERZEKERING_PAT = 'zorgeloosOnlineVerzekering',           // is dit een mijn unive product (?)
   MIJN_UNIVE_PARTICULIER = 'mijn unive particulier',
@@ -243,8 +240,8 @@ export enum verzekeringPaginasEnum {
   MIJN_UNIVE_MIJN_POSTVAK = 'mijn unive mijn postvak',
 
   // Mijn Unive Zakelijk
-  ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk',                // is dit een mijn unive product (?)
-
+  ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk',
+  MIJN_UNIVE_ZAKELIJK = 'mijn unive zakelijk'
 }
 
 export enum faqPage {

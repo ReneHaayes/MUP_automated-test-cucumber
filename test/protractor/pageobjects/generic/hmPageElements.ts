@@ -145,5 +145,5 @@ export class HmPageElements {
   mijnUniveZakelijkPasswordInputElement = '#password';
   mijnUniveZakelijkSubmitButtonClickElement = 'div:nth-child(5) > button';
   mijnUniveZakelijkHomePageH3TextElement = 'div[class="generic_container"] :nth-child(2) [class="generic_contentTitle"]';
-  mijnUniveZakelijkHomePageH4Text = 'Inloggen Mijn Unive Zakelijk';
+  mijnUniveZakelijkHomePageH4Text = 'Inloggen met uw account';
 }
