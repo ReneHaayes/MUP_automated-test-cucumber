@@ -1,4 +1,4 @@
-import {Given, Then, When} from 'cucumber';
+import {Then, When} from 'cucumber';
 import {browser} from 'protractor';
 import {
   analyticsGenericElements,
@@ -10,14 +10,16 @@ import {
 } from '@support';
 import {anaEnumLocation, anaEnumObjectName, anaEnumSearchObject, verzekeringPaginasEnum} from '@enum';
 
-Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
-  await genericMethods.goToPage(page);
-  try {
-    await genericMethods.clickOnCookie(genericElements.cookieClickElement);
-  } catch (e) {}
-  await genericMethods.waitForElementIsVisible(loginPageElements.loginEmailInputElement, browser.getPageTimeout);
-  await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
-});
+// GIVEN aanpassen naar alleen zakelijke gebruiker. Even over nadenken hoe ik dat doe.
+
+// Given(/^Customer (.*) is logged in on the (.*) page of the Unive website$/, async (persona: string, page: string) => {
+//   await genericMethods.goToPage(page);
+//   try {
+//     await genericMethods.clickOnCookie(genericElements.cookieClickElement);
+//   } catch (e) {}
+//   await genericMethods.waitForElementIsVisible(loginPageElements.loginEmailInputElement, browser.getPageTimeout);
+//   await loginPageMethods.login(personaData.getPersonaEmailAddress(persona), personaData.getPersonaPassword(persona));
+// });
 
 When(/^PersonaZakelijk (.*) logs in$/, async (persona: string) => {
   await genericMethods.waitForElementIsVisible(loginPageElements.loginEmailInputElement, browser.getPageTimeout);
