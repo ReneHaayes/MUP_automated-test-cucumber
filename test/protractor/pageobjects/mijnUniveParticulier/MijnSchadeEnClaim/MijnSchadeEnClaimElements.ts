@@ -47,7 +47,7 @@ export class MijnSchadeEnClaimElements {
   damageClaimTypeAanrijdingZonderAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(3)';
   damageClaimTypeAanrijdingMetAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(4)';
   // DAMAGE SITUATION PARKEERSCHADE
-  damageSituationParkeerschadeOtherPartyParked = 'fieldset.hasHeader.entryGroup.active-group > div > div:nth-child(3) > div.values > div > div > label:nth-child(1)';
+  damageSituationParkeerschadeOtherPartyParked = '#S1 > div.content.ng-scope > fieldset.hasHeader.entryGroup.active-group > div > div:nth-child(3) > div.values > div > div > label:nth-child(1)';
   // DAMAGE CLAIM STEP FIVE AUTO/WOON
   damageClaimContactThroughPhoneClickElement = '[data-label-id="LA_IF31405_39308"] > div > label:nth-child(1)';
   damageClaimContactThroughPhoneInputElement = '#_Form_IF31405_39309';

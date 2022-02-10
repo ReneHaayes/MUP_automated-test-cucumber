@@ -82,12 +82,12 @@ When(/^Customer uploads (.*) for claim with damage number: (.*)$/, async (filena
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.uploadingDocumentUploadButtonClickElement);
 });
 
-When(/^Customer claims a (.*) damage by filling in the form for polis$/, async (polis: string) => {
+When(/^Customer claims a (.*) damage by filling in the form for polis$/, async (product: string) => {
   // STEP ONE
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimClickElement);
   await genericMethods.acceptAlertWhenAvailable();
   // STEP TWO to SIX
-  await mijnSchadeEnClaimMethods.chooseInsuranceTypeForDamage(polis);
+  await mijnSchadeEnClaimMethods.chooseInsuranceTypeForDamage(product);
   // STEP SEVEN-SLOTVRAGEN
   await genericMethods.waitForElementIsVisible(mijnSchadeEnClaimElements.damageClaimAgreementClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimAgreementClickElement);
