@@ -23,6 +23,9 @@ export class MijnVerzekeringenElements {
     return '[class=\'tile__link media\'][href*=\'' + polis + ']';
   }
 
+  // VERZEKERINGSKAARTEN_TEST
+  verzekeringskaartTestClickAuto = '[class="tile__title"]';
+
   // SCHADEDETAILS
   schadeDetailsClickElement(polisNumber: string): string {
     return 'class="tile__description-damage__item--visible-desktop"\'][href*=\'' + polisNumber + ']';
@@ -30,10 +33,8 @@ export class MijnVerzekeringenElements {
 
   // VERZEKERINGSKAARTEN
   verzekeringKiesAutoInsuranceClickElement = '[href*="product=auto"]';
-  verzekeringKiesAutoClickElement = 'div:nth-child(3) > a > div.tile__body > div.tile__description';
-
-  verzekeringsKaartenUrlClickElement = 'li:nth-child(4) > a > div.page-links-item__body.media__body > div';   // '[class="page-links"] [href*="verzekeringskaarten"]';
-  // verzekeringsKaartenWaitElement = '[src*="verzekeringskaarten"]';
+  verzekeringKiesAutoClickElement = 'li:nth-child(7) > a > div.page-links-item__body.media__body > div';
+  verzekeringsKaartenUrlClickElement = '[class="page-links"] [href*="verzekeringskaarten"]';
 
   // POLIS DETAILS
   polisNumberTextElement = '//*[contains(text(),"Polisnummer")]/following-sibling::div';

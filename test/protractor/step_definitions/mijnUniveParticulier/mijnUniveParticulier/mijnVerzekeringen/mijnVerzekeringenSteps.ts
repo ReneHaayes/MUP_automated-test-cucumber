@@ -63,9 +63,9 @@ When(/^Customer selects (.*) polis with polis number: (.*)$/, async (polisStatus
   }
 });
 
-When(/^Customer goes to verzekeringskaarten for (.*)$/, async (polis: string) => {
-  await genericMethods.clickOnElement(mijnVerzekeringElements.polisDetailsClickElement(polis));
-  await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringKiesAutoClickElement);
+When(/^Customer goes to verzekeringskaarten$/, async function () {
+  await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringskaartTestClickAuto);
+  await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.verzekeringsKaartenUrlClickElement, browser.getPageTimeout);
   await genericMethods.clickOnElement(mijnVerzekeringElements.verzekeringsKaartenUrlClickElement);
 });
 
