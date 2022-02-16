@@ -54,7 +54,7 @@ When(/^verify the answer to (.*)$/, async (veelgesteldeVraag: string) => {
   await loginPageMethods.verifyVeelGesteldeVragen(veelgesteldeVraag);
 });
 
-When(/^persona (.*) forgot his password and resets it with new password (.*)$/, async (persona: string, newPassword: string) => {
+When(/^personaMUZ (.*) forgot his password and resets it with new password (.*)$/, async (persona: string, newPassword: string) => {
   await genericMethods.clickOnElement(genericElements.cookieClickElement);
   // Forgot password flow till send email:
   await genericMethods.clickOnElement(loginPageElements.forgotPasswordClickElement);
