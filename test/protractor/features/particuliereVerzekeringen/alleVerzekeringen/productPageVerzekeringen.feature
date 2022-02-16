@@ -7,6 +7,7 @@ Feature: Check if the product and alle verzekeringen pages are correctly shown.
     When I select <select> and click on <buttonPage> at the alle verzekeringen page
     Then Verify elements on <buttonPage> product page is shown
 
+    ## alleen drop down testen op verschillende onderdelen
     Examples:
       | select             | buttonPage                   |
       | uw gezondheid      | Zorgverzekering              |

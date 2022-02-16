@@ -1,7 +1,7 @@
 @zorgWizardCrossSell
 
 Feature: Check cross sell op stap 2 en op bedankpagina
-    
+
     @BedankpaginaDRV
     Scenario Outline: doorlopen van de zorgwizard (geen aanvullende pakketten) en check of doorlopende reis crosssell wordt getoond
         Given I am on the zorgVerzekeringCrossSellBedankpaginaParameter page of the Unive website
@@ -12,7 +12,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         And I enter personal data on step 2 of wizard with <persona>
         And I answer inkomstenvragen with:
         |inkomstenNietNL|<inkomstenNietNL>|
-        |inkomstenNL    |<inkomstenNL>    |        
+        |inkomstenNL    |<inkomstenNL>    |
         And I click on Volgende page two
         And I enter BSN on step 3 with <persona>
         And I click on bevestigen step 3
@@ -22,7 +22,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
         |ronaldo|Nee            |           |Zorg Vrij     |
 
-    @oudBedankpaginaOVPAVPRBV  
+    @oudBedankpaginaOVPAVPRBV
     Scenario Outline: doorlopen van de zorgwizard (met aanvullende pakketten) en check of rechtsbijstand crosssell wordt getoond (oud scenario toen er nog meerdere cross sell items op de bedankpagina stonden)
         Given I am on the zorgVerzekering page of the Unive website
         When I select basic insurance no collective with:
@@ -41,7 +41,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         Examples:
         |persona|inkomstenNietNL|inkomstenNL|insuranceBasis|
         |ronaldo|Ja             |Ja         |Zorg Vrij     |
-    
+
     @buitenlandStap
     Scenario Outline: check of buitenland stap wordt getoond en alle elementen aanwezig zijn bij binnenkomst met cs=1 parameter
         Given I am on the zorgVerzekeringCrossSellInWizardParameter page of the Unive website
@@ -49,7 +49,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         |insuranceBasis|<insuranceBasis>|
         And I click on Volgende page one
         Then validate step 2 is buitenland step and all elements are present
-    
+
     Examples:
     |insuranceBasis|
     |Zorg Vrij     |
@@ -63,7 +63,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         And I click on Volgende page one
         Then I validate that all legends are visible on step 2
         And there are only 3 unibols present
-    
+
         Examples:
         |insuranceBasis|
         |Zorg Vrij     |
@@ -85,7 +85,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         And I click on bevestigen step 3 without bedankpagina check
         Then validate that doorlopende reis crossSell is not visible
         And validate that bedanktpagina and all elements are correct with <persona>
-    
+
         Examples:
         |insuranceBasis|persona|inkomstenNietNL|inkomstenNL|
         |Zorg Vrij     |ronaldo|Nee            |           |
@@ -121,7 +121,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         Then validate that doorlopende reis crossSell is not visible
         And validate all elements for zorg and <reisProduct> are correct different startdate
         And validate that bedanktpagina and all elements are correct with <persona>
-        
+
         Examples:
         |insuranceBasis|reisProduct                                |persona|inkomstenNietNL|inkomstenNL|verzekeringsVerleden|strafrechtelijkVerleden|schadeVerleden|
         |Zorg Vrij     |doorlopende reis- en annuleringsverzekering|ronaldo|Nee            |           |Nee                 |Nee                     |Ja            |
@@ -155,7 +155,7 @@ Feature: Check cross sell op stap 2 en op bedankpagina
         Then validate that doorlopende reis crossSell is not visible
         And validate all elements for zorg and <reisProduct> are correct same startdate
         And validate that bedanktpagina and all elements are correct with <persona>
-    
+
         Examples:
         |insuranceBasis|reisProduct                                |persona|inkomstenNietNL|inkomstenNL|verzekeringsVerleden|strafrechtelijkVerleden|schadeVerleden|
         |Zorg Vrij     |doorlopende reis- en annuleringsverzekering|ronaldo|Nee            |           |Nee                 |Nee                    |Nee           |
