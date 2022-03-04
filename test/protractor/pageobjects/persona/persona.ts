@@ -69,22 +69,6 @@ export class Persona {
 
 
 export class PersonaData {
-
-  ronaldo: Persona = new Persona('Cristiano', 'C', prefix.NO_PREFIX, 'Ronaldo', '10', '05', '1987', 'Deventer', '7412XW', '91',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'ronaldo@unive.nl',
-    'NL05INGB0661095088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  messi: Persona = new Persona('Lionel', 'L', prefix.NO_PREFIX, 'Messi', '05', '09', '1965', 'Apeldoorn', '7412TV', '44',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.DRIVER_LICENSE, '12345567890',
-    'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
-  salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15', '06', '1992', 'Enschede', '7412XW', '31',
-    'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'onjuisteemailadres@test.nl',
-    '5088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
-  neymar: Persona = new Persona('Neymar', 'N', 'Da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
-    'ABC', gender.FEMALE, '0612345678' , specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
-    'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98', 'Welkom01!');
-  pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15', '03', '1993', 'Zwolle', '7412TV', '69',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, phoneNumber.NO_PHONENUMBER, specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
-    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110', 'Welkom01!');
   illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing - van Bruggen', '28', '10', '1962', 'Deventer', '9939 PA', '27',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
     '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
@@ -106,6 +90,34 @@ export class PersonaData {
   knoppers: Persona = new Persona('Anton', 'AO', prefix.NO_PREFIX, 'Knoppers', '13', '12', '1952', 'Appingedam', '99002CM', '7',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'antonknoppers@kpnmail.nl',
     'NL09RABO0313083398', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '7541 WH', '22',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
+    'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
+  skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Skywalker', '16', '06', '1973', 'Kampen', '8261 CA', '18',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
+    'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
+  //
+  // zakelijke accounts
+  UniPAT_Corp_9: Persona = new Persona('BV', '', prefix.NO_PREFIX, 'Bouwbedrijf_Ansing', '', '', '', 'Amsterdam', '1051 CN', '222',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31611775679', specificIdentification.PASSPORT, 'ACP26N', 'UniPAT_Corp_9@unive.nl',
+    'NL44RABO0123456789', '', 'bouwbedrijf', '04049465', durationEntrepreneur._5, '', '', 'Welkom01!');
+  //
+  // oude Sales accounts
+  ronaldo: Persona = new Persona('Cristiano', 'C', prefix.NO_PREFIX, 'Ronaldo', '10', '05', '1987', 'Deventer', '7412XW', '91',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'ronaldo@unive.nl',
+    'NL05INGB0661095088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
+  messi: Persona = new Persona('Lionel', 'L', prefix.NO_PREFIX, 'Messi', '05', '09', '1965', 'Apeldoorn', '7412TV', '44',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, phoneNumber.NO_PHONENUMBER, specificIdentification.DRIVER_LICENSE, '12345567890',
+    'messi@unive.nl', 'NL05INGB0661095088', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+  salah: Persona = new Persona('Mohammed', 'M', prefix.NO_PREFIX, 'Salah', '15', '06', '1992', 'Enschede', '7412XW', '31',
+    'A', gender.MALE, '1234567890', specificIdentification.ID_CARD, 'HDN068A', 'onjuisteemailadres@test.nl',
+    '5088', '218333754', 'beast', '1234567890', durationEntrepreneur._3, '167', '50', 'Welkom01!');
+  neymar: Persona = new Persona('Neymar', 'N', 'Da', 'Silva', '05', '02', '1992', 'Arnhem', '7412XW', '12',
+    'ABC', gender.FEMALE, '0612345678' , specificIdentification.SOMETHING_ELSE, specificIdentification.NO_NUMBER, 'neymar@unive.nl',
+    'NL05INGB0661095088', '218333754', 'diver', '1234567890', durationEntrepreneur._7, '190', '98', 'Welkom01!');
+  pogba: Persona = new Persona('Paul', 'PL', prefix.NO_PREFIX, 'Pogba', '15', '03', '1993', 'Zwolle', '7412TV', '69',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, phoneNumber.NO_PHONENUMBER, specificIdentification.ID_CARD, '897623', 'pogba@unive.nl',
+    'NL05INGB0661095088', '218333754', 'beast', '1234567890', durationEntrepreneur._MIN1, '209', '110', 'Welkom01!');
   testvrouwCustomerRecognition: Persona = new Persona('Zappie', 'Z.Z.', prefix.NO_PREFIX, 'Top', '01', '01', '1972', 'Amsterdam', '1012NX', '1',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0592444523', specificIdentification.PASSPORT, 'ACP26N', 'zz@top.nl',
     'NL49ANDL0687747724', '232099765', 'dolfijnentrainer', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
@@ -124,16 +136,6 @@ export class PersonaData {
   testPartner: Persona = new Persona('Arie', 'A', 'De', 'Partner', '23', '09', '1985', 'Amsterdam', '1012NX', '3',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31687654321', specificIdentification.PASSPORT, 'ACP26N', 'partner@een.nl',
     'NL02ABNA0123456789', '670020916', 'kattenfluisteraar', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
-  darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '7541 WH', '22',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
-    'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
-  skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Skywalker', '16', '06', '1973', 'Kampen', '8261 CA', '18',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
-    'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
-  // zakelijke accounts
-  UniPAT_Corp_9: Persona = new Persona('BV', '', prefix.NO_PREFIX, 'Bouwbedrijf_Ansing', '', '', '', 'Amsterdam', '1051 CN', '222',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31611775679', specificIdentification.PASSPORT, 'ACP26N', 'UniPAT_Corp_9@unive.nl',
-    'NL44RABO0123456789', '', 'bouwbedrijf', '04049465', durationEntrepreneur._5, '', '', 'Welkom01!');
 
   getPersonaZipcode(input: string): string {
     switch (input) {
