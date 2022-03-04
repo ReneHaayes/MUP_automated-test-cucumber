@@ -70,17 +70,17 @@ export class Persona {
 
 export class PersonaData {
   illing: Persona = new Persona('Geraldine', 'G', prefix.NO_PREFIX, 'Illing - van Bruggen', '28', '10', '1962', 'Deventer', '9939 PA', '27',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'illing@unive.nl',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'testacc2@unive.nl',
     '5088', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   boekwijt: Persona = new Persona('Willem Jan', 'W.J.', prefix.NO_PREFIX, 'Boekwijt', '19', '08', '1943', 'Hiero', '2716XJ', '62',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP27N', 'tg6@univee.nl',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP27N', 'testacc11@unive.nl',
     '5088', '218333754', 'boer', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   woestenburg: Persona = new Persona('Annie', 'AF', prefix.NO_PREFIX, 'Woestenburg', '19', '10', '1956', 'Venhuizen', '1606XA', '11',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'a.woestenburg@quicknet.nl', '3872', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+    'testacc1@unive.nl', '3872', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
   aakoek: Persona = new Persona('Annie', 'AA', prefix.NO_PREFIX, 'Koek', '07', '07', '1976', 'Enschede', '7546ET', '59',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
-    'aakoek@hotmail.com', '2487', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
+    'testacc3@unive.nl', '2487', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Welkom01!');
   ako: Persona = new Persona('Ako', 'AJC', prefix.NO_PREFIX, 'Koek', '09', '04', '1962', 'Kudelstaart', '1433DC', '4',
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.DRIVER_LICENSE, '12345567890',
     'ako62@live.nl', '8582', '218333754', 'footballer', '1234567890', durationEntrepreneur._9, '176', '76', 'Test123!');
@@ -91,10 +91,10 @@ export class PersonaData {
     houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '0601234587', specificIdentification.PASSPORT, 'ACP26N', 'antonknoppers@kpnmail.nl',
     'NL09RABO0313083398', '218333754', 'model', '1234567890', durationEntrepreneur._5, '185', '85', 'Welkom01!');
   darthvader: Persona = new Persona('Anakin', 'A', prefix.NO_PREFIX, 'Darth Vader', '15', '04', '1949', 'Zwolle', '7541 WH', '22',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'darthvader@univetest.nl',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.MALE, '+31612345678', specificIdentification.PASSPORT, '1775248', 'testacc6@unive.nl',
     'NL02ABNA0123456789', '224181828', 'President', '1234567890', durationEntrepreneur._5, '200', '90', 'Welkom01!');
   skywalker: Persona = new Persona('Luke', 'L', prefix.NO_PREFIX, 'Skywalker', '16', '06', '1973', 'Kampen', '8261 CA', '18',
-    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'lukeskywalker@univetest.nl',
+    houseNumberAddition.NO_HOUSENUMBER_ADDITION, gender.FEMALE, '+31612345678', specificIdentification.PASSPORT, 'ACP26N', 'testacc7@unive.nl',
     'NL02ABNA0123456789', '226186118', 'Lightsaber tester', '1234567890', durationEntrepreneur._5, '175', '75', 'Welkom01!');
   //
   // zakelijke accounts
