@@ -106,6 +106,7 @@ export enum verzekeringPaginasEnum {
   HOME_DRIVE_OT_DAAS = 'driveDaas',
   HOME_HIPPO_SAAS_ACC = 'hippoAccSaaS',
   HOME_ACC = 'acc',
+  HOME_QIS_AT_SAAS = 'qis_at',
 
   // Algemene pagina's
   KLANTENSERVICE = 'Klantenservice',
@@ -241,7 +242,7 @@ export enum verzekeringPaginasEnum {
 
   // Mijn Unive Zakelijk
   ZORGELOOSONLINE_ZAKELIJK = 'zorgeloosonline zakelijk',
-  MIJN_UNIVE_ZAKELIJK = 'mijn unive zakelijk'
+  MIJN_UNIVE_ZAKELIJK = 'mijn unive zakelijk',
 }
 
 export enum faqPage {
