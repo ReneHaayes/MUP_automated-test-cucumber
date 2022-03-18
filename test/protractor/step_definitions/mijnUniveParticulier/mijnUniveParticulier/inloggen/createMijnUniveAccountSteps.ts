@@ -79,7 +79,7 @@ When(/^the account number is filled in with (.*)$/, async (password: string) => 
 });
 
 Then(/^The notification password isn't filled in correctly shows$/, async () => {
-  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordDoesntSatisfyTheCorrectInputTextElement, 5000);
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordDoesntSatisfyTheCorrectInputTextElement, 2000);
 });
 
 Then(/^The notification password isn't filled correctly need a capital shows$/, async () => {
@@ -87,10 +87,12 @@ Then(/^The notification password isn't filled correctly need a capital shows$/, 
 });
 
 Then(/^The notification password isn't filled correctly need a small letter shows$/, async () => {
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordIsEasyToGuessTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextInElement(mijnUniveAccountElements.passwordIsEasyToGuessTextElement, mijnUniveAccountElements.passwordIsEasyToGuessNeedSmallLetterText);
 });
 
 Then(/^The notification password isn't filled correctly need minimum eight characters shows$/, async () => {
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordIsEasyToGuessTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextInElement(mijnUniveAccountElements.passwordIsEasyToGuessTextElement, mijnUniveAccountElements.passwordIsEasyToGuessMinimumEightCharText);
 });
 
@@ -99,7 +101,7 @@ Then(/^The notification password isn't filled correctly need minimum special cha
 });
 
 Then(/^The notification password doesn't match correctly shows$/, async () => {
-  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordDontMatchTextElement, 5000);
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordDontMatchTextElement, 2000);
 });
 
 Then(/^The notification account number to short shows$/, async () => {
@@ -116,7 +118,7 @@ Then(/^The notification account number to long shows$/, async () => {
 
 
 Then(/^The notification account number not valid shows$/, async () => {
-  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.accountNumberInvalidTextElement, 5000);
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.accountNumberInvalidTextElement, 2000);
 });
 
 Then(/^The notification that the data is not recognisable shows$/, async () => {
