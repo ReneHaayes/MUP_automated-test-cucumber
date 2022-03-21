@@ -1,6 +1,6 @@
 @faqPageMijnUniveParticulier
 
-Feature: Login page for Mijn Unive Particulier
+Feature: Check FAQ page for Mijn Unive Particulier
 
   Scenario Outline: Veelgestelde vragen check
     Given Customer is on the mijn unive particulier page of the Unive website
