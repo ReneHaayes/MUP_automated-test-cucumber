@@ -1,6 +1,7 @@
 @faqPageMijnUniveParticulier
 
 Feature: Check FAQ page for Mijn Unive Particulier
+    # knop moet linken naar https://acc.unive.nl/hulp-nodig-mijnunive --> actie Onewelcome: ticket Support-4664
 
   Scenario Outline: Veelgestelde vragen check
     Given Customer is on the mijn unive particulier page of the Unive website
