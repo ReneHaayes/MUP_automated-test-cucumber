@@ -5,13 +5,13 @@ export class MijnVerzekeringenElements {
   algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
   // SCHADE_EN_NU_FLOW_AUTO
-  kiesVerzekeringAutoClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(5) > a > div.tile__body > div.tile__title'; // auto_product css';
+  kiesVerzekeringAutoClickElement = 'div:nth-child(5) > a > div.tile__body > div.tile__title';
 
   // SCHADE_EN_NU_FLOW_BOOT
-  kiesVerzekeringBootClickElement = 'div.is-active > div > div:nth-child(1) > div.package__list > div:nth-child(4) > a > div.tile__body > div.tile__title'; // boot_product css';
+  kiesVerzekeringBootClickElement = 'div:nth-child(2) > a > div.tile__body > div.tile__title';
 
   // SCHADE_EN_NU_FLOW_CAMPER
-  kiesVerzekeringCamperClickElement = 'div:nth-child(1) > div.package__list > div:nth-child(1) > a > div.tile__body > div.tile__title'; // camper_product css';
+  kiesVerzekeringCamperClickElement = 'div:nth-child(4) > a > div.tile__body > div.tile__title'; // camper_product css';
 
   // Schade-en-nu pagina
   schadeEnNuClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';
