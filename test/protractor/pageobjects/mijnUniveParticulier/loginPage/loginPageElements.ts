@@ -38,10 +38,11 @@ export class LoginPageElements {
   veelgesteldeVragenHeaderTextElement = '[class="action_title"]';
   veelgesteldeVragenHeaderText = 'Hulp nodig bij Mijn Univé?';
 
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveClickElement = '[id="hoe-meld-ik-me-aan-voor-mijn-unive-mijn-unive"]';
   veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveTextElement = '[id="hoe-meld-ik-me-aan-voor-mijn-unive-mijn-unive"] > a > h3';
-  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveText = 'Op www.unive.nl/mijnunive kiest u voor ‘Aanmelden voor Mijn Univé’ en vult u eenmalig een aantal persoonlijke gegevens in, zoals uw geboortedatum, postcode en een wachtwoord. Aan de hand daarvan zoeken wij u op in onze klantenadministratie. Hebben wij u gevonden, dan krijgt u een bevestigingsmailtje met een activeringslink. Nadat u via die link uw account heeft geactiveerd, heeft u direct toegang tot Mijn Univé.';
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveText = 'Op www.unive.nl/mijnunive kiest u voor ‘Account aanmaken’. Vervolgens kunt u kiezen uit twee manieren om een Mijn Univé-account aan te maken;';
 
-  veelgesteldeVraagAntwoordGeopend = '[class="faqList"] > dd:nth-child(6) > p';
+  veelgesteldeVraagAntwoordGeopend = '[class="faqList"] > dd:nth-child(2) > p';
 
   // MAILHOG
   mailtoHeaderTextElement = '[class*="messages"] > div:nth-child(1) [ng-repeat="to in message.Content.Headers[\'To\']"]';

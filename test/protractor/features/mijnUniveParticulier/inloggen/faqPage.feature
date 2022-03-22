@@ -7,6 +7,7 @@ Feature: Check FAQ page for Mijn Unive Particulier
     Given Customer is on the mijn unive particulier page of the Unive website
     When Customer clicks on veelgestelde vragen button
     Then the title for veelgestelde vragen appears on screen
+    And Customer clicks on the Account aanmaken question
     And verify the answer to <veelgestelde vraag>
 
     Examples:

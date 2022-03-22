@@ -80,6 +80,11 @@ When(/^persona (.*) forgot his password and resets it with new password (.*)$/, 
   await genericMethods.clickOnElement(loginPageElements.resetPasswordSubmitButtonClickElement);
 });
 
+When (/^Customer clicks on the Account aanmaken question$/, async () => {
+  await genericMethods.waitForElementIsVisible(loginPageElements.veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveClickElement, browser.getPageTimeout);
+  await genericMethods.clickOnElement(loginPageElements.veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveClickElement);
+});
+
 Then(/^(.*) can log in with (.*)$/, async (persona: string, newPassword: string) => {
   await genericMethods.typeText(loginPageElements.loginEmailInputElement, personaData.getPersonaEmailAddress(persona));
   await genericMethods.clickOnTAB(loginPageElements.loginEmailInputElement);
