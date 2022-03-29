@@ -13,7 +13,6 @@ Feature: Changing data for persona when logged in.
       | payment way        |
       | iban accountnumber |
 
-@Testscenario
   Scenario: Change contact preferences for persona when logged in
     Given Customer woestenburg is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
     When Customer changes contact preferences
