@@ -1,5 +1,6 @@
 import {genericMethods, mijnUniveAccountElements} from '@support';
 import {familyCompositionEnum, PaymentData} from '@enum';
+import {browser} from 'protractor';
 
 export class PersoonlijkeGegevensMethods {
 
@@ -8,6 +9,7 @@ export class PersoonlijkeGegevensMethods {
       case PaymentData.PAYMENT_PERIOD: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.changePaymentPeriodRadioClickElement);
         await genericMethods.selectInDropdown(mijnUniveAccountElements.paymentPeriodSelectElement, mijnUniveAccountElements.paymentPeriodeSelectMaandElement);
+        await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.sendButtonClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
@@ -15,16 +17,18 @@ export class PersoonlijkeGegevensMethods {
         await genericMethods.clickOnElement(mijnUniveAccountElements.changePaymentWayRadioClickElement);
         await genericMethods.typeText(mijnUniveAccountElements.ibanAccountNumberInputElement, PaymentData.IBAN);
         await genericMethods.clickOnElement(mijnUniveAccountElements.authorisationCheckBoxAutomaticCollectionClickElement);
+        await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.sendButtonClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
       case PaymentData.IBAN_ACCOUNTNUMBER: {
         await genericMethods.clickOnElement(mijnUniveAccountElements.changeIbanRadioClickElement);
         await genericMethods.typeText(mijnUniveAccountElements.currentIbanAccountNumberInputElement, PaymentData.IBAN);
-        await genericMethods.typeText(mijnUniveAccountElements.newIbanAccountnumberInputElement, PaymentData.IBAN);
+        await genericMethods.typeText(mijnUniveAccountElements.newIbanAccountnumberInputElement, PaymentData.IBAN_NEW);
         await genericMethods.typeText(mijnUniveAccountElements.startDateChangeInputElement, genericMethods.getDate('today'));
         await genericMethods.clickOnTAB(mijnUniveAccountElements.startDateChangeInputElement);
         await genericMethods.clickOnElement(mijnUniveAccountElements.authorisationCheckBoxAutomaticCollectionSecondClickElement);
+        await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.sendButtonClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnUniveAccountElements.sendButtonClickElement);
         break;
       }
