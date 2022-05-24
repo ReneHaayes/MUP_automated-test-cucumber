@@ -72,7 +72,7 @@ export enum homePageEnum {
   ZORGNOTA_DECLAREREN = 'zorgnota declareren',
   VERZEKERING_WIJZIGEN = 'verzekering wijzigen',
   UNIVE_ALARMCENTRALE = 'unive alarmcentrale',
-  ZOEKEN = 'zoeken',
+  ZOEKEN = 'Zoeken...',
   ZOEKENHEADER = 'zoeken?k=auto',
   MIJN_UNIVE = 'mijn unive',
   MIJN_UNIVE_ZAKELIJK = 'mijn unive zakelijk',
