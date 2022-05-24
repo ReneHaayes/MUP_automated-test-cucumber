@@ -97,6 +97,7 @@ Then(/^The notification password isn't filled correctly need minimum eight chara
 });
 
 Then(/^The notification password isn't filled correctly need minimum special character shows$/, async () => {
+  await genericMethods.waitForElementIsVisible(mijnUniveAccountElements.passwordIsEasyToGuessTextElement, browser.getPageTimeout);
   await genericMethods.verifyTextInElement(mijnUniveAccountElements.passwordIsEasyToGuessTextElement, mijnUniveAccountElements.passwordIsEasyToGuessMinimumSpecialCharText);
 });
 

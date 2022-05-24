@@ -2,16 +2,6 @@
 
 Feature: Fault situations for creating account.
 
-#  Scenario Outline: Check if the correct notification appears when the account already exists
-#    Given Customer is on the mijn unive particulier page of the Unive website
-#    When Check if <persona> already exists
-#    And Customer <persona> creates an account for mijn Unive
-#    Then The notification that there is already an account for this e-mail adres show on screen
-#
-#    Examples:
-#      | persona |
-#      | ako     |
-
   Scenario: Check if the notification appears that the password filled in is not correct according to the standards
     Given Customer is on the mijn unive particulier page of the Unive website
     When the password is filled in with welkom01!
@@ -36,7 +26,6 @@ Feature: Fault situations for creating account.
     Given Customer is on the mijn unive particulier page of the Unive website
     When the correct password is filled in with Welkom01! and at repeat fill in the welkom01!
     Then The notification password doesn't match correctly shows
-
 
   Scenario: Check if the notification appears that the accountnumber is not correct
     Given Customer is on the mijn unive particulier page of the Unive website
