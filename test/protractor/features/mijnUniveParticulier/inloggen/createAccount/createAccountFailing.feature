@@ -47,8 +47,3 @@ Feature: Fault situations for creating account.
       | 123!            |
       | test            |
       | !!!!            |
-
-  Scenario: Check if the account is not recognisable.
-    Given Customer is on the mijn unive particulier page of the Unive website
-    When Customer salah creates an account for mijn Unive
-    Then The notification that the data is not recognisable shows
