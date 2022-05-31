@@ -8,9 +8,9 @@ Feature: SchadeEnNuFlow for mijn verzekeringen
     Then Verify text for SchadeEnNu is correctly shown
 
     Examples:
-      | verzekering       |
-      | Autoverzekering   |
-      | Bootverzekering   |
-      | Camperverzekering |
+      | verzekering     |
+      | tweedeproduct   |
+      | derdeproduct    |
+      | vierdeproduct   |
 
-    # bij uitbreiden verzekeringen ook toevoegen aan de switchcase van mijnVerzekeringSteps en element toevoegen aan mijnVerzekeringenElements
+    # elke product heeft een schade en nu pagina. Dit is een test om te verifiëren dat de Schade en Nu? pagina wordt getoond

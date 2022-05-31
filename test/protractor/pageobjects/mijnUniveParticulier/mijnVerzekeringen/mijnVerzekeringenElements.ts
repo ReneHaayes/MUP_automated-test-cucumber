@@ -4,14 +4,14 @@ export class MijnVerzekeringenElements {
   algemeneVoorwaardenClickElement = '[href="/binaries/content/assets/pdfs/algemeen/algemene_voorwaarden.pdf"]';
   algemeneVoorwaardenUrlCheckText = 'algemene_voorwaarden.pdf';
 
-  // SCHADE_EN_NU_FLOW_AUTO
-  kiesVerzekeringAutoClickElement = 'div:nth-child(5) > a > div.tile__body > div.tile__title';
+  // SCHADE_EN_NU_FLOW_TWEEDE
+  kiesTweedeVerzekeringClickElement = 'div:nth-child(2) > a > div.tile__body > div.tile__title';
 
-  // SCHADE_EN_NU_FLOW_BOOT
-  kiesVerzekeringBootClickElement = 'div:nth-child(4) > a > div.tile__body > div.tile__title';
+  // SCHADE_EN_NU_FLOW_DERDE
+  kiesDerdeVerzekeringClickElement = 'div:nth-child(3) > a > div.tile__body > div.tile__title';
 
-  // SCHADE_EN_NU_FLOW_CAMPER
-  kiesVerzekeringCamperClickElement = 'div:nth-child(1) > a > div.tile__body > div.tile__title'; // camper_product css';
+  // SCHADE_EN_NU_FLOW_VIERDE
+  kiesVierdeVerzekeringClickElement = 'div:nth-child(4) > a > div.tile__body > div.tile__title';
 
   // Schade-en-nu pagina
   schadeEnNuClickElement = 'li:nth-child(1) > a > div.page-links-item__body.media__body > div';

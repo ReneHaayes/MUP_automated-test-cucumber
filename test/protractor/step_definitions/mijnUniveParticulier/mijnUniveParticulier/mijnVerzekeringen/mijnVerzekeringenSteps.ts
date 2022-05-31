@@ -19,20 +19,20 @@ When(/^Customer select polis with polis number: (.*)$/, async (polisNumber: stri
 When(/^Customer clicks on (.*) on Polisdetailpage to show Schade en nu flow$/, async (verzekeringSchadeEnNu: string) => {
 
   switch (verzekeringSchadeEnNu) {
-    case selectSchadeEnNuEnum.AUTOVERZEKERING: {
-      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringAutoClickElement);
+    case selectSchadeEnNuEnum.TWEEDEPRODUCT: {
+      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesTweedeVerzekeringClickElement);
       await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
       await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
       break;
     }
-    case selectSchadeEnNuEnum.BOOTVERZEKERING: {
-      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringBootClickElement);
+    case selectSchadeEnNuEnum.DERDEPRODUCT: {
+      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesDerdeVerzekeringClickElement);
       await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
       await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
       break;
     }
-    case selectSchadeEnNuEnum.CAMPERVERZEKERING: {
-      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVerzekeringCamperClickElement);
+    case selectSchadeEnNuEnum.VIERDEPRODUCT: {
+      await genericMethods.clickOnElement(mijnVerzekeringElements.kiesVierdeVerzekeringClickElement);
       await genericMethods.waitForElementIsVisible(mijnVerzekeringElements.schadeEnNuClickElement, browser.getPageTimeout);
       await genericMethods.clickOnElement(mijnVerzekeringElements.schadeEnNuClickElement);
       break;

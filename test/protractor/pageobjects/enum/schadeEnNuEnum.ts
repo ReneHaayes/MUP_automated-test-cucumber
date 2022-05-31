@@ -1,4 +1,7 @@
 export enum selectSchadeEnNuEnum {
+  TWEEDEPRODUCT= 'tweedeproduct',
+  DERDEPRODUCT= 'derdeproduct',
+  VIERDEPRODUCT= 'vierdeproduct',
   AUTOVERZEKERING = 'Autoverzekering',
   BOOTVERZEKERING = 'Bootverzekering',
   CAMPERVERZEKERING = 'Camperverzekering',
