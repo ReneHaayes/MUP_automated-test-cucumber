@@ -9,7 +9,9 @@ export class HmPageMijnUniveMethods {
       case homePageEnum.ZOEKEN: {
         await genericMethods.waitForElementIsPresent(hmPageMijnUniveElements.headerZoekenClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(hmPageMijnUniveElements.headerZoekenClickElement);
+        await genericMethods.waitForElementIsPresent(hmPageMijnUniveElements.headerZoekenInputElement, browser.getPageTimeout);
         await genericMethods.typeText(hmPageMijnUniveElements.headerZoekenInputElement, 'auto');
+        await genericMethods.waitForElementIsPresent(hmPageMijnUniveElements.zoekenPageButtonClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(hmPageMijnUniveElements.zoekenPageButtonClickElement);
         break;
       }
