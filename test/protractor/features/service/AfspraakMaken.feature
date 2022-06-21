@@ -8,6 +8,6 @@ Feature: Check for Afspraak maken page is correctly handled
     Then Verify afspraak maken form thank you text
 
   Scenario: Verify afspraak maken button is available when logged in
-    Given Customer woestenburg is logged in on the mijn unive particulier page of the Unive website
+    Given Customer illing is logged in on the mijn unive particulier page of the Unive website
     When Customer navigates to winkel details and clicks on afspraak maken
     Then Verify button in winkel details navigates to afspraak maken url

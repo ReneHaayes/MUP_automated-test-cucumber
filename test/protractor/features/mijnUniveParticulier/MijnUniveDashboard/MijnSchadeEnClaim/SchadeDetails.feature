@@ -9,4 +9,4 @@ Feature: Going to damage and claim page and checking the different details on pa
 
     Examples:
       | damage number | persona     |
-      | 3326988       | woestenburg |
+      | 3450685       | illing      |

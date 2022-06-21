@@ -3,7 +3,7 @@
 Feature: Changing data for persona when logged in.
 
   Scenario Outline: Change payment data for persona when logged in
-    Given Customer woestenburg is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website
+    Given Customer illing is logged in on the mijn unive betaalgegevens wijzigen page of the Unive website
     When Customer changes payment data with form for <payment data>
     Then Verify thank you page for payment data changed
 
@@ -14,7 +14,7 @@ Feature: Changing data for persona when logged in.
       | iban accountnumber |
 
   Scenario: Change contact preferences for persona when logged in
-    Given Customer woestenburg is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
+    Given Customer illing is logged in on the mijn unive contactvoorkeuren doorgeven page of the Unive website
     When Customer changes contact preferences
     Then Verify thank you message is shown for changing contact preferences
 

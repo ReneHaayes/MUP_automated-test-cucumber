@@ -9,5 +9,5 @@ Feature: Claiming damages
 
     Examples:
       | product                        | persona             |
-      | Particuliere Woonverzekering   | woestenburg         |
-      | Autoverzekering                | woestenburg         |
+      | Particuliere Woonverzekering   | illing              |
+      | Autoverzekering                | illing              |
