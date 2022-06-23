@@ -8,12 +8,12 @@ Feature: Check if schade service is functioning correctly
     Then Verify <servicePoint> is available on location <location>
 
     Examples:
-      | page           | carCaravanCamper | servicePoint                              | location | city     |
-      | winkelzoeker   | auto             | Univé Zwolle                              | 1        | Zwolle   |
-      | schade service | auto             | Emil Frey Schadeservice Zwolle            | 1        | Zwolle   |
-      | schade service | auto             | Autoschadebedrijf Kroes                   | 6        | Zwolle   |
-      | schade service | camper           | Inventive Repair Caravan en Camper Schade | 1        | Helmond  |
-      | schade service | caravan          | Van der Veen Caravans                     | 2        | Nijmegen |
+      | page           | carCaravanCamper | servicePoint                                         | location | city     |
+      | winkelzoeker   | auto             | Univé Zwolle                                         | 1        | Zwolle   |
+      | schade service | auto             | Emil Frey Schadeservice Zwolle (Pouw Autobedrijf)    | 1        | Zwolle   |
+      | schade service | auto             | Autoschade Korterink                                 | 6        | Rouveen  |
+      | schade service | camper           | Caravan Centrum Peelo                                | 1        | Assen    |
+      | schade service | caravan          | Van Duinkerken Rekreatie                             | 2        | Nijkerk  |
 
   Scenario Outline: Verify schade service and winkelzoeker for clicking on map
     Given I am on the <page> page of the Unive website
@@ -21,9 +21,9 @@ Feature: Check if schade service is functioning correctly
     Then Verify <address> and <openingHours> are shown correctly when schadeservice is selected
 
     Examples:
-      | page           | servicePoint                    | city   | address                       | openingHours |
-      | schade service | Emil Frey Schadeservice Zwolle  | Zwolle | Lippestraat 5                 | 08:00-17:15  |
-      | winkelzoeker   | Univé Zwolle                    | Zwolle | Nieuwstraat 126               | 09:00-17:30  |
+      | page           | servicePoint                                       | city   | address                       | openingHours |
+      | schade service | Emil Frey Schadeservice Zwolle (Pouw Autobedrijf)  | Zwolle | Lippestraat 5                 | 08:00-17:15  |
+      | winkelzoeker   | Univé Zwolle                                       | Zwolle | Nieuwstraat 126               | 09:00-17:30  |
 
     #ANALYTICS
 
