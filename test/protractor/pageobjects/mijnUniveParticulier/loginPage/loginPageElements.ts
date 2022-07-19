@@ -7,7 +7,7 @@ export class LoginPageElements {
   // MIJN UNIVE LOGIN
   loginEmailInputElement = '#emailphone';
   loginPasswordInputElement = '#password';
-  loginSubmitButtonClickElement = '[id="loginForm"] button';
+  loginSubmitButtonClickElement = '[class="btn submit-btn col-xs-12 login-phone-submit-btn"]';
 
   // MIJN UNIVE ZAKELIJK LOGIN
   mijnUniveZakelijkUsernameInputElement = '#emailphone';
