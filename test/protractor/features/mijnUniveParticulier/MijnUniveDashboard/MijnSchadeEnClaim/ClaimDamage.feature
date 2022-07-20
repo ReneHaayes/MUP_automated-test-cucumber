@@ -9,5 +9,5 @@ Feature: Claiming damages
 
     Examples:
       | product                        | persona                 |
-      #| Particuliere Woonverzekering   | darthvader              |
+      | Particuliere Woonverzekering   | darthvader              |
       | Autoverzekering                | darthvader              |
