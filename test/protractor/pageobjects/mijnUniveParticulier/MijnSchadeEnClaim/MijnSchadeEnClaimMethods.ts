@@ -31,7 +31,7 @@ export class MijnSchadeEnClaimMethods {
         // STEP FOUR
         await genericMethods.typeText(mijnSchadeEnClaimElements.damageClaimCityInputElement, 'Zwolle');
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimTypeParkeerschade);
-        await browser.sleep(3000);
+        await genericMethods.waitForElementClickable(mijnSchadeEnClaimElements.damageSituationParkeerschadeOtherPartyParked, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageSituationParkeerschadeOtherPartyParked);
         await genericMethods.waitForElementClickable(mijnSchadeEnClaimElements.damageClaimInfluenceOfAlcoholFalseClickElement, browser.getPageTimeout);
         await genericMethods.clickOnElement(mijnSchadeEnClaimElements.damageClaimInfluenceOfAlcoholFalseClickElement);
