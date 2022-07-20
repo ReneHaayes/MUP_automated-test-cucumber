@@ -24,8 +24,8 @@ export class MijnSchadeEnClaimElements {
 
   // DAMAGE CLAIM STEP THREE AUTO
   damageClaimCityInputElement = '#_Form_IF28905_36811';
-  damageClaimInfluenceOfAlcoholFalseClickElement = '[id="_Form_IF3623_33280_false"]';
-  damageClaimOtherPartyDamageTrueClickElement = '[id="_Form_IF7257_5228_true"]';
+  damageClaimInfluenceOfAlcoholFalseClickElement = '#VA_IF3623_33280 > div > label:nth-child(2)';
+  damageClaimOtherPartyDamageTrueClickElement = '#VA_IF7257_5228 > div > label:nth-child(1)';
   damageClaimReedAchteruitTrueClickElement = '#_Form_IF3623_39320_true';
   damageClaimOtherPartyVoetgangerFietserFalseClickElement = '#_IF3623_39008_false';
     // DAMAGE CLAIM STEP THREE WOON
@@ -47,7 +47,7 @@ export class MijnSchadeEnClaimElements {
   damageClaimTypeAanrijdingZonderAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(3)';
   damageClaimTypeAanrijdingMetAnder = 'fieldset:nth-child(2) > div > div:nth-child(2) > div.values > div > div > label:nth-child(4)';
   // DAMAGE SITUATION PARKEERSCHADE
-  damageSituationParkeerschadeOtherPartyParked = '[id="_Form_IF3623_5229_tegenpartijStondGeparkeerd"]';
+  damageSituationParkeerschadeOtherPartyParked = '#VA_IF3623_5229 > div > label:nth-child(1)';
   // DAMAGE CLAIM STEP FIVE AUTO/WOON
   damageClaimContactThroughPhoneClickElement = '[data-label-id="LA_IF31405_39308"] > div > label:nth-child(1)';
   damageClaimContactThroughPhoneInputElement = '#_Form_IF31405_39309';
