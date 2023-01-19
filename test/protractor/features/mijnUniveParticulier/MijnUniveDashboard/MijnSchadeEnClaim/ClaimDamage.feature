@@ -8,6 +8,6 @@ Feature: Claiming damages
     Then Verify damage claim succes message is shown
 
     Examples:
-      | product                        | persona                 |
-      | Particuliere Woonverzekering   | darthvader              |
-      | Autoverzekering                | darthvader              |
+      | product                      | persona |
+      | Particuliere Woonverzekering | illing  |
+      | Autoverzekering              | illing  |
