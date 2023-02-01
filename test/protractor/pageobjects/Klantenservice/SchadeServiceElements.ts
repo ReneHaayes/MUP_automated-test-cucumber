@@ -1,17 +1,17 @@
 export class SchadeServiceElements {
 
-  placeOrZipcodeInputElement = 'map-search ::sr #search-input-field ::sr input';
-  submitButtonClickElement = 'map-search ::sr #search-submit-button';
+  placeOrZipcodeInputElement = 'div.u-flex.u-items-center.u-relative > input';
+  submitButtonClickElement = 'div.u-flex.u-items-center.u-relative > button > span > svg.u-fill-current.u-text-bosbes';
 
-  selectCaravanClickElement = 'map-search ::sr [value="caravan"]';
-  selectCamperClickElement = 'map-search ::sr [value="camper"]';
-  selectAutoClickElement = 'map-search ::sr [value="bodywork"]';
-  selectRuitschadeClickElement = 'map-search ::sr [value="window"]';
+  selectCaravanClickElement = '[id="objectType_caravan"]';
+  selectCamperClickElement = '[id="objectType_camper"]';
+  selectAutoClickElement = '[id="objectType_car"]';
+  selectRuitschadeClickElement = '[id="repairType_bodywork"]';
   locationFinderLoaderElement = 'map-search ::sr [class*="animation-spin"]';
 
-  getOpeningHoursDayHoursTextElement = 'map-search ::sr map-search-result-list ::sr map-search-result-item ::sr #opening-hours > div:nth-child(2) > div.w-full.ml-3 > div > div:nth-child(2)';
+  getOpeningHoursDayHoursTextElement = 'li:nth-child(1) > button > div > div > span > span';
 
-  selectedSchadeServiceAddresTextElement = 'map-search ::sr map-search-result-list ::sr map-search-result-item ::sr [id="address"]';
+  selectedSchadeServiceAddresTextElement = 'div.u-mt-16.u-overflow-y-auto.u-pb-24.md\\:u-pb-32.u-px-24.md\\:u-px-32 > div > h2';
 
   getTitleForLocationTextElement(input: string): string {
     return 'map-search ::sr map-search-result-list ::sr map-search-result-item:nth-child(' + input + ') ::sr #title';
