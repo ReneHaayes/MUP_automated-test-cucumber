@@ -86,7 +86,7 @@ export class GenericElements {
   loginMijnUniveZakelijkURL = 'mijnunivezakelijk/inloggen';
   veelgesteldevragenURL = 'klantenservice/veelgestelde-vragen';
   mailhogPatURL = 'https://mailhog.pat.unive.nl';
-  klachtenFormulier = 'klantenservice/klacht';
+  klachtenFormulier = 'klantenservice/klacht-indienen';
   vraagStellen = 'klantenservice/vraagstellen';
   schade = 'schade';
   schadeService = 'schadeservice';
