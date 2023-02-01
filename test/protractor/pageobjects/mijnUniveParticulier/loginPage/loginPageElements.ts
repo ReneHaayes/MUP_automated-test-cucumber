@@ -35,12 +35,12 @@ export class LoginPageElements {
 
   // VEELGESTELDE VRAGEN
   veelgesteldeVragenClickElement = '#unive-help';
-  veelgesteldeVragenHeaderTextElement = '[class="action_title"]';
-  veelgesteldeVragenHeaderText = 'Hulp nodig bij Mijn Univé?';
+  veelgesteldeVragenHeaderTextElement = 'section:nth-child(1) > div > div > h1';
+  veelgesteldeVragenHeaderText = 'Veelgestelde vragen overzicht';
 
-  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveClickElement = '[id="hoe-meld-ik-me-aan-voor-mijn-unive-mijn-unive"]';
-  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveTextElement = '[id="hoe-meld-ik-me-aan-voor-mijn-unive-mijn-unive"] > a > h3';
-  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveText = 'Op www.unive.nl/mijnunive kiest u voor ‘Account aanmaken’. Vervolgens kunt u kiezen uit twee manieren om een Mijn Univé-account aan te maken;';
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveClickElement = 'div:nth-child(2) > div > dl > div:nth-child(4) > dt > button';
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveTextElement = 'div:nth-child(2) > div > dl > div:nth-child(4) > dt > button';
+  veelgesteldeVraagHoeMeldIkMeAanVoorMijnUniveText = 'Kan iedereen een account aanmaken?';
 
   veelgesteldeVraagAntwoordGeopend = '[class="faqList"] > dd:nth-child(2) > p';
 
