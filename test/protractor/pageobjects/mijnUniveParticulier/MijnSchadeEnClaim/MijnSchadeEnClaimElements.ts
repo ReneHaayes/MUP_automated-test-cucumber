@@ -10,7 +10,7 @@ export class MijnSchadeEnClaimElements {
   // WIJZIGEN VERZEKERING
   polisDetailsTitleTextElement = '[class="page-content__block__title"] > h1';
   polisDetailsTitleText = 'Polis';
-  wijzigenVerzekeringSnelLinkClickElement = '[class="page-links"] > li:nth-child(2) > [class*="link"]';
+  wijzigenVerzekeringSnelLinkClickElement = 'li:nth-child(3) > a > div.page-links-item__body.media__body > div';
   slotvragenNextButton = '[id="_Form_finishSave"]';
 
   // DAMAGE CLAIM STEP ONE
