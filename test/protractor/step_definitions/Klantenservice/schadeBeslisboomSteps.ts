@@ -140,7 +140,7 @@ Then(/^information text about Een aanrijding met mijn fiets is shown$/, async ()
 When(/^Customer selects veelgestelde vragen button$/, async () => {
   await genericMethods.verifyBreadcrumbOnPosition('Home', 1);
   await genericMethods.verifyBreadcrumbOnPosition('Autoverzekering', 2);
-  await genericMethods.verifyBreadcrumbOnPosition('Veelgestelde vragen', 3);
+  await genericMethods.verifyBreadcrumbOnPosition('WA autoverzekering', 3);
   await genericMethods.clickOnElement(schadeBeslisboomElements.veelgesteldeVragenOverEenAutoverzekeringClickElement);
 });
 
