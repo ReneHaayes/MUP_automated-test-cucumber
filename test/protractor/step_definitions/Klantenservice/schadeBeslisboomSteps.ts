@@ -145,6 +145,6 @@ When(/^Customer selects veelgestelde vragen button$/, async () => {
 });
 
 Then(/^verify the veelgestelde vragen page is shown$/, async () => {
-  await genericMethods.verifyUrlContains('https://acc.unive.nl/autoverzekering/veelgesteldevragen');
+  await genericMethods.verifyUrlContains('https://acc.unive.nl/autoverzekering/wa');
 });
 

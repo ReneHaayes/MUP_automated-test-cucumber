@@ -56,7 +56,7 @@ export class SchadeBeslisboomElements {
   // Fiets/E-bike Text Elements
   eenAanrijdingMetMijnFietsText = '#dt_3_0 > article > h5';
 
-  veelgesteldeVragenOverEenAutoverzekeringClickElement = '#veelgestelde-vragen > div:nth-child(2) > div > p > a"';
-  veelgesteldeVragenPageURL = 'https://acc.unive.nl/autoverzekering/veelgesteldevragen'
+  veelgesteldeVragenOverEenAutoverzekeringClickElement = 'div:nth-child(2) > div > div:nth-child(1) > p:nth-child(3) > a';
+  veelgesteldeVragenPageURL = 'https://acc.unive.nl/autoverzekering/wa'
 ;
 }
