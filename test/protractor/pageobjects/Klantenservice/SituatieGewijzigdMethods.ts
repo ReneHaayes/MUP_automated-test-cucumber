@@ -38,7 +38,7 @@ export class SituatieGewijzigdMethods {
         break;
       }
       case familyCompositionEnum.TROUWEN: {
-        await genericMethods.verifyBreadcrumbOnPosition(situatieGewijzigdElements.klantenservice, 2);
+        await genericMethods.verifyBreadcrumbOnPosition('Klantenservice', 2);
         await genericMethods.verifyBreadcrumbOnPosition('Trouwen', 3);
         await genericMethods.verifyTextContainsInElement(situatieGewijzigdElements.situatieGewijzigdHeaderElement, 'Trouwen', browser.getPageTimeout);
         break;
