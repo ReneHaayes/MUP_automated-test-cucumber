@@ -8,12 +8,12 @@ Feature: Check if schade service is functioning correctly
     Then Verify <servicePoint> is available on location <location>
 
     Examples:
-      | page           | carCaravanCamper | servicePoint                                         | location | city     |
-      | winkelzoeker   | auto             | Univé Zwolle                                         | 1        | Zwolle   |
-      | schade service | auto             | Emil Frey Schadeservice Zwolle (Pouw Autobedrijf)    | 1        | Zwolle   |
-      | schade service | auto             | Autoschade Korterink                                 | 6        | Rouveen  |
-      | schade service | camper           | Caravan Centrum Peelo                                | 1        | Assen    |
-      | schade service | caravan          | Van Duinkerken Rekreatie                             | 2        | Nijkerk  |
+      | page           | carCaravanCamper | servicePoint                                      | location | city    |
+      | winkelzoeker   | auto             | Univé Zwolle                                      | 1        | Zwolle  |
+      | schade service | auto             | Emil Frey Schadeservice Zwolle (Pouw Autobedrijf) | 1        | Zwolle  |
+      | schade service | auto             | Autoschade Korterink                              | 3        | Rouveen |
+      | schade service | camper           | Caravan Centrum Peelo                             | 1        | Assen   |
+      | schade service | caravan          | Van Duinkerken Rekreatie                          | 1        | Nijkerk |
 
   Scenario Outline: Verify schade service and winkelzoeker for clicking on map
     Given I am on the <page> page of the Unive website
