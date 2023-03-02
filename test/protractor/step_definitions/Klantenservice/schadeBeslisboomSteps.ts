@@ -84,7 +84,7 @@ Then(/^information text about Ruitschade is shown$/, async () => {
   await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.ruitschadeText, 'Uw autoruit is beschadigd', 9);
 });
 
-Then(/^Information text about Wat te doen bij ruischade aan uw auto is shown$/, async () => {
+Then(/^Information text about Wat te doen bij ruitschade aan uw auto is shown$/, async () => {
   await genericMethods.verifyTextContainsInElement(schadeBeslisboomElements.ruitschadeText, 'Wat te doen bij ruitschade aan uw auto?', 9);
 });
 

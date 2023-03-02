@@ -18,7 +18,7 @@ export class SchadeBeslisboomElements {
   directContactButtonClickElement = 'coverage-check ::sr [textofbutton="Direct contact"] ::sr button';
 
   // Auto Oldtimer Text Elements
-  ruitschadeText = '#dt_0_0_0 > article > h5';
+  ruitschadeText = 'div:nth-child(2) > div > div > div > div > div > h3';
   schadeMeldenBijUniveText = '#dt_0_0_1 > article > h5';
   hoeVerlooptDeSchadeAfhandelingText = '#dt_0_0_2 > article > h5';
   watKanIkNogNaDeUitbetalingText = '#dt_0_0_3 > article > h5';
