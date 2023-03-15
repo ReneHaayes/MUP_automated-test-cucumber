@@ -97,8 +97,6 @@ export class GenericElements {
   salesWidgets = 'ppwidgets';
   zzpPakket = 'zakelijk/zzp/pakket-bouw/premieberekenen-en-afsluiten';
   pageWatIsEenWaAutoVerzekering = '/autoverzekering/wa';
-  faqPageWatIsEenWaAutoVerzekering = '/autoverzekering/veelgesteldevragen';
-
   zorgchecktool = 'zorgverzekering/zorgcheck';
   zorgchecktoolBekendeKlantParameter: string = this.zorgchecktool + '?bk=1';
   zorgchecktoolThuiszorgCollectiefParameter: string = this.zorgchecktool + '?internetcode=hS95ugVE';
